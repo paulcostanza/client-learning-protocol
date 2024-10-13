@@ -7,94 +7,124 @@
     <title>L E A R N I N G</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="searchbar.css">
+    <!-- <link rel="stylesheet" href="searchbar.css"> -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="codesnippets.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 </head>
 
 <body>
 
-    <header id="search-bar-header">
-        <div class="search-box">
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Search here..." autocomplete="off">
-                <button><i class="fa fa-search"></i></button>
-            </div>
-            <div class="result-box">
-                <!-- <ul>
-                    <li>JavaScript</li>
-                    <li>Sluts</li>
-                </ul> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid d-flex">
+            <!-- Where img logo will go when i make one-->
+            <!-- classes I might need: col-lg-12 -->
+            <a class="navbar-brand text-center" href="#">
+                <!-- <img src="" alt="" width="50" height="30" /> -->
+
+                Client Learning Protocol</a>
+
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Section
+                        </a>
+                        <ul class="dropdown-menu side-bar" aria-labelledby="navbarDropdown">
+                            <li><a class="nav-link" href="#introduction-to-computers">
+                                    Introduction to Computers
+                                </a>
+                            </li>
+                            <li><a class="nav-link" href="#hardware-and-software">
+                                    Hardware and Software
+                                </a>
+                            </li>
+                            <li> <a class="nav-link" href="#the-cpu">
+                                    The CPU
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#main-memory">
+                                    Main Memory
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#secondary-storage">
+                                    Secondary Storage
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#software">
+                                    Software
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#what-is-a-program-made-of">
+                                    What is a program made of?
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#programming-languages">
+                                    Programming Languages
+                                </a>
+                            </li>
+                            <li><a class="nav-link" href="#the-programming-process">
+                                    The Programming Process
+                                </a></li>
+                            <li><a class="nav-link" href="#algorithm">
+                                    Algorithm
+                                </a></li>
+                            <li><a class="nav-link" href="#variables">
+                                    Variables
+                                </a></li>
+                            <li><a class="nav-link" href="#object-oriented-programming">
+                                    Object-Oriented-programming
+                                </a></li>
+                            <li><a class="nav-link" href="#java-keywords">
+                                    Java Keywords
+                                </a>
+                            </li>
+                            <li><a class="nav-link" href="#the-compiler-and-the-java-virtual-machine">
+                                    The Compiler and the Java Virtual Machine
+                                </a></li>
+                            <li><a class="nav-link" href="#review">
+                                    Review I
+                                </a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
             </div>
         </div>
-    </header>
-
-
-
-    <nav id="navbar">
-        <h1>
-            <header>Intro to Computers</header>
-        </h1>
-        <ul>
-            <a class="nav-link" href="#introduction-to-computers">
-                <li>Introduction to Computers</li>
-            </a>
-            <a class="nav-link" href="#hardware-and-software">
-                <li>Hardware and Software</li>
-            </a>
-            <a class="nav-link" href="#the-cpu">
-                <li>The CPU</li>
-            </a>
-            <a class="nav-link" href="#main-memory">
-                <li>Main Memory</li>
-            </a>
-            <a class="nav-link" href="#secondary-storage">
-                <li>Secondary Storage</li>
-            </a>
-            <a class="nav-link" href="#software">
-                <li>Software</li>
-            </a>
-            <a class="nav-link" href="#what-is-a-program-made-of">
-                <li>What is a program made of?</li>
-            </a>
-            <a class="nav-link" href="#programming-languages">
-                <li>Programming Languages</li>
-            </a>
-            <a class="nav-link" href="#the-programming-process">
-                <li>The Programming Process</li>
-            </a>
-            <a class="nav-link" href="#algorithm">
-                <li>Algorithm</li>
-            </a>
-            <a class="nav-link" href="#variables">
-                <li>Variables</li>
-            </a>
-            <a class="nav-link" href="#object-oriented-programming">
-                <li class="before-new-chapter">Object-Oriented-programming</li>
-            </a>
-
-            <h1>
-                <header>Java</header>
-            </h1>
-
-            <a class="nav-link" href="#java-keywords">
-                <li>Java Keywords</li>
-            </a>
-            <a class="nav-link" href="#the-compiler-and-the-java-virtual-machine">
-                <li>The Compiler and the Java Virtual Machine</li>
-            </a>
-            <a class="nav-link" href="#review">
-                <li class="before-new-chapter">Review I</li>
-            </a>
-        </ul>
     </nav>
 
-    <main id="main-doc">
 
-        <section class="main-section" id="introduction-to-computers">
-            <header id="top-of-page">Introduction to Computers</header>
-            <article>
+    <div class="container" id="introduction-to-computers">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 id="top-of-page">Introduction to Computers</h2>
+
                 <p>What is a computer?</p>
                 <p>History</p>
                 <p>Here are a few things that must be designed for any <strong>real-world</strong> computer program</p>
@@ -107,15 +137,12 @@
                     <li>the program's, 'user friendliness'</li>
                     <li>manuals, help systems, and/or other forms of written documentation</li>
                 </ul>
-            </article>
-        </section>
 
-        <br>
+                <br>
 
-        <section class="main-section" id="hardware-and-software">
-            <header>Hardware and Software</header>
-            <article>
-                <p>Hardware refers to the physical components that make up a computer. A typical computer consists of:
+                <h2 id="hardware-and-software">Hardware and Software</h2>
+                <p>Hardware refers to the physical components that make up a computer. A typical computer
+                    consists of:
                 </p>
                 <ul>
                     <li>central processing unit (CPU)</li>
@@ -124,539 +151,626 @@
                     <li>input devices</li>
                     <li>output devices</li>
                 </ul>
-        </section>
 
-        <br>
+                <br>
 
-        <section class="main-section" id="the-cpu">
-            <header>The CPU</header>
-            <article>
-                <p>The CPU's job is to fetch instructions, follow instructions, and then produce some resulting data.
+                <h2 id="the-cpu">The CPU</h2>
+
+                <p>The CPU's job is to fetch instructions, follow instructions, and then produce some resulting
+                    data.
                     The CPU
-                    consists of two parts: the <em><strong>control unit</strong></em> and the <em><strong>arithmetic &
+                    consists of two parts: the <em><strong>control unit</strong></em> and the
+                    <em><strong>arithmetic &
                             logic
-                            unit</strong></em>. The control unit coordinates all of the computer's operations, while the
+                            unit</strong></em>. The control unit coordinates all of the computer's operations,
+                    while the
                     arithmetic
-                    and logic unit performs all of the mathematical operations.</p>
+                    and logic unit performs all of the mathematical operations.
+                </p>
                 <div class="center-pic">
                     <p><img src="images/ch 1/cpu demo.png" alt="CPU demo"></p>
                 </div>
                 <p>When a computer is running a program, the CPU is engaged in a process known as the
-                    <em><strong>fetch/decode/execute</strong></em> cycle. These steps are repeated as long as there are
+                    <em><strong>fetch/decode/execute</strong></em> cycle. These steps are repeated as long as
+                    there are
                     instructions
                     to perform.
                 </p>
                 <ol>
-                    <li><strong>Fetch</strong>: The CPU control unit fetches (from main memory) the next instructions in
+                    <li><strong>Fetch</strong>: The CPU control unit fetches (from main memory) the next
+                        instructions in
                         the
                         sequenece of programming instructions.</li>
-                    <li><strong>Decode</strong>: The instructions are encoded as a series of numbers. The control unit
+                    <li><strong>Decode</strong>: The instructions are encoded as a series of numbers. The
+                        control unit
                         decodes the
                         instructions and generates an electronic signal.</li>
-                    <li><strong>Execute</strong>: The signal is routed to the appropiate component of the computer. This
+                    <li><strong>Execute</strong>: The signal is routed to the appropiate component of the
+                        computer. This
                         signal
                         causes the component to perform an operation.</li>
                 </ol>
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="main-memory">
-            <header>Main Memory</header>
-            <article>
-                <p>Random access memory, or <strong>RAM</strong> is a device that holds information. Specifically, the
-                    sequeneces of
-                    instructions of programs that are running and the data those programs are using. RAM is known as a
-                    volatile type
-                    of memory, used only for temporary storage. When the computer is turned off, the contents of RAM are
-                    erased.</p>
-                <ol>
-                    <li>Memory is divided into sections that hold an equal amount of data.</li>
-                    <li>Each section is made up of eight <strong>switches</strong> that may be either on or off. 1 if it
-                        is on, 0 if
-                        it is off.</li>
-                    <li>The computer stores data by setting the switches in the memory location to a pattern that
-                        represents a
-                        number or a character. Each of these switches is known as a <strong>bit</strong>, which stands
-                        for digital
-                        binary.</li>
-                    <li>Each section of memory, which is a collection of eight bits, is known as a
-                        <strong>byte</strong>.
-                    </li>
-                    <li>Each byte is assigned an unique number known as an address. Addresses are ordered from lowest to
-                        highest.
-                    </li>
-                </ol>
-                <div class="center-pic">
-                    <p><img src="images/ch 1/ram demo.png" alt="RAM demo"></p>
-                </div>
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="secondary-storage">
-            <header>Secondary Storage</header>
-            <article>
-                <p>A type of memory that can hold data for long periods of time, even when there is no power to the
-                    computer.</p>
-                <ol>
-                    <li>The most common type of secondary storage is the disk drive. The best type of disk drive is the
-                        <strong>solid-state drive</strong>. A solid-state drive has no moving parts, and works much
-                        faster than a
-                        traditional disk drive. These types of storage are usually mounted within the computer.
-                    </li>
-                    <li>External secondary storage is used for creating backups of data, or moving said data to another
-                        computer.
-                        One popular type is a universal serial bus drive (usb). USBs do not contain a disk, but instead
-                        store data
-                        in a special type of memory known as flash memory.</li>
-                </ol>
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="software">
-            <header>Software</header>
-            <article>
-                <p>Refers to the programs that run a computer. There are two types of software: operating systems and
-                    application
-                    software.</p>
-                <ul>
-                    <li>Operating Systems: A set of programs that manages the computer's hardware devices and controls
-                        their
-                        processes. Most modern operating systems are multitasking, which means they are compatible with
-                        running
-                        multiple programs at once. Through a technique called <strong>time-sharing</strong>, a
-                        multitasking system
-                        divides the allocation of hardware resources and the attention of the CPU among all the
-                        executing programs.
-                        Linux, Mac OS, Windows.</li>
-                    <li>Application software: What the user uses. These programs solve specific prolblems or perform
-                        general
-                        operations that satisfy the user's needs. Word processing, spreadsheets.</li>
-                </ul>
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="what-is-a-program-made-of">
-            <header>What is a program made of?</header>
-            <article>
-                <ul>
-                    <li>Keywords: Words that have special meaning in the programming language. Also known as reserved
-                        words.</li>
-                    <li>Operators: Symbols or words that perform operations on one or more operands. An operand is
-                        usually an item
-                        of data, such as a number.</li>
-                    <li>Punctuation: Most languages require the use of punctuation characters. These characters serve
-                        specific
-                        purposes, such as making the beginning or ending of a statement, or separating items in a list.
-                    </li>
-                    <li>Programmer Defined Names: Unlike keywords, these are words or names that are defined by the
-                        programmer. They
-                        are used to identify storage locations in memory and parts of the program that are created by
-                        the
-                        programmer. Programmer-defined names are often called identifiers.</li>
-                    <li>Syntax: These are the rules that must be followed when writing a program. Syntax dictates how
-                        keywords and
-                        operators may be used, and where punctuation symbols must appear.</li>
-                </ul>
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="programming-languages">
-            <header>Programming Languages</header>
-            <article>
-                <p>A programming language is a special language used to write programming programs. A computer's CPU can
-                    only
-                    process instructions that are written in machine language, which is made up of binary. The binary
-                    numbers form
-                    machine language instructions, which the CPU interprets as commands. Each type of CPU has its own
-                    machine
-                    language and writing in it is very tedious and difficut. A program is written in a programming
-                    language, and is
-                    then translated into machine language.</p>
-
-                <div class="center-pic">
-                    <p><img src="images/ch 1/software and programming languages.png" alt="Program Development Process">
-                    </p>
-                </div>
-
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="the-programming-process">
-            <header>The Programming Process</header>
-            <article>
-                <p>The general process for creating a program starts with planning</p>
-                <ol>
-                    <li>Clearly define what the program is going to do</li>
-                    <li>Visualize the program running on the computer</li>
-                    <li>Use design tools to create a model of the program (pseudocode)</li>
-                    <li>Check the model for logical errors</li>
-                    <li>Enter the code and compile it</li>
-                    <li>Correct any errors found during compilation. Repeat steps 5-6 as many times as needed.</li>
-                    <li>Run the program with test data for input</li>
-                    <li>Correct any runtime errors found while running the program. Repeat steps 5-8 as many times as
-                        necessary</li>
-                    <li>Validate the results of the program</li>
-                </ol>
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="algorithm">
-            <header>Algorithm</header>
-            <article>
-                <p>A set of well-defined steps or instructions independent of the hardware or programing language,
-                    designed
-                    to solve a particular problem or task.</p>
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="variables">
-            <header>Variables</header>
-            <article>
-                <p>The most fundamental way Java can store an item of data in memory. A variable is a named storage
-                    location in the
-                    computer's memory. Variables are symbolic names made up by the programmer that represent locations
-                    in the
-                    computer's RAM. So when data is stored in a variable, it is actually stored in RAM.</p>
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="object-oriented-programming">
-            <header>Object-Oriented Programming</header>
-            <article>
-                <p>OOP is a method of software development that has its own practices, concepts, and vocabulary.
-                    Objects,
-                    conceptually speaking, are a self-contained unit consisting of data (<strong>attributes</strong>)
-                    and procedures
-                    (<strong>methods</strong>). Only the object's methods may directly access and make changes to the
-                    object's data.
-                    An object typically hides its data, but allows outside code to access the methods that operate on
-                    the data.</p>
-                <p>When the object's internal data is hidden from outside code and access to that data is restricted to
-                    the object's
-                    methods, the data is protected from accidental corruption. In addition, the programming code outside
-                    the object
-                    does not need to know about the format or internal structure of the object's data. The code only
-                    needs to
-                    interact with the object's methods.</p>
-                <p>When a programmer changes the structure of an object's internal data, he/she also modifies the
-                    object's methods
-                    so they may properly operate on the data. The way in which outside code interacts with the methods,
-                    however,
-                    does not change.</p>
-                <ul>
-                    <li>Object: a software entity that contains data and procedures</li>
-                    <li>Attributes: the data contained in an object is known as the object's attributes</li>
-                    <li>Methods: the procedures or behaviors that an object performs are known as the object's methods
-                    </li>
-                    <li>Encapsulation: the combining of data and code into a single object</li>
-                    <li>Data Hiding: an object's ability to hide its data from code that is outside the object.</li>
-                </ul>
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="java-keywords">
-            <header>Java Keywords</header>
-            <article>
-                <p>Part of learning a programming language is learning the commonly used keywords, what they mean, and
-                    how to use
-                    them.</p>
-                <div class="center-pic">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>abstract</td>
-                                <td>const</td>
-                                <td>final</td>
-                                <td>int</td>
-                                <td>public</td>
-                                <td>throw</td>
-                            </tr>
-                            <tr>
-                                <td>assert</td>
-                                <td>continue</td>
-                                <td>finally</td>
-                                <td>interface</td>
-                                <td>return</td>
-                                <td>throws</td>
-                            </tr>
-                            <tr>
-                                <td>boolean</td>
-                                <td>default</td>
-                                <td>float</td>
-                                <td>long</td>
-                                <td>short</td>
-                                <td>transient</td>
-                            </tr>
-                            <tr>
-                                <td>break</td>
-                                <td>do</td>
-                                <td>for</td>
-                                <td>native</td>
-                                <td>static</td>
-                                <td>true</td>
-                            </tr>
-                            <tr>
-                                <td>byte</td>
-                                <td>double</td>
-                                <td>goto</td>
-                                <td>new</td>
-                                <td>sticitfp</td>
-                                <td>try</td>
-                            </tr>
-                            <tr>
-                                <td>case</td>
-                                <td>else</td>
-                                <td>if</td>
-                                <td>null</td>
-                                <td>super</td>
-                                <td>void</td>
-                            </tr>
-                            <tr>
-                                <td>catch</td>
-                                <td>enum</td>
-                                <td>implements</td>
-                                <td>package</td>
-                                <td>switch</td>
-                                <td>volatile</td>
-                            </tr>
-                            <tr>
-                                <td>class</td>
-                                <td>false</td>
-                                <td>instanceof</td>
-                                <td>protected</td>
-                                <td>this</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </article>
-        </section>
-
-        <br>
-
-        <section class="main-section" id="the-compiler-and-the-java-virtual-machine">
-            <header>The Compiler and the Java Virtual Machine</header>
-            <article>
-                <ul>
-                    <li>Text editor: used to write Java programs and save it to a file.</li>
-                    <li>Source code: the Java programming statements written.</li>
-                    <li>Source file: the file your Java source code is saved to. Ends in the extension <em>.java</em>
-                    </li>
-                </ul>
-                <ol>
-                    <li>Compiler: What allows your file to run. It translates source code into an executable form. The
-                        java compiler translates a Java source file into a file that contains byte code instructions.
-                        The byte code instructions are not machine language and cannot be executed by the CPU, so
-                        instead they are executed by the Java Virtual Machine. The JVM is a program that reads Java Byte
-                        code instructions and executed them as they are read. For this reason, the JVM is often called
-                        an <strong>interpreter</strong>, and Java is often referred to as an interpreted language.
-                        Although Java byte code is not machine language for a CPU, it can be considered as machine
-                        language for the JVM.</li>
-                </ol>
-                <div class="center-pic">
-                    <p><img src="images/ch 1/program development process.png" alt="Program Development Process"></p>
-                </div>
-                <ol start="2">
-                    <li>Portability: The term portable means that a program may be written on one type of computer and
-                        then run on a
-                        wide variety of computers, with little or no modification necessary. Because Java byte code is
-                        the same on
-                        all computers, complied Java programs are highly portable.</li>
-                </ol>
-                <div class="center-pic">
-                    <p><img src="images/ch 1/portability.png" alt="Portability"></p>
-                </div>
-                <ol start="3">
-                    <li>
-                        <p>Compiling and Running a Java Program: You must compile your Java program to run. Just go to
-                            your operating system's command prompt and make sure you are in the same directory or folder
-                            where the Java program that you want to compile is located</p>
-
-                        <pre
-                            class="hljs"><code><div>javac Filename <span class="hljs-comment">// place the name of file with the .java extension at Filename placeholder</span></div></code></pre>
-
-                        <p>After the compiler translates to byte code, the byte code is stored in a file with the
-                            <em>.class</em>
-                            extention, contained within the same directory. However, you do not use the .class extension
-                            when
-                            opening the file.
-                        </p>
 
 
-                        <pre
-                            class="hljs"><code><div>Java ClassFilename <span class="hljs-comment">// This command runs the Java interpreter (the JVM) and executes the program</span></div></code></pre>
+                <br>
 
-                    </li>
-                </ol>
-            </article>
-        </section>
+                <section class="main-section" id="main-memory">
+                    <header>Main Memory</header>
+                    <article>
+                        <p>Random access memory, or <strong>RAM</strong> is a device that holds information.
+                            Specifically, the
+                            sequeneces of
+                            instructions of programs that are running and the data those programs are using. RAM is
+                            known as a
+                            volatile type
+                            of memory, used only for temporary storage. When the computer is turned off, the contents of
+                            RAM are
+                            erased.</p>
+                        <ol>
+                            <li>Memory is divided into sections that hold an equal amount of data.</li>
+                            <li>Each section is made up of eight <strong>switches</strong> that may be either on or off.
+                                1 if it
+                                is on, 0 if
+                                it is off.</li>
+                            <li>The computer stores data by setting the switches in the memory location to a pattern
+                                that
+                                represents a
+                                number or a character. Each of these switches is known as a <strong>bit</strong>, which
+                                stands
+                                for digital
+                                binary.</li>
+                            <li>Each section of memory, which is a collection of eight bits, is known as a
+                                <strong>byte</strong>.
+                            </li>
+                            <li>Each byte is assigned an unique number known as an address. Addresses are ordered from
+                                lowest to
+                                highest.
+                            </li>
+                        </ol>
+                        <div class="center-pic">
+                            <p><img src="images/ch 1/ram demo.png" alt="RAM demo"></p>
+                        </div>
+                    </article>
+                </section>
+
+                <br>
+
+                <section class="main-section" id="secondary-storage">
+                    <header>Secondary Storage</header>
+                    <article>
+                        <p>A type of memory that can hold data for long periods of time, even when there is no power to
+                            the
+                            computer.</p>
+                        <ol>
+                            <li>The most common type of secondary storage is the disk drive. The best type of disk drive
+                                is the
+                                <strong>solid-state drive</strong>. A solid-state drive has no moving parts, and works
+                                much
+                                faster than a
+                                traditional disk drive. These types of storage are usually mounted within the computer.
+                            </li>
+                            <li>External secondary storage is used for creating backups of data, or moving said data to
+                                another
+                                computer.
+                                One popular type is a universal serial bus drive (usb). USBs do not contain a disk, but
+                                instead
+                                store data
+                                in a special type of memory known as flash memory.</li>
+                        </ol>
+                    </article>
+                </section>
+
+                <br>
+
+                <section class="main-section" id="software">
+                    <header>Software</header>
+                    <article>
+                        <p>Refers to the programs that run a computer. There are two types of software: operating
+                            systems and
+                            application
+                            software.</p>
+                        <ul>
+                            <li>Operating Systems: A set of programs that manages the computer's hardware devices and
+                                controls
+                                their
+                                processes. Most modern operating systems are multitasking, which means they are
+                                compatible with
+                                running
+                                multiple programs at once. Through a technique called <strong>time-sharing</strong>, a
+                                multitasking system
+                                divides the allocation of hardware resources and the attention of the CPU among all the
+                                executing programs.
+                                Linux, Mac OS, Windows.</li>
+                            <li>Application software: What the user uses. These programs solve specific prolblems or
+                                perform
+                                general
+                                operations that satisfy the user's needs. Word processing, spreadsheets.</li>
+                        </ul>
+                    </article>
+                </section>
+
+                <br>
+
+                <section class="main-section" id="what-is-a-program-made-of">
+                    <header>What is a program made of?</header>
+                    <article>
+                        <ul>
+                            <li>Keywords: Words that have special meaning in the programming language. Also known as
+                                reserved
+                                words.</li>
+                            <li>Operators: Symbols or words that perform operations on one or more operands. An operand
+                                is
+                                usually an item
+                                of data, such as a number.</li>
+                            <li>Punctuation: Most languages require the use of punctuation characters. These characters
+                                serve
+                                specific
+                                purposes, such as making the beginning or ending of a statement, or separating items in
+                                a list.
+                            </li>
+                            <li>Programmer Defined Names: Unlike keywords, these are words or names that are defined by
+                                the
+                                programmer. They
+                                are used to identify storage locations in memory and parts of the program that are
+                                created by
+                                the
+                                programmer. Programmer-defined names are often called identifiers.</li>
+                            <li>Syntax: These are the rules that must be followed when writing a program. Syntax
+                                dictates how
+                                keywords and
+                                operators may be used, and where punctuation symbols must appear.</li>
+                        </ul>
+                    </article>
+                </section>
+
+                <br>
+
+                <section class="main-section" id="programming-languages">
+                    <header>Programming Languages</header>
+                    <article>
+                        <p>A programming language is a special language used to write programming programs. A computer's
+                            CPU can
+                            only
+                            process instructions that are written in machine language, which is made up of binary. The
+                            binary
+                            numbers form
+                            machine language instructions, which the CPU interprets as commands. Each type of CPU has
+                            its own
+                            machine
+                            language and writing in it is very tedious and difficut. A program is written in a
+                            programming
+                            language, and is
+                            then translated into machine language.</p>
+
+                        <div class="center-pic">
+                            <p><img src="images/ch 1/software and programming languages.png"
+                                    alt="Program Development Process">
+                            </p>
+                        </div>
+
+                    </article>
+                </section>
+
+                <br>
+
+                <section class="main-section" id="the-programming-process">
+                    <header>The Programming Process</header>
+                    <article>
+                        <p>The general process for creating a program starts with planning</p>
+                        <ol>
+                            <li>Clearly define what the program is going to do</li>
+                            <li>Visualize the program running on the computer</li>
+                            <li>Use design tools to create a model of the program (pseudocode)</li>
+                            <li>Check the model for logical errors</li>
+                            <li>Enter the code and compile it</li>
+                            <li>Correct any errors found during compilation. Repeat steps 5-6 as many times as needed.
+                            </li>
+                            <li>Run the program with test data for input</li>
+                            <li>Correct any runtime errors found while running the program. Repeat steps 5-8 as many
+                                times as
+                                necessary</li>
+                            <li>Validate the results of the program</li>
+                        </ol>
+                    </article>
+                </section>
+
+                <br>
+
+                <section class="main-section" id="algorithm">
+                    <header>Algorithm</header>
+                    <article>
+                        <p>A set of well-defined steps or instructions independent of the hardware or programing
+                            language,
+                            designed
+                            to solve a particular problem or task.</p>
+                    </article>
+                </section>
+
+                <br>
+
+                <section class="main-section" id="variables">
+                    <header>Variables</header>
+                    <article>
+                        <p>The most fundamental way Java can store an item of data in memory. A variable is a named
+                            storage
+                            location in the
+                            computer's memory. Variables are symbolic names made up by the programmer that represent
+                            locations
+                            in the
+                            computer's RAM. So when data is stored in a variable, it is actually stored in RAM.</p>
+                    </article>
+                </section>
+
+                <br>
+
+                <section class="main-section" id="object-oriented-programming">
+                    <header>Object-Oriented Programming</header>
+                    <article>
+                        <p>OOP is a method of software development that has its own practices, concepts, and vocabulary.
+                            Objects,
+                            conceptually speaking, are a self-contained unit consisting of data
+                            (<strong>attributes</strong>)
+                            and procedures
+                            (<strong>methods</strong>). Only the object's methods may directly access and make changes
+                            to the
+                            object's data.
+                            An object typically hides its data, but allows outside code to access the methods that
+                            operate on
+                            the data.</p>
+                        <p>When the object's internal data is hidden from outside code and access to that data is
+                            restricted to
+                            the object's
+                            methods, the data is protected from accidental corruption. In addition, the programming code
+                            outside
+                            the object
+                            does not need to know about the format or internal structure of the object's data. The code
+                            only
+                            needs to
+                            interact with the object's methods.</p>
+                        <p>When a programmer changes the structure of an object's internal data, he/she also modifies
+                            the
+                            object's methods
+                            so they may properly operate on the data. The way in which outside code interacts with the
+                            methods,
+                            however,
+                            does not change.</p>
+                        <ul>
+                            <li>Object: a software entity that contains data and procedures</li>
+                            <li>Attributes: the data contained in an object is known as the object's attributes</li>
+                            <li>Methods: the procedures or behaviors that an object performs are known as the object's
+                                methods
+                            </li>
+                            <li>Encapsulation: the combining of data and code into a single object</li>
+                            <li>Data Hiding: an object's ability to hide its data from code that is outside the object.
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <br>
+
+                <section class="main-section" id="java-keywords">
+                    <header>Java Keywords</header>
+                    <article>
+                        <p>Part of learning a programming language is learning the commonly used keywords, what they
+                            mean, and
+                            how to use
+                            them.</p>
+                        <div class="center-pic">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>abstract</td>
+                                        <td>const</td>
+                                        <td>final</td>
+                                        <td>int</td>
+                                        <td>public</td>
+                                        <td>throw</td>
+                                    </tr>
+                                    <tr>
+                                        <td>assert</td>
+                                        <td>continue</td>
+                                        <td>finally</td>
+                                        <td>interface</td>
+                                        <td>return</td>
+                                        <td>throws</td>
+                                    </tr>
+                                    <tr>
+                                        <td>boolean</td>
+                                        <td>default</td>
+                                        <td>float</td>
+                                        <td>long</td>
+                                        <td>short</td>
+                                        <td>transient</td>
+                                    </tr>
+                                    <tr>
+                                        <td>break</td>
+                                        <td>do</td>
+                                        <td>for</td>
+                                        <td>native</td>
+                                        <td>static</td>
+                                        <td>true</td>
+                                    </tr>
+                                    <tr>
+                                        <td>byte</td>
+                                        <td>double</td>
+                                        <td>goto</td>
+                                        <td>new</td>
+                                        <td>sticitfp</td>
+                                        <td>try</td>
+                                    </tr>
+                                    <tr>
+                                        <td>case</td>
+                                        <td>else</td>
+                                        <td>if</td>
+                                        <td>null</td>
+                                        <td>super</td>
+                                        <td>void</td>
+                                    </tr>
+                                    <tr>
+                                        <td>catch</td>
+                                        <td>enum</td>
+                                        <td>implements</td>
+                                        <td>package</td>
+                                        <td>switch</td>
+                                        <td>volatile</td>
+                                    </tr>
+                                    <tr>
+                                        <td>class</td>
+                                        <td>false</td>
+                                        <td>instanceof</td>
+                                        <td>protected</td>
+                                        <td>this</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>
+                </section>
+
+                <br>
+
+                <section class="main-section" id="the-compiler-and-the-java-virtual-machine">
+                    <header>The Compiler and the Java Virtual Machine</header>
+                    <article>
+                        <ul>
+                            <li>Text editor: used to write Java programs and save it to a file.</li>
+                            <li>Source code: the Java programming statements written.</li>
+                            <li>Source file: the file your Java source code is saved to. Ends in the extension
+                                <em>.java</em>
+                            </li>
+                        </ul>
+                        <ol>
+                            <li>Compiler: What allows your file to run. It translates source code into an executable
+                                form. The
+                                java compiler translates a Java source file into a file that contains byte code
+                                instructions.
+                                The byte code instructions are not machine language and cannot be executed by the CPU,
+                                so
+                                instead they are executed by the Java Virtual Machine. The JVM is a program that reads
+                                Java Byte
+                                code instructions and executed them as they are read. For this reason, the JVM is often
+                                called
+                                an <strong>interpreter</strong>, and Java is often referred to as an interpreted
+                                language.
+                                Although Java byte code is not machine language for a CPU, it can be considered as
+                                machine
+                                language for the JVM.</li>
+                        </ol>
+                        <div class="center-pic">
+                            <p><img src="images/ch 1/program development process.png" alt="Program Development Process">
+                            </p>
+                        </div>
+                        <ol start="2">
+                            <li>Portability: The term portable means that a program may be written on one type of
+                                computer and
+                                then run on a
+                                wide variety of computers, with little or no modification necessary. Because Java byte
+                                code is
+                                the same on
+                                all computers, complied Java programs are highly portable.</li>
+                        </ol>
+                        <div class="center-pic">
+                            <p><img src="images/ch 1/portability.png" alt="Portability"></p>
+                        </div>
+                        <ol start="3">
+                            <li>
+                                <p>Compiling and Running a Java Program: You must compile your Java program to run. Just
+                                    go to
+                                    your operating system's command prompt and make sure you are in the same directory
+                                    or folder
+                                    where the Java program that you want to compile is located</p>
+
+                                <pre
+                                    class="hljs"><code><div>javac Filename <span class="hljs-comment">// place the name of file with the .java extension at Filename placeholder</span></div></code></pre>
+
+                                <p>After the compiler translates to byte code, the byte code is stored in a file with
+                                    the
+                                    <em>.class</em>
+                                    extention, contained within the same directory. However, you do not use the .class
+                                    extension
+                                    when
+                                    opening the file.
+                                </p>
 
 
-        <br>
+                                <pre
+                                    class="hljs"><code><div>Java ClassFilename <span class="hljs-comment">// This command runs the Java interpreter (the JVM) and executes the program</span></div></code></pre>
 
-        <section class="main-section" id="review">
-            <header>Review I</header>
-            <article>
-                <ol>
-                    <li>
-                        <p>What two units are the CPU made up of?
-                            Control Unit: Manages the execution of instructions, controls the flow of data, and
-                            coordinates
-                            activities within the CPU.
-                            Arithmetic Logic Unit (ALU): Performs mathematical calculations (arithmetic) and logical
-                            operations
-                            (comparisons) required for processing.</p>
-                    </li>
-                    <li>
-                        <p>What is a memory address and what is its purpose?
-                            A memory address is a unique identifier that points to a specific location in the computer's
-                            memory
-                            (RAM). Its purpose is to enable the CPU to access and manipulate data stored at that
-                            location. Memory
-                            addresses are used to read and write data during program execution.</p>
-                    </li>
-                    <li>
-                        <p>Why do computers have both main memory and secondary storage?
-                            Main Memory (RAM): Provides fast, temporary storage that holds data and programs while they
-                            are being
-                            actively used by the CPU. It allows quick access and execution of instructions.
-                            Secondary Storage: Offers larger, non-volatile storage capacity for data and programs that
-                            need to be
-                            retained even when the computer is powered off. It is used for long-term storage and data
-                            persistence.
-                        </p>
-                    </li>
-                </ol>
-            </article>
-        </section>
+                            </li>
+                        </ol>
+                    </article>
+                </section>
 
 
-        <section class="main-section" id="parts-of-a-java-program">
-            <header>Parts of a Java Program</header>
-            <article>
-                <pre class="hljs"><code><div><span class="hljs-comment">// This is a simple Java program                           line 1</span>
+                <br>
+
+                <section class="main-section" id="review">
+                    <header>Review I</header>
+                    <article>
+                        <ol>
+                            <li>
+                                <p>What two units are the CPU made up of?
+                                    Control Unit: Manages the execution of instructions, controls the flow of data, and
+                                    coordinates
+                                    activities within the CPU.
+                                    Arithmetic Logic Unit (ALU): Performs mathematical calculations (arithmetic) and
+                                    logical
+                                    operations
+                                    (comparisons) required for processing.</p>
+                            </li>
+                            <li>
+                                <p>What is a memory address and what is its purpose?
+                                    A memory address is a unique identifier that points to a specific location in the
+                                    computer's
+                                    memory
+                                    (RAM). Its purpose is to enable the CPU to access and manipulate data stored at that
+                                    location. Memory
+                                    addresses are used to read and write data during program execution.</p>
+                            </li>
+                            <li>
+                                <p>Why do computers have both main memory and secondary storage?
+                                    Main Memory (RAM): Provides fast, temporary storage that holds data and programs
+                                    while they
+                                    are being
+                                    actively used by the CPU. It allows quick access and execution of instructions.
+                                    Secondary Storage: Offers larger, non-volatile storage capacity for data and
+                                    programs that
+                                    need to be
+                                    retained even when the computer is powered off. It is used for long-term storage and
+                                    data
+                                    persistence.
+                                </p>
+                            </li>
+                        </ol>
+                    </article>
+                </section>
+
+
+                <section class="main-section" id="parts-of-a-java-program">
+                    <header>Parts of a Java Program</header>
+                    <article>
+                        <pre class="hljs"><code><div><span class="hljs-comment">// This is a simple Java program                           line 1</span>
 <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Simple</span>    </span>{                                <span class="hljs-comment">// line 2</span>
     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{            <span class="hljs-comment">// line 3</span>
             System.out.println(<span class="hljs-string">"Programming is fun!"</span>)   <span class="hljs-comment">// line 4</span>
     }
 }
                     </div></code></pre>
-                <ul>
-                    <li>
-                        <p>Line 1: The <strong>//</strong> represents a start of a comment</p>
-                    </li>
-                    <li>
-                        <p>Line 2: This is known as a class header, and marks the beginning of a class definition. Think
-                            of a class
-                            as a container.</p>
                         <ul>
-                            <li><strong>public</strong>: Java keyword, known as a specifier. This controls where the
-                                class may be
-                                accessed from.</li>
-                            <li><strong>class</strong>: Java keyword, indicates the beginning of the class definition.
+                            <li>
+                                <p>Line 1: The <strong>//</strong> represents a start of a comment</p>
                             </li>
-                            <li><strong>Simple</strong>: the name you chose for the class.</li>
+                            <li>
+                                <p>Line 2: This is known as a class header, and marks the beginning of a class
+                                    definition. Think
+                                    of a class
+                                    as a container.</p>
+                                <ul>
+                                    <li><strong>public</strong>: Java keyword, known as a specifier. This controls where
+                                        the
+                                        class may be
+                                        accessed from.</li>
+                                    <li><strong>class</strong>: Java keyword, indicates the beginning of the class
+                                        definition.
+                                    </li>
+                                    <li><strong>Simple</strong>: the name you chose for the class.</li>
+                                </ul>
+                                <p>You may create more the one class in a file, but you may have only one public class
+                                    per Java
+                                    file. When a
+                                    Java file has a public class, the name of the public class must be the same as the
+                                    name of
+                                    the file,
+                                    without the <em>.java</em> extention.</p>
+                            </li>
+                            <li>
+                                <p>Line 3: The method header, marks the beginning of the method.</p>
+                            </li>
+                            <li>
+                                <p>Line 4: Displays the string literal of the screen.</p>
+                            </li>
                         </ul>
-                        <p>You may create more the one class in a file, but you may have only one public class per Java
-                            file. When a
-                            Java file has a public class, the name of the public class must be the same as the name of
-                            the file,
-                            without the <em>.java</em> extention.</p>
-                    </li>
-                    <li>
-                        <p>Line 3: The method header, marks the beginning of the method.</p>
-                    </li>
-                    <li>
-                        <p>Line 4: Displays the string literal of the screen.</p>
-                    </li>
-                </ul>
-            </article>
-        </section>
+                    </article>
+                </section>
 
-        <section class="main-section" id="template">
-            <header>Template</header>
-            <article>
+                <section class="main-section" id="template">
+                    <header>Template</header>
+                    <article>
 
-            </article>
-        </section>
+                    </article>
+                </section>
 
-        <section class="main-section" id="template">
-            <header>Template</header>
-            <article>
+                <section class="main-section" id="template">
+                    <header>Template</header>
+                    <article>
 
-            </article>
-        </section>
+                    </article>
+                </section>
 
-        <section class="main-section" id="template">
-            <header>Template</header>
-            <article>
+                <section class="main-section" id="template">
+                    <header>Template</header>
+                    <article>
 
-            </article>
-        </section>
+                    </article>
+                </section>
 
-        <section class="main-section" id="template">
-            <header>Template</header>
-            <article>
+                <section class="main-section" id="template">
+                    <header>Template</header>
+                    <article>
 
-            </article>
-        </section>
+                    </article>
+                </section>
 
-        <section class="main-section" id="template">
-            <header>Template</header>
-            <article>
+                <section class="main-section" id="template">
+                    <header>Template</header>
+                    <article>
 
-            </article>
-        </section>
+                    </article>
+                </section>
 
-        <section class="main-section" id="template">
-            <header>Template</header>
-            <article>
+                <section class="main-section" id="template">
+                    <header>Template</header>
+                    <article>
 
-            </article>
-        </section>
-        <section class="main-section" id="template">
-            <header>Template</header>
-            <article>
+                    </article>
+                </section>
+                <section class="main-section" id="template">
+                    <header>Template</header>
+                    <article>
 
-            </article>
-        </section>
+                    </article>
+                </section>
 
-        <a href="#top-of-page"><button>To Top</button></a>
-    </main>
+
+            </div>
+        </div>
+    </div>
+
+    <a href="#top-of-page"><button>To Top</button></a>
+
 
 
     <script src="autocomplete.js" async defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
