@@ -9,8 +9,15 @@
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
-    /* overflow-x: hidden; */
-    /* padding: 0 26px; */
+}
+
+h2 {
+    text-align: center;
+}
+
+.dropdown-menu.side-bar .nav-link {
+    padding-left: 10px;
+    color: #333;
 }
 
 /* header#search-bar-header {
@@ -45,11 +52,7 @@ body>#main-doc {
     text-align: center;
 } */
 
-h2 {
-    text-align: center;
-}
-
-
+/* 
 li,
 p {
     color: #4d4e53;
@@ -63,13 +66,13 @@ p {
 
 .side-bar ul {
     padding: 0;
-}
+} */
 
-.side-bar li {
+/* .side-bar li {
     list-style-type: none;
     border-top: solid black 2px;
     padding-left: 25px;
-}
+} */
 
 /* .before-new-chapter {
     border-bottom: solid black 2px;
