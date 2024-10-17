@@ -1,0 +1,28 @@
+{
+  "name": "client-learning-protocol",
+  "version": "1.0.0",
+  "description": "A website for learning about computers and computer programming",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "npm run build && your-deployment-command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulcostanza/client-learning-protocol.git"
+  },
+  "keywords": [
+    "client",
+    "learning",
+    "protocol",
+    "website"
+  ],
+  "author": "Paul Costanza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulcostanza/client-learning-protocol/issues"
+  },
+  "homepage": "https://github.com/paulcostanza/client-learning-protocol#readme",
+  "dependencies": {
+    "client-learning-protocol": "file:"
+  }
+}
