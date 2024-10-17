@@ -167,7 +167,7 @@
             and logic unit performs all of the mathematical operations.
         </p>
         <div class="center-pic">
-            <p><img src="images/ch 1/cpu demo.png" alt="CPU demo"></p>
+            <p><img class="img-fluid d-block mx-auto" src="images/ch 1/cpu demo.png" alt="CPU demo"></p>
         </div>
         <p>When a computer is running a program, the CPU is engaged in a process known as the
             <em><strong>fetch/decode/execute</strong></em> cycle. These steps are repeated as long as
@@ -225,7 +225,175 @@
             </li>
         </ol>
         <div class="center-pic">
-            <p><img src="images/ch 1/ram demo.png" alt="RAM demo"></p>
+            <p><img class="img-fluid d-block mx-auto" src="images/ch 1/ram demo.png" alt="RAM demo"></p>
+        </div>
+
+        <br>
+
+        <h2 id="secondary-storage">Secondary Storage</h2>
+        <p>A type of memory that can hold data for long periods of time, even when there is no power to
+            the
+            computer.</p>
+        <ol>
+            <li>The most common type of secondary storage is the disk drive. The best type of disk drive
+                is the
+                <strong>solid-state drive</strong>. A solid-state drive has no moving parts, and works
+                much
+                faster than a
+                traditional disk drive. These types of storage are usually mounted within the computer.
+            </li>
+            <li>External secondary storage is used for creating backups of data, or moving said data to
+                another
+                computer.
+                One popular type is a universal serial bus drive (usb). USBs do not contain a disk, but
+                instead
+                store data
+                in a special type of memory known as flash memory.</li>
+        </ol>
+
+        <br>
+
+        <h2 id="software">Software</h2>
+        <p>Refers to the programs that run a computer. There are two types of software: operating
+            systems and
+            application
+            software.</p>
+        <ul>
+            <li>Operating Systems: A set of programs that manages the computer's hardware devices and
+                controls
+                their
+                processes. Most modern operating systems are multitasking, which means they are
+                compatible with
+                running
+                multiple programs at once. Through a technique called <strong>time-sharing</strong>, a
+                multitasking system
+                divides the allocation of hardware resources and the attention of the CPU among all the
+                executing programs.
+                Linux, Mac OS, Windows.</li>
+            <li>Application software: What the user uses. These programs solve specific prolblems or
+                perform
+                general
+                operations that satisfy the user's needs. Word processing, spreadsheets.</li>
+        </ul>
+
+        <br>
+
+        <h2 id="what-is-a-program-made-of">What is a program made of?</h2>
+
+        <ul>
+            <li>Keywords: Words that have special meaning in the programming language. Also known as
+                reserved
+                words.</li>
+            <li>Operators: Symbols or words that perform operations on one or more operands. An operand
+                is
+                usually an item
+                of data, such as a number.</li>
+            <li>Punctuation: Most languages require the use of punctuation characters. These characters
+                serve
+                specific
+                purposes, such as making the beginning or ending of a statement, or separating items in
+                a list.
+            </li>
+            <li>Programmer Defined Names: Unlike keywords, these are words or names that are defined by
+                the
+                programmer. They
+                are used to identify storage locations in memory and parts of the program that are
+                created by
+                the
+                programmer. Programmer-defined names are often called identifiers.</li>
+            <li>Syntax: These are the rules that must be followed when writing a program. Syntax
+                dictates how
+                keywords and
+                operators may be used, and where punctuation symbols must appear.</li>
+        </ul>
+
+        <br>
+
+        <h2 id="programming-languages">Programming Languages</h2>
+
+        <p>A programming language is a special language used to write programming programs. A computer's
+            CPU can
+            only
+            process instructions that are written in machine language, which is made up of binary. The
+            binary
+            numbers form
+            machine language instructions, which the CPU interprets as commands. Each type of CPU has
+            its own
+            machine
+            language and writing in it is very tedious and difficut. A program is written in a
+            programming
+            language, and is
+            then translated into machine language.</p>
+
+        <div class="center-pic">
+            <p><img class="img-fluid  d-block mx-auto" src="images/ch 1/software and programming languages.png"
+                    alt="Program Development Process">
+            </p>
+        </div>
+
+        <br>
+
+        <h2>Knowledge Check</h2>
+        <div class="accordion" id="knowledge-check">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#questionOne" aria-expanded="false" aria-controls="questionOne">
+                        What two units are the CPU made up of?
+                    </button>
+                </h2>
+                <div id="questionOne" class="accordion-collapse collapse" data-bs-parent="#knowledge-check">
+                    <div class="accordion-body">
+                        <strong>Control Unit:</strong> Manages the execution of instructions, controls the flow of
+                        data, and
+                        coordinates activities
+                        within the CPU. <br>
+                        <strong>Arithmetic Logic Unit (ALU):</strong> Performs mathematical calculations
+                        (arithmetic) and logical
+                        operations
+                        (comparisons) required for processing.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">
+                        What is a memory address and what is its purpose?
+                    </button>
+                </h2>
+                <div id="questionTwo" class="accordion-collapse collapse" data-bs-parent="#knowledge-check">
+                    <div class="accordion-body">
+                        A <strong>memory address</strong> is a unique identifier that points to a specific location in
+                        the computer's
+                        memory (RAM).
+                        Its purpose is to enable the CPU to access and manipulate data stored at that location. Memory
+                        addresses are
+                        used to read and write data during program execution.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#questionThree" aria-expanded="false" aria-controls="questionThree">
+                        Why do computers have both main memory and secondary storage?
+                    </button>
+                </h2>
+                <div id="questionThree" class="accordion-collapse collapse" data-bs-parent="#knowledge-check">
+                    <div class="accordion-body">
+                        <strong>Main Memory (RAM):</strong> Provides fast, temporary storage that holds data and
+                        programs while they are
+                        being
+                        actively used by the CPU. It allows quick access and execution of instructions. <br>
+                        <strong>Secondary Storage:</strong> Offers larger, non-volatile storage capacity for data and
+                        programs that need
+                        to be
+                        retained even when the computer is powered off. It is used for long-term storage and data
+                        persistence.
+                    </div>
+                </div>
+            </div>
         </div>
 
         <br>
@@ -236,124 +404,7 @@
     <!-- 
 
 
-
-                <section class="main-section" id="secondary-storage">
-                    <header>Secondary Storage</header>
-                    <article>
-                        <p>A type of memory that can hold data for long periods of time, even when there is no power to
-                            the
-                            computer.</p>
-                        <ol>
-                            <li>The most common type of secondary storage is the disk drive. The best type of disk drive
-                                is the
-                                <strong>solid-state drive</strong>. A solid-state drive has no moving parts, and works
-                                much
-                                faster than a
-                                traditional disk drive. These types of storage are usually mounted within the computer.
-                            </li>
-                            <li>External secondary storage is used for creating backups of data, or moving said data to
-                                another
-                                computer.
-                                One popular type is a universal serial bus drive (usb). USBs do not contain a disk, but
-                                instead
-                                store data
-                                in a special type of memory known as flash memory.</li>
-                        </ol>
-                    </article>
-                </section>
-
-                <br>
-
-                <section class="main-section" id="software">
-                    <header>Software</header>
-                    <article>
-                        <p>Refers to the programs that run a computer. There are two types of software: operating
-                            systems and
-                            application
-                            software.</p>
-                        <ul>
-                            <li>Operating Systems: A set of programs that manages the computer's hardware devices and
-                                controls
-                                their
-                                processes. Most modern operating systems are multitasking, which means they are
-                                compatible with
-                                running
-                                multiple programs at once. Through a technique called <strong>time-sharing</strong>, a
-                                multitasking system
-                                divides the allocation of hardware resources and the attention of the CPU among all the
-                                executing programs.
-                                Linux, Mac OS, Windows.</li>
-                            <li>Application software: What the user uses. These programs solve specific prolblems or
-                                perform
-                                general
-                                operations that satisfy the user's needs. Word processing, spreadsheets.</li>
-                        </ul>
-                    </article>
-                </section>
-
-                <br>
-
-                <section class="main-section" id="what-is-a-program-made-of">
-                    <header>What is a program made of?</header>
-                    <article>
-                        <ul>
-                            <li>Keywords: Words that have special meaning in the programming language. Also known as
-                                reserved
-                                words.</li>
-                            <li>Operators: Symbols or words that perform operations on one or more operands. An operand
-                                is
-                                usually an item
-                                of data, such as a number.</li>
-                            <li>Punctuation: Most languages require the use of punctuation characters. These characters
-                                serve
-                                specific
-                                purposes, such as making the beginning or ending of a statement, or separating items in
-                                a list.
-                            </li>
-                            <li>Programmer Defined Names: Unlike keywords, these are words or names that are defined by
-                                the
-                                programmer. They
-                                are used to identify storage locations in memory and parts of the program that are
-                                created by
-                                the
-                                programmer. Programmer-defined names are often called identifiers.</li>
-                            <li>Syntax: These are the rules that must be followed when writing a program. Syntax
-                                dictates how
-                                keywords and
-                                operators may be used, and where punctuation symbols must appear.</li>
-                        </ul>
-                    </article>
-                </section>
-
-                <br>
-
-                <section class="main-section" id="programming-languages">
-                    <header>Programming Languages</header>
-                    <article>
-                        <p>A programming language is a special language used to write programming programs. A computer's
-                            CPU can
-                            only
-                            process instructions that are written in machine language, which is made up of binary. The
-                            binary
-                            numbers form
-                            machine language instructions, which the CPU interprets as commands. Each type of CPU has
-                            its own
-                            machine
-                            language and writing in it is very tedious and difficut. A program is written in a
-                            programming
-                            language, and is
-                            then translated into machine language.</p>
-
-                        <div class="center-pic">
-                            <p><img src="images/ch 1/software and programming languages.png"
-                                    alt="Program Development Process">
-                            </p>
-                        </div>
-
-                    </article>
-                </section>
-
-                <br>
+               
 
                 <section class="main-section" id="the-programming-process">
                     <header>The Programming Process</header>
