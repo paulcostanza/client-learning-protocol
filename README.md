@@ -1,7 +1,11 @@
 ## next thing to do
 
-- change section drop down menu
 - edit photos
+
+## things to eventually do
+
+- figure out how to add latex
+- figure out what I want the code inside to look like
 
 ## ideas
 

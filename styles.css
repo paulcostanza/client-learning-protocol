@@ -13,6 +13,7 @@
     width: 100%;
     top: 0;
     z-index: 10;
+    /* z-index prevents dropdown questions from overlaping the navabar */
 }
 
 body {
@@ -30,6 +31,18 @@ h2 {
 .dropdown-menu.side-bar .nav-link {
     padding-left: 10px;
     color: #333;
+}
+
+.btn {
+    font-weight: 900;
+}
+
+svg {
+    margin-bottom: 4px;
+}
+
+footer {
+    margin-bottom: 20px;
 }
 
 /* header#search-bar-header {
