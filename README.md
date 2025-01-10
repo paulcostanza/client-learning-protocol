@@ -1,6 +1,7 @@
 ## next thing to do
 
 - edit photos
+- organzie folder layout
 
 ## things to eventually do
 
@@ -18,8 +19,6 @@ Have a grand master list of everything to learn. People can then choose if they 
 ## design of website
 
 I love the layout for the bootstrap mobile website, just gonna use that lol
-
-At the footer of every page it should have a left and right arrow with the title's of the previous and next section. The links then act accordingly.
 
 Need up down arrows at the bottom right of the page to quick scroll to the next/previous section. 
 
@@ -64,7 +63,8 @@ Need up down arrows at the bottom right of the page to quick scroll to the next/
 
 
 
-Additional Tips:
-Set specific learning goals and timelines.
-Take breaks and allow yourself to absorb the material.
+Additional Things add:
+- Set specific learning goals and timelines.
+- Take breaks and allow yourself to absorb the material.
+- space repetition idea
 
