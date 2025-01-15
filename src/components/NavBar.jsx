@@ -1,4 +1,4 @@
-// import { Nav, NavLink, NavMenu } from './NavbarElements'
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
 
@@ -21,18 +21,31 @@ export default function NavBar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <Link to="/home" className="nav-link active">Home</Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to="/intro" className="nav-link">Intro</Link>
+
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to="/java" className="nav-link">Java</Link>
+
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="about.html">About</a>
-
+                            <Link to="/quiz" className="nav-link">Quiz</Link>
                         </li>
+
                         <li className="nav-item">
-                            <a className="nav-link" href="about.html">About</a>
+                            <Link to="/about" className="nav-link">About</Link>
+
                         </li>
 
 
-                        <li className="nav-item dropdown">
+                        {/* Drop down menu I would like to eventually add to website */}
+
+                        {/* <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Section
@@ -47,7 +60,7 @@ export default function NavBar() {
                                 </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> */}
 
                     </ul>
                     <form className="d-flex">

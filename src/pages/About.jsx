@@ -5,7 +5,7 @@ export default function About() {
     return (
         <>
             <NavBar />
-            <div class="container" id="top-of-page">
+            <div className="container" id="top-of-page">
                 <p>Hi, I'm Paul! Creator of CLP.</p>
 
                 <p>Here at CLP, we believe that learning should be for those who only have the desire to learn. It's the 21st

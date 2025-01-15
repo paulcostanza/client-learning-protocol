@@ -1,13 +1,12 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
-import NavBar from './components/NavBar'
-import HomePage from './components/HomePage'
-import Footer from './components/Footer'
-
 import Home from './pages/Home'
-import About from './pages/About'
+import Intro from './pages/Intro'
+import Java from './pages/Java'
 import Quiz from './pages/Quiz'
+import About from './pages/About'
 import NoPage from './pages/NoPage'
+
 
 import {
   BrowserRouter,
@@ -16,7 +15,7 @@ import {
 } from "react-router-dom"
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
@@ -25,14 +24,13 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />
-          <Route path='/about' element={<About />} />
+          <Route path='/intro' element={<Intro />} />
+          <Route path='/java' element={<Java />} />
           <Route path='/quiz' element={<Quiz />} />
+          <Route path='/about' element={<About />} />
           <Route path='*' element={<NoPage />} />
         </Routes>
       </BrowserRouter>
-      {/* <NavBar />
-      <HomePage />
-      <Footer /> */}
     </>
   )
 }

@@ -1,18 +1,13 @@
-## next thing to do
+## General things to do
 
 THERE IS SO MUCH TO DO LOL
 
 - figure out a database scenerio for content. Rn I am thinking about json files
 - deleting all css and starting over from scratch
-
-
 - edit photos
-- organzie folder layout
-
-## things to eventually do
-
-- figure out how to add latex
+- figure out how to add latex for math and numbers
 - figure out what I want the code inside to look like
+- figure out why the index.html file is not in the public folder
 
 ## ideas
 
@@ -74,3 +69,10 @@ Additional Things add:
 - Take breaks and allow yourself to absorb the material.
 - space repetition idea
 
+# Pages
+
+## About me
+
+- sushi pic
+- resources
+- what i am currently working on
