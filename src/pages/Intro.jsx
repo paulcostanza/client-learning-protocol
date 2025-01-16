@@ -6,7 +6,7 @@ export default function Intro() {
     return (
         <>
             <NavBar />
-            <div className="container" id="top-of-page">
+            <div className="container" id="space-on-top-of-page">
                 <h1 id="introduction-to-computers">Introduction to Computers</h1>
                 <p>The versatality of the computer allows it do such a wide variety of task that it makes it one of the greatest
                     tools known in existence. It can accomplish this by being <strong>programmed</strong> to follow specifically

@@ -5,7 +5,9 @@ export default function NoPage() {
     return (
         <>
             <NavBar />
-            <h2 style={{ marginTop: '69px' }}><strong>ERROR 404:</strong> Not Found</h2>
+            <div className="container" id="space-on-top-of-page">
+                <h2><strong>ERROR 404:</strong> Not Found</h2>
+            </div>
             <Footer />
         </>
     )

@@ -5,7 +5,7 @@ export default function Java() {
     return (
         <>
             <NavBar />
-            <div className="container" id="top-of-page">
+            <div className="container" id="space-on-top-of-page">
 
                 <h2 id="java-keywords">Java Keywords</h2>
                 <p>Part of learning a programming language is learning the commonly used keywords, what they mean, and how to

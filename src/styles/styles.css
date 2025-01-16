@@ -1,8 +1,3 @@
-/* 
-    TODO
-*/
-
-
 * {
     scroll-behavior: smooth;
 }
@@ -14,136 +9,42 @@
     top: 0;
     z-index: 10;
     /* z-index prevents dropdown questions from overlaping the navabar */
+    display: flex;
+}
+
+/* Home, Intro, Java, ... */
+.menu {
+    align-items: center;
+    justify-content: center;
 }
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
 }
 
-#top-of-page {
+/* Pushes down the content so Navbar does not cover it */
+#space-on-top-of-page {
     margin-top: 80px;
 }
 
+/* titles of sections */
 h2 {
     text-align: center;
 }
 
-.dropdown-menu.side-bar .nav-link {
+/* .dropdown-menu.side-bar .nav-link {
     padding-left: 10px;
     color: #333;
-}
+} */
 
-.btn {
+/* .btn {
     font-weight: 900;
-}
-
+} */
+/* 
 svg {
     margin-bottom: 4px;
-}
+} */
 
-footer {
+/* footer {
     margin-bottom: 20px;
-}
-
-/* header#search-bar-header {
-    background: #fff;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    border-bottom: 5px solid black;
-    margin-left: 25px;
-    height: 75px;
-    z-index: 2;
 } */
-
-/* body>#navbar,
-body>#main-doc {
-    margin-top: 80px;
-} */
-
-/* #main-doc {
-    padding: 10px;
-    margin-right: 100px;
-} */
-
-/* h1 {
-    padding-left: 25px;
-} */
-
-/* h2 {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-    margin: 40px;
-    padding: 10px 20px;
-    text-align: center;
-} */
-
-/* 
-li,
-p {
-    color: #4d4e53;
-    line-height: 1.5;
-}
-
-.side-bar {
-    padding: 0;
-    margin: 0;
-}
-
-.side-bar ul {
-    padding: 0;
-} */
-
-/* .side-bar li {
-    list-style-type: none;
-    border-top: solid black 2px;
-    padding-left: 25px;
-} */
-
-/* .before-new-chapter {
-    border-bottom: solid black 2px;
-} */
-
-/* Cleaning up the navbar links */
-/* 
-a:link
-a:visited
-a:hover
-a:active 
-*/
-/* 
-#navbar li:hover {
-    color: #fff;
-    background-color: #4d4e53;
-}
-
-a {
-    text-decoration: none;
-    color: #4d4e53;
-    font-size: 1.25em;
-}
-
-section>header {
-    font-size: 2em;
-    letter-spacing: 0.1em;
-}
-
-.center-pic {
-    max-width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
-/* td {
-    border: black solid 1px;
-    padding: 8px;
-    margin: 12px;
-    cursor: pointer;
-    /* add pop-out hover effect and make it clickable to have a brief description of what the keyword is 
-} */
-
-/* 
-/* Place Navigation bar on left when the window is big enough */
-
-
-
-/* Add a to top button when the screen is small */
