@@ -1,3 +1,115 @@
+## Currently working on
+
+- pulling data from json files
+- starting off with Intro page
+
+
+Layout:
+
+```txt
+{
+  "entries": [
+    {
+      "id": 1,
+      "title": "Understanding Java",
+      "passage": {
+        "paragraphs": [
+          "Java is a versatile programming language widely used in web and application development.",
+          "It supports object-oriented programming and is platform-independent."
+        ],
+        "list": {
+          "list 1": ["Syntax basics", "Control structures"],
+          "list 2": ["Classes and Objects", "Inheritance", "Polymorphism"]
+        },
+        "img": ["java_logo.png", "oop_diagram.jpg"],
+        "review": {
+          "What is Java?": "A programming language.",
+          "What does OOP stand for?": "Object-Oriented Programming"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "title": "Networking Essentials",
+      "passage": {
+        "paragraphs": [
+          "Networking connects multiple devices for communication and resource sharing.",
+          "Protocols define rules for data transmission."
+        ],
+        "list": {
+          "list 1": ["LAN", "WAN"],
+          "list 2": ["TCP/IP", "DNS", "HTTP"]
+        },
+        "img": ["network_topology.jpg", "protocol_stack.png"],
+        "review": {
+          "What is LAN?": "Local Area Network.",
+          "What does HTTP stand for?": "Hypertext Transfer Protocol"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "title": "Data Structures",
+      "passage": {
+        "paragraphs": [
+          "Data structures are essential for organizing and managing data efficiently.",
+          "Common examples include arrays, linked lists, and trees."
+        ],
+        "list": {
+          "list 1": ["Static structures", "Dynamic structures"],
+          "list 2": ["Stacks", "Queues", "Graphs"]
+        },
+        "img": ["array_diagram.png", "tree_example.jpg"],
+        "review": {
+          "What is an array?": "A collection of elements of the same type.",
+          "What is a tree?": "A hierarchical data structure."
+        }
+      }
+    },
+    {
+      "id": 4,
+      "title": "Threading in C",
+      "passage": {
+        "paragraphs": [
+          "Threading allows multiple tasks to run concurrently within a program.",
+          "The pthread library in C is commonly used for thread management."
+        ],
+        "list": {
+          "list 1": ["Thread creation", "Thread synchronization"],
+          "list 2": ["Mutex", "Semaphores", "Condition variables"]
+        },
+        "img": ["threading_diagram.png", "mutex_example.jpg"],
+        "review": {
+          "What is a thread?": "A unit of execution in a program.",
+          "What does a mutex do?": "Ensures mutual exclusion."
+        }
+      }
+    },
+    {
+      "id": 5,
+      "title": "Git Basics",
+      "passage": {
+        "paragraphs": [
+          "Git is a version control system used for tracking changes in source code.",
+          "It allows collaboration and version management in software projects."
+        ],
+        "list": {
+          "list 1": ["Git initialization", "Branching"],
+          "list 2": ["Commit", "Push", "Pull"]
+        },
+        "img": ["git_logo.png", "branching_example.jpg"],
+        "review": {
+          "What is Git?": "A version control system.",
+          "What does 'commit' mean?": "Saving changes to the local repository."
+        }
+      }
+    }
+  ]
+}
+
+
+```
+
 ## General things to do
 
 THERE IS SO MUCH TO DO LOL

@@ -6,8 +6,6 @@ import Java from './pages/Java'
 import Quiz from './pages/Quiz'
 import About from './pages/About'
 import NoPage from './pages/NoPage'
-
-
 import {
   BrowserRouter,
   Routes,
