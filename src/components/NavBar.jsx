@@ -15,7 +15,7 @@ export default function NavBar() {
                         Client Learning Protocol</a>
                 </div>
                 <div className="menu collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link to="/home" className="nav-link active">Home</Link>
                         </li>

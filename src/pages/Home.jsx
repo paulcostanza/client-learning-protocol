@@ -6,11 +6,13 @@ export default function Home() {
     return (
         <>
             <NavBar />
-            <div class="container" id="space-on-top-of-page">
+            <main>
+                <div class="container" id="space-on-top-of-page">
 
-                <h1>Hello!</h1>
-                <p>Work in progress, working at a slow, leisurely pace, tehe.</p>
-            </div>
+                    <h1>Hello!</h1>
+                    <p>Work in progress, working at a slow, leisurely pace, tehe.</p>
+                </div>
+            </main>
             <Footer />
         </>
     )

@@ -17,7 +17,7 @@
 /* Home, Intro, Java, ... */
 .menu {
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
 /* .dropdown-menu.side-bar .nav-link {
