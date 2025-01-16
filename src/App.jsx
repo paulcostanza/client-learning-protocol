@@ -2,6 +2,7 @@
 import './App.css'
 import Home from './pages/Home'
 import Intro from './pages/Intro'
+import Python from './pages/Python'
 import Java from './pages/Java'
 import Quiz from './pages/Quiz'
 import About from './pages/About'
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/intro' element={<Intro />} />
+          <Route path='/python' element={<Python />} />
           <Route path='/java' element={<Java />} />
           <Route path='/quiz' element={<Quiz />} />
           <Route path='/about' element={<About />} />
