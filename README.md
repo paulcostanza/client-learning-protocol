@@ -1,3 +1,8 @@
+## issues
+
+- links in nav disappear when screen is small
+- links in nav do not light up when on that page
+
 ## Currently working on
 
 - pulling data from json files

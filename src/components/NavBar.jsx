@@ -1,11 +1,20 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export default function NavBar() {
+
+    const [activeLink, setActiveLink] = useState('home'); // Default active link
+
+    function handleSetActive(link) {
+        setActiveLink(link)
+
+        console.log(activeLink)
+    }
 
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container nav-container">
+            <div className="container">
                 <div className="logo">
                     {/* <!-- Where img logo will go when i make one--> */}
                     {/* <!-- classes I might need: col-lg-12 --> */}
@@ -14,27 +23,37 @@ export default function NavBar() {
 
                         Client Learning Protocol</a>
                 </div>
+
+                {/* Hamberger button when screen is small*/}
+                <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                {/* Menu when screen is big */}
                 <div className="menu collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link to="/home" className="nav-link active">Home</Link>
+                            <Link to="/home" onClick={() => handleSetActive('home')} className={`nav-link ${activeLink === 'home' ? 'active' : 'k'}`}
+                            >Home</Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link to="/intro" className="nav-link">Intro</Link>
+                            <Link to="/intro" onClick={() => handleSetActive('intro')} className={`nav-link ${activeLink === 'intro' ? 'active' : ''}`}>Intro</Link>
 
                         </li>
 
                         <li className="nav-item">
-                            <Link to="/java" className="nav-link">Java</Link>
+                            <Link to="/java" onClick={() => handleSetActive('java')} className={`nav-link ${activeLink === 'java' ? 'active' : ''}`} >Java</Link>
 
                         </li>
                         <li className="nav-item">
-                            <Link to="/quiz" className="nav-link">Quiz</Link>
+                            <Link to="/quiz" onClick={() => handleSetActive('quiz')} className={`nav-link ${activeLink === 'quiz' ? 'active' : ''}`} >Quiz</Link>
                         </li>
 
                         <li className="nav-item">
-                            <Link to="/about" className="nav-link">About</Link>
+                            <Link to="/about" onClick={() => handleSetActive('about')} className={`nav-link ${activeLink === 'about' ? 'active' : ''}`} >About</Link>
 
                         </li>
 

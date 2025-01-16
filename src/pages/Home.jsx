@@ -7,7 +7,7 @@ export default function Home() {
         <>
             <NavBar />
             <main>
-                <div class="container" id="space-on-top-of-page">
+                <div className="container" id="space-on-top-of-page">
 
                     <h1>Hello!</h1>
                     <p>Work in progress, working at a slow, leisurely pace, tehe.</p>
