@@ -48,3 +48,27 @@ svg {
 /* footer {
     margin-bottom: 20px;
 } */
+
+
+/********************************* A B O U T | P A G E *********************************/
+
+/* .about-left {
+    float: left;
+}
+
+.about-right {
+    float: right;
+} */
+
+.about-page>h3 {
+    text-align: center;
+}
+
+.about-page-me {
+    display: flex;
+}
+
+/* pic of me */
+.about-right>img {
+    border-radius: 50%;
+}
