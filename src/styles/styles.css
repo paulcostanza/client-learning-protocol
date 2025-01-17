@@ -27,6 +27,7 @@
 } */
 
 /************************************** P A G E S **************************************/
+/*********************** A P P L I E S | T O | A L L | P A G E S ***********************/
 body {
     font-family: 'Open Sans', Arial, sans-serif;
 }
@@ -41,10 +42,16 @@ h2 {
     text-align: center;
 }
 
-/* code box with */
-pre {
+/* code box width & accordion width */
+pre,
+.accordion-item {
     margin: auto;
     width: 80%;
+}
+
+/* Bolds the question in q & a accordion components */
+.accordion-header>button {
+    font-weight: 500;
 }
 
 /********************************* A B O U T | P A G E *********************************/

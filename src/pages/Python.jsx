@@ -16,8 +16,8 @@ export default function Python() {
                     <p>For example, if we make a number a variable, we can later change that variable to a string:</p>
 
                     {/* Code */}
-                    <pre className="hljs"><code><div>speed = <span className="hljs-number">5</span><br />
-                        speed = <span className="hljs-string">"five"</span>
+                    <pre className="hljs"><code><div>speed = <span className="hljs-number">7</span><br />
+                        speed = <span className="hljs-string">"seven"</span>
                     </div></code></pre>
 
                     <p>In most circumstances, it is bad to change the type of a variable. The proper thing to do is to just create a new variable with the different data type.</p>
@@ -62,28 +62,19 @@ export default function Python() {
 
                     <p>So this means that arguments are the <em>actual values</em> that go into the funtion, like <code>69.0</code>, <code>True</code>, or <code>&quot;asian assassins&quot;</code>. Parameters are the names we use in the funtion definition to refer to those values (think of it as the placeholder).</p>
 
-                    <h2 id="review">Review</h2>
 
-                    <hr />
-
-                    <p>_____ are the inputs specified by the function definition.</p>
-                    <ul>
-                        <li>parameters</li>
-                    </ul>
-
-                    <hr />
 
                     <div className="container accordion" id="this-question">
                         <div className="accordion-item">
                             <h2 className="accordion-header">
-                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#questionOne" aria-expanded="false" aria-controls="questionOne">
-                                    Question Goes Here
+                                    _____ are the inputs specified by the function definition.
                                 </button>
                             </h2>
                             <div id="questionOne" className="accordion-collapse collapse" data-bs-parent="#this-question">
                                 <div className="accordion-body">
-                                    Put Answer Here
+                                    parameters
                                 </div>
                             </div>
                         </div>

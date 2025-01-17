@@ -203,33 +203,22 @@ export default function KnowledgeCheck() {
 
 /*
 
-<div className="container accordion" id="knowledge-check">
-                <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#questionOne" aria-expanded="false" aria-controls="questionOne">
-                            What two units are the CPU made up of?
-                        </button>
-                    </h2>
-                    <div id="questionOne" className="accordion-collapse collapse" data-bs-parent="#knowledge-check">
-                        <div className="accordion-body">
-                            <strong>Control Unit:</strong> Manages the execution of instructions, controls the flow of
-                            data, and
-                            coordinates activities
-                            within the CPU.
-                            <br />
-                            <strong>Arithmetic Logic Unit (ALU):</strong> Performs mathematical calculations
-                            (arithmetic) and logical
-                            operations
-                            (comparisons) required for processing.
-                        </div>
-                    </div>
-                </div>
+ACCORDION QUESTION/ANSWER TEMPLATE: 
 
-
-
-
-
-
+<div className="container accordion" id="this-question">
+    <div className="accordion-item">
+        <h2 className="accordion-header">
+            <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#questionOne" aria-expanded="false" aria-controls="questionOne">
+                Question Goes Here testing
+            </button>
+        </h2>
+        <div id="questionOne" className="accordion-collapse collapse" data-bs-parent="#this-question">
+            <div className="accordion-body">
+                Put Answer Here
+            </div>
+        </div>
+    </div>
+</div>
 
 */

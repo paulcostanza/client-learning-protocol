@@ -135,7 +135,7 @@ Take a look at this stuff and see what can be added to above:
 
 There are so many notes I can add, it is easier (for now) to list what I have. 
 
-Need to delete and start over with: 
+Need to delete (pages/) and start over with: 
 - Intro 
 - Java
 - Quiz
