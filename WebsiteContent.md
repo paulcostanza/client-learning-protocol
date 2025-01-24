@@ -131,6 +131,17 @@ Take a look at this stuff and see what can be added to above:
 
 ---
 
+# How to add
+
+- convert markdown to html
+- add to page
+- add format to any code
+    - add spacing/tabs for indentation
+    - if you have curly brackets in the code <code>{}</code> then you need to escape them because of react
+- add format to any accordion component
+
+---
+
 # What I am currently adding
 
 There are so many notes I can add, it is easier (for now) to list what I have. 
@@ -142,8 +153,13 @@ Need to delete (pages/) and start over with:
 
 ## Currently working on
 
+#### Where I am adding to
+
 \#4: Computer Science fundamentals - Data Structures and Algorithms
 - Learn about arrays, linked list, stacks, queues, trees, graphs, and searching/sorting algoriths
 
 file: pages/Python.jsx
 
+#### What I am adding
+
+boot.dev: 01 Lean to Code in Python

@@ -26,6 +26,10 @@
     color: #333;
 } */
 
+/************************************* F O O T E R *************************************/
+
+
+
 /************************************** P A G E S **************************************/
 /*********************** A P P L I E S | T O | A L L | P A G E S ***********************/
 body {
@@ -35,6 +39,12 @@ body {
 /* Pushes down the content so Navbar does not cover it */
 #space-on-top-of-page {
     margin-top: 80px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.5rem;
 }
 
 /* titles of sections */
