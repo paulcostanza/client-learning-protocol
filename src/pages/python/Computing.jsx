@@ -50,7 +50,7 @@ export default function Computing() {
                 <pre class="hljs"><code><div>  0101<br />
                     &amp; 0111<br />
                     ------<br />
-                    0101<br />
+                    &nbsp;&nbsp;0101<br />
                 </div></code></pre>
             </div>
 
