@@ -65,6 +65,13 @@ pre,
     font-weight: 500;
 }
 
+
+.center {
+    margin: auto;
+    width: fit-content;
+    /* width: 88% */
+}
+
 /********************************* A B O U T | P A G E *********************************/
 
 .about-page>h3 {
