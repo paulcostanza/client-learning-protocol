@@ -1,4 +1,15 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 export default function TestingAndDebugging() {
+
+    const error101 = `PythonError: Traceback (most recent call last):
+  File "<exec>", line 6, in <module>
+  File "<string>", line 1, in <module>
+  File "/home/pyodide/main.py", line 3
+    msg = f"You have {strength} strength, {wisdom} wisdom, and {dexterity} dexterity for a total of {total} stats.
+                                                                                                                  ^
+IndentationError: unindent does not match any outer indentation level`
     return (
         <>
             <h1>Testing & Debugging</h1>
@@ -23,22 +34,11 @@ export default function TestingAndDebugging() {
             <p>Here is an example of an error you may encounter:</p>
 
             {/* Code */}
-            <pre className="hljs"><code><div>PythonError: Traceback (most recent call last):<br />
-                &nbsp;&nbsp;File <span className="hljs-string">"&lt;exec&gt;"</span>, line 6, <span className="hljs-keyword">in</span> &lt;module&gt;<br />
-                &nbsp;&nbsp;File <span className="hljs-string">"&lt;string&gt;"</span>, line 1, <span className="hljs-keyword">in</span> &lt;module&gt;<br />
-                &nbsp;&nbsp;File <span className="hljs-string">"/home/pyodide/main.py"</span>, line 3<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;msg = f<span className="hljs-string">"You have {"{ strength }"} strength, {"{ wisdom }"} wisdom, and {"{ dexterity }"} dexterity for a total of {"{ total }"} stats.
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^<br /><br />
-                    IndentationError: unindent does not match any outer indentation level
-                </span></div></code></pre>
-
-            <ol>
-                <li><code>PythonError: Traceback (most recent call last):</code> this is a standard header that's just letting us know that a Python traceback is what we are looking at</li>
-                <li><code>File &quot;&lt;exec&gt;&quot;, line 6, in &lt;module&gt;</code> and <code>File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;</code> this is the start of the <em>trace</em>. These strange <code>&quot;&lt;exec&gt;&quot;</code> and <code>&quot;&lt;string&gt;&quot;</code> files do not really exist, the Python interpreter is letting us know about them because they have to do with how your code is executed in a virtual brower-based environment.</li>
-                <li><code>File &quot;/home/pyodide/main.py&quot;, line 3</code> now we are getting to the real meat of the error message! The purpose of a <em>trace</em> is to show us the path that the Python interpreter took through our code before it encountered the error, which can help us figure out what went wrong. In this case, the interpreter was execcuting the code in the <code>main.py</code> file, and it got to line 3 before it encountered the error.</li>
-                <li><code>msg = f&quot;You have {"{strength}"} strength, {"{wisdom}"} wisdom, and {"{dexterity}"} dexterity for a total of {"{total}"} stats.</code> this is the line of code that caused the error.</li>
-                <li><code>IndentationError: unindent does not match any outer indentation level</code> this is the type of error that was raised! in this case, it is an <code>IndentationError</code>, which means that the Python interpreter was expecting a certain amount of indentation (whitespace at the beginning of the line) but it did not get what it was expecting.</li>
-            </ol>
+            <div className="center">
+                <SyntaxHighlighter language="bash" style={tomorrow} className="center">
+                    {error101}
+                </SyntaxHighlighter>
+            </div>
         </>
     )
 }
