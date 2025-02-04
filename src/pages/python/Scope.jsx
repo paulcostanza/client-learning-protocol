@@ -1,4 +1,13 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 export default function Scope() {
+
+    const weirdPythonIssue = `def get_names():
+    names = ["paul", "sally", "jimmy"]
+    for name in names:
+        x = name
+    print(x)`
     return (
         <>
             <h1 id="scope">Scope</h1>
@@ -7,13 +16,11 @@ export default function Scope() {
 
             <h2 id="weird-python-scope-issue">Weird python scope issue</h2>
 
-            {/* Code */}
-            <pre className="hljs"><code><div><span className="hljs-function"><span className="hljs-keyword">def</span> <span className="hljs-title">get_names</span><span className="hljs-params">()</span>:</span><br />
-                &nbsp;&nbsp;names = [<span className="hljs-string">"paul"</span>, <span className="hljs-string">"sally"</span>, <span className="hljs-string">"jimmy"</span>]<br /><br />
-                &nbsp;&nbsp;<span className="hljs-keyword">for</span> name <span className="hljs-keyword">in</span> names:<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;x = name<br />
-                &nbsp;&nbsp;print(x)
-            </div></code></pre>
+            <div className="center">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+                    {weirdPythonIssue}
+                </SyntaxHighlighter>
+            </div>
 
             <p>What does python print to the console in the example above?</p>
 
