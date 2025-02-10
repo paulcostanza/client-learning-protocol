@@ -112,7 +112,7 @@ print(vehicles)
 
             <p>Because dictionaries are ordered, the items have a defined order, and that order will <em>not</em> change.</p>
 
-            <p>Unordered means that the items do not have a defined order, so you couldn't refer to an item by using an index. The takeaway is that if you're on Python $ 3.7 $ or later, you'll be able to iterate over dictionaires in the same order every time.</p>
+            <p>Unordered means that the items do not have a defined order, so you couldn't refer to an item by using an index. The takeaway is that if you're on Python $ 3.7 $ or later, you'll be able to iterate over dictionaries in the same order every time.</p>
 
             <h2 id="convert-dictionary-of-characters-into-a-list-and-sort-by-value">Convert dictionary of characters into a list and sort by value</h2>
 

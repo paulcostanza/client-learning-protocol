@@ -202,7 +202,7 @@ print(dog_age)
                 </SyntaxHighlighter>
             </div>
 
-            <p>While it's typically considered bad practice to store items of different types in a <em>List</em>, it is not a problem with Tuples. Because they have a fixed size, it's easy to keep track of which indicies store with types of data.</p>
+            <p>While it's typically considered bad practice to store items of different types in a <em>List</em>, it is not a problem with Tuples. Because they have a fixed size, it's easy to keep track of which indices store with types of data.</p>
 
             <p>Tuples are often used to store very small groups (like 2 or 3 items) of data. For example, you might use a tuple to store a dog's name and age.</p>
 

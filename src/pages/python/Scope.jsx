@@ -22,11 +22,11 @@ export default function Scope() {
                 </SyntaxHighlighter>
             </div>
 
-            <p>What does python print to the console in the example above?</p>
+            <p>What does Python print to the console in the example above?</p>
 
             <p>Believe it or not, it does not produce <code>None</code>, but it will print out <code>jimmy</code>! Even though <code>x</code> is outside of the <code>for</code> loop scope, python knows what it is. This is because in python, variables are scoped to their function.</p>
 
-            <p>It's a little weird and not common among other programming languages. Try not to take advantage of this little quirk, you may form some bad habbits and have other programmers not care too much for your coding style.</p>
+            <p>It's a little weird and not common among other programming languages. Try not to take advantage of this little quirk, you may form some bad habits and have other programmers not care too much for your coding style.</p>
 
 
 
