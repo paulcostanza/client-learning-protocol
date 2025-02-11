@@ -1,0 +1,7 @@
+// tells Babel to use the necessary presets to transform both modern JavaScript and JSX.
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+}
