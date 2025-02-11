@@ -38,3 +38,4 @@ Need up down arrows at the bottom right of the page to quick scroll to the next/
 
 - resources
 - what i am currently working on
+- 
