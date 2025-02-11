@@ -1,4 +1,10 @@
-name: Deploy Vite App
+- name: Deploy to GitHub Pages
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_branch: gh-pages  # Ensure we're deploying to gh-pages
+    publish_dir: ./dist  # This is where Vite builds the site
+
 
 on:
   push:
