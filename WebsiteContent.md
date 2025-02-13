@@ -159,7 +159,3 @@ Need to delete (pages/) and start over with:
 - Learn about arrays, linked list, stacks, queues, trees, graphs, and searching/sorting algoriths
 
 file: pages/Python.jsx
-
-#### What I am adding
-
-boot.dev: 01 Lean to Code in Python
