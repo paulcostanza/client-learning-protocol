@@ -53,6 +53,12 @@ export default function NavBar() {
                             <Link to="/java" onClick={() => handleSetActive('java')} className={`nav-link ${activeLink === 'java' ? 'active' : ''}`} >Java</Link>
 
                         </li>
+
+                        <li className="nav-item">
+                            <Link to="/flashcards" onClick={() => handleSetActive('flashcards')} className={`nav-link ${activeLink === 'flashcards' ? 'active' : ''}`} >Flash Cards</Link>
+
+                        </li>
+
                         <li className="nav-item">
                             <Link to="/quiz" onClick={() => handleSetActive('quiz')} className={`nav-link ${activeLink === 'quiz' ? 'active' : ''}`} >Quiz</Link>
                         </li>
