@@ -12,6 +12,7 @@ export default function Quiz() {
                     <p>This is the future spot for the quiz page</p>
                     <h3>Thanks for checking us out!</h3>
                 </div >
+
                 <KnowledgeCheck />
             </main>
 

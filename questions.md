@@ -1,6 +1,6 @@
 ## Python
 
-True or False: When a program is dynamicall typed it means that once a variable is assigned a type it cannot change.
+True or False: When a program is dynamically typed it means that once a variable is assigned a type it cannot change.
 
 - False
 
@@ -61,7 +61,7 @@ b = 0b1100  # 12 in binary
 print(a & b)
 ```
 
-- <code>Ob1000</code>
+- <code>0b1000</code>
 
 ---
 

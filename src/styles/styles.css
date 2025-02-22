@@ -2,6 +2,10 @@
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-y: auto;
+}
+
 /********************************* C O M P O N E N T S *********************************/
 /************************************* N A V B A R *************************************/
 
@@ -69,7 +73,56 @@ pre,
 .center {
     margin: auto;
     width: fit-content;
-    /* width: 88% */
+
+}
+
+/***************************** F L A S H C A R D | P A G E *****************************/
+
+.fake-nav-bar {
+    color: #fff;
+    background-color: #222;
+}
+
+.fake-nav-bar>ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* buttons */
+
+.buttonRow {
+    width: 400px;
+    margin: auto;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    font-size: 1.5em;
+    border-radius: 8px;
+    border: 1px solid black;
+    padding: 0.6em 1.2em;
+    width: 200px;
+    height: 70px;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100px;
+}
+
+button:hover {
+    border-color: #2f2f2f;
 }
 
 /********************************* A B O U T | P A G E *********************************/

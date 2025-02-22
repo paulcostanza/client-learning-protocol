@@ -1,0 +1,79 @@
+.card-container {
+    cursor: pointer;
+    height: 400px;
+    width: 400px;
+
+    /* effects 3d look, makes it pop out at you */
+    perspective: 800px;
+    position: relative;
+    margin: auto;
+    transition: ease-in;
+}
+
+.card-container>* {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    border: 1px solid #300;
+
+    /* Preserves .front & .back from flattening out */
+    transform-style: preserve-3d;
+    transition: all 0.4s ease-in-out;
+}
+
+.card-hover:hover {
+    transform: rotateY(30deg);
+    transition: all 0.4s ease-in-out;
+}
+
+.mouse-click {
+    transform: rotateY(180deg);
+    transition: all 0.4s ease-in-out;
+}
+
+.card .front {
+    backface-visibility: hidden;
+    position: absolute;
+    text-align: center;
+    background-color: rgba(255, 251, 251, 1);
+}
+
+.card .back {
+    backface-visibility: hidden;
+    height: 400px;
+    width: 400px;
+    text-align: center;
+    transform: rotateY(180deg);
+
+    /* center answers vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.question {
+    color: #333;
+    font-size: 1.0em;
+}
+
+.answer {
+    color: #333;
+    font-size: 2.0em;
+}
+
+/* Styles for screens with less than 500px */
+/* Mostly to change the card size so it is not bigger than the screen */
+@media screen and (max-width: 500px) {
+
+    .card-container,
+    .card,
+    .card .back {
+        height: 280px;
+        width: 280px;
+    }
+}

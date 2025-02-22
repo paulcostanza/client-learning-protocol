@@ -7,8 +7,6 @@ export default function NavBar() {
 
     function handleSetActive(link) {
         setActiveLink(link)
-
-        console.log(activeLink)
     }
 
 
