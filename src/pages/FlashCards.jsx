@@ -6,6 +6,7 @@ import Card from './flash-cards/Card/Card'
 // import FakeQuestions from './flash-cards/data/fake.json'
 import PythonQuestions from './flash-cards/data/python.json'
 import JavaQuestions from './flash-cards/data/java.json'
+import NetworkingQuestions from './flash-cards/data/networking.json'
 
 export default function FlashCards() {
 
@@ -21,6 +22,8 @@ export default function FlashCards() {
             setCards([...PythonQuestions.cards])
         } else if (type == "Java") {
             setCards([...JavaQuestions.cards])
+        } else if (type == "Networking") {
+            setCards([...NetworkingQuestions])
         } else {
             console.log("Nada is pressed")
         }
@@ -58,6 +61,7 @@ export default function FlashCards() {
                     <li><button onClick={() => launchQuiz("Intro")}>Intro</button></li>
                     <li><button onClick={() => launchQuiz("Python")}>Python</button></li>
                     <li><button onClick={() => launchQuiz("Java")}>Java</button></li>
+                    <li><button onClick={() => launchQuiz("Networking")}>Networking</button></li>
                 </ul>
             </div>
 

@@ -23,7 +23,7 @@
 
     /* Preserves .front & .back from flattening out */
     transform-style: preserve-3d;
-    transition: all 0.4s ease-in-out;
+    transition: all 0 ease-in-out;
 }
 
 .card-hover:hover {
