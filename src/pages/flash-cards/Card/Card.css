@@ -76,4 +76,8 @@
         height: 280px;
         width: 280px;
     }
+
+    .answer {
+        font-size: 1.2em;
+    }
 }
