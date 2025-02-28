@@ -1,29 +1,27 @@
-{
-    "cards": [
-        {
-            "id": 1,
-            "question": "True or False: When a program is dynamically typed it means that once a variable is assigned a type it cannot change.",
-            "answer": "False"
-        },
-        {
-            "id": 2,
-            "question": "In a statically typed language, assigning a value of the wrong type to a variable would cause a(n) _____.",
-            "answer": "type error"
-        },
-        {
-            "id": 3,
-            "question": "what is the conventional name for the entry point function?",
-            "answer": "main()"
-        },
-        {
-            "id": 4,
-            "question": "True or False: If a function does not explicitly return a value, it returns <code>None</code> by default.",
-            "answer": "True"
-        },
-        {
-            "id": 5,
-            "question": "The _____ method is used to remove the last item from a list and can return it to a variable if assigned. ",
-            "answer": "pop()"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "question": "True or False: \nWhen a program is dynamically typed it means that once a variable is assigned a type it cannot change.",
+        "answer": "False"
+    },
+    {
+        "id": 2,
+        "question": "In a statically typed language, assigning a value of the wrong type to a variable would cause a(n) _____.",
+        "answer": "type error"
+    },
+    {
+        "id": 3,
+        "question": "what is the conventional name for the entry point function?",
+        "answer": "main()"
+    },
+    {
+        "id": 4,
+        "question": "True or False: \nIf a function does not explicitly return a value, it returns <code>None</code> by default.",
+        "answer": "True"
+    },
+    {
+        "id": 5,
+        "question": "The _____ method is used to remove the last item from a list and can return it to a variable if assigned. ",
+        "answer": "pop()"
+    }
+]

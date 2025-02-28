@@ -1,6 +1,6 @@
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-// import Me from '../assets/about/me/png'
+import Me from '/src/assets/about/me.png'
 
 export default function About() {
     return (

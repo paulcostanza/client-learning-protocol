@@ -1,14 +1,12 @@
-{
-    "cards": [
-        {
-            "id": 1,
-            "question": "Testing if Java will pop up",
-            "answer": "It may have"
-        },
-        {
-            "id": 2,
-            "question": "Still testing if Java will pop up",
-            "answer": "Still testing..."
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "question": "Testing if Java will pop up",
+        "answer": "It may have"
+    },
+    {
+        "id": 2,
+        "question": "Still testing if Java will pop up",
+        "answer": "Still testing..."
+    }
+]

@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "question": "The TCP header specifies which value to ensure that data is processed by the correct application?",
-        "answer": "Port"
+        "question": "Which device or service would not operate at the physical layer of the OSI Model: {\n}a. Network Interface Card (NIC) <br />b. Router \nc. IP Address \nd. Cable",
+        "answer": "c. IP Address"
     },
     {
         "id": 2,
@@ -26,8 +26,8 @@
     },
     {
         "id": 6,
-        "question": "Which device or service would not operate at the physical layer of the OSI Model?",
-        "answer": "IP Address"
+        "question": "Which device or service would not operate at the physical layer of the OSI Model? \na. Network Interface Card (NIC) \nb. IP Address \nC. Switch \nD. Hub",
+        "answer": "b. IP Address"
     },
     {
         "id": 7,
@@ -61,13 +61,13 @@
     },
     {
         "id": 13,
-        "question": "Which device or service would not operate at the physical layer of the OSI Model?",
-        "answer": "IP Address"
+        "question": "The TCP header specifies which value to ensure that data is processed by the correct application?",
+        "answer": "Port"
     },
     {
         "id": 14,
-        "question": "The physical address applied by the data link layer of the OSI Model has which features?",
-        "answer": "A"
+        "question": "The physical address applied by the data link layer of the OSI Model has which features? \na. It is expressed using a 12-character hexadecimal value and it is unique to every network interface \nb. It is used to route data between networks \nc. It is defined by the operating system \nd. It is only used in wireless networks",
+        "answer": "a. It is expressed using a 12-character hexadecimal value and it is unique to every network interface"
     },
     {
         "id": 15,
@@ -81,18 +81,18 @@
     },
     {
         "id": 17,
-        "question": "What is the purpose of the Logical Link Control (LLC) sub-layer in the Data Link Layer?",
-        "answer": "b"
+        "question": "What is the purpose of the Logical Link Control (LLC) sub-layer in the Data Link Layer? \na. It defines the physical addressing method for nodes. \nb. It manages communication with the network layer protocols. \nc. It is responsible for error detection and correction. \nd. It converts data from bits into electrical signals.",
+        "answer": "b. It manages communication with the network layer protocols."
     },
     {
         "id": 18,
-        "question": "What is a key distinction of the components at the physical layer of the OSI model?",
-        "answer": "b"
+        "question": "What is a key distinction of the components at the physical layer of the OSI model? \na. They use software to process data. \nb. They involve encoding and signaling to transmit data. \nc. They define the routing paths for data across networks. \nd. They are responsible for application protocols like HTTP.",
+        "answer": "b They involve encoding and signaling to transmit data."
     },
     {
         "id": 19,
-        "question": "Which of the following is NOT a responsibility of the Data Link Layer?",
-        "answer": "d"
+        "question": "Which of the following is NOT a responsibility of the Data Link Layer? \na. Adding physical addresses to data \nb. Error detection and retransmission \nc. Framing data for transmission \nd. Routing data between different networks",
+        "answer": "d. Routing data between different networks \n\nThe Data Link Layer focuses on node-to-node communication within the same network — things like adding physical addresses, framing, and handling error detection and retransmission."
     },
     {
         "id": 20,
@@ -107,6 +107,6 @@
     {
         "id": 22,
         "question": "Why is the layered approach of the OSI model beneficial for network communication?",
-        "answer": "allows for effective communication by organizing network functions; ensures vendors focus on the entire network protocol stack; divides data communication into seven layers, each with a specific job, making it easier to isolate and troubleshoot issues"
+        "answer": "1. allows for effective communication by organizing network functions \n2. ensures vendors focus on the entire network protocol stack \n3. divides data communication into seven layers, each with a specific job, making it easier to isolate and troubleshoot issues"
     }
 ]

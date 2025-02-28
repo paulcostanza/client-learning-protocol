@@ -1,17 +1,16 @@
 import React from 'react';
 
-const DrawButton = ({ updateCard }) => {
+const DrawButton = ({ updateCard, wrongAnswer }) => {
 
 
     return (
         <div className="flex justify-center">
-            <button
-                onClick={updateCard}
-                className="btn"
-            >
+            <button onClick={updateCard} className="btn">
                 Draw Card
             </button>
-            <button className='btn'>Wrong Answer</button>
+            <button onClick={wrongAnswer} className='btn'>
+                Needs Practice
+            </button>
         </div>
     );
 };
