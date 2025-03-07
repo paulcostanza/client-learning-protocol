@@ -51,9 +51,6 @@ export default function FlashCards() {
         setCardIdx(prevIdx => {
             const nextIdx = prevIdx + 1
 
-            console.log("length of cards: " + cards.length)
-            console.log("cardIdx value: " + cardIdx)
-
             if (nextIdx >= cards.length) {
                 setCardIdx(0)
 

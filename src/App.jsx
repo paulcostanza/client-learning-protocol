@@ -1,5 +1,3 @@
-// import { useState } from 'react'
-import './App.css'
 import Home from './pages/Home'
 import Intro from './pages/Intro'
 import Python from './pages/Python'
@@ -15,7 +13,6 @@ import {
 } from "react-router-dom"
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <>
