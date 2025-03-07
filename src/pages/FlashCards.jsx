@@ -12,8 +12,8 @@ import CybersecurityQuestions from './flash-cards/data/cybersecurity.json'
 export default function FlashCards() {
 
     const [cards, setCards] = useState([...PythonQuestions])
-    const [idx, setIdx] = useState(0)
-    const [currentCard, setCurrentCard] = useState({})
+    const [cardIdx, setCardIdx] = useState(0)
+    const [currentCard, setCurrentCard] = useState([])
     const [incorrect, setIncorrect] = useState([])
     const [wrongIdx, setWrongIdx] = useState(0)
 
@@ -25,7 +25,6 @@ export default function FlashCards() {
             setCards([...PythonQuestions])
         } else if (type == "Java") {
             setCards([...JavaQuestions])
-
         } else if (type == "Cybersecurity") {
             setCards([...CybersecurityQuestions])
         } else if (type == "Networking") {
@@ -36,6 +35,7 @@ export default function FlashCards() {
     }
 
     // random does not seem to work
+    // runs whenever cards is effected
     useEffect(() => {
         setCurrentCard(getRandomCard(cards))
     }, [cards])
@@ -44,40 +44,37 @@ export default function FlashCards() {
         return currentCards[Math.floor(Math.random() * currentCards.length)]
     }
 
-    // when user gets a card incorrect, add it to the 'wrong' deck
-    const handleAddIncorrect = (item) => {
-        setIncorrect((prevIncorrect) => [...prevIncorrect, item]);
-    };
-
-
     const updateCard = () => {
 
-        let nextIdx = idx + 1
+        // did not immediately reflect updated state & held
+        // prev state. This makes it update immediately
+        setCardIdx(prevIdx => {
+            const nextIdx = prevIdx + 1
 
-        // if you finish cards
-        if (nextIdx >= cards.length) {
-            nextIdx = 0
+            console.log("length of cards: " + cards.length)
+            console.log("cardIdx value: " + cardIdx)
 
-            if (wrongIdx > 0) {
-                setCards([...incorrect])
-                setIncorrect([])
-                setWrongIdx(0)
+            if (nextIdx >= cards.length) {
+                setCardIdx(0)
+
+                if (wrongIdx > 0) {
+                    setCards([...incorrect])
+                    setIncorrect([])
+                    setWrongIdx(0)
+                } else {
+                    alert("You did it, yay!")
+                }
+            } else {
+                setCurrentCard(cards[nextIdx])
             }
-
-            else {
-                alert("You did it, yay!")
-            }
-        }
-
-        setIdx(nextIdx)
-        setCurrentCard(cards[nextIdx])
-
+            return nextIdx
+        })
     }
 
 
     const wrongAnswer = () => {
-        handleAddIncorrect(currentCard)
-        setWrongIdx(wrongIdx + 1)
+        setIncorrect((prevIncorrect) => [...prevIncorrect, currentCard]);
+        setWrongIdx(prevWrong => prevWrong + 1)
         updateCard()
     }
 
@@ -105,8 +102,8 @@ export default function FlashCards() {
                 {/* Draw card button */}
                 <div className="buttonRow">
                     <DrawButton updateCard={updateCard} wrongAnswer={wrongAnswer} />
-                    <p>You are on card #{idx + 1} of {cards.length}</p>
-                    <p>Total incorrect: {wrongIdx}</p>
+                    <p>You are on card #{cardIdx + 1} of {cards.length}</p>
+                    <p>Total incorrect (this round): {wrongIdx}</p>
                 </div>
 
                 {/* end of className=App */}
