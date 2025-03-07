@@ -41,7 +41,7 @@ export default function About() {
                         </div>
 
                         <div className="about-right">
-                            <img id="me" src="src/assets/about/me.png" alt="pic_of_me" />
+                            <img id="me" src={Me} alt="pic_of_me" />
                         </div>
 
                         {/* Add sources */}
