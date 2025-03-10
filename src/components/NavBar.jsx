@@ -53,6 +53,11 @@ export default function NavBar() {
                         </li>
 
                         <li className="nav-item">
+                            <Link to="/react" onClick={() => handleSetActive('react')} className={`nav-link ${activeLink === 'react' ? 'active' : ''}`} >React</Link>
+
+                        </li>
+
+                        <li className="nav-item">
                             <Link to="/flashcards" onClick={() => handleSetActive('flashcards')} className={`nav-link ${activeLink === 'flashcards' ? 'active' : ''}`} >Flash Cards</Link>
 
                         </li>
