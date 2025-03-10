@@ -6,7 +6,7 @@ import Card from './flash-cards/Card/Card'
 // import FakeQuestions from './flash-cards/data/fake.json'
 import PythonQuestions from './flash-cards/data/python.json'
 import JavaQuestions from './flash-cards/data/java.json'
-import NetworkingQuestions from './flash-cards/data/networking.json'
+import NetworkingQuestions from './flash-cards/data/networking'
 import CybersecurityQuestions from './flash-cards/data/cybersecurity.json'
 
 export default function FlashCards() {
@@ -54,7 +54,7 @@ export default function FlashCards() {
             if (nextIdx >= cards.length) {
                 setCardIdx(0)
 
-                if (wrongIdx > 0) {
+                if (incorrect.length > 0) {
                     setCards([...incorrect])
                     setIncorrect([])
                     setWrongIdx(0)
@@ -98,7 +98,14 @@ export default function FlashCards() {
 
                 {/* Draw card button */}
                 <div className="buttonRow">
-                    <DrawButton updateCard={updateCard} wrongAnswer={wrongAnswer} />
+                    <div className="flex justify-center">
+                        <button onClick={updateCard} className="btn">
+                            Draw Card
+                        </button>
+                        <button onClick={wrongAnswer} className='btn'>
+                            Needs Practice
+                        </button>
+                    </div>
                     <p>You are on card #{cardIdx + 1} of {cards.length}</p>
                     <p>Total incorrect (this round): {wrongIdx}</p>
                 </div>

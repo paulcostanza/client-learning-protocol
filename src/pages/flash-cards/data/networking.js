@@ -1,7 +1,11 @@
-[
+const questionAndAnswers = [
     {
         "id": 1,
-        "question": "Which device or service would not operate at the physical layer of the OSI Model: {\n}a. Network Interface Card (NIC) <br />b. Router \nc. IP Address \nd. Cable",
+        "question": `Which device or service would not operate at the physical layer of the OSI Model: 
+        a. Network Interface Card (NIC) 
+        b. Router 
+        c. IP Address 
+        d. Cable`,
         "answer": "c. IP Address"
     },
     {
@@ -26,7 +30,11 @@
     },
     {
         "id": 6,
-        "question": "Which device or service would not operate at the physical layer of the OSI Model? \na. Network Interface Card (NIC) \nb. IP Address \nC. Switch \nD. Hub",
+        "question": `Which device or service would not operate at the physical layer of the OSI Model?
+        a. Network Interface Card (NIC) 
+        b. IP Address 
+        C. Switch 
+        D. Hub`,
         "answer": "b. IP Address"
     },
     {
@@ -66,8 +74,8 @@
     },
     {
         "id": 14,
-        "question": "The physical address applied by the data link layer of the OSI Model has which features? \na. It is expressed using a 12-character hexadecimal value and it is unique to every network interface \nb. It is used to route data between networks \nc. It is defined by the operating system \nd. It is only used in wireless networks",
-        "answer": "a. It is expressed using a 12-character hexadecimal value and it is unique to every network interface"
+        "question": "Why is the layered approach of the OSI model beneficial for network communication?",
+        "answer": "1. allows for effective communication by organizing network functions \n2. ensures vendors focus on the entire network protocol stack \n3. divides data communication into seven layers, each with a specific job, making it easier to isolate and troubleshoot issues"
     },
     {
         "id": 15,
@@ -103,10 +111,7 @@
         "id": 21,
         "question": "What is the primary purpose of the Media Access Control (MAC) sub-layer in the Data Link Layer?",
         "answer": "Handles physical addressing, specifically using the MAC address of devices, and helps establish direct node-to-node communication on the same network."
-    },
-    {
-        "id": 22,
-        "question": "Why is the layered approach of the OSI model beneficial for network communication?",
-        "answer": "1. allows for effective communication by organizing network functions \n2. ensures vendors focus on the entire network protocol stack \n3. divides data communication into seven layers, each with a specific job, making it easier to isolate and troubleshoot issues"
     }
 ]
+
+export default questionAndAnswers
