@@ -3,7 +3,7 @@ export default function Footer() {
         <footer>
             <div className="container">
 
-                <p>&copy; 2069 No rights reserved</p>
+                <small>&copy; 2069 No rights reserved</small>
             </div>
         </footer>
     )
