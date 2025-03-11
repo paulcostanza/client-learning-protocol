@@ -1,7 +1,6 @@
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
-import Section01 from "./react/Section01"
-import IntroToReact from "./react/Section01"
+import IntroToReact from "./react/IntroToReact"
 
 export default function React() {
     return (

@@ -33,6 +33,34 @@ body {
 /*************************** F O O T E R | C O M P O N E N T ***************************/
 
 
+/******************* A C C O R D I O N | F R O M | B O O T S T R A P *******************/
+
+/* .code-block {
+    display: block;
+} */
+
+.elements-in-accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.child-of-accordion {
+    width: 100%;
+}
+
+/* overrides default settings of <code> elements inside accordion button  */
+/* default settings cause weird spacing issues */
+.accordion-button code {
+    padding: 2px 4px;
+    /* Makes the code element more readable */
+    background-color: #f4f4f4;
+    /* Optional: light background for contrast */
+    border-radius: 4px;
+    /* Optional: rounded edges for a polished look */
+    margin-top: 4px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
 
 /************************************** P A G E S **************************************/
 /*********************** A P P L I E S | T O | A L L | P A G E S ***********************/
