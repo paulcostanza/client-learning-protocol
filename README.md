@@ -11,3 +11,9 @@ have a *correct* and a *wrong* button.
 - hit *wrong* -> card is place in wrong pile
 
 after you go through the cards, it automatically brings up the wrong pile for you to try again
+
+--- 
+
+## interesting resources
+
+From **[Css-Tricks](https://css-tricks.com/almanac/properties/a/animation-timeline/)**, this link provides insite on animation. I can use the sections about image growing as you scroll, and scroolport/scroll container/ scrollable overflow for the flashcard section!
