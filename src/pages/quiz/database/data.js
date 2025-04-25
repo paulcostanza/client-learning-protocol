@@ -6,7 +6,8 @@ export default [
             'Object-Oriented',
             'Object-Based',
             'Procedural',
-        ]
+        ],
+        answer: 'Object-Oriented'
     },
     {
         id: 2,

@@ -168,6 +168,20 @@ button:hover {
     border-radius: 50%;
 }
 
+/* weird jump at 995px, maybe a built-in bootstrap thing? */
+
+@media (max-width: 1000px) {
+    .about-page-me {
+        flex-direction: column;
+    }
+
+    .about-right>img {
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+}
+
 /********************************** Q U I Z | P A G E **********************************/
 
 .quiz-page {
@@ -182,6 +196,11 @@ button:hover {
 
 input[type="radio"] {
     margin-right: 5px;
+}
+
+.quiz-page input:hover,
+.quiz-page label:hover {
+    cursor: pointer;
 }
 
 .choice-container {
@@ -208,4 +227,20 @@ input[type="radio"] {
 .choice-container:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+}
+
+.correct {
+    background-color: #00d397;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+}
+
+.wrong {
+    background-color: #ff4a4a;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
 }

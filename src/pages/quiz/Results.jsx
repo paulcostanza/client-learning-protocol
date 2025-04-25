@@ -1,7 +1,7 @@
 export default function Results() {
     return (
         <div className="container">
-            <h1>Quiz Time</h1>
+            <h1>Quiz Results</h1>
 
             <div className="result">
                 <div>

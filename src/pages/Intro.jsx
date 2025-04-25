@@ -12,8 +12,7 @@ export default function Intro() {
                     <p>The versatality of the computer allows it do such a wide variety of task that it makes it one of the greatest
                         tools known in existence. It can accomplish this by being <strong>programmed</strong> to follow specifically
                         designed instructions.</p>
-                    <p>Programming is considered both a science and an art. Here are a few things that must be designed for any
-                        <strong>real-world</strong> computer program:
+                    <p>Programming is considered both a science and an art. Here are a few things that must be designed for any <strong>real-world</strong> computer program:
                     </p>
                     <ul>
                         <li>the logical flow of the instructions</li>
