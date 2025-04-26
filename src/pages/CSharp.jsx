@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 
 // images
-import compile_c_or_cplusplus from '/src/assets/cSharp/compile-c-or-c++.png'
+import compile_c_or_cplusplus from '../assets/cSharp/compile-c-or-c++.png'
 
 export default function CSharp() {
 
