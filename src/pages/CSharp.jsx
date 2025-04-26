@@ -3,6 +3,9 @@ import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 
+// images
+import compile_c_or_cplusplus from '/src/assets/cSharp/compile-c-or-c++.png'
+
 export default function CSharp() {
 
     const declaringVariables = `int number; // without value, not initialized
@@ -148,7 +151,7 @@ to write a comment!
 
                     <p>Before C#, we had two languages in the C family: C and C++. When compiling the application that uses either language, the compiler translated our code into the <em>native code</em> for the machine it was running on.</p>
 
-                    <p><img className="img-in-reading" src="/src/assets/cSharp/compile-c-or-c++.png" alt="compile in c or c++" /></p>
+                    <p><img className="img-in-reading" src={compile_c_or_cplusplus} /></p>
 
                     <p>If you wrote an application in C++ on a Windows machine with 8086 processor architecture, the compiler would translate the code into the native code for that machine. An issue arrises when you have different operating systems and different hardwares. If you took that compiled application on the computer with a different architecture it would not run! Hence, Microsoft created C# and .NET...basicly they stole Java's concept.</p>
 
