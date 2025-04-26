@@ -17,3 +17,9 @@ after you go through the cards, it automatically brings up the wrong pile for yo
 ## interesting resources
 
 From **[Css-Tricks](https://css-tricks.com/almanac/properties/a/animation-timeline/)**, this link provides insite on animation. I can use the sections about image growing as you scroll, and scroolport/scroll container/ scrollable overflow for the flashcard section!
+
+## code snippets
+
+have them all be the same size
+if not enough room then add the scroll bar at the bottom
+while at it, find out some common sizes for things like pics, fonts, headers, etc.

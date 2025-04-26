@@ -97,11 +97,29 @@ pre,
     font-weight: 500;
 }
 
+.container {
+    max-width: 900px !important;
+}
 
 .center {
     margin: auto;
     width: fit-content;
+}
 
+.img-in-reading {
+    width: 100%;
+}
+
+.code-snippet {
+    overflow: hidden;
+}
+
+@media (min-width: 980px) {
+    .img-in-reading {
+        width: 72%;
+        margin: auto;
+        display: block;
+    }
 }
 
 /***************************** F L A S H C A R D | P A G E *****************************/

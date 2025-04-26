@@ -49,7 +49,10 @@ export default function NavBar() {
 
                         <li className="nav-item">
                             <Link to="/java" onClick={() => handleSetActive('java')} className={`nav-link ${activeLink === 'java' ? 'active' : ''}`} >Java</Link>
+                        </li>
 
+                        <li className="nav-item">
+                            <Link to="/csharp" onClick={() => handleSetActive('csharp')} className={`nav-link ${activeLink === 'csharp' ? 'active' : ''}`} >C#</Link>
                         </li>
 
                         <li className="nav-item">
