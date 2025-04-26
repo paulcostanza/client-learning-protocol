@@ -3,15 +3,6 @@ import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 
-// pics
-import compile_c_or_cplusplus from '/src/assets/cSharp/compile-c-or-c++.png'
-import compile_into_intermediate_language from '/src/assets/cSharp/compile into intermediate language.png'
-import il_code_into_native_code from '/src/assets/cSharp/il-code-into-native-code.png'
-import classes_101 from '/src/assets/cSharp/classes-101.png'
-import namespace from '/src/assets/cSharp/namespace.png'
-import assembly from '/src/assets/cSharp/assembly.png'
-import application from '/src/assets/cSharp/application.png'
-
 export default function CSharp() {
 
     const declaringVariables = `int number; // without value, not initialized
@@ -157,7 +148,7 @@ to write a comment!
 
                     <p>Before C#, we had two languages in the C family: C and C++. When compiling the application that uses either language, the compiler translated our code into the <em>native code</em> for the machine it was running on.</p>
 
-                    <p><img className="img-in-reading" src={compile_c_or_cplusplus} alt="compile in c or c++" /></p>
+                    <p><img className="img-in-reading" src="/src/assets/cSharp/compile-c-or-c++.png" alt="compile in c or c++" /></p>
 
                     <p>If you wrote an application in C++ on a Windows machine with 8086 processor architecture, the compiler would translate the code into the native code for that machine. An issue arrises when you have different operating systems and different hardwares. If you took that compiled application on the computer with a different architecture it would not run! Hence, Microsoft created C# and .NET...basicly they stole Java's concept.</p>
 
@@ -166,7 +157,7 @@ to write a comment!
                         <strong>Intermediate Language</strong>.
                     </p>
 
-                    <p><img className="img-in-reading" src={compile_into_intermediate_language} alt="compile into intermediate language" /></p>
+                    <p><img className="img-in-reading" src="/src/assets/cSharp/compile into intermediate language.png" alt="compile into intermediate language" /></p>
 
                     <p>Intermediate language code is what your C# program compiles to, and is independent of the computer on which it is
                         running. Our next step is to compile the IL Code into the native code or the machine that is running the
@@ -180,7 +171,7 @@ to write a comment!
                             translating to machine code.</em></p>
                     </blockquote>
 
-                    <p><img className="img-in-reading" src={il_code_into_native_code} alt="il code into native codes" /></p>
+                    <p><img className="img-in-reading" src="/src/assets/cSharp/il-code-into-native-code.png" alt="il code into native codes" /></p>
 
                     <p>With this architecture you can write an application in C# and do not need to worry about compiling it into the native
                         code for different machines. As long as the machine has CLR, it can run your application.</p>
@@ -191,7 +182,7 @@ to write a comment!
                         some functionality.
                     </p>
 
-                    <p><img className="img-in-reading" src={classes_101} alt="classes 101" /></p>
+                    <p><img className="img-in-reading" src="/src/assets/cSharp/classes-101.png" alt="classes 101" /></p>
 
                     <p>Data represents the <em>state</em> of the application.</p>
                     <p><em>data == attributes</em>
@@ -203,19 +194,19 @@ to write a comment!
                     <p>As the number of classes within an application grows, we need a way to organize these classes. Enter, <strong>namespace</strong>.
                     </p>
 
-                    <p><img className="img-in-reading" src={namespace} alt="namespace" /></p>
+                    <p><img className="img-in-reading" src="/src/assets/cSharp/namespace.png" alt="namespace" /></p>
 
                     <p>A namespace is a container for related classes. We can have namespaces for working with data like databases, one for
                         graphics and images, one for security, etc. As these namespaces grow we need a different way of partitioning an
                         application. This is where we use an <strong>assembly</strong>.</p>
 
-                    <p><img className="img-in-reading" src={assembly} alt="assembly" /></p>
+                    <p><img className="img-in-reading" src="/src/assets/cSharp/assembly.png" alt="assembly" /></p>
 
                     <p>An assembly is a container for related namespaces. Physically it is a file on the disk which can either be an
                         executable or a DLL (<strong>Dynamically linked library</strong>). When you compile an application the compiler
                         builds one or more assemblies depending on how you partition your code.</p>
 
-                    <p><img className="img-in-reading" src={application} alt="applications" /></p>
+                    <p><img className="img-in-reading" src="/src/assets/cSharp/application.png" alt="applications" /></p>
 
                     <h4 id="review">Review</h4>
                     <p>It helps to think of it like this:</p>
