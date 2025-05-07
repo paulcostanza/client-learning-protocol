@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
+import Latex from 'react-latex'
 
 
 export default function Intro() {
@@ -45,8 +46,7 @@ export default function Intro() {
                     <h2 id="the-cpu">The CPU</h2>
                     <p>The <strong>Central Processing Unit</strong>'s job is to fetch instructions, follow instructions, and then
                         produce some resulting data. The CPU consists of two parts: the <em><strong>control unit</strong></em> and
-                        the
-                        <em><strong>arithmetic and logic unit (ALC)</strong></em>. The control unit coordinates all of the
+                        the <em><strong>arithmetic and logic unit (ALC)</strong></em>. The control unit coordinates all of the
                         computer's
                         operations (where to get the next instruction and regulating the other major components of the computer with
                         control signlas), while the arithmetic and logic unit performs all of the mathematical operations.
@@ -102,8 +102,7 @@ export default function Intro() {
                     <p>A type of memory that can hold data for long periods of time, even when there is no power to the computer.
                     </p>
                     <ol>
-                        <li>The most common type of secondary storage is the disk drive. The best type of disk drive is the
-                            <strong>solid-state drive</strong>. A solid-state drive has no moving parts, and works much faster than
+                        <li>The most common type of secondary storage is the disk drive. The best type of disk drive is the <strong>solid-state drive</strong>. A solid-state drive has no moving parts, and works much faster than
                             a
                             traditional disk drive. These types of storage are usually mounted within the computer.
                         </li>
@@ -152,7 +151,7 @@ export default function Intro() {
                         and
                         0s). Here is some binary:</p>
                     <div className="center">
-                        <p>$ 1011010000000101 $</p>
+                        <p><Latex>$ 1011010000000101 $</Latex></p>
                     </div>
                     <p>Kind of hard to understand, huh? The binary numbers form machine language instructions, which the CPU
                         interprets as
@@ -263,15 +262,13 @@ export default function Intro() {
                             alt="example of procdural programming" />
                     </div>
 
-                    <p>The issues from procdural programs gave way to OOP. OOP became centered on creating objects.
-                        <strong>Objects</strong> are a self-contained unit consisting of data (<strong>attributes</strong>) and
+                    <p>The issues from procdural programs gave way to OOP. OOP became centered on creating objects. <strong>Objects</strong> are a self-contained unit consisting of data (<strong>attributes</strong>) and
                         procedures (<strong>methods</strong>). Only the object's methods may directly access and make changes to the
                         object's data. An object typically hides its data, but allows outside code to access the methods that
                         operate on
                         the data.
                     </p>
-                    <p>OOP addresses the problem of code/data separation throught data hiding, called encapsulation.
-                        <strong>Encapsulation</strong> refers to the combining of data and code into a single object. Data hiding
+                    <p>OOP addresses the problem of code/data separation throught data hiding, called encapsulation. <strong>Encapsulation</strong> refers to the combining of data and code into a single object. Data hiding
                         refers
                         to an object's ability to hide its data from code that is outside the object.
                     </p>

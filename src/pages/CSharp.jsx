@@ -654,10 +654,7 @@ to write a comment!
                         </div>
                     </div>
 
-
-
                 </div >
-
             </main>
 
 

@@ -1,5 +1,6 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import Latex from 'react-latex'
 
 export default function Dictionaries() {
 
@@ -108,11 +109,11 @@ print(vehicles)
 
             <h2 id="ordered-or-unordered">Ordered or Unordered?</h2>
 
-            <p>As of Python version $ 3.7 $ dictionaries are <em>ordered</em>. In Python $ 3.6 $ and earlier, dictionaries were <em>unordered</em>.</p>
+            <p>As of Python version <Latex>$ 3.7 $</Latex> dictionaries are <em>ordered</em>. In Python <Latex>$ 3.6 $</Latex> and earlier, dictionaries were <em>unordered</em>.</p>
 
             <p>Because dictionaries are ordered, the items have a defined order, and that order will <em>not</em> change.</p>
 
-            <p>Unordered means that the items do not have a defined order, so you couldn't refer to an item by using an index. The takeaway is that if you're on Python $ 3.7 $ or later, you'll be able to iterate over dictionaries in the same order every time.</p>
+            <p>Unordered means that the items do not have a defined order, so you couldn't refer to an item by using an index. The takeaway is that if you're on Python <Latex>$ 3.7 $</Latex> or later, you'll be able to iterate over dictionaries in the same order every time.</p>
 
             <h2 id="convert-dictionary-of-characters-into-a-list-and-sort-by-value">Convert dictionary of characters into a list and sort by value</h2>
 
