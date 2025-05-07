@@ -172,8 +172,7 @@ to write a comment!
                     <p>If you wrote an application in C++ on a Windows machine with 8086 processor architecture, the compiler would translate the code into the native code for that machine. An issue arrises when you have different operating systems and different hardwares. If you took that compiled application on the computer with a different architecture it would not run! Hence, Microsoft created C# and .NET...basicly they stole Java's concept.</p>
 
                     <p>When compiling code in Java, the code is not translated directly into the machine code, but translated into an
-                        intermediate language called <strong>bytecode</strong>. We have the exact same concept in C#, with C# using
-                        <strong>Intermediate Language</strong>.
+                        intermediate language called <strong>bytecode</strong>. We have the exact same concept in C#, with C# using <strong>Intermediate Language</strong>.
                     </p>
 
                     <p><img className="img-in-reading" src={compile_into_intermediate_language} alt="compile into intermediate language" /></p>
@@ -181,8 +180,7 @@ to write a comment!
                     <p>Intermediate language code is what your C# program compiles to, and is independent of the computer on which it is
                         running. Our next step is to compile the IL Code into the native code or the machine that is running the
                         application. This is now the job of CLR (<strong>Common Language Runtime</strong>). CLR is an application that is
-                        sitting in the memory, whose job it is to translate the IL code into the machine code. This process is called
-                        <strong>Just-in-time Compilation (JIT)</strong>.
+                        sitting in the memory, whose job it is to translate the IL code into the machine code. This process is called <strong>Just-in-time Compilation (JIT)</strong>.
                     </p>
 
                     <blockquote>
@@ -204,9 +202,8 @@ to write a comment!
                     <p><img className="img-in-reading" src={classes_101} alt="classes 101" /></p>
 
                     <p>Data represents the <em>state</em> of the application.</p>
-                    <p><em>data == attributes</em>
-                        <em>methods == functions</em>
-                    </p>
+                    <h5 class="center-text"><em>data == attributes</em></h5>
+                    <h5 class="center-text"><em>methods == functions</em></h5>
 
                     <p>In a real-world application you can have hundreds, or even thousands of classes, each responsible for a piece of
                         functionality.</p>
@@ -644,7 +641,7 @@ to write a comment!
                         <h2 className="accordion-header">
                             <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#questionSeven" aria-expanded="false" aria-controls="questionSeven">
-                                Why does CE use IL (intermediate language) instead of compliling directly into machine code?
+                                Why does C# use IL (intermediate language) instead of compliling directly into machine code?
                             </button>
                         </h2>
                         <div id="questionSeven" className="accordion-collapse collapse" data-bs-parent="#this-question">

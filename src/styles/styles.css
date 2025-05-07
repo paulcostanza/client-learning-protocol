@@ -6,6 +6,14 @@ body {
     overflow-y: auto;
 }
 
+.center-text {
+    text-align: center;
+}
+
+/* .active {
+    text-transform: uppercase;
+} */
+
 /********************************* C O M P O N E N T S *********************************/
 /*************************** N A V B A R | C O M P O N E N T ***************************/
 

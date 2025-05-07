@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function NavBar() {
 
-    const [activeLink, setActiveLink] = useState('home'); // Default active link
+    const [activeLink, setActiveLink] = useState(''); // Default active link
 
-    function handleSetActive(link) {
-        setActiveLink(link)
-    }
+    useEffect(() => {
+        const currentPath = location.pathname.substring(1)
+        setActiveLink(currentPath || 'home')
+    }, [location])
+
 
 
     return (
@@ -22,7 +24,7 @@ export default function NavBar() {
                         Client Learning Protocol</a>
                 </div>
 
-                {/* Hamberger button when screen is small*/}
+                {/* Hamburger button when screen is small*/}
                 <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -32,52 +34,30 @@ export default function NavBar() {
                 {/* Menu when screen is big */}
                 <div className="menu collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link to="/home" onClick={() => handleSetActive('home')} className={`nav-link ${activeLink === 'home' ? 'active' : 'k'}`}
-                            >Home</Link>
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/intro" onClick={() => handleSetActive('intro')} className={`nav-link ${activeLink === 'intro' ? 'active' : ''}`}>Intro</Link>
-
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/python" onClick={() => handleSetActive('python')} className={`nav-link ${activeLink === 'python' ? 'active' : ''}`} >Python</Link>
-
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/java" onClick={() => handleSetActive('java')} className={`nav-link ${activeLink === 'java' ? 'active' : ''}`} >Java</Link>
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/csharp" onClick={() => handleSetActive('csharp')} className={`nav-link ${activeLink === 'csharp' ? 'active' : ''}`} >C#</Link>
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/react" onClick={() => handleSetActive('react')} className={`nav-link ${activeLink === 'react' ? 'active' : ''}`} >React</Link>
-
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/flashcards" onClick={() => handleSetActive('flashcards')} className={`nav-link ${activeLink === 'flashcards' ? 'active' : ''}`} >Flash Cards</Link>
-
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/quiz" onClick={() => handleSetActive('quiz')} className={`nav-link ${activeLink === 'quiz' ? 'active' : ''}`} >Quiz</Link>
-                        </li>
-
-                        <li className="nav-item">
-                            <Link to="/about" onClick={() => handleSetActive('about')} className={`nav-link ${activeLink === 'about' ? 'active' : ''}`} >About</Link>
-
-                        </li>
+                        {[
+                            { to: '/home', name: 'home', label: 'Home' },
+                            { to: '/intro', name: 'intro', label: 'Intro' },
+                            { to: '/python', name: 'python', label: 'Python' },
+                            { to: '/java', name: 'java', label: 'Java' },
+                            { to: '/csharp', name: 'csharp', label: 'C#' },
+                            { to: '/react', name: 'react', label: 'React' },
+                            { to: '/flashcards', name: 'flashcards', label: 'Flash Cards' },
+                            { to: '/quiz', name: 'quiz', label: 'Quiz' },
+                            { to: '/about', name: 'about', label: 'About' },
+                        ].map(link => (
+                            <li className="nav-item" key={link.name}>
+                                <Link to={link.to} className={`nav-link ${activeLink === link.name ? 'active' : ''}`}>
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
 
 
-                        {/* Drop down menu I would like to eventually add to website */}
 
-                        {/* <li className="nav-item dropdown">
+                    {/* Drop down menu I would like to eventually add to website */}
+
+                    {/* <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Section
@@ -94,7 +74,7 @@ export default function NavBar() {
                             </ul>
                         </li> */}
 
-                    </ul>
+
 
                     {/* SEARCH BAR - I would like to add this back in...eventually */}
                     {/* <form className="d-flex">
