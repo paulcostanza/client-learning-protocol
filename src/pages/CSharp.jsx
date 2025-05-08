@@ -12,6 +12,7 @@ import classes_101 from '../assets/cSharp/classes-101.png'
 import namespace from '../assets/cSharp/namespace.png'
 import assembly from '../assets/cSharp/assembly.png'
 import application from '../assets/cSharp/application.png'
+import primitive_types from '../assets/cSharp/primitive-types.png'
 import real_numbers from '../assets/cSharp/real-numbers.png'
 import variable_demo from '../assets/cSharp/variable-demo.png'
 import var_keyword_pic from '../assets/cSharp/var-keyword.png'
@@ -325,7 +326,8 @@ to write a comment!
 
                     <h4 id="primitive-types">Primitive Types</h4>
 
-                    <p><img className="img-in-reading" src="/src/assets/cSharp/primitive-types.png" alt="primitive types" /></p>
+                    {/* this image is not showing up on website */}
+                    <p><img className="img-in-reading" src={primitive_types} alt="primitive types" /></p>
 
                     <h4 id="real-numbers">Real Numbers</h4>
 
