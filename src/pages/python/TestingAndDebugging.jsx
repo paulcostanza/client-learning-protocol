@@ -35,7 +35,7 @@ IndentationError: unindent does not match any outer indentation level`
 
             {/* Code */}
             <div className="center">
-                <SyntaxHighlighter language="bash" style={tomorrow} className="center">
+                <SyntaxHighlighter language="bash" style={tomorrow} className="center code-snippet">
                     {error101}
                 </SyntaxHighlighter>
             </div>

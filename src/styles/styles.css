@@ -120,6 +120,7 @@ pre,
 
 .code-snippet {
     overflow: hidden;
+    max-width: 900px;
 }
 
 @media (min-width: 980px) {
