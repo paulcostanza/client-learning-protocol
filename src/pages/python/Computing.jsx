@@ -1,5 +1,6 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import Latex from 'react-latex'
 
 export default function Computing() {
 
@@ -55,8 +56,8 @@ num = int(binary_string, 2)`
 
             <p>You can add the letter <code>e</code> followed by a positive or negative integer to specify that you're using scientific notation.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {scientificNotation}
                 </SyntaxHighlighter>
             </div>
@@ -65,8 +66,8 @@ num = int(binary_string, 2)`
 
             <p>Python also allows you to represent large numbers in the decimal format using underscores as the delimiter instead of commas to make it easier to read.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {underScores}
                 </SyntaxHighlighter>
             </div>
@@ -75,8 +76,8 @@ num = int(binary_string, 2)`
 
             <p>You can write an integer in Python using binary syntax using the <code>0b</code> prefix:</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {binaryInPython}
                 </SyntaxHighlighter>
             </div>
@@ -85,15 +86,15 @@ num = int(binary_string, 2)`
 
             <h2 id="bitwise-codecode-operator">Bitwise <code>&amp;</code> Operator</h2>
 
-            <p>Similar to logical operators, but instead of operating on boolean values, bitwise operators apply the same logic to all the bits in a value by column. Example, the numbers 5 and 7 represented in binary would result in 5.</p>
+            <p>Similar to logical operators, but instead of operating on boolean values, bitwise operators apply the same logic to all the bits in a value by column. Example, the numbers <Latex>$ 5 $</Latex> and <Latex>$ 7 $</Latex> represented in binary would result in <Latex>$ 5 $</Latex>.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="bash" style={tomorrow} className="center">
+            <div className="">
+                <SyntaxHighlighter language="bash" style={tomorrow} className="code-snippet">
                     {bitwiseAndOperator}
                 </SyntaxHighlighter>
             </div>
 
-            <p>A $ 1 $ in binary is the same as <code>True</code>, while $ 0 $ is <code>False</code>. So really a bitwise operation is just a bunch of logical operations that are completed in tandem by column.</p>
+            <p>A <Latex>$ 1 $</Latex> in binary is the same as <code>True</code>, while <Latex>$ 0 $</Latex> is <code>False</code>. So really a bitwise operation is just a bunch of logical operations that are completed in tandem by column.</p>
 
             <div className="center">
                 <SyntaxHighlighter language="bash" style={tomorrow} className="center">
@@ -101,7 +102,7 @@ num = int(binary_string, 2)`
                 </SyntaxHighlighter>
             </div>
 
-            <p>The binary <code>&amp;</code> (ampersand) will always produce the same or less amount of $1 $s. It is also referred to as masking or filtering.</p>
+            <p>The binary <code>&amp;</code> (ampersand) will always produce the same or less amount of <Latex>$1 $</Latex>s. It is also referred to as masking or filtering.</p>
 
             <h2 id="bitwise-codecode-operator">Bitwise <code>|</code> Operator</h2>
 
@@ -111,16 +112,16 @@ num = int(binary_string, 2)`
 
             <p>Remember that when writing a number in binary, the prefix <code>0b</code> is used to indicate that what follows is a binary number. <code>0b10</code> is two in binary, but <code>10</code> without the <code>0b</code> prefix is simply ten.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {binaryNotation}
                 </SyntaxHighlighter>
             </div>
 
             <h2 id="convert-binary">Convert Binary</h2>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {convertBinary}
                 </SyntaxHighlighter>
             </div>

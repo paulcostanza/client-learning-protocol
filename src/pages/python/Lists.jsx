@@ -118,8 +118,8 @@ print(dog_age)
 
             <p>We also have positive infinity!</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {posAndNegInfinity}
                 </SyntaxHighlighter>
             </div>
@@ -128,8 +128,8 @@ print(dog_age)
 
             <p>To grab the sections from a list of only the elements you want, you can use the slicing operator (<code>:</code>). Slice <strong>does not</strong> change the original list</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {sliceExamples}
                 </SyntaxHighlighter>
             </div>
@@ -138,8 +138,8 @@ print(dog_age)
 
             <p>Using only the step section you can reverse a list quite easily:</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {reverseList}
                 </SyntaxHighlighter>
             </div>
@@ -150,24 +150,24 @@ print(dog_age)
 
             <h4 id="concatenate">Concatenate</h4>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {concatenateList}
                 </SyntaxHighlighter>
             </div>
 
             <h4 id="contains">Contains</h4>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {containsList}
                 </SyntaxHighlighter>
             </div>
 
             <h4 id="deletion">Deletion</h4>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {deleteFromList}
                 </SyntaxHighlighter>
             </div>
@@ -176,8 +176,8 @@ print(dog_age)
 
             <p>The <code>.split()</code> method in Python is called on a string and returns a list by splitting the string based on a given <em>delimiter</em>. If no delimiter is provided, it will split the string on whitespace.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {splitListOfString}
                 </SyntaxHighlighter>
             </div>
@@ -186,8 +186,8 @@ print(dog_age)
 
             <p>The <code>.join()</code> method is called on a <strong>delimiter</strong> (what goes between all the words in the list), and takes a list of strings as input</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {joinListOfStrings}
                 </SyntaxHighlighter>
             </div>
@@ -196,8 +196,8 @@ print(dog_age)
 
             <p><strong>Tuples</strong> are collections of data that are ordered and unchangeable. You can think of a tuple as a <em>List</em> with a fixed size. They are created with round brackets.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {joinListOfStrings}
                 </SyntaxHighlighter>
             </div>
@@ -206,24 +206,24 @@ print(dog_age)
 
             <p>Tuples are often used to store very small groups (like 2 or 3 items) of data. For example, you might use a tuple to store a dog's name and age.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {fideo}
                 </SyntaxHighlighter>
             </div>
 
             <p><em>Note</em> There is a special case for creating single-item tuples. You must include a comma so Python knows it's a tuple and not regular parentheses.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {singletuple}
                 </SyntaxHighlighter>
             </div>
 
             <p>Here is an example of combining list and tuples:</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {listOfTuples}
                 </SyntaxHighlighter>
             </div>
@@ -232,8 +232,8 @@ print(dog_age)
 
             <p>You can easily assign the values of a tuple to variables using <em>unpacking</em>.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {tupleUnpacking}
                 </SyntaxHighlighter>
             </div>

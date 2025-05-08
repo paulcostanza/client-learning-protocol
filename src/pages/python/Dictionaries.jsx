@@ -72,8 +72,8 @@ print(vehicles)
 
             <h2 id="updating-dictionary-values">Updating Dictionary Values</h2>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {dictionary_example}
                 </SyntaxHighlighter>
             </div>
@@ -82,16 +82,16 @@ print(vehicles)
 
             <p>You can delete existing keys using the <code>del</code> keyword.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {delDictValues}
                 </SyntaxHighlighter>
             </div>
 
             <p>However, if you try to delete a key that doesn't exist, you'll get an <em>error</em>.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {delDictValuesError}
                 </SyntaxHighlighter>
             </div>
@@ -100,8 +100,8 @@ print(vehicles)
 
             <p>If you are unsure whether or not a key exists in a dictionary, use the <code>in</code> keyword.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {checkForKey}
                 </SyntaxHighlighter>
             </div>
@@ -119,8 +119,8 @@ print(vehicles)
 
             <p>Convert your dictionary of characters into a list of dictionaries and then use the <code>.sort()</code> method to sort by the number of occurrences. Here is an example:</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {convertDictToList}
                 </SyntaxHighlighter>
             </div>

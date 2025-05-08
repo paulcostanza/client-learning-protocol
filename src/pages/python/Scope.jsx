@@ -16,8 +16,8 @@ export default function Scope() {
 
             <h2 id="weird-python-scope-issue">Weird python scope issue</h2>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {weirdPythonIssue}
                 </SyntaxHighlighter>
             </div>

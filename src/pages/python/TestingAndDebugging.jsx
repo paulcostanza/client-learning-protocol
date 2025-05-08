@@ -34,8 +34,8 @@ IndentationError: unindent does not match any outer indentation level`
             <p>Here is an example of an error you may encounter:</p>
 
             {/* Code */}
-            <div className="center">
-                <SyntaxHighlighter language="bash" style={tomorrow} className="center code-snippet">
+            <div className="">
+                <SyntaxHighlighter language="bash" style={tomorrow} className="code-snippet">
                     {error101}
                 </SyntaxHighlighter>
             </div>

@@ -29,8 +29,8 @@ main()`
             <p>Python is <em>dynamically typed</em> which means a variable can store any type, and that type can <em>change</em>.</p>
             <p>For example, if we make a number a variable, we can later change that variable to a string:</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {dynamicTyping}
                 </SyntaxHighlighter>
             </div>
@@ -49,8 +49,8 @@ main()`
 
             <p><em>Note</em> conventionally this <em>entry point</em> function is usually called <code>main</code> to keep things simple and consistent.</p>
 
-            <div className="center">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="center">
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {orderOfFunctions}
                 </SyntaxHighlighter>
             </div>
