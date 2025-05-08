@@ -273,7 +273,10 @@ to write a comment!
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#questionFour" aria-expanded="false" aria-controls="questionFour">
-                                    <strong>True or False:</strong> A namespace in C# is used to organize related assemblies.
+                                    <div>
+                                        <strong>True or False:</strong> A namespace in C# is used to organize related assemblies.
+                                    </div>
+
                                 </button>
                             </h2>
                             <div id="questionFour" className="accordion-collapse collapse" data-bs-parent="#this-question">
@@ -358,19 +361,23 @@ to write a comment!
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">
-                                    <span className="child-of-accordion">Which of the following is a valid identifier in C#:</span>
-                                    <br />
-                                    <ol>
-                                        <li><code>1route</code></li>
-                                        <li><code>int</code></li>
-                                        <li><code>@int</code></li>
-                                        <li><code>first name</code></li>
-                                    </ol>
+
+                                    <div>
+                                        <span className="child-of-accordion">Which of the following is a valid identifier in C#:</span>
+                                        <br />
+                                        <ol>
+                                            <li><code>1route</code></li>
+                                            <li><code>int</code></li>
+                                            <li><code>@int</code></li>
+                                            <li><code>first name</code></li>
+                                        </ol>
+                                    </div>
+
                                 </button>
                             </h2>
                             <div id="questionTwo" className="accordion-collapse collapse" data-bs-parent="#this-question">
                                 <div className="accordion-body">
-                                    Answer: <code>@int</code>
+                                    <strong>Answer:</strong> <code>@int</code>
                                 </div>
                             </div>
                         </div>
@@ -380,23 +387,26 @@ to write a comment!
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#questionThree" aria-expanded="false" aria-controls="questionThree">
-                                    <span className="child-of-accordion">Which type is the default for real numbers in C#: </span>
-                                    <br />
+                                    <div>
+                                        <span className="child-of-accordion">Which type is the default for real numbers in C#: </span>
+                                        <br />
 
 
-                                    <ol>
-                                        <li><code>float</code></li>
-                                        <li><code>double</code></li>
-                                        <li><code>decimal</code></li>
-                                        <li><code>int</code></li>
-                                    </ol>
+                                        <ol>
+                                            <li><code>float</code></li>
+                                            <li><code>double</code></li>
+                                            <li><code>decimal</code></li>
+                                            <li><code>int</code></li>
+                                        </ol>
 
+
+                                    </div>
 
                                 </button>
                             </h2>
                             <div id="questionThree" className="accordion-collapse collapse" data-bs-parent="#this-question">
                                 <div className="accordion-body">
-                                    Answer: <code>double</code>
+                                    <strong>Answer:</strong> <code>double</code>
                                 </div>
                             </div>
                         </div>
@@ -436,12 +446,15 @@ to write a comment!
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#questionFive" aria-expanded="false" aria-controls="questionFive">
-                                    <strong>True or False:</strong> Overflowing a byte will always crash your program, even without the checked keyword.
+                                    <div>
+                                        <strong>True or False:</strong> Overflowing a byte will always crash your program, even without the checked keyword.
+                                    </div>
+
                                 </button>
                             </h2>
                             <div id="questionFive" className="accordion-collapse collapse" data-bs-parent="#this-question">
                                 <div className="accordion-body">
-                                    Answer: False
+                                    <strong>Answer:</strong> False
                                     <br />
                                     The value will <em>wrap around</em>.
                                 </div>
@@ -576,7 +589,12 @@ to write a comment!
                             <h2 className="accordion-header">
                                 <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#questionSix" aria-expanded="false" aria-controls="questionSix">
-                                    <strong>True or False:</strong> C# allows implicit type conversion from <code>int</code> to <code>byte</code> without a cast.
+
+                                    {/* this div cancels out weird effects that happen without it */}
+                                    <div>
+                                        <strong>True or False:</strong> C# allows implicit type conversion from <code>int</code> to <code>byte</code> without a cast.
+                                    </div>
+
                                 </button>
                             </h2>
                             <div id="questionSix" className="accordion-collapse collapse" data-bs-parent="#this-question">
