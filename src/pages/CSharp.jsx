@@ -2,6 +2,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
+import Latex from 'react-latex'
 
 // images
 import compile_c_or_cplusplus from '../assets/cSharp/compile-c-or-c++.png'
@@ -193,6 +194,39 @@ to write a comment!
                     <p>With this architecture you can write an application in C# and do not need to worry about compiling it into the native
                         code for different machines. As long as the machine has CLR, it can run your application.</p>
 
+                    <div className="container accordion">
+                        {/* Question #1 */}
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#questionOne" aria-expanded="false" aria-controls="questionOne">
+                                    What is the primary purpose of the CLR (common language runtime) in the .NET framework?
+                                </button>
+                            </h2>
+                            <div id="questionOne" className="accordion-collapse collapse" data-bs-parent="#this-question">
+                                <div className="accordion-body">
+                                    Convert IL (intermediate language) code into machine code at runtime.
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Question #7 */}
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#questionSeven" aria-expanded="false" aria-controls="questionSeven">
+                                    Why does C# use IL (intermediate language) instead of compliling directly into machine code?
+                                </button>
+                            </h2>
+                            <div id="questionSeven" className="accordion-collapse collapse" data-bs-parent="#this-question">
+                                <div className="accordion-body">
+                                    So that the code can work on different types of computers. Instead of turning the code into machine code for just one computer when you compile it, it turns into IL first. Then, at runtime, the computer's JIT (just-in-time) compiler turns that IL into machine code that it can run. This lets the same code run on different computers without needing to be recompiled each time.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                     <h2 id="architecture-of-net-applicaitons">Architecture of .NET Applicaitons</h2>
                     <p>At a high level, when you build a C# application, your application consists of building blocks called
                         <em>classes</em>. These classes collaborate with each other at run time and as a result the application provides
@@ -202,8 +236,8 @@ to write a comment!
                     <p><img className="img-in-reading" src={classes_101} alt="classes 101" /></p>
 
                     <p>Data represents the <em>state</em> of the application.</p>
-                    <h5 class="center-text"><em>data == attributes</em></h5>
-                    <h5 class="center-text"><em>methods == functions</em></h5>
+                    <h5 class="center-text"><em>data<Latex>$ \Longleftrightarrow $</Latex> attributes</em></h5>
+                    <h5 class="center-text"><em>methods<Latex>$ \Longleftrightarrow $</Latex> functions</em></h5>
 
                     <p>In a real-world application you can have hundreds, or even thousands of classes, each responsible for a piece of
                         functionality.</p>
@@ -231,6 +265,25 @@ to write a comment!
                         <li>assembly is a <code>.exe</code> or <code>.dll</code> file</li>
                         <li>class is a blueprint for an object</li>
                     </ul>
+
+                    <div className="container accordion">
+                        {/* Question #4 */}
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#questionFour" aria-expanded="false" aria-controls="questionFour">
+                                    <strong>True or False:</strong> A namespace in C# is used to organize related assemblies.
+                                </button>
+                            </h2>
+                            <div id="questionFour" className="accordion-collapse collapse" data-bs-parent="#this-question">
+                                <div className="accordion-body">
+                                    Answer: False
+                                    <br />
+                                    Namespace is used to organize related classes, interfaces, structs, and enums within an assembly, but not the assemblies themselves.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <h2 id="primitive-types">Primitive Types</h2>
 
@@ -297,6 +350,57 @@ to write a comment!
                         <li>Class</li>
                     </ul>
 
+                    <div className="container accordion">
+                        {/* Question #2 */}
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">
+                                    <span className="child-of-accordion">Which of the following is a valid identifier in C#:</span>
+                                    <br />
+                                    <ol>
+                                        <li><code>1route</code></li>
+                                        <li><code>int</code></li>
+                                        <li><code>@int</code></li>
+                                        <li><code>first name</code></li>
+                                    </ol>
+                                </button>
+                            </h2>
+                            <div id="questionTwo" className="accordion-collapse collapse" data-bs-parent="#this-question">
+                                <div className="accordion-body">
+                                    Answer: <code>@int</code>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Question #3 */}
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#questionThree" aria-expanded="false" aria-controls="questionThree">
+                                    <span className="child-of-accordion">Which type is the default for real numbers in C#: </span>
+                                    <br />
+
+
+                                    <ol>
+                                        <li><code>float</code></li>
+                                        <li><code>double</code></li>
+                                        <li><code>decimal</code></li>
+                                        <li><code>int</code></li>
+                                    </ol>
+
+
+                                </button>
+                            </h2>
+                            <div id="questionThree" className="accordion-collapse collapse" data-bs-parent="#this-question">
+                                <div className="accordion-body">
+                                    Answer: <code>double</code>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                     <h2 id="overflowing">Overflowing</h2>
 
                     <p>Going over (or under) a data types limit. Example:</p>
@@ -322,6 +426,26 @@ to write a comment!
                     <p>The overflow will not run at runtime. Instead, an <em>exception</em> will be thrown. If you do not handle the error,
                         the program will crash.</p>
                     <p>Usually, you would just chose a data type that is more in your range rather than worrying about this.</p>
+
+                    <div className="container accordion">
+
+                        {/* Question #5 */}
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#questionFive" aria-expanded="false" aria-controls="questionFive">
+                                    <strong>True or False:</strong> Overflowing a byte will always crash your program, even without the checked keyword.
+                                </button>
+                            </h2>
+                            <div id="questionFive" className="accordion-collapse collapse" data-bs-parent="#this-question">
+                                <div className="accordion-body">
+                                    Answer: False
+                                    <br />
+                                    The value will <em>wrap around</em>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <h2 id="scope">Scope</h2>
 
@@ -378,7 +502,7 @@ to write a comment!
 
                     <p>There is no data lose in this conversion, allowing for the conversion to be implicit.</p>
 
-                    <h2 id="explicit-type-conversion">Explicit type conversion</h2>
+                    <h4 id="explicit-type-conversion">Explicit type conversion</h4>
 
                     <div className="center">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
@@ -423,7 +547,7 @@ to write a comment!
                     <p>Since string and int are not compatible they cannot use explicit casting, so we need a different mechanism for
                         converting a string to a number. We can either use the convert class or the parse method.</p>
 
-                    <h2 id="non-compatible-types">Non-compatible types</h2>
+                    <h4 id="non-compatible-types">Non-compatible types</h4>
 
                     <p>The <em>convert class</em> is part of .NET framework and is defined in the system namespace. It has a bunch of
                         methods for converting various types to other types.</p>
@@ -442,6 +566,26 @@ to write a comment!
                         <li><code>ToInt32()</code></li>
                         <li><code>ToInt64()</code></li>
                     </ul>
+
+
+                    <div className="container accordion">
+                        {/* Question #6 */}
+                        <div className="accordion-item">
+                            <h2 className="accordion-header">
+                                <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#questionSix" aria-expanded="false" aria-controls="questionSix">
+                                    <strong>True or False:</strong> C# allows implicit type conversion from <code>int</code> to <code>byte</code> without a cast.
+                                </button>
+                            </h2>
+                            <div id="questionSix" className="accordion-collapse collapse" data-bs-parent="#this-question">
+                                <div className="accordion-body">
+                                    Answer: False
+                                    <br />
+                                    Implicit type conversion from <code>int</code> to <code>byte</code> is not allowed because <code>byte</code> has a smaller range than <code>int</code>. For this example, you would need an <em>explicit cast</em>.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <h2 id="try--catch">Try / Catch</h2>
 
@@ -519,137 +663,13 @@ to write a comment!
 
                 {/* Review section for now */}
 
+
+
+
+
+
                 <div className="container accordion" id="this-question">
-                    {/* Question #1 */}
-                    <div className="accordion-item">
-                        <h2 className="accordion-header">
-                            <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#questionOne" aria-expanded="false" aria-controls="questionOne">
-                                What is the primary purpose of the CLR (common language runtime) in the .NET framework?
-                            </button>
-                        </h2>
-                        <div id="questionOne" className="accordion-collapse collapse" data-bs-parent="#this-question">
-                            <div className="accordion-body">
-                                Convert IL (intermediate language) code into machine code at runtime.
-                            </div>
-                        </div>
-                    </div>
 
-                    {/* Question #2 */}
-                    <div className="accordion-item">
-                        <h2 className="accordion-header">
-                            <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">
-                                <span className="child-of-accordion">Which of the following is a valid identifier in C#:</span>
-                                <br />
-                                <ol>
-                                    <li><code>1route</code></li>
-                                    <li><code>int</code></li>
-                                    <li><code>@int</code></li>
-                                    <li><code>first name</code></li>
-                                </ol>
-
-
-                            </button>
-                        </h2>
-                        <div id="questionTwo" className="accordion-collapse collapse" data-bs-parent="#this-question">
-                            <div className="accordion-body">
-                                Answer: <code>@int</code>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Question #3 */}
-                    <div className="accordion-item">
-                        <h2 className="accordion-header">
-                            <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#questionThree" aria-expanded="false" aria-controls="questionThree">
-                                <span className="child-of-accordion">Which type is the default for real numbers in C#: </span>
-                                <br />
-
-
-                                <ol>
-                                    <li><code>float</code></li>
-                                    <li><code>double</code></li>
-                                    <li><code>decimal</code></li>
-                                    <li><code>int</code></li>
-                                </ol>
-
-
-                            </button>
-                        </h2>
-                        <div id="questionThree" className="accordion-collapse collapse" data-bs-parent="#this-question">
-                            <div className="accordion-body">
-                                Answer: <code>double</code>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Question #4 */}
-                    <div className="accordion-item">
-                        <h2 className="accordion-header">
-                            <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#questionFour" aria-expanded="false" aria-controls="questionFour">
-                                <strong>True or False:</strong> A namespace in C# is used to organize related assemblies.
-                            </button>
-                        </h2>
-                        <div id="questionFour" className="accordion-collapse collapse" data-bs-parent="#this-question">
-                            <div className="accordion-body">
-                                Answer: False
-                                <br />
-                                Namespace is used to organize related classes, interfaces, structs, and enums within an assembly, but not the assemblies themselves.
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Question #5 */}
-                    <div className="accordion-item">
-                        <h2 className="accordion-header">
-                            <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#questionFive" aria-expanded="false" aria-controls="questionFive">
-                                <strong>True or False:</strong> Overflowing a byte will always crash your program, even without the checked keyword.
-                            </button>
-                        </h2>
-                        <div id="questionFive" className="accordion-collapse collapse" data-bs-parent="#this-question">
-                            <div className="accordion-body">
-                                Answer: False
-                                <br />
-                                The value will <em>wrap around</em>.
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Question #6 */}
-                    <div className="accordion-item">
-                        <h2 className="accordion-header">
-                            <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#questionSix" aria-expanded="false" aria-controls="questionSix">
-                                <strong>True or False:</strong> C# allows implicit type conversion from <code>int</code> to <code>byte</code> without a cast.
-                            </button>
-                        </h2>
-                        <div id="questionSix" className="accordion-collapse collapse" data-bs-parent="#this-question">
-                            <div className="accordion-body">
-                                Answer: False
-                                <br />
-                                Implicit type conversion from <code>int</code> to <code>byte</code> is not allowed because <code>byte</code> has a smaller range than <code>int</code>. For this example, you would need an <em>explicit cast</em>.
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Question #7 */}
-                    <div className="accordion-item">
-                        <h2 className="accordion-header">
-                            <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#questionSeven" aria-expanded="false" aria-controls="questionSeven">
-                                Why does C# use IL (intermediate language) instead of compliling directly into machine code?
-                            </button>
-                        </h2>
-                        <div id="questionSeven" className="accordion-collapse collapse" data-bs-parent="#this-question">
-                            <div className="accordion-body">
-                                So that the code can work on different types of computers. Instead of turning the code into machine code for just one computer when you compile it, it turns into IL first. Then, at runtime, the computer's JIT (just-in-time) compiler turns that IL into machine code that it can run. This lets the same code run on different computers without needing to be recompiled each time.
-                            </div>
-                        </div>
-                    </div>
 
                 </div >
             </main>
