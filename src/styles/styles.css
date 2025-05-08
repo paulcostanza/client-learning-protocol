@@ -97,7 +97,7 @@ h2 {
 pre,
 .accordion-item {
     margin: auto;
-    width: 80%;
+    width: 100%;
 }
 
 /* Bolds the question in q & a accordion components */

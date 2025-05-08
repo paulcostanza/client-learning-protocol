@@ -206,7 +206,7 @@ to write a comment!
                             </h2>
                             <div id="questionOne" className="accordion-collapse collapse" data-bs-parent="#this-question">
                                 <div className="accordion-body">
-                                    Convert IL (intermediate language) code into machine code at runtime.
+                                    Convert IL (<em>intermediate language</em>) code into machine code at runtime.
                                 </div>
                             </div>
                         </div>
@@ -214,21 +214,21 @@ to write a comment!
                         {/* Question #7 */}
                         <div className="accordion-item">
                             <h2 className="accordion-header">
-                                <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
+                                <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#questionSeven" aria-expanded="false" aria-controls="questionSeven">
                                     Why does C# use IL (intermediate language) instead of compliling directly into machine code?
                                 </button>
                             </h2>
                             <div id="questionSeven" className="accordion-collapse collapse" data-bs-parent="#this-question">
                                 <div className="accordion-body">
-                                    So that the code can work on different types of computers. Instead of turning the code into machine code for just one computer when you compile it, it turns into IL first. Then, at runtime, the computer's JIT (just-in-time) compiler turns that IL into machine code that it can run. This lets the same code run on different computers without needing to be recompiled each time.
+                                    So that the code can work on different types of computers. Instead of turning the code into machine code for just one computer when you compile it, it turns into IL first. Then, at runtime, the computer's JIT (<em>just-in-time</em>) compiler turns that IL into machine code that it can run. This lets the same code run on different computers without needing to be recompiled each time.
                                 </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <h2 id="architecture-of-net-applicaitons">Architecture of .NET Applicaitons</h2>
+                    <h2 id="architecture-of-net-applicatons">Architecture of .NET Applicatons</h2>
                     <p>At a high level, when you build a C# application, your application consists of building blocks called
                         <em>classes</em>. These classes collaborate with each other at run time and as a result the application provides
                         some functionality.
@@ -257,7 +257,7 @@ to write a comment!
                         executable or a DLL (<strong>Dynamically linked library</strong>). When you compile an application the compiler
                         builds one or more assemblies depending on how you partition your code.</p>
 
-                    <p><img className="img-in-reading" src={application} alt="applications" /></p>
+                    <img className="img-in-reading" src={application} alt="applications" />
 
                     <h4 id="review">Review</h4>
                     <p>It helps to think of it like this:</p>
@@ -293,9 +293,9 @@ to write a comment!
 
                     <h4 id="declaring-variables-and-constants">Declaring variables and constants</h4>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className="code-snippet">
                             {declaringVariables}
                         </SyntaxHighlighter>
                     </div>
@@ -304,9 +304,9 @@ to write a comment!
 
                     <p>Cannot start with a number, cannot include a whitespace, cannot be a reserved keyword, use meaningful names</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {identifiers}
                         </SyntaxHighlighter>
                     </div>
@@ -335,9 +335,9 @@ to write a comment!
 
                     <p>C# uses <em>double</em> as a default for the compiler when using real numbers. To declare the other two:</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {floatAndDecimal}
                         </SyntaxHighlighter>
                     </div>
@@ -407,9 +407,9 @@ to write a comment!
 
                     <p>Going over (or under) a data types limit. Example:</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {overflowing}
                         </SyntaxHighlighter>
                     </div>
@@ -418,9 +418,9 @@ to write a comment!
                         C# does not have any overflow checker. If you believe it may happen and want to make sure it does not, then use the <code>checked</code> keyword like so:
                     </p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {checked}
                         </SyntaxHighlighter>
                     </div>
@@ -453,9 +453,9 @@ to write a comment!
 
                     <p>Where a variable / constant has meaning and is accessible.</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {scope}
                         </SyntaxHighlighter>
                     </div>
@@ -475,9 +475,9 @@ to write a comment!
 
                     <p>A String that can be used as some kind of template.</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {formatString}
                         </SyntaxHighlighter>
                     </div>
@@ -491,9 +491,9 @@ to write a comment!
 
                     <h4 id="implicit-type-conversion">Implicit type conversion</h4>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {implicitTypeConversion}
                         </SyntaxHighlighter>
                     </div>
@@ -506,9 +506,9 @@ to write a comment!
 
                     <h4 id="explicit-type-conversion">Explicit type conversion</h4>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {explicitTypeConvedrsion}
                         </SyntaxHighlighter>
                     </div>
@@ -521,27 +521,27 @@ to write a comment!
                         need to explicity tell the compiler that you are aware of the data loss and you still want to go ahead with the
                         conversion. In situations like that, you need to add the prefix of the variable with the target type like so:</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {doingItAnyway}
                         </SyntaxHighlighter>
                     </div>
 
                     <p>This is what is known as <strong>casting</strong>. Another one:</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {casting}
                         </SyntaxHighlighter>
                     </div>
 
                     <p>Sometimes you will work with types of data that <em>are not</em> compatible, like so:</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {notCompatible}
                         </SyntaxHighlighter>
                     </div>
@@ -554,9 +554,9 @@ to write a comment!
                     <p>The <em>convert class</em> is part of .NET framework and is defined in the system namespace. It has a bunch of
                         methods for converting various types to other types.</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {convert}
                         </SyntaxHighlighter>
                     </div>
@@ -591,9 +591,9 @@ to write a comment!
 
                     <h2 id="try--catch">Try / Catch</h2>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {tryCatch}
                         </SyntaxHighlighter>
                     </div>
@@ -615,9 +615,9 @@ to write a comment!
 
                     <p>There are two types of increment and decrements... postfix and prefix.</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {postAndPrefix}
                         </SyntaxHighlighter>
                     </div>
@@ -644,9 +644,9 @@ to write a comment!
 
                     <p>Text that we put into our code to improve its readability and maintainability.</p>
 
-                    <div className="center">
+                    <div className="">
                         <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
-                            wrapLines={true} className="center code-snippet">
+                            wrapLines={true} className=" code-snippet">
                             {comments}
                         </SyntaxHighlighter>
                     </div>
