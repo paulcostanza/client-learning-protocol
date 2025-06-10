@@ -16,7 +16,8 @@ export default [
             'document.write()',
             'console.log()',
             'window.alert()',
-        ]
+        ],
+        answer: 'document.write()'
     },
     {
         id: 3,
@@ -25,7 +26,8 @@ export default [
             'Boolean',
             'Undefined',
             'Object',
-        ]
+        ],
+        answer: 'Object'
     },
     {
         id: 4,
@@ -34,7 +36,8 @@ export default [
             'Return Object',
             'Return String',
             'Return Integer'
-        ]
+        ],
+        answer: 'Return String'
     },
     {
         id: 5,
@@ -43,7 +46,8 @@ export default [
             'stringify()',
             'parse()',
             'convert()',
-        ]
+        ],
+        answer: 'stringify()'
     }
 ];
 

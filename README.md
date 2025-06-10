@@ -1,5 +1,23 @@
 # Currently working on...
 
+## Quiz
+
+- cards for type of quiz
+- actual quiz
+
+focusing on actual quiz rn
+
+have set questions, with set order 
+
+
+
+
+
+
+
+
+---
+
 Flash card page
 
 Have a list of sections: python, cybersecurity, memory, etc

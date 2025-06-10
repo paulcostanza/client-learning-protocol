@@ -211,6 +211,12 @@ button:hover {
 
 /********************************** Q U I Z | P A G E **********************************/
 
+.questions {
+    border: solid 1px #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .quiz-page {
     display: flex;
     justify-content: center;
