@@ -1,25 +1,48 @@
-// import { useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
-// import KnowledgeCheck from '../components/KnowledgeCheck'
-
-// import Questions from './quiz/Questions.jsx'
 import Results from './quiz/Results'
-
-import { useState, useEffect } from 'react'
-import data from './quiz/database/data.js'
-
-// have next question hidden until the user tries to answer the question
-// right or wrong, the next question button will become visible
-
 
 // quiz and questions
 export default function Quiz() {
+    const { quizId } = useParams()
+    const [data, setData] = useState([])
+    const [loading, setLoading] = useState(true)
     const [idx, setIdx] = useState(0)
     const [selectedIdx, setSelectedIdx] = useState(null)
     const [showResult, setShowResult] = useState(false)
     const [checked, setChecked] = useState(false)
     const [correctQuestions, setCorrectQuestions] = useState(0)
+    const [result, setResult] = useState('')
+
+    const quizImports = {
+        js: () => import('./quiz/database/JavaScriptQuestions.js'),
+        react: () => import('./quiz/database/ReactQuestions.js'),
+    }
+
+    useEffect(() => {
+        setLoading(true)
+        setData([])
+        if (quizImports[quizId]) {
+            quizImports[quizId]().then(module => {
+                setData(module.default)
+                setLoading(false)
+            })
+        } else {
+            setLoading(false)
+        }
+    }, [quizId])
+
+    useEffect(() => {
+        if (checked) {
+            console.log(`Score: ${correctQuestions} out of ${idx + 1}`)
+        }
+    }, [checked])
+
+    if (loading) return <div>Loading...</div>
+    if (!data.length) return <div>No questions found.</div>
+
     const question = data[idx]
 
     function onChecked(check) {
@@ -29,6 +52,7 @@ export default function Quiz() {
     function onNext() {
         setChecked(false)
         setSelectedIdx(null)
+        setResult('')
         if (idx < data.length - 1) {
             setIdx(idx + 1)
         } else {
@@ -51,18 +75,16 @@ export default function Quiz() {
         setChecked(true)
         if (question.options[selectedIdx] === question.answer) {
             setCorrectQuestions(prev => prev + 1)
+            setResult('Correct!')
+        } else {
+            setResult('Wrong!')
         }
     }
 
     function forfeitQuestion() {
         setChecked(true)
+        setResult('Need to study bro...')
     }
-
-    useEffect(() => {
-        if (checked) {
-            console.log(`Score: ${correctQuestions} out of ${idx + 1}`)
-        }
-    }, [checked])
 
     return (
         <>
@@ -81,8 +103,10 @@ export default function Quiz() {
                                         if (checked) {
                                             if (option === question.answer) {
                                                 className = "correct"
+
                                             } else if (optionIdx === selectedIdx) {
                                                 className = "wrong"
+
                                             }
                                         }
                                         return (
@@ -104,12 +128,20 @@ export default function Quiz() {
                                         )
                                     })}
                                 </ul>
-                                <div className="buttons">
-                                    <button onClick={forfeitQuestion} disabled={checked}>I'm cooked</button>
-                                    <button onClick={checkAnswer} disabled={checked || selectedIdx === null}>Check Answer</button>
-                                    <button onClick={onNext} disabled={!checked}>Next Question</button>
+                                <div className="questions-footer">
+                                    <div className="buttons">
+                                        <button onClick={forfeitQuestion} disabled={checked}>I'm cooked</button>
+                                        <button onClick={checkAnswer} disabled={checked || selectedIdx === null}>Check Answer</button>
+                                        <button onClick={onNext} disabled={!checked}>Next Question</button>
+                                    </div>
+                                    <span id='questions-footer-result'>{result}</span>
                                 </div>
-                            </div>}
+
+                            </div>
+
+                            // after I'm cooked or check answer has been clicked, show the description of the answer
+
+                        }
 
                         {showResult && (
                             <Results

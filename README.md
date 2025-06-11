@@ -2,12 +2,15 @@
 
 ## Quiz
 
-- cards for type of quiz
-- actual quiz
+Layout quiz cards. React, C#, JavaScript, etc...
+User clicks on card and then takes quiz
 
-focusing on actual quiz rn
 
-have set questions, with set order 
+
+
+Eventually add:
+- tags to questions
+
 
 
 

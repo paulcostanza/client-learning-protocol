@@ -5,6 +5,7 @@ import Java from './pages/Java'
 import React from './pages/React'
 import FlashCards from './pages/FlashCards'
 import Quiz from './pages/Quiz'
+import QuizList from './pages/quiz/QuizList'
 import About from './pages/About'
 import NoPage from './pages/NoPage'
 import CSharp from './pages/CSharp'
@@ -29,7 +30,8 @@ function App() {
           <Route path='/csharp' element={<CSharp />} />
           <Route path='/react' element={<React />} />
           <Route path='/flashcards' element={<FlashCards />} />
-          <Route path='/quiz' element={<Quiz />} />
+          <Route path='/quiz' element={<QuizList />} />
+          <Route path='/quiz/:quizId' element={<Quiz />} />
           <Route path='/about' element={<About />} />
           <Route path='*' element={<NoPage />} />
         </Routes>

@@ -51,4 +51,21 @@ export default [
     }
 ];
 
-export const answers = [0, 1, 2, 1, 0];
+// export const answers = [0, 1, 2, 1, 0];
+
+
+/*
+ {
+        id: 6,
+        question: "Here is a question?",
+        options: [
+            'answer 1',
+            'answer 2',
+            'answer 3',
+        ],
+        answer: 'answer 2',
+        description: "Description of the answer"
+    }
+
+
+*/
