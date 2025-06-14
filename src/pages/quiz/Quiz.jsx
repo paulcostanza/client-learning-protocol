@@ -193,21 +193,22 @@ export default function Quiz() {
                                         >Check Answer</button>
                                         <button onClick={onNext} disabled={!checked}>Next Question</button>
                                     </div>
-                                    <span id='questions-footer-result'>{result}</span>
+                                    {result &&
+                                        <div id='questions-footer-result' className={result === 'Correct!' ? 'result-correct' : 'result-incorrect'}>
+                                            {result}
+                                        </div>
+                                    }
                                 </div>
 
                                 {displayDescription && (
-                                    <div className='answer-description'>
+                                    <div className={
+                                        `answer-description ${result === 'Correct!' ? 'answer-description-correct' : 'answer-description-incorrect'
+                                        }`
+                                    }>
                                         <ReactMarkdown>{displayDescription}</ReactMarkdown>
                                     </div>
                                 )}
-
                             </div>
-
-                            // after I'm cooked or check answer has been clicked, show the description of the answer
-
-
-
                         }
 
                         {showResult && (
