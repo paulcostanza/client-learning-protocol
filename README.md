@@ -22,7 +22,8 @@ Eventually add:
 
 
 
-
+To think about: 
+- do I add partial credit to checkbox questions?
 
 
 

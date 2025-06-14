@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import ReactMarkdown from 'react-markdown'
 import NavBar from '../../components/NavBar.jsx'
 import Footer from '../../components/Footer.jsx'
 import Results from './Results.jsx'
@@ -16,6 +17,7 @@ export default function Quiz() {
     const [correctQuestions, setCorrectQuestions] = useState(0)
     const [result, setResult] = useState('')
     const [selectedCheckboxes, setSelectedCheckboxes] = useState([])
+    const [displayDescription, setDisplayDescription] = useState('')
 
     const quizImports = {
         js: () => import('./database/JavaScriptQuestions.js'),
@@ -52,6 +54,7 @@ export default function Quiz() {
         setSelectedIdx(null)
         setSelectedCheckboxes([])
         setResult('')
+        setDisplayDescription('')
         if (idx < data.length - 1) {
             setIdx(idx + 1)
         } else {
@@ -103,11 +106,18 @@ export default function Quiz() {
             }
         }
 
+        if (question.description) {
+            setDisplayDescription(question.description)
+        }
+
     }
 
     function forfeitQuestion() {
         setChecked(true)
         setResult('Need to study bro...')
+        if (question.description) {
+            setDisplayDescription(question.description)
+        }
     }
 
     return (
@@ -186,9 +196,17 @@ export default function Quiz() {
                                     <span id='questions-footer-result'>{result}</span>
                                 </div>
 
+                                {displayDescription && (
+                                    <div className='answer-description'>
+                                        <ReactMarkdown>{displayDescription}</ReactMarkdown>
+                                    </div>
+                                )}
+
                             </div>
 
                             // after I'm cooked or check answer has been clicked, show the description of the answer
+
+
 
                         }
 
