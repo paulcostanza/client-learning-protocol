@@ -1,1 +1,0 @@
-const e=[{id:1,question:"Which device or service would not operate at the physical layer of the OSI Model",options:["Network Interface Card (NIC)","Router","IP Address","Cable"],answer:"IP Address"},{id:2,question:"Which TCP flag is used to gracefully terminate a session between two systems",options:["PIN","FIZ","FIN","SYN","END","ACK","RST"],answer:"FIN"}];export{e as default};
