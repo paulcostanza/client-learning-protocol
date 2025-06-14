@@ -15,6 +15,7 @@ export default function Quiz() {
     const [checked, setChecked] = useState(false)
     const [correctQuestions, setCorrectQuestions] = useState(0)
     const [result, setResult] = useState('')
+    const [selectedCheckboxes, setSelectedCheckboxes] = useState([])
 
     const quizImports = {
         js: () => import('./database/JavaScriptQuestions.js'),
@@ -46,13 +47,10 @@ export default function Quiz() {
 
     const question = data[idx]
 
-    function onChecked(check) {
-        console.log("current idx: " + check)
-    }
-
     function onNext() {
         setChecked(false)
         setSelectedIdx(null)
+        setSelectedCheckboxes([])
         setResult('')
         if (idx < data.length - 1) {
             setIdx(idx + 1)
@@ -68,18 +66,43 @@ export default function Quiz() {
     }
 
     function onSelect(optionIdx) {
-        setSelectedIdx(optionIdx)
+        if (question.type === 'radio') {
+            setSelectedIdx(optionIdx)
+        } else if (question.type === 'checkbox') {
+            setSelectedCheckboxes(prev => {
+                if (prev.includes(optionIdx)) {
+                    return prev.filter(idx => idx != optionIdx)
+                } else {
+                    return [...prev, optionIdx]
+                }
+            })
+        }
     }
 
     function checkAnswer() {
-        if (selectedIdx === null) return
-        setChecked(true)
-        if (question.options[selectedIdx] === question.answer) {
-            setCorrectQuestions(prev => prev + 1)
-            setResult('Correct!')
-        } else {
-            setResult('Wrong!')
+        if (question.type === 'radio') {
+            if (selectedIdx === null) return
+            setChecked(true)
+            if (question.options[selectedIdx] === question.answer) {
+                setCorrectQuestions(prev => prev + 1)
+                setResult('Correct!')
+            } else {
+                setResult('Wrong!')
+            }
+        } else if (question.type === 'checkbox') {
+            setChecked(true)
+            const selectedOptions = selectedCheckboxes.map(idx => question.options[idx])
+            const correct = Array.isArray(question.answer) &&
+                question.answer.length === selectedOptions.length &&
+                question.answer.every(ans => selectedOptions.includes(ans))
+            if (correct) {
+                setCorrectQuestions(prev => prev + 1)
+                setResult('Correct!')
+            } else {
+                setResult('Wrong!')
+            }
         }
+
     }
 
     function forfeitQuestion() {
@@ -101,15 +124,24 @@ export default function Quiz() {
                                 <ul key={question.id}>
                                     {question.options.map((option, optionIdx) => {
                                         let className = ""
+
                                         if (checked) {
-                                            if (option === question.answer) {
-                                                className = "correct"
+                                            if (question.type === 'radio') {
+                                                if (option === question.answer) {
+                                                    className = "correct"
 
-                                            } else if (optionIdx === selectedIdx) {
-                                                className = "wrong"
-
+                                                } else if (optionIdx === selectedIdx) {
+                                                    className = "wrong"
+                                                }
+                                            } else if (question.type === 'checkbox') {
+                                                if (question.answer.includes(option)) {
+                                                    className = "correct"
+                                                } else if (selectedCheckboxes.includes(optionIdx)) {
+                                                    className = "wrong"
+                                                }
                                             }
                                         }
+
                                         return (
                                             <li
                                                 key={optionIdx}
@@ -118,11 +150,18 @@ export default function Quiz() {
                                                 style={{ cursor: checked ? "default" : "pointer" }}
                                             >
                                                 <input
-                                                    type="radio"
-                                                    checked={selectedIdx === optionIdx}
+                                                    type={question.type === "radio" ?
+                                                        "radio" : "checkbox"
+                                                    }
+                                                    checked={
+                                                        question.type === "radio"
+                                                            ? selectedIdx === optionIdx
+                                                            : selectedCheckboxes.includes(optionIdx)
+                                                    }
                                                     name="options"
                                                     id={`q${optionIdx}-option`}
-                                                    readOnly
+                                                    disabled={checked}
+                                                    onChange={() => onSelect(optionIdx)}
                                                 />
                                                 <label htmlFor={`q${optionIdx}-option`}>{option}</label>
                                             </li>
@@ -132,7 +171,16 @@ export default function Quiz() {
                                 <div className="questions-footer">
                                     <div className="buttons">
                                         <button onClick={forfeitQuestion} disabled={checked}>I'm cooked</button>
-                                        <button onClick={checkAnswer} disabled={checked || selectedIdx === null}>Check Answer</button>
+                                        <button
+                                            onClick={checkAnswer}
+                                            disabled={
+                                                checked || (
+                                                    question.type === 'radio'
+                                                        ? selectedIdx === null
+                                                        : selectedCheckboxes.length === 0
+                                                )
+                                            }
+                                        >Check Answer</button>
                                         <button onClick={onNext} disabled={!checked}>Next Question</button>
                                     </div>
                                     <span id='questions-footer-result'>{result}</span>

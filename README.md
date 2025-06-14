@@ -17,6 +17,8 @@
 
 Eventually add:
 - tags to questions (chips with material ui)
+- change 'Next Question' to 'Results' after answering the last question
+- add a count of which number question you are on out of a total number of questions
 
 
 
