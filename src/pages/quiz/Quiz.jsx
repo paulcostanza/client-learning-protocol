@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
-import Results from './quiz/Results'
+import NavBar from '../../components/NavBar.jsx'
+import Footer from '../../components/Footer.jsx'
+import Results from './Results.jsx'
 
 // quiz and questions
 export default function Quiz() {
@@ -17,8 +17,9 @@ export default function Quiz() {
     const [result, setResult] = useState('')
 
     const quizImports = {
-        js: () => import('./quiz/database/JavaScriptQuestions.js'),
-        react: () => import('./quiz/database/ReactQuestions.js'),
+        js: () => import('./database/JavaScriptQuestions.js'),
+        react: () => import('./database/ReactQuestions.js'),
+        networking: () => import('./database/Networking.js')
     }
 
     useEffect(() => {

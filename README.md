@@ -1,15 +1,22 @@
 # Currently working on...
 
-## Quiz
+## Main To Dos
 
-Layout quiz cards. React, C#, JavaScript, etc...
-User clicks on card and then takes quiz
+- Rearrange files and place related topics into ONE folder. The way everything is spread out right now is confusing
+
+- do I still need these bootstrap files? I do not thing so, try deleting some and playing around with it. Check if you have any dependencies
+
+## Quiz To Dos
+
+- let's start adding real quizzes that I want to use - Networing! Rewriting from flashcards to quiz
+- Layout quiz cards. React, C#, JavaScript, etc...
+- User clicks on card and then takes quiz
 
 
 
 
 Eventually add:
-- tags to questions
+- tags to questions (chips with material ui)
 
 
 
