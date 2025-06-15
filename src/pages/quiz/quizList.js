@@ -13,6 +13,11 @@ const quizList = [
         id: "networking",
         title: "Networking Fundamentals",
         dataFile: "../../quiz/database/Networking.js"
+    },
+    {
+        id: "python",
+        title: "Python Fundamentals",
+        dataFile: "../../quiz/database/PythonQuestions.js"
     }
     // Add more quizzes as needed
 ]

@@ -22,7 +22,8 @@ export default function Quiz() {
     const quizImports = {
         js: () => import('./database/JavaScriptQuestions.js'),
         react: () => import('./database/ReactQuestions.js'),
-        networking: () => import('./database/Networking.js')
+        networking: () => import('./database/Networking.js'),
+        python: () => import('./database/PythonQuestions.js')
     }
 
     useEffect(() => {
@@ -130,7 +131,11 @@ export default function Quiz() {
                         {!showResult &&
 
                             <div className="questions">
-                                <h2>{question.question}</h2>
+                                <h2>
+                                    <ReactMarkdown>
+                                        {question.question}
+                                    </ReactMarkdown>
+                                </h2>
                                 <ul key={question.id}>
                                     {question.options.map((option, optionIdx) => {
                                         let className = ""
@@ -233,4 +238,8 @@ export default function Quiz() {
  * each question can have as many options as it wants
  * the options can be randomized
  * the order of the questions are randomized
+ * 
+ * TO DO
+ * 
+ * make it responsive for mobile
  */

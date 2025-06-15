@@ -22,6 +22,3 @@ export default function QuizList() {
         </>
     )
 }
-
-// add button to come back to select a quiz
-// add another file of questions!
