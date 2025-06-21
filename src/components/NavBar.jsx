@@ -10,8 +10,6 @@ export default function NavBar() {
         setActiveLink(currentPath || 'home')
     }, [location])
 
-
-
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
@@ -39,6 +37,7 @@ export default function NavBar() {
                             { to: '/intro', name: 'intro', label: 'Intro' },
                             { to: '/python', name: 'python', label: 'Python' },
                             { to: '/java', name: 'java', label: 'Java' },
+                            { to: '/c', name: 'c', label: 'C' },
                             { to: '/csharp', name: 'csharp', label: 'C#' },
                             { to: '/react', name: 'react', label: 'React' },
                             { to: '/flashcards', name: 'flashcards', label: 'Flash Cards' },

@@ -131,7 +131,6 @@ And another way
 to write a comment!
 */`
 
-
     return (
         <>
             <NavBar />

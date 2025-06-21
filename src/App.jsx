@@ -8,6 +8,7 @@ import Quiz from './pages/quiz/Quiz'
 import QuizList from './pages/quiz/QuizList'
 import About from './pages/About'
 import NoPage from './pages/NoPage'
+import C from './pages/C/C'
 import CSharp from './pages/CSharp'
 import {
   BrowserRouter,
@@ -27,6 +28,7 @@ function App() {
           <Route path='/intro' element={<Intro />} />
           <Route path='/python' element={<Python />} />
           <Route path='/java' element={<Java />} />
+          <Route path='/c' element={<C />} />
           <Route path='/csharp' element={<CSharp />} />
           <Route path='/react' element={<React />} />
           <Route path='/flashcards' element={<FlashCards />} />
