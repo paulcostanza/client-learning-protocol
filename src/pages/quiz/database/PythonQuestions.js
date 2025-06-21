@@ -47,7 +47,7 @@ export default [
     {
         id: 5,
         type: 'radio',
-        question: "The _____ method is used to remove the last item from a list and can return it to a variable if assigend",
+        question: "The _____ method is used to remove the last item from a list and can return it to a variable if assigned",
         options: [
             'pop()',
             'push()',

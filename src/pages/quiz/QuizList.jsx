@@ -4,6 +4,10 @@ import Footer from '../../components/Footer'
 import quizList from "./quizList"
 import { Link } from 'react-router-dom'
 
+import Card from '@mui/joy/Card'
+import Box from '@mui/joy/Box'
+import CardCover from '@mui/joy/CardCover'
+
 export default function QuizList() {
     return (
         <>
@@ -11,11 +15,24 @@ export default function QuizList() {
             <div>
                 <h1>Select a Quiz</h1>
                 <ul>
-                    {quizList.map(quiz => (
-                        <li key={quiz.id}>
-                            <Link to={`/quiz/${quiz.id}`}>{quiz.title}</Link>
-                        </li>
-                    ))}
+                    <Box
+                        componet="ul"
+                        sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', p: 0, m: 0 }}
+                    >
+                        {quizList.map(quiz => (
+                            <Link to={`/quiz/${quiz.id}`} className='quiz-cards'>
+                                <Card>
+                                    {/* <CardCover> */}
+
+                                    <img src={quiz.cardImage} style={{ maxWidth: '200px' }} />
+                                    <li key={quiz.id} style={{ textAlign: 'center' }}>{quiz.title}</li>
+                                    {/* </CardCover> what does this do? */}
+
+                                </Card>
+                            </Link>
+                        ))}
+
+                    </Box>
                 </ul>
             </div>
             <Footer />

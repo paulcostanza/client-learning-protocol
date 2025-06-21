@@ -282,6 +282,11 @@ input[type="radio"] {
     border-radius: 5px;
 }
 
+.quiz-cards {
+    list-style: none;
+    text-decoration: none;
+}
+
 #questions-footer-result {
     font-size: 3em;
     text-align: center;
