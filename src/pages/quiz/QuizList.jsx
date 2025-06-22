@@ -17,14 +17,14 @@ export default function QuizList() {
                 <ul>
                     <Box
                         componet="ul"
-                        sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', p: 0, m: 0 }}
+                        sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', p: 0, m: 0, justifyContent: 'center' }}
                     >
                         {quizList.map(quiz => (
                             <Link to={`/quiz/${quiz.id}`} className='quiz-cards'>
                                 <Card>
                                     {/* <CardCover> */}
 
-                                    <img src={quiz.cardImage} style={{ maxWidth: '200px' }} />
+                                    <img src={quiz.cardImage} style={{ maxWidth: '200px', minWidth: '150px' }} />
                                     <li key={quiz.id} style={{ textAlign: 'center' }}>{quiz.title}</li>
                                     {/* </CardCover> what does this do? */}
 
