@@ -23,7 +23,8 @@ export default function Quiz() {
         js: () => import('./database/JavaScriptQuestions.js'),
         react: () => import('./database/ReactQuestions.js'),
         networking: () => import('./database/Networking.js'),
-        python: () => import('./database/PythonQuestions.js')
+        python: () => import('./database/PythonQuestions.js'),
+        c: () => import('./database/CQuestions.js')
     }
 
     useEffect(() => {

@@ -2,6 +2,7 @@ import reactCardImg from '../../assets/quiz/react-card.png'
 import networkingCardImg from '../../assets/quiz/networking-card.png'
 import pythonCardImg from '../../assets/quiz/python-card.png'
 import javaScriptCardImg from '../../assets/quiz/javaScript-card.png'
+import cCardImg from '../../assets/quiz/c-card.png'
 
 const quizList = [
     {
@@ -27,6 +28,12 @@ const quizList = [
         title: "V.2 | V.3",
         dataFile: "../../quiz/database/PythonQuestions.js",
         cardImage: pythonCardImg
+    },
+    {
+        id: "c",
+        title: "The O.G.",
+        dataFile: "../../quiz/database/CQuestions.js",
+        cardImage: cCardImg
     }
     // Add more quizzes as needed
 ]

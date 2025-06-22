@@ -26,18 +26,18 @@ export default [
         type: 'radio',
         question: "What is the conventional name for the entry point function",
         options: [
-            'main()',
-            'start()',
-            'play()',
-            'init()'
+            '\`main()\`',
+            '\`start()\`',
+            '\`play()\`',
+            '\`init()\`'
         ],
-        answer: 'main()',
+        answer: '\`main()\`',
         optionsAreCode: 'python'
     },
     {
         id: 4,
         type: 'radio',
-        question: "If a function does not explicitly return a value, it returns `None` by default",
+        question: "If a function does not explicitly return a value, it returns \`None\` by default",
         options: [
             'true',
             'false'
@@ -49,12 +49,12 @@ export default [
         type: 'radio',
         question: "The _____ method is used to remove the last item from a list and can return it to a variable if assigned",
         options: [
-            'pop()',
-            'push()',
-            'remove()',
-            'delete()'
+            '\`pop()\`',
+            '\`push()\`',
+            '\`remove()\`',
+            '\`delete()\`'
         ],
-        answer: 'pop()'
+        answer: '\`pop()\`'
     },
     {
         id: 6,
@@ -76,3 +76,6 @@ What will happen when the code runs?`,
         answer: '\`starting\` prints, then a stack trace due to an undefined function prints'
     }
 ]
+
+
+// do I need the key: optionsAreCode?
