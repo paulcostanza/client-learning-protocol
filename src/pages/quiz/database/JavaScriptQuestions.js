@@ -1,6 +1,7 @@
 export default [
     {
         id: 1,
+        type: 'radio',
         question: "Javascript is an _______ language",
         options: [
             'Object-Oriented',
@@ -11,6 +12,7 @@ export default [
     },
     {
         id: 2,
+        type: 'radio',
         question: "Following methods can be used to display data in some form using Javascript",
         options: [
             'document.write()',
@@ -21,6 +23,7 @@ export default [
     },
     {
         id: 3,
+        type: 'radio',
         question: "When an operator value is NULL, the typeof returned by the unary operator is:",
         options: [
             'Boolean',
@@ -31,6 +34,7 @@ export default [
     },
     {
         id: 4,
+        type: 'radio',
         question: "What does the toString() method return?",
         options: [
             'Return Object',
@@ -41,6 +45,7 @@ export default [
     },
     {
         id: 5,
+        type: 'radio',
         question: "Which function is used to serialize an object into a JSON string?",
         options: [
             'stringify()',
@@ -55,6 +60,7 @@ export default [
 /*
  {
         id: 6,
+        type: 'radio',
         question: "Here is a question?",
         options: [
             'answer 1',

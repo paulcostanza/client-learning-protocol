@@ -1,6 +1,7 @@
 export default [
     {
         id: 1,
+        type: 'radio',
         question: "React is a _______ language",
         options: [
             'Fun',
@@ -11,6 +12,7 @@ export default [
     },
     {
         id: 2,
+        type: 'radio',
         question: "React and JavaScript are...",
         options: [
             'Easy',
