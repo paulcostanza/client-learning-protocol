@@ -55,5 +55,24 @@ export default [
             'delete()'
         ],
         answer: 'pop()'
+    },
+    {
+        id: 6,
+        type: 'radio',
+        question: `Assume the function \`func_that_doesnt_exist\` is a function that does not exist:
+
+~~~python
+print("starting")
+func_that_doesnt_exist("uh oh")
+print("finished")
+~~~
+
+What will happen when the code runs?`,
+        options: [
+            'A stack trace due to an undefiuned function prints',
+            '\`starting\` prints, then a stack trace due to an undefined function prints',
+            '\`starting\` prints, then a stack trace due to an undefined function prints, then \`finished\` prints',
+        ],
+        answer: '\`starting\` prints, then a stack trace due to an undefined function prints'
     }
 ]

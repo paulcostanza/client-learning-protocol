@@ -131,11 +131,11 @@ export default function Quiz() {
                         {!showResult &&
 
                             <div className="questions">
-                                <h2>
+                                <h4>
                                     <ReactMarkdown>
                                         {question.question}
                                     </ReactMarkdown>
-                                </h2>
+                                </h4>
                                 <ul key={question.id}>
                                     {question.options.map((option, optionIdx) => {
                                         let className = ""
@@ -178,7 +178,11 @@ export default function Quiz() {
                                                     disabled={checked}
                                                     onChange={() => onSelect(optionIdx)}
                                                 />
-                                                <label htmlFor={`q${optionIdx}-option`}>{option}</label>
+                                                <label htmlFor={`q${optionIdx}-option`}>
+                                                    <ReactMarkdown components={{ p: 'span' }}>
+                                                        {option}
+                                                    </ReactMarkdown>
+                                                </label>
                                             </li>
                                         )
                                     })}
