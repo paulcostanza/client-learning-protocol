@@ -1,7 +1,5 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import NavBar from "../../components/NavBar"
-import Footer from "../../components/Footer"
 import Table from '@mui/joy/Table'
 import Sheet from '@mui/joy/Sheet'
 
@@ -107,8 +105,6 @@ struct Point {
 
     return (
         <>
-            <NavBar />
-
             <main>
                 <div className="container" id="space-on-top-of-page">
 
@@ -157,7 +153,7 @@ struct Point {
                     </div>
 
                     <p>But in C, it would crash <em>before</em> it can even run. If there is a problem, the compiler tells us <strong>before</strong> the program even starts. Now... C does not tell us about all the possible problems that might arise in our program. But it does tell us about some of them.</p>
-                    <p>The compiler checks your source code, turns the source code into an executable, and then directly runs the executable in whatever environment it is to run.</p>
+                    <p>The compiler checks your source code, turns the source code into an executable, and then directly runs the executable in whatever environment it is in to run.</p>
                     <p>A compiled language will let you know there is an error <em>at</em> compile time, rather than waiting to run into the problem during execution.</p>
 
                     <h2>Basic Types</h2>
@@ -478,10 +474,6 @@ struct Point {
                     </blockquote>
                 </div>
             </main>
-
-            <Footer />
         </>
-
-
     )
 }

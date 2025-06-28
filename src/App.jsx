@@ -10,6 +10,7 @@ import About from './pages/About'
 import NoPage from './pages/NoPage'
 import C from './pages/C/C'
 import CSharp from './pages/CSharp'
+import Layout from './components/Layout'
 import {
   BrowserRouter,
   Routes,
@@ -23,19 +24,21 @@ function App() {
 
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/intro' element={<Intro />} />
-          <Route path='/python' element={<Python />} />
-          <Route path='/java' element={<Java />} />
-          <Route path='/c' element={<C />} />
-          <Route path='/csharp' element={<CSharp />} />
-          <Route path='/react' element={<React />} />
-          <Route path='/flashcards' element={<FlashCards />} />
-          <Route path='/quiz' element={<QuizList />} />
-          <Route path='/quiz/:quizId' element={<Quiz />} />
-          <Route path='/about' element={<About />} />
-          <Route path='*' element={<NoPage />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/intro' element={<Intro />} />
+            <Route path='/python' element={<Python />} />
+            <Route path='/java' element={<Java />} />
+            <Route path='/c' element={<C />} />
+            <Route path='/csharp' element={<CSharp />} />
+            <Route path='/react' element={<React />} />
+            <Route path='/flashcards' element={<FlashCards />} />
+            <Route path='/quiz' element={<QuizList />} />
+            <Route path='/quiz/:quizId' element={<Quiz />} />
+            <Route path='/about' element={<About />} />
+            <Route path='*' element={<NoPage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

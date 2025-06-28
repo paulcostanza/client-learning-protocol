@@ -1,12 +1,8 @@
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
-import KnowledgeCheck from '../components/KnowledgeCheck'
 import CLP from '../assets/landingPage/clp_animated.gif'
 
 export default function Home() {
     return (
         <>
-            <NavBar />
             <main>
                 <div className="container" id="space-on-top-of-page">
 
@@ -16,7 +12,6 @@ export default function Home() {
                     <p style={{ textAlign: 'center' }}>Work in progress, working at a slow, leisurely pace, tehe.</p>
                 </div>
             </main>
-            <Footer />
         </>
     )
 }

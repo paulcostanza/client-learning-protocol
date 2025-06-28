@@ -1,6 +1,3 @@
-import NavBar from '../../components/NavBar'
-import Footer from '../../components/Footer'
-
 import quizList from "./quizList"
 import { Link } from 'react-router-dom'
 
@@ -11,7 +8,6 @@ import CardCover from '@mui/joy/CardCover'
 export default function QuizList() {
     return (
         <>
-            <NavBar />
             <div>
                 <h1>Select a Quiz</h1>
 
@@ -35,7 +31,6 @@ export default function QuizList() {
                 </Box>
 
             </div>
-            <Footer />
         </>
     )
 }

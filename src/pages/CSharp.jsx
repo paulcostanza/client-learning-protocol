@@ -1,7 +1,5 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer"
 import Latex from 'react-latex'
 
 // images
@@ -133,8 +131,6 @@ to write a comment!
 
     return (
         <>
-            <NavBar />
-
             <main>
                 <div className="container" id="space-on-top-of-page">
 
@@ -681,20 +677,10 @@ to write a comment!
                 </div>
 
                 {/* Review section for now */}
-
-
-
-
-
-
                 <div className="container accordion" id="this-question">
-
-
                 </div >
+
             </main>
-
-
-            <Footer />
         </>
     )
 }

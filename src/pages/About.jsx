@@ -1,11 +1,8 @@
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
 import Me from '/src/assets/about/me.png'
 
 export default function About() {
     return (
         <>
-            <NavBar />
             <main>
                 <div className="container about-page" id="space-on-top-of-page">
 
@@ -56,8 +53,6 @@ export default function About() {
 
                 </div>
             </main>
-
-            <Footer />
         </>
     )
 }

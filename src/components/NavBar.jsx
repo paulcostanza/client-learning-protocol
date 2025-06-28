@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 export default function NavBar() {
 
     const [activeLink, setActiveLink] = useState(''); // Default active link
+    const location = useLocation();
 
     useEffect(() => {
         const currentPath = location.pathname.substring(1)

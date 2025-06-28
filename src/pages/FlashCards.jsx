@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react'
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
 import DrawButton from './flash-cards/DrawButton/DrawButton'
 import Card from './flash-cards/Card/Card'
 // import FakeQuestions from './flash-cards/data/fake.json'
@@ -77,8 +75,6 @@ export default function FlashCards() {
 
     return (
         <>
-            <NavBar />
-
             <div className="fake-nav-bar">
                 <ul>
                     <li><button onClick={() => launchQuiz("Intro")}>Intro</button></li>
@@ -112,8 +108,6 @@ export default function FlashCards() {
 
                 {/* end of className=App */}
             </div>
-
-            <Footer />
         </>
     )
 }

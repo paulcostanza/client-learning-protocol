@@ -54,3 +54,8 @@ From **[Css-Tricks](https://css-tricks.com/almanac/properties/a/animation-timeli
 have them all be the same size
 if not enough room then add the scroll bar at the bottom
 while at it, find out some common sizes for things like pics, fonts, headers, etc.
+
+## to do
+
+delete knowledge checks, what is the point now that I have the quiz going?
+change intro into Programming 101

@@ -1,12 +1,8 @@
-import NavBar from '../components/NavBar'
-import Footer from '../components/Footer'
 import Latex from 'react-latex'
-
 
 export default function Intro() {
     return (
         <>
-            <NavBar />
             <main>
                 <div className="container" id="space-on-top-of-page">
                     <h1 id="introduction-to-computers">Introduction to Computers</h1>
@@ -300,8 +296,6 @@ export default function Intro() {
                     </div>
                 </div>
             </main>
-
-            <Footer />
         </>
     )
 }

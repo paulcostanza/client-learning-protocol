@@ -1,8 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
-import NavBar from '../../components/NavBar.jsx'
-import Footer from '../../components/Footer.jsx'
 import Results from './Results.jsx'
 
 // quiz and questions
@@ -124,7 +122,6 @@ export default function Quiz() {
 
     return (
         <>
-            <NavBar />
             <main>
                 <div className="container" id="space-on-top-of-page">
                     <div className="quiz-page">
@@ -230,9 +227,7 @@ export default function Quiz() {
                         )}
                     </div>
                 </div>
-
             </main>
-            <Footer />
         </>
     )
 }
