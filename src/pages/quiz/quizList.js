@@ -3,6 +3,7 @@ import networkingCardImg from '../../assets/quiz/networking-card.png'
 import pythonCardImg from '../../assets/quiz/python-card.png'
 import javaScriptCardImg from '../../assets/quiz/javaScript-card.png'
 import cCardImg from '../../assets/quiz/c-card.png'
+import redisImg from "../../assets/quiz/redis-card.png"
 
 const quizList = [
     {
@@ -34,6 +35,12 @@ const quizList = [
         title: "The O.G.",
         dataFile: "../../quiz/database/CQuestions.js",
         cardImage: cCardImg
+    },
+    {
+        id: "redis",
+        title: "Caching | Speed",
+        dataFile: "../../quiz/database/RedisQuestions.js",
+        cardImage: redisImg
     }
     // Add more quizzes as needed
 ]

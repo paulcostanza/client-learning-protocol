@@ -17,16 +17,21 @@ export default function NavBar() {
                 <div className="logo">
                     {/* <!-- Where img logo will go when i make one--> */}
                     {/* <!-- classes I might need: col-lg-12 --> */}
-                    <a className="navbar-brand text-center" href="#">
-                        {/* <!-- <img src="" alt="" width="50" height="30" /> --> */}
-
-                        Client Learning Protocol</a>
+                    <Link className="navbar-brand text-center" to="/home">
+                        Client Learning Protocol
+                    </Link>
                 </div>
 
                 {/* Hamburger button when screen is small*/}
-                <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button
+                    className="navbar-toggler ms-auto"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
                     <span className="navbar-toggler-icon"></span>
                 </button>
 
@@ -46,7 +51,10 @@ export default function NavBar() {
                             { to: '/about', name: 'about', label: 'About' },
                         ].map(link => (
                             <li className="nav-item" key={link.name}>
-                                <Link to={link.to} className={`nav-link ${activeLink === link.name ? 'active' : ''}`}>
+                                <Link
+                                    to={link.to}
+                                    className={`nav-link ${activeLink === link.name ? 'active' : ''}`}
+                                >
                                     {link.label}
                                 </Link>
                             </li>
