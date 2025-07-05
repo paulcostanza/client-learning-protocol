@@ -11,6 +11,7 @@ import NoPage from './pages/NoPage'
 import C from './pages/C/C'
 import CSharp from './pages/CSharp'
 import Layout from './components/Layout'
+import Redis from './pages/redis/Redis'
 import {
   BrowserRouter,
   Routes,
@@ -33,6 +34,7 @@ function App() {
             <Route path='/c' element={<C />} />
             <Route path='/csharp' element={<CSharp />} />
             <Route path='/react' element={<React />} />
+            <Route path='/redis' element={<Redis />} />
             <Route path='/flashcards' element={<FlashCards />} />
             <Route path='/quiz' element={<QuizList />} />
             <Route path='/quiz/:quizId' element={<Quiz />} />

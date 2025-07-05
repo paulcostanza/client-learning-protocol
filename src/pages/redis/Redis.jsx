@@ -2,6 +2,11 @@ import RedisIntro from "./RedisIntro";
 
 export default function Redis() {
     return (
-        <RedisIntro />
+        <main>
+            <div className="container" id="space-on-top-of-page">
+                <RedisIntro />
+            </div>
+        </main>
+
     )
 }

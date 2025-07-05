@@ -46,6 +46,7 @@ export default function NavBar() {
                             { to: '/c', name: 'c', label: 'C' },
                             { to: '/csharp', name: 'csharp', label: 'C#' },
                             { to: '/react', name: 'react', label: 'React' },
+                            { to: '/redis', name: 'redis', label: 'Redis' },
                             { to: '/flashcards', name: 'flashcards', label: 'Flash Cards' },
                             { to: '/quiz', name: 'quiz', label: 'Quiz' },
                             { to: '/about', name: 'about', label: 'About' },
