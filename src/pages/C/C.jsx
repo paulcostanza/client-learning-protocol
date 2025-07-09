@@ -2,6 +2,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import Table from '@mui/joy/Table'
 import Sheet from '@mui/joy/Sheet'
+import MemoryLayout from './MemoryLayout'
 
 export default function C() {
 
@@ -472,6 +473,8 @@ struct Point {
                     <blockquote>
                         Even though we will be using C, this section is focused on memory management
                     </blockquote>
+
+                    <MemoryLayout />
                 </div>
             </main>
         </>
