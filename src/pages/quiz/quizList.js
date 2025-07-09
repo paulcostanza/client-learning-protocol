@@ -4,6 +4,7 @@ import pythonCardImg from '../../assets/quiz/python-card.png'
 import javaScriptCardImg from '../../assets/quiz/javaScript-card.png'
 import cCardImg from '../../assets/quiz/c-card.png'
 import redisImg from "../../assets/quiz/redis-card.png"
+import memoryImg from "../../assets/quiz/memory-card.png"
 
 const quizList = [
     {
@@ -41,6 +42,12 @@ const quizList = [
         title: "Caching | Speed",
         dataFile: "../../quiz/database/RedisQuestions.js",
         cardImage: redisImg
+    },
+    {
+        id: "memory",
+        title: "I member...",
+        dataFile: "../../quiz/database/MemoryQuestions.js",
+        cardImage: memoryImg
     }
     // Add more quizzes as needed
 ]

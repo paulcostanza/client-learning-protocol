@@ -23,7 +23,8 @@ export default function Quiz() {
         networking: () => import('./database/Networking.js'),
         python: () => import('./database/PythonQuestions.js'),
         c: () => import('./database/CQuestions.js'),
-        redis: () => import('./database/RedisQuestions.js')
+        redis: () => import('./database/RedisQuestions.js'),
+        memory: () => import('./database/MemoryQuestions.js')
     }
 
     useEffect(() => {
