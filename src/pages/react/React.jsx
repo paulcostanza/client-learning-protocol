@@ -1,4 +1,4 @@
-import IntroToReact from "./react/IntroToReact"
+import IntroToReact from "./IntroToReact"
 
 export default function React() {
     return (

@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import DrawButton from './flash-cards/DrawButton/DrawButton'
-import Card from './flash-cards/Card/Card'
+import DrawButton from './DrawButton/DrawButton'
+import Card from './Card/Card'
 // import FakeQuestions from './flash-cards/data/fake.json'
-import PythonQuestions from './flash-cards/data/python.json'
-import JavaQuestions from './flash-cards/data/java.json'
-import NetworkingQuestions from './flash-cards/data/networking'
-import CybersecurityQuestions from './flash-cards/data/cybersecurity.json'
+import PythonQuestions from './data/python.json'
+import JavaQuestions from './data/java.json'
+import NetworkingQuestions from './data/networking'
+import CybersecurityQuestions from './data/cybersecurity.json'
 
 export default function FlashCards() {
 

@@ -1,11 +1,9 @@
-import Functions from './python/Functions.jsx'
-import Scope from './python/Scope.jsx'
-import TestingAndDebugging from './python/TestingAndDebugging.jsx'
-import Computing from './python/Computing.jsx'
-import Lists from './python/Lists.jsx'
-import Dictionaries from './python/Dictionaries.jsx'
-import '../scripts/bootstrap'
-import '../scripts/bootstrap.min.js'
+import Functions from './Functions.jsx'
+import Scope from './Scope.jsx'
+import TestingAndDebugging from './TestingAndDebugging.jsx'
+import Computing from './Computing.jsx'
+import Lists from './Lists.jsx'
+import Dictionaries from './Dictionaries.jsx'
 
 export default function Python() {
     return (

@@ -1,4 +1,4 @@
-import CLP from '../assets/landingPage/clp_animated.gif'
+import CLP from '../../assets/landingPage/clp_animated.gif'
 
 export default function Home() {
     return (
