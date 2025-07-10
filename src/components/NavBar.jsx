@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 export default function NavBar() {
 
-    const [activeLink, setActiveLink] = useState(''); // Default active link
+    const [activeLink, setActiveLink] = useState('');
     const location = useLocation();
 
     useEffect(() => {
@@ -47,7 +47,7 @@ export default function NavBar() {
                             { to: '/csharp', name: 'csharp', label: 'C#' },
                             { to: '/react', name: 'react', label: 'React' },
                             { to: '/redis', name: 'redis', label: 'Redis' },
-                            { to: '/flashcards', name: 'flashcards', label: 'Flash Cards' },
+                            // { to: '/flashcards', name: 'flashcards', label: 'Flash Cards' },
                             { to: '/quiz', name: 'quiz', label: 'Quiz' },
                             { to: '/about', name: 'about', label: 'About' },
                         ].map(link => (

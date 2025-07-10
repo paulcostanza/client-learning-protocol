@@ -3,7 +3,7 @@ import Intro from './pages/intro/Intro'
 import Python from './pages/python/Python'
 import Java from './pages/java/Java'
 import React from './pages/react/React'
-import FlashCards from './pages/flash-cards/FlashCards'
+// import FlashCards from './pages/flash-cards/FlashCards'
 import Quiz from './pages/quiz/Quiz'
 import QuizList from './pages/quiz/QuizList'
 import About from './pages/about/About'
@@ -35,7 +35,7 @@ function App() {
             <Route path='/csharp' element={<CSharp />} />
             <Route path='/react' element={<React />} />
             <Route path='/redis' element={<Redis />} />
-            <Route path='/flashcards' element={<FlashCards />} />
+            {/* <Route path='/flashcards' element={<FlashCards />} /> */}
             <Route path='/quiz' element={<QuizList />} />
             <Route path='/quiz/:quizId' element={<Quiz />} />
             <Route path='/about' element={<About />} />
