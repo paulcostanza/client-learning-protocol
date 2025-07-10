@@ -180,7 +180,8 @@ root.render(
 
     const reviewQuestion2 = `console.log(<h1>Hello world!</h1>)`
 
-    const reviewQuestion3 = `root.render(
+    const reviewQuestion3 = `
+root.render(
     <h1>Hi there</h1>
     <p>This is my website!</p>
 )`
@@ -191,7 +192,8 @@ root.render(
     )
 }`
 
-    const reviewQuestion8 = `function Header() {
+    const reviewQuestion8 = `
+function Header() {
     return (
         <header>
             <img src="./react-logo.png" width="40px" alt="React logo" />
@@ -201,14 +203,17 @@ root.render(
     
 root.render(Header())`
 
-    const reviewQuestion9 = `const root = createRoot(document.getElementById("root"))
+    const reviewQuestion9 = `
+const root = createRoot(document.getElementById("root"))
 root.render(<h1>Hello nerd...</h1>)`
 
-    const reviewQuestion10 = `import { createElement } from "react"
+    const reviewQuestion10 = `
+import { createElement } from "react"
 const reactElement = createElement("h1", null, "Hello from createElement")
 console.log(reactElement)`
 
-    const reviewQuestion11 = `root.render(
+    const reviewQuestion11 = `
+root.render(
     <h1>Hi there</h1>
     <p>This is my website!</p>
 )`
@@ -227,12 +232,13 @@ console.log(reactElement)`
             <p>setting up react:</p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
                     {reactSetup}
                 </SyntaxHighlighter>
             </div>
 
             <h2 id="how-to-create-a-react-program">How to create a react program</h2>
+
             <p>This site uses Vite. A build tool</p>
             <p>I have everything downloaded and ready to go. Here are the steps for my windows machine:</p>
             <ol>
@@ -245,25 +251,32 @@ console.log(reactElement)`
                 <li>In VS code, open up terminal and type in <code>npm run dev</code></li>
             </ol>
             <p>There might be a few things to do in between steps, but this is mostly how it is done!</p>
+
             <h2 id="librariesframeworks">Libraries/Frameworks</h2>
+
             <p>Libraries</p>
             <ul>
                 <li>collection of reusable code</li>
                 <li>reduces need to write repetitive/complex things from scratch</li>
                 <li>You control how/when it's used. No/few boundaries</li>
             </ul>
+
             <p>Frameworks</p>
+
             <ul>
                 <li>Predetermined architecture - you follow a specified pattern of development</li>
                 <li>You work within the boundaries set by the framework</li>
                 <li><em>Right</em> and <em>wrong</em> ways to use it.</li>
             </ul>
+
             <p>React is specifically called a library by the React team.</p>
+
             <h2 id="codereactcreateelementcode">How <code>React.createElement()</code> works</h2>
+
             <p>Old school style:</p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
                     {oldSchoolStyle}
                 </SyntaxHighlighter>
             </div>
@@ -277,21 +290,20 @@ console.log(reactElement)`
             </div>
 
             <div className="container accordion">
-                {/* Question #2 */}
+                {/* Question #1 */}
                 <div className="accordion-item">
                     <h2 className="accordion-header">
                         <button className="accordion-button collapsed shadow-none elements-in-accordion" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">
+                            data-bs-target="#questionOne" aria-expanded="false" aria-controls="questionOne">
                             <span className="child-of-accordion">What would show up in my console if I were to run this line of code:</span>
 
-                            <div className="" >
-                                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true} >
-                                    {reviewQuestion2}
-                                </SyntaxHighlighter>
-                            </div>
+                            <SyntaxHighlighter language="jsx" style={tomorrow} className="code-snippet" wrapLines={true} >
+                                {reviewQuestion2}
+                            </SyntaxHighlighter>
+
                         </button>
                     </h2>
-                    <div id="questionTwo" className="accordion-collapse collapse" data-bs-parent="#this-question">
+                    <div id="questionOne" className="accordion-collapse collapse" data-bs-parent="#this-question">
                         <div className="accordion-body">
                             An object! (Not an actual HTML element like in vanilla DOM JavaScript.) What is created from the JSX in our React code is a plain JS object that React will use to render and update the view efficiently
                         </div>
@@ -303,7 +315,7 @@ console.log(reactElement)`
             <p><em>Syntactic sugar</em></p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
                     {syntacticSugar}
                 </SyntaxHighlighter>
             </div>
@@ -317,7 +329,7 @@ console.log(reactElement)`
                 and a footer. Rather than rewriting all of the code each time for each webpage, in React you could simply run:</p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
                     {components101}
                 </SyntaxHighlighter>
             </div>
@@ -325,7 +337,7 @@ console.log(reactElement)`
             <p>Here is another example of putting it all together:</p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLongLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLongLines={true}>
                     {addingComponents}
                 </SyntaxHighlighter>
             </div>
@@ -343,7 +355,7 @@ console.log(reactElement)`
             <p>Imperative example:</p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLongLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLongLines={true}>
                     {imperativeExample}
                 </SyntaxHighlighter>
             </div>
@@ -351,24 +363,24 @@ console.log(reactElement)`
             <p>Declarative example:</p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLongLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLongLines={true}>
                     {declarativeExample}
                 </SyntaxHighlighter>
             </div>
 
             <div className="container accordion">
-                {/* Question #1 */}
+                {/* Question #2 */}
                 <div className="accordion-item">
                     <h2 className="accordion-header">
                         <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#questionOne" aria-expanded="false" aria-controls="questionOne">
+                            data-bs-target="#questionTwo" aria-expanded="false" aria-controls="questionTwo">
                             <div>
                                 Where does React put all of the elements you create in JSX when you call <code>root.render()</code>?
                             </div>
 
                         </button>
                     </h2>
-                    <div id="questionOne" className="accordion-collapse collapse" data-bs-parent="#this-question">
+                    <div id="questionTwo" className="accordion-collapse collapse" data-bs-parent="#this-question">
                         <div className="accordion-body">
                             All the elements you render get put inside the div with the id of "root" just like in the coding example above (or whatever other element you select when calling createRoot)
                         </div>
@@ -397,11 +409,10 @@ console.log(reactElement)`
                             data-bs-target="#questionThree" aria-expanded="false" aria-controls="questionThree">
                             <span className="child-of-accordion">What's wrong with this code:</span>
 
-                            <div className="" >
-                                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true} >
-                                    {reviewQuestion3}
-                                </SyntaxHighlighter>
-                            </div>
+                            <SyntaxHighlighter language="jsx" style={tomorrow} className="code-snippet" wrapLines={true} >
+                                {reviewQuestion3}
+                            </SyntaxHighlighter>
+
                         </button>
                     </h2>
                     <div id="questionThree" className="accordion-collapse collapse" data-bs-parent="#this-question">
@@ -414,10 +425,10 @@ console.log(reactElement)`
 
             <hr />
 
-            <h2 id="custom-componets">Custom Componets</h2>
+            <h2 id="custom-components">Custom Components</h2>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLongLines={true} >
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLongLines={true} >
                     {customComponents}
                 </SyntaxHighlighter>
             </div>
@@ -430,11 +441,11 @@ console.log(reactElement)`
             </ul>
 
             <h2 id="fragments">Fragments</h2>
-            <p><em>How to compose componets together</em></p>
+            <p><em>How to compose components together</em></p>
             <p><strong>Fragment</strong> is a built-in component that we can use in React.</p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLongLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLongLines={true}>
                     {importFragement}
                 </SyntaxHighlighter>
             </div>
@@ -445,7 +456,7 @@ console.log(reactElement)`
             <p>Take a look at the following React code:</p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
                     {parentChildComponent}
                 </SyntaxHighlighter>
             </div>
@@ -467,7 +478,7 @@ console.log(reactElement)`
             <p>Example of exporting:</p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
                     {exportComponent}
                 </SyntaxHighlighter>
             </div>
@@ -475,7 +486,7 @@ console.log(reactElement)`
             <p>Example of importing:</p>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
                     {importComponent}
                 </SyntaxHighlighter>
             </div>
@@ -495,7 +506,7 @@ console.log(reactElement)`
             <h2 id="random-tips--tricks-with-css">Random tips &amp; tricks with css</h2>
 
             <div className="">
-                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet">
+                <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet">
                     {cssFlex}
                 </SyntaxHighlighter>
             </div>
@@ -562,11 +573,11 @@ console.log(reactElement)`
                             data-bs-target="#questionSeven" aria-expanded="false" aria-controls="questionSeven">
                             <span className="child-of-accordion">What's wrong with this code:</span>
 
-                            <div className="" >
-                                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true} >
-                                    {reviewQuestion7}
-                                </SyntaxHighlighter>
-                            </div>
+
+                            <SyntaxHighlighter language="jsx" style={tomorrow} className="code-snippet" wrapLines={true} >
+                                {reviewQuestion7}
+                            </SyntaxHighlighter>
+
                         </button>
                     </h2>
                     <div id="questionSeven" className="accordion-collapse collapse" data-bs-parent="#this-question">
@@ -583,11 +594,10 @@ console.log(reactElement)`
                             data-bs-target="#questionEight" aria-expanded="false" aria-controls="questionEight">
                             <span className="child-of-accordion">What's wrong with this code:</span>
 
-                            <div className="" >
-                                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true}>
-                                    {reviewQuestion8}
-                                </SyntaxHighlighter>
-                            </div>
+                            <SyntaxHighlighter language="jsx" style={tomorrow} className="code-snippet" wrapLines={true}>
+                                {reviewQuestion8}
+                            </SyntaxHighlighter>
+
                         </button>
                     </h2>
                     <div id="questionEight" className="accordion-collapse collapse" data-bs-parent="#this-question">
@@ -604,24 +614,16 @@ console.log(reactElement)`
                             data-bs-target="#questionNine" aria-expanded="false" aria-controls="questionNine">
                             <span className="child-of-accordion">What does the following code do:</span>
 
-                            <div className="" >
-                                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true}>
-                                    {reviewQuestion9}
-                                </SyntaxHighlighter>
-                            </div>
+                            <SyntaxHighlighter language="jsx" style={tomorrow} className="code-snippet" wrapLines={true}>
+                                {reviewQuestion9}
+                            </SyntaxHighlighter>
 
-                            <div className="child-of-accordion">
-                                A. It creates a new HTML element and renders it inside an element with the id "root". <br />
-                                B. It creates a new React component and renders it inside an element with the id "root". <br />
-                                C. It renders a static HTML page inside a div with the id "root". <br />
-                                D. It renders a React element inside an HTML page.
-                            </div>
                         </button>
                     </h2>
                     <div id="questionNine" className="accordion-collapse collapse" data-bs-parent="#this-question">
                         <div className="accordion-body">
-                            <p>Answer: A</p>
-                            <p>Explanation: In this case, <code>createRoot</code> is used to set up a root container in the HTML (with the <code>id=&quot;root&quot;</code>) and the <code>root.render</code> method is used to render a React element
+                            <p>It creates a new HTML element and renders it inside an element with the id "root"</p>
+                            <p>In this case, <code>createRoot</code> is used to set up a root container in the HTML (with the <code>id=&quot;root&quot;</code>) and the <code>root.render</code> method is used to render a React element
                                 (<code>{`<h1>Hello nerd...</h1>`}</code>) inside that HTML element.
                             </p>
                         </div>
@@ -635,23 +637,15 @@ console.log(reactElement)`
                             data-bs-target="#questionTen" aria-expanded="false" aria-controls="questionTen">
                             <span className="child-of-accordion">What will this code output in the console?</span>
 
-                            <div className="" >
-                                <SyntaxHighlighter language="javascript" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true} >
-                                    {reviewQuestion10}
-                                </SyntaxHighlighter>
-                            </div>
+                            <SyntaxHighlighter language="jsx" style={tomorrow} className="code-snippet" wrapLines={true} >
+                                {reviewQuestion10}
+                            </SyntaxHighlighter>
 
-                            <div className="child-of-accordion">
-                                A. An HTML element object <br />
-                                B. A React element object <br />
-                                C. A string with the text "Hello from createElement" <br />
-                                D. An error due to incorrect usage of <code>createElement</code>
-                            </div>
                         </button>
                     </h2>
                     <div id="questionTen" className="accordion-collapse collapse" data-bs-parent="#this-question">
                         <div className="accordion-body">
-                            <p>B. A React element object</p>
+                            <p>A React element object</p>
                         </div>
                     </div>
                 </div>
@@ -663,26 +657,18 @@ console.log(reactElement)`
                             data-bs-target="#questionEleven" aria-expanded="false" aria-controls="questionEleven">
                             What will happen if you try to run the following code?
 
-                            <div className="" >
-                                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true} >
-                                    {reviewQuestion11}
-                                </SyntaxHighlighter>
-                            </div>
+                            <SyntaxHighlighter language="jsx" style={tomorrow} className="code-snippet" wrapLines={true} >
+                                {reviewQuestion11}
+                            </SyntaxHighlighter>
 
-                            <div className="child-of-accordion">
-                                A. It will work, rendering both {`<h1>`} and {`<p>`} elements. <br />
-                                B. It will throw an error because React expects a single root element. <br />
-                                C. It will render the {`<h1>`} element, but ignore the {`<p>`} element. <br />
-                                D. It will render an empty page.
-                            </div>
                         </button>
                     </h2>
                     <div id="questionEleven" className="accordion-collapse collapse" data-bs-parent="#this-question">
                         <div className="accordion-body">
-                            <p>Answer: B</p>
-                            <p>Explanation: React requires that multiple elements be wrapped inside a single parent element. If you don't wrap them in a parent (like a
+                            <p>It will throw an error because React expects a single root element.</p>
+                            <p>React requires that multiple elements be wrapped inside a single parent element. If you don't wrap them in a parent (like a
 
-                                {`<div>`}, {`<fragment>`}, or{` <>...</>`}), React will throw an error.</p>
+                                {`<div>`}, {`<Fragment>`}, or{` <>...</>`}), React will throw an error.</p>
                         </div>
                     </div>
                 </div>
@@ -692,20 +678,15 @@ console.log(reactElement)`
                     <h2 className="accordion-header">
                         <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#questionTwelve" aria-expanded="false" aria-controls="questionTwelve">
-                            What is the primary difference between declarative and imperative programming in React? <br /><br />
-
-                            A. Declarative programming requires more manual control over the code execution. <br />
-                            B. Imperative programming describes what needs to be done, while declarative programming focuses on how to do it. <br />
-                            C. Declarative programming tells the system how to perform tasks, while imperative programming describes what should be done. <br />
-                            D. Declarative programming involves explicitly defining every step in the process, while imperative programming leaves it to the framework to decide. <br /><br />
+                            What is the primary difference between declarative and imperative programming in React?
 
                         </button>
                     </h2>
                     <div id="questionTwelve" className="accordion-collapse collapse" data-bs-parent="#this-question">
                         <div className="accordion-body">
-                            <p>Answer: C</p>
+                            <p>Declarative programming describes what should be done, while imperative programming tells the system how to perform tasks. </p>
 
-                            <p>Explanation: <strong>Declarative programming</strong> is about telling React what you want to happen, and React will figure out how to do it. <strong>Imperative programming</strong> involves describing how something should be done step by step, giving you more control over the execution process.</p>
+                            <p><strong>Declarative programming</strong> is about telling React what you want to happen, and React will figure out how to do it. <strong>Imperative programming</strong> involves describing how something should be done step by step, giving you more control over the execution process.</p>
                         </div>
                     </div>
                 </div>
@@ -715,17 +696,12 @@ console.log(reactElement)`
                     <h2 className="accordion-header">
                         <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#questionThirteen" aria-expanded="false" aria-controls="questionThirteen">
-                            What does it mean for React to be "composable"? <br /><br />
-
-                            A. You can mix JavaScript code and HTML in any way you like. <br />
-                            B. React allows you to easily build complex systems by combining smaller, reusable components. <br />
-                            C. React can only render basic HTML elements, like {`<div>`} and {`<span>`}. <br />
-                            D. React uses a specific programming language that allows easy composability.
+                            What does it mean for React to be "composable"?
                         </button>
                     </h2>
                     <div id="questionThirteen" className="accordion-collapse collapse" data-bs-parent="#this-question">
                         <div className="accordion-body">
-                            <p>Answer: B. React allows you to easily build complex systems by combining smaller, reusable components.</p>
+                            <p>React allows you to easily build complex systems by combining smaller, reusable components.</p>
                         </div>
                     </div>
                 </div>
