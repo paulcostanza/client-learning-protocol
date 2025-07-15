@@ -211,7 +211,7 @@ struct City c = {0};
         type: 'radio',
         question: 'What is the effect of using \`typedef\` with a struct?',
         options: [
-            'It makes the struct immuntable',
+            'It makes the struct immutable',
             'It allows you to use a shorter alias for the struct type',
             'It automatically initializes the struct',
             'It prevents the struct from being used in functions'
@@ -267,6 +267,7 @@ struct City c = {0};
         answer: 'Order fields from largest to smallest by size'
     },
     {
+        // does it return the last value? double check it in a program!
         id: 19,
         type: 'radio',
         question: `What happens if you try to return multiple values from a function in C like this: 
@@ -297,5 +298,67 @@ return x * scale, y * scale, z * scale;
             'To declare types',
             'To declare function prototypes'
         ]
+    },
+    {
+        id: 21,
+        type: 'radio',
+        question: 'What does a pointer variable store in C?',
+        options: [
+            'the value of another variable',
+            'the address of another variable',
+            'the size of another variable',
+            'the type of another variable'
+        ],
+        answer: 'the address of another variable'
+    },
+    {
+        id: 22,
+        type: 'radio',
+        question: 'Which operator is used to get the address of a variable?',
+        options: [
+            '\`*\`',
+            '\`&\`',
+            '\`%\`',
+            '\`#\`'
+        ],
+        answer: '\`&\`'
+    },
+    {
+        id: 23,
+        type: 'radio',
+        question: 'What does the expression \`*p\` do if \`p\` is a pointer?',
+        options: [
+            'assigns a value to \`p\`',
+            'returns the address stored in \`p\`',
+            'dereferences \`p\` to get the value at the address',
+            'multiplies \`p\` by the address'
+        ],
+        answer: 'dereferences \`p\` to get the value at the address'
+    },
+    {
+        id: 24,
+        type: 'radio',
+        question: 'Which of the following is *not* a common use of pointers in C?',
+        options: [
+            'dynamic memory allocation',
+            'sharing data across functions',
+            'efficient array and string manipulation',
+            'automatic variable type detection'
+        ],
+        answer: 'automatic variable type detection'
+    },
+    {
+        id: 25,
+        type: 'radio',
+        question: 'What is the result of \`*(p + 1)\` if \`p\` points to the first element of an integer array?',
+        options: [
+            'the value of the first element',
+            'the value of the second element',
+            'the value of the third element',
+            'the address of the first element',
+            'the address of the second element',
+            'the address of the third element',
+        ],
+        answer: 'the value of the second element'
     }
 ]
