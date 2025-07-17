@@ -267,7 +267,6 @@ struct City c = {0};
         answer: 'Order fields from largest to smallest by size'
     },
     {
-        // does it return the last value? double check it in a program!
         id: 19,
         type: 'radio',
         question: `What happens if you try to return multiple values from a function in C like this: 
@@ -277,11 +276,12 @@ return x * scale, y * scale, z * scale;
         options: [
             'It returns all three values',
             'It returns only the first value',
+            'It returns only the last value',
             'It causes a compile error',
             'It returns a pointer',
             'It causes a syntax error'
         ],
-        answer: 'It causes a compile error'
+        answer: 'It returns only the last value'
     },
     {
         id: 20,
@@ -360,5 +360,187 @@ return x * scale, y * scale, z * scale;
             'the address of the third element',
         ],
         answer: 'the value of the second element'
+    },
+    {
+        id: 26,
+        type: 'radio',
+        question: `After executing the following code, what does the variable \`ptr\` hold and what does the statement \`*ptr = 10;\` do?
+~~~C
+int x = 5;
+int *ptr = &x;
+*ptr = 10;
+~~~
+        `,
+        options: [
+            '\`ptr\` holds the value 5, \`*ptr = 10;\`, sets \`ptr\` to 10',
+            '\`ptr\` holds the address of \`x\`, \`*ptr = 10;\`, sets \`x\` to 10',
+            '\`ptr\` holds the value 10, \`*ptr = 10;\`, sets \`x\` to 10',
+            '\`ptr\` holds the address of \`x\`, \`*ptr = 10;\`, sets \`ptr\` to 10'
+        ],
+        answer: '\`ptr\` holds the address of \`x\`, \`*ptr = 10;\`, sets \`x\` to 10'
+    },
+    {
+        id: 27,
+        type: 'radio',
+        question: 'Which of the following statements about pointer arithmetic is correct?',
+        options: [
+            '\`*(p + 1)\` accesses the next integer value in an array pointed to by \`p\`',
+            '\`*(p + 1)\` always points to the first element of the array',
+            '\`*(p + 1)\` is invalid syntax in C',
+            '\`*(p + 1)\` changes the value of \`p\`',
+        ],
+        answer: '\`*(p + 1)\` accesses the next integer value in an array pointed to by \`p\`',
+    },
+    {
+        id: 28,
+        type: 'radio',
+        question: 'Which statement about arrays and pointers in C is correct?',
+        options: [
+            'you can reassign an array name to point to a different location',
+            '\`arr[i]\` is equivalent to \`*(arr + i)\`',
+            '\`&arr[i]\` is always equal to \`arr[i]\`',
+            'arrays and pointers are completely unrelated in C'
+        ],
+        answer: '\`arr[i]\` is equivalent to \`*(arr + i)\`',
+    },
+    {
+        id: 29,
+        type: 'radio',
+        question: 'What does \`*(s + 3)\` return if \`s\` points to \`"hello"\`?',
+        options: [
+            '\`h\`',
+            '\`e\`',
+            'the first \`l\`',
+            'the second \`l\`',
+            '\`o\`',
+        ],
+        answer: 'the second \`l\`'
+    },
+    {
+        id: 30,
+        type: 'radio',
+        question: 'Why does the loop \`while (82) { putchar(*s++); }\` stop printing characters when iterating over a string in C?',
+        options: [
+            'because it reaches the end of the array',
+            'because it encounters a space character',
+            'because it encounters the null terminator',
+            'because it runs out of memory'
+        ],
+        answer: 'because it encounters the null terminator',
+        description: 'This little guy, \`\\0\`, is the *null terminator*, which is automatically added at the end of every string in C.'
+    },
+    {
+        id: 31,
+        type: 'radio',
+        question: `What does the function \`update\` do in the following code?
+~~~C
+void update(int *ptr)
+{
+    *ptr = malloc(sizeof(int));
+    **ptr = 100;
+}
+
+// update gets called...
+int *p = NULL;
+update(&p);
+~~~
+        `,
+        options: [
+            'it sets \`p\` to point to a newly allocated integer and assigns 100 to that integer',
+            'it assigns 100 to \`p\`',
+            'it frees the memory pointed to by \`p\`',
+            'it sets \`p\` to \`NULL\`'
+        ],
+        answer: 'it sets \`p\` to point to a newly allocated integer and assigns 100 to that integer',
+        description: `- \`int **ptr\` means the function takes a pointer to a pointer to an integer
+- inside the function, \`*ptr = malloc(sizeof(int));\` allocates memory for one integer and makes \`*ptr\` (which is \`p\` in the caller) point to this new memory
+- then, \`**ptr = 100;\` sets the value at the newly allocated memory to \`100\`
+
+So after calling \`update(&p);\`, \`p\` points to a new integer in memory, and that integer's value is \`100\`
+
+This lets a function allocate memory and update the caller's pointer to point to it, which is important for dynamic memory management in C. `
+    },
+    {
+        id: 32,
+        type: 'radio',
+        question: 'How would you access the third integer in an array using a pointer to an array?',
+        options: [
+            '\`*p1[2]\`',
+            '\`(*p1)[2]\`',
+            '\`p1[2]\`',
+            '\`*(*p1 + 2)\`',
+        ],
+        answer: '\`(*p1)[2]\`',
+        description: `- \`p1\` is a pointer to an array of 4 integers (\`int (*p1)[4];)
+- to access the third element, you first dereference \`p1\` to get the array (\`*p1\`), then use \`[2]\` to get the third element`
+
+    },
+    {
+        id: 33,
+        type: 'radio',
+        question: 'How would you access the value pointed to by the second pointer in an array of pointers?',
+        options: [
+            '\`p2[1]\`',
+            '\`*p2[1]\`',
+            '\`(*p2)[1]\`',
+            '\`p2(*1)\`',
+        ],
+        answer: '\`*p2[1]\`',
+        description: `- \`p2\` is an array of 4 pointers to integers (\`int* p2[4];\`)
+- \`p2[1]\` gives you the second pointer in the array
+- to get the value that pointer points to, you dereference it: \`*p2[1]\``
+    },
+    {
+        id: 34,
+        type: 'radio',
+        question: 'What can happen if you dereference a pointer before it is initialized?',
+        options: [
+            'the program will always print zero',
+            'the program may crash or behave unpredictably',
+            'the pointer will be automatically initialized',
+            'the compiler will fix the error'
+        ],
+        answer: 'the program may crash or behave unpredictably',
+        description: 'Dereferencing an uninitialized pointer can lead to accessing invalid memory. This can cause crashes or unpredictable behavior'
+    },
+    {
+        id: 35,
+        type: 'radio',
+        question: 'What is a possible consequence of double freeing memory?',
+        options: [
+            'the memory will be reused safely',
+            'the program may crash or corrupt memory',
+            'the pointer will be set to NULL',
+            'the memory will be locked'
+        ],
+        answer: 'the program may crash or corrupt memory',
+        description: 'Freeing memory twice can corrupt the memory management system, leading to crashes or security issues'
+    },
+    {
+        id: 36,
+        type: 'radio',
+        question: 'Why is it important to check the result of \`malloc\`?',
+        options: [
+            'To ensure the pointer is not \`NULL\` before using it',
+            'to automatically free memory',
+            'to avoid using global variables',
+            'to prevent pointer arithmetic'
+        ],
+        answer: 'To ensure the pointer is not \`NULL\` before using it',
+        description: `If \`malloc\` fails, it returns \`NULL\`. Using \`NULL\` pointer can crash your program`
+    },
+    {
+        id: 37,
+        type: 'radio',
+        question: `What is the difference between \`*p\` and \`&p\`?`,
+        options: [
+            '\`*p\` gives the address of \`p\`, and \`&p\` gives the value pointed to by \`p\`',
+            '\`*p\` gives the pointed to by \`p\`, and \`&p\` gives the address of \`p\`',
+            'both give the same result',
+            `\`*p\` is invalid in C`,
+            `\`&p\` is invalid in C`
+        ],
+        answer: '\`*p\` gives the pointed to by \`p\`, and \`&p\` gives the address of \`p\`',
+        description: `\`*p\` accesses the value at the address stored in \`p\`, while \`&p\` gives the address of the pointer variable itself.`
     }
 ]
