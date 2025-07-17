@@ -8,29 +8,31 @@ import CardCover from '@mui/joy/CardCover'
 export default function QuizList() {
     return (
         <>
-            <div>
-                <h1>Select a Quiz</h1>
+            <main>
+                <div className="container">
+                    <h1>Select a Quiz</h1>
 
-                <Box
-                    componet="ul"
-                    sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', p: 0, m: 0, justifyContent: 'center' }}
-                >
-                    {quizList.map(quiz => (
-                        <Link to={`/quiz/${quiz.id}`} className='quiz-cards'>
-                            <Card>
-                                {/* <CardCover> */}
+                    <Box
+                        componet="ul"
+                        sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', p: 0, m: 0, justifyContent: 'center' }}
+                    >
+                        {quizList.map(quiz => (
+                            <Link to={`/quiz/${quiz.id}`} className='quiz-cards'>
+                                <Card>
+                                    {/* <CardCover> */}
 
-                                <img src={quiz.cardImage} style={{ width: '200px' }} />
-                                <li key={quiz.id} style={{ textAlign: 'center' }}>{quiz.title}</li>
-                                {/* </CardCover> what does this do? */}
+                                    <img src={quiz.cardImage} style={{ width: '200px' }} />
+                                    <li key={quiz.id} style={{ textAlign: 'center' }}>{quiz.title}</li>
+                                    {/* </CardCover> what does this do? */}
 
-                            </Card>
-                        </Link>
-                    ))}
+                                </Card>
+                            </Link>
+                        ))}
 
-                </Box>
+                    </Box>
 
-            </div>
+                </div>
+            </main>
         </>
     )
 }
