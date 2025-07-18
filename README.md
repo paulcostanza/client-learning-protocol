@@ -1,61 +1,65 @@
-# Currently working on...
+## To Do
 
-## Main To Dos
+***Check Trello for full list of what needs to be worked on and/or updated***
 
-- Rearrange files and place related topics into ONE folder. The way everything is spread out right now is confusing
+#### Quiz
 
-- do I still need these bootstrap files? I do not thing so, try deleting some and playing around with it. Check if you have any dependencies
-
-## Quiz To Dos
-
-- let's start adding real quizzes that I want to use - Networing! Rewriting from flashcards to quiz
-- Layout quiz cards. React, C#, JavaScript, etc...
-- User clicks on card and then takes quiz
-
-
-
-
-Eventually add:
 - tags to questions (chips with material ui)
 - change 'Next Question' to 'Results' after answering the last question
 - add a count of which number question you are on out of a total number of questions
+- rework entire quiz section. Save if the user gets it right or wrong in local memory (for now)
 
+#### Flash card page
 
+*Not sure if I will bring this back*
 
-To think about: 
-- do I add partial credit to checkbox questions?
+- Have a list of sections: python, cybersecurity, memory, etc
+- Click on a section to work on it
+- have a *correct* and a *wrong* button. 
+    - hit *correct* -> card is placed in correct pile
+    - hit *wrong* -> card is place in wrong pile
+- after you go through the cards, it automatically brings up the wrong pile for you to try again
 
+#### Navigation
 
+**Top**
+Reconstruct the top nav bar, too many topics right now
 
+**Left**
+List out all subsections so user can click and move to that section. On mobile this needs to be a drawer
 
+**Mobile** Do I want up/down buttons to jump to next/prev section?
+
+#### About Me
+
+List what projects I am working on
+
+#### index.html
+
+Can I delete all of that? I added a bunch of stuff before I understood JSX 101 and tried adding a bunch of stuff. I will experiment and delete things when the time is right. 
+
+#### Random
+
+- Incorporate Three.js into the scroll for a more visually appealing website (not too much though!). Edit the landing page to something like **[Corn Revolution](https://cornrevolution.resn.global/)**, because it looks badass
+- change intro into Programming 101
+- should I make the *react-syntax-highlighter* into my own code component and access/customize it with props to make it more simple to understand?
+- figure out how to have that button that copies code in the top right corner of code blocks
+- spacing between headers is bad, it needs to be fixed. Padding and margins in general are bad, look up the standard ways to do this for websites
+- Eventually: create a dashboard for users. Shows stats, pie charts, graphs, etc. (backend phase)
+- Should have a quick notes section (**tl/dr** button) that gives you the most important information first, followed by the long format of what you need to know. This should be a button that exposes the good stuff (like a cheat sheet)
 
 ---
 
-Flash card page
+## Backend
 
-Have a list of sections: python, cybersecurity, memory, etc
+Lol, far away from this rn.
 
-Click on a section to work on it
+Postgres is looking like the database for this project. 
 
-have a *correct* and a *wrong* button. 
-- hit *correct* -> card is placed in correct pile
-- hit *wrong* -> card is place in wrong pile
+Dashboard for users - hold all data in database (duh). Add all the data analytics for the user I want, line graphs, etc. 
 
-after you go through the cards, it automatically brings up the wrong pile for you to try again
+---
 
---- 
+## End Goal
 
-## interesting resources
-
-From **[Css-Tricks](https://css-tricks.com/almanac/properties/a/animation-timeline/)**, this link provides insite on animation. I can use the sections about image growing as you scroll, and scroolport/scroll container/ scrollable overflow for the flashcard section!
-
-## code snippets
-
-have them all be the same size
-if not enough room then add the scroll bar at the bottom
-while at it, find out some common sizes for things like pics, fonts, headers, etc.
-
-## to do
-
-delete knowledge checks, what is the point now that I have the quiz going?
-change intro into Programming 101
+People can choose what they want to study by picking the most important ideas or removing things that do not interest them. They will be tested on the material in the form of spaced repetition. If they start to do bad, they need to revisit certain ideas/concepts until they get it stuck in there head. If they do well, questions will be asked further out. 
