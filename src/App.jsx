@@ -13,7 +13,8 @@ import CSharp from './pages/cSharp/CSharp'
 import Layout from './components/Layout'
 import Redis from './pages/redis/Redis'
 import {
-  BrowserRouter,
+  // BrowserRouter, replace this for HashRouter after setting up a backend server
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom"
@@ -23,7 +24,7 @@ function App() {
   return (
     <>
 
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -42,7 +43,7 @@ function App() {
             <Route path='*' element={<NoPage />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
