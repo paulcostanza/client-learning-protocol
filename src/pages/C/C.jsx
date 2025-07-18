@@ -3,6 +3,7 @@ import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import Table from '@mui/joy/Table'
 import Sheet from '@mui/joy/Sheet'
 import MemoryLayout from './MemoryLayout'
+import Pointers from './Pointers'
 
 export default function C() {
 
@@ -475,6 +476,7 @@ struct Point {
                     </blockquote>
 
                     <MemoryLayout />
+                    <Pointers />
                 </div>
             </main>
         </>
