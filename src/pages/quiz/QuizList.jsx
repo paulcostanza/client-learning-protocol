@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import Card from '@mui/joy/Card'
 import Box from '@mui/joy/Box'
 import CardCover from '@mui/joy/CardCover'
+import QuestionList from "./QuestionList"
 
 export default function QuizList() {
     return (
@@ -32,6 +33,7 @@ export default function QuizList() {
                     </Box>
 
                 </div>
+                <QuestionList />
             </main>
         </>
     )
