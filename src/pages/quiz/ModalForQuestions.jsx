@@ -82,6 +82,8 @@ export default function ModalForQuestions({ open, onClose, question }) {
                 minWidth: 300,
                 maxWidth: 1000,
                 borderRadius: 2,
+                maxHeight: '90vh',
+                overflowY: 'auto'
             }}
                 className="modal-for-questions">
                 <h4>
