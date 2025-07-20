@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import Results from './Results.jsx'
@@ -16,6 +16,7 @@ export default function Quiz() {
     const [result, setResult] = useState('')
     const [selectedCheckboxes, setSelectedCheckboxes] = useState([])
     const [displayDescription, setDisplayDescription] = useState('')
+    const navigate = useNavigate()
 
     const quizImports = {
         js: () => import('./database/JavaScriptQuestions.js'),
@@ -201,6 +202,7 @@ export default function Quiz() {
                                             }
                                         >Check Answer</button>
                                         <button onClick={onNext} disabled={!checked}>Next Question</button>
+                                        <button onClick={() => navigate(-1)}>Quiz Page</button>
                                     </div>
                                     {result &&
                                         <div id='questions-footer-result' className={result === 'Correct!' ? 'result-correct' : 'result-incorrect'}>
