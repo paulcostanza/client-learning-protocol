@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react"
 import Table from '@mui/joy/Table'
-import Sheet from '@mui/joy/Sheet'
 import Paper from "@mui/material/Paper"
 import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
 import TablePagination from '@mui/material/TablePagination'
+import Modal from '@mui/material/Modal'
 import Box from "@mui/material/Box"
+import ModalForQuestions from "./ModalForQuestions.jsx"
 
 export default function QuestionList() {
     const [page, setPage] = React.useState(2);
-    const [rowsPerPage, setRowsPerPage] = React.useState(5);
+    const [rowsPerPage, setRowsPerPage] = React.useState(10);
+    const [modalOpen, setModalOpen] = useState(false)
+    const [selectedQuestion, setSelectedQuestion] = useState(null)
+
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -21,6 +25,15 @@ export default function QuestionList() {
         setPage(0);
     };
 
+    const handleRowClick = (question) => {
+        setSelectedQuestion(question)
+        setModalOpen(true)
+    }
+
+    const handleClose = () => {
+        setModalOpen(false)
+        setSelectedQuestion(null)
+    }
 
     const quizImports = {
         js: () => import('./database/JavaScriptQuestions.js'),
@@ -55,12 +68,15 @@ export default function QuestionList() {
 
     // add loading indicator while questions are being fetched?
     // make questions clickable
-    // add pagination
-
     // add sticy header for mobile?
 
-    // add a title column
-    // when person gets it write turn text color green and add a green check mark
+    // when person gets it:
+    // - turn text color green and add a green check mark for correct
+    // - turn text color red and add a red X for incorrect
+
+    const handlRowClick = (question) => {
+
+    }
 
     return (
         <div className="container">
@@ -91,15 +107,17 @@ export default function QuestionList() {
                                 >
                                     Category
                                 </TableCell>
-                                {/* <th>Represents</th>
-                            <th>Notes</th> */}
                             </TableRow>
                         </TableHead>
                         <tbody>
                             {allQuestions
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 .map((q, idx) => (
-                                    <tr key={q.id || idx}>
+                                    <tr
+                                        key={q.id || idx}
+                                        style={{ cursor: "pointer" }}
+                                        onClick={() => handleRowClick(q)}
+                                    >
                                         <td></td>
                                         <td>
                                             {q.question.length > 50
@@ -123,6 +141,13 @@ export default function QuestionList() {
                     rowsPerPageOptions={[5, 10, 25, 50, { value: -1, label: 'All' }]}
                 />
             </Paper>
+
+            <ModalForQuestions
+                open={modalOpen}
+                onClose={() => setModalOpen(false)}
+                question={selectedQuestion}
+            />
         </div>
+
     );
 }

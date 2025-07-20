@@ -419,3 +419,13 @@ input[type="checkbox"]:checked+label::before {
         padding: 10px;
     }
 }
+
+/************************* M O D A L | O N | Q U I Z | P A G E *************************/
+
+.modal-for-questions ul,
+.modal-for-questions li {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    cursor: pointer;
+}
