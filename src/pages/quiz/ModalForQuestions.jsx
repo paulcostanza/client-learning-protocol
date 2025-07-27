@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from '@mui/material/Modal';
 import Box from "@mui/material/Box";
 import ReactMarkdown from 'react-markdown';
+import { checkAnswer, forfeitQuestion } from './quizLogic'
 
 export default function ModalForQuestions({ open, onClose, question }) {
     // Local state for this modal instance
@@ -25,38 +26,52 @@ export default function ModalForQuestions({ open, onClose, question }) {
         }
     }
 
-    function checkAnswer() {
-        if (question.type === 'radio') {
-            if (selectedIdx === null) return;
-            setChecked(true);
-            if (question.options[selectedIdx] === question.answer) {
-                setResult('Correct!');
-            } else {
-                setResult('Wrong!');
-            }
-        } else if (question.type === 'checkbox') {
-            setChecked(true);
-            const selectedOptions = selectedCheckboxes.map(idx => question.options[idx]);
-            const correct = Array.isArray(question.answer) &&
-                question.answer.length === selectedOptions.length &&
-                question.answer.every(ans => selectedOptions.includes(ans));
-            if (correct) {
-                setResult('Correct!');
-            } else {
-                setResult('Wrong!');
-            }
-        }
-        if (question.description) {
-            setDisplayDescription(question.description);
-        }
+    // function checkAnswer() {
+    //     if (question.type === 'radio') {
+    //         if (selectedIdx === null) return;
+    //         setChecked(true);
+    //         if (question.options[selectedIdx] === question.answer) {
+    //             setResult('Correct!');
+    //         } else {
+    //             setResult('Wrong!');
+    //         }
+    //     } else if (question.type === 'checkbox') {
+    //         setChecked(true);
+    //         const selectedOptions = selectedCheckboxes.map(idx => question.options[idx]);
+    //         const correct = Array.isArray(question.answer) &&
+    //             question.answer.length === selectedOptions.length &&
+    //             question.answer.every(ans => selectedOptions.includes(ans));
+    //         if (correct) {
+    //             setResult('Correct!');
+    //         } else {
+    //             setResult('Wrong!');
+    //         }
+    //     }
+    //     if (question.description) {
+    //         setDisplayDescription(question.description);
+    //     }
+    // }
+
+    // function forfeitQuestion() {
+    //     setChecked(true);
+    //     setResult('Need to study bro...');
+    //     if (question.description) {
+    //         setDisplayDescription(question.description);
+    //     }
+    // }
+
+    function handleCheckAnswer() {
+        const { result, description } = checkAnswer(question, selectedIdx, selectedCheckboxes);
+        setChecked(true);
+        setResult(result);
+        setDisplayDescription(description);
     }
 
-    function forfeitQuestion() {
+    function handleForfeit() {
+        const { result, description } = forfeitQuestion(question);
         setChecked(true);
-        setResult('Need to study bro...');
-        if (question.description) {
-            setDisplayDescription(question.description);
-        }
+        setResult(result);
+        setDisplayDescription(description);
     }
 
     function handleExit() {
@@ -141,9 +156,9 @@ export default function ModalForQuestions({ open, onClose, question }) {
                 </ul>
                 <div className="questions-footer">
                     <div className="buttons">
-                        <button onClick={forfeitQuestion} disabled={checked}>I'm cooked</button>
+                        <button onClick={handleForfeit} disabled={checked}>I'm cooked</button>
                         <button
-                            onClick={checkAnswer}
+                            onClick={handleCheckAnswer}
                             disabled={
                                 checked || (
                                     question.type === 'radio'
