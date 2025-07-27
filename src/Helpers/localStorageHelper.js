@@ -15,20 +15,8 @@ export function clearSectionProgress(quizKey) {
     localStorage.removeItem(key);
 }
 
-/*
-Keeping track of correct questions
-
-- questions are grouped into categories: C#, python, Redis, etc.
-- in quiz format
-    - this is easy to keep track of 
-- in question format
-    - this is not easy
-
-How do I want to keep track?
-key:                        value
-section-{section name}      {id: {correct/incorrect}}
-
-
-
-
-*/
+export function getQuestionStatus(quizKey, questionId) {
+    const key = `section-${quizKey}`;
+    const progress = JSON.parse(localStorage.getItem(key) || '{}');
+    return progress[questionId]; // 'correct', 'incorrect', or undefined
+}

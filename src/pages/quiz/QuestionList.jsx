@@ -8,6 +8,7 @@ import TablePagination from '@mui/material/TablePagination'
 import Modal from '@mui/material/Modal'
 import Box from "@mui/material/Box"
 import ModalForQuestions from "./ModalForQuestions.jsx"
+import { getQuestionStatus } from "../../Helpers/localStorageHelper.js"
 
 export default function QuestionList() {
     const [page, setPage] = React.useState(2);
@@ -98,7 +99,10 @@ export default function QuestionList() {
                                 <TableCell style={{ width: '200px' }} >
                                     Title
                                 </TableCell>
-                                <TableCell style={{ width: '574.4px' }} >
+                                <TableCell style={{ width: '100px' }}>
+                                    Status
+                                </TableCell>
+                                <TableCell style={{ width: '474.4px' }} >
                                     Question
                                 </TableCell>
                                 <TableCell
@@ -112,21 +116,28 @@ export default function QuestionList() {
                         <tbody>
                             {allQuestions
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                                .map((q, idx) => (
-                                    <tr
-                                        key={q.id || idx}
-                                        style={{ cursor: "pointer" }}
-                                        onClick={() => handleRowClick(q)}
-                                    >
-                                        <td></td>
-                                        <td>
-                                            {q.question.length > 50
-                                                ? q.question.slice(0, 40) + "..."
-                                                : q.question}
-                                        </td>
-                                        <td align="right">{q.quizKey}</td>
-                                    </tr>
-                                ))}
+                                .map((q, idx) => {
+                                    const status = getQuestionStatus(q.quizKey, q.id)
+                                    return (
+                                        <tr
+                                            key={q.id || idx}
+                                            style={{ cursor: "pointer" }}
+                                            onClick={() => handleRowClick(q)}
+                                        >
+                                            <td></td>
+                                            <td>
+                                                {status === 'correct' && <span>✔️</span>}
+                                                {status === 'incorrect' && <span>❌</span>}
+                                            </td>
+                                            <td>
+                                                {q.question.length > 50
+                                                    ? q.question.slice(0, 40) + "..."
+                                                    : q.question}
+                                            </td>
+                                            <td align="right">{q.quizKey}</td>
+                                        </tr>
+                                    )
+                                })}
                         </tbody>
                     </Table>
                 </Box>
