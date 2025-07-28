@@ -5,9 +5,9 @@
 #### Quiz
 
 - tags to questions (chips with material ui)
+- create a carousel feature for quiz cards
 - change 'Next Question' to 'Results' after answering the last question
 - add a count of which number question you are on out of a total number of questions
-- rework entire quiz section. Save if the user gets it right or wrong in local memory (for now)
 
 #### Flash card page
 
