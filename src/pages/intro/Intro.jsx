@@ -1,4 +1,9 @@
 import Latex from 'react-latex'
+import OrganizationOfAComputerSystem from '../../assets/intro/organization-of-a-computer-system.png'
+import CPUExample from '../../assets/intro/cpu example.png'
+import RAMExample from '../../assets/intro/ram example.png'
+import ProceduralProgramming101 from '../../assets/intro/procedural programming 101.png'
+import MemoryExample from '../../assets/intro/memory example.png'
 
 export default function Intro() {
     return (
@@ -6,7 +11,7 @@ export default function Intro() {
             <main>
                 <div className="container" id="space-on-top-of-page">
                     <h1 id="introduction-to-computers">Introduction to Computers</h1>
-                    <p>The versatality of the computer allows it do such a wide variety of task that it makes it one of the greatest
+                    <p>The Versatility of the computer allows it do such a wide variety of task that it makes it one of the greatest
                         tools known in existence. It can accomplish this by being <strong>programmed</strong> to follow specifically
                         designed instructions.</p>
                     <p>Programming is considered both a science and an art. Here are a few things that must be designed for any <strong>real-world</strong> computer program:
@@ -17,11 +22,9 @@ export default function Intro() {
                         <li>the layout of the programming statements</li>
                         <li>the appearance of the screen</li>
                         <li>the way the information is presented to the user</li>
-                        <li>the program's, 'user friendliness'</li>
+                        <li>the program's <strong><em>user friendliness</em></strong></li>
                         <li>manuals, help systems, and/or other forms of written documentation</li>
                     </ul>
-
-                    <br />
 
                     <h2 id="hardware-and-software">Hardware and Software</h2>
                     <p>Hardware refers to the physical components that make up a computer. A typical computer consists of:</p>
@@ -32,10 +35,8 @@ export default function Intro() {
                         <li>input devices</li>
                         <li>output devices</li>
                     </ul>
-                    <div className="center">
-                        <p><img className="img-fluid d-block mx-auto" src="images/organization of a computer system.png"
-                            alt="organization of a computer system" /></p>
-                    </div>
+
+                    <img className="img-in-reading" src={OrganizationOfAComputerSystem} alt="hardware physical components" />
 
                     <br />
 
@@ -45,11 +46,11 @@ export default function Intro() {
                         the <em><strong>arithmetic and logic unit (ALC)</strong></em>. The control unit coordinates all of the
                         computer's
                         operations (where to get the next instruction and regulating the other major components of the computer with
-                        control signlas), while the arithmetic and logic unit performs all of the mathematical operations.
+                        control signals), while the arithmetic and logic unit performs all of the mathematical operations.
                     </p>
-                    <div className="center">
-                        <p><img className="img-fluid d-block mx-auto" src="images/cpu demo.png" alt="CPU demo" /></p>
-                    </div>
+
+                    <img className="img-in-reading" src={CPUExample} alt="highlevel overview of a CPU" />
+
                     <p>A program is a sequence of instructions stored in the computer's memory. When a computer is running a
                         program,
                         the CPU is engaged in a process known as the <em><strong>fetch/decode/execute</strong></em> cycle. These
@@ -57,11 +58,11 @@ export default function Intro() {
                         are repeated as long as there are instructions to perform.</p>
                     <ol>
                         <li><strong>Fetch</strong>: The CPU control unit fetches (from main memory) the next instructions in the
-                            sequenece of programming instructions.</li>
+                            sequence of programming instructions.</li>
                         <li><strong>Decode</strong>: The instructions are encoded as a series of numbers. The control unit decodes
                             the
                             instructions and generates an electronic signal.</li>
-                        <li><strong>Execute</strong>: The signal is routed to the appropiate component of the computer. This signal
+                        <li><strong>Execute</strong>: The signal is routed to the appropriate component of the computer. This signal
                             causes the component to perform an operation.</li>
                     </ol>
 
@@ -88,9 +89,8 @@ export default function Intro() {
                             highest.
                         </li>
                     </ol>
-                    <div className="center">
-                        <p><img className="img-fluid d-block mx-auto" src="images/ram demo.png" alt="RAM demo" /></p>
-                    </div>
+
+                    <img className="img-in-reading" src={RAMExample} alt="highlevel overview of RAM" />
 
                     <br />
 
@@ -149,18 +149,11 @@ export default function Intro() {
                     <div className="center">
                         <p><Latex>$ 1011010000000101 $</Latex></p>
                     </div>
-                    <p>Kind of hard to understand, huh? The binary numbers form machine language instructions, which the CPU
-                        interprets as
-                        commands. Each type of CPU has its own machine language and writing in it is very tedious and difficut. A
+                    <p>Kind of hard to understand, huh? The binary numbers form machine language instructions, which the CPU interprets as
+                        commands. Each type of CPU has its own machine language and writing in it is very tedious and difficult. A
                         program is written in a programming language that humans can read much easier than binary. It is then
                         translated
                         into machine language.</p>
-
-                    <div className="center-pic">
-                        <p><img className="img-fluid  d-block mx-auto" src="images/software and programming languages.png"
-                            alt="Program Development Process" />
-                        </p>
-                    </div>
 
                     <br />
 
@@ -172,8 +165,7 @@ export default function Intro() {
                     <h2 id="what-is-a-program-made-of">What is a program made of?</h2>
                     <p>There are some universal elements that take place in almost every programming languages:</p>
                     <ul>
-                        <li><strong>Keywords:</strong> Words that have special meaning in the programming language. Also known as
-                            <em>reserved words</em>.
+                        <li><strong>Keywords:</strong> Words that have special meaning in the programming language. Also known as <em>reserved words</em>.
                         </li>
                         <li><strong>Operators:</strong> Symbols or words that perform operations on one or more operands. An operand
                             is
@@ -204,7 +196,9 @@ export default function Intro() {
                         has a variable named <code>age</code>. Here is an example of how the variable name represents a memory
                         location.
                     </p>
-                    <p>image of memory with length value</p>
+
+                    <img className="img-in-reading" src={MemoryExample} alt="the address holds the int value of 21" />
+
                     <p>Here we have the variable <code>age</code> is holding the value of 21. The number 21 is actually stored in
                         RAM at
                         address 7, but the name <code>age</code> symbolically represents this storage location. Think of a variable
@@ -228,7 +222,7 @@ export default function Intro() {
                                 <ol>
                                     <li>Clearly <strong>define</strong> what the program is going to do</li>
                                     <li><strong>Visualize</strong> the program running on the computer</li>
-                                    <li>Use design tools to create a model of the program (<strong>pseudocode</strong>)</li>
+                                    <li>Use design tools to create a model of the program (<strong>pseudocode</strong> & diagrams)</li>
                                     <li>Check the model for logical <strong>errors</strong></li>
                                     <li>Enter the code and compile it</li>
                                     <li>Correct any <strong>errors</strong> found during compilation.</li>
@@ -250,21 +244,17 @@ export default function Intro() {
                         concepts, and vocabulary.</p>
                     <p>There are two methods of programming: procedural and object-oriented. <strong>Procedual</strong> is a set or
                         programming statements that perform a specific task. The typically operate on data items that are separate
-                        form
-                        the procedures. This separation of data and the code that operates on the data often leads to problems.</p>
+                        from the procedures. This separation of data and the code that operates on the data often leads to problems.</p>
 
-                    <div className="center">
-                        <img className="img-fluid d-block mx-auto" src="images/example of procedural programming.png"
-                            alt="example of procdural programming" />
-                    </div>
+                    <img className="img-in-reading" src={ProceduralProgramming101} alt="procdures and data" />
 
-                    <p>The issues from procdural programs gave way to OOP. OOP became centered on creating objects. <strong>Objects</strong> are a self-contained unit consisting of data (<strong>attributes</strong>) and
+                    <p>The issues from procedural programs gave way to OOP. OOP became centered on creating objects. <strong>Objects</strong> are a self-contained unit consisting of data (<strong>attributes</strong>) and
                         procedures (<strong>methods</strong>). Only the object's methods may directly access and make changes to the
                         object's data. An object typically hides its data, but allows outside code to access the methods that
                         operate on
                         the data.
                     </p>
-                    <p>OOP addresses the problem of code/data separation throught data hiding, called encapsulation. <strong>Encapsulation</strong> refers to the combining of data and code into a single object. Data hiding
+                    <p>OOP addresses the problem of code/data separation through data hiding, called encapsulation. <strong>Encapsulation</strong> refers to the combining of data and code into a single object. Data hiding
                         refers
                         to an object's ability to hide its data from code that is outside the object.
                     </p>
