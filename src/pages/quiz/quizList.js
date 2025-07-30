@@ -5,6 +5,7 @@ import javaScriptCardImg from '../../assets/quiz/javaScript-card.png'
 import cCardImg from '../../assets/quiz/c-card.png'
 import redisImg from "../../assets/quiz/redis-card.png"
 import memoryImg from "../../assets/quiz/memory-card.png"
+import programming101Img from "../../assets/quiz/programming101-card.png"
 
 const quizList = [
     {
@@ -48,6 +49,13 @@ const quizList = [
         title: "I member...",
         dataFile: "../../quiz/database/MemoryQuestions.js",
         cardImage: memoryImg
+    },
+    {
+        id: "programming101",
+        title: "FUNdamentals",
+        dataFile: "../../quiz/database/Programming101Questions.js",
+        cardImage: programming101Img
+
     }
     // Add more quizzes as needed
 ]

@@ -27,7 +27,8 @@ export default function Quiz() {
         python: () => import('./database/PythonQuestions.js'),
         c: () => import('./database/CQuestions.js'),
         redis: () => import('./database/RedisQuestions.js'),
-        memory: () => import('./database/MemoryQuestions.js')
+        memory: () => import('./database/MemoryQuestions.js'),
+        programming101: () => import('./database/Programming101Questions.js')
     }
 
     useEffect(() => {

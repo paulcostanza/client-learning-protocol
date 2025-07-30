@@ -5,7 +5,6 @@ import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
 import TablePagination from '@mui/material/TablePagination'
-import Modal from '@mui/material/Modal'
 import Box from "@mui/material/Box"
 import ModalForQuestions from "./ModalForQuestions.jsx"
 import { getQuestionStatus } from "../../Helpers/localStorageHelper.js"
@@ -43,7 +42,8 @@ export default function QuestionList() {
         python: () => import('./database/PythonQuestions.js'),
         c: () => import('./database/CQuestions.js'),
         redis: () => import('./database/RedisQuestions.js'),
-        memory: () => import('./database/MemoryQuestions.js')
+        memory: () => import('./database/MemoryQuestions.js'),
+        programming101: () => import('./database/Programming101Questions.js')
     };
 
     const quizKeys = Object.keys(quizImports);
@@ -68,16 +68,7 @@ export default function QuestionList() {
     }, []);
 
     // add loading indicator while questions are being fetched?
-    // make questions clickable
     // add sticy header for mobile?
-
-    // when person gets it:
-    // - turn text color green and add a green check mark for correct
-    // - turn text color red and add a red X for incorrect
-
-    const handlRowClick = (question) => {
-
-    }
 
     return (
         <div className="container">
@@ -102,12 +93,12 @@ export default function QuestionList() {
                                 <TableCell style={{ width: '100px' }}>
                                     Status
                                 </TableCell>
-                                <TableCell style={{ width: '474.4px' }} >
+                                <TableCell style={{ width: '434.4px' }} >
                                     Question
                                 </TableCell>
                                 <TableCell
                                     align="right"
-                                    style={{ width: '100px' }}
+                                    style={{ width: '140px' }}
                                 >
                                     Category
                                 </TableCell>
