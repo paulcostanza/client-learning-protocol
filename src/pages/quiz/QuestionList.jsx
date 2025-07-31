@@ -10,7 +10,7 @@ import ModalForQuestions from "./ModalForQuestions.jsx"
 import { getQuestionStatus } from "../../Helpers/localStorageHelper.js"
 
 export default function QuestionList() {
-    const [page, setPage] = React.useState(2);
+    const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
     const [modalOpen, setModalOpen] = useState(false)
     const [selectedQuestion, setSelectedQuestion] = useState(null)
@@ -111,7 +111,7 @@ export default function QuestionList() {
                                     const status = getQuestionStatus(q.quizKey, q.id)
                                     return (
                                         <tr
-                                            key={q.id || idx}
+                                            key={`${q.quizKey}-${q.id}`}
                                             style={{ cursor: "pointer" }}
                                             onClick={() => handleRowClick(q)}
                                         >
