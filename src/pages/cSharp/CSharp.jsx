@@ -10,17 +10,14 @@ import classes_101 from '../../assets/cSharp/classes-101.png'
 import namespace from '../../assets/cSharp/namespace.png'
 import assembly from '../../assets/cSharp/assembly.png'
 import application from '../../assets/cSharp/application.png'
-import primitive_types from '../../assets/cSharp/primitive-types.png'
-import real_numbers from '../../assets/cSharp/real-numbers.png'
-import variable_demo from '../../assets/cSharp/variable-demo.png'
-import var_keyword_pic from '../../assets/cSharp/var-keyword.png'
-import binary_representation from '../../assets/cSharp/binary-representation.png'
-import arithmetic_operators_01 from '../../assets/cSharp/arithmetic-operators-part-01.png'
-import arithmetic_operators_02 from '../../assets/cSharp/arithmetic-operators-part-02.png'
-import comparison_operator from '../../assets/cSharp/comparison-operator.png'
-import assignment_operators from '../../assets/cSharp/assignment-operators.png'
-import logical_operators from '../../assets/cSharp/logical-operators.png'
-import bitwise_operator from '../../assets/cSharp/bitwise-operators.png'
+
+// table
+import Table from '@mui/joy/Table'
+import Paper from "@mui/material/Paper"
+import TableHead from "@mui/material/TableHead"
+import TableRow from "@mui/material/TableRow"
+import TableCell from "@mui/material/TableCell"
+import Box from "@mui/material/Box"
 
 export default function CSharp() {
 
@@ -113,13 +110,11 @@ int j = int.Parse(s);`
     const postAndPrefix = `// postfix 
 int a = 1;
 int b = a++;
-
 // a = 2 and b = 1
 
 // postfix 
 int a = 1;
 int b = a++;
-
 // a = 2 and b = 1`
 
     const comments = `// one way to write a comment
@@ -128,6 +123,38 @@ int b = a++;
 And another way
 to write a comment!
 */`
+
+    const variableDemo = `namespace HelloNerd
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            byte number = 4;
+            int count = 10;
+            float totalPrice = 20.95f;
+            char character = 'A';
+            string firstName = "Paul";
+            bool isWorking = true;
+        }
+    }
+}`
+
+    const variableWithVarDemo = `namespace HelloNerd
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            var number = 4;
+            var count = 10;
+            var totalPrice = 20.95f;
+            var character = 'A';
+            var firstName = "Paul";
+            var isWorking = true;
+        }
+    }
+}`
 
     return (
         <>
@@ -139,11 +166,11 @@ to write a comment!
 
                     <ul>
                         <li>difference between C# and .NET</li>
-                        <li>CLR (Common Language Run-time)</li>
+                        <li>Common Language Runtime</li>
                         <li>classes</li>
                         <li>assemblies</li>
                         <li>namespaces</li>
-                        <li>IL code</li>
+                        <li>Intermediate Language code</li>
                         <li>primitive vs nonprimitive types</li>
                     </ul>
 
@@ -156,13 +183,13 @@ to write a comment!
 
                     <p>What is the .NET framework?</p>
                     <ul>
-                        <li>CLR (Common Language Runtime)</li>
+                        <li>Common Language Runtime CLR</li>
                         <li>Class Library</li>
                     </ul>
 
                     <h4 id="clr">CLR</h4>
 
-                    <p>Before C#, we had two languages in the C family: C and C++. When compiling the application that uses either language, the compiler translated our code into the <em>native code</em> for the machine it was running on.</p>
+                    <p>Before C#, we had two languages in the C family: C and C++. When compiling the application that uses either language, the compiler translated our code into the <strong>native code</strong> for the machine it was running on.</p>
 
                     <p><img className="img-in-reading" src={compile_c_or_cplusplus} alt="compiling c or c++" /></p>
 
@@ -224,8 +251,7 @@ to write a comment!
                     </div>
 
                     <h2 id="architecture-of-net-applicatons">Architecture of .NET Applicatons</h2>
-                    <p>At a high level, when you build a C# application, your application consists of building blocks called
-                        <em>classes</em>. These classes collaborate with each other at run time and as a result the application provides
+                    <p>At a high level, when you build a C# application, your application consists of building blocks called <em>classes</em>. These classes collaborate with each other at run time and as a result the application provides
                         some functionality.
                     </p>
 
@@ -292,7 +318,7 @@ to write a comment!
                     <h4 id="declaring-variables-and-constants">Declaring variables and constants</h4>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className="code-snippet">
                             {declaringVariables}
                         </SyntaxHighlighter>
@@ -303,7 +329,7 @@ to write a comment!
                     <p>Cannot start with a number, cannot include a whitespace, cannot be a reserved keyword, use meaningful names</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {identifiers}
                         </SyntaxHighlighter>
@@ -324,17 +350,118 @@ to write a comment!
 
                     <h4 id="primitive-types">Primitive Types</h4>
 
-                    {/* this image is not showing up on website */}
-                    <p><img className="img-in-reading" src={primitive_types} alt="primitive types" /></p>
+                    <Paper elevation={9} >
+                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                            <Table
+                                borderAxis="none"
+                                color="neutral"
+                                size="lg"
+                                stickyFooter={false}
+                                stickyHeader={false}
+                                stripe="odd"
+                                variant="outlined"
+                                hoverRow
+                            >
+                                {/* total width: 876 */}
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell
+                                            style={{ width: '90px', }}
+                                        >C# Type</TableCell>
+                                        <TableCell
+                                            style={{ width: '110px', }}
+                                        >.NET Type</TableCell>
+                                        <TableCell
+                                            style={{ width: '90px', textAlign: 'center' }}
+                                        >Bytes</TableCell>
+                                        <TableCell
+                                            style={{ width: '140px', textAlign: 'center' }}
+                                        >Range</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>byte</strong></td>
+                                        <td>Byte</td>
+                                        <td align="center">1</td>
+                                        <td align="center"><Latex>$ 0 $</Latex> to <Latex>$ 255 $</Latex></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>short</strong></td>
+                                        <td>Int16</td>
+                                        <td align="center">2</td>
+                                        <td align="center"><Latex>$ -32,768 $</Latex> to <Latex>$ 32,767 $</Latex></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>int</strong></td>
+                                        <td>Int32</td>
+                                        <td align="center">4</td>
+                                        <td align="center"><Latex>$ -2.1 $</Latex>B to <Latex>$ 2.1 $</Latex>B</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>long</strong></td>
+                                        <td>Int64</td>
+                                        <td align="center" >8</td>
+                                        <td align="center"><Latex>$ -9 $</Latex>Quint to <Latex>$ 9 $</Latex>Quint</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>float</strong></td>
+                                        <td>Single</td>
+                                        <td align="center">4</td>
+                                        <td align="center"><Latex children={"$ -3.4 \\cdot 10^{38} $"} /> to <Latex children={"$ 3.4 \\cdot 10^{38} $"} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>double</strong></td>
+                                        <td>Double</td>
+                                        <td align="center">8</td>
+                                        <td align="center"><Latex children={"$ -1.7 \\cdot 10^{308} $"} /> to <Latex children={"$ -1.7 \\cdot 10^{308} $"} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>decimal</strong></td>
+                                        <td>Decimal</td>
+                                        <td align="center">16</td>
+                                        <td align="center"><Latex children={"$ -7.9 \\cdot 10^{28} $"} /> to <Latex children={"$ 7.9 \\cdot 10^{28} $"} /></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>char</strong></td>
+                                        <td>Char</td>
+                                        <td align="center">2</td>
+                                        <td align="center">Unicode Characters</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>bool</strong></td>
+                                        <td>Boolean</td>
+                                        <td align="center">1</td>
+                                        <td align="center">True / False</td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </Box>
+                    </Paper>
+
+                    <br />
 
                     <h4 id="real-numbers">Real Numbers</h4>
 
-                    <p><img className="img-in-reading" src={real_numbers} alt="real numbers" /></p>
+                    <p>Integrals:</p>
+                    <ul>
+                        <li><code>byte</code></li>
+                        <li><code>short</code></li>
+                        <li><code>int</code></li>
+                        <li><code>long</code></li>
+                    </ul>
+
+                    <p>Real Numbers:</p>
+                    <ul>
+                        <li><code>float</code></li>
+                        <li><code>double</code></li>
+                        <li><code>decimal</code></li>
+                    </ul>
 
                     <p>C# uses <em>double</em> as a default for the compiler when using real numbers. To declare the other two:</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {floatAndDecimal}
                         </SyntaxHighlighter>
@@ -413,7 +540,7 @@ to write a comment!
                     <p>Going over (or under) a data types limit. Example:</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {overflowing}
                         </SyntaxHighlighter>
@@ -424,7 +551,7 @@ to write a comment!
                     </p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {checked}
                         </SyntaxHighlighter>
@@ -462,7 +589,7 @@ to write a comment!
                     <p>Where a variable / constant has meaning and is accessible.</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {scope}
                         </SyntaxHighlighter>
@@ -472,19 +599,29 @@ to write a comment!
 
                     <p>Demo of some variables in action:</p>
 
-                    <p><img className="img-in-reading" src={variable_demo} alt="variable demo" /></p>
+                    <div className="">
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
+                            wrapLines={true} className=" code-snippet">
+                            {variableDemo}
+                        </SyntaxHighlighter>
+                    </div>
 
                     <p>Nothing too exciting...</p>
-                    <p>var: allows the C# compiler detect the datatype for this variable. Example:</p>
+                    <p>Now <code>var</code> allows the C# compiler detect the datatype for this variable. Example:</p>
 
-                    <p><img className="img-in-reading" src={var_keyword_pic} alt="var keyword" /></p>
+                    <div className="">
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
+                            wrapLines={true} className=" code-snippet">
+                            {variableWithVarDemo}
+                        </SyntaxHighlighter>
+                    </div>
 
                     <h4 id="format-string">Format String</h4>
 
                     <p>A String that can be used as some kind of template.</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {formatString}
                         </SyntaxHighlighter>
@@ -500,7 +637,7 @@ to write a comment!
                     <h4 id="implicit-type-conversion">Implicit type conversion</h4>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {implicitTypeConversion}
                         </SyntaxHighlighter>
@@ -508,14 +645,15 @@ to write a comment!
 
                     <p>Since a byte only takes up 1 byte in memory and an int takes up 4 bytes, this easily works! Here is what the binary representation would look like:</p>
 
-                    <p><img className="img-in-reading" src={binary_representation} alt="binary representation" /></p>
+                    <p>One byte: <Latex children={"00000001"} style={{ textAlign: 'right' }} /></p>
+                    <p>Four bytes: <Latex children={"00000000 00000000 00000000 00000001"} /></p>
 
                     <p>There is no data lose in this conversion, allowing for the conversion to be implicit.</p>
 
                     <h4 id="explicit-type-conversion">Explicit type conversion</h4>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {explicitTypeConvedrsion}
                         </SyntaxHighlighter>
@@ -530,7 +668,7 @@ to write a comment!
                         conversion. In situations like that, you need to add the prefix of the variable with the target type like so:</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {doingItAnyway}
                         </SyntaxHighlighter>
@@ -539,7 +677,7 @@ to write a comment!
                     <p>This is what is known as <strong>casting</strong>. Another one:</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {casting}
                         </SyntaxHighlighter>
@@ -548,7 +686,7 @@ to write a comment!
                     <p>Sometimes you will work with types of data that <em>are not</em> compatible, like so:</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {notCompatible}
                         </SyntaxHighlighter>
@@ -563,7 +701,7 @@ to write a comment!
                         methods for converting various types to other types.</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {convert}
                         </SyntaxHighlighter>
@@ -605,7 +743,7 @@ to write a comment!
                     <h2 id="try--catch">Try / Catch</h2>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {tryCatch}
                         </SyntaxHighlighter>
@@ -622,43 +760,338 @@ to write a comment!
 
                     <h4 id="arithmetic-operator">Arithmetic operator</h4>
 
-                    <p><img className="img-in-reading" src={arithmetic_operators_01} alt="arithmetic operators part 1" /></p>
+                    <Paper elevation={9} >
+                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                            <Table
+                                borderAxis="none"
+                                color="neutral"
+                                size="lg"
+                                stickyFooter={false}
+                                stickyHeader={false}
+                                stripe="odd"
+                                variant="outlined"
+                                hoverRow
+                            >
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell
+                                            style={{ width: '90px', }}
+                                        ></TableCell>
+                                        <TableCell
+                                            style={{ width: '110px', textAlign: 'center' }}
+                                        >Operator</TableCell>
+                                        <TableCell
+                                            style={{ width: '90px', textAlign: 'center' }}
+                                        >Example</TableCell>
+                                        <TableCell
+                                            style={{ width: '140px', textAlign: 'center' }}
+                                        >Notes</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Add</strong></td>
+                                        <td align="center"><Latex children={"$ + $"} /></td>
+                                        <td align="center"><code>a + b</code></td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Subtract</strong></td>
+                                        <td align="center"><Latex children={"$ - $"} /></td>
+                                        <td align="center"><code>a - b</code></td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Multiply</strong></td>
+                                        <td align="center"><Latex children={"$ * $"} /></td>
+                                        <td align="center"><code>a * b</code></td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Divide</strong></td>
+                                        <td align="center"><Latex children={"$ / $"} /></td>
+                                        <td align="center" ><code>a / b</code></td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Remainder</strong></td>
+                                        <td align="center"><Latex children={"$ % $"} /></td>
+                                        <td align="center"><code>a % b</code></td>
+                                        <td align="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Increment</strong></td>
+                                        <td align="center"><Latex children={"$ ++ $"} /></td>
+                                        <td align="center"><code>a++</code></td>
+                                        <td align="center">Same as: <code>a = a + 1</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Decrement</strong></td>
+                                        <td align="center"><Latex children={"$ -- $"} /></td>
+                                        <td align="center"><code>b++</code></td>
+                                        <td align="center">Same as: <code>b = b - 1</code></td>
+                                    </tr>
 
-                    <p><img className="img-in-reading" src={arithmetic_operators_02} alt="arithmetic operators part 2" /></p>
+                                </tbody>
+                            </Table>
+                        </Box>
+                    </Paper>
 
-                    <p>There are two types of increment and decrements... postfix and prefix.</p>
+                    <br />
+
+                    <p>Now there are two types of increment and decrements... <em>postfix</em> and <em>prefix</em>.</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {postAndPrefix}
                         </SyntaxHighlighter>
                     </div>
 
-                    <h4 id="comparison-operators">Comparison Operators</h4>
+                    <h4 id="comparison-operators">Operators</h4>
 
-                    <p><img className="img-in-reading" src={comparison_operator} alt="comparison operator" /></p>
+                    <p>The following tables show Comparison, Assignment, and Logical Operators.</p>
 
-                    <h4 id="assignment-operators">Assignment Operators</h4>
+                    <Paper elevation={9} >
+                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                            <Table
+                                borderAxis="none"
+                                color="neutral"
+                                size="lg"
+                                stickyFooter={false}
+                                stickyHeader={false}
+                                stripe="odd"
+                                variant="outlined"
+                                hoverRow
+                            >
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell
+                                            style={{ width: '180px', textTransform: 'uppercase' }}
+                                        >Comparison Operators</TableCell>
+                                        <TableCell
+                                            style={{ width: '200px', textAlign: 'center' }}
+                                        >Operator</TableCell>
+                                        <TableCell
+                                            style={{ width: '200px', textAlign: 'center' }}
+                                        >Example</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Equal</strong></td>
+                                        <td align="center"><code>==</code></td>
+                                        <td align="center"><code>a == b</code></td>
 
-                    <p><img className="img-in-reading" src={assignment_operators} /></p>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Not Equal</strong></td>
+                                        <td align="center"><code>!=</code></td>
+                                        <td align="center"><code>a != b</code></td>
 
-                    <h4 id="logical-operators">Logical Operators</h4>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Greater than</strong></td>
+                                        <td align="center"><code>&gt;</code></td>
+                                        <td align="center"><code>a &gt; b</code></td>
 
-                    <p><img className="img-in-reading" src={logical_operators} /></p>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Greater than or equal to</strong></td>
+                                        <td align="center"><code>&ge;</code></td>
+                                        <td align="center" ><code>a &ge; b</code></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Less than</strong></td>
+                                        <td align="center"><code>&lt;</code></td>
+                                        <td align="center"><code>a &lt; b</code></td>
+
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Less than or equal to</strong></td>
+                                        <td align="center"><code>&le;</code></td>
+                                        <td align="center"><code>a &le; b</code></td>
+
+                                    </tr>
+
+                                </tbody>
+                            </Table>
+                        </Box>
+                    </Paper>
+
+                    <br />
+
+                    <Paper elevation={9} >
+                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                            <Table
+                                borderAxis="none"
+                                color="neutral"
+                                size="lg"
+                                stickyFooter={false}
+                                stickyHeader={false}
+                                stripe="odd"
+                                variant="outlined"
+                                hoverRow
+                            >
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell
+                                            style={{ width: '180px', textTransform: 'uppercase' }}
+                                        >Assignment Operators</TableCell>
+                                        <TableCell
+                                            style={{ width: '200px', textAlign: 'center' }}
+                                        >Operator</TableCell>
+                                        <TableCell
+                                            style={{ width: '200px', textAlign: 'center' }}
+                                        >Example</TableCell>
+                                        <TableCell
+                                            style={{ width: '200px', textAlign: 'center' }}
+                                        >Same as</TableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Assignment</strong></td>
+                                        <td align="center"><code>==</code></td>
+                                        <td align="center"><code>a = 1</code></td>
+                                        <td align="center"><code></code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Addition assignment</strong></td>
+                                        <td align="center"><code>+=</code></td>
+                                        <td align="center"><code>a += 3</code></td>
+                                        <td align="center"><code>a = a + 3</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Subtration assignment</strong></td>
+                                        <td align="center"><code>-=</code></td>
+                                        <td align="center"><code>a -=5</code></td>
+                                        <td align="center"><code>a = a - 5</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Multiplication assignment</strong></td>
+                                        <td align="center"><code>*=</code></td>
+                                        <td align="center" ><code>a *= 7</code></td>
+                                        <td align="center"><code>a = a * 7</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Division assignment</strong></td>
+                                        <td align="center"><code>/=</code></td>
+                                        <td align="center"><code>a /= 9</code></td>
+                                        <td align="center"><code>a = a / 9</code></td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </Box>
+                    </Paper>
+
+                    <br />
+
+                    <Paper elevation={9} >
+                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                            <Table
+                                borderAxis="none"
+                                color="neutral"
+                                size="lg"
+                                stickyFooter={false}
+                                stickyHeader={false}
+                                stripe="odd"
+                                variant="outlined"
+                                hoverRow
+                            >
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell
+                                            style={{ width: '180px', textTransform: 'uppercase' }}
+                                        >Logical Operators</TableCell>
+                                        <TableCell
+                                            style={{ width: '200px', textAlign: 'center' }}
+                                        >Operator</TableCell>
+                                        <TableCell
+                                            style={{ width: '200px', textAlign: 'center' }}
+                                        >Example</TableCell>
+
+                                    </TableRow>
+                                </TableHead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>And</strong></td>
+                                        <td align="center"><code>&&</code></td>
+                                        <td align="center"><code>a && b</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Or</strong></td>
+                                        <td align="center"><code>||</code></td>
+                                        <td align="center"><code>a || b</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Not</strong></td>
+                                        <td align="center"><code>!</code></td>
+                                        <td align="center"><code>!a</code></td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </Box>
+                    </Paper>
+
+                    <br />
 
                     <h4 id="bitwise-operators">Bitwise Operators</h4>
 
                     <p>Used mostly in low-level programming. Windows API, web-sockets, encryption, things like that.</p>
 
-                    <p><img className="img-in-reading" src={bitwise_operator} alt="bitwise operators" /></p>
+                    <Paper elevation={9} >
+                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                            <Table
+                                borderAxis="none"
+                                color="neutral"
+                                size="lg"
+                                stickyFooter={false}
+                                stickyHeader={false}
+                                stripe="odd"
+                                variant="outlined"
+                                hoverRow
+                            >
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell
+                                            style={{ width: '180px', textTransform: 'uppercase' }}
+                                        >Bitwise Operators</TableCell>
+                                        <TableCell
+                                            style={{ width: '200px', textAlign: 'center' }}
+                                        >Operator</TableCell>
+                                        <TableCell
+                                            style={{ width: '200px', textAlign: 'center' }}
+                                        >Example</TableCell>
+
+                                    </TableRow>
+                                </TableHead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>And</strong></td>
+                                        <td align="center"><code>&</code></td>
+                                        <td align="center"><code>a & b</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Or</strong></td>
+                                        <td align="center"><code>|</code></td>
+                                        <td align="center"><code>a | b</code></td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </Box>
+                    </Paper>
+
+                    <br />
+
 
                     <h2 id="comments">Comments</h2>
 
                     <p>Text that we put into our code to improve its readability and maintainability.</p>
 
                     <div className="">
-                        <SyntaxHighlighter language="c#" style={tomorrow} showLineNumbers
+                        <SyntaxHighlighter language="csharp" style={tomorrow} showLineNumbers
                             wrapLines={true} className=" code-snippet">
                             {comments}
                         </SyntaxHighlighter>
