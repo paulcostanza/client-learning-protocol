@@ -69,7 +69,7 @@ print("finished")
 
 What will happen when the code runs?`,
         options: [
-            'A stack trace due to an undefiuned function prints',
+            'A stack trace due to an undefined function prints',
             '\`starting\` prints, then a stack trace due to an undefined function prints',
             '\`starting\` prints, then a stack trace due to an undefined function prints, then \`finished\` prints',
         ],
