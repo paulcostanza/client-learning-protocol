@@ -23,7 +23,7 @@ export default function CSharp() {
 
     const declaringVariables = `int number; // without value, not initialized
 
-int Number = 1; // with a value, initialiized
+int Number = 1; // with a value, initialized
 
 const float Pi = 3.14f; // constant float with value, initialized`
 
@@ -193,7 +193,7 @@ to write a comment!
 
                     <p><img className="img-in-reading" src={compile_c_or_cplusplus} alt="compiling c or c++" /></p>
 
-                    <p>If you wrote an application in C++ on a Windows machine with 8086 processor architecture, the compiler would translate the code into the native code for that machine. An issue arrises when you have different operating systems and different hardwares. If you took that compiled application on the computer with a different architecture it would not run! Hence, Microsoft created C# and .NET...basicly they stole Java's concept.</p>
+                    <p>If you wrote an application in C++ on a Windows machine with 8086 processor architecture, the compiler would translate the code into the native code for that machine. An issue arises when you have different operating systems and different hardwares. If you took that compiled application on the computer with a different architecture it would not run! Hence, Microsoft created C# and .NET...basiclly they stole Java's concept.</p>
 
                     <p>When compiling code in Java, the code is not translated directly into the machine code, but translated into an
                         intermediate language called <strong>bytecode</strong>. We have the exact same concept in C#, with C# using <strong>Intermediate Language</strong>.
@@ -250,7 +250,7 @@ to write a comment!
 
                     </div>
 
-                    <h2 id="architecture-of-net-applicatons">Architecture of .NET Applicatons</h2>
+                    <h2 id="architecture-of-net-applicatons">Architecture of .NET Applications</h2>
                     <p>At a high level, when you build a C# application, your application consists of building blocks called <em>classes</em>. These classes collaborate with each other at run time and as a result the application provides
                         some functionality.
                     </p>
@@ -362,20 +362,19 @@ to write a comment!
                                 variant="outlined"
                                 hoverRow
                             >
-                                {/* total width: 876 */}
                                 <TableHead>
                                     <TableRow>
                                         <TableCell
-                                            style={{ width: '90px', }}
+                                            style={{ width: '150px', }}
                                         >C# Type</TableCell>
                                         <TableCell
-                                            style={{ width: '110px', }}
+                                            style={{ width: '100px', }}
                                         >.NET Type</TableCell>
                                         <TableCell
-                                            style={{ width: '90px', textAlign: 'center' }}
+                                            style={{ width: '150px', textAlign: 'center' }}
                                         >Bytes</TableCell>
                                         <TableCell
-                                            style={{ width: '140px', textAlign: 'center' }}
+                                            style={{ width: '250.4px', textAlign: 'center' }}
                                         >Range</TableCell>
                                     </TableRow>
                                 </TableHead>
@@ -384,43 +383,43 @@ to write a comment!
                                         <td><strong>byte</strong></td>
                                         <td>Byte</td>
                                         <td align="center">1</td>
-                                        <td align="center"><Latex>$ 0 $</Latex> to <Latex>$ 255 $</Latex></td>
+                                        <td align="center">0 to 255</td>
                                     </tr>
                                     <tr>
                                         <td><strong>short</strong></td>
                                         <td>Int16</td>
                                         <td align="center">2</td>
-                                        <td align="center"><Latex>$ -32,768 $</Latex> to <Latex>$ 32,767 $</Latex></td>
+                                        <td align="center">-32,768 to 32,767</td>
                                     </tr>
                                     <tr>
                                         <td><strong>int</strong></td>
                                         <td>Int32</td>
                                         <td align="center">4</td>
-                                        <td align="center"><Latex>$ -2.1 $</Latex>B to <Latex>$ 2.1 $</Latex>B</td>
+                                        <td align="center">-2.1 billon to 2.1 billion</td>
                                     </tr>
                                     <tr>
                                         <td><strong>long</strong></td>
                                         <td>Int64</td>
                                         <td align="center" >8</td>
-                                        <td align="center"><Latex>$ -9 $</Latex>Quint to <Latex>$ 9 $</Latex>Quint</td>
+                                        <td align="center">-9 quintillion to 9 quintillion</td>
                                     </tr>
                                     <tr>
                                         <td><strong>float</strong></td>
                                         <td>Single</td>
                                         <td align="center">4</td>
-                                        <td align="center"><Latex children={"$ -3.4 \\cdot 10^{38} $"} /> to <Latex children={"$ 3.4 \\cdot 10^{38} $"} /></td>
+                                        <td align="center">-3.4 * 10^(38) to 3.4 * 10^(38)</td>
                                     </tr>
                                     <tr>
                                         <td><strong>double</strong></td>
                                         <td>Double</td>
                                         <td align="center">8</td>
-                                        <td align="center"><Latex children={"$ -1.7 \\cdot 10^{308} $"} /> to <Latex children={"$ -1.7 \\cdot 10^{308} $"} /></td>
+                                        <td align="center">-1.7 * 10^(308) to 1.7 * 10^(308)</td>
                                     </tr>
                                     <tr>
                                         <td><strong>decimal</strong></td>
                                         <td>Decimal</td>
                                         <td align="center">16</td>
-                                        <td align="center"><Latex children={"$ -7.9 \\cdot 10^{28} $"} /> to <Latex children={"$ 7.9 \\cdot 10^{28} $"} /></td>
+                                        <td align="center">-7.9 * 10^(28) to 7.9 * 10^(28)</td>
                                     </tr>
                                     <tr>
                                         <td><strong>char</strong></td>
@@ -467,7 +466,7 @@ to write a comment!
                         </SyntaxHighlighter>
                     </div>
 
-                    <p>With out the <code>f</code> and <code>m</code> suffix, these variables would run as doubles!</p>
+                    <p>Without the <code>f</code> and <code>m</code> suffixes, these variables would run as doubles!</p>
 
                     <h4 id="non-primitive-types">Non-Primitive Types</h4>
                     <ul>
@@ -559,7 +558,7 @@ to write a comment!
 
                     <p>The overflow will not run at runtime. Instead, an <em>exception</em> will be thrown. If you do not handle the error,
                         the program will crash.</p>
-                    <p>Usually, you would just chose a data type that is more in your range rather than worrying about this.</p>
+                    <p>Usually, you would just choose a data type that is more appropriate for your range rather than worrying about this.</p>
 
                     <div className="container accordion">
 
@@ -660,7 +659,7 @@ to write a comment!
                     </div>
 
                     <p>Going the other way, 3 bytes out of 4 bytes will be gone. There is a chance for data loss. Now data loss only happens
-                        if the value restored in beyond the cpacity of a byte. In this example one can be stored in byte, so no data loss
+                        if the value stored is beyond the capacity of a byte. In this example one can be stored in byte, so no data loss
                         will happen. If <code>i = 300</code>, there is no way it can fit.</p>
 
                     <p>When the compiler knows there will be a chance for data loss it <em>does not</em> allow implicit type conversion. You
@@ -761,7 +760,7 @@ to write a comment!
                     <h4 id="arithmetic-operator">Arithmetic operator</h4>
 
                     <Paper elevation={9} >
-                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                        <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                             <Table
                                 borderAxis="none"
                                 color="neutral"
@@ -823,13 +822,13 @@ to write a comment!
                                         <td><strong>Increment</strong></td>
                                         <td align="center"><Latex children={"$ ++ $"} /></td>
                                         <td align="center"><code>a++</code></td>
-                                        <td align="center">Same as: <code>a = a + 1</code></td>
+                                        <td align="center">Same as: <span style={{ display: 'block' }}><code>a = a + 1</code></span></td>
                                     </tr>
                                     <tr>
                                         <td><strong>Decrement</strong></td>
                                         <td align="center"><Latex children={"$ -- $"} /></td>
-                                        <td align="center"><code>b++</code></td>
-                                        <td align="center">Same as: <code>b = b - 1</code></td>
+                                        <td align="center"><code>b--</code></td>
+                                        <td align="center">Same as: <span style={{ display: 'block' }}><code>b = b - 1</code></span></td>
                                     </tr>
 
                                 </tbody>
@@ -853,7 +852,7 @@ to write a comment!
                     <p>The following tables show Comparison, Assignment, and Logical Operators.</p>
 
                     <Paper elevation={9} >
-                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                        <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                             <Table
                                 borderAxis="none"
                                 color="neutral"
@@ -870,10 +869,10 @@ to write a comment!
                                             style={{ width: '180px', textTransform: 'uppercase' }}
                                         >Comparison Operators</TableCell>
                                         <TableCell
-                                            style={{ width: '200px', textAlign: 'center' }}
+                                            style={{ width: '130px', textAlign: 'center' }}
                                         >Operator</TableCell>
                                         <TableCell
-                                            style={{ width: '200px', textAlign: 'center' }}
+                                            style={{ width: '130px', textAlign: 'center' }}
                                         >Example</TableCell>
                                     </TableRow>
                                 </TableHead>
@@ -923,7 +922,7 @@ to write a comment!
                     <br />
 
                     <Paper elevation={9} >
-                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                        <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                             <Table
                                 borderAxis="none"
                                 color="neutral"
@@ -940,20 +939,20 @@ to write a comment!
                                             style={{ width: '180px', textTransform: 'uppercase' }}
                                         >Assignment Operators</TableCell>
                                         <TableCell
-                                            style={{ width: '200px', textAlign: 'center' }}
+                                            style={{ width: '130px', textAlign: 'center' }}
                                         >Operator</TableCell>
                                         <TableCell
-                                            style={{ width: '200px', textAlign: 'center' }}
+                                            style={{ width: '130px', textAlign: 'center' }}
                                         >Example</TableCell>
                                         <TableCell
-                                            style={{ width: '200px', textAlign: 'center' }}
+                                            style={{ width: '130px', textAlign: 'center' }}
                                         >Same as</TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <tbody>
                                     <tr>
                                         <td><strong>Assignment</strong></td>
-                                        <td align="center"><code>==</code></td>
+                                        <td align="center"><code>=</code></td>
                                         <td align="center"><code>a = 1</code></td>
                                         <td align="center"><code></code></td>
                                     </tr>
@@ -964,7 +963,7 @@ to write a comment!
                                         <td align="center"><code>a = a + 3</code></td>
                                     </tr>
                                     <tr>
-                                        <td><strong>Subtration assignment</strong></td>
+                                        <td><strong>Subtraction assignment</strong></td>
                                         <td align="center"><code>-=</code></td>
                                         <td align="center"><code>a -=5</code></td>
                                         <td align="center"><code>a = a - 5</code></td>
@@ -989,7 +988,7 @@ to write a comment!
                     <br />
 
                     <Paper elevation={9} >
-                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                        <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                             <Table
                                 borderAxis="none"
                                 color="neutral"
@@ -1006,10 +1005,10 @@ to write a comment!
                                             style={{ width: '180px', textTransform: 'uppercase' }}
                                         >Logical Operators</TableCell>
                                         <TableCell
-                                            style={{ width: '200px', textAlign: 'center' }}
+                                            style={{ width: '130px', textAlign: 'center' }}
                                         >Operator</TableCell>
                                         <TableCell
-                                            style={{ width: '200px', textAlign: 'center' }}
+                                            style={{ width: '130px', textAlign: 'center' }}
                                         >Example</TableCell>
 
                                     </TableRow>
@@ -1042,7 +1041,7 @@ to write a comment!
                     <p>Used mostly in low-level programming. Windows API, web-sockets, encryption, things like that.</p>
 
                     <Paper elevation={9} >
-                        <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                        <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                             <Table
                                 borderAxis="none"
                                 color="neutral"
@@ -1059,12 +1058,16 @@ to write a comment!
                                             style={{ width: '180px', textTransform: 'uppercase' }}
                                         >Bitwise Operators</TableCell>
                                         <TableCell
-                                            style={{ width: '200px', textAlign: 'center' }}
+                                            style={{ width: '130px', textAlign: 'center' }}
                                         >Operator</TableCell>
                                         <TableCell
-                                            style={{ width: '200px', textAlign: 'center' }}
+                                            style={{ width: '130px', textAlign: 'center' }}
                                         >Example</TableCell>
-
+                                        <TableCell
+                                            style={{ width: '230px', textAlign: 'center' }}
+                                        >
+                                            Explanation of the Example
+                                        </TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <tbody>
@@ -1072,11 +1075,37 @@ to write a comment!
                                         <td><strong>And</strong></td>
                                         <td align="center"><code>&</code></td>
                                         <td align="center"><code>a & b</code></td>
+                                        <td>Each bit is 1 if both bits are 1</td>
                                     </tr>
                                     <tr>
                                         <td><strong>Or</strong></td>
                                         <td align="center"><code>|</code></td>
                                         <td align="center"><code>a | b</code></td>
+                                        <td>Each bit is 1 if either bit is 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>XOR</strong></td>
+                                        <td align="center"><code>^</code></td>
+                                        <td align="center"><code>a ^ b</code></td>
+                                        <td>Each bit is 1 if only one bit is 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>NOT</strong></td>
+                                        <td align="center"><code>~</code></td>
+                                        <td align="center"><code>~a</code></td>
+                                        <td>Each bit is flipped - 0 becomes 1 and 1 becomes 0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Left Shift</strong></td>
+                                        <td align="center"><code>&lt;&lt;</code></td>
+                                        <td align="center"><code>a &lt;&lt; 2</code></td>
+                                        <td>Shifts all bits in <code>a</code> left by 2 positions (multiplies by 4)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Right Shift</strong></td>
+                                        <td align="center"><code>&gt;&gt;</code></td>
+                                        <td align="center"><code>a &gt;&gt; 2</code></td>
+                                        <td>Shifts all bits in <code>a</code> right by 2 positions (divides by 4, discards bits)</td>
                                     </tr>
                                 </tbody>
                             </Table>
@@ -1102,7 +1131,7 @@ to write a comment!
 
                     <h2 id="review">Review</h2>
 
-                    <p>C# is a staticlly typed language. When you declare a variable you need to specify its type and that type cannot
+                    <p>C# is a statically typed language. When you declare a variable you need to specify its type and that type cannot
                         change during the lifetime of that variable.</p>
 
                     <p>Learned about the primitive types as well.</p>
@@ -1113,7 +1142,7 @@ to write a comment!
                 <div className="container accordion" id="this-question">
                 </div >
 
-            </main>
+            </main >
         </>
     )
 }
