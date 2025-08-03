@@ -6,4 +6,4 @@ func_that_doesnt_exist("uh oh")
 print("finished")
 ~~~
 
-What will happen when the code runs?`,options:["A stack trace due to an undefiuned function prints","`starting` prints, then a stack trace due to an undefined function prints","`starting` prints, then a stack trace due to an undefined function prints, then `finished` prints"],answer:"`starting` prints, then a stack trace due to an undefined function prints"}];export{t as default};
+What will happen when the code runs?`,options:["A stack trace due to an undefined function prints","`starting` prints, then a stack trace due to an undefined function prints","`starting` prints, then a stack trace due to an undefined function prints, then `finished` prints"],answer:"`starting` prints, then a stack trace due to an undefined function prints"}];export{t as default};
