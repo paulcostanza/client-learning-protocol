@@ -26,6 +26,7 @@ export default function Quiz() {
         networking: () => import('./database/Networking.js'),
         python: () => import('./database/PythonQuestions.js'),
         c: () => import('./database/CQuestions.js'),
+        cSharp: () => import('./database/CSharpQuestions.js'),
         redis: () => import('./database/RedisQuestions.js'),
         memory: () => import('./database/MemoryQuestions.js'),
         programming101: () => import('./database/Programming101Questions.js')

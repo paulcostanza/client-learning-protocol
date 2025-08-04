@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+
+// table
 import Table from '@mui/joy/Table'
 import Paper from "@mui/material/Paper"
 import TableHead from "@mui/material/TableHead"
@@ -6,6 +8,8 @@ import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
 import TablePagination from '@mui/material/TablePagination'
 import Box from "@mui/material/Box"
+
+// helpers
 import ModalForQuestions from "./ModalForQuestions.jsx"
 import { getQuestionStatus } from "../../Helpers/localStorageHelper.js"
 
@@ -41,6 +45,7 @@ export default function QuestionList() {
         networking: () => import('./database/Networking.js'),
         python: () => import('./database/PythonQuestions.js'),
         c: () => import('./database/CQuestions.js'),
+        cSharp: () => import('./database/CSharpQuestions.js'),
         redis: () => import('./database/RedisQuestions.js'),
         memory: () => import('./database/MemoryQuestions.js'),
         programming101: () => import('./database/Programming101Questions.js')

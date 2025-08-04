@@ -3,6 +3,7 @@ import networkingCardImg from '../../assets/quiz/networking-card.png'
 import pythonCardImg from '../../assets/quiz/python-card.png'
 import javaScriptCardImg from '../../assets/quiz/javaScript-card.png'
 import cCardImg from '../../assets/quiz/c-card.png'
+import cSharpImg from '../../assets/quiz/cSharp-card.png'
 import redisImg from "../../assets/quiz/redis-card.png"
 import memoryImg from "../../assets/quiz/memory-card.png"
 import programming101Img from "../../assets/quiz/programming101-card.png"
@@ -37,6 +38,12 @@ const quizList = [
         title: "The O.G.",
         dataFile: "../../quiz/database/CQuestions.js",
         cardImage: cCardImg
+    },
+    {
+        id: "cSharp",
+        title: "Java...again",
+        dataFile: "../../quiz/database/CSharpQuestions.js",
+        cardImage: cSharpImg
     },
     {
         id: "redis",
