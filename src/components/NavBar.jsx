@@ -3,21 +3,21 @@ import { useState, useEffect } from 'react'
 import Walley from '../assets/navbar/walley.png'
 import CLPLogo from '../assets/navbar/clp-logo.png'
 
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
+import AppBar from '@mui/material/AppBar'
+import Box from '@mui/material/Box'
+import Toolbar from '@mui/material/Toolbar'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import Menu from '@mui/material/Menu'
+import MenuIcon from '@mui/icons-material/Menu'
+import Container from '@mui/material/Container'
+import Avatar from '@mui/material/Avatar'
+import Button from '@mui/material/Button'
+import Tooltip from '@mui/material/Tooltip'
+import MenuItem from '@mui/material/MenuItem'
 
 const pages = ['Learning', 'Quiz', 'About'] // Games...when ever I get to it
-const settings = ['Login - Coming 2026'];
+const settings = ['Login - Coming 2026']
 
 const learningSections = [
     { label: "Introduction to Computers", href: "/intro" },
@@ -27,40 +27,39 @@ const learningSections = [
     { label: "C#", href: "/csharp" },
     { label: "React", href: "/react" },
     { label: "Redis", href: "/redis" },
-    // Add more sections as needed
-];
+]
 
 
 export default function NavBar() {
 
-    const [anchorElNav, setAnchorElNav] = useState(null);
-    const [anchorElUser, setAnchorElUser] = useState(null); 4
-    const [anchorElLearning, setAnchorElLearning] = useState(null);
+    const [anchorElNav, setAnchorElNav] = useState(null)
+    const [anchorElUser, setAnchorElUser] = useState(null)
+    const [anchorElLearning, setAnchorElLearning] = useState(null)
 
     const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
+        setAnchorElNav(event.currentTarget)
+    }
     const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
+        setAnchorElUser(event.currentTarget)
+    }
 
     const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+        setAnchorElNav(null)
+    }
 
     const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+        setAnchorElUser(null)
+    }
 
     const handleOpenLearningMenu = (event) => {
-        setAnchorElLearning(event.currentTarget);
-    };
+        setAnchorElLearning(event.currentTarget)
+    }
     const handleCloseLearningMenu = () => {
-        setAnchorElLearning(null);
-    };
+        setAnchorElLearning(null)
+    }
 
-    const [activeLink, setActiveLink] = useState('');
-    const location = useLocation();
+    const [activeLink, setActiveLink] = useState('')
+    const location = useLocation()
 
     useEffect(() => {
         const currentPath = location.pathname.substring(1)
@@ -75,7 +74,6 @@ export default function NavBar() {
                     <Toolbar disableGutters>
 
                         {/* Desktop */}
-                        {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
                         <Box
                             sx={{
                                 mr: 2,
