@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Walley from '../assets/navbar/walley.png'
+import CLPLogo from '../assets/navbar/clp-logo.png'
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -75,23 +76,26 @@ export default function NavBar() {
 
                         {/* Desktop */}
                         {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            component="a"
-                            href="#app-bar-with-responsive-menu"
+                        <Box
                             sx={{
                                 mr: 2,
                                 display: { xs: 'none', md: 'flex' },
-                                fontFamily: 'monospace',
-                                fontWeight: 700,
-                                letterSpacing: '.3rem',
-                                color: '#fff',
-                                textDecoration: 'none',
+                                alignItems: 'center',
+                                height: 48
                             }}
                         >
-                            CLP
-                        </Typography>
+                            <Link to="/home">
+                                <img
+                                    src={CLPLogo}
+                                    alt="Logo"
+                                    style={{
+                                        height: 40,
+                                        width: 'auto',
+                                        display: 'block'
+                                    }}
+                                />
+                            </Link>
+                        </Box>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             <Button
@@ -168,24 +172,27 @@ export default function NavBar() {
                         </Box>
 
                         {/* Mobile */}
-                        <Typography
-                            variant="h5"
-                            noWrap
-                            component="a"
-                            href="#app-bar-with-responsive-menu"
+                        <Box
                             sx={{
                                 mr: 2,
                                 display: { xs: 'flex', md: 'none' },
+                                alignItems: 'center',
                                 flexGrow: 1,
-                                fontFamily: 'monospace',
-                                fontWeight: 700,
-                                letterSpacing: '.3rem',
-                                color: '#fff',
-                                textDecoration: 'none',
+                                height: 48
                             }}
                         >
-                            CLP
-                        </Typography>
+                            <Link to="/home" style={{ display: 'block' }}>
+                                <img
+                                    src={CLPLogo}
+                                    alt="Logo"
+                                    style={{
+                                        height: 32,
+                                        width: 'auto',
+                                        display: 'block'
+                                    }}
+                                />
+                            </Link>
+                        </Box>
 
                         <Menu
                             id="menu-appbar"
@@ -209,7 +216,6 @@ export default function NavBar() {
                                 }
                             }}
                         >
-                            {/* Learning Section Links */}
                             {learningSections.map(section => (
                                 <MenuItem key={section.label} onClick={handleCloseNavMenu}>
                                     <Link
