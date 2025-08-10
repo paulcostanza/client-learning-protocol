@@ -1,7 +1,62 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import Walley from '../assets/navbar/walley.png'
+
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+
+const pages = ['Learning', 'Quiz', 'About'] // Games...when ever I get to it
+const settings = ['Login - Coming 2026'];
+
+const learningSections = [
+    { label: "Introduction to Computers", href: "/intro" },
+    { label: "Java", href: "/java" },
+    { label: "Python", href: "/python" },
+    { label: "C", href: "/c" },
+    { label: "C#", href: "/csharp" },
+    { label: "React", href: "/react" },
+    { label: "Redis", href: "/redis" },
+    // Add more sections as needed
+];
+
 
 export default function NavBar() {
+
+    const [anchorElNav, setAnchorElNav] = useState(null);
+    const [anchorElUser, setAnchorElUser] = useState(null); 4
+    const [anchorElLearning, setAnchorElLearning] = useState(null);
+
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+    const handleOpenUserMenu = (event) => {
+        setAnchorElUser(event.currentTarget);
+    };
+
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
+
+    const handleCloseUserMenu = () => {
+        setAnchorElUser(null);
+    };
+
+    const handleOpenLearningMenu = (event) => {
+        setAnchorElLearning(event.currentTarget);
+    };
+    const handleCloseLearningMenu = () => {
+        setAnchorElLearning(null);
+    };
 
     const [activeLink, setActiveLink] = useState('');
     const location = useLocation();
@@ -12,88 +67,210 @@ export default function NavBar() {
     }, [location])
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container">
-                <div className="logo">
-                    {/* <!-- Where img logo will go when i make one--> */}
-                    {/* <!-- classes I might need: col-lg-12 --> */}
-                    <Link className="navbar-brand text-center" to="/home">
-                        Client Learning Protocol
-                    </Link>
-                </div>
+        <>
 
-                {/* Hamburger button when screen is small*/}
-                <button
-                    className="navbar-toggler ms-auto"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+            <AppBar position="static" color="default" sx={{ backgroundColor: "#212529" }}>
+                <Container maxWidth="xl">
+                    <Toolbar disableGutters>
 
-                {/* Menu when screen is big */}
-                <div className="menu collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav">
-                        {[
-                            { to: '/home', name: 'home', label: 'Home' },
-                            { to: '/intro', name: 'intro', label: 'Intro' },
-                            { to: '/python', name: 'python', label: 'Python' },
-                            { to: '/java', name: 'java', label: 'Java' },
-                            { to: '/c', name: 'c', label: 'C' },
-                            { to: '/csharp', name: 'csharp', label: 'C#' },
-                            { to: '/react', name: 'react', label: 'React' },
-                            { to: '/redis', name: 'redis', label: 'Redis' },
-                            // { to: '/flashcards', name: 'flashcards', label: 'Flash Cards' },
-                            { to: '/quiz', name: 'quiz', label: 'Quiz' },
-                            { to: '/about', name: 'about', label: 'About' },
-                        ].map(link => (
-                            <li className="nav-item" key={link.name}>
+                        {/* Desktop */}
+                        {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="a"
+                            href="#app-bar-with-responsive-menu"
+                            sx={{
+                                mr: 2,
+                                display: { xs: 'none', md: 'flex' },
+                                fontFamily: 'monospace',
+                                fontWeight: 700,
+                                letterSpacing: '.3rem',
+                                color: '#fff',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            CLP
+                        </Typography>
+
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                            <Button
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                onClick={handleOpenLearningMenu}
+                            >
+                                LEARNING
+                            </Button>
+                            <Menu
+                                anchorEl={anchorElLearning}
+                                open={Boolean(anchorElLearning)}
+                                onClose={handleCloseLearningMenu}
+                            >
+                                {learningSections.map(section => (
+                                    <MenuItem key={section.label} onClick={handleCloseLearningMenu}>
+                                        <Link
+                                            to={section.href}
+                                            style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
+                                        >
+                                            {section.label}
+                                        </Link>
+                                    </MenuItem>
+                                ))}
+                            </Menu>
+                            <Button
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                component={Link}
+                                to="/quiz"
+                            >
+                                QUIZ
+                            </Button>
+                            <Button
+                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                component={Link}
+                                to="/about"
+                            >
+                                ABOUT
+                            </Button>
+                        </Box>
+
+                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', color: '#fff' } }}>
+                            <IconButton
+                                size="large"
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                onClick={handleOpenNavMenu}
+                                color="inherit"
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                            <Menu
+                                id="menu-appbar"
+                                anchorEl={anchorElNav}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'left',
+                                }}
+                                open={Boolean(anchorElNav)}
+                                onClose={handleCloseNavMenu}
+                                sx={{ display: { xs: 'block', md: 'none' } }}
+                            >
+                                {pages.map((page) => (
+                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                        <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                                    </MenuItem>
+                                ))}
+                            </Menu>
+                        </Box>
+
+                        {/* Mobile */}
+                        <Typography
+                            variant="h5"
+                            noWrap
+                            component="a"
+                            href="#app-bar-with-responsive-menu"
+                            sx={{
+                                mr: 2,
+                                display: { xs: 'flex', md: 'none' },
+                                flexGrow: 1,
+                                fontFamily: 'monospace',
+                                fontWeight: 700,
+                                letterSpacing: '.3rem',
+                                color: '#fff',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            CLP
+                        </Typography>
+
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
+                            sx={{ display: { xs: 'block', md: 'none' } }}
+                            PaperProps={{
+                                style: {
+                                    maxHeight: 350,
+                                    overflow: 'auto'
+                                }
+                            }}
+                        >
+                            {/* Learning Section Links */}
+                            {learningSections.map(section => (
+                                <MenuItem key={section.label} onClick={handleCloseNavMenu}>
+                                    <Link
+                                        to={section.href}
+                                        style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
+                                    >
+                                        {section.label}
+                                    </Link>
+                                </MenuItem>
+                            ))}
+                            {/* Other pages */}
+                            <MenuItem onClick={handleCloseNavMenu}>
                                 <Link
-                                    to={link.to}
-                                    className={`nav-link ${activeLink === link.name ? 'active' : ''}`}
+                                    to="/quiz"
+                                    style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
                                 >
-                                    {link.label}
+                                    Quiz
                                 </Link>
-                            </li>
-                        ))}
-                    </ul>
+                            </MenuItem>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <Link
+                                    to="/about"
+                                    style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
+                                >
+                                    About
+                                </Link>
+                            </MenuItem>
+                        </Menu>
 
-
-
-                    {/* Drop down menu I would like to eventually add to website */}
-
-                    {/* <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Section
-                            </a>
-                            <ul className="dropdown-menu side-bar" aria-labelledby="navbarDropdown">
-                                <li><a className="nav-link" href="#introduction-to-computers">
-                                    Introduction to Computers
-                                </a>
-                                </li>
-                                <li><a className="nav-link" href="java.html">
-                                    Java
-                                </a>
-                                </li>
-                            </ul>
-                        </li> */}
-
-
-
-                    {/* SEARCH BAR - I would like to add this back in...eventually */}
-                    {/* <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-success" type="submit">
-                            Search
-                        </button>
-                    </form> */}
-                </div>
-            </div>
-        </nav>
+                        <Box sx={{ flexGrow: 0 }}>
+                            <Tooltip title="Open settings">
+                                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                                    <Avatar alt="Walley" src={Walley} />
+                                </IconButton>
+                            </Tooltip>
+                            <Menu
+                                sx={{ mt: '45px' }}
+                                id="menu-appbar"
+                                anchorEl={anchorElUser}
+                                anchorOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'right',
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'right',
+                                }}
+                                open={Boolean(anchorElUser)}
+                                onClose={handleCloseUserMenu}
+                            >
+                                {settings.map((setting) => (
+                                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                                        <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
+                                    </MenuItem>
+                                ))}
+                            </Menu>
+                        </Box>
+                    </Toolbar>
+                </Container>
+            </AppBar>
+        </>
     )
 }
