@@ -29,13 +29,21 @@ const sectionComponents = {
 export default function CSharp() {
     const menuItems = Object.keys(sectionComponents)
     const [selectedSection, setSelectedSection] = useState(menuItems[0])
+    const [open, setOpen] = useState(false)
+
+    const toggleDrawer = (newOpen) => () => {
+        setOpen(newOpen)
+    }
 
     return (
         <>
+            <button onClick={toggleDrawer(true)}>Click for different section</button>
             <Drawer
                 sx={{ widt: drawerWidth }}
                 variant="temporary"
                 anchor="left"
+                open={open}
+                onClose={toggleDrawer(false)}
 
             >
                 {/* <div>
