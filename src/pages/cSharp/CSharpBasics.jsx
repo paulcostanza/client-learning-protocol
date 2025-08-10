@@ -424,7 +424,7 @@ int b = a++;
                             </tr>
                             <tr>
                                 <td><strong>Remainder</strong></td>
-                                <td align="center"><Latex children={"$ % $"} /></td>
+                                <td align="center"><code>%</code></td>
                                 <td align="center"><code>a % b</code></td>
                                 <td align="center"></td>
                             </tr>
