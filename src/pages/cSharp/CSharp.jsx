@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Introduction from './Introduction'
 import CSharpBasics from './CSharpBasics'
 import ControlFlow from './ControlFlow'
@@ -7,12 +7,10 @@ import ObjectOrientedProgramming from './ObjectOrientedProgramming'
 import ExceptionHandlings from './ExceptionHandling'
 
 import Drawer from '@mui/material/Drawer'
-import Typography from '@mui/material/Typography'
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemText from '@mui/material/ListItemText'
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight'
 
 
 const drawerWidth = 240
@@ -24,7 +22,7 @@ const sectionComponents = {
     'Methods & Functions': <MethodsAndFunctions />,
     'Object Oriented Programming': <ObjectOrientedProgramming />,
     'Exception Handling': <ExceptionHandlings />
-};
+}
 
 export default function CSharp() {
     const menuItems = Object.keys(sectionComponents)
@@ -37,7 +35,23 @@ export default function CSharp() {
 
     return (
         <>
-            <button onClick={toggleDrawer(true)}>Click for different section</button>
+            <button
+                onClick={toggleDrawer(true)}
+                style={{
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: 8,
+                    margin: 8,
+                    transition: 'opacity 0.3s',
+                    opacity: 0.4 // faded by default
+                }}
+                aria-label="Open section menu foo"
+                onMouseEnter={e => e.currentTarget.style.opacity = 1}
+                onMouseLeave={e => e.currentTarget.style.opacity = 0.4}
+            >
+                <ArrowCircleRightIcon fontSize='large' />
+            </button>
             <Drawer
                 sx={{ widt: drawerWidth }}
                 variant="temporary"
@@ -46,19 +60,15 @@ export default function CSharp() {
                 onClose={toggleDrawer(false)}
 
             >
-                {/* <div>
-                    <Typography variant='h5'>
-                        C#
-                    </Typography>
-                </div> */}
-
-                {/* List / links */}
                 <List>
                     {menuItems.map(item => (
                         <ListItem
                             key={item}
                             selected={selectedSection === item}
-                            onClick={() => setSelectedSection(item)}
+                            onClick={() => {
+                                setSelectedSection(item)
+                                setOpen(false)
+                            }}
                         >
                             <ListItemText
                                 primary={item}
@@ -71,18 +81,11 @@ export default function CSharp() {
                     ))}
                 </List>
             </Drawer>
+
             <main>
-
-                <div className="container" id="space-on-top-of-page">
-
+                <div className="container" id="">
                     {sectionComponents[selectedSection]}
                 </div>
-
-                {/* Review section for now */}
-                <div className="container accordion" id="this-question">
-
-                </div >
-
             </main >
         </>
     )
