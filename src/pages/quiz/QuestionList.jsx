@@ -102,8 +102,7 @@ export default function QuestionList() {
                                     Question
                                 </TableCell>
                                 <TableCell
-                                    align="right"
-                                    style={{ width: '140px' }}
+                                    style={{ textAlign: 'center', width: '140px' }}
                                 >
                                     Category
                                 </TableCell>
@@ -113,6 +112,7 @@ export default function QuestionList() {
                             {allQuestions
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 .map((q, idx) => {
+                                    console.log(q.question)
                                     const status = getQuestionStatus(q.quizKey, q.id)
                                     return (
                                         <tr
@@ -120,7 +120,7 @@ export default function QuestionList() {
                                             style={{ cursor: "pointer" }}
                                             onClick={() => handleRowClick(q)}
                                         >
-                                            <td></td>
+                                            <td>{q.title ? q.title.slice(0, 40) : ''}</td>
                                             <td>
                                                 {status === 'correct' && <span>✔️</span>}
                                                 {status === 'incorrect' && <span>❌</span>}
@@ -130,7 +130,7 @@ export default function QuestionList() {
                                                     ? q.question.slice(0, 40) + "..."
                                                     : q.question}
                                             </td>
-                                            <td align="right">{q.quizKey}</td>
+                                            <td align="center">{q.quizKey}</td>
                                         </tr>
                                     )
                                 })}
