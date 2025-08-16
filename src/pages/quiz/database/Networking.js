@@ -2,6 +2,7 @@ export default [
     {
         id: 1,
         type: 'radio',
+        title: 'Layer Outlier',
         question: "Which device or service would not operate at the physical layer of the OSI Model",
         options: [
             'Network Interface Card (NIC)',
@@ -14,6 +15,7 @@ export default [
     {
         id: 2,
         type: 'radio',
+        title: 'Goodbye',
         question: "Which TCP flag is used to gracefully terminate a session between two systems",
         options: [
             'PIN',
@@ -29,6 +31,7 @@ export default [
     {
         id: 3,
         type: 'radio',
+        title: 'What’s the Point?',
         question: "Which statement correctly characterizes the functions of the OSI Model",
         options: [
             'A method of describing the functions of a networking system to allow communication',
@@ -41,6 +44,7 @@ export default [
     {
         id: 4,
         type: 'checkbox',
+        title: 'Presentation Powers',
         question: "Which common services occur at the presentation layer of the OSI Model?",
         options: [
             'encryption',
@@ -58,6 +62,7 @@ export default [
     {
         id: 6,
         type: 'radio',
+        title: '',
         question: "Which device or service would not operate at the physical layer of the OSI Model?",
         options: [
             'Network Interface Card',
@@ -70,6 +75,7 @@ export default [
     {
         id: 7,
         type: 'radio',
+        title: 'Communicate with who?',
         question: "Which type of communication would be analogous to a half duplex transmission",
         options: [
             'a group chat where only one person can send a message at a time',
@@ -82,6 +88,7 @@ export default [
     {
         id: 9,
         type: 'checkbox',
+        title: 'Guaranteed Delivery',
         question: "If you needed to be certain that your data transmission are being received, which type of connection(s) and/or protocol(s) should be used",
         options: [
             'connection-oriented',
@@ -99,6 +106,7 @@ export default [
     {
         id: 10,
         type: 'radio',
+        title: 'I spy MTU size',
         question: "Which command can be used to determine the MTU optimal size?",
         options: [
             'traceroute',
@@ -114,6 +122,7 @@ export default [
     {
         id: 11,
         type: 'checkbox',
+        title: 'App Lyaer All-Stars',
         question: "Which protocol(s) operate at the application layer of the OSI Model",
         options: [
             'SMTP',
@@ -147,6 +156,7 @@ export default [
     {
         id: 12,
         type: 'checkbox',
+        title: 'Traffic cop',
         question: "Which type of traffic management service(s) occurs at the network layer of the OSI Model",
         options: [
             'routing',
@@ -171,6 +181,7 @@ export default [
     {
         id: 13,
         type: 'radio',
+        title: 'Who gets this?',
         question: "The TCP header specifies which value to ensure that data is processed by the correct application",
         options: [
             'Port',
@@ -187,6 +198,7 @@ export default [
     {
         id: 15,
         type: 'radio',
+        title: 'Node-on-node action',
         question: "Which layer of the OSI model is responsible for node-to-node data delivery and framing",
         options: [
             'Physical Layer',
@@ -202,15 +214,23 @@ export default [
     {
         id: 16,
         type: 'radio',
+        title: 'Choose your weapon',
         question: "Which device or service operates at the Data Link Layer to manage node-to-node communication",
         options: [
-            'switch'
+            'switch',
+            'router',
+            'hub',
+            'firewall',
+            'repeater',
+            'bridge',
+            'modem'
         ],
         answer: 'switch'
     },
     {
         id: 17,
         type: 'radio',
+        title: 'LLC purpose',
         question: "What is the purpose of the Logical Link Control (LLC) sub-layer in the Data Link Layer",
         options: [
             'It defines the physical addressing method for nodes',
@@ -223,6 +243,7 @@ export default [
     {
         id: 18,
         type: 'radio',
+        title: 'Physical layer magic',
         question: "What is a key distinction of the components at the physical layer of the OSI model",
         options: [
             'They use software to process data',
@@ -235,6 +256,7 @@ export default [
     {
         id: 19,
         type: 'radio',
+        title: 'Not mine',
         question: `Which of the following is **NOT** a responsibility of the Data Link Layer`,
         options: [
             'Adding physical addresses to data',
@@ -248,6 +270,7 @@ export default [
     {
         id: 20,
         type: 'radio',
+        title: 'Bits to circuit',
         question: "In the OSI model, which layer is responsible for transforming data from bits into electrical signals for transmission",
         options: [
             'Physical Layer',
@@ -266,7 +289,8 @@ export default [
 /*
  {
         id: 1,
-        type: 'radio', 'checkbox', or 'input' - need to create input though
+        type: 'radio',
+        title: '', 'checkbox', or 'input' - need to create input though
         question: "Here is a question?",
         options: [
             'answer 1',
