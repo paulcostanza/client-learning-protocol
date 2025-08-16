@@ -55,7 +55,7 @@ export default function QuestionList() {
     const [allQuestions, setAllQuestions] = useState([]);
 
     useEffect(() => {
-        // Load all questions from all quizzes
+        // loads all questions from all quizzes
         Promise.all(
             quizKeys.map(key =>
                 quizImports[key]().then(module => ({
@@ -64,7 +64,6 @@ export default function QuestionList() {
                 }))
             )
         ).then(results => {
-            // Flatten all questions and add quizKey for context
             const questions = results.flatMap(({ quizKey, questions }) =>
                 questions.map(q => ({ ...q, quizKey }))
             );
@@ -112,7 +111,6 @@ export default function QuestionList() {
                             {allQuestions
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 .map((q, idx) => {
-                                    console.log(q.question)
                                     const status = getQuestionStatus(q.quizKey, q.id)
                                     return (
                                         <tr
