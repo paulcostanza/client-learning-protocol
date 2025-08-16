@@ -101,6 +101,7 @@ export default function ModalForQuestions({ open, onClose, question }) {
                 overflowY: 'auto'
             }}
                 className="modal-for-questions">
+                {question.title ?? <em>{question.title}</em>}
                 <h4>
                     <ReactMarkdown>
                         {question.question}

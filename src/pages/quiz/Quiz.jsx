@@ -141,6 +141,7 @@ export default function Quiz() {
                         {!showResult &&
 
                             <div className="questions">
+                                {question.title ?? <em>{question.title}</em>}
                                 <h4>
                                     <ReactMarkdown>
                                         {question.question}
