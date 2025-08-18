@@ -7,6 +7,8 @@ import cSharpImg from '../../assets/quiz/cSharp-card.png'
 import redisImg from "../../assets/quiz/redis-card.png"
 import memoryImg from "../../assets/quiz/memory-card.png"
 import programming101Img from "../../assets/quiz/programming101-card.png"
+import cybersecurityImg from "../../assets/quiz/cybersecurity-card.png"
+import linuxImg from "../../assets/quiz/linux-card.png"
 
 const quizList = [
     {
@@ -62,7 +64,18 @@ const quizList = [
         title: "FUNdamentals",
         dataFile: "../../quiz/database/Programming101Questions.js",
         cardImage: programming101Img
-
+    },
+    {
+        id: "cybersecurity",
+        title: "CIA | defense",
+        dataFile: "../../quiz/database/CyberSecurity.js",
+        cardImage: cybersecurityImg
+    },
+    {
+        id: "linux",
+        title: "no windows here",
+        dataFile: "../../quiz/database/Linux.js",
+        cardImage: linuxImg
     }
     // Add more quizzes as needed
 ]

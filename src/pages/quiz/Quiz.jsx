@@ -29,7 +29,9 @@ export default function Quiz() {
         cSharp: () => import('./database/CSharpQuestions.js'),
         redis: () => import('./database/RedisQuestions.js'),
         memory: () => import('./database/MemoryQuestions.js'),
-        programming101: () => import('./database/Programming101Questions.js')
+        programming101: () => import('./database/Programming101Questions.js'),
+        cybersecurity: () => import('./database/CyberSecurityQuestions.js'),
+        linux: () => import('./database/LinuxQuestions.js')
     }
 
     useEffect(() => {
