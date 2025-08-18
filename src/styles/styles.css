@@ -42,6 +42,7 @@ body {
 
 
 /******************* A C C O R D I O N | F R O M | B O O T S T R A P *******************/
+/* Need to switch over to material-ui....eventually */
 
 /* .code-block {
     display: block;
@@ -121,6 +122,22 @@ pre,
 .code-snippet {
     overflow: hidden;
     max-width: 900px;
+}
+
+/* outside div of <p> for text that needs to be centered and important */
+.focus-text {
+    display: flex;
+    justify-content: center;
+}
+
+.focus-text p {
+    text-align: center;
+    border: solid black 1px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 @media (min-width: 980px) {
