@@ -2,6 +2,7 @@ export default [
     {
         id: 1,
         type: 'radio',
+        title: 'const quest',
         question: "Which properly declares a constant in \`C\`?",
         options: [
             '\`int meaning_of_life const = 42;\`',
@@ -14,6 +15,7 @@ export default [
     {
         id: 2,
         type: 'radio',
+        title: 'Invalid C moves',
         question: 'Which is not valid?',
         options: [
             '\`void x = None;\`',
@@ -26,6 +28,7 @@ export default [
     {
         id: 3,
         type: 'radio',
+        title: 'Size surprise',
         question: 'The size of a data type is the same on every system (32-bit, 64-bit, etc.)',
         options: [
             'True',
@@ -36,6 +39,7 @@ export default [
     {
         id: 4,
         type: 'radio',
+        title: 'pragma power',
         question: 'What is the purpose of \`#pragma once\` in a header file?',
         options: [
             'It prevents a header file from being included more than once, avoiding redefinition errors',
@@ -48,6 +52,7 @@ export default [
     {
         id: 5,
         type: 'radio',
+        title: 'print it',
         question: 'Which header file must be included to use \`printf\` in \`C\`?',
         options: [
             '\`stdlib.h\`',
@@ -61,6 +66,7 @@ export default [
     {
         id: 6,
         type: 'radio',
+        title: 'decimal drama',
         question: 'What does the \`%d\` format specifier print in \`printf\`?',
         options: [
             'A character',
@@ -74,6 +80,7 @@ export default [
     {
         id: 7,
         type: 'checkbox',
+        title: 'Void vibes',
         question: 'What does the \`void\` keyword indicate in a function signature?',
         options: [
             'The function returns a value',
@@ -100,6 +107,7 @@ void return69(void) {} // returns nothing, takes no arguments
     {
         id: 8,
         type: 'radio',
+        title: 'Guard duty',
         question: 'What is the main reason for using header guards or \`#pragma\` once in header files?',
         options: [
             'To speed up the program',
@@ -112,6 +120,7 @@ void return69(void) {} // returns nothing, takes no arguments
     {
         id: 9,
         type: 'radio',
+        title: 'Size matters',
         question: 'What type does the \`sizeof\` operator return?',
         options: [
             '\`int\`',
@@ -124,6 +133,7 @@ void return69(void) {} // returns nothing, takes no arguments
     {
         id: 10,
         type: 'radio',
+        title: 'Structure problem?',
         question: '\`sizeof(struct)\` will always result in the same value as the sum of \`sizeof(field)\` for each field in the struct.',
         options: [
             'True',
@@ -147,6 +157,7 @@ Even though you expect the \`sizeof(human_t)\` to be 13, alignment requirements 
     {
         id: 11,
         type: 'radio',
+        title: 'Struct squad',
         question: 'What is the main purpose of using structs in C?',
         options: [
             'To perform mathematical operations',
@@ -159,6 +170,7 @@ Even though you expect the \`sizeof(human_t)\` to be 13, alignment requirements 
     {
         id: 12,
         type: 'radio',
+        title: 'Struct startups',
         question: 'Which of the following is NOT a valid way to initialize a struct in C?',
         options: [
             'Zero initializer',
@@ -171,6 +183,7 @@ Even though you expect the \`sizeof(human_t)\` to be 13, alignment requirements 
     {
         id: 13,
         type: 'radio',
+        title: 'Access granted',
         question: 'How do you access a field of a struct variable (not a pointer)?',
         options: [
             '\`->\`',
@@ -183,6 +196,7 @@ Even though you expect the \`sizeof(human_t)\` to be 13, alignment requirements 
     {
         id: 14,
         type: 'checkbox',
+        title: 'Zero dark',
         question: `What does the following code do?
 ~~~C
 struct City c = {0};
@@ -209,6 +223,7 @@ struct City c = {0};
     {
         id: 15,
         type: 'radio',
+        title: 'Typedef time',
         question: 'What is the effect of using \`typedef\` with a struct?',
         options: [
             'It makes the struct immutable',
@@ -221,6 +236,7 @@ struct City c = {0};
     {
         id: 16,
         type: 'radio',
+        title: 'How big can you go',
         question: 'Why might the size of a struct be larger than the sum of its fields\' sizes?',
         options: [
             'Compiler optimization',
@@ -234,6 +250,7 @@ struct City c = {0};
     {
         id: 17,
         type: 'checkbox',
+        title: 'Pointer pick(s)',
         question: 'Which operator(s) should you use to access a field from a pointer to a struct?',
         options: [
             '\`.\`',
@@ -256,6 +273,7 @@ struct City c = {0};
     {
         id: 18,
         type: 'radio',
+        title: 'Pack it in',
         question: 'What is a recommended way to minimize padding in a struct?',
         options: [
             'Put all char fields first',
@@ -269,6 +287,7 @@ struct City c = {0};
     {
         id: 19,
         type: 'radio',
+        title: 'Comma confusion',
         question: `What happens if you try to return multiple values from a function in C like this: 
 ~~~C
 return x * scale, y * scale, z * scale;
@@ -286,6 +305,7 @@ return x * scale, y * scale, z * scale;
     {
         id: 20,
         type: 'checkbox',
+        title: '.h files',
         question: `What is the \`.h\` file used for in C?`,
         options: [
             'To store function implementations',
@@ -302,6 +322,7 @@ return x * scale, y * scale, z * scale;
     {
         id: 21,
         type: 'radio',
+        title: 'Point of a Pointer',
         question: 'What does a pointer variable store in C?',
         options: [
             'the value of another variable',
@@ -314,6 +335,7 @@ return x * scale, y * scale, z * scale;
     {
         id: 22,
         type: 'radio',
+        title: 'Address please',
         question: 'Which operator is used to get the address of a variable?',
         options: [
             '\`*\`',
@@ -326,6 +348,7 @@ return x * scale, y * scale, z * scale;
     {
         id: 23,
         type: 'radio',
+        title: 'A star is born',
         question: 'What does the expression \`*p\` do if \`p\` is a pointer?',
         options: [
             'assigns a value to \`p\`',
@@ -338,6 +361,7 @@ return x * scale, y * scale, z * scale;
     {
         id: 24,
         type: 'radio',
+        title: 'No point',
         question: 'Which of the following is *not* a common use of pointers in C?',
         options: [
             'dynamic memory allocation',
@@ -350,6 +374,7 @@ return x * scale, y * scale, z * scale;
     {
         id: 25,
         type: 'radio',
+        title: 'Array adventure',
         question: 'What is the result of \`*(p + 1)\` if \`p\` points to the first element of an integer array?',
         options: [
             'the value of the first element',
@@ -364,6 +389,7 @@ return x * scale, y * scale, z * scale;
     {
         id: 26,
         type: 'radio',
+        title: 'Pointer does what?',
         question: `After executing the following code, what does the variable \`ptr\` hold and what does the statement \`*ptr = 10;\` do?
 ~~~C
 int x = 5;
@@ -382,6 +408,7 @@ int *ptr = &x;
     {
         id: 27,
         type: 'radio',
+        title: 'Pointer arithmetic',
         question: 'Which of the following statements about pointer arithmetic is correct?',
         options: [
             '\`*(p + 1)\` accesses the next integer value in an array pointed to by \`p\`',
@@ -394,6 +421,7 @@ int *ptr = &x;
     {
         id: 28,
         type: 'radio',
+        title: 'Arrays & Pointers',
         question: 'Which statement about arrays and pointers in C is correct?',
         options: [
             'you can reassign an array name to point to a different location',
@@ -406,6 +434,7 @@ int *ptr = &x;
     {
         id: 29,
         type: 'radio',
+        title: 'String thing',
         question: 'What does \`*(s + 3)\` return if \`s\` points to \`"hello"\`?',
         options: [
             '\`h\`',
@@ -419,6 +448,7 @@ int *ptr = &x;
     {
         id: 30,
         type: 'radio',
+        title: 'Stopping the loop',
         question: 'Why does the loop \`while (82) { putchar(*s++); }\` stop printing characters when iterating over a string in C?',
         options: [
             'because it reaches the end of the array',
@@ -432,6 +462,7 @@ int *ptr = &x;
     {
         id: 31,
         type: 'radio',
+        title: 'pointer update',
         question: `What does the function \`update\` do in the following code?
 ~~~C
 void update(int *ptr)
@@ -463,6 +494,7 @@ This lets a function allocate memory and update the caller's pointer to point to
     {
         id: 32,
         type: 'radio',
+        title: 'Access Granted',
         question: 'How would you access the third integer in an array using a pointer to an array?',
         options: [
             '\`*p1[2]\`',
@@ -478,6 +510,7 @@ This lets a function allocate memory and update the caller's pointer to point to
     {
         id: 33,
         type: 'radio',
+        title: 'Second pointer',
         question: 'How would you access the value pointed to by the second pointer in an array of pointers?',
         options: [
             '\`p2[1]\`',
@@ -493,6 +526,7 @@ This lets a function allocate memory and update the caller's pointer to point to
     {
         id: 34,
         type: 'radio',
+        title: 'dangerous dereference',
         question: 'What can happen if you dereference a pointer before it is initialized?',
         options: [
             'the program will always print zero',
@@ -506,6 +540,7 @@ This lets a function allocate memory and update the caller's pointer to point to
     {
         id: 35,
         type: 'radio',
+        title: 'Double Trouble',
         question: 'What is a possible consequence of double freeing memory?',
         options: [
             'the memory will be reused safely',
@@ -519,6 +554,7 @@ This lets a function allocate memory and update the caller's pointer to point to
     {
         id: 36,
         type: 'radio',
+        title: 'Malloc 101',
         question: 'Why is it important to check the result of \`malloc\`?',
         options: [
             'To ensure the pointer is not \`NULL\` before using it',
@@ -532,6 +568,7 @@ This lets a function allocate memory and update the caller's pointer to point to
     {
         id: 37,
         type: 'radio',
+        title: 'Star vs Ampersand',
         question: `What is the difference between \`*p\` and \`&p\`?`,
         options: [
             '\`*p\` gives the address of \`p\`, and \`&p\` gives the value pointed to by \`p\`',
