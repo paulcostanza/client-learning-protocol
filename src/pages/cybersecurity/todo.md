@@ -1,4 +1,4 @@
-## 6. Cybersecurity Basics
+## Cybersecurity Basics
 
 - What is cybersecurity?
 - Why programmers should care
