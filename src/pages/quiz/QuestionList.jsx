@@ -19,6 +19,7 @@ export default function QuestionList() {
     const [modalOpen, setModalOpen] = useState(false)
     const [selectedQuestion, setSelectedQuestion] = useState(null)
 
+    const maxLengthOfQuestionInColumn = 30;
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -32,11 +33,6 @@ export default function QuestionList() {
     const handleRowClick = (question) => {
         setSelectedQuestion(question)
         setModalOpen(true)
-    }
-
-    const handleClose = () => {
-        setModalOpen(false)
-        setSelectedQuestion(null)
     }
 
     const quizImports = {
@@ -93,17 +89,20 @@ export default function QuestionList() {
                     >
                         <TableHead>
                             <TableRow>
-                                <TableCell style={{ width: '200px' }} >
+                                <TableCell style={{ width: '190px' }} >
                                     Title
                                 </TableCell>
-                                <TableCell style={{ width: '100px' }}>
+                                <TableCell style={{ textAlign: 'center', width: '90px' }}>
                                     Status
                                 </TableCell>
-                                <TableCell style={{ width: '434.4px' }} >
+                                <TableCell style={{ width: '264.4px' }} >
                                     Question
                                 </TableCell>
+                                <TableCell style={{ textAlign: 'center', width: '100px' }}>
+                                    Testing
+                                </TableCell>
                                 <TableCell
-                                    style={{ textAlign: 'center', width: '140px' }}
+                                    style={{ textAlign: 'center', width: '130px' }}
                                 >
                                     Category
                                 </TableCell>
@@ -121,15 +120,16 @@ export default function QuestionList() {
                                             onClick={() => handleRowClick(q)}
                                         >
                                             <td>{q.title ? q.title.slice(0, 40) : ''}</td>
-                                            <td>
+                                            <td align="center">
                                                 {status === 'correct' && <span>✔️</span>}
                                                 {status === 'incorrect' && <span>❌</span>}
                                             </td>
                                             <td>
-                                                {q.question.length > 50
-                                                    ? q.question.slice(0, 40) + "..."
+                                                {q.question.length > maxLengthOfQuestionInColumn
+                                                    ? q.question.slice(0, maxLengthOfQuestionInColumn) + "..."
                                                     : q.question}
                                             </td>
+                                            <td></td>
                                             <td align="center">{q.quizKey}</td>
                                         </tr>
                                     )
