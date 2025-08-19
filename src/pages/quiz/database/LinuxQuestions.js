@@ -2,14 +2,97 @@ export default [
     {
         id: 1,
         type: 'radio',
-        title: 'testing',
-        question: "This is a test for Linux Questions",
+        title: 'Tilde',
+        question: "What does the \`~\` symbol in the terminal prompt represent?",
         options: [
-            'yes',
-            'no',
-            'i dont know'
+            'the root directory',
+            'the user\'s home directory',
+            'the current working directory',
+            'the system hostname',
+            'this symbol is not valid'
         ],
-        answer: 'yes',
-        description: 'the answer is yes lol'
+        answer: 'the user\'s home directory'
+    },
+    {
+        id: 2,
+        type: 'radio',
+        title: 'Cash money',
+        question: "What does the \`$\` at the end of the prompt indicate?",
+        options: [
+            'the user is an administrator',
+            'the user is a guest',
+            'the user is not an administrative user',
+            'the shell is in safe mode'
+        ],
+        answer: 'the user is not an administrative user'
+    },
+    {
+        id: 3,
+        type: 'radio',
+        title: 'Kitty cat',
+        question: "In the command \`cat secret_file\`, what does \`secret file\` represent?",
+        options: [
+            'the program name',
+            'a command option',
+            'an argument to the program',
+            'the shell type'
+        ],
+        answer: 'an argument to the program',
+        description: 'It represents the argument, or parameter, to the program'
+    },
+    {
+        id: 4,
+        type: 'radio',
+        title: '-not sure',
+        question: "What does the \`-n\` argument do in the command \`echo -n Hi Everybody!!\`?",
+        options: [
+            'prints the output in bold',
+            'adds a newline',
+            'prevents echo from printing a newline at the end',
+            'prints the output in uppercase',
+            'prints the output twice'
+        ],
+        answer: 'prevents echo from printing a newline at the end'
+    },
+    {
+        id: 5,
+        type: 'radio',
+        title: 'Who am I?',
+        question: "What does the command \`whoami\` do?",
+        options: [
+            'prints the hostname',
+            'prints the current directory',
+            'prints the username',
+            'prints the shell type'
+        ],
+        answer: 'prints the username',
+    },
+    {
+        id: 6,
+        type: 'radio',
+        title: 'Slash of the Titans',
+        question: "What does the \`/\` symbol in the terminal prompt represent?",
+        options: [
+            'the root directory',
+            'the user\'s home directory',
+            'the current working directory',
+            'the system hostname',
+            'this symbol is not valid'
+        ],
+        answer: 'the root directory',
+    },
+    {
+        id: 7,
+        type: 'radio',
+        title: 'Back, back, back...',
+        question: "What does the \`\\\` symbol in the terminal prompt represent?",
+        options: [
+            'the root directory',
+            'the user\'s home directory',
+            'the current working directory',
+            'the system hostname',
+            'this symbol is not valid'
+        ],
+        answer: 'this symbol is not valid'
     }
 ]
