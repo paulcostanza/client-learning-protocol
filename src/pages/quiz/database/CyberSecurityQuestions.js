@@ -1,15 +1,38 @@
 export default [
     {
         id: 1,
-        type: 'radio',
-        title: 'testing',
-        question: "This is a test for CyberSecurity Questions",
+        type: 'checkbox',
+        title: 'CIA',
+        question: "What is the CIA triad in cybersecurity?",
         options: [
-            'yes',
-            'no',
-            'i dont know'
+            'confidentiality',
+            'control',
+            'integrity',
+            'information',
+            'availability',
+            'access',
+            'authentication',
+            'authorization'
         ],
-        answer: 'yes',
-        description: 'the answer is yes lol'
+        answer: [
+            'confidentiality',
+            'integrity',
+            'availability'
+        ]
+    },
+    {
+        id: 2,
+        type: 'radio',
+        title: 'Fluffy Kitty',
+        question: "How would you run the file \`fluffy-kitty\` in Linux?",
+        options: [
+            '\`run fluffy-kitty\`',
+            '\`./fluffy-kitty\`',
+            '\`open fluffy-kitty\`',
+            '\`execute fluffy-kitty\`',
+
+        ],
+        answer: '\`./fluffy-kitty\`',
+        description: 'Please don\'t execute the fluffy kitty!'
     }
 ]
