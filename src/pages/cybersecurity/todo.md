@@ -23,6 +23,9 @@
 - Explain how to get help: man pages, --help flag.
 - Add a tip about using sudo for admin commands.
 
+## 3. The File System
+
+
 ## do not know what order yet
 
 - Real-world consequences: Data breaches, financial loss, reputation damage

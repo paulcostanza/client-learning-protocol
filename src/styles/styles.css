@@ -124,6 +124,12 @@ pre,
     max-width: 900px;
 }
 
+.center-img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
+
 /* outside div of <p> for text that needs to be centered and important */
 .focus-text {
     display: flex;

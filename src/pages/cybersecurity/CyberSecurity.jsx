@@ -3,10 +3,12 @@ import SectionDrawer from '../../components/SideBarNav'
 
 import CyberSecurity101 from './CyberSecurity101'
 import TerminalIntro from './TerminalIntro'
+import FileSystem from './FileSystem'
 
 const sectionComponents = {
     'CyberSecurity 101': <CyberSecurity101 />,
-    'Terminal Intro': <TerminalIntro />
+    'Terminal Intro': <TerminalIntro />,
+    'File System': <FileSystem />
 }
 
 export default function CyberSecurity() {
