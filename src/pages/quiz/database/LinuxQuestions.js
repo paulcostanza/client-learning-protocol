@@ -94,5 +94,302 @@ export default [
             'this symbol is not valid'
         ],
         answer: 'this symbol is not valid'
-    }
+    },
+    // start of The File System section
+    {
+        id: 8,
+        type: 'radio',
+        title: 'Root awakening',
+        question: "What is the root directory in Linux?",
+        options: [
+            '\`/root\`',
+            '\`/home\`',
+            '\`/\`',
+            '\`C:\\\`'
+        ],
+        answer: '\`/\`',
+        description: `If you chose \`C:\\\` in the Linux section just leave my friend, you ain't gonna make it. `
+    },
+    {
+        id: 9,
+        type: 'radio',
+        title: 'Temporary question',
+        question: "Which directory contains temporary data storage?",
+        options: [
+            '\`/\`',
+            '\`/usr\`',
+            '\`/usr/bin\`',
+            '\`/usr/lib\`',
+            '\`/usr/share\`',
+            '\`/etc\`',
+            '\`/var\`',
+            '\`/home\`',
+            '\`/proc\`',
+            '\`/tmp\`',
+
+        ],
+        answer: '\`/tmp\`',
+    },
+    {
+        id: 10,
+        type: 'radio',
+        title: 'Meaning of Tilde',
+        question: "What does the \`~\` symbol represent in the terminal prompt?",
+        options: [
+            'the root directory',
+            'the current working directory',
+            'the user\'s home directory',
+            'the system configuration directory',
+        ],
+        answer: 'the user\'s home directory',
+    },
+    {
+        id: 11,
+        type: 'radio',
+        title: 'Biblioteca',
+        question: "Which directory contains shared libraries for use by programs on the computer?",
+        options: [
+            '\`/\`',
+            '\`/usr\`',
+            '\`/usr/bin\`',
+            '\`/usr/lib\`',
+            '\`/usr/share\`',
+            '\`/etc\`',
+            '\`/var\`',
+            '\`/home\`',
+            '\`/proc\`',
+            '\`/tmp\`',
+
+        ],
+        answer: '\`/usr/lib\`'
+    },
+    {
+        id: 12,
+        type: 'radio',
+        title: 'Where am I?',
+        question: "Which command shows your current working directory?",
+        options: [
+            '\`ls\`',
+            '\`cd\`',
+            '\`pwd\`',
+            '\`whoami\`',
+        ],
+        answer: '\`pwd\`',
+        description: '\`pwd\` - present working directory'
+    },
+    {
+        id: 13,
+        type: 'radio',
+        title: 'All system files',
+        question: "Which directory contains all the system files?",
+        options: [
+            '\`/\`',
+            '\`/usr\`',
+            '\`/usr/bin\`',
+            '\`/usr/lib\`',
+            '\`/usr/share\`',
+            '\`/etc\`',
+            '\`/var\`',
+            '\`/home\`',
+            '\`/proc\`',
+            '\`/tmp\`',
+
+        ],
+        answer: '\`/usr\`',
+        description: '\`usr\` - unix system resource'
+    },
+    {
+        id: 14,
+        type: 'radio',
+        title: 'Los Santos',
+        question: "What is the purpose of the \`ls\` command?",
+        options: [
+            'change directories',
+            'list files in a directory',
+            'show system processes',
+            'display user information',
+        ],
+        answer: 'list files in a directory'
+    },
+    {
+        id: 15,
+        type: 'radio',
+        title: 'No relativity',
+        question: "Which of the following is an absolute path?",
+        options: [
+            '\`usr/bin\`',
+            '\`/home/username\`',
+            '\`./flags\`',
+            '\`../tmp\`',
+
+        ],
+        answer: '\`/home/username\`',
+    },
+    {
+        id: 16,
+        type: 'radio',
+        title: 'User data',
+        question: "Which directory contains user-owned data?",
+        options: [
+            '\`/\`',
+            '\`/usr\`',
+            '\`/usr/bin\`',
+            '\`/usr/lib\`',
+            '\`/usr/share\`',
+            '\`/etc\`',
+            '\`/var\`',
+            '\`/home\`',
+            '\`/proc\`',
+            '\`/tmp\`',
+
+        ],
+        answer: '\`/home\`',
+    },
+    {
+        id: 17,
+        type: 'radio',
+        title: 'Where to?',
+        question: "What does the command \`cd\` do when used with no arguments?",
+        options: [
+            'changes to the root directory',
+            'changes to the previous directory',
+            'changes to the user\'s home directory',
+            'does nothing',
+
+        ],
+        answer: 'changes to the user\'s home directory'
+    },
+    {
+        id: 18,
+        type: 'radio',
+        title: 'Here or there',
+        question: "What does the \`..\` symbol mean in a file path?",
+        options: [
+            'current directory',
+            'home directory',
+            'parent directory',
+            'root directory',
+        ],
+        answer: 'parent directory'
+    },
+    {
+        id: 19,
+        type: 'radio',
+        title: 'Log Hard',
+        question: "Which directory contains logs and caches?",
+        options: [
+            '\`/\`',
+            '\`/usr\`',
+            '\`/usr/bin\`',
+            '\`/usr/lib\`',
+            '\`/usr/share\`',
+            '\`/etc\`',
+            '\`/var\`',
+            '\`/home\`',
+            '\`/proc\`',
+            '\`/tmp\`',
+
+        ],
+        answer: '\`/var\`',
+    },
+    {
+        id: 20,
+        type: 'radio',
+        title: 'Puppies!',
+        question: "Say you have a folder named \`puppy_pics\`. Why does Linus require \`puppy_pics\` to run a program in the current directory?",
+        options: [
+            'for security',
+            'to list files',
+            'to change directories',
+            'to show hidden files',
+        ],
+        answer: 'for security',
+        description: `**Answer:**  For security, so you do not accidentally run programs named like system utilities.
+
+By default, when you type a command in Linux the shell searches for the command in directories listed in your \`PATH\` environment variable (usually system directories like \`bin\`). It *does not* search the current directory for executables unless you explicitly specify it with the folder name, in this case, with \`puppy_pics\`.
+
+This prevents accidental execution of a program in your current directory that might have the same name as a trusted system command. 
+
+For example, if you downloaded a file named \`ls\` and run \`ls\`, you want to be sure you are running the real system \`ls\`, and not a potentially malicious file in your current directory!
+
+And of course, you could just use \`./\` to run the file, forgoing the need for the folder name (if inside the folder). `
+    },
+    {
+        id: 21,
+        type: 'radio',
+        title: 'Process: Impossible',
+        question: "Which directory contains runtime process data?",
+        options: [
+            '\`/\`',
+            '\`/usr\`',
+            '\`/usr/bin\`',
+            '\`/usr/lib\`',
+            '\`/usr/share\`',
+            '\`/etc\`',
+            '\`/var\`',
+            '\`/home\`',
+            '\`/proc\`',
+            '\`/tmp\`',
+
+        ],
+        answer: '\`/proc\`',
+    },
+    {
+        id: 22,
+        type: 'radio',
+        title: 'Execution time',
+        question: "Which directory contains executable files for programs installed on the computer?",
+        options: [
+            '\`/\`',
+            '\`/usr\`',
+            '\`/usr/bin\`',
+            '\`/usr/lib\`',
+            '\`/usr/share\`',
+            '\`/etc\`',
+            '\`/var\`',
+            '\`/home\`',
+            '\`/proc\`',
+            '\`/tmp\`',
+
+        ],
+        answer: '\`/usr/bin\`'
+    },
+    {
+        id: 23,
+        type: 'radio',
+        title: 'Art attack',
+        question: "Which directory contains program resources such as icons and art assets?",
+        options: [
+            '\`/\`',
+            '\`/usr\`',
+            '\`/usr/bin\`',
+            '\`/usr/lib\`',
+            '\`/usr/share\`',
+            '\`/etc\`',
+            '\`/var\`',
+            '\`/home\`',
+            '\`/proc\`',
+            '\`/tmp\`',
+        ],
+        answer: '\`/usr/share\`',
+    },
+    {
+        id: 24,
+        type: 'radio',
+        title: 'Configuration Wars',
+        question: "Which directory contains system configurations?",
+        options: [
+            '\`/\`',
+            '\`/usr\`',
+            '\`/usr/bin\`',
+            '\`/usr/lib\`',
+            '\`/usr/share\`',
+            '\`/etc\`',
+            '\`/var\`',
+            '\`/home\`',
+            '\`/proc\`',
+            '\`/tmp\`',
+        ],
+        answer: '\`/etc\`',
+    },
 ]

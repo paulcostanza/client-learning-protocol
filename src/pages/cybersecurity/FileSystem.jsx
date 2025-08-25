@@ -286,11 +286,6 @@ paul@laptop:~$`
                     {defaultCd}
                 </SyntaxHighlighter>
             </div>
-            <pre>
-                <code>
-
-                </code>
-            </pre>
         </div>
     )
 }
