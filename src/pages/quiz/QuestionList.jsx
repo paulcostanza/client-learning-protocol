@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react"
-
-// table
 import Table from '@mui/joy/Table'
 import Paper from "@mui/material/Paper"
 import TableHead from "@mui/material/TableHead"
@@ -8,10 +6,12 @@ import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
 import TablePagination from '@mui/material/TablePagination'
 import Box from "@mui/material/Box"
-
-// helpers
 import ModalForQuestions from "./ModalForQuestions.jsx"
-import { getQuestionStatus } from "../../Helpers/localStorageHelper.js"
+import {
+    getQuestionStatus,
+    getNextReview,
+    getHumanReadableNextReview
+} from "../../Helpers/localStorageHelper.js"
 
 export default function QuestionList() {
     const [page, setPage] = React.useState(0);
@@ -54,7 +54,6 @@ export default function QuestionList() {
     const [allQuestions, setAllQuestions] = useState([]);
 
     useEffect(() => {
-        // loads all questions from all quizzes
         Promise.all(
             quizKeys.map(key =>
                 quizImports[key]().then(module => ({
@@ -70,8 +69,9 @@ export default function QuestionList() {
         });
     }, []);
 
-    // add loading indicator while questions are being fetched?
-    // add sticy header for mobile?
+    // may need to add loading indicator
+    // when questions are being fetched from database
+    // someday...
 
     return (
         <div className="container">
@@ -100,7 +100,7 @@ export default function QuestionList() {
                                     Question
                                 </TableCell>
                                 <TableCell style={{ textAlign: 'center', width: '100px' }}>
-                                    Testing
+                                    Review
                                 </TableCell>
                                 <TableCell
                                     style={{ textAlign: 'center', width: '130px' }}
@@ -114,6 +114,7 @@ export default function QuestionList() {
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 .map((q, idx) => {
                                     const status = getQuestionStatus(q.quizKey, q.id)
+                                    const nextReviewTimestamp = getNextReview(q.quizKey, q.id)
                                     return (
                                         <tr
                                             key={`${q.quizKey}-${q.id}`}
@@ -130,7 +131,7 @@ export default function QuestionList() {
                                                     ? q.question.slice(0, maxLengthOfQuestionInColumn) + "..."
                                                     : q.question}
                                             </td>
-                                            <td></td>
+                                            <td align="center">{getHumanReadableNextReview(nextReviewTimestamp)}</td>
                                             <td align="center">{q.quizKey}</td>
                                         </tr>
                                     )
@@ -156,6 +157,5 @@ export default function QuestionList() {
                 question={selectedQuestion}
             />
         </div>
-
     );
 }
