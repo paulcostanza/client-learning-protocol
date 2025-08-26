@@ -9,6 +9,7 @@ import memoryImg from "../../assets/quiz/memory-card.png"
 import programming101Img from "../../assets/quiz/programming101-card.png"
 import cybersecurityImg from "../../assets/quiz/cybersecurity-card.png"
 import linuxImg from "../../assets/quiz/linux-card.png"
+import javaImg from "../../assets/quiz/java-card.png"
 
 const quizList = [
     {
@@ -34,6 +35,12 @@ const quizList = [
         title: "V.2 | V.3",
         dataFile: "../../quiz/database/PythonQuestions.js",
         cardImage: pythonCardImg
+    },
+    {
+        id: "java",
+        title: "Wait...are you sure?",
+        dataFile: "../../quiz/database/JavaQuestions.js",
+        cardImage: javaImg
     },
     {
         id: "c",

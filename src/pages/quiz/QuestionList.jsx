@@ -40,6 +40,7 @@ export default function QuestionList() {
         react: () => import('./database/ReactQuestions.js'),
         networking: () => import('./database/Networking.js'),
         python: () => import('./database/PythonQuestions.js'),
+        java: () => import('./database/JavaQuestions.js'),
         c: () => import('./database/CQuestions.js'),
         cSharp: () => import('./database/CSharpQuestions.js'),
         redis: () => import('./database/RedisQuestions.js'),
