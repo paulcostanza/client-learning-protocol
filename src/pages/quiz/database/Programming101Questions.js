@@ -2,6 +2,7 @@ export default [
     {
         id: 1,
         type: 'radio',
+        title: '',
         question: "What is the main job of the CPU?",
         options: [
             'store data permanently',
@@ -14,6 +15,7 @@ export default [
     {
         id: 2,
         type: 'radio',
+        title: 'Rambunctious',
         question: 'What is RAM?',
         options: [
             'a type of permanent storage',
@@ -26,6 +28,7 @@ export default [
     {
         id: 3,
         type: 'radio',
+        title: 'Are you input or out?',
         question: 'Which of the following is NOT an input device?',
         options: [
             'keyboard',
@@ -39,6 +42,7 @@ export default [
     {
         id: 4,
         type: 'radio',
+        title: 'Open sesame',
         question: 'What is the purpose of an operating system?',
         options: [
             'to solve specific user problems',
@@ -51,6 +55,7 @@ export default [
     {
         id: 5,
         type: 'radio',
+        title: 'To OOP or not?',
         question: 'What is the main difference between procedural and object-oriented programming?',
         options: [
             'procedural programming combines data and code into objects, while object-oriented programming separates data and code',
@@ -62,6 +67,7 @@ export default [
     {
         id: 6,
         type: 'radio',
+        title: 'Capsule corp',
         question: 'Which of the following best describes the concept of *encapsulation* in object-oriented programming?',
         options: [
             'hiding the code from the user interface',
@@ -74,6 +80,7 @@ export default [
     {
         id: 7,
         type: 'radio',
+        title: 'Volatile vibes',
         question: 'Why is RAM considered *volatile* memory?',
         options: [
             'it can store data for long periods, even without power',
@@ -86,6 +93,7 @@ export default [
     {
         id: 8,
         type: 'radio',
+        title: 'Decode this',
         question: 'In the fetch/decode/execute cycle, what is the role of the *decode* step?',
         options: [
             'to retrieve the next instruction from main memory',
@@ -98,6 +106,7 @@ export default [
     {
         id: 9,
         type: 'radio',
+        title: 'OOPs I did it again',
         question: 'What problem does object-oriented programming primarily address compared to procedural programming?',
         options: [
             'the difficulty of writing code in binary',
@@ -110,6 +119,7 @@ export default [
     {
         id: 10,
         type: 'radio',
+        title: 'SSD: Need for Speed',
         question: 'What is the main advantage of using a solid-state drive over a traditional disk drive?',
         options: [
             'SSDs are cheaper',
@@ -118,5 +128,70 @@ export default [
             'SSDs are used only for external storage'
         ],
         answer: 'SSDs work much faster and have no moving parts'
+    },
+    {
+        id: 11,
+        type: 'radio',
+        title: 'Eight is enough',
+        question: 'A byte is made up of eight...',
+        options: [
+            'characters',
+            'bits',
+            'numbers',
+            'addresses'
+        ],
+        answer: 'bits'
+    },
+    {
+        id: 12,
+        type: 'radio',
+        title: 'Byte me',
+        question: 'Each byte is assigned a unique...',
+        options: [
+            'color',
+            'address',
+            'symbol',
+            'instruction'
+        ],
+        answer: 'address'
+    },
+    {
+        id: 13,
+        type: 'radio',
+        title: '',
+        question: 'When looking at machine language, you would see...',
+        options: [
+            'high-level code like Python',
+            'binary numbers and instructions',
+            'English sentences',
+            'HTML tags'
+        ],
+        answer: 'binary numbers and instructions'
+    },
+    {
+        id: 14,
+        type: 'radio',
+        title: 'Rule breaker',
+        question: 'The rules that must be followed when writing a program are called...',
+        options: [
+            'instructions',
+            'syntax',
+            'variables',
+            'logic'
+        ],
+        answer: 'syntax'
+    },
+    {
+        id: 15,
+        type: 'radio',
+        title: 'Memory Lane',
+        question: "The name for a storage location in the computer's memory is called...",
+        options: [
+            'a variable',
+            'a function',
+            'an operator',
+            'a statement'
+        ],
+        answer: 'a variable'
     }
 ]
