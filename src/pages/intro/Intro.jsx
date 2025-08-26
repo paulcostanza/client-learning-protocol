@@ -187,6 +187,9 @@ export default function Intro() {
 
                     <br />
 
+                    <h2 id="">Keywords</h2>
+                    <p>Part of learning a programming language is learning the commonly used keywords, what they mean, and how to use them. An important note about keywords is that they are reserved and cannot be used for anything other than their designated purpose. Do not worry about memorizing or even fully understanding them just yet. With time, you will learn what they mean and how to use them.</p>
+
                     <h2 id="variables">Variables</h2>
                     <p>The most fundamental way to store an item of data in memory. A variable is a named storage location in
                         the
