@@ -2,9 +2,11 @@ import { useState } from 'react'
 import SectionDrawer from '../../components/SideBarNav'
 
 import JavaIntro from './JavaIntro'
+import JavaFundamentals from './JavaFundamentals'
 
 const sectionComponents = {
-    'Intro to Java': <JavaIntro />
+    'Intro to Java': <JavaIntro />,
+    'Java Fundamentals': <JavaFundamentals />
 }
 
 export default function Java() {

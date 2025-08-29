@@ -3,7 +3,7 @@ export default [
     {
         id: 1,
         type: 'radio',
-        title: '',
+        title: 'Compile into',
         question: "What does the Java compiler \`javac\` produce?",
         options: [
             'machine code',
@@ -16,7 +16,7 @@ export default [
     {
         id: 2,
         type: 'radio',
-        title: '',
+        title: 'JVM',
         question: "What is the purpose of the Java Virtual Machine?",
         options: [
             'it is a debugger for Java programs',
@@ -28,7 +28,7 @@ export default [
     {
         id: 3,
         type: 'radio',
-        title: '',
+        title: 'Compiler command',
         question: "Which command is used to compile a Java program?",
         options: [
             '\`java\`',
@@ -41,7 +41,7 @@ export default [
     {
         id: 4,
         type: 'radio',
-        title: '',
+        title: 'Byte my code',
         question: "What is byte code?",
         options: [
             'human-readable source code',
@@ -68,7 +68,7 @@ export default [
     {
         id: 6,
         type: 'radio',
-        title: '',
+        title: 'Compiler generation',
         question: "What does the Java compiler generate?",
         options: [
             'source code',
@@ -80,7 +80,7 @@ export default [
     {
         id: 7,
         type: 'radio',
-        title: '',
+        title: 'The source file',
         question: "In Java, what is a source file?",
         options: [
             'a file containing machine code',
@@ -106,7 +106,7 @@ export default [
     {
         id: 9,
         type: 'radio',
-        title: '',
+        title: 'Machine vs byte',
         question: "What is the difference between machine language code and byte code?",
         options: [
             'machine language code is executed directly by the CPU, while byte code is executed by the Java Virtual Machine',
@@ -115,5 +115,174 @@ export default [
             'there is no difference, they are synonyms',
         ],
         answer: 'machine language code is executed directly by the CPU, while byte code is executed by the Java Virtual Machine'
+    },
+    // Java Fundamentals section
+    {
+        id: 10,
+        type: 'radio',
+        title: 'File name',
+        question: "All Java source code filenames must end with what?",
+        options: [
+            'nothing is needed at the end of the filename',
+            'a semicolon',
+            '\`.class\`',
+            '\`.java\`',
+            'none of the above'
+        ],
+        answer: '\`.java\`'
+    },
+    {
+        id: 11,
+        type: 'checkbox',
+        title: 'Name game',
+        question: "Which of the following are illegal variable names?",
+        options: [
+            '\`x\`',
+            '\`99bottles\`',
+            '\`july97\`',
+            '\`theSalesFigureForFiscalYear17\`',
+            '\`r&d\`',
+            '\`graded_report\`',
+        ],
+        answer: ['\`99bottles\`', '\`r&d\`']
+    },
+    {
+        id: 12,
+        type: 'radio',
+        title: 'Primitive or not?',
+        question: "Strings are not primitive data types",
+        options: [
+            'true',
+            'false',
+        ],
+        answer: 'true'
+    },
+    {
+        id: 13,
+        type: 'radio',
+        title: 'What are these?',
+        question: `The following data are all examples of _________
+~~~java
+69
+'P'
+"Hello nerd"
+2.345
+~~~
+        `,
+        options: [
+            'variables',
+            'literals',
+            'strings',
+            'none of the above'
+        ],
+        answer: 'literals',
+    },
+    {
+        id: 14,
+        type: 'radio',
+        title: 'Conal or finst?',
+        question: "The key word to declare a named constant is...",
+        options: [
+            '\`const\`',
+            '\`final\`',
+            '\`Const\`',
+            '\`Final\`',
+            '\`CONST\`',
+            '\`FINAL\`',
+        ],
+        answer: '\`final\`',
+    },
+    {
+        id: 15,
+        type: 'radio',
+        title: 'Scanner says',
+        question: "Which \`Scanner\` class method would you use to read a string as input?",
+        options: [
+            '\`nextString\`',
+            '\`nextLine\`',
+            '\`readString\`',
+            '\`readLine\`',
+            '\`getString\`',
+            '\`getLine\`',
+        ],
+        answer: '\`nextLine\`',
+    },
+    {
+        id: 16,
+        type: 'radio',
+        title: 'Char check',
+        question: `What will the following code output?
+~~~java
+String message = "Have a great day!";
+System.out.println(message.charAt(5));
+~~~
+`,
+        options: [
+            '\`H\`',
+            '\`a\`',
+            '\`v\`',
+            '\`e\`',
+            '\` \`',
+            '\`g\`',
+            '\`r\`',
+            '\`t\`',
+            '\`d\`',
+            '\`y\`',
+            '\`!\`',
+        ],
+        answer: '\`a\`',
+    },
+    {
+        id: 17,
+        type: 'radio',
+        title: 'Memory mystery',
+        question: "What is the value stored in memory for a reference variable?",
+        options: [
+            'the actual data',
+            'the variable name',
+            'the memory address',
+            'the data type',
+        ],
+        answer: 'the memory address',
+        description: 'The memory address of the object is stored'
+    },
+    {
+        id: 18,
+        type: 'radio',
+        title: 'Exit strategy',
+        question: "What is the purpose of \`System.exit(0);\` when using JOptionPane dialogs?",
+        options: [
+            'to display a message',
+            'to close the dialog box',
+            'to terminate the program and its threads',
+            'to import the JOptionPane class',
+        ],
+        answer: 'to terminate the program and its threads',
+    },
+    {
+        id: 19,
+        type: 'radio',
+        title: 'Scanner surprise?',
+        question: "What happens if you use \`nextInt()\` followed by \`nextLine()\` without an extra \`nextLine()\` in between?",
+        options: [
+            'the program crashes',
+            'the \`nextLine()\` reads the leftover newline and returns an empty string',
+            'the \`nextLine()\` reads the correct input',
+            'the \`nextLine()\` is skipped'
+        ],
+        answer: 'the \`nextLine()\` reads the leftover newline and returns an empty string',
+    },
+    {
+        id: 20,
+        type: 'radio',
+        title: 'String -> int',
+        question: "Which method converts a String to an int in Java?",
+        options: [
+            '\`Integer.valueOf()\`',
+            '\`Integer.parseInt()\`',
+            '\`String.toInt()\`',
+            '\`Int.parseString()\`',
+        ],
+        answer: '\`Integer.parseInt()\`',
     },
 ]

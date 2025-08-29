@@ -3,7 +3,7 @@
 - Writing your first "Hello World" program
 - Understanding the Java compiler and JVM
 
-## 2. Core Java Fundamentals
+## 2. Java Fundamentals
 - Variables, data types, and operators
 - Control flow: if, else, switch, loops (for, while, do-while)
 - Methods and parameters
