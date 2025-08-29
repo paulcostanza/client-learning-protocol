@@ -28,6 +28,8 @@ dude@clp~$`
 
             <p><em>What is the terminal and how to use the Linux command line interface</em></p>
 
+            <p>The word <strong><em>console</em></strong> is an old computer term that comes from the days when the operator of a large computer system interacted with the system by typing on a terminal that consisted of a simple screen and keyboard. This terminal was known as the <em>console</em>. The console screen, which displayed only text, was known as the standard output device. Today, the term <em>standard output device</em> typically refers to the device that displays console output. </p>
+
             <p>
                 The command line of the terminal allows you to execute commands. When you launch a terminal, it will execute a command line <em>shell</em> which will look similar to this:
             </p>
