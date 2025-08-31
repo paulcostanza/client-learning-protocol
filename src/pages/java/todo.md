@@ -6,10 +6,10 @@
 ## 2. Java Fundamentals
 - Variables, data types, and operators
 - Control flow: if, else, switch, loops (for, while, do-while)
-- Methods and parameters
 - Input/output basics
 
 ## 3. Object-Oriented Programming (OOP)
+- Methods and parameters
 - Classes and objects
 - Constructors
 - Fields and methods

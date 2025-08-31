@@ -3,10 +3,12 @@ import SectionDrawer from '../../components/SideBarNav'
 
 import JavaIntro from './JavaIntro'
 import JavaFundamentals from './JavaFundamentals'
+import Methods from './Methods'
 
 const sectionComponents = {
     'Intro to Java': <JavaIntro />,
-    'Java Fundamentals': <JavaFundamentals />
+    'Java Fundamentals': <JavaFundamentals />,
+    'Methods': <Methods />
 }
 
 export default function Java() {
