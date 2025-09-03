@@ -285,4 +285,116 @@ System.out.println(message.charAt(5));
         ],
         answer: '\`Integer.parseInt()\`',
     },
+    // CollectionsAndGenerics
+    {
+        id: 21,
+        type: 'radio',
+        title: '',
+        question: "Which method would you use to get the number of elements in an ArrayList?",
+        options: [
+            '\`length\`',
+            '\`size()\`',
+            '\`count()\`',
+            '\`getLength()\`',
+        ],
+        answer: '\`size()\`',
+    },
+    {
+        id: 22,
+        type: 'radio',
+        title: '',
+        question: "Which statement about HashMaps is true?",
+        options: [
+            'they guarantee the order of elements',
+            'they can have duplicate keys',
+            'they allow you to replace values for existing keys',
+            'they can only store String keys',
+        ],
+        answer: 'they allow you to replace values for existing keys',
+    },
+    {
+        id: 23,
+        type: 'radio',
+        title: '',
+        question: "What is the difference between Map and HashMap in Java?",
+        options: [
+            'Map is a class, HashMap is an interface',
+            'Map is an interface, HashMap is a class',
+            'No difference, both are interfaces',
+            'no difference, both are classes',
+        ],
+        answer: 'Map is an interface, HashMap is a class',
+        description: 'HashMaps are classes that implement the Map interface.'
+    },
+
+    {
+        id: 24,
+        type: 'radio',
+        title: '',
+        question: `What will happen if you run the following code: 
+~~~java
+String[] cars = new String[3];
+cars[3] = "Ford";
+~~~`,
+        options: [
+            'Adds \`Ford\` to the array',
+            'Replaces the last element with \`Ford\`',
+            'Throws an error',
+            'Resizes the array to fit \`Ford\`',
+        ],
+        answer: 'Throws an error',
+        description: 'It will throw the \`ArrayIndexOutOfBoundsException\`'
+    },
+    {
+        id: 25,
+        type: 'radio',
+        title: '',
+        question: `Which method can you use to add an element to the end of an ArrayList?`,
+        options: [
+            '\`add()\`',
+            '\`append()\`',
+            '\`push()\`',
+            '\`insert()\`',
+        ],
+        answer: '\`add()\`',
+    },
+    {
+        id: 26,
+        type: 'radio',
+        title: '',
+        question: `What does \`friendsAgain2.set(0, "Kim")\` do?`,
+        options: [
+            'adds \`Kim\` to the end of the ArrayList',
+            'removes the first element',
+            'replaces the first element with \`Kim\`',
+            'sorts the ArrayList',
+        ],
+        answer: 'replaces the first element with \`Kim\`',
+    },
+    {
+        id: 27,
+        type: 'radio',
+        title: '',
+        question: `Which of these methods does not exist for ArrayList in Java?`,
+        options: [
+            '\`size()\`',
+            '\`get()\`',
+            '\`remove()\`',
+            '\`delete()\`',
+        ],
+        answer: '\`delete()\`',
+    },
+    {
+        id: 28,
+        type: 'radio',
+        title: '',
+        question: `Which of these is a valid way to check if a HashMap contains or has a value?`,
+        options: [
+            '\`containsValue()\`',
+            '\`hasValue()\`',
+            '\`findValue()\`',
+            '\`valueExists()\`',
+        ],
+        answer: '\`containsValue()\`',
+    },
 ]
