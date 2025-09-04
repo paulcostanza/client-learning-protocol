@@ -113,8 +113,10 @@ export default function QuestionList() {
                             {allQuestions
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 .map((q, idx) => {
-                                    const status = getQuestionStatus(q.quizKey, q.id)
                                     const nextReviewTimestamp = getNextReview(q.quizKey, q.id)
+                                    const review = getHumanReadableNextReview(nextReviewTimestamp)
+                                    const status = review === 'Ready!' ? 'ready' : getQuestionStatus(q.quizKey, q.id)
+
                                     return (
                                         <tr
                                             key={`${q.quizKey}-${q.id}`}
@@ -125,13 +127,14 @@ export default function QuestionList() {
                                             <td align="center">
                                                 {status === 'correct' && <span>✔️</span>}
                                                 {status === 'incorrect' && <span>❌</span>}
+                                                {status === 'ready' && <span>❓</span>}
                                             </td>
                                             <td>
                                                 {q.question.length > maxLengthOfQuestionInColumn
                                                     ? q.question.slice(0, maxLengthOfQuestionInColumn) + "..."
                                                     : q.question}
                                             </td>
-                                            <td align="center">{getHumanReadableNextReview(nextReviewTimestamp)}</td>
+                                            <td align="center">{review}</td>
                                             <td align="center">{q.quizKey}</td>
                                         </tr>
                                     )
