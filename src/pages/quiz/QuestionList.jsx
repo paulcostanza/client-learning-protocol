@@ -4,7 +4,9 @@ import Paper from "@mui/material/Paper"
 import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
-import TablePagination from '@mui/material/TablePagination'
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 import Box from "@mui/material/Box"
 import ModalForQuestions from "./ModalForQuestions.jsx"
 import {
@@ -143,15 +145,62 @@ export default function QuestionList() {
                     </Table>
                 </Box>
 
-                <TablePagination
-                    component="div"
+                {/* <TablePagination
+                    // component="div"
+                    sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2, py: 1 }}
                     count={allQuestions.length}
                     page={page}
                     onPageChange={handleChangePage}
                     rowsPerPage={rowsPerPage}
                     onRowsPerPageChange={handleChangeRowsPerPage}
                     rowsPerPageOptions={[5, 10, 25, 50, { value: -1, label: 'All' }]}
-                />
+                /> */}
+                <Box sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    px: 2,
+                    py: 1
+                }}>
+                    {/* Displayed rows (left) */}
+                    <span>
+                        {`${page * rowsPerPage + 1}–${Math.min((page + 1) * rowsPerPage, allQuestions.length)} of ${allQuestions.length}`}
+                    </span>
+                    {/* Rows per page (center) */}
+                    <Box
+                        className="rows-per-page"
+                        sx={{ display: 'flex', alignItems: 'center' }}>
+                        <span style={{ marginRight: 8 }}>Rows per page:</span>
+                        <select
+                            value={rowsPerPage}
+                            onChange={handleChangeRowsPerPage}
+                            style={{ padding: '4px 8px' }}
+                        >
+                            {[5, 10, 25, 50, allQuestions.length].map(opt => (
+                                <option key={opt} value={opt}>
+                                    {opt === allQuestions.length ? 'All' : opt}
+                                </option>
+                            ))}
+                        </select>
+                    </Box>
+                    {/* Navigation arrows (right) */}
+                    <Box>
+                        <button
+                            onClick={() => handleChangePage(null, page - 1)}
+                            disabled={page === 0}
+                            style={{ marginRight: 8 }}
+                        >
+                            <ArrowBackIosNewIcon />
+                        </button>
+                        <button
+                            onClick={() => handleChangePage(null, page + 1)}
+                            disabled={(page + 1) * rowsPerPage >= allQuestions.length}
+                        >
+                            <ArrowForwardIosIcon />
+                        </button>
+                    </Box>
+                </Box>
+
             </Paper>
 
             <ModalForQuestions

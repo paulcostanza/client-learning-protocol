@@ -457,6 +457,14 @@ input[type="checkbox"]:checked+label::before {
     }
 }
 
+/*************** S E L E C T | A | Q U E S T I O N | P A G I N A T I O N ***************/
+
+@media (max-width: 600px) {
+    .rows-per-page {
+        display: none !important;
+    }
+}
+
 /********************** C A R O U S E L | O N | Q U I Z | P A G E **********************/
 
 .carousel-parent {
