@@ -145,16 +145,7 @@ export default function QuestionList() {
                     </Table>
                 </Box>
 
-                {/* <TablePagination
-                    // component="div"
-                    sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', px: 2, py: 1 }}
-                    count={allQuestions.length}
-                    page={page}
-                    onPageChange={handleChangePage}
-                    rowsPerPage={rowsPerPage}
-                    onRowsPerPageChange={handleChangeRowsPerPage}
-                    rowsPerPageOptions={[5, 10, 25, 50, { value: -1, label: 'All' }]}
-                /> */}
+                {/* Table pagination */}
                 <Box sx={{
                     display: 'flex',
                     alignItems: 'center',
@@ -162,11 +153,9 @@ export default function QuestionList() {
                     px: 2,
                     py: 1
                 }}>
-                    {/* Displayed rows (left) */}
                     <span>
                         {`${page * rowsPerPage + 1}–${Math.min((page + 1) * rowsPerPage, allQuestions.length)} of ${allQuestions.length}`}
                     </span>
-                    {/* Rows per page (center) */}
                     <Box
                         className="rows-per-page"
                         sx={{ display: 'flex', alignItems: 'center' }}>
@@ -174,7 +163,7 @@ export default function QuestionList() {
                         <select
                             value={rowsPerPage}
                             onChange={handleChangeRowsPerPage}
-                            style={{ padding: '4px 8px' }}
+                            style={{ padding: '4px 8px', cursor: 'pointer' }}
                         >
                             {[5, 10, 25, 50, allQuestions.length].map(opt => (
                                 <option key={opt} value={opt}>
@@ -183,7 +172,6 @@ export default function QuestionList() {
                             ))}
                         </select>
                     </Box>
-                    {/* Navigation arrows (right) */}
                     <Box>
                         <button
                             onClick={() => handleChangePage(null, page - 1)}
@@ -200,7 +188,6 @@ export default function QuestionList() {
                         </button>
                     </Box>
                 </Box>
-
             </Paper>
 
             <ModalForQuestions
