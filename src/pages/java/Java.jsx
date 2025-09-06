@@ -4,13 +4,15 @@ import SectionDrawer from '../../components/SideBarNav'
 import JavaIntro from './JavaIntro'
 import JavaFundamentals from './JavaFundamentals'
 import Methods from './Methods'
-import CollectionsAndGenerics from './CollectionsAndGenerics'
+import Arrays from './Arrays'
+import HashMaps from './HashMaps'
 
 const sectionComponents = {
     'Intro to Java': <JavaIntro />,
     'Java Fundamentals': <JavaFundamentals />,
     'Methods': <Methods />,
-    'Collections & Generics': <CollectionsAndGenerics />
+    'Arrays': <Arrays />,
+    'HashMaps': <HashMaps />,
 }
 
 export default function Java() {
