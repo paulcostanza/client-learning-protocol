@@ -17,7 +17,7 @@
 **CLP**
 - goal
 - how to use
-- ETA on features
+- ETA on features?
 
 #### index.html
 
