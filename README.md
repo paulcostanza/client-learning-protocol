@@ -43,7 +43,7 @@ No database yet. Questions are stored inside of <code>json</code> files. They lo
     id: 1,
     type: 'radio',
     category: 'programming language',
-    subCategory: 'strings',
+    subcategory: 'strings',
     title: 'Question Title',
     question: "What is the answer?",
     options: [
@@ -51,6 +51,7 @@ No database yet. Questions are stored inside of <code>json</code> files. They lo
         'No wait, this one',
         'I\'m pretty sure it\'s me!',
     ],
+    random: true,
     answer:  'This is the answer',
     description: 'Example of a question from CLP'
 }      
