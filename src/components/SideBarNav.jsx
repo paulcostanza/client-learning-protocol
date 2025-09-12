@@ -31,7 +31,13 @@ export default function SideBarNav({ menuItems, selectedSection, setSelectedSect
                 <ArrowCircleRightIcon fontSize='large' />
             </button>
             <Drawer
-                sx={{ width: drawerWidth }}
+                sx={{
+                    '& .MuiDrawer-paper': {
+                        width: drawerWidth,
+                        backgroundColor: 'var(--bg)',
+                        color: 'var(--text)',
+                    }
+                }}
                 variant="temporary"
                 anchor="left"
                 open={open}
@@ -45,6 +51,15 @@ export default function SideBarNav({ menuItems, selectedSection, setSelectedSect
                             onClick={() => {
                                 setSelectedSection(item)
                                 setOpen(false)
+                            }}
+                            sx={{
+                                transition: 'background 0.2s, color 0.2s',
+                                '&:hover': {
+                                    backgroundColor: 'rgba(255,255,255,0.08)',
+                                    color: '#fff',
+                                    cursor: 'pointer'
+                                },
+                                color: selectedSection === item ? '#fff' : 'var(--text)'
                             }}
                         >
                             <ListItemText

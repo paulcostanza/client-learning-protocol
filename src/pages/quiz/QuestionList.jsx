@@ -82,11 +82,9 @@ export default function QuestionList() {
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>
                     <Table
                         borderAxis="none"
-                        color="neutral"
                         size="lg"
                         stickyFooter={false}
                         stickyHeader={false}
-                        stripe="odd"
                         variant="outlined"
                         hoverRow
                     >
@@ -151,7 +149,10 @@ export default function QuestionList() {
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     px: 2,
-                    py: 1
+                    py: 1,
+                    background: 'var(--bg)',
+                    color: 'var(--text)',
+                    border: '1px solid #fff',
                 }}>
                     <span>
                         {`${page * rowsPerPage + 1}–${Math.min((page + 1) * rowsPerPage, allQuestions.length)} of ${allQuestions.length}`}

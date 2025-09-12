@@ -276,12 +276,12 @@ export default function Intro() {
                             <div className="col"></div>
                             <div className="col-lg-8">
                                 <ul>
-                                    <li>Object: a software entity that contains data and procedures</li>
-                                    <li>Attributes: the data contained in an object is known as the object's attributes</li>
-                                    <li>Methods: the procedures or behaviors that an object performs are known as the object's
+                                    <li><strong>Object:</strong> a software entity that contains data and procedures</li>
+                                    <li><strong>Attributes:</strong> the data contained in an object is known as the object's attributes</li>
+                                    <li><strong>Methods:</strong> the procedures or behaviors that an object performs are known as the object's
                                         methods</li>
-                                    <li>Encapsulation: the combining of data and code into a single object</li>
-                                    <li>Data Hiding: an object's ability to hide its data from code that is outside the object.</li>
+                                    <li><strong>Encapsulation:</strong> the combining of data and code into a single object</li>
+                                    <li><strong>Data Hiding:</strong> an object's ability to hide its data from code that is outside the object.</li>
                                 </ul>
                             </div>
                             <div className="col"></div>

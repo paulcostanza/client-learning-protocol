@@ -149,11 +149,9 @@ String name = keyboard.nextLine(); // now this works as expected
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>
                     <Table
                         borderAxis="none"
-                        color="neutral"
                         size="lg"
                         stickyFooter={false}
                         stickyHeader={false}
-                        stripe="odd"
                         variant="outlined"
                         hoverRow
                     >
@@ -336,25 +334,12 @@ String name = keyboard.nextLine(); // now this works as expected
             </p>
             <p><strong>Example of the problem:</strong></p>
 
-
             <div className="">
                 <SyntaxHighlighter language="java" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {nextLineIssue}
                 </SyntaxHighlighter>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
             <p><strong>How to fix:</strong></p>
 
@@ -368,11 +353,7 @@ String name = keyboard.nextLine(); // now this works as expected
                     {nextLineIssueFixed}
                 </SyntaxHighlighter>
             </div>
-            <pre>
-                <code>
-                    { }
-                </code>
-            </pre>
+
             <p>
                 <strong>Summary:</strong><br /> Always use an extra <code>nextLine()</code> after reading a primitive value and before reading a string with <code>nextLine()</code>. This ensures you get the user's actual input, not just the leftover newline.
             </p>

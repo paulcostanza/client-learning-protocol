@@ -112,11 +112,9 @@ paul@laptop:~$`
             <Sheet>
                 <Table
                     borderAxis="none"
-                    color="neutral"
                     size="lg"
                     stickyFooter={false}
                     stickyHeader={false}
-                    stripe="odd"
                     variant="outlined"
                     hoverRow
                 >

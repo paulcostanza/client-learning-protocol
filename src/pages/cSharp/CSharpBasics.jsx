@@ -146,11 +146,9 @@ int b = a++;
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>
                     <Table
                         borderAxis="none"
-                        color="neutral"
                         size="lg"
                         stickyFooter={false}
                         stickyHeader={false}
-                        stripe="odd"
                         variant="outlined"
                         hoverRow
                     >
@@ -373,11 +371,9 @@ int b = a++;
                 <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                     <Table
                         borderAxis="none"
-                        color="neutral"
                         size="lg"
                         stickyFooter={false}
                         stickyHeader={false}
-                        stripe="odd"
                         variant="outlined"
                         hoverRow
                     >
@@ -465,11 +461,9 @@ int b = a++;
                 <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                     <Table
                         borderAxis="none"
-                        color="neutral"
                         size="lg"
                         stickyFooter={false}
                         stickyHeader={false}
-                        stripe="odd"
                         variant="outlined"
                         hoverRow
                     >
@@ -535,11 +529,9 @@ int b = a++;
                 <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                     <Table
                         borderAxis="none"
-                        color="neutral"
                         size="lg"
                         stickyFooter={false}
                         stickyHeader={false}
-                        stripe="odd"
                         variant="outlined"
                         hoverRow
                     >
@@ -601,11 +593,9 @@ int b = a++;
                 <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                     <Table
                         borderAxis="none"
-                        color="neutral"
                         size="lg"
                         stickyFooter={false}
                         stickyHeader={false}
-                        stripe="odd"
                         variant="outlined"
                         hoverRow
                     >
@@ -654,11 +644,9 @@ int b = a++;
                 <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
                     <Table
                         borderAxis="none"
-                        color="neutral"
                         size="lg"
                         stickyFooter={false}
                         stickyHeader={false}
-                        stripe="odd"
                         variant="outlined"
                         hoverRow
                     >

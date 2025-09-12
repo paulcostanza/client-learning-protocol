@@ -107,6 +107,14 @@ export default function NavBar() {
                                 anchorEl={anchorElLearning}
                                 open={Boolean(anchorElLearning)}
                                 onClose={handleCloseLearningMenu}
+                                PaperProps={{
+                                    sx: {
+                                        backgroundColor: "#23272a",
+                                        color: "#fff",
+                                        borderRadius: 4,
+                                        boxShadow: 9,
+                                    }
+                                }}
                             >
                                 {learningSections.map(section => (
                                     <MenuItem key={section.label} onClick={handleCloseLearningMenu}>
@@ -120,7 +128,7 @@ export default function NavBar() {
                                 ))}
                             </Menu>
                             <Button
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: 'white' }}
                                 component={Link}
                                 to="/quiz"
                             >
@@ -207,11 +215,15 @@ export default function NavBar() {
                             }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
-                            sx={{ display: { xs: 'block', md: 'none' } }}
                             PaperProps={{
-                                style: {
+                                sx: {
+                                    backgroundColor: "#23272a",
+                                    color: "#fff",
+                                    borderRadius: 1,
+                                    boxShadow: 9,
                                     maxHeight: 350,
-                                    overflow: 'auto'
+                                    overflow: 'auto',
+                                    display: { xs: 'block', md: 'none' }
                                 }
                             }}
                         >

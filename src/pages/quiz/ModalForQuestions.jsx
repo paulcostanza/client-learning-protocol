@@ -26,40 +26,6 @@ export default function ModalForQuestions({ open, onClose, question }) {
         }
     }
 
-    // function checkAnswer() {
-    //     if (question.type === 'radio') {
-    //         if (selectedIdx === null) return;
-    //         setChecked(true);
-    //         if (question.options[selectedIdx] === question.answer) {
-    //             setResult('Correct!');
-    //         } else {
-    //             setResult('Wrong!');
-    //         }
-    //     } else if (question.type === 'checkbox') {
-    //         setChecked(true);
-    //         const selectedOptions = selectedCheckboxes.map(idx => question.options[idx]);
-    //         const correct = Array.isArray(question.answer) &&
-    //             question.answer.length === selectedOptions.length &&
-    //             question.answer.every(ans => selectedOptions.includes(ans));
-    //         if (correct) {
-    //             setResult('Correct!');
-    //         } else {
-    //             setResult('Wrong!');
-    //         }
-    //     }
-    //     if (question.description) {
-    //         setDisplayDescription(question.description);
-    //     }
-    // }
-
-    // function forfeitQuestion() {
-    //     setChecked(true);
-    //     setResult('Need to study bro...');
-    //     if (question.description) {
-    //         setDisplayDescription(question.description);
-    //     }
-    // }
-
     function handleCheckAnswer() {
         const { result, description } = checkAnswer(question, selectedIdx, selectedCheckboxes);
         setChecked(true);
@@ -91,7 +57,7 @@ export default function ModalForQuestions({ open, onClose, question }) {
                 top: '50%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                bgcolor: 'background.paper',
+                bgcolor: 'var(--bg)',
                 boxShadow: 24,
                 p: 4,
                 minWidth: 300,
@@ -187,6 +153,6 @@ export default function ModalForQuestions({ open, onClose, question }) {
                     </div>
                 )}
             </Box>
-        </Modal>
+        </Modal >
     );
 }

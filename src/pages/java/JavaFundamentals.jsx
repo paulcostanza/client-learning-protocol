@@ -218,11 +218,9 @@ three = one + two; // the outcome of one + two now produces an integer!`
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>
                     <Table
                         borderAxis="none"
-                        color="neutral"
                         size="lg"
                         stickyFooter={false}
                         stickyHeader={false}
-                        stripe="odd"
                         variant="outlined"
                         hoverRow
                     >
@@ -465,7 +463,6 @@ three = one + two; // the outcome of one + two now produces an integer!`
                 Primitive type variables hold the actual data with which they are associated with. Example:
             </p>
 
-
             <div className="">
                 <SyntaxHighlighter language="java" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
@@ -473,9 +470,6 @@ three = one + two; // the outcome of one + two now produces an integer!`
                 </SyntaxHighlighter>
             </div>
 
-            <pre>
-                <code>{ }</code>
-            </pre>
             <p>
                 Class type variables do not hold the actual data item that it is associated with, but hold the address (from memory) of the data item that is associated with it. This means that class type variables are known as <strong>reference variables</strong> because they reference the data through the address.
             </p>
@@ -592,11 +586,6 @@ three = one + two; // the outcome of one + two now produces an integer!`
                 </li>
                 <li>
                     <strong>Documentation Comments:</strong> These comments are read and processed by a program named <strong>JavaDoc</strong>, which comes with the JDK. The Javadoc program reads Java source code files and generates attractively formatted HTML files that document the source code. Using <code>/** Documentation */</code>, you can run the Javadoc program from the command prompt using the Javadoc command:
-                    <pre>
-                        <code>
-                            { }
-                        </code>
-                    </pre>
 
                     <div className="">
                         <SyntaxHighlighter language="terminal" style={tomorrow}
