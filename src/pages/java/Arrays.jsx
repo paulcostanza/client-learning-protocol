@@ -1,7 +1,30 @@
+import { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import QuestionTableList from '../../components/QuestionTableList'
+import ModalForQuestions from '../../pages/quiz/ModalForQuestions.jsx'
+import JavaQuestions from '../../pages/quiz/database/JavaQuestions.js'
 
 export default function Arrays() {
+    const [modalOpen, setModalOpen] = useState(false)
+    const [selectedQuestion, setSelectedQuestion] = useState(null)
+    const [refresh, setRefresh] = useState(0)
+    const arrayQuestions = JavaQuestions
+        .filter(q => q.subcategory === 'array')
+        .map(q => ({
+            ...q,
+            quizKey: q.quizKey ?? 'arrays',
+        }))
+
+    function handleRowClick(question) {
+        setSelectedQuestion(question)
+        setModalOpen(true)
+    }
+
+    function handleAnswered() {
+        setRefresh(r => r + 1) // triger rerender
+        setModalOpen(false)
+    }
 
     const simpleArray = `public class Main {
     public static void main(String[] args) {
@@ -80,6 +103,22 @@ public class ArrayVsArrayList {
                     {arraysVsArrayList}
                 </SyntaxHighlighter>
             </div>
+
+            <h2>Review</h2>
+
+            <QuestionTableList
+                key={refresh}
+                questions={arrayQuestions}
+                onRowClick={handleRowClick}
+            />
+
+            {/* when a user clicks on a question from table, this pops up */}
+            <ModalForQuestions
+                open={modalOpen}
+                onClose={() => setModalOpen(false)}
+                question={selectedQuestion}
+                onAnswered={handleAnswered}
+            />
         </div>
     )
 }

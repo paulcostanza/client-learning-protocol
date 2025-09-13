@@ -147,9 +147,9 @@ export default function ModalForQuestions({ open, onClose, question }) {
                         `answer-description ${result === 'Correct!' ? 'answer-description-correct' : 'answer-description-incorrect'
                         }`
                     }>
-                        <ReactMarkdown
-
-                        >{displayDescription}</ReactMarkdown>
+                        <ReactMarkdown>
+                            {displayDescription}
+                        </ReactMarkdown>
                     </div>
                 )}
             </Box>
