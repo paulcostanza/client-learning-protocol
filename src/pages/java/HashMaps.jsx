@@ -1,7 +1,19 @@
+import { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import QuestionTableList from '../../components/QuestionTableList'
 
 export default function HashMaps() {
+    const [refresh, setRefresh] = useState(0)
+
+    const quizImports = {
+        java: () => import('../../pages/quiz/database/JavaQuestions.js')
+    }
+
+    function handleRowClick(question) {
+        setSelectedQuestion(question)
+        setModalOpen(true)
+    }
 
     const hashMapExample = `import java.util.HashMap;
 
@@ -60,6 +72,15 @@ public class Maps {
             <p>Notice in various print statements, such as line 12, how what was added and what is being printed does not match up with the Hashmap. HashMaps do not guarantee an order.</p>
 
             <p>Don't confuse a <code>Map</code> with a <code>HashMap</code>! A <code>Map</code> is actually a Java interface. The <code>Map</code> interface specifies what kind of methods a real map implementation has to support. There are different types of implementations of that map interface. A <code>HashMap</code> is one kind of these interfaces.</p>
+
+            <h2>Review</h2>
+
+            <QuestionTableList
+                quizImports={quizImports}
+                subcategory="hashmap"
+                key={refresh}
+                onRowClick={handleRowClick}
+            />
         </div>
     )
 }

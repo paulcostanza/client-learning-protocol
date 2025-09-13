@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import QuestionTableList from '../../components/QuestionTableList'
 
 import Table from '@mui/joy/Table'
 import Paper from "@mui/material/Paper"
@@ -11,6 +13,16 @@ import Box from "@mui/material/Box"
 import DeclareScannerMethodBreakdown from '../../assets/java/methods/declare a scanner object.png'
 
 export default function Methods() {
+    const [refresh, setRefresh] = useState(0)
+
+    const quizImports = {
+        java: () => import('../../pages/quiz/database/JavaQuestions.js')
+    }
+
+    function handleRowClick(question) {
+        setSelectedQuestion(question)
+        setModalOpen(true)
+    }
 
     const length = `int stringSize = name.length();`
 
@@ -357,6 +369,15 @@ String name = keyboard.nextLine(); // now this works as expected
             <p>
                 <strong>Summary:</strong><br /> Always use an extra <code>nextLine()</code> after reading a primitive value and before reading a string with <code>nextLine()</code>. This ensures you get the user's actual input, not just the leftover newline.
             </p>
+
+            <h2>Review</h2>
+
+            <QuestionTableList
+                quizImports={quizImports}
+                subcategory="methods"
+                key={refresh}
+                onRowClick={handleRowClick}
+            />
         </div>
     )
 }
