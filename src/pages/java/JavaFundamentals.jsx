@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import QuestionTableList from '../../components/QuestionTableList'
 
 import SystemClassHierarchy from '../../assets/java/javafundamentals/system class hierarchy example.png'
 import UnicodeExample from '../../assets/java/javafundamentals/unicode example.png'
@@ -12,6 +14,16 @@ import TableCell from "@mui/material/TableCell"
 import Box from "@mui/material/Box"
 
 export default function JavaFundamentals() {
+    const [refresh, setRefresh] = useState(0)
+
+    const quizImports = {
+        java: () => import('../../pages/quiz/database/JavaQuestions.js')
+    }
+
+    function handleRowClick(question) {
+        setSelectedQuestion(question)
+        setModalOpen(true)
+    }
 
     const compileSimpleJava = `paul@laptop:~$ javac Simple.java
 paul@laptop:~$ java Simple`
@@ -615,6 +627,15 @@ three = one + two; // the outcome of one + two now produces an integer!`
             <ol>
                 <li>In the console, ask the user for their first name, middle name, and last name. Print out their initials.</li>
             </ol>
+
+            <h2>Review</h2>
+
+            <QuestionTableList
+                quizImports={quizImports}
+                subcategory="fundamentals"
+                key={refresh}
+                onRowClick={handleRowClick}
+            />
 
         </div>
     )
