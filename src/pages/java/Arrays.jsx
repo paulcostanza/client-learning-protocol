@@ -3,18 +3,15 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import QuestionTableList from '../../components/QuestionTableList'
 import ModalForQuestions from '../../pages/quiz/ModalForQuestions.jsx'
-import JavaQuestions from '../../pages/quiz/database/JavaQuestions.js'
 
 export default function Arrays() {
     const [modalOpen, setModalOpen] = useState(false)
     const [selectedQuestion, setSelectedQuestion] = useState(null)
     const [refresh, setRefresh] = useState(0)
-    const arrayQuestions = JavaQuestions
-        .filter(q => q.subcategory === 'array')
-        .map(q => ({
-            ...q,
-            quizKey: q.quizKey ?? 'arrays',
-        }))
+
+    const quizImports = {
+        java: () => import('../../pages/quiz/database/JavaQuestions.js')
+    }
 
     function handleRowClick(question) {
         setSelectedQuestion(question)
@@ -22,7 +19,7 @@ export default function Arrays() {
     }
 
     function handleAnswered() {
-        setRefresh(r => r + 1) // triger rerender
+        setRefresh(r => r + 1)
         setModalOpen(false)
     }
 
@@ -107,8 +104,9 @@ public class ArrayVsArrayList {
             <h2>Review</h2>
 
             <QuestionTableList
+                quizImports={quizImports}
+                subcategory="array"
                 key={refresh}
-                questions={arrayQuestions}
                 onRowClick={handleRowClick}
             />
 

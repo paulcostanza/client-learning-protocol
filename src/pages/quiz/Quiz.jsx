@@ -145,7 +145,7 @@ export default function Quiz() {
 
                             <div className="questions">
                                 {question.title ?? <em>{question.title}</em>}
-                                <h4>
+                                <h4 className="modal-question">
                                     <ReactMarkdown>
                                         {question.question}
                                     </ReactMarkdown>

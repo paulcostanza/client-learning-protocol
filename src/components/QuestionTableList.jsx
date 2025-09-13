@@ -12,10 +12,10 @@ import {
     getNextReview,
     getHumanReadableNextReview
 } from "../Helpers/localStorageHelper.js"
-import ModalForQuestions from "../pages/quiz/ModalForQuestions.jsx"
 
 export default function QuestionTable({
-    questions,
+    quizImports,
+    subcategory,
     onRowClick,
     rowsPerPageOptions = [5, 10, 25, 50],
     defaultRowsPerPage = 10,
@@ -23,22 +23,10 @@ export default function QuestionTable({
 }) {
     const [page, setPage] = useState(0)
     const [rowsPerPage, setRowsPerPage] = useState(defaultRowsPerPage)
-    const [modalOpen, setModalOpen] = useState(false)
-    const [selectedQuestion, setSelectedQuestion] = useState(null)
-
     const handleChangePage = (event, newPage) => setPage(newPage)
     const handleChangeRowsPerPage = (event) => {
         setRowsPerPage(parseInt(event.target.value, 10))
         setPage(0)
-    }
-
-    const handleRowClick = (question) => {
-        setSelectedQuestion(question)
-        setModalOpen(true)
-    }
-
-    const quizImports = {
-        java: () => import('../pages/quiz/database/JavaQuestions.js')
     }
 
     const quizKeys = Object.keys(quizImports)
@@ -54,7 +42,9 @@ export default function QuestionTable({
             )
         ).then(results => {
             const questions = results.flatMap(({ quizKey, questions }) =>
-                questions.map(q => ({ ...q, quizKey }))
+                questions
+                    .filter(q => q.subcategory === subcategory)
+                    .map(q => ({ ...q, quizKey }))
             );
             setAllQuestions(questions);
         });
@@ -67,10 +57,10 @@ export default function QuestionTable({
                     <Table>
                         <TableHead>
                             <TableRow>
-                                <TableCell style={{ width: '190px' }}>Title</TableCell>
-                                <TableCell style={{ textAlign: 'center' }}>Status</TableCell>
-                                <TableCell>Question</TableCell>
-                                <TableCell style={{ textAlign: 'center' }}>Review</TableCell>
+                                <TableCell style={{ width: '100px' }}>Title</TableCell>
+                                <TableCell style={{ textAlign: 'center', width: '90px' }}>Status</TableCell>
+                                <TableCell style={{ width: '264.4px' }}>Question</TableCell>
+                                <TableCell style={{ width: '100px', textAlign: 'center' }}>Review</TableCell>
                             </TableRow>
                         </TableHead>
                         <tbody>
@@ -119,9 +109,11 @@ export default function QuestionTable({
                     border: '1px solid #fff',
                 }}>
                     <span>
-                        {`${page * rowsPerPage + 1}–${Math.min((page + 1) * rowsPerPage, allQuestions.length)} of ${allQuestions.length}`}
+                        {`${page * rowsPerPage + 1}-${Math.min((page + 1) * rowsPerPage, allQuestions.length)} of ${allQuestions.length}`}
                     </span>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Box
+                        className="rows-per-page"
+                        sx={{ display: 'flex', alignItems: 'center' }}>
                         <span style={{ marginRight: 8 }}>Rows per page:</span>
                         <select
                             value={rowsPerPage}
@@ -150,12 +142,6 @@ export default function QuestionTable({
                     </Box>
                 </Box>
             </Paper>
-
-            <ModalForQuestions
-                open={modalOpen}
-                onClose={() => setModalOpen(false)}
-                question={selectedQuestion}
-            />
         </div>
     )
 }
