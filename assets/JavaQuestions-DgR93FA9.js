@@ -14,4 +14,16 @@ System.out.println(message.charAt(5));
 ~~~java
 String[] cars = new String[3];
 cars[3] = "Ford";
-~~~`,options:["Adds `Ford` to the array","Replaces the last element with `Ford`","Throws an error","Resizes the array to fit `Ford`"],random:!0,answer:"Throws an error",description:"It will throw the `ArrayIndexOutOfBoundsException`"},{id:25,type:"radio",category:"java",subcategory:"array",title:"Adding to ArrayList",question:"Which method can you use to add an element to the end of an ArrayList?",options:["`add()`","`append()`","`push()`","`insert()`"],random:!0,answer:"`add()`"},{id:26,type:"radio",category:"java",subcategory:"array",title:"To Kim or not to Kim",question:'What does `friendsAgain2.set(0, "Kim")` do?',options:["adds `Kim` to the end of the ArrayList","removes the first element","replaces the first element with `Kim`","sorts the ArrayList"],random:!0,answer:"replaces the first element with `Kim`"},{id:27,type:"radio",category:"java",subcategory:"array",title:"Not in this list",question:"Which of these methods does not exist for ArrayList in Java?",options:["`size()`","`get()`","`remove()`","`delete()`"],random:!0,answer:"`delete()`"},{id:28,type:"radio",category:"java",subcategory:"hashmap",title:"Hash value",question:"Which of these is a valid way to check if a HashMap contains or has a value?",options:["`containsValue()`","`hasValue()`","`findValue()`","`valueExists()`"],random:!0,answer:"`containsValue()`"}];export{e as default};
+~~~`,options:["Adds `Ford` to the array","Replaces the last element with `Ford`","Throws an error","Resizes the array to fit `Ford`"],random:!0,answer:"Throws an error",description:"It will throw the `ArrayIndexOutOfBoundsException`"},{id:25,type:"radio",category:"java",subcategory:"array",title:"Adding to ArrayList",question:"Which method can you use to add an element to the end of an ArrayList?",options:["`add()`","`append()`","`push()`","`insert()`"],random:!0,answer:"`add()`"},{id:26,type:"radio",category:"java",subcategory:"array",title:"To Kim or not to Kim",question:'What does `friendsAgain2.set(0, "Kim")` do?',options:["adds `Kim` to the end of the ArrayList","removes the first element","replaces the first element with `Kim`","sorts the ArrayList"],random:!0,answer:"replaces the first element with `Kim`"},{id:27,type:"radio",category:"java",subcategory:"array",title:"Not in this list",question:"Which of these methods does not exist for ArrayList in Java?",options:["`size()`","`get()`","`remove()`","`delete()`"],random:!0,answer:"`delete()`"},{id:28,type:"radio",category:"java",subcategory:"hashmap",title:"Hash value",question:"Which of these is a valid way to check if a HashMap contains or has a value?",options:["`containsValue()`","`hasValue()`","`findValue()`","`valueExists()`"],random:!0,answer:"`containsValue()`"},{id:29,type:"input",category:"Java",subcategory:"array",title:"int ain't that hard",question:"How do you declare an array of integers in Java that can hold 10 elements?",options:[""],random:!1,answer:"^int\\[\\]\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*=\\s*new\\s+int\\s*\\[\\s*10\\s*\\];?$"},{id:30,type:"input",category:"Java",subcategory:"array",title:"int ain't that hard",question:`Suppose you have this array:
+~~~java
+int[] nums = { 5, 10, 15, 20 };
+~~~
+How would you access the value 15 from this array?
+`,options:[""],random:!1,answer:"^nums\\s*\\[\\s*2\\s*\\];?$",description:`\`nums[2]\` gives you 15 because Java arrays are zero-indexed:
+~~~java
+nums[0] = 5
+nums[1] = 10
+nums[2] = 15
+nums[3] = 20
+~~~
+`}];export{e as default};
