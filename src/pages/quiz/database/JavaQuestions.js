@@ -479,4 +479,39 @@ cars[3] = "Ford";
         random: true,
         answer: '\`containsValue()\`',
     },
+    {
+        id: 29,
+        type: 'input',
+        category: 'Java',
+        subcategory: 'array',
+        title: 'int ain\'t that hard',
+        question: 'How do you declare an array of integers in Java that can hold 10 elements?',
+        options: [""],
+        random: false,
+        answer: "^int\\[\\]\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*=\\s*new\\s+int\\s*\\[\\s*10\\s*\\];?$"
+    },
+    {
+        id: 30,
+        type: 'input',
+        category: 'Java',
+        subcategory: 'array',
+        title: 'int ain\'t that hard',
+        question: `Suppose you have this array:
+~~~java
+int[] nums = { 5, 10, 15, 20 };
+~~~
+How would you access the value 15 from this array?
+`,
+        options: [""],
+        random: false,
+        answer: "^nums\\s*\\[\\s*2\\s*\\];?$",
+        description: `\`nums[2]\` gives you 15 because Java arrays are zero-indexed:
+~~~java
+nums[0] = 5
+nums[1] = 10
+nums[2] = 15
+nums[3] = 20
+~~~
+`
+    }
 ]

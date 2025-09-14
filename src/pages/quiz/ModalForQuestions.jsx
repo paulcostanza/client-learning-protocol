@@ -1,32 +1,45 @@
-import React, { useState } from "react";
-import Modal from '@mui/material/Modal';
-import Box from "@mui/material/Box";
-import ReactMarkdown from 'react-markdown';
+import React, { useState } from "react"
+import Modal from '@mui/material/Modal'
+import Box from "@mui/material/Box"
+import ReactMarkdown from 'react-markdown'
 import { checkAnswer, forfeitQuestion } from './quizLogic'
+import { saveSectionQuestionResult } from "../../Helpers/localStorageHelper.js"
 
 export default function ModalForQuestions({ open, onClose, question }) {
-    // Local state for this modal instance
-    const [checked, setChecked] = useState(false);
+    const [checked, setChecked] = useState(false)
     const [selectedIdx, setSelectedIdx] = useState(null);
     const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
+    const [inputValue, setInputValue] = useState("")
     const [result, setResult] = useState('');
     const [displayDescription, setDisplayDescription] = useState('');
 
     if (!question) return null;
 
     function onSelect(optionIdx) {
-        if (question.type === 'radio') {
+        if (question.type === 'radio' || question.type === 'input') {
             setSelectedIdx(optionIdx);
         } else if (question.type === 'checkbox') {
             setSelectedCheckboxes(prev =>
                 prev.includes(optionIdx)
                     ? prev.filter(idx => idx !== optionIdx)
                     : [...prev, optionIdx]
-            );
+            )
         }
     }
 
     function handleCheckAnswer() {
+        if (question.type === 'input') {
+            const regex = new RegExp(question.answer, "i")
+            const isCorrect = regex.test(inputValue.trim())
+            setChecked(true);
+            setResult(isCorrect ? "Correct!" : "Incorrect!")
+            setDisplayDescription(question.description || "")
+
+            if (question.quizKey && question.id !== undefined) {
+                saveSectionQuestionResult(question.quizKey, question.id, isCorrect ? "correct" : "incorrect")
+            }
+            return
+        }
         const { result, description } = checkAnswer(question, selectedIdx, selectedCheckboxes);
         setChecked(true);
         setResult(result);
@@ -40,11 +53,12 @@ export default function ModalForQuestions({ open, onClose, question }) {
         setDisplayDescription(description);
     }
 
+    // reset modal state on exit
     function handleExit() {
-        // Reset modal state on exit
         setChecked(false);
         setSelectedIdx(null);
         setSelectedCheckboxes([]);
+        setInputValue('')
         setResult('');
         setDisplayDescription('');
         onClose();
@@ -73,54 +87,73 @@ export default function ModalForQuestions({ open, onClose, question }) {
                         {question.question}
                     </ReactMarkdown>
                 </h4>
-                <ul key={question.id}>
-                    {question.options.map((option, optionIdx) => {
-                        let className = "";
+                {question.type === 'input' ? (
+                    <div style={{ margin: "1em 0" }}>
+                        <input
+                            type="text"
+                            value={inputValue}
+                            onChange={e => setInputValue(e.target.value)}
+                            disabled={checked}
+                            style={{ width: "100%", padding: "8px", fontSize: "1em" }}
+                            placeholder="Type your answer here"
+                        />
+                    </div>
+                ) : (
+                    <ul key={question.id}>
+                        {question.options.map((option, optionIdx) => {
+                            let className = "";
 
-                        if (checked) {
-                            if (question.type === 'radio') {
-                                if (option === question.answer) {
-                                    className = "correct";
-                                } else if (optionIdx === selectedIdx) {
-                                    className = "wrong";
-                                }
-                            } else if (question.type === 'checkbox') {
-                                if (question.answer.includes(option)) {
-                                    className = "correct";
-                                } else if (selectedCheckboxes.includes(optionIdx)) {
-                                    className = "wrong";
+                            if (checked) {
+                                switch (question.type) {
+                                    case 'radio':
+                                        if (option === question.answer) {
+                                            className = "correct";
+                                        } else if (optionIdx === selectedIdx) {
+                                            className = "wrong";
+                                        }
+                                        break
+                                    case 'checkbox':
+                                        if (question.answer.includes(option)) {
+                                            className = "correct";
+                                        } else if (selectedCheckboxes.includes(optionIdx)) {
+                                            className = "wrong";
+                                        }
+                                        break
+                                    default:
+                                        console.log('How in the hell did you reach this point?!')
                                 }
                             }
-                        }
 
-                        return (
-                            <li
-                                key={optionIdx}
-                                className={className}
-                                onClick={() => !checked && onSelect(optionIdx)}
-                                style={{ cursor: checked ? "default" : "pointer" }}
-                            >
-                                <input
-                                    type={question.type === "radio" ? "radio" : "checkbox"}
-                                    checked={
-                                        question.type === "radio"
-                                            ? selectedIdx === optionIdx
-                                            : selectedCheckboxes.includes(optionIdx)
-                                    }
-                                    name="options"
-                                    id={`q${optionIdx}-option`}
-                                    disabled={checked}
-                                    onChange={() => onSelect(optionIdx)}
-                                />
-                                <label htmlFor={`q${optionIdx}-option`}>
-                                    <ReactMarkdown components={{ ul: 'span', ol: 'span', li: 'span', p: 'span' }}>
-                                        {option}
-                                    </ReactMarkdown>
-                                </label>
-                            </li>
-                        );
-                    })}
-                </ul>
+                            return (
+                                <li
+                                    key={optionIdx}
+                                    className={className}
+                                    onClick={() => !checked && onSelect(optionIdx)}
+                                    style={{ cursor: checked ? "default" : "pointer" }}
+                                >
+                                    <input
+                                        type={question.type === "radio" ? "radio" : "checkbox"}
+                                        checked={
+                                            question.type === "radio"
+                                                ? selectedIdx === optionIdx
+                                                : selectedCheckboxes.includes(optionIdx)
+                                        }
+                                        name="options"
+                                        id={`q${optionIdx}-option`}
+                                        disabled={checked}
+                                        onChange={() => onSelect(optionIdx)}
+                                    />
+                                    <label htmlFor={`q${optionIdx}-option`}>
+                                        <ReactMarkdown components={{ ul: 'span', ol: 'span', li: 'span', p: 'span' }}>
+                                            {option}
+                                        </ReactMarkdown>
+                                    </label>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                )}
+
                 <div className="questions-footer">
                     <div className="buttons">
                         <button onClick={handleForfeit} disabled={checked}>I'm cooked</button>
@@ -130,7 +163,11 @@ export default function ModalForQuestions({ open, onClose, question }) {
                                 checked || (
                                     question.type === 'radio'
                                         ? selectedIdx === null
-                                        : selectedCheckboxes.length === 0
+                                        : question.type === 'checkbox'
+                                            ? selectedCheckboxes.length === 0
+                                            : question.type === 'input'
+                                                ? inputValue.trim() === ""
+                                                : false
                                 )
                             }
                         >Check Answer</button>
