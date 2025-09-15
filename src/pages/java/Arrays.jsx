@@ -2,8 +2,11 @@ import { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import QuestionTableList from '../../components/QuestionTableList'
+import ModalForQuestions from '../../pages/quiz/ModalForQuestions.jsx'
 
 export default function Arrays() {
+    const [modalOpen, setModalOpen] = useState(false)
+    const [selectedQuestion, setSelectedQuestion] = useState(null)
     const [refresh, setRefresh] = useState(0)
 
     const quizImports = {
@@ -13,6 +16,11 @@ export default function Arrays() {
     function handleRowClick(question) {
         setSelectedQuestion(question)
         setModalOpen(true)
+    }
+
+    function handleAnswered() {
+        setRefresh(r => r + 1)
+        setModalOpen(false)
     }
 
     const simpleArray = `public class Main {
@@ -100,6 +108,14 @@ public class ArrayVsArrayList {
                 subcategory="array"
                 key={refresh}
                 onRowClick={handleRowClick}
+            />
+
+            {/* when a user clicks on a question from table, this pops up */}
+            <ModalForQuestions
+                open={modalOpen}
+                onClose={() => setModalOpen(false)}
+                question={selectedQuestion}
+                onAnswered={handleAnswered}
             />
         </div>
     )

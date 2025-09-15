@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import QuestionTableList from '../../components/QuestionTableList'
+import ModalForQuestions from '../../pages/quiz/ModalForQuestions.jsx'
 
 import SystemClassHierarchy from '../../assets/java/javafundamentals/system class hierarchy example.png'
 import UnicodeExample from '../../assets/java/javafundamentals/unicode example.png'
@@ -14,6 +15,8 @@ import TableCell from "@mui/material/TableCell"
 import Box from "@mui/material/Box"
 
 export default function JavaFundamentals() {
+    const [modalOpen, setModalOpen] = useState(false)
+    const [selectedQuestion, setSelectedQuestion] = useState(null)
     const [refresh, setRefresh] = useState(0)
 
     const quizImports = {
@@ -23,6 +26,11 @@ export default function JavaFundamentals() {
     function handleRowClick(question) {
         setSelectedQuestion(question)
         setModalOpen(true)
+    }
+
+    function handleAnswered() {
+        setRefresh(r => r + 1)
+        setModalOpen(false)
     }
 
     const compileSimpleJava = `paul@laptop:~$ javac Simple.java
@@ -637,6 +645,13 @@ three = one + two; // the outcome of one + two now produces an integer!`
                 onRowClick={handleRowClick}
             />
 
+            {/* when a user clicks on a question from table, this pops up */}
+            <ModalForQuestions
+                open={modalOpen}
+                onClose={() => setModalOpen(false)}
+                question={selectedQuestion}
+                onAnswered={handleAnswered}
+            />
         </div>
     )
 }
