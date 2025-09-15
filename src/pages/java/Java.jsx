@@ -1,8 +1,7 @@
 import { useState } from 'react'
+import PrevNextSection from '../../components/PrevNextSection.jsx'
 import SectionDrawer from '../../components/SideBarNav'
 import ModalForQuestions from '../../pages/quiz/ModalForQuestions.jsx'
-
-
 import JavaIntro from './JavaIntro'
 import JavaFundamentals from './JavaFundamentals'
 import Methods from './Methods'
@@ -53,6 +52,13 @@ export default function Java() {
                         question={selectedQuestion}
                         onAnswered={handleAnswered}
                     />
+
+                    <PrevNextSection
+                        menuItems={menuItems}
+                        selectedSection={selectedSection}
+                        setSelectedSection={setSelectedSection}
+                    />
+                    <br />
                 </div>
             </main>
         </>
