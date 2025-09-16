@@ -513,5 +513,110 @@ nums[2] = 15
 nums[3] = 20
 ~~~
 `
-    }
+    },
+    {
+        id: 31,
+        type: 'input',
+        category: 'Java',
+        subcategory: 'hashmap',
+        title: '',
+        question: `How do you create a HashMap that maps String keys to Integer values?`,
+        options: [""],
+        random: false,
+        answer: "^HashMap\\s*<\\s*String\\s*,\\s*Integer\\s*>\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*=\\s*new\\s+HashMap\\s*<\\s*>\\s*\\(\\s*\\)\\s*;?$",
+        description: "**Answer:** \`HashMap<String, Integer> map = new HashMap<>();\`"
+    },
+    {
+        id: 32,
+        type: 'input',
+        category: 'Java',
+        subcategory: 'hashmap',
+        title: 'More hashmap',
+        question: `How do you insert the key "Apples" with the value 5 into the \`fruits\` HashMap?`,
+        options: [""],
+        random: false,
+        answer: "^fruits\\.put\\(\\s*\"Apples\"\\s*,\\s*5\\s*\\);?$",
+        description: '**Answer:** \`fruits.put("Apples", 5);\`'
+    },
+    {
+        id: 33,
+        type: 'input',
+        category: 'Java',
+        subcategory: 'hashmap',
+        title: 'How many guitars?',
+        question: `How would you check the value associated with the key "guitars" from the HashMap "band"?`,
+        options: [""],
+        random: false,
+        answer: "^band\\.get\\(\\s*\"guitars\"\\s*\\);?$",
+        description: '**Answer:** \`guitars.get("guitars");\`'
+    },
+    {
+        id: 36,
+        type: 'input',
+        category: 'Java',
+        subcategory: 'hashmap',
+        title: '',
+        question: `How do you check if the hashmap "food" has the key "Bananas"?`,
+        options: [""],
+        random: false,
+        answer: "^food\\.containsKey\\(\\s*\"Bananas\"\\s*\\);?$"
+    },
+    {
+        id: 37,
+        type: 'input',
+        category: 'Java',
+        subcategory: 'hashmap',
+        title: '',
+        question: `How do you delete the entry with the key "Apples" from the HashMap "fruits"?`,
+        options: [""],
+        random: false,
+        answer: "^fruits\\.remove\\(\\s*\"Apples\"\\s*\\);?$"
+
+    },
+    // {
+    //     id: 38,
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'hashmap',
+    //     title: '',
+    //     question: ``,
+    //     options: [""],
+    //     random: false,
+    //     answer: ""
+    // },
+    // {
+    //     id: 39,
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'hashmap',
+    //     title: '',
+    //     question: ``,
+    //     options: [""],
+    //     random: false,
+    //     answer: ""
+    // },
+    // {
+    //     id: 40,
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'hashmap',
+    //     title: '',
+    //     question: ``,
+    //     options: [""],
+    //     random: false,
+    //     answer: ""
+    // },
+    // {
+    //     id: 41,
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'hashmap',
+    //     title: '',
+    //     question: ``,
+    //     options: [""],
+    //     random: false,
+    //     answer: ""
+    // },
+
+
 ]
