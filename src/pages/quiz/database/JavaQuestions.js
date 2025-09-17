@@ -573,8 +573,45 @@ nums[3] = 20
         answer: "^fruits\\.remove\\(\\s*\"Apples\"\\s*\\);?$"
 
     },
+    {
+        id: 38,
+        type: 'input',
+        category: 'Java',
+        subcategory: 'array',
+        title: 'How long',
+        question: `How do you find the length of the array \`numbers\`?`,
+        options: [""],
+        random: false,
+        answer: "^numbers\\.length\\s*;?$",
+        description: `**Answer**: \`numbers.length\` \n
+*Remember kids:* \`length\` is a field for arrays, while \`length()\` is a method for string objects!`
+    },
+    {
+        id: 39,
+        type: 'input',
+        category: 'Java',
+        subcategory: 'array',
+        title: 'Initialize this',
+        question: `How do you declare and initialize an array of integers \`scores\` with the values \`10, 20, 30\` in one line?`,
+        options: [""],
+        random: false,
+        answer: "^int\\[\\]\\s*scores\\s*=\\s*\\{\\s*10\\s*,\\s*20\\s*,\\s*30\\s*\\};?$",
+    },
+    {
+        id: 40,
+        type: 'input',
+        category: 'Java',
+        subcategory: 'array',
+        title: 'Built-in sortation',
+        question: `How do you sort the \`scores\` array in ascending order using built-in Java methods?`,
+        options: [""],
+        random: false,
+        answer: "^Arrays\\.sort\\(\\s*scores\\s*\\);?$",
+        description: `**Answer:** \`Arrays.sort(scores)\` \n
+Don't forget to \`import java.util.Arrays;\` at the top!`
+    },
     // {
-    //     id: 38,
+    //     id: 41,
     //     type: 'input',
     //     category: 'Java',
     //     subcategory: 'hashmap',
@@ -585,7 +622,7 @@ nums[3] = 20
     //     answer: ""
     // },
     // {
-    //     id: 39,
+    //     id: 41,
     //     type: 'input',
     //     category: 'Java',
     //     subcategory: 'hashmap',
@@ -596,7 +633,62 @@ nums[3] = 20
     //     answer: ""
     // },
     // {
-    //     id: 40,
+    //     id: 41,
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'hashmap',
+    //     title: '',
+    //     question: ``,
+    //     options: [""],
+    //     random: false,
+    //     answer: ""
+    // },
+    // {
+    //     id: 41,
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'hashmap',
+    //     title: '',
+    //     question: ``,
+    //     options: [""],
+    //     random: false,
+    //     answer: ""
+    // },
+    // {
+    //     id: 41,
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'hashmap',
+    //     title: '',
+    //     question: ``,
+    //     options: [""],
+    //     random: false,
+    //     answer: ""
+    // },
+    // {
+    //     id: 41,
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'hashmap',
+    //     title: '',
+    //     question: ``,
+    //     options: [""],
+    //     random: false,
+    //     answer: ""
+    // },
+    // {
+    //     id: 41,
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'hashmap',
+    //     title: '',
+    //     question: ``,
+    //     options: [""],
+    //     random: false,
+    //     answer: ""
+    // },
+    // {
+    //     id: 41,
     //     type: 'input',
     //     category: 'Java',
     //     subcategory: 'hashmap',
