@@ -21,6 +21,7 @@ const settings = ['Login - Coming 2026']
 
 const learningSections = [
     { label: "Introduction to Computers", href: "/intro" },
+    { label: "Low-Level", href: "/lowlevel" },
     { label: "CyberSecurity", href: "/cybersecurity" },
     { label: "Java", href: "/java" },
     { label: "Python", href: "/python" },

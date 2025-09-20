@@ -12,6 +12,7 @@ import CSharp from './pages/cSharp/CSharp'
 import Layout from './components/Layout'
 import Redis from './pages/redis/Redis'
 import CyberSecurity from './pages/cybersecurity/CyberSecurity'
+import LowLevel from './pages/low-level/LowLevel'
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
   HashRouter,
@@ -40,6 +41,7 @@ function App() {
             <Route path='/quiz' element={<QuizList />} />
             <Route path='/quiz/:quizId' element={<Quiz />} />
             <Route path='/about' element={<About />} />
+            <Route path='/lowlevel' element={<LowLevel />} />
             <Route path='*' element={<NoPage />} />
           </Route>
         </Routes>

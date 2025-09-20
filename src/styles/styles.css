@@ -65,6 +65,12 @@ blockquote {
     font-style: italic;
 }
 
+.centerLatex {
+    margin: 10px auto;
+    width: 100%;
+    text-align: center;
+}
+
 /********************************* C O M P O N E N T S *********************************/
 /*************************** N A V B A R | C O M P O N E N T ***************************/
 
