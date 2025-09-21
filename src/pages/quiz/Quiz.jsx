@@ -21,6 +21,7 @@ export default function Quiz() {
     const navigate = useNavigate()
 
     const quizImports = {
+        lowlevel: () => import('./database/LowLevelQuestions.js'),
         js: () => import('./database/JavaScriptQuestions.js'),
         react: () => import('./database/ReactQuestions.js'),
         networking: () => import('./database/Networking.js'),

@@ -13,6 +13,12 @@ import javaImg from "../../assets/quiz/java-card.png"
 
 const quizList = [
     {
+        id: "lowlevel",
+        title: "Systems Programming",
+        dataFile: "../../quiz/database/LowLevelQuestions.js",
+        cardImage: memoryImg
+    },
+    {
         id: "js",
         title: "ES6 & more",
         dataFile: "../../quiz/database/jsQuestions.js",
