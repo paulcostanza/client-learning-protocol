@@ -54,7 +54,7 @@ export default [
         id: 4,
         type: 'checkbox',
         title: 'Presentation Powers',
-        question: "Which common services occur at the presentation layer of the OSI Model?",
+        question: "Which common service(s) occur at the presentation layer of the OSI Model?",
         options: [
             'encryption',
             'compression',
@@ -142,7 +142,7 @@ export default [
     {
         id: 11,
         type: 'checkbox',
-        title: 'App Lyaer All-Stars',
+        title: 'App Layer All-Stars',
         question: "Which protocol(s) operate at the application layer of the OSI Model",
         options: [
             'SMTP',

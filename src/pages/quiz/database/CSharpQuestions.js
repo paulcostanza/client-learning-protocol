@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         type: 'radio',
-        question: 'What is the primary purpose of the CLR in the .NET framwork?',
+        question: 'What is the primary purpose of the CLR in the .NET framework?',
         options: [
             'to compile C# code directly to machine code',
             'to manage memory allocation only',
@@ -10,7 +10,7 @@ export default [
             'to provide a graphical user interface'
         ],
         answer: 'to convert IL code into machine code at runtime',
-        description: 'The CLR\'s (Common Language Runtime) purpose is...'
+        description: 'The Common Language Runtime (CLR) is the virtual machine component of .NET. It manages the execution of .NET programs by converting Intermediate Language (IL) code into machine code at runtime, handling memory management, security, and exception handling.'
     },
     {
         id: 2,

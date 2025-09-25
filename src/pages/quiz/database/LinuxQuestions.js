@@ -296,7 +296,7 @@ export default [
         id: 20,
         type: 'radio',
         title: 'Puppies!',
-        question: "Say you have a folder named \`puppy_pics\`. Why does Linus require \`puppy_pics\` to run a program in the current directory?",
+        question: "Say you have a folder named \`puppy_pics\`. Why does Linux require \`puppy_pics\` to run a program in the current directory?",
         options: [
             'for security',
             'to list files',
