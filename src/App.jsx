@@ -5,7 +5,8 @@ import Java from './pages/java/Java'
 import React from './pages/react/React'
 import Quiz from './pages/quiz/Quiz'
 import QuizList from './pages/quiz/QuizList'
-import About from './pages/about/About'
+import AboutCLP from './pages/about/clp/AboutCLP'
+import AboutMe from './pages/about/me/AboutMe'
 import NoPage from './pages/NoPage'
 import C from './pages/C/C'
 import CSharp from './pages/cSharp/CSharp'
@@ -40,7 +41,8 @@ function App() {
             <Route path='/redis' element={<Redis />} />
             <Route path='/quiz' element={<QuizList />} />
             <Route path='/quiz/:quizId' element={<Quiz />} />
-            <Route path='/about' element={<About />} />
+            <Route path='/about/clp' element={<AboutCLP />} />
+            <Route path='/about/me' element={<AboutMe />} />
             <Route path='/lowlevel' element={<LowLevel />} />
             <Route path='*' element={<NoPage />} />
           </Route>

@@ -31,12 +31,18 @@ const learningSections = [
     { label: "Redis", href: "/redis" },
 ]
 
+const aboutSections = [
+    { label: "CLP", href: "/about/clp" },
+    { label: "Me", href: "/about/me" },
+]
+
 
 export default function NavBar() {
 
     const [anchorElNav, setAnchorElNav] = useState(null)
     const [anchorElUser, setAnchorElUser] = useState(null)
     const [anchorElLearning, setAnchorElLearning] = useState(null)
+    const [anchorElAbout, setAnchorElAbout] = useState(null)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget)
@@ -58,6 +64,14 @@ export default function NavBar() {
     }
     const handleCloseLearningMenu = () => {
         setAnchorElLearning(null)
+    }
+
+    const handleOpenAboutMenu = (event) => {
+        setAnchorElAbout(event.currentTarget)
+    }
+
+    const handleCloseAboutMenu = (event) => {
+        setAnchorElAbout(null)
     }
 
     const [activeLink, setActiveLink] = useState('')
@@ -135,13 +149,40 @@ export default function NavBar() {
                             >
                                 QUIZ
                             </Button>
-                            <Button
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                                component={Link}
-                                to="/about"
-                            >
-                                ABOUT
-                            </Button>
+                            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                                <Button
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                    // component={Link}
+                                    onClick={handleOpenAboutMenu}
+                                    to="/about"
+                                >
+                                    ABOUT
+                                </Button>
+                                <Menu
+                                    anchorEl={anchorElAbout}
+                                    open={Boolean(anchorElAbout)}
+                                    onClose={handleCloseAboutMenu}
+                                    PaperProps={{
+                                        sx: {
+                                            backgroundColor: "#23272a",
+                                            color: "#fff",
+                                            borderRadius: 4,
+                                            boxShadow: 9,
+                                        }
+                                    }}
+                                >
+                                    {aboutSections.map(section => (
+                                        <MenuItem key={section.label} onClick={handleCloseAboutMenu}>
+                                            <Link
+                                                to={section.href}
+                                                style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
+                                            >
+                                                {section.label}
+                                            </Link>
+                                        </MenuItem>
+                                    ))}
+                                </Menu>
+                            </Box>
                         </Box>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none', color: '#fff' } }}>
@@ -247,12 +288,23 @@ export default function NavBar() {
                                     Quiz
                                 </Link>
                             </MenuItem>
-                            <MenuItem onClick={handleCloseNavMenu}>
+                            <MenuItem disabled sx={{ opacity: 0.7, pl: 1, fontWeight: 'bold' }}>
+                                About
+                            </MenuItem>
+                            <MenuItem onClick={handleCloseNavMenu} sx={{ pl: 3 }}>
                                 <Link
-                                    to="/about"
+                                    to="/about/clp"
                                     style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
                                 >
-                                    About
+                                    CLP
+                                </Link>
+                            </MenuItem>
+                            <MenuItem onClick={handleCloseNavMenu} sx={{ pl: 3 }}>
+                                <Link
+                                    to="/about/me"
+                                    style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
+                                >
+                                    Me
                                 </Link>
                             </MenuItem>
                         </Menu>
