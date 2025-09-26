@@ -92,6 +92,12 @@ export default function QuestionList() {
         setModalOpen(true)
     }
 
+    function handleRandomQuestion() {
+        if (filteredQuestions.length === 0) return
+        const randomIdx = Math.floor(Math.random() * filteredQuestions.length)
+        setSelectedQuestion(filteredQuestions[randomIdx])
+        setModalOpen(true)
+    }
 
     // may need to add loading indicator
     // when questions are being fetched from database
@@ -107,6 +113,8 @@ export default function QuestionList() {
                 setReview={setReview}
                 category={category}
                 setCategory={setCategory}
+                onRandom={handleRandomQuestion}
+                randomDisabled={filteredQuestions.length === 0}
             />
             <Paper elevation={9} >
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>

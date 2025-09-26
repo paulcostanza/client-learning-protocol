@@ -1,6 +1,8 @@
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 import Select from '@mui/material/Select'
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 
 function FilterSelect({ value, onChange, label, options }) {
     const selected = options.find(opt => opt.value === value)
@@ -50,7 +52,9 @@ export default function SelectAQuestionFilter({
     review,
     setReview,
     category,
-    setCategory
+    setCategory,
+    onRandom,
+    randomDisabled
 }) {
     const handleStatus = event => setStatus(event.target.value)
     const handleReview = event => setReview(event.target.value)
@@ -94,9 +98,8 @@ export default function SelectAQuestionFilter({
     return (
         <div className="questionFilter">
             <div className="filters">
-                <div className="filter" style={{ display: 'flex', justifyContent: 'space-evenly', alignItems: 'end' }}>
-                    <h4>Filters</h4>
-                    <div className='filter-buttons' style={{ display: 'flex', gap: '16px' }}>
+                <div className="filter" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div className='filter-buttons' >
                         <FormControl sx={{ m: 1, minWidth: 120 }}>
                             <FilterSelect
                                 value={status}
@@ -121,19 +124,30 @@ export default function SelectAQuestionFilter({
                                 options={categoryOptions}
                             />
                         </FormControl>
-
-
-                        {/* <div className="randomQuestion">
-                            Random Question
-                        </div> */}
                     </div>
-                    <button onClick={handleReset} style={{ height: 40, alignSelf: 'center' }}>
-                        Reset
-                    </button>
+                    <div className='buttons'>
+                        <Box sx={{ '& button': { m: 1 } }}>
+                            <Button
+                                sx={{ fontWeight: 'bold' }}
+                                color="primary"
+                                variant="contained"
+                                size="large"
+                                onClick={onRandom}
+                                disabled={randomDisabled}
+                            >Random</Button>
+                            <Button
+                                sx={{ fontWeight: 'bold' }}
+                                color="error"
+                                variant="contained"
+                                size="large"
+                                onClick={handleReset}
+                            >
+                                Reset
+                            </Button>
+                        </Box>
+                    </div>
                 </div>
             </div>
-
-
         </div>
     )
 }

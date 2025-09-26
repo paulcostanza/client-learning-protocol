@@ -586,19 +586,26 @@ input[type="checkbox"]:checked+label::before {
     text-align: center;
 }
 
-.dontInclude {
-    border: 3px solid aqua;
-}
-
-.randomQuestion {
-    margin-top: 5px;
-    text-align: center;
-    border: 3px solid white;
-}
-
-@media (max-width: 700px) {
-    .filter-buttons {
+@media(max-width: 700px) {
+    .filter {
         flex-direction: column;
+    }
+
+    .filter-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 500px) {
+    .filter {
+        flex-direction: column;
+    }
+
+    .filter-buttons {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }
 
