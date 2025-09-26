@@ -4,8 +4,8 @@ import Paper from "@mui/material/Paper"
 import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
-import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
 
 import Box from "@mui/material/Box"
 import ModalForQuestions from "./ModalForQuestions.jsx"
@@ -14,28 +14,30 @@ import {
     getNextReview,
     getHumanReadableNextReview
 } from "../../Helpers/localStorageHelper.js"
+import SelectAQuestionFilter from "./SelectAQuestionFilter.jsx"
+
+function filterQuestions(questions, status, review, category) {
+    return questions.filter(q => {
+        const nextReviewTimestamp = getNextReview(q.quizKey, q.id)
+        const reviewValue = getHumanReadableNextReview(nextReviewTimestamp)
+        const statusValue = reviewValue === 'Ready!' ? 'ready' : getQuestionStatus(q.quizKey, q.id)
+
+        const statusMatch = !status || statusValue === status
+        const reviewMatch = !review || reviewValue === review
+        const categoryMatch = !category || q.quizKey.toLowerCase() === category.toLowerCase()
+
+        return statusMatch && reviewMatch && categoryMatch
+    })
+}
 
 export default function QuestionList() {
-    const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
+    const [page, setPage] = React.useState(0)
+    const [rowsPerPage, setRowsPerPage] = React.useState(10)
     const [modalOpen, setModalOpen] = useState(false)
     const [selectedQuestion, setSelectedQuestion] = useState(null)
-
-    const maxLengthOfQuestionInColumn = 30;
-
-    const handleChangePage = (event, newPage) => {
-        setPage(newPage);
-    };
-
-    const handleChangeRowsPerPage = (event) => {
-        setRowsPerPage(parseInt(event.target.value, 10));
-        setPage(0);
-    };
-
-    const handleRowClick = (question) => {
-        setSelectedQuestion(question)
-        setModalOpen(true)
-    }
+    const [status, setStatus] = useState('')
+    const [review, setReview] = useState('')
+    const [category, setCategory] = useState('')
 
     const quizImports = {
         lowlevel: () => import('./database/LowLevelQuestions.js'),
@@ -51,10 +53,10 @@ export default function QuestionList() {
         programming101: () => import('./database/Programming101Questions.js'),
         cybersecurity: () => import('./database/CyberSecurityQuestions.js'),
         linux: () => import('./database/LinuxQuestions.js')
-    };
+    }
 
-    const quizKeys = Object.keys(quizImports);
-    const [allQuestions, setAllQuestions] = useState([]);
+    const quizKeys = Object.keys(quizImports)
+    const [allQuestions, setAllQuestions] = useState([])
 
     useEffect(() => {
         Promise.all(
@@ -67,10 +69,29 @@ export default function QuestionList() {
         ).then(results => {
             const questions = results.flatMap(({ quizKey, questions }) =>
                 questions.map(q => ({ ...q, quizKey }))
-            );
-            setAllQuestions(questions);
-        });
-    }, []);
+            )
+            setAllQuestions(questions)
+        })
+    }, [])
+
+
+    const filteredQuestions = filterQuestions(allQuestions, status, review, category)
+    const maxLengthOfQuestionInColumn = 30
+
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage)
+    }
+
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(parseInt(event.target.value, 10))
+        setPage(0)
+    }
+
+    const handleRowClick = (question) => {
+        setSelectedQuestion(question)
+        setModalOpen(true)
+    }
+
 
     // may need to add loading indicator
     // when questions are being fetched from database
@@ -79,6 +100,14 @@ export default function QuestionList() {
     return (
         <div className="container">
             <h1>Select a Question</h1>
+            <SelectAQuestionFilter
+                status={status}
+                setStatus={setStatus}
+                review={review}
+                setReview={setReview}
+                category={category}
+                setCategory={setCategory}
+            />
             <Paper elevation={9} >
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>
                     <Table
@@ -111,7 +140,7 @@ export default function QuestionList() {
                             </TableRow>
                         </TableHead>
                         <tbody>
-                            {allQuestions
+                            {filteredQuestions
                                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                                 .map((q, idx) => {
                                     const nextReviewTimestamp = getNextReview(q.quizKey, q.id)
@@ -156,7 +185,9 @@ export default function QuestionList() {
                     border: '1px solid #fff',
                 }}>
                     <span>
-                        {`${page * rowsPerPage + 1}–${Math.min((page + 1) * rowsPerPage, allQuestions.length)} of ${allQuestions.length}`}
+                        {filteredQuestions.length === 0
+                            ? 'No questions'
+                            : `${page * rowsPerPage + 1}–${Math.min((page + 1) * rowsPerPage, filteredQuestions.length)} of ${filteredQuestions.length}`}
                     </span>
                     <Box
                         className="rows-per-page"
@@ -167,9 +198,9 @@ export default function QuestionList() {
                             onChange={handleChangeRowsPerPage}
                             style={{ padding: '4px 8px', cursor: 'pointer' }}
                         >
-                            {[5, 10, 25, 50, allQuestions.length].map(opt => (
+                            {[5, 10, 25, 50, filteredQuestions.length].map(opt => (
                                 <option key={opt} value={opt}>
-                                    {opt === allQuestions.length ? 'All' : opt}
+                                    {opt === filteredQuestions.length ? 'All' : opt}
                                 </option>
                             ))}
                         </select>
@@ -184,7 +215,7 @@ export default function QuestionList() {
                         </button>
                         <button
                             onClick={() => handleChangePage(null, page + 1)}
-                            disabled={(page + 1) * rowsPerPage >= allQuestions.length}
+                            disabled={(page + 1) * rowsPerPage >= filteredQuestions.length}
                         >
                             <ArrowForwardIosIcon />
                         </button>
@@ -198,5 +229,5 @@ export default function QuestionList() {
                 question={selectedQuestion}
             />
         </div>
-    );
+    )
 }

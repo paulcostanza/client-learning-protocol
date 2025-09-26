@@ -572,6 +572,36 @@ input[type="checkbox"]:checked+label::before {
     }
 }
 
+/******************* S E L E C T | A | Q U E S T I O N | F I L T E R *******************/
+
+/* Prevents blue outline when dropbox is focus/active */
+.MuiOutlinedInput-notchedOutline {
+    border-color: white !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.filter {
+    border: 1px solid white;
+    text-align: center;
+}
+
+.dontInclude {
+    border: 3px solid aqua;
+}
+
+.randomQuestion {
+    margin-top: 5px;
+    text-align: center;
+    border: 3px solid white;
+}
+
+@media (max-width: 700px) {
+    .filter-buttons {
+        flex-direction: column;
+    }
+}
+
 /*************** S E L E C T | A | Q U E S T I O N | P A G I N A T I O N ***************/
 
 @media (max-width: 600px) {
