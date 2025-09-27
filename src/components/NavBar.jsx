@@ -242,7 +242,6 @@ export default function NavBar() {
                                 />
                             </Link>
                         </Box>
-
                         <Menu
                             id="menu-appbar"
                             anchorEl={anchorElNav}
@@ -269,6 +268,10 @@ export default function NavBar() {
                                 }
                             }}
                         >
+                            {/* Learning section */}
+                            <MenuItem disabled sx={{ opacity: 0.7, pl: 1, fontWeight: 'bold' }}>
+                                Learning
+                            </MenuItem>
                             {learningSections.map(section => (
                                 <MenuItem key={section.label} onClick={handleCloseNavMenu}>
                                     <Link
@@ -279,7 +282,10 @@ export default function NavBar() {
                                     </Link>
                                 </MenuItem>
                             ))}
-                            {/* Other pages */}
+                            {/* Practice section */}
+                            <MenuItem disabled sx={{ opacity: 0.7, pl: 1, fontWeight: 'bold' }}>
+                                Practice
+                            </MenuItem>
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <Link
                                     to="/quiz"
@@ -288,6 +294,7 @@ export default function NavBar() {
                                     Quiz
                                 </Link>
                             </MenuItem>
+                            {/* About section */}
                             <MenuItem disabled sx={{ opacity: 0.7, pl: 1, fontWeight: 'bold' }}>
                                 About
                             </MenuItem>
