@@ -343,7 +343,10 @@ export default [
             'hub',
             'network cabling',
             'repeater'
-        ]
+        ],
+        description: `- hub: device that connects multiple computers in a network
+- network cabling: the wires that physically connect devices
+- repeater: device that regenerates or amplifies signals to extend the distance they can travel over the network`
     },
     {
         id: 22,
@@ -383,7 +386,7 @@ export default [
     {
         id: 24,
         type: 'checkbox',
-        title: '',
+        title: 'On that DLL',
         question: "Which of the following reside(s) at the Data Link Layer?",
         options: [
             'bridge',
@@ -397,7 +400,14 @@ export default [
             'bridge',
             'switch',
             'network adapter'
-        ]
+        ],
+        description: `
+
+- bridge: connects and filters traffic between two network segments using MAC addresses
+- switch: forwards frames between devices on the same network using MAC addresses
+- network adapter: the NIC. It provides the hardware interface for a device to connect to a network while handing framing and MAC addressing
+
+`
     },
     {
         id: 25,
@@ -438,7 +448,7 @@ export default [
     {
         id: 27,
         type: 'checkbox',
-        title: '',
+        title: 'Pro network',
         question: "Which of the protocols listed reside at the Network Layer of the OSI model?",
         options: [
             'ICMP',
@@ -451,7 +461,8 @@ export default [
         answer: [
             'ICMP',
             'IP'
-        ]
+        ],
+        description: ``
     },
     {
         id: 28,
@@ -508,6 +519,7 @@ export default [
         ],
         random: true,
         answer: 'Data Link Layer',
+        description: `A **NIC** *(Network Interface Card)* is a hardware device that connects a computer to a network. It is responsible for handling MAC addresses, framing, and node-to-node communication within the same local network.`
     },
     {
         id: 31,
@@ -593,7 +605,10 @@ export default [
             'ICMP'
         ],
         random: true,
-        answer: 'ARP'
+        answer: 'ARP',
+        desciption: `**Answer:** ARP - Address Resolution Protocol
+        
+Used to map an IP address to a physical machine address (MAC address) on a local network`
     },
 
 ]

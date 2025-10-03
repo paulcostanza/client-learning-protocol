@@ -13,7 +13,7 @@ export default function AboutCLP() {
                             century people, we have the internet. Learning shouldn't be put behind paywalls and only available to those
                             with the financial means. </p>
 
-                        <p>As you can tell, the site is currently under construction, and I am trying to add as much as I can, as quickly as I can. Here you will (eventually) find everything you will need when learning about computer programming. Syntax, how the available at your fingertips. All you need is the willingness to put in the time and some patience. And lots of repetition.</p>
+                        <p>As you can tell, the site is currently under construction, and I am trying to add as much as I can, as quickly as I can. Here you will (eventually) find everything you will need when learning about computer programming. Syntax, how the computer runs, LLMs, crypto, networking, the latest trends and history of programming are (will be) available at your finger tips. All you need is the willingness to put in the time and some patience. And lots of repetition.</p>
 
                         <p>So be sure to sit back, relax, and have fun. Because that's what programming should be all about, having fun
                             and enjoying the process.</p>

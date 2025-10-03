@@ -117,7 +117,7 @@ export default [
         category: 'java',
         subcategory: 'intro',
         title: 'Compile this',
-        question: "What is a compiler?",
+        question: "From a Java standpoint, what is a compiler?",
         options: [
             'a program that translates source code into machine code',
             'a program that translates source code into byte code',
@@ -126,6 +126,8 @@ export default [
         ],
         random: true,
         answer: 'a program that translates source code into byte code',
+        description: `Order of operations for compiling a Java file: 
+\`source code (.java)\` → \`compiler (javac)\` → \`byte code (.class)\` → \`JVM\` → \`machine code\``
     },
     {
         id: 9,
@@ -559,7 +561,8 @@ nums[3] = 20
         question: `How do you check if the hashmap "food" has the key "Bananas"?`,
         options: [""],
         random: false,
-        answer: "^food\\.containsKey\\(\\s*\"Bananas\"\\s*\\);?$"
+        answer: "^food\\.containsKey\\(\\s*\"Bananas\"\\s*\\);?$",
+        description: '**Answer:** \`food.containsKey("Bananas");\`'
     },
     {
         id: 37,
@@ -570,7 +573,8 @@ nums[3] = 20
         question: `How do you delete the entry with the key "Apples" from the HashMap "fruits"?`,
         options: [""],
         random: false,
-        answer: "^fruits\\.remove\\(\\s*\"Apples\"\\s*\\);?$"
+        answer: "^fruits\\.remove\\(\\s*\"Apples\"\\s*\\);?$",
+        description: '**Answer:** \`fruits.remove("Apples");\`'
 
     },
     {

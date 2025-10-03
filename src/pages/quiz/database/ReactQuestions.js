@@ -283,7 +283,7 @@ root.render(
         type: 'input',
         category: 'React',
         subcategory: '',
-        title: 'Effective rendering',
+        title: 'Fetch after render',
         question: `Which react hook runs effects, such as fetching data, after rendering?`,
         options: [""],
         random: false,

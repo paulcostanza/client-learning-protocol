@@ -708,3 +708,18 @@ input[type="checkbox"]:checked+label::before {
     margin-left: 0 !important;
     cursor: pointer;
 }
+
+/* Restore bullets for answer descriptions inside modal */
+.answer-description ul,
+.answer-description li {
+    list-style-type: disc !important;
+    margin-left: 3px !important;
+    cursor: auto !important;
+}
+
+.answer-description pre {
+    border-radius: 12px;
+    background: #1d1f21;
+    padding: 12px;
+    margin-bottom: 5px;
+}
