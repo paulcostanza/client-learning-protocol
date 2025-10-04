@@ -20,15 +20,35 @@ const pages = ['Learning', 'Quiz', 'About'] // Games...when ever I get to it
 const settings = ['Login - Coming 2026']
 
 const learningSections = [
-    { label: "Introduction to Computers", href: "/intro" },
-    { label: "Low-Level", href: "/lowlevel" },
-    { label: "CyberSecurity", href: "/cybersecurity" },
-    { label: "Java", href: "/java" },
-    { label: "Python", href: "/python" },
-    { label: "C", href: "/c" },
-    { label: "C#", href: "/csharp" },
-    { label: "React", href: "/react" },
-    { label: "Redis", href: "/redis" },
+    {
+        category: "Computer Science 101",
+        sections: [
+            { label: "Introduction to Computers", href: "/intro" },
+            { label: "Low-Level", href: "/lowlevel" },
+            { label: "CyberSecurity", href: "/cybersecurity" },
+        ]
+    },
+    {
+        category: "Languages",
+        sections: [
+            { label: "Java", href: "/java" },
+            { label: "Python", href: "/python" },
+            { label: "C", href: "/c" },
+            { label: "C#", href: "/csharp" },
+        ]
+    },
+    {
+        category: "Frameworks & Libraries",
+        sections: [
+            { label: "React", href: "/react" },
+        ]
+    },
+    {
+        category: "Databases & Data Stores",
+        sections: [
+            { label: "Redis", href: "/redis" },
+        ]
+    },
 ]
 
 const aboutSections = [
@@ -128,18 +148,26 @@ export default function NavBar() {
                                         color: "#fff",
                                         borderRadius: 4,
                                         boxShadow: 9,
+                                        maxHeight: 450,
                                     }
                                 }}
                             >
                                 {learningSections.map(section => (
-                                    <MenuItem key={section.label} onClick={handleCloseLearningMenu}>
-                                        <Link
-                                            to={section.href}
-                                            style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
-                                        >
-                                            {section.label}
-                                        </Link>
-                                    </MenuItem>
+                                    <div key={section.category}>
+                                        <MenuItem disabled sx={{ opacity: 0.7, pl: 1, fontWeight: 'bold' }}>
+                                            {section.category}
+                                        </MenuItem>
+                                        {section.sections.map(section => (
+                                            <MenuItem key={section.label} onClick={handleCloseLearningMenu}>
+                                                <Link
+                                                    to={section.href}
+                                                    style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
+                                                >
+                                                    {section.label}
+                                                </Link>
+                                            </MenuItem>
+                                        ))}
+                                    </div>
                                 ))}
                             </Menu>
                             <Button
@@ -269,18 +297,22 @@ export default function NavBar() {
                             }}
                         >
                             {/* Learning section */}
-                            <MenuItem disabled sx={{ opacity: 0.7, pl: 1, fontWeight: 'bold' }}>
-                                Learning
-                            </MenuItem>
                             {learningSections.map(section => (
-                                <MenuItem key={section.label} onClick={handleCloseNavMenu}>
-                                    <Link
-                                        to={section.href}
-                                        style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
-                                    >
-                                        {section.label}
-                                    </Link>
-                                </MenuItem>
+                                <div key={section.category}>
+                                    <MenuItem disabled sx={{ opacity: 0.7, pl: 1, fontWeight: 'bold' }}>
+                                        {section.category}
+                                    </MenuItem>
+                                    {section.sections.map(sub => (
+                                        <MenuItem key={sub.label} onClick={handleCloseNavMenu}>
+                                            <Link
+                                                to={sub.href}
+                                                style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
+                                            >
+                                                {sub.label}
+                                            </Link>
+                                        </MenuItem>
+                                    ))}
+                                </div>
                             ))}
                             {/* Practice section */}
                             <MenuItem disabled sx={{ opacity: 0.7, pl: 1, fontWeight: 'bold' }}>
