@@ -27,7 +27,7 @@ console.log(<h1>Hello world!</h1>)
         type: 'radio',
         category: 'React',
         subcategory: '',
-        title: 'Parent Trap',
+        title: 'Bad react',
         question: `What is wrong with this code:
         
 ~~~jsx

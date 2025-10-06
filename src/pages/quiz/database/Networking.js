@@ -191,13 +191,13 @@ export default [
             'routing'
         ],
         description: `**Correct**
-- Routing: The network layer is responsible for determining the best path for data to travel across networks.
+- **Routing:** The network layer is responsible for determining the best path for data to travel across networks.
 
 **Incorrect**
-- Error detection: usually performed at the data link or transport layers.
-- Flow control: transport layer (e.g., TCP)
-- Segmentation: transport layer (breaking data into segments)
-- Multiplexing:transport layer function (combining multiple signals)
+- **Error detection:** usually performed at the data link or transport layers.
+- **Flow control:** transport layer (e.g., TCP)
+- **Segmentation:** transport layer (breaking data into segments)
+- **Multiplexing:** transport layer function (combining multiple signals)
 `
     },
     {
@@ -329,7 +329,7 @@ export default [
     {
         id: 21,
         type: 'checkbox',
-        title: '',
+        title: 'Physical equipment',
         question: "What type of equipment resides at the Physical Layer of the OSI model?",
         options: [
             'router',
@@ -344,9 +344,9 @@ export default [
             'network cabling',
             'repeater'
         ],
-        description: `- hub: device that connects multiple computers in a network
-- network cabling: the wires that physically connect devices
-- repeater: device that regenerates or amplifies signals to extend the distance they can travel over the network`
+        description: `- **hub:** device that connects multiple computers in a network
+- **network cabling:** the wires that physically connect devices
+- **repeater:** device that regenerates or amplifies signals to extend the distance they can travel over the network`
     },
     {
         id: 22,
@@ -401,11 +401,9 @@ export default [
             'switch',
             'network adapter'
         ],
-        description: `
-
-- bridge: connects and filters traffic between two network segments using MAC addresses
-- switch: forwards frames between devices on the same network using MAC addresses
-- network adapter: the NIC. It provides the hardware interface for a device to connect to a network while handing framing and MAC addressing
+        description: `- **bridge:** connects and filters traffic between two network segments using MAC addresses
+- **switch:** forwards frames between devices on the same network using MAC addresses
+- **network adapter:** the NIC. It provides the hardware interface for a device to connect to a network while handing framing and MAC addressing
 
 `
     },
@@ -462,7 +460,8 @@ export default [
             'ICMP',
             'IP'
         ],
-        description: ``
+        description: `- **ICMP:** *Internet Control Message Protocol* is used for sending error messages and operational information
+- **IP:** *Internet Protocol* is responsible for addressing and routing packets between devices accross neworks`
     },
     {
         id: 28,

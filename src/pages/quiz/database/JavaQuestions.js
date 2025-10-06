@@ -600,6 +600,7 @@ nums[3] = 20
         options: [""],
         random: false,
         answer: "^int\\[\\]\\s*scores\\s*=\\s*\\{\\s*10\\s*,\\s*20\\s*,\\s*30\\s*\\};?$",
+        description: '**Answer:** \`int[] scores = {10, 20, 30};\`'
     },
     {
         id: 40,

@@ -133,15 +133,18 @@ export default [
     {
         id: 10,
         type: 'radio',
-        title: 'Meaning of Tilde',
-        question: "What does the \`~\` symbol represent in the terminal prompt?",
+        title: 'Hidden files',
+        question: "In Linux, which character at the beginning of a filename makes the file hidden by default?",
         options: [
-            'the root directory',
-            'the current working directory',
-            'the user\'s home directory',
-            'the system configuration directory',
+            '\`~\`',
+            '\`.\`',
+            '\`/\`',
+            '\`#\`',
+            '\`-\`',
+            '\`@\`',
         ],
-        answer: 'the user\'s home directory',
+        answer: '\`.\`',
+        description: "Files and directories that start with a dot \`.\` are hidden by default in Linux. You can view them with the \`ls -a\` command."
     },
     {
         id: 11,
@@ -295,8 +298,8 @@ export default [
     {
         id: 20,
         type: 'radio',
-        title: 'Puppies!',
-        question: "Say you have a folder named \`puppy_pics\`. Why does Linux require \`puppy_pics\` to run a program in the current directory?",
+        title: 'program_name',
+        question: "Why do you need to type `\./program_name\` to run a program in the current directory on Linux, instead of just typing `\program_name\`?",
         options: [
             'for security',
             'to list files',
@@ -304,15 +307,13 @@ export default [
             'to show hidden files',
         ],
         answer: 'for security',
-        description: `**Answer:**  For security, so you do not accidentally run programs named like system utilities.
+        description: `By default, when you type a command in Linux, the shell searches for the command in directories listed in your \`PATH\` environment variable (usually system directories like \`/bin\`). It *does not* search the current directory for executables unless you explicitly specify it with \`./\`.
 
-By default, when you type a command in Linux the shell searches for the command in directories listed in your \`PATH\` environment variable (usually system directories like \`bin\`). It *does not* search the current directory for executables unless you explicitly specify it with the folder name, in this case, with \`puppy_pics\`.
+This prevents accidental execution of a program in your current directory that might have the same name as a trusted system command.
 
-This prevents accidental execution of a program in your current directory that might have the same name as a trusted system command. 
+For example, if you downloaded a file named \`ls\` and run \`ls\`, you would just list whatever was in the directory. To actually run it would require \`./ls\`.
 
-For example, if you downloaded a file named \`ls\` and run \`ls\`, you want to be sure you are running the real system \`ls\`, and not a potentially malicious file in your current directory!
-
-And of course, you could just use \`./\` to run the file, forgoing the need for the folder name (if inside the folder). `
+To run a program in your current directory, you must use \`./\`.`
     },
     {
         id: 21,

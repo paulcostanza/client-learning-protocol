@@ -114,13 +114,7 @@ export default [
         description: `Three ways this could happen...
 ~~~C
 int return69(void) {} // returns int, takes no arguments
-~~~
-
-~~~C
 void return69(int num) {} // returns nothing, takes an int argument
-~~~
-
-~~~C
 void return69(void) {} // returns nothing, takes no arguments
 ~~~
         `
@@ -698,13 +692,13 @@ For something like \`(*p2)[1]\`, it would mean *take the array pointed to by the
         question: `What is the difference between \`*p\` and \`&p\`?`,
         options: [
             '\`*p\` gives the address of \`p\`, and \`&p\` gives the value pointed to by \`p\`',
-            '\`*p\` gives the pointed to by \`p\`, and \`&p\` gives the address of \`p\`',
+            '\`*p\` gives the value pointed to by \`p\`, and \`&p\` gives the address of \`p\`',
             'both give the same result',
             `\`*p\` is invalid in C`,
             `\`&p\` is invalid in C`
         ],
         random: true,
-        answer: '\`*p\` gives the pointed to by \`p\`, and \`&p\` gives the address of \`p\`',
+        answer: '\`*p\` gives the value pointed to by \`p\`, and \`&p\` gives the address of \`p\`',
         description: `\`*p\` accesses the value at the address stored in \`p\`, while \`&p\` gives the address of the pointer variable itself.`
     }
 ]
