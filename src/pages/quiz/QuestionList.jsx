@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Table from '@mui/joy/Table'
 import Paper from "@mui/material/Paper"
 import TableHead from "@mui/material/TableHead"
@@ -38,6 +38,7 @@ export default function QuestionList() {
     const [status, setStatus] = useState('')
     const [review, setReview] = useState('')
     const [category, setCategory] = useState('')
+    const filterRef = useRef(null)
 
     const quizImports = {
         lowlevel: () => import('./database/LowLevelQuestions.js'),
@@ -74,6 +75,17 @@ export default function QuestionList() {
         })
     }, [])
 
+    useEffect(() => {
+        setPage(0)
+
+        if (filterRef.current) {
+            filterRef.current.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            })
+        }
+    }, [status, review, category])
+
 
     const filteredQuestions = filterQuestions(allQuestions, status, review, category)
     const maxLengthOfQuestionInColumn = 30
@@ -106,16 +118,18 @@ export default function QuestionList() {
     return (
         <div className="container">
             <h1>Select a Question</h1>
-            <SelectAQuestionFilter
-                status={status}
-                setStatus={setStatus}
-                review={review}
-                setReview={setReview}
-                category={category}
-                setCategory={setCategory}
-                onRandom={handleRandomQuestion}
-                randomDisabled={filteredQuestions.length === 0}
-            />
+            <div ref={filterRef}>
+                <SelectAQuestionFilter
+                    status={status}
+                    setStatus={setStatus}
+                    review={review}
+                    setReview={setReview}
+                    category={category}
+                    setCategory={setCategory}
+                    onRandom={handleRandomQuestion}
+                    randomDisabled={filteredQuestions.length === 0}
+                />
+            </div>
             <Paper elevation={9} >
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>
                     <Table
