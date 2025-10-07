@@ -4,10 +4,11 @@ import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight'
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const drawerWidth = 240
 
-export default function SideBarNav({ menuItems, selectedSection, setSelectedSection }) {
+export default function SideBarNav({ sections, basePath = '' }) {
     const [open, setOpen] = useState(false)
     const toggleDrawer = (newOpen) => () => setOpen(newOpen)
 
@@ -44,12 +45,12 @@ export default function SideBarNav({ menuItems, selectedSection, setSelectedSect
                 onClose={toggleDrawer(false)}
             >
                 <List>
-                    {menuItems.map(item => (
+                    {sections.map(section => (
                         <ListItem
-                            key={item}
-                            selected={selectedSection === item}
+                            key={section.path}
+                            component={NavLink}
+                            to={`${basePath}/${section.path}`}
                             onClick={() => {
-                                setSelectedSection(item)
                                 setOpen(false)
                             }}
                             sx={{
@@ -59,14 +60,21 @@ export default function SideBarNav({ menuItems, selectedSection, setSelectedSect
                                     color: '#fff',
                                     cursor: 'pointer'
                                 },
-                                color: selectedSection === item ? '#fff' : 'var(--text)'
+                                // color: selectedSection === item ? '#fff' : 'var(--text)'
                             }}
+                            style={({ isActive }) => ({
+                                // color: isActive ? '#1976d2' : 'var(--text)',
+                                color: 'var(--text)',
+                                fontWeight: isActive ? 'bold' : 'normal',
+                                textDecoration: 'none'
+                            })}
                         >
                             <ListItemText
-                                primary={item}
+                                primary={section.name}
                                 style={{
                                     cursor: 'pointer',
-                                    fontWeight: selectedSection === item ? 'bold' : 'normal'
+                                    // fontWeight: selectedSection === item ? 'bold' : 'normal'
+
                                 }}
                             />
                         </ListItem>

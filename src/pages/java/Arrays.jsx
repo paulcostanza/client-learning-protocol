@@ -78,7 +78,7 @@ public class ArrayVsArrayList {
 }`
 
     return (
-        <div>
+        <div className='container'>
             <h1>Arrays</h1>
 
             <h2>Arrays & ArrayList</h2>
