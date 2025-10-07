@@ -3,7 +3,7 @@ const e=[{id:1,type:"radio",category:"React",subcategory:"",title:"JSX Console O
 ~~~jsx
 console.log(<h1>Hello world!</h1>)
 ~~~
-        `,options:["an object","an HTML element","`undefined`","`Hello world!`","null"],random:!1,answer:"an object",description:"Not an actual HTML element like in vanilla DOM JavaScript, but an object! What is created from the JSX in our React code is a plain JS object that React will use to render and update the view efficiently."},{id:2,type:"radio",category:"React",subcategory:"",title:"Parent Trap",question:`What is wrong with this code:
+        `,options:["an object","an HTML element","`undefined`","`Hello world!`","null"],random:!1,answer:"an object",description:"Not an actual HTML element like in vanilla DOM JavaScript, but an object! What is created from the JSX in our React code is a plain JS object that React will use to render and update the view efficiently."},{id:2,type:"radio",category:"React",subcategory:"",title:"Bad react",question:`What is wrong with this code:
         
 ~~~jsx
 root.render(
