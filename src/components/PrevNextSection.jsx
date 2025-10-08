@@ -1,36 +1,21 @@
-export default function PrevNextSection({ menuItems, selectedSection, setSelectedSection }) {
-    const currentIdx = menuItems.indexOf(selectedSection)
-    const prev = menuItems[currentIdx - 1]
-    const next = menuItems[currentIdx + 1]
+import { Link, useLocation } from 'react-router-dom'
 
-    function handlePrev() {
-        if (prev) {
-            setSelectedSection(prev)
-            window.scrollTo(0, 0)
-        }
-    }
+export default function PrevNextSection({ sections, basePath = '' }) {
+    const location = useLocation()
+    const currentPath = location.pathname.replace(`${basePath}/`, '')
+    const idx = sections.findIndex(s => s.path === currentPath)
 
-    function handleNext() {
-        if (next) {
-            setSelectedSection(next)
-            window.scrollTo(0, 0)
-        }
-    }
+    const prev = idx > 0 ? sections[idx - 1] : null
+    const next = idx < sections.length - 1 ? sections[idx + 1] : null
 
     return (
         <div style={{ display: "flex", justifyContent: "space-between", marginTop: "2em" }}>
-            <button
-                disabled={!prev}
-                onClick={handlePrev}
-            >
-                {prev ? `← ${prev}` : 'Enjoy 🖥️'}
-            </button>
-            <button
-                disabled={!next}
-                onClick={handleNext}
-            >
-                {next ? `${next} →` : 'Done 😎'}
-            </button>
+            {prev ? (
+                <Link to={`${basePath}/${prev.path}`}>{`← ${prev.name}`}</Link>
+            ) : <span />}
+            {next ? (
+                <Link to={`${basePath}/${next.path}`}>{`${next.name} →`}</Link>
+            ) : <span />}
         </div>
     );
 }

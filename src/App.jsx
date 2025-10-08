@@ -46,6 +46,8 @@ import LowLevelLanding from './pages/low-level/LowLevelLanding'
 import LowLevelSectionLayout from './pages/low-level/LowLevelSectionLayout'
 import VariableSize from './pages/low-level/VariableSize'
 
+import ScrollToTop from './components/ScrollToTop'
+
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
   HashRouter,
@@ -59,6 +61,7 @@ function App() {
     <>
 
       <HashRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />

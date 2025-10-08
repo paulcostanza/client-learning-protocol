@@ -1,5 +1,6 @@
 import SectionDrawer from '../../components/SideBarNav'
 import { Outlet } from 'react-router-dom'
+import PrevNextSection from '../../components/PrevNextSection'
 
 const sections = [
     { name: 'Intro to Java', path: 'intro' },
@@ -19,6 +20,7 @@ export default function JavaSectionLayout() {
             <main>
                 <div className="container">
                     <Outlet />
+                    <PrevNextSection sections={sections} basePath='/java' />
                 </div>
             </main>
         </main>
