@@ -29,7 +29,6 @@ import Introduction from './pages/cSharp/Introduction'
 import MethodsAndFunctions from './pages/cSharp/MethodsAndFunctions'
 import ObjectOrientedProgramming from './pages/cSharp/ObjectOrientedProgramming'
 
-
 import Layout from './components/Layout'
 import Redis from './pages/redis/Redis'
 
@@ -47,6 +46,10 @@ import LowLevelSectionLayout from './pages/low-level/LowLevelSectionLayout'
 import VariableSize from './pages/low-level/VariableSize'
 
 import ScrollToTop from './components/ScrollToTop'
+
+import HTMLLanding from './pages/learning/html/setup/HTMLLanding'
+import HTMLSectionLayout from './pages/learning/html/setup/HTMLSectionLayout'
+import HTMLFundamentals from './pages/learning/html/Fundamentals'
 
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
@@ -96,9 +99,7 @@ function App() {
               <Route path='intro' element={<Introduction />} />
               <Route path='methods-and-functions' element={<MethodsAndFunctions />} />
               <Route path='oop' element={<ObjectOrientedProgramming />} />
-
             </Route>
-
 
             <Route path='/react' element={<React />} />
             <Route path='/redis' element={<Redis />} />
@@ -110,6 +111,11 @@ function App() {
             <Route path='/lowlevel' element={<LowLevelLanding />} />
             <Route path='/lowlevel' element={<LowLevelSectionLayout />}>
               <Route path='variable-size' element={<VariableSize />} />
+            </Route>
+
+            <Route path='/html' element={<HTMLLanding />} />
+            <Route path='/html' element={<HTMLSectionLayout />}>
+              <Route path='fundamentals' element={<HTMLFundamentals />} />
             </Route>
 
             <Route path='*' element={<NoPage />} />

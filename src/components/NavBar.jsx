@@ -16,7 +16,7 @@ import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 
-const pages = ['Learning', 'Quiz', 'About'] // Games...when ever I get to it
+const pages = ['Learning', 'Quiz', 'About'] // Challenges, games, blog...when ever I get to it
 const settings = ['Login - Coming 2026']
 
 const learningSections = [
@@ -26,6 +26,17 @@ const learningSections = [
             { label: "Introduction to Computers", href: "/intro" },
             { label: "Low-Level", href: "/lowlevel" },
             { label: "CyberSecurity", href: "/cybersecurity" },
+        ]
+    },
+    {
+        category: "Web Technologies",
+        sections: [
+            { label: "HTML", href: "/html" },
+            // { label: "Web APIs", href: "/webapis" },
+            // { label: "HTTP/HTTPS", href: "/http" },
+            // { label: "DOM Manipulation", href: "/dom" },
+            // { label: "Browser DevTools", href: "/devtools" },
+            // { label: "Networking", href: "/networking" },
         ]
     },
     {
