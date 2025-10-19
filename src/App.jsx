@@ -50,6 +50,11 @@ import ScrollToTop from './components/ScrollToTop'
 import HTMLLanding from './pages/learning/html/setup/HTMLLanding'
 import HTMLSectionLayout from './pages/learning/html/setup/HTMLSectionLayout'
 import HTMLFundamentals from './pages/learning/html/Fundamentals'
+import HTMLDocumentArchitecture from './pages/learning/html/DocumentArchitecture'
+import HTMLIntroIntoWebDevelopment from './pages/learning/html/IntroIntoWebDevelopment'
+import HTMLNavigationAndLinking from './pages/learning/html/NavigationAndLinking'
+import HTMLOrganizationAndStructure from './pages/learning/html/OrganizationAndStructure'
+import HTMLVisualContentAndMedia from './pages/learning/html/VisualContentAndMedia'
 
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
@@ -116,6 +121,11 @@ function App() {
             <Route path='/html' element={<HTMLLanding />} />
             <Route path='/html' element={<HTMLSectionLayout />}>
               <Route path='fundamentals' element={<HTMLFundamentals />} />
+              <Route path='document-architecture' element={<HTMLDocumentArchitecture />} />
+              <Route path='intro-into-web-development' element={<HTMLIntroIntoWebDevelopment />} />
+              <Route path='navigation-and-linking' element={<HTMLNavigationAndLinking />} />
+              <Route path='organization-and-structure' element={<HTMLOrganizationAndStructure />} />
+              <Route path='visual-content-and-media' element={<HTMLVisualContentAndMedia />} />
             </Route>
 
             <Route path='*' element={<NoPage />} />
