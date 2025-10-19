@@ -723,3 +723,29 @@ input[type="checkbox"]:checked+label::before {
     padding: 12px;
     margin-bottom: 5px;
 }
+
+/****************************** I D E | C O M P O N E N T ******************************/
+
+.code-example {
+    display: flex;
+    flex-direction: row;
+}
+
+.coding,
+.display {
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+
+    .coding,
+    .display {
+        height: 100%;
+    }
+
+    .code-example {
+        min-height: 500px;
+        height: 600px;
+        margin-bottom: 50px;
+    }
+}

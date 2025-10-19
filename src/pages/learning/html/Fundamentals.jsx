@@ -3,8 +3,12 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 // import QuestionTableList from '../../components/QuestionTableList'
 // import ModalForQuestions from '../../pages/quiz/ModalForQuestions.jsx'
+import IDE from '../../../components/IDE'
 
 export default function Fundamentals() {
+    const cssBasicCode = `body {
+background: #fff;
+color: #000}`
 
     const basicHTMLSyntx = `<!-- Some basic HTML syntax -->
 <elementName>Content goes here</elementName>
@@ -27,6 +31,10 @@ export default function Fundamentals() {
     const paragraphElement = `<h1>Here is our header</h1>
 <p>This is a paragraph, awesome!</p>`
 
+    const defaultCSS = `<h1>Our New Default Styling</h1>
+
+<p>Using some simple <code>CSS</code> makes our stuff look <em>much</em> better, and is way easier on the eyes.</p>`
+
     return (
         <div className="container">
             <h1>HTML Fundamentals</h1>
@@ -39,12 +47,11 @@ export default function Fundamentals() {
 
             <p>Between the tags you have <strong>content</strong>. This content can be text or other HTML elements.</p>
 
-            <div className="">
-                <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {basicHTMLSyntx}
-                </SyntaxHighlighter>
-            </div>
+            <IDE
+                hasCSS={false}
+                HTMLStart={basicHTMLSyntx}
+                CSSStart={cssBasicCode}
+            />
 
             <p>What distinguishes an opening tag to a closing tag is the forward slash (<code>/</code>) placed adjacent to the left angle bracket in the closing tag. Some elements do not have a closing tag, which we will talk about later.</p>
 
@@ -54,21 +61,19 @@ export default function Fundamentals() {
 
             <p><code>h2</code> elements represent subheadings. You can have multiple per page.</p>
 
-            <div className="">
-                <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {h1Example}
-                </SyntaxHighlighter>
-            </div>
+            <IDE
+                hasCSS={false}
+                HTMLStart={h1Example}
+                CSSStart={cssBasicCode}
+            />
 
             <p>In total there are <em>six</em> heading elements: <code>h1</code> through <code>h6</code>. They are used to show the importance of sections on your webpage, <code>h1</code> being the most important and <code>h6</code> the least important.</p>
 
-            <div className="">
-                <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {allHeaders}
-                </SyntaxHighlighter>
-            </div>
+            <IDE
+                hasCSS={false}
+                HTMLStart={allHeaders}
+                CSSStart={cssBasicCode}
+            />
 
             <p>Each heading looks a little different! This is because elements in HTML are given default values. They look different because each one is <em><strong>styled</strong></em> differently with different font sizes.</p>
 
@@ -76,19 +81,23 @@ export default function Fundamentals() {
 
             <p>When you need to add a paragraph to a webpage, you can use the <code>p</code> element.</p>
 
-            <div className="">
-                <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {paragraphElement}
-                </SyntaxHighlighter>
-            </div>
+            <IDE
+                hasCSS={false}
+                HTMLStart={paragraphElement}
+                CSSStart={cssBasicCode}
+            />
 
-            <h3>Why does each example look so...boring?</h3>
+            <blockquote>
+                <em>Why does each example look so...boring?</em>
+            </blockquote>
 
             <p>The reason why our examples seem so plain is because HTML is responsible for defining the structure and content for the webpage. We use <em><strong>CSS</strong></em> (Cascading Style Sheets) to add style. Things like colors, spacing, fonts, even layout are manipulated via CSS (which we will get to in a little bit). For now, we will add some default styling to make it easier on the eyes.</p>
 
-            <p><strong>Note:</strong> Add default code here</p>
-            <p>Do not worry about understanding this code right now, we will get to it in a little bit!</p>
+            <IDE
+                HTMLStart={defaultCSS}
+            />
+
+            <p>Do not worry about understanding the CSS code right now, we will get to it in a little bit! But if you are familiar, feel free to play around and experiment. It is the only way you will get better!</p>
 
         </div>
     )
