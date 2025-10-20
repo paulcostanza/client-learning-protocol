@@ -1,5 +1,7 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import IDE from '../../../components/IDE'
+import MonaAndCat from '../../../assets/html/visualcontentandmedia/mona-and-cat.png'
 
 export default function VisualContentAndMedia() {
     const voidElements = `<img>
@@ -7,13 +9,16 @@ export default function VisualContentAndMedia() {
 <meta>
 <meta />`
 
-    const monaLisaCat = `<img src="mona-and-cat-pic" alt="mona lisa cat" />`
+    const monaLisaCat = `<img src="${MonaAndCat}" alt="mona lisa and her cat" />`
 
     const attributeExample = `<element attribute="value"></element>`
 
-    const linkExample = `<a href="clientlearningprotocol.io">Landing page of the website</a>`
+    const linkExample = `<p><a href="clientlearningprotocol.io">Landing page</a> of CLP.</p>`
 
-    const inputExample = `<input type="checkbox" checked />`
+    const inputExample = `<input type="checkbox" checked />
+<input type="checkbox" />
+<input type="checkbox" checked />
+<input type="checkbox" />`
 
     const smiles = `<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <circle cx="50" cy="50" r="45" stroke="black" stroke-width="4" fill="yellow" />
@@ -89,12 +94,9 @@ export default function VisualContentAndMedia() {
 
             <p>To display an image, you will need to include a couple of attributes inside your image element. An <strong>attribute</strong> is a special value used to adjust the behavior for an HTML element. Let's implement an image element with a couple of attributes:</p>
 
-            <div className="">
-                <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {monaLisaCat}
-                </SyntaxHighlighter>
-            </div>
+            <IDE
+                HTMLStart={monaLisaCat}
+            />
 
             <p>The <code>src</code> attribute is used to specify the location for that image. The <code>alt</code> attribute is used to provide short, descriptive text for the images.</p>
 
@@ -122,23 +124,17 @@ export default function VisualContentAndMedia() {
 
             <p>The attribute name is followed by an equal sign (<code>=</code>) and a value in quotes. The value can be a string or a number, depending on the attribute. Let's take a look at an example of the element <code>href</code>, used to specify the URL of a link:</p>
 
-            <div className="">
-                <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {linkExample}
-                </SyntaxHighlighter>
-            </div>
+            <IDE
+                HTMLStart={linkExample}
+            />
 
             <p>Without this attribute, the link would not work because there would be no destination URL. So you must include the <code>href</code> attribute to make the link functional. Certain elements <em>require</em> certain attributes. In the last section, the <code>src</code> attribute is a must for the <code>img</code> element, as it specifies the image file that is being displayed.</p>
 
             <p>Some attributes are a little unique with their syntax, like the <code>checked</code> attribute shown here:</p>
 
-            <div className="">
-                <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {inputExample}
-                </SyntaxHighlighter>
-            </div>
+            <IDE
+                HTMLStart={inputExample}
+            />
 
             <p>Here we have an <code>input</code> element with the <code>type</code> attribute set to <code>checkbox</code>. <strong>Inputs</strong> are used to collect data from users, and the <code>type</code> attribute specifies the type of input (more on inputs later).</p>
 
@@ -156,12 +152,9 @@ export default function VisualContentAndMedia() {
 
             <p>SVGs specifically have the added benefit of storing data in <em>XML</em>. This means you can use them directly in your code as raw HTML with the <code>svg</code> element. It also means you can programmatically change the color of the image.</p>
 
-            <div className="">
-                <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {smiles}
-                </SyntaxHighlighter>
-            </div>
+            <IDE
+                HTMLStart={smiles}
+            />
 
             <ul>
                 <li><code>svg</code> element: the container for the whole drawing. It sets up the space where all the shapes appear. Everything you want to draw with SVG, such as circles, lines, or paths, goes inside the <code>svg</code> element.</li>
@@ -172,12 +165,9 @@ export default function VisualContentAndMedia() {
 
             <p>Here are some more fun examples:</p>
 
-            <div className="">
-                <SyntaxHighlighter language="html" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {icons}
-                </SyntaxHighlighter>
-            </div>
+            <IDE
+                HTMLStart={icons}
+            />
 
             <p>SVG images are great for specific instances such as building icons, custom bullet points or webpage logos. One of the most popular icon libraries, Font Awesome, uses SVG images for their icons. The scaling factor allows you to adapt your layout to any responsive design you need.</p>
 

@@ -10,7 +10,7 @@ export default function IDE({
     hasHTML = true,
     hasCSS = true,
     HTMLStart = "<h1>Hello nerd!</h1>",
-    CSSStart = "body {\n\tbackground: #2d2d2d;\n\tcolor: #ccc;\n}",
+    CSSStart = "body {\n\tbackground: #2d2d2d;\n\tcolor: #ccc;\n}\n\na {\n\tcolor: #357abd;\n}\n\nimg {\n\twidth: 200px;\n}",
     firstTab = "html"
 }) {
     const [html, setHtml] = useState(HTMLStart)
@@ -102,7 +102,7 @@ export default function IDE({
                                     fontSize: 14,
                                     minimap: { enabled: false },
                                     wordWrap: "on",
-                                    scrollBeyondLastLine: false,
+                                    scrollBeyondLastLine: true,
                                     scrollbar: {
                                         horizontal: 'auto',
                                         vertical: 'auto'
@@ -121,7 +121,7 @@ export default function IDE({
                                     fontSize: 14,
                                     minimap: { enabled: false },
                                     wordWrap: "on",
-                                    scrollBeyondLastLine: false,
+                                    scrollBeyondLastLine: true,
                                     scrollbar: {
                                         horizontal: 'auto',
                                         vertical: 'auto'
