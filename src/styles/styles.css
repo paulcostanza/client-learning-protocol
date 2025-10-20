@@ -208,7 +208,8 @@ pre,
 }
 
 /* affects code in readings and questions */
-p>code {
+p>code,
+li>code {
     background: #1e293b;
     padding: 0.2em 0.4em;
     border-radius: 4px;
