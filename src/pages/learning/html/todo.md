@@ -1,13 +1,46 @@
-# HTML Mastery Checklist
+# HTML Fundamentals
+- HTML
+- Heading Elements
+- Paragraph Element
+- Why does each example look so...boring?
+
+# Visual Content & Media
+- Void Elements
+- Images
+- Deeper dive into Attributes
+- SVGs
+- Multimedia Integration
+
+# Navigation & Linking
+- Links
+- Target Attribute Types
+- Absolute vs. Relative Paths
+- Link element
+
+# Document Architecture
+- HTML Boilerplate
+- Common HTML elements
+
+# Organization & Structure
+- Div elements
+- Identifiers and Groupings
+- HTML entities
+
+# Intro into Web Development
+- What's a JavaScript?
+- SEO
+- Open Graph Tags
+- Linking
+
+# Skipped
+- iframe
 
 ## 1. Core Concepts
-- Understanding the structure of an HTML document (`<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`)
 - Semantic HTML: using elements for their intended purpose (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`)
 - Block vs. inline elements
 
 ## 2. Elements & Attributes
-- Common elements: headings, paragraphs, lists, links, images, tables, forms, buttons, etc.
-- Global attributes: `id`, `class`, `style`, `title`, `data-*`
+- Common elements: tables, forms, buttons, etc.
 - Boolean attributes (e.g., `disabled`, `checked`, `readonly`)
 - Custom data attributes
 

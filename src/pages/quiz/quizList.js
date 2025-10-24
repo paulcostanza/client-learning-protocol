@@ -19,6 +19,12 @@ const quizList = [
         cardImage: memoryImg
     },
     {
+        id: "html",
+        title: "Markup 101",
+        dataFile: "../../quiz/database/HTMLQuestions.js",
+        cardImage: memoryImg
+    },
+    {
         id: "js",
         title: "ES6 & more",
         dataFile: "../../quiz/database/jsQuestions.js",

@@ -22,6 +22,7 @@ export default function Quiz() {
 
     const quizImports = {
         lowlevel: () => import('./database/LowLevelQuestions.js'),
+        html: () => import('./database/HTMLQuestions.js'),
         js: () => import('./database/JavaScriptQuestions.js'),
         react: () => import('./database/ReactQuestions.js'),
         networking: () => import('./database/Networking.js'),
