@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import Editor from "@monaco-editor/react"
 import {
     Panel,
@@ -10,7 +10,7 @@ export default function IDE({
     hasHTML = true,
     hasCSS = true,
     HTMLStart = "<h1>Hello nerd!</h1>",
-    CSSStart = "body {\n\tbackground: #2d2d2d;\n\tcolor: #ccc;\n}\n\na {\n\tcolor: #357abd;\n}\n\nimg {\n\twidth: 200px;\n}",
+    CSSStart = "body {\n\tbackground: #2d2d2d;\n\tcolor: #ccc;\n}\n\na { color: #357abd; }\nimg { width: 300px; }\nfooter { font-size: 0.88em; }",
     firstTab = "html"
 }) {
     const [html, setHtml] = useState(HTMLStart)
