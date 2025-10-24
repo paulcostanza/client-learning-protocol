@@ -11,6 +11,8 @@
 - SVGs
 - Multimedia Integration
 
+To add: how Creative Commons 0 works
+
 # Navigation & Linking
 - Links
 - Target Attribute Types

@@ -10,6 +10,7 @@ import programming101Img from "../../assets/quiz/programming101-card.png"
 import cybersecurityImg from "../../assets/quiz/cybersecurity-card.png"
 import linuxImg from "../../assets/quiz/linux-card.png"
 import javaImg from "../../assets/quiz/java-card.png"
+import htmlImg from "../../assets/quiz/html-card.png"
 
 const quizList = [
     {
@@ -22,7 +23,7 @@ const quizList = [
         id: "html",
         title: "Markup 101",
         dataFile: "../../quiz/database/HTMLQuestions.js",
-        cardImage: memoryImg
+        cardImage: htmlImg
     },
     {
         id: "js",

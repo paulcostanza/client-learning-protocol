@@ -1,9 +1,10 @@
+// subcategories: fundamentals, navigation-and-linking, document-architecture, visual-content-and-media, intro-into-web-development, organization-and-structure
 export default [
     {
         id: 1,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'navigation-and-linking',
         title: 'target=\"_?\"',
         question: "Which of the following \`target\` attributes opens a link in the parent of the current context?",
         options: [
@@ -19,8 +20,8 @@ export default [
         id: 2,
         type: 'radio',
         category: 'html',
-        subcategory: '',
-        title: 'UFT-huh?',
+        subcategory: 'document-architecture',
+        title: 'UTF-huh?',
         question: "Which attribute is used to set the \`UTF-8\` character encoding for an HTML document?",
         options: [
             '\`charset\`',
@@ -51,7 +52,7 @@ export default [
         id: 4,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'visual-content-and-media',
         title: 'Licensed to image',
         question: "Which image license works for the public domain?",
         options: [
@@ -67,7 +68,7 @@ export default [
         id: 5,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'visual-content-and-media',
         title: 'How to false',
         question: "How do you set a boolean attribute to \`false\`?",
         options: [
@@ -83,7 +84,7 @@ export default [
         id: 6,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'intro-into-web-development',
         title: 'Why script',
         question: "What is the \`script\` element used for?",
         options: [
@@ -99,7 +100,7 @@ export default [
         id: 7,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'document-architecture',
         title: 'HTML title',
         question: "Which of the following elements is used to set the title for an HTML document?",
         options: [
@@ -115,7 +116,7 @@ export default [
         id: 8,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'organization-and-structure',
         title: 'All class',
         question: "What is the \`class\` attribute typically used for?",
         options: [
@@ -131,7 +132,7 @@ export default [
         id: 9,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'navigation-and-linking',
         title: 'Relative to who',
         question: "What is a relative path?",
         options: [
@@ -147,7 +148,7 @@ export default [
         id: 10,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'navigation-and-linking',
         title: 'Link syntax',
         question: "Which of the following elements is the correct syntax for a \`link\` element?",
         options: [
@@ -162,7 +163,7 @@ export default [
         id: 11,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'intro-into-web-development',
         title: 'No can do bucaroo',
         question: "Which of the following is NOT a valid value for working with open graph properties?",
         options: [
@@ -175,23 +176,7 @@ export default [
         answer: '\`"og:socialMedia"\`',
     },
     {
-        id: 12,
-        type: 'radio',
-        category: 'html',
-        subcategory: '',
-        title: 'Active state',
-        question: "What does the active state mean for anchor elements?",
-        options: [
-            'the mouse cursor is over the link',
-            'a user is actively clicking on it',
-            'the link has been visited by the user',
-            'the link is disabled and cannot be clicked'
-        ],
-        random: true,
-        answer: 'a user is actively clicking on it',
-    },
-    {
-        id: 13,
+        id: 14,
         type: 'radio',
         category: 'html',
         subcategory: 'fundamentals',
@@ -207,7 +192,7 @@ export default [
         answer: 'HyperText Markup Language',
     },
     {
-        id: 14,
+        id: 15,
         type: 'radio',
         category: 'html',
         subcategory: 'fundamentals',
@@ -223,10 +208,10 @@ export default [
         answer: '\`</p>\`',
     },
     {
-        id: 15,
+        id: 16,
         type: 'checkbox',
         category: 'html',
-        subcategory: '',
+        subcategory: 'visual-content-and-media',
         title: 'Valid for img',
         question: "Which of the following are valid attributes used inside the \`img\` element?",
         options: [
@@ -243,10 +228,10 @@ export default [
         answer: ['\`src\`', '\`alt\`'],
     },
     {
-        id: 16,
+        id: 17,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'visual-content-and-media',
         title: 'Boo who',
         question: "Which of the following is an example of a boolean attribute?",
         options: [
@@ -259,10 +244,10 @@ export default [
         answer: '\`disabled\`',
     },
     {
-        id: 17,
+        id: 18,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'document-architecture',
         title: 'Where do we encode?',
         question: "Where would you set the character encoding for your page?",
         options: [
@@ -275,10 +260,10 @@ export default [
         answer: '\`meta\` element in the \`head\`',
     },
     {
-        id: 18,
+        id: 19,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'document-architecture',
         title: 'UTF attribute',
         question: "Which attribute is used to set the UTF-8 character encoding for HTML documents?",
         options: [
@@ -291,10 +276,10 @@ export default [
         answer: '\`charset\`',
     },
     {
-        id: 19,
+        id: 20,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'document-architecture',
         title: 'Char encoding',
         question: "What is character encoding?",
         options: [
@@ -307,10 +292,10 @@ export default [
         answer: 'a method computers use to store characters as data',
     },
     {
-        id: 20,
+        id: 21,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'organization-and-structure',
         title: 'Fake id',
         question: "Which of the following is NOT a correct value for the \`id\` attribute?",
         options: [
@@ -323,10 +308,10 @@ export default [
         answer: '\`id="main div"\`',
     },
     {
-        id: 21,
+        id: 22,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'intro-into-web-development',
         title: 'Link to JS',
         question: "Which attribute is used to link to an external JavaScript file?",
         options: [
@@ -339,10 +324,10 @@ export default [
         answer: 'the \`src\` attribute',
     },
     {
-        id: 22,
+        id: 23,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'intro-into-web-development',
         title: 'Describe the web page',
         question: "Which element is used to set the description for a web page?",
         options: [
@@ -355,10 +340,10 @@ export default [
         answer: '\`meta\`',
     },
     {
-        id: 23,
+        id: 24,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'intro-into-web-development',
         title: 'Open graph properties',
         question: "What are open graph properties used for?",
         options: [
@@ -371,10 +356,10 @@ export default [
         answer: 'set how your website\'s content will be seen on different social media platforms',
     },
     {
-        id: 24,
+        id: 25,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'visual-content-and-media',
         title: 'No audio',
         question: "What attribute allows the audio to start in a muted state?",
         options: [
@@ -387,10 +372,10 @@ export default [
         answer: '\`muted\`',
     },
     {
-        id: 25,
+        id: 26,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'visual-content-and-media',
         title: 'Play/pause',
         question: "Which attribute lets you see the play and pause buttons?",
         options: [
@@ -404,10 +389,10 @@ export default [
         answer: '\`controls\`',
     },
     {
-        id: 26,
+        id: 27,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'visual-content-and-media',
         title: 'Don\'t do it',
         question: "Which file format should you never compress?",
         options: [
@@ -420,10 +405,10 @@ export default [
         answer: 'JPG',
     },
     {
-        id: 27,
+        id: 28,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'visual-content-and-media',
         title: 'Master raster',
         question: "What is a raster image?",
         options: [
@@ -436,10 +421,10 @@ export default [
         answer: 'an image which stores color data for each pixel',
     },
     {
-        id: 28,
+        id: 29,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'visual-content-and-media',
         title: 'How to vector',
         question: "What is a vector image?",
         options: [
@@ -452,10 +437,10 @@ export default [
         answer: 'an image which stores paths, lines, points, and curves',
     },
     {
-        id: 29,
+        id: 30,
         type: 'radio',
         category: 'html',
-        subcategory: '',
+        subcategory: 'visual-content-and-media',
         title: 'How to SVG',
         question: "How does an SVG store data?",
         options: [
@@ -466,21 +451,5 @@ export default [
         ],
         random: true,
         answer: 'as XML',
-    },
-    {
-        id: 30,
-        type: 'radio',
-        category: 'html',
-        subcategory: '',
-        title: 'Link ordering',
-        question: "In what order should you style your links?",
-        options: [
-            '\`visited\`, \`link\`, \`active\`, \`hover\`',
-            '\`link\`, \`active\`, \`hover\`, \`visited\`',
-            '\`hover\`, \`active\`, \`link\`, \`visited\`',
-            '\`link\`, \`visited\`, \`hover\`, \`active\`'
-        ],
-        random: true,
-        answer: '\`link\`, \`visited\`, \`hover\`, \`active\`',
     }
 ]
