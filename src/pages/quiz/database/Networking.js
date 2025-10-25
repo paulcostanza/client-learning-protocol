@@ -592,20 +592,23 @@ export default [
     },
     {
         id: 35,
-        type: 'radio',
+        type: 'checkbox',
         category: 'networking',
         subcategory: '',
-        title: '',
-        question: "Which of the following answers refers to a common Data Link protocol?",
+        title: 'DL protocol',
+        question: "Which of the following refer(s) to a/some common Data Link protocol(s)?",
         options: [
             'HTTP',
             'IP',
             'ARP',
-            'ICMP'
+            'ICMP',
+            'HTTPS',
+            'PING',
+            'ZING'
         ],
         random: true,
-        answer: 'ARP',
-        desciption: `**Answer:** ARP - Address Resolution Protocol
+        answer: ['ARP'],
+        description: `**Answer:** ARP - Address Resolution Protocol
         
 Used to map an IP address to a physical machine address (MAC address) on a local network`
     },

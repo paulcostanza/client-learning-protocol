@@ -5,12 +5,12 @@ export default [
         type: 'radio',
         category: 'LowLevel',
         subcategory: 'variablesize',
-        title: '',
+        title: 'Script vs System',
         question: `What is a key difference between scripting languages and systems programming languages?`,
         options: [
             'scripting languages require explicit type declarations',
             'system programming languages require explicit type declarations',
-            'both require expliti type declarations',
+            'both require explicit type declarations',
             'neither require explicit type declarations'
         ],
         random: true,
@@ -21,7 +21,7 @@ export default [
         type: 'radio',
         category: 'LowLevel',
         subcategory: 'variablesize',
-        title: '',
+        title: '3 bits',
         question: `How many different values can be represented with 3 bits?`,
         options: [
             '4',
@@ -39,7 +39,7 @@ export default [
         type: 'radio',
         category: 'LowLevel',
         subcategory: 'variablesize',
-        title: '',
+        title: 'A bunch of bits',
         question: `What is the minimum number of bits a computer uses to represent data in memory?`,
         options: [
             '1',
@@ -60,7 +60,7 @@ export default [
         type: 'checkbox',
         category: 'LowLevel',
         subcategory: 'variablesize',
-        title: '',
+        title: 'Dynamicly inefficient',
         question: `What are some reasons dynamic type systems can be inefficient?`,
         options: [
             'extra memory usage',

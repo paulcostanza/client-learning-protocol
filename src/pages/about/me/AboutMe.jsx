@@ -17,16 +17,15 @@ export default function AboutMe() {
 
                             <p>I originally wrote my notes on my laptop, all in <code>markdown</code> format. The sources range from class, books, youtube videos, documentation, udemy courses, memes, social media posts, work, and anything that made me think "that's actually super important, let me write that down..."</p>
 
-                            <p>Being a visual learner myself, I try to fill in the text with pics and memes to better solidify my understanding of the topic at hand. I am trying to figure out Adobe Illustrator, so bear with me when it comes to the quality of pics. Any pics that are not of high quality where most likely AI generated or created in MicroSoft Paint. </p>
+                            <p>Being a visual learner myself, I try to fill in the text with pics and memes to better solidify my understanding of the topic at hand. I am trying to figure out Adobe Illustrator, so bear with me when it comes to the quality of pics. Any pics that are not of high quality were most likely AI generated or created in MicroSoft Paint. </p>
 
                         </div>
 
                         <div className="about-right">
                             <img id="me" src={Me} alt="pic_of_me" />
                         </div>
-
-
                     </div>
+
                     <FavoriteSources />
                     <Contact />
                 </div>

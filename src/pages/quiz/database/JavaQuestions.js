@@ -342,6 +342,7 @@ System.out.println(message.charAt(5));
             '\`Integer.parseInt()\`',
             '\`String.toInt()\`',
             '\`Int.parseString()\`',
+            '\`String.parseInt()\`',
         ],
         random: true,
         answer: '\`Integer.parseInt()\`',

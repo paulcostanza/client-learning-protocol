@@ -54,8 +54,7 @@ root.render(
         <h1>Hi there</h1>
         <p>This is my website!</p>
     </>
-)
-        `
+)`
     },
     {
         id: 3,
