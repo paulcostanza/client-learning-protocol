@@ -176,7 +176,7 @@ export default [
         answer: '\`"og:socialMedia"\`',
     },
     {
-        id: 14,
+        id: 12,
         type: 'radio',
         category: 'html',
         subcategory: 'fundamentals',
@@ -192,7 +192,7 @@ export default [
         answer: 'HyperText Markup Language',
     },
     {
-        id: 15,
+        id: 13,
         type: 'radio',
         category: 'html',
         subcategory: 'fundamentals',
@@ -208,7 +208,7 @@ export default [
         answer: '\`</p>\`',
     },
     {
-        id: 16,
+        id: 14,
         type: 'checkbox',
         category: 'html',
         subcategory: 'visual-content-and-media',
@@ -228,7 +228,7 @@ export default [
         answer: ['\`src\`', '\`alt\`'],
     },
     {
-        id: 17,
+        id: 15,
         type: 'radio',
         category: 'html',
         subcategory: 'visual-content-and-media',
@@ -244,7 +244,7 @@ export default [
         answer: '\`disabled\`',
     },
     {
-        id: 18,
+        id: 16,
         type: 'radio',
         category: 'html',
         subcategory: 'document-architecture',
@@ -260,7 +260,7 @@ export default [
         answer: '\`meta\` element in the \`head\`',
     },
     {
-        id: 19,
+        id: 17,
         type: 'radio',
         category: 'html',
         subcategory: 'document-architecture',
@@ -276,7 +276,7 @@ export default [
         answer: '\`charset\`',
     },
     {
-        id: 20,
+        id: 18,
         type: 'radio',
         category: 'html',
         subcategory: 'document-architecture',
@@ -292,7 +292,7 @@ export default [
         answer: 'a method computers use to store characters as data',
     },
     {
-        id: 21,
+        id: 19,
         type: 'radio',
         category: 'html',
         subcategory: 'organization-and-structure',
@@ -308,7 +308,7 @@ export default [
         answer: '\`id="main div"\`',
     },
     {
-        id: 22,
+        id: 20,
         type: 'radio',
         category: 'html',
         subcategory: 'intro-into-web-development',
@@ -324,7 +324,7 @@ export default [
         answer: 'the \`src\` attribute',
     },
     {
-        id: 23,
+        id: 21,
         type: 'radio',
         category: 'html',
         subcategory: 'intro-into-web-development',
@@ -340,7 +340,7 @@ export default [
         answer: '\`meta\`',
     },
     {
-        id: 24,
+        id: 22,
         type: 'radio',
         category: 'html',
         subcategory: 'intro-into-web-development',
@@ -356,7 +356,7 @@ export default [
         answer: 'set how your website\'s content will be seen on different social media platforms',
     },
     {
-        id: 25,
+        id: 23,
         type: 'radio',
         category: 'html',
         subcategory: 'visual-content-and-media',
@@ -372,7 +372,7 @@ export default [
         answer: '\`muted\`',
     },
     {
-        id: 26,
+        id: 24,
         type: 'radio',
         category: 'html',
         subcategory: 'visual-content-and-media',
@@ -389,7 +389,7 @@ export default [
         answer: '\`controls\`',
     },
     {
-        id: 27,
+        id: 25,
         type: 'radio',
         category: 'html',
         subcategory: 'visual-content-and-media',
@@ -405,7 +405,7 @@ export default [
         answer: 'JPG',
     },
     {
-        id: 28,
+        id: 26,
         type: 'radio',
         category: 'html',
         subcategory: 'visual-content-and-media',
@@ -421,7 +421,7 @@ export default [
         answer: 'an image which stores color data for each pixel',
     },
     {
-        id: 29,
+        id: 27,
         type: 'radio',
         category: 'html',
         subcategory: 'visual-content-and-media',
@@ -437,7 +437,7 @@ export default [
         answer: 'an image which stores paths, lines, points, and curves',
     },
     {
-        id: 30,
+        id: 28,
         type: 'radio',
         category: 'html',
         subcategory: 'visual-content-and-media',

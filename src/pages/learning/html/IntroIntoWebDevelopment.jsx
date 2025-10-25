@@ -1,8 +1,12 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import IDE from '../../../components/IDE'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function IntroIntoWebDevelopment() {
+    const quizImports = {
+        html: () => import('../../../pages/quiz/database/HTMLQuestions.js')
+    }
+
     const javascript101 = `<body>
   <script>
     alert("Hello nerd!")
@@ -117,6 +121,13 @@ export default function IntroIntoWebDevelopment() {
                     {link}
                 </SyntaxHighlighter>
             </div>
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="intro-into-web-development"
+            />
         </div>
     )
 }

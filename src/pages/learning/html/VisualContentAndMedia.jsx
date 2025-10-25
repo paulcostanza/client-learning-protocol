@@ -2,8 +2,13 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import IDE from '../../../components/IDE'
 import MonaAndCat from '../../../assets/html/visualcontentandmedia/mona-and-cat.png'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function VisualContentAndMedia() {
+    const quizImports = {
+        html: () => import('../../../pages/quiz/database/HTMLQuestions.js')
+    }
+
     const voidElements = `<img>
 <img />
 <meta>
@@ -228,7 +233,12 @@ export default function VisualContentAndMedia() {
                 </SyntaxHighlighter>
             </div>
 
+            <h2>Review</h2>
 
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="visual-content-and-media"
+            />
         </div>
     )
 }

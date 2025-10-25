@@ -1,11 +1,11 @@
-// import { useState } from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
-// import QuestionTableList from '../../components/QuestionTableList'
-// import ModalForQuestions from '../../pages/quiz/ModalForQuestions.jsx'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import IDE from '../../../components/IDE'
 
 export default function Fundamentals() {
+    const quizImports = {
+        html: () => import('../../../pages/quiz/database/HTMLQuestions.js')
+    }
+
     const cssBasicCode = `body {
 background: #fff;
 color: #000}`
@@ -99,6 +99,12 @@ color: #000}`
 
             <p>Do not worry about understanding the CSS code right now, we will get to it in a little bit! But if you are familiar, feel free to play around and experiment. It is the only way you will get better!</p>
 
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="fundamentals"
+            />
         </div>
     )
 }

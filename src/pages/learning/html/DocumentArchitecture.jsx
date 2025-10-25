@@ -1,9 +1,14 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import IDE from '../../../components/IDE'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import SatoshiNakamoto from '../../../assets/html/documentarchitecture/satoshinakamoto.png'
 
 export default function DocumentArchitecture() {
+    const quizImports = {
+        html: () => import('../../../pages/quiz/database/HTMLQuestions.js')
+    }
+
     const boilerplateExample = `<!DOCTYPE html>
 <html lang="en">
     <head>
@@ -135,6 +140,13 @@ export default function DocumentArchitecture() {
 
             <IDE
                 HTMLStart={structureExample}
+            />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="document-architecture"
             />
         </div>
     )

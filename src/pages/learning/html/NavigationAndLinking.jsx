@@ -1,8 +1,13 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import IDE from '../../../components/IDE'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function NavigationAndLinking() {
+    const quizImports = {
+        html: () => import('../../../pages/quiz/database/HTMLQuestions.js')
+    }
+
     const anchorElement = `<a href="https://clientlearningprotocol.io">Client Learning Protocol</a>`
 
     const anchorElementWithBlank = `<a href="https://clientlearningprotocol.io" target="_blank">Visit CLP!</a>`
@@ -182,6 +187,12 @@ export default function NavigationAndLinking() {
                 <p>Enter: Document Architecture</p>
             </blockquote>
 
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="navigation-and-linking"
+            />
         </div>
     )
 }

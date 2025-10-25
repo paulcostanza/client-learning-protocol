@@ -1,6 +1,11 @@
 import IDE from '../../../components/IDE'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function OrganizationAndStructure() {
+    const quizImports = {
+        html: () => import('../../../pages/quiz/database/HTMLQuestions.js')
+    }
+
     const divExample = `<div>
     <h1>I am a heading</h1>
     <p>I am a paragraph</p>
@@ -122,6 +127,13 @@ footer { font-size: 0.88em; }
 
             <IDE
                 HTMLStart={entities}
+            />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="organization-and-structure"
             />
         </div>
     )
