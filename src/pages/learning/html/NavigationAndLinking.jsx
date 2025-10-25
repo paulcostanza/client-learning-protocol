@@ -2,6 +2,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import IDE from '../../../components/IDE'
 import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+import BasicFolderStructure from '../../../assets/html/navigation-and-linking/basic folder structure.png'
 
 export default function NavigationAndLinking() {
     const quizImports = {
@@ -94,6 +95,10 @@ export default function NavigationAndLinking() {
             <p><em><strong>Uh...directories?</strong></em></p>
 
             <p>Just a fancy term for a folder.</p>
+
+            <img className="img-in-reading" src={BasicFolderStructure} alt="a simple folder structure" />
+
+            <p>In our image, the <code>Media</code> directory represents the parent folder to <code>Pics</code> and <code>Videos</code>. When you open <code>Media</code>, you would see the other two inside of it.</p>
 
             <p>An <strong>absolute path</strong> is a complete link to a resource. It starts from the root directory, includes every other directory, and finally the filename and extension. The <em>root directory</em> refers to the top-level directory or folder in a hierarchy. An absolute path also includes the protocol - which could be <code>http</code>, <code>https</code>, and <code>file</code> and the domain name if the resource is on the web.</p>
 
