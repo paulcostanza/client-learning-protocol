@@ -61,6 +61,7 @@ export default function SelectAQuestionFilter({
     const handleCategory = event => setCategory(event.target.value)
 
     const statusOptions = [
+        { value: 'none', label: 'None' },
         { value: 'ready', label: '❓' },
         { value: 'incorrect', label: '❌' },
         { value: 'correct', label: '✔️' },

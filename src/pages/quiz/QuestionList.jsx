@@ -21,8 +21,16 @@ function filterQuestions(questions, status, review, category) {
         const nextReviewTimestamp = getNextReview(q.quizKey, q.id)
         const reviewValue = getHumanReadableNextReview(nextReviewTimestamp)
         const statusValue = reviewValue === 'Ready!' ? 'ready' : getQuestionStatus(q.quizKey, q.id)
+        let statusMatch = true
 
-        const statusMatch = !status || statusValue === status
+        if (status) {
+            if (status === 'none') {
+                statusMatch = !statusValue || statusValue === ''
+            } else {
+                statusMatch = statusValue === status
+            }
+        }
+
         const reviewMatch = !review || reviewValue === review
         const categoryMatch = !category || q.quizKey.toLowerCase() === category.toLowerCase()
 
