@@ -22,6 +22,7 @@ function filterQuestions(questions, status, review, category) {
         const reviewValue = getHumanReadableNextReview(nextReviewTimestamp)
         const statusValue = reviewValue === 'Ready!' ? 'ready' : getQuestionStatus(q.quizKey, q.id)
         let statusMatch = true
+        let reviewMatch = true
 
         if (status) {
             if (status === 'none') {
@@ -31,7 +32,30 @@ function filterQuestions(questions, status, review, category) {
             }
         }
 
-        const reviewMatch = !review || reviewValue === review
+        switch (review) {
+            case 'ready':
+                reviewMatch = reviewValue === 'Ready!'
+                break
+            case 'tomorrow':
+                reviewMatch = reviewValue === 'Tomorrow'
+                break
+            case '< a week':
+                reviewMatch = reviewValue === 'Ready!' ||
+                    reviewValue === 'Tomorrow' ||
+                    (reviewValue.includes('days') && parseInt(reviewValue) <= 7)
+                break
+            case '< a month':
+                reviewMatch = reviewValue === 'Ready!' ||
+                    reviewValue === 'Tomorrow' ||
+                    (reviewValue.includes('days') && parseInt(reviewValue) <= 30)
+                break
+            case '> a month':
+                reviewMatch = reviewValue.includes('days') && parseInt(reviewValue) > 30
+                break
+            default:
+                console.log('How in the hell did you hit this case?!?!')
+        }
+
         const categoryMatch = !category || q.quizKey.toLowerCase() === category.toLowerCase()
 
         return statusMatch && reviewMatch && categoryMatch

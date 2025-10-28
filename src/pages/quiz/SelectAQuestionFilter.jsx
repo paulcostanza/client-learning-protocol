@@ -70,9 +70,9 @@ export default function SelectAQuestionFilter({
     const reviewOptions = [
         { value: 'ready', label: 'Ready!' },
         { value: 'tomorrow', label: 'Tomorrow' },
-        { value: '2-7 days', label: '2-7 days' },
-        { value: '> week', label: '> Week' },
-        { value: '> month', label: '> Month' },
+        { value: '< a week', label: '< a Week' },
+        { value: '< a month', label: '< a Month' },
+        { value: '> a month', label: '> a Month' },
     ]
 
     const categoryOptions = [
