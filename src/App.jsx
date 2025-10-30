@@ -47,6 +47,7 @@ import VariableSize from './pages/low-level/VariableSize'
 
 import ScrollToTop from './components/ScrollToTop'
 
+// HTML
 import HTMLLanding from './pages/learning/html/setup/HTMLLanding'
 import HTMLSectionLayout from './pages/learning/html/setup/HTMLSectionLayout'
 import HTMLFundamentals from './pages/learning/html/Fundamentals'
@@ -55,6 +56,8 @@ import HTMLIntroIntoWebDevelopment from './pages/learning/html/IntroIntoWebDevel
 import HTMLNavigationAndLinking from './pages/learning/html/NavigationAndLinking'
 import HTMLOrganizationAndStructure from './pages/learning/html/OrganizationAndStructure'
 import HTMLVisualContentAndMedia from './pages/learning/html/VisualContentAndMedia'
+import HTMLSemantic from './pages/learning/html/SemanticHTML'
+import HTMLNotYourEverydayElements from './pages/learning/html/NotYourEverydayElements'
 
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
@@ -126,6 +129,8 @@ function App() {
               <Route path='navigation-and-linking' element={<HTMLNavigationAndLinking />} />
               <Route path='organization-and-structure' element={<HTMLOrganizationAndStructure />} />
               <Route path='visual-content-and-media' element={<HTMLVisualContentAndMedia />} />
+              <Route path='semantic-html' element={<HTMLSemantic />} />
+              <Route path='not-your-everyday-elements' element={<HTMLNotYourEverydayElements />} />
             </Route>
 
             <Route path='*' element={<NoPage />} />

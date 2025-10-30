@@ -510,6 +510,7 @@ input[type="radio"]+label::before {
     vertical-align: text-top;
 }
 
+/* square for checkbox button */
 input[type="checkbox"]+label::before {
     content: '';
     display: inline-block;

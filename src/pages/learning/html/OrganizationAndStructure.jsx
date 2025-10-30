@@ -65,6 +65,30 @@ footer { font-size: 0.88em; }
 <h2>&apos;</h2> <!-- Single Quote -->
 <h2>&amp;</h2> <!-- Ampersand -->`
 
+    const goodStructuralHierarchy = `<main>
+    <h1>Client Learning Protocol</h1>
+    <h2>Web Development</h2>
+    <h3>Front-end</h3>
+    <h3>Databases</h3>
+    <h4>Back-end</h4>
+    <h2>Embeded Programming</h2>
+    <h3>C</h3>
+</main>`
+
+    const badStructuralHierarchy = `<div>
+    <section>
+    <h1>Client Learning Protocol</h1>
+    <h3>Introduction to HTML</h3>
+    <h2>Learn Frontend Development</h2>
+    </section>
+    <article>
+    <p>
+        Here is some
+        <h1>Large Text</h1>
+    </p>
+    </article>
+</div>`
+
     return (
         <div className="container">
             <h1>Organization & Structure</h1>
@@ -128,6 +152,34 @@ footer { font-size: 0.88em; }
             <IDE
                 HTMLStart={entities}
             />
+
+            <h2>Why is Structural Hierarchy good?</h2>
+
+            <p>Using the right hierarchy is important for accessibility. Assistive technologies, like screen readers, rely on the structure of a web page to determine how to parse and announce that web page to the user.</p>
+
+            <p>Example: using the correct heading elements in their correct order. Much like a text document, you do not want to use heading levels in the incorrect order. Your <code>h1</code> element is your top-level heading. You will rarely have more than one of these on a page, and it should typically come before all of you content.</p>
+
+            <p>Your <code>h2</code> element is your subheading. It should always come after your <code>h1</code> and might come after some introductory text. Unlike <code>h1</code>, you can have multiple <code>h2</code> elements on your page. You will often do this to delineate different sections of content.</p>
+
+            <p>The rest of the header elements should follow the same pattern. You can have multiple heading elements of the same element at the same level. Make sure to <em>never</em> skip a header. It may be tempting to use a specific heading element because of its styling. Instead, you should choose the appropriate element for your document structure and use CSS to achieve the styling you would like.</p>
+
+            <p>Here is an example of good structural Hierarchy:</p>
+
+            <pre><code>
+                { }
+            </code></pre>
+
+            <IDE
+                HTMLStart={goodStructuralHierarchy}
+            />
+
+            <p>Here is an example of bad structural Hierarchy:</p>
+
+            <IDE
+                HTMLStart={badStructuralHierarchy}
+            />
+
+            <p>In the next section we will dive deeper into some more elements that hold meaning and structure, <em>Semantic HTML Elements</em>.</p>
 
             <h2>Review</h2>
 

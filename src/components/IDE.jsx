@@ -10,7 +10,7 @@ export default function IDE({
     hasHTML = true,
     hasCSS = true,
     HTMLStart = "<h1>Hello nerd!</h1>",
-    CSSStart = "body {\n\tbackground: #2d2d2d;\n\tcolor: #ccc;\n}\n\na { color: #357abd; }\nimg { width: 300px; }\nfooter { font-size: 0.88em; }",
+    CSSStart = "body {background: #2d2d2d; color: #ccc;}\na { color: #357abd; }\nimg { width: 300px; }\nfooter { font-size: 0.88em; }\n\n",
     firstTab = "html"
 }) {
     const [html, setHtml] = useState(HTMLStart)
