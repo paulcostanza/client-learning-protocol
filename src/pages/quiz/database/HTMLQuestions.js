@@ -439,5 +439,155 @@ export default [
         ],
         random: true,
         answer: 'as XML',
+    },
+    {
+        id: 28,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'not-your-everday-elements',
+        title: 'Extended quotes',
+        question: "Which HTML element is used for displaying extended quotations from other sources?",
+        options: [
+            '\`q\`',
+            '\`blockquote\`',
+            '\`cite\`',
+            '\`p\`',
+            '\`quote\`'
+        ],
+        random: true,
+        answer: '\`blockquote\`',
+    },
+    {
+        id: 29,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'not-your-everday-elements',
+        title: 'Cite purpose',
+        question: "What is the purpose of the \`cite\` element in HTML?",
+        options: [
+            'to display inline quotations',
+            'to specify the source URL of a quotation',
+            'to mark up the title of a referenced creative work',
+            'to display extended quotations'
+        ],
+        random: true,
+        answer: 'to specify the source URL of a quotation',
+    },
+    {
+        id: 30,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'not-your-everday-elements',
+        title: 'Quote source',
+        question: "Which HTML attribute is used to specify the source of a quotation in a block or inline quotation element?",
+        options: [
+            '\`href\`',
+            '\`src\`',
+            '\`title\`',
+            '\`cite\`',
+            '\`quote\`'
+        ],
+        random: true,
+        answer: '\`cite\`',
+    },
+    {
+        id: 31,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'not-your-everday-elements',
+        title: 'Super text',
+        question: "What is the primary use of the superscript element in HTML?",
+        options: [
+            'to show text in a larger font size',
+            'to show text in a smaller font size',
+            'to display text above the normal line of text',
+            'to display text below the normal line of text',
+            'to underline text for importance'
+        ],
+        random: true,
+        answer: 'to display text above the normal line of text',
+    },
+    {
+        id: 32,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'not-your-everday-elements',
+        title: 'Sub text',
+        question: "What is the primary use of the subscript element in HTML?",
+        options: [
+            'to show text in a larger font size',
+            'to show text in a smaller font size',
+            'to display text above the normal line of text',
+            'to display text below the normal line of text',
+            'to underline text for importance'
+        ],
+        random: true,
+        answer: 'to display text below the normal line of text',
+    },
+    {
+        id: 33,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'not-your-everday-elements',
+        title: 'Code element',
+        question: "What is the \`code\` element used for?",
+        options: [
+            'creating hyperlinks to other web pages',
+            'formatting text with bold or italic styles',
+            'representing short snippets of code inside text',
+            'embedding images and multimedia files'
+        ],
+        random: true,
+        answer: 'representing short snippets of code inside text',
+    },
+    {
+        id: 34,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'not-your-everday-elements',
+        title: 'Pre element',
+        question: "What is the \`pre\` element used for?",
+        options: [
+            'represent preformatted text',
+            'preventing text from appearing on screen',
+            'precision placement of text',
+            'pretending it\'s an element'
+        ],
+        random: true,
+        answer: 'represent preformatted text',
+    },
+    {
+        id: 35,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'semantic-html',
+        title: 'Article vs section',
+        question: "What is the difference between \`article\` and \`section\`?",
+        options: [
+            '\`article\` is for self-contained content, while \`section\` divides content into smaller groups',
+            '\`section\` is for self-contained content, while \`article\` divides content into smaller groups'
+        ],
+        random: true,
+        answer: '\`article\` is for self-contained content, while \`section\` divides content into smaller groups',
+        description: `\`article\` represents independent, self-contained content that could stand alone outside the page. Think blog posts, news stories, or forum post. 
+\n\`section\` is used to group related content within a page. Think themes that are group together. Things like chapters, headings, or topic sections.`
+    },
+    {
+        id: 36,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'semantic-html',
+        title: 'Stand alone content',
+        question: "The _____ element is used for content that could stand alone and be republished elsewhere.",
+        options: [
+            '\`main\`',
+            '\`header\`',
+            '\`footer\`',
+            '\`aside\`',
+            '\`section\`',
+            '\`article\`'
+        ],
+        random: true,
+        answer: '\`article\`',
     }
 ]

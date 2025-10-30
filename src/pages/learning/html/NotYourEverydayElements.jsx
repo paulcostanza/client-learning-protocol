@@ -186,7 +186,7 @@ export default function NotYourEverydayElements() {
 
             <ReviewQuiz
                 quizImports={quizImports}
-                subcategory="not-your-everyday-elements"
+                subcategory="not-your-everday-elements"
             />
         </div>
     )
