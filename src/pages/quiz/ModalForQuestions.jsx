@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useMemo } from "react"
 import Modal from '@mui/material/Modal'
 import Box from "@mui/material/Box"
 import ReactMarkdown from 'react-markdown'
@@ -7,17 +7,50 @@ import { saveSectionQuestionResult } from "../../Helpers/localStorageHelper.js"
 
 export default function ModalForQuestions({ open, onClose, question }) {
     const [checked, setChecked] = useState(false)
-    const [selectedIdx, setSelectedIdx] = useState(null);
-    const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
+    const [selectedIdx, setSelectedIdx] = useState(null)
+    const [selectedCheckboxes, setSelectedCheckboxes] = useState([])
     const [inputValue, setInputValue] = useState("")
-    const [result, setResult] = useState('');
-    const [displayDescription, setDisplayDescription] = useState('');
+    const [result, setResult] = useState('')
+    const [displayDescription, setDisplayDescription] = useState('')
 
-    if (!question) return null;
+    const { shuffledOptions, correctIndices } = useMemo(() => {
+        if (!question || question.type === 'input') {
+            return { shuffledOptions: [], correctIndices: [] }
+        }
+
+        if (question.random) {
+            const shuffled = [...question.options].sort(() => Math.random() - 0.5)
+
+            const correctIndices = []
+            if (question.type === 'radio') {
+                correctIndices.push(shuffled.indexOf(question.answer))
+            } else if (question.type === 'checkbox') {
+                question.answer.forEach(correctAnswer => {
+                    const index = shuffled.indexOf(correctAnswer)
+                    if (index !== -1) correctIndices.push(index)
+                })
+            }
+
+            return { shuffledOptions: shuffled, correctIndices }
+        } else {
+            const correctIndices = []
+            if (question.type === 'radio') {
+                correctIndices.push(question.options.indexOf(question.answer))
+            } else if (question.type === 'checkbox') {
+                question.answer.forEach(correctAnswer => {
+                    const index = question.options.indexOf(correctAnswer)
+                    if (index !== -1) correctIndices.push(index)
+                })
+            }
+            return { shuffledOptions: question.options, correctIndices }
+        }
+    }, [question])
+
+    if (!question) return null
 
     function onSelect(optionIdx) {
         if (question.type === 'radio' || question.type === 'input') {
-            setSelectedIdx(optionIdx);
+            setSelectedIdx(optionIdx)
         } else if (question.type === 'checkbox') {
             setSelectedCheckboxes(prev =>
                 prev.includes(optionIdx)
@@ -31,7 +64,7 @@ export default function ModalForQuestions({ open, onClose, question }) {
         if (question.type === 'input') {
             const regex = new RegExp(question.answer, "i")
             const isCorrect = regex.test(inputValue.trim())
-            setChecked(true);
+            setChecked(true)
             setResult(isCorrect ? "Correct!" : "Incorrect!")
             setDisplayDescription(question.description || "")
 
@@ -40,28 +73,32 @@ export default function ModalForQuestions({ open, onClose, question }) {
             }
             return
         }
-        const { result, description } = checkAnswer(question, selectedIdx, selectedCheckboxes);
-        setChecked(true);
-        setResult(result);
-        setDisplayDescription(description);
+        const { result, description } = checkAnswer(
+            { ...question, options: shuffledOptions },
+            selectedIdx,
+            selectedCheckboxes
+        )
+        setChecked(true)
+        setResult(result)
+        setDisplayDescription(description)
     }
 
     function handleForfeit() {
-        const { result, description } = forfeitQuestion(question);
-        setChecked(true);
-        setResult(result);
-        setDisplayDescription(description);
+        const { result, description } = forfeitQuestion(question)
+        setChecked(true)
+        setResult(result)
+        setDisplayDescription(description)
     }
 
     // reset modal state on exit
     function handleExit() {
-        setChecked(false);
-        setSelectedIdx(null);
-        setSelectedCheckboxes([]);
+        setChecked(false)
+        setSelectedIdx(null)
+        setSelectedCheckboxes([])
         setInputValue('')
-        setResult('');
-        setDisplayDescription('');
-        onClose();
+        setResult('')
+        setDisplayDescription('')
+        onClose()
     }
 
     return (
@@ -100,23 +137,23 @@ export default function ModalForQuestions({ open, onClose, question }) {
                     </div>
                 ) : (
                     <ul key={question.id}>
-                        {question.options.map((option, optionIdx) => {
-                            let className = "";
+                        {shuffledOptions.map((option, optionIdx) => {
+                            let className = ""
 
                             if (checked) {
                                 switch (question.type) {
                                     case 'radio':
-                                        if (option === question.answer) {
-                                            className = "correct";
+                                        if (correctIndices.includes(optionIdx)) {
+                                            className = "correct"
                                         } else if (optionIdx === selectedIdx) {
-                                            className = "wrong";
+                                            className = "wrong"
                                         }
                                         break
                                     case 'checkbox':
-                                        if (question.answer.includes(option)) {
-                                            className = "correct";
+                                        if (correctIndices.includes(optionIdx)) {
+                                            className = "correct"
                                         } else if (selectedCheckboxes.includes(optionIdx)) {
-                                            className = "wrong";
+                                            className = "wrong"
                                         }
                                         break
                                     default:
@@ -149,7 +186,7 @@ export default function ModalForQuestions({ open, onClose, question }) {
                                         </ReactMarkdown>
                                     </label>
                                 </li>
-                            );
+                            )
                         })}
                     </ul>
                 )}
@@ -191,5 +228,5 @@ export default function ModalForQuestions({ open, onClose, question }) {
                 )}
             </Box>
         </Modal >
-    );
+    )
 }
