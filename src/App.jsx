@@ -57,6 +57,8 @@ import HTMLNavigationAndLinking from './pages/learning/html/NavigationAndLinking
 import HTMLOrganizationAndStructure from './pages/learning/html/OrganizationAndStructure'
 import HTMLVisualContentAndMedia from './pages/learning/html/VisualContentAndMedia'
 import HTMLSemantic from './pages/learning/html/SemanticHTML'
+import HTMLForms from './pages/learning/html/Forms'
+import HTMLTables from './pages/learning/html/Tables'
 import HTMLNotYourEverydayElements from './pages/learning/html/NotYourEverydayElements'
 
 import {
@@ -130,6 +132,8 @@ function App() {
               <Route path='organization-and-structure' element={<HTMLOrganizationAndStructure />} />
               <Route path='visual-content-and-media' element={<HTMLVisualContentAndMedia />} />
               <Route path='semantic-html' element={<HTMLSemantic />} />
+              <Route path='forms' element={<HTMLForms />} />
+              <Route path='tables' element={<HTMLTables />} />
               <Route path='not-your-everyday-elements' element={<HTMLNotYourEverydayElements />} />
             </Route>
 

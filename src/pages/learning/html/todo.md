@@ -39,12 +39,7 @@ To add: how Creative Commons 0 works
 
 ## 1. Core Concepts
 - Semantic HTML: using elements for their intended purpose (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`)
-- Block vs. inline elements
-
-## 2. Elements & Attributes
-- Common elements: tables, forms, buttons, etc.
-- Boolean attributes (e.g., `disabled`, `checked`, `readonly`)
-- Custom data attributes
+- Block vs. inline elements - this is more CSS
 
 ## 3. Forms & Input
 - Form structure: `<form>`, `<input>`, `<textarea>`, `<select>`, `<option>`, `<label>`, `<fieldset>`, `<legend>`

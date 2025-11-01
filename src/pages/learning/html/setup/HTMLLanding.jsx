@@ -7,6 +7,8 @@ const sections = [
     { name: 'Document Architecture', path: 'document-architecture' },
     { name: 'Organization & Structure', path: 'organization-and-structure' },
     { name: 'Semantic HTML', path: 'semantic-html' },
+    { name: 'Forms', path: 'forms' },
+    { name: 'Tables', path: 'tables' },
     { name: 'Not Your Everyday Elements', path: 'not-your-everyday-elements' },
     { name: 'Intro into Web Development', path: 'intro-into-web-development' },
 ]
