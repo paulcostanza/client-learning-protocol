@@ -1,6 +1,7 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+import IDE from '../../../components/IDE'
 
 export default function IntroIntoWebDevelopment() {
     const quizImports = {
@@ -32,6 +33,8 @@ export default function IntroIntoWebDevelopment() {
 <meta property="og:url" content="https://clientlearningprotocol.io" />`
 
     const link = `<link rel="stylesheet" href="./styles.css" />`
+
+    const brokenLink = `<p>Client Learning Protocol's <a href="https:/clientlearningprotocol.io/#/htm1">HTML section</a></p>`
 
     return (
         <div className="container">
@@ -121,6 +124,41 @@ export default function IntroIntoWebDevelopment() {
                     {link}
                 </SyntaxHighlighter>
             </div>
+
+            <h2>How to use the DOM inspector and DevTools to Debug</h2>
+
+            <p>When you are building out your projects, you will frequently run into issues where your programs are not working as expected. Programmers often refer to issues as bugs. The process of finding and fixing these bugs is known as <strong>debugging</strong>.</p>
+
+            <p>To debug your code, you will need to use some tools provided by your browser. Two important tools to use would be the DOM inspector and developer tools.</p>
+
+            <ul>
+                <li>The <strong>DOM inspector</strong> allows you to inspect the HTML structure of the page you are on. The <em>Document Object Model</em>. Is a tree-like structure that represents the elements on a page. (More on the DOM later)</li>
+                <li>The <strong>developer tools</strong> allow you to inspect the HTML, CSS, and JavaScript of the page you are on.</li>
+            </ul>
+
+            <IDE
+                HTMLStart={brokenLink}
+            />
+
+            <pre><code>
+                { }
+            </code></pre>
+
+            <p>Oh no! Our link seems to be broken :(</p>
+
+            <p>When we click on the link, it will lead to a 404 page. A <strong>404 page</strong> is an error page that appears when a user tries to access a webpage that does not exist on the server.</p>
+
+            <p>The intent is for the link to lead to the Client Learning Protocol's HTML section. To see what the issue might be, you can use the developer tools.</p>
+
+            <p>To open the developer tools in your browser, you can right-click on the page and select <code>Inspect</code> (or <code>Control Shift I</code> on PC or <code>Command Option I</code> on Mac). When you open developer tools in Google Chrome, you will encounter a number of tabs. The first tab is called the <code>Elements</code> tab. This tab shows you the HTML structure of the page you are on.</p>
+
+            <p>The second is called the <code>Console</code> tab. This tab shows you any errors that might be occurring on the page.</p>
+
+            <p>In this situation where you have a broken link, you can check the console to see the error messages for that broken link. The common message that continues to display for the broken link is the 404 error. The 404 error indicates that the page is not found.</p>
+
+            <p>This lets us know that the issue is with the URL in the anchor element. When you inspect the <code>href</code> value you will find a typo.</p>
+
+            <p>Right now the console message shows <code>/htm1</code> against a 404, but the correct URL should be <code>/html</code> (how on earth did that happen?!). When the link is corrected, then it will work as expected.</p>
 
             <h2>Review</h2>
 

@@ -1,10 +1,12 @@
-# HTML Fundamentals
+# Current Section
+
+## 1. HTML Fundamentals
 - HTML
 - Heading Elements
 - Paragraph Element
 - Why does each example look so...boring?
 
-# Visual Content & Media
+## 2. Visual Content & Media
 - Void Elements
 - Images
 - Deeper dive into Attributes
@@ -13,83 +15,80 @@
 
 To add: how Creative Commons 0 works
 
-# Navigation & Linking
+## 3. Navigation & Linking
 - Links
 - Target Attribute Types
 - Absolute vs. Relative Paths
 - Link element
 
-# Document Architecture
+## 4. Document Architecture
 - HTML Boilerplate
 - Common HTML elements
 
-# Organization & Structure
+## 5. Organization & Structure
 - Div elements
 - Identifiers and Groupings
 - HTML entities
 
-# Intro into Web Development
+## 6. Semantic HTML
+- `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`
+
+## 7. Forms
+- Form structure: `<form>`, `<input>`, `<textarea>`, `<select>`, `<option>`, `<label>`, `<fieldset>`, `<legend>`
+
+## 8. Tables
+- Table structure
+
+## 9. Not Your Everyday Elements
+
+## 10. Intro into Web Development
 - What's a JavaScript?
 - SEO
 - Open Graph Tags
 - Linking
 
-# Skipped
-- iframe
-
-## 1. Core Concepts
-- Semantic HTML: using elements for their intended purpose (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`)
+# to add
 - Block vs. inline elements - this is more CSS
 
-## 3. Forms & Input
-- Form structure: `<form>`, `<input>`, `<textarea>`, `<select>`, `<option>`, `<label>`, `<fieldset>`, `<legend>`
-- Input types: text, password, email, number, date, file, checkbox, radio, etc.
-- Form validation: required fields, pattern matching, constraints
-- Accessibility in forms (labels, ARIA attributes)
-
-## 4. Media
-- Embedding images: `<img>`, `srcset`, `alt`
+## 1. Media
+- Embedding images: `<img>`, `srcset`
 - Audio and video: `<audio>`, `<video>`, `<source>`, `<track>`
 - Embedding external content: `<iframe>`, `<embed>`, `<object>`
 
-## 5. Tables
-- Table structure: `<table>`, `<thead>`, `<tbody>`, `<tfoot>`, `<tr>`, `<th>`, `<td>`
-- Table accessibility: captions, summaries, scope attributes
+## 2. Forms & Input
+- Input types: password, date, file
+- Form validation: required fields, pattern matching, constraints
 
-## 6. Accessibility (a11y)
+## 3. Accessibility (a11y)
 - Semantic markup for screen readers
 - ARIA roles and attributes
 - Keyboard navigation
 - Meaningful alt text for images
 - Landmarks and skip links
 
-## 7. SEO Best Practices
-- Proper use of headings
-- Meta tags: `title`, `description`, `viewport`, `charset`
-- Open Graph and Twitter Card tags
+## 4. SEO Best Practices
 - Structured data (JSON-LD, microdata)
 
-## 8. Advanced HTML
+## 5. Advanced HTML
 - Custom elements (Web Components)
 - Templates: `<template>`, `<slot>`
 - Shadow DOM basics
 - Progressive enhancement and graceful degradation
 
-## 9. Performance & Best Practices
+## 6. Performance & Best Practices
 - Minimizing HTML size
 - Lazy loading images and iframes
 - Using semantic tags for maintainability
 
-## 10. Internationalization
-- Language attributes (`lang`)
+## 7. Internationalization
 - Directionality (`dir`)
 - Unicode and character encoding
 
-## 11. Browser Compatibility
+## 8. Browser Compatibility
 - Feature detection
 - Polyfills and fallbacks
 
-## 12. Security
+## 9. Security
 - Preventing XSS with proper escaping
 - Safe embedding of third-party content
 
