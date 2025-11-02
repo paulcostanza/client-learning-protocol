@@ -589,5 +589,423 @@ export default [
         ],
         random: true,
         answer: '\`article\`',
+    },
+    {
+        id: 37,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'For attribute role',
+        question: "What is the role of the \`for\` attribute inside the \`label\` element?",
+        options: [
+            'indicates the color of the label text',
+            'used to explicitly associate a label with an input',
+            'specifies the alignment of the label within its container',
+            'defines a JavaScript function to execute when the label is clicked'
+        ],
+        random: true,
+        answer: 'used to explicitly associate a label with an input',
+        description: `Example:
+~~~html
+<label for="firstName">First Name:</label>
+<input id="firstName" type="text" size="8" />
+~~~
+
+The \`for\` attribute in the label element must match the \`id\` attribute in the input element to become explicitly associated. `
+    },
+    {
+        id: 38,
+        type: 'checkbox',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Input type values',
+        question: "Which of the following is/are correct value(s) for the \`type\` attribute used inside inputs?",
+        options: [
+            '\`choice\`',
+            '\`text-box\`',
+            '\`number\`',
+            '\`text\`',
+            '\`button\`'
+        ],
+        random: true,
+        answer: ['\`number\`', '\`text\`', '\`button\`'],
+    },
+    {
+        id: 39,
+        type: 'checkbox',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Button type values',
+        question: "Which of the following are valid values for the \`type\` attribute inside a \`button\` element?",
+        options: [
+            '\`src\`',
+            '\`button\`',
+            '\`reset\`',
+            '\`submit\`'
+        ],
+        random: true,
+        answer: ['\`button\`', '\`reset\`', '\`submit\`'],
+    },
+    {
+        id: 40,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Alt button element',
+        question: "What is another element you can use to represent a button?",
+        options: [
+            '\`img\`',
+            '\`form\`',
+            '\`header\`',
+            '\`input\`',
+            '\`btn\`'
+        ],
+        random: true,
+        answer: '\`input\`',
+        description: `Example: 
+~~~html
+<input type="button" value="Input Button" onclick="alert('Input button pressed!')" />
+~~~`
+    },
+    {
+        id: 41,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: 'Tree structure name',
+        question: "What is the tree-like structure that represents the elements on a page called?",
+        options: [
+            'BOM',
+            'DOM',
+            'CSS'
+        ],
+        random: true,
+        answer: 'DOM',
+        description: 'DOM aka *Document Object Model*'
+    },
+    {
+        id: 42,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: 'Elements tab role',
+        question: "What is the role of the *elements* tab in the developer tools?",
+        options: [
+            'shows you the HTML structure of the page you are on',
+            'shows you the CSS structure of the page you are on',
+            'shows you the JavaScript structure of the page you are on',
+            'shows you the PHP structure of the page you are on'
+        ],
+        random: true,
+        answer: 'shows you the HTML structure of the page you are on',
+    },
+    {
+        id: 43,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Form attribute',
+        question: "Which of the following attributes is used to specify the URL where the form data should be sent within a \`form\` element?",
+        options: [
+            '\`capture\`',
+            '\`accept\`',
+            '\`lang\`',
+            '\`action\`'
+        ],
+        random: true,
+        answer: '\`action\`',
+        description: 'An \`action\`\'s value is the API endpoint where our data we collect is sent to on the server.'
+    },
+    {
+        id: 44,
+        type: 'checkbox',
+        category: 'html',
+        subcategory: 'tables',
+        title: 'Table row elements',
+        question: "Which two elements are used to specify a row and a row header in a table?",
+        options: [
+            '\`row\` element is used for rows',
+            '\`th\` element is used for the header',
+            '\`tr\` element is used for rows',
+            '\`head\` element is used for the header',
+            '\`r\` element is used for rows',
+            '\`thead\` element is used for the header'
+        ],
+        random: true,
+        answer: ['\`tr\` element is used for rows', '\`th\` element is used for the header'],
+    },
+    {
+        id: 45,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'tables',
+        title: 'TD element purpose',
+        question: "What is the \`td\` element used for?",
+        options: [
+            'defines a table cell',
+            'defines a table data type',
+            'merges two columns',
+            'merges two rows'
+        ],
+        random: true,
+        answer: 'defines a table cell',
+        description: `A table cell is where our data for the table's the rows and columns reside. Example:
+~~~html
+<table>
+  <thead>     
+    <tr>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Grade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Davis</td>
+      <td>Alex</td>
+      <td>54</td>
+    </tr>
+  </tbody>
+</table>        
+~~~
+
+Our table has one row of data with the data values of *Davis*, *Alex*, and *54*... Alex should really study more. 
+`
+    },
+    {
+        id: 46,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'tables',
+        title: 'Colspan function',
+        question: "What is the function of the \`colspan\` attribute?",
+        options: [
+            'it removes the breakline between text in a column',
+            'used to define the number of columns',
+            'defines the number of columns a table cell should span',
+            'defines the length of a column in a table'
+        ],
+        random: true,
+        answer: 'defines the number of columns a table cell should span',
+    },
+    {
+        id: 47,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Placeholder role',
+        question: "What is the role of the \`placeholder\` attribute?",
+        options: [
+            'used to send data to the server when the form is submitted',
+            'used to specify that an input field is read-only to the user',
+            'used to associate a \`label\` element with an \`input\` element',
+            'used to provide a hint for an input field'
+        ],
+        random: true,
+        answer: 'used to provide a hint for an input field',
+    },
+    {
+        id: 48,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Explicit form association',
+        question: "Which of the following is an example of explicit form association between labels and inputs?",
+        options: [
+            '\`<label for="age">Age:</label><input type="number" id="age" name="age">\`',
+            '\`<label connect="age">Age:</label><input type="number" id="age" name="age">\`',
+            '\`<label explicit="age">Age:</label><input type="number" id="age" name="age">\`',
+            '\`<label associate="age">Age:</label><input type="number" id="age" name="age">\`'
+        ],
+        random: true,
+        answer: '\`<label for="age">Age:</label><input type="number" id="age" name="age">\`',
+    },
+    {
+        id: 49,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'tables',
+        title: 'Table cell element',
+        question: "Which element is used to define a cell in a table?",
+        options: [
+            '\`td\`',
+            '\`tcol\`',
+            '\`tc\`',
+            '\`th\`',
+            '\`c\`',
+            '\`tcell\`'
+        ],
+        random: true,
+        answer: '\`td\`',
+        description: '\`td\`: *table data* is used to define the cell within a table'
+    },
+    {
+        id: 50,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: 'DOM inspection tool',
+        question: "Which of the following is a tool that allows you to inspect and modify the HTML structure of a web page?",
+        options: [
+            'DOM validation',
+            'DOM removal',
+            'DOM inspector',
+            'DOM tester'
+        ],
+        random: true,
+        answer: 'DOM inspector',
+    },
+    {
+        id: 51,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Fieldset grouping',
+        question: "Which of the following is the correct way to group related input fields inside of the \`fieldset\` element?",
+        options: [
+            '\`<legend>User information</legend>\`',
+            '\`<p>User information</p>\`',
+            '\`<caption>User information</caption>\`',
+            '\`<title>User information</title>\`'
+        ],
+        random: true,
+        answer: '\`<legend>User information</legend>\`',
+    },
+    {
+        id: 52,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Required attribute',
+        question: "Which attribute specifies that an input must be filled out before submitting the form?",
+        options: [
+            '\`obligatory\`',
+            '\`necessary\`',
+            '\`required\`',
+            '\`essential\`'
+        ],
+        random: true,
+        answer: '\`required\`',
+    },
+    {
+        id: 53,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: 'Devtools purpose',
+        question: "What are Devtools used for?",
+        options: [
+            'automatically format your code',
+            'spot any linting issues in your code',
+            'help you debug, profile, and analyze web pages',
+            'help you ensure 100% test coverage for your code'
+        ],
+        random: true,
+        answer: 'help you debug, profile, and analyze web pages',
+        description: 'Devtools are built directly into the browser and are used to help you debug, profile, and analyze web pages.'
+    },
+    {
+        id: 54,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Disable input',
+        question: "Which of the following is the correct way to disable an input?",
+        options: [
+            '\`<input type="checkbox" disableInput />\`',
+            '\`<input type="checkbox" disabled />\`',
+            '\`<input type="checkbox" inputDisabled />\`',
+            '\`<input type="checkbox" disabling />\`'
+        ],
+        random: true,
+        answer: '\`<input type="checkbox" disabled />\`',
+    },
+    {
+        id: 55,
+        type: 'checkbox',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Valid input types',
+        question: "Which of the following is a valid value for the \`type\` attribute?",
+        options: [
+            '\`<input type="email" />\`',
+            '\`<input type="capture" />\`',
+            '\`<input type="action" />\`',
+            '\`<input type="text" />\`',
+            '\`<input type="number" />\`'
+        ],
+        random: true,
+        answer: ['\`<input type="email" />\`', '\`<input type="text" />\`', '\`<input type="number" />\`'],
+    },
+    {
+        id: 56,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Size attribute usage',
+        question: "Which of the following is the correct use of the \`size\` attribute?",
+        options: [
+            '\`<input id="full-name" type="text" size="10" />\`',
+            '\`<input id="full-name" type="text" size="large" />\`',
+            '\`<input id="full-name" type="text" size="10vh" />\`',
+            '\`<input id="full-name" type="text" size="0.001" />\`'
+        ],
+        random: true,
+        answer: '\`<input id="full-name" type="text" size="10" />\`',
+        description: 'The number in this context refers to how many *characters* the input can hold, not a CSS measurement. It also cannot measure a fraction of a character.'
+    },
+    {
+        id: 57,
+        type: 'checkbox',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Char length attributes',
+        question: "Which of the following attributes are used to specify the minimum and maximum number of characters required in an input field?",
+        options: [
+            '\`min\`',
+            '\`max\`',
+            '\`minlength\`',
+            '\`maxlength\`',
+            '\`minimumLen\`',
+            '\`maximumLen\`',
+            '\`minlen\`',
+            '\`maxlen\`'
+        ],
+        random: true,
+        answer: ['\`minlength\`', '\`maxlength\`'],
+        description: `Example:
+~~~html
+<form action="" method="POST">
+  <label for="email">Email Address (Required field):</label>
+  <input
+    required
+    type="email"
+    name="email"
+    id="email"
+    minlength="4"
+    maxlength="64"
+  />
+  <button type="submit">Submit Form</button>
+</form>
+~~~
+Here our email field has a minimum length of 4 characters and maximum length of 64 characters. 
+`
+    },
+    {
+        id: 58,
+        type: 'checkbox',
+        category: 'html',
+        subcategory: 'forms',
+        title: 'Incorrect button types',
+        question: "Which of the following button examples does NOT use a correct value for the \`type\` attribute?",
+        options: [
+            '\`<button type="button">Press Button</button>\`',
+            '\`<button type="submit">Submit</button>\`',
+            '\`<button type="btn">Press Button</button>\`',
+            '\`<button type="reset">Reset</button>\`',
+            '\`<button type="rst">Reset</button>\`'
+        ],
+        random: true,
+        answer: ['\`<button type="btn">Press Button</button>\`', '\`<button type="rst">Reset</button>\`'],
     }
 ]
