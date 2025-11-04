@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Editor from "@monaco-editor/react"
 import {
     Panel,
@@ -9,16 +9,25 @@ import {
 export default function IDE({
     hasHTML = true,
     hasCSS = true,
+    hasJS = false,
     HTMLStart = "<h1>Hello nerd!</h1>",
     CSSStart = "body {background: #2d2d2d; color: #ccc;}\na { color: #357abd; }\nimg { width: 300px; }\nfooter { font-size: 0.88em; }\n\n",
+    JSStart = `const btn = document.querySelector("button")
+btn.addEventListener("click", function() {
+  const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+  document.body.style.backgroundColor = randomColor;
+});`,
     firstTab = "html"
 }) {
     const [html, setHtml] = useState(HTMLStart)
     const [css, setCss] = useState(CSSStart)
+    const [js, setJs] = useState(JSStart)
     const [srcDoc, setSrcDoc] = useState("")
     const [activeCodingTab, setActiveCodingTab] = useState(firstTab)
     const [activeDisplayTab, setActiveDisplayTab] = useState("output")
     const [isMobile, setIsMobile] = useState(false)
+    // const [consoleLogs, setConsoleLogs] = useState([])
+    const iframeRef = useRef(null)
 
     useEffect(() => {
         const checkScreenSize = () => {
@@ -32,6 +41,8 @@ export default function IDE({
 
     useEffect(() => {
         const timeout = setTimeout(() => {
+            // setConsoleLogs([])
+
             const source = `
         <html>
             <head>
@@ -39,21 +50,55 @@ export default function IDE({
             </head>
             <body>
                 ${html}
+                <script>
+                    // Just execute the JavaScript without console capture
+                    try {
+                        ${hasJS ? js : ''}
+                    } catch (error) {
+                        console.error('JavaScript Error:', error.message);
+                    }
+                </script>
             </body>
         </html>
       `
+            // setConsoleLogs([])
             setSrcDoc(source)
         }, 300)
         return () => clearTimeout(timeout)
-    }, [html, css, hasHTML, hasCSS])
+    }, [html, css, js, hasHTML, hasCSS, hasJS])
+
+    // for console
+    // useEffect(() => {
+    //     const handleMessage = (event) => {
+    //         if (event.data &&
+    //             typeof event.data === 'object' &&
+    //             event.data.type === 'console' &&
+    //             Array.isArray(event.data.data)) {
+
+    //             console.log('Valid console message received: ', event.data)
+    //             const timestamp = new Date().toLocaleTimeString()
+    //             setConsoleLogs(prev => [...prev, {
+    //                 id: Date.now() + Math.random(),
+    //                 method: event.data.method,
+    //                 data: event.data.data,
+    //                 timestamp
+    //             }])
+    //         }
+    //     }
+
+    //     window.addEventListener('message', handleMessage)
+    //     return () => window.removeEventListener('message', handleMessage)
+    // }, [])
 
     const codingTabs = []
 
     if (hasHTML) codingTabs.push({ id: "html", label: "HTML" })
     if (hasCSS) codingTabs.push({ id: "css", label: "CSS" })
+    if (hasJS) codingTabs.push({ id: "js", label: "JavaScript" })
 
     const displayTabs = [
-        { id: "output", label: "Output" },
+        ...(hasHTML ? [{ id: "output", label: "Output" }] : []),
+        // ...(hasJS ? [{ id: "console", label: "Console" }] : [])
     ]
 
     useEffect(() => {
@@ -63,7 +108,16 @@ export default function IDE({
         } else if (availableTabs.includes(firstTab)) {
             setActiveCodingTab(firstTab)
         }
-    }, [hasHTML, hasCSS, firstTab])
+    }, [hasHTML, hasCSS, hasJS, firstTab])
+
+    useEffect(() => {
+        const availableDisplayTabs = displayTabs.map(tab => tab.id)
+        if (!availableDisplayTabs.includes(activeDisplayTab) && availableDisplayTabs.length > 0) {
+            setActiveDisplayTab(availableDisplayTabs[0])
+        }
+    }, [hasHTML, hasJS])
+
+    const clearConsole = () => setConsoleLogs([])
 
     return (
         <div className="code-example">
@@ -129,17 +183,25 @@ export default function IDE({
                                 }}
                             />
                         )}
-                        {/* Will get this done, one day... */}
-                        {/* {activeCodingTab === "js" && (
+                        {activeCodingTab === "js" && (
                             <Editor
                                 height="400px"
                                 language="javascript"
                                 theme="vs-dark"
                                 value={js}
                                 onChange={(v) => setJs(v || "")}
-                                options={{ fontSize: 14, minimap: { enabled: false } }}
+                                options={{
+                                    fontSize: 14,
+                                    minimap: { enabled: false },
+                                    wordWrap: "on",
+                                    scrollBeyondLastLine: true,
+                                    scrollbar: {
+                                        horizontal: 'auto',
+                                        vertical: 'auto'
+                                    }
+                                }}
                             />
-                        )} */}
+                        )}
                     </div>
                 </Panel>
                 <PanelResizeHandle />
@@ -172,14 +234,93 @@ export default function IDE({
                         </div>
                         {activeDisplayTab === 'output' && (
                             <iframe
+                                ref={iframeRef}
                                 srcDoc={srcDoc}
                                 title="output"
                                 sandbox="allow-scripts"
-                                frameBorder="0"
                                 width="100%"
                                 height="100%"
                             />
                         )}
+                        {/* {activeDisplayTab === 'console' && (
+                            <div style={{
+                                backgroundColor: '#1e1e1e',
+                                color: '#d4d4d4',
+                                fontFamily: 'monospace',
+                                fontSize: '14px',
+                                padding: '10px',
+                                height: '100%',
+                                overflow: 'auto',
+                                display: 'flex',
+                                flexDirection: 'column'
+                            }}>
+                                <div style={{
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    marginBottom: '10px',
+                                    borderBottom: '1px solid #333',
+                                    paddingBottom: '5px'
+                                }}>
+                                    <span>Console</span>
+                                    <div style={{ display: 'flex', gap: '8px' }}>
+                                        <button
+                                            onClick={runCode}
+                                            style={{
+                                                background: '#0078d4',
+                                                color: '#fff',
+                                                border: 'none',
+                                                padding: '4px 8px',
+                                                cursor: 'pointer',
+                                                fontSize: '12px',
+                                                borderRadius: '2px'
+                                            }}
+                                        >
+                                            Run
+                                        </button>
+                                        <button
+                                            onClick={clearConsole}
+                                            style={{
+                                                background: '#333',
+                                                color: '#d4d4d4',
+                                                border: 'none',
+                                                padding: '4px 8px',
+                                                cursor: 'pointer',
+                                                fontSize: '12px',
+                                                borderRadius: '2px'
+                                            }}
+                                        >
+                                            Clear
+                                        </button>
+                                    </div>
+                                </div>
+                                <div style={{ flex: 1, overflow: 'auto' }}>
+                                    {consoleLogs.map((log) => (
+                                        <div key={log.id} style={{
+                                            marginBottom: '5px',
+                                            color: log.method === 'error' ? '#f85149' :
+                                                log.method === 'warn' ? '#f0ad4e' : '#d4d4d4'
+                                        }}>
+                                            <span style={{ color: '#666', fontSize: '12px' }}>
+                                                {log.timestamp}
+                                            </span>
+                                            {' '}
+                                            <span style={{ fontWeight: 'bold' }}>
+                                                {log.method === 'error' ? '❌' :
+                                                    log.method === 'warn' ? '⚠️' : 'ℹ️'}
+                                            </span>
+                                            {' '}
+                                            {log.data.join(' ')}
+                                        </div>
+                                    ))}
+                                    {consoleLogs.length === 0 && (
+                                        <div style={{ color: '#666', fontStyle: 'italic' }}>
+                                            Console output will appear here...
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        )} */}
                     </div>
                 </Panel>
             </PanelGroup>
