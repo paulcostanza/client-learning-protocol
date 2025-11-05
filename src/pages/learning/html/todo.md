@@ -46,6 +46,7 @@ To add: how Creative Commons 0 works
 - SEO
 - Open Graph Tags
 - Linking
+- DOM inspector & DevTools
 
 # to add
 - Block vs. inline elements - this is more CSS

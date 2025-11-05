@@ -1,12 +1,21 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+import IDE from '../../../components/IDE'
+
 export default function Tables() {
-    return (
-        <div className="container">
-            <h1>Tables</h1>
+  const quizImports = {
+    html: () => import('../../../pages/quiz/database/HTMLQuestions.js')
+  }
 
-            <p>HTML tables are excellent for display data in a well-organized manner.</p>
+  return (
+    <div className="container">
+      <h1>Tables</h1>
 
-            <pre><code>
-                {`<table id="quickfacts">
+      <p>HTML tables are excellent for display data in a well-organized manner.</p>
+
+      <pre><code>
+        {`<table id="quickfacts">
   <thead>
     <tr>
       <th colspan="2">Quick Facts: Software Developers, Quality Assurance Analysts, and Testers</th>
@@ -51,21 +60,21 @@ export default function Tables() {
     </tr>
   </tfoot>
 </table>`}
-            </code></pre>
+      </code></pre>
 
-            <p>As you can see, there is a main <code>table</code> element with an <code>id</code> set to <code>quickfacts</code>. Inside it, the table has a table head element, <code>thead</code>, table body element, <code>tbody</code>, and a table foot element, <code>tfoot</code>.</p>
+      <p>As you can see, there is a main <code>table</code> element with an <code>id</code> set to <code>quickfacts</code>. Inside it, the table has a table head element, <code>thead</code>, table body element, <code>tbody</code>, and a table foot element, <code>tfoot</code>.</p>
 
-            <p>The table head, body, and foot elements can each contain any number of table rows, <code>tr</code>. And each table row can contain a table header <code>th</code>, table data <code>td</code>, or both.</p>
+      <p>The table head, body, and foot elements can each contain any number of table rows, <code>tr</code>. And each table row can contain a table header <code>th</code>, table data <code>td</code>, or both.</p>
 
-            <ul>
-                <li><code>th</code> labels the data in that row.</li>
-                <li><code>td</code> contains the individual data points, aka data cells</li>
-            </ul>
+      <ul>
+        <li><code>th</code> labels the data in that row.</li>
+        <li><code>td</code> contains the individual data points, aka data cells</li>
+      </ul>
 
-            <p>This may seem like a lot all at once, but every table follows a similar architectural hierarchy like we see above. The next example is simple table, and as you can see, the same ordering is applied.</p>
+      <p>This may seem like a lot all at once, but every table follows a similar architectural hierarchy like we see above. The next example is simple table, and as you can see, the same ordering is applied.</p>
 
-            <pre><code>
-                {`<table>
+      <pre><code>
+        {`<table>
   <thead>
     <tr>
       <th>The title of this table</th>
@@ -91,24 +100,24 @@ export default function Tables() {
     </tr>
   </tfoot>
 </table>`}
-            </code></pre>
+      </code></pre>
 
-            <p>Some websites will choose to use <code>div</code>s to build their own tables instead of using the more appropriate <code>table</code> element (stay away from them, they are a nightmare!).</p>
+      <p>Some websites will choose to use <code>div</code>s to build their own tables instead of using the more appropriate <code>table</code> element (stay away from them, they are a nightmare!).</p>
 
-            <blockquote>If the table you are display does not need headers along the left-most column, then do not include <code>th</code> within the <code>tr</code> of the <code>tbody</code>. So simple!</blockquote>
+      <blockquote>If the table you are display does not need headers along the left-most column, then do not include <code>th</code> within the <code>tr</code> of the <code>tbody</code>. So simple!</blockquote>
 
-            <p>You can add a caption to a <code>table</code> by using a <strong>table caption</strong> element (<code>caption</code>).</p>
+      <p>You can add a caption to a <code>table</code> by using a <strong>table caption</strong> element (<code>caption</code>).</p>
 
-            <pre><code>
-                {`<table>
+      <pre><code>
+        {`<table>
   <caption>Football Scores</caption>
 </table>`}
-            </code></pre>
+      </code></pre>
 
-            <p>The <code>colspan</code> attribute specifies the number of columns a cell should span.</p>
+      <p>The <code>colspan</code> attribute specifies the number of columns a cell should span.</p>
 
-            <pre><code>
-                {`<table>
+      <pre><code>
+        {`<table>
       <caption>
         Calculus Final Exam Grades
       </caption>
@@ -160,9 +169,16 @@ export default function Tables() {
         </tr>
       </tfoot>
     </table>`}
-            </code></pre>
+      </code></pre>
 
-            <hr />
-        </div>
-    )
+      <hr />
+
+      <h2>Review</h2>
+
+      <ReviewQuiz
+        quizImports={quizImports}
+        subcategory="tables"
+      />
+    </div>
+  )
 }
