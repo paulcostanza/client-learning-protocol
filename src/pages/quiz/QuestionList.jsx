@@ -44,6 +44,9 @@ function filterQuestions(questions, status, review, category) {
                     reviewValue === 'Tomorrow' ||
                     (reviewValue.includes('days') && parseInt(reviewValue) <= 7)
                 break
+            case '> a week':
+                reviewMatch = reviewValue.includes('days') && parseInt(reviewValue) > 7
+                break
             case '< a month':
                 reviewMatch = reviewValue === 'Ready!' ||
                     reviewValue === 'Tomorrow' ||

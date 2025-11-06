@@ -71,6 +71,7 @@ export default function SelectAQuestionFilter({
         { value: 'ready', label: 'Ready!' },
         { value: 'tomorrow', label: 'Tomorrow' },
         { value: '< a week', label: '< a Week' },
+        { value: '> a week', label: '> a Week' },
         { value: '< a month', label: '< a Month' },
         { value: '> a month', label: '> a Month' },
     ]
