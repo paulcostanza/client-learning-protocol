@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import PrevNextSection from '../../components/PrevNextSection.jsx'
-import SectionDrawer from '../../components/SideBarNav'
-import ModalForQuestions from '../../pages/quiz/ModalForQuestions.jsx'
-import JavaIntro from './JavaIntro'
-import JavaFundamentals from './JavaFundamentals'
-import Methods from './Methods'
-import Arrays from './Arrays'
-import HashMaps from './HashMaps'
+import PrevNextSection from '../../../components/PrevNextSection.jsx'
+import SectionDrawer from '../../../components/SideBarNav.jsx'
+import ModalForQuestions from '../../quiz/ModalForQuestions.jsx'
+import JavaIntro from './JavaIntro.jsx'
+import JavaFundamentals from './JavaFundamentals.jsx'
+import Methods from './Methods.jsx'
+import Arrays from './Arrays.jsx'
+import HashMaps from './HashMaps.jsx'
 
 const sectionComponents = {
     'Intro to Java': (props) => <JavaIntro {...props} />,

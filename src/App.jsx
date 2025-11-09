@@ -3,13 +3,14 @@ import Intro from './pages/intro/Intro'
 import Python from './pages/python/Python'
 // import Java from './pages/java/Java' <- delete this page
 
-import JavaLanding from './pages/java/JavaLanding'
-import JavaSectionLayout from './pages/java/JavaSectionLayout'
-import JavaIntro from './pages/java/JavaIntro'
-import JavaFundamentals from './pages/java/JavaFundamentals'
-import JavaMethods from './pages/java/Methods'
-import JavaArrays from './pages/java/Arrays'
-import JavaHashMaps from './pages/java/HashMaps'
+// Java
+import JavaLanding from './pages/learning/java/JavaLanding'
+import JavaSectionLayout from './pages/learning/java/JavaSectionLayout'
+import JavaIntro from './pages/learning/java/JavaIntro'
+import JavaFundamentals from './pages/learning/java/JavaFundamentals'
+import JavaMethods from './pages/learning/java/Methods'
+import JavaArrays from './pages/learning/java/Arrays'
+import JavaHashMaps from './pages/learning/java/HashMaps'
 
 import React from './pages/react/React'
 import Quiz from './pages/quiz/Quiz'

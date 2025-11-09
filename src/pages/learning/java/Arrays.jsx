@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import QuestionTableList from '../../components/QuestionTableList'
-import ModalForQuestions from '../../pages/quiz/ModalForQuestions.jsx'
+import QuestionTableList from '../../../components/QuestionTableList.jsx'
+import ModalForQuestions from '../../quiz/ModalForQuestions.jsx'
 
 export default function Arrays() {
     const [modalOpen, setModalOpen] = useState(false)
@@ -10,7 +10,7 @@ export default function Arrays() {
     const [refresh, setRefresh] = useState(0)
 
     const quizImports = {
-        java: () => import('../../pages/quiz/database/JavaQuestions.js')
+        java: () => import('../../quiz/database/JavaQuestions.js')
     }
 
     function handleRowClick(question) {
