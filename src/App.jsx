@@ -4,8 +4,8 @@ import Python from './pages/python/Python'
 // import Java from './pages/java/Java' <- delete this page
 
 // Java
-import JavaLanding from './pages/learning/java/JavaLanding'
-import JavaSectionLayout from './pages/learning/java/JavaSectionLayout'
+import JavaLanding from './pages/learning/java/setup/JavaLanding'
+import JavaSectionLayout from './pages/learning/java/setup/JavaSectionLayout'
 import JavaIntro from './pages/learning/java/JavaIntro'
 import JavaFundamentals from './pages/learning/java/JavaFundamentals'
 import JavaMethods from './pages/learning/java/Methods'

@@ -1,6 +1,6 @@
-import SectionDrawer from '../../../components/SideBarNav'
+import SectionDrawer from '../../../../components/SideBarNav'
 import { Outlet } from 'react-router-dom'
-import PrevNextSection from '../../../components/PrevNextSection'
+import PrevNextSection from '../../../../components/PrevNextSection'
 
 const sections = [
     { name: 'Intro to Java', path: 'intro' },
