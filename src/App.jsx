@@ -11,6 +11,7 @@ import JavaFundamentals from './pages/learning/java/JavaFundamentals'
 import JavaMethods from './pages/learning/java/Methods'
 import JavaArrays from './pages/learning/java/Arrays'
 import JavaHashMaps from './pages/learning/java/HashMaps'
+import JavaHttpServer from './pages/learning/java/HttpServer'
 
 import React from './pages/react/React'
 import Quiz from './pages/quiz/Quiz'
@@ -98,6 +99,7 @@ function App() {
               <Route path='methods' element={<JavaMethods />} />
               <Route path='arrays' element={<JavaArrays />} />
               <Route path='hashmaps' element={<JavaHashMaps />} />
+              <Route path='http-server' element={<JavaHttpServer />} />
             </Route>
 
             <Route path='/c' element={<C />} />

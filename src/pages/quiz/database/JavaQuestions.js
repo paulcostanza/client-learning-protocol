@@ -551,7 +551,7 @@ nums[3] = 20
         options: [""],
         random: false,
         answer: "^band\\.get\\(\\s*\"guitars\"\\s*\\);?$",
-        description: '**Answer:** \`guitars.get("guitars");\`'
+        description: '**Answer:** \`band.get("guitars");\`'
     },
     {
         id: 36,
@@ -616,105 +616,164 @@ nums[3] = 20
         description: `**Answer:** \`Arrays.sort(scores)\` \n
 Don't forget to \`import java.util.Arrays;\` at the top!`
     },
-    // {
-    //     id: 41,
-    //     type: 'input',
-    //     category: 'Java',
-    //     subcategory: 'hashmap',
-    //     title: '',
-    //     question: ``,
-    //     options: [""],
-    //     random: false,
-    //     answer: ""
-    // },
-    // {
-    //     id: 41,
-    //     type: 'input',
-    //     category: 'Java',
-    //     subcategory: 'hashmap',
-    //     title: '',
-    //     question: ``,
-    //     options: [""],
-    //     random: false,
-    //     answer: ""
-    // },
-    // {
-    //     id: 41,
-    //     type: 'input',
-    //     category: 'Java',
-    //     subcategory: 'hashmap',
-    //     title: '',
-    //     question: ``,
-    //     options: [""],
-    //     random: false,
-    //     answer: ""
-    // },
-    // {
-    //     id: 41,
-    //     type: 'input',
-    //     category: 'Java',
-    //     subcategory: 'hashmap',
-    //     title: '',
-    //     question: ``,
-    //     options: [""],
-    //     random: false,
-    //     answer: ""
-    // },
-    // {
-    //     id: 41,
-    //     type: 'input',
-    //     category: 'Java',
-    //     subcategory: 'hashmap',
-    //     title: '',
-    //     question: ``,
-    //     options: [""],
-    //     random: false,
-    //     answer: ""
-    // },
-    // {
-    //     id: 41,
-    //     type: 'input',
-    //     category: 'Java',
-    //     subcategory: 'hashmap',
-    //     title: '',
-    //     question: ``,
-    //     options: [""],
-    //     random: false,
-    //     answer: ""
-    // },
-    // {
-    //     id: 41,
-    //     type: 'input',
-    //     category: 'Java',
-    //     subcategory: 'hashmap',
-    //     title: '',
-    //     question: ``,
-    //     options: [""],
-    //     random: false,
-    //     answer: ""
-    // },
-    // {
-    //     id: 41,
-    //     type: 'input',
-    //     category: 'Java',
-    //     subcategory: 'hashmap',
-    //     title: '',
-    //     question: ``,
-    //     options: [""],
-    //     random: false,
-    //     answer: ""
-    // },
-    // {
-    //     id: 41,
-    //     type: 'input',
-    //     category: 'Java',
-    //     subcategory: 'hashmap',
-    //     title: '',
-    //     question: ``,
-    //     options: [""],
-    //     random: false,
-    //     answer: ""
-    // },
+    {
+        id: 41,
+        type: 'radio',
+        category: 'Java',
+        subcategory: 'httpserver',
+        title: '',
+        question: `In a simple HTTP server built with Java sockets, what is the main job of the \`ServerSocket\` class?`,
+        options: [
+            'to send HTTP requests to a remote server',
+            'to listen for incoming client connections on a specific port',
+            'to parse the contents of a HTTP request',
+            'to generate HTML content dynamically',
+            'to manage multiple threads running in parallel'
+        ],
+        random: true,
+        answer: 'to listen for incoming client connections on a specific port',
+        description: `\`ServerSocket\` is used to listen for incoming client connections on a specific port. It waits until a client (like a browser) connects, and then you get a \`Socket\` object to communicate with that client.`
+    },
+    {
+        id: 42,
+        type: 'radio',
+        category: 'Java',
+        subcategory: 'httpserver',
+        title: '',
+        question: `In a Java HTTP server, what does the \`Socket\` object represent once a connection is accepted?`,
+        options: [
+            'the network interface card (NIC) on the server machine',
+            'a specific client\'s connection, used to read and write data',
+            'a storage location for configuration settings',
+            'a thread that runs the entire server',
+            'a data structure that stores all active connections'
+        ],
+        random: true,
+        answer: 'a specific client\'s connection, used to read and write data',
+        description: `A \`Socket\` object represents one specific client connection.
+        
+When a \`ServerSocket\` accepts a connection, it returns a new \`Socket\`. That socket is how your server *reads data from* and *writes data to* that particular client (ex: a web browser).
 
+Each client gets its *own socket* which can later be handled by a separate thread.`
+    },
+    {
+        id: 43,
+        type: 'radio',
+        category: 'Java',
+        subcategory: 'httpserver',
+        title: '',
+        question: `In a basic HTTP server, which of the following is the correct order of events when handling a single client request?`,
+        options: [
+            'send response -&gt; accept connection -&gt; read request',
+            'accept connection -&gt; send response -&gt; read request',
+            'accept connection -&gt; read request -&gt; send response',
+            'read request -&gt; accept connection -&gt; send response',
+            'send response -&gt; read request -&gt; accept connection'
+        ],
+        random: true,
+        answer: 'accept connection -&gt; read request -&gt; send response',
+        description: `1. *Accept connection* - the server waits for a client to connect
+2. *Read request* - once connected, the server reads the HTTP request data from the client's input stream
+3. *Send response* - the server writes back a HTTP response (like an HTML page)`
+    },
+    // left off on question #6
+    // {
+    //     id: 'change me',
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'change me',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         ''
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ``
+    // },
+    // {
+    //     id: 'change me',
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'change me',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         ''
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ``
+    // },
+    // {
+    //     id: 'change me',
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'change me',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         ''
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ``
+    // },
+    // {
+    //     id: 'change me',
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'change me',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         ''
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ``
+    // },
+    // {
+    //     id: 'change me',
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'change me',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         ''
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ``
+    // },
+    // {
+    //     id: 'change me',
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'change me',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         ''
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ``
+    // },
+    // {
+    //     id: 'change me',
+    //     type: 'input',
+    //     category: 'Java',
+    //     subcategory: 'change me',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         ''
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ``
+    // },
 
 ]

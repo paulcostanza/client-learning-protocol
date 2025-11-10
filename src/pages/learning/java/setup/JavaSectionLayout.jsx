@@ -8,6 +8,7 @@ const sections = [
     { name: 'Methods', path: 'methods' },
     { name: 'Arrays', path: 'arrays' },
     { name: 'HashMaps', path: 'hashmaps' },
+    { name: 'HTTP Server Section', path: 'http-server' },
 ]
 
 export default function JavaSectionLayout() {
