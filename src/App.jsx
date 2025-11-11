@@ -63,6 +63,12 @@ import HTMLForms from './pages/learning/html/Forms'
 import HTMLTables from './pages/learning/html/Tables'
 import HTMLNotYourEverydayElements from './pages/learning/html/NotYourEverydayElements'
 
+// Go
+import GoLanding from './pages/learning/go/setup/GoLanding'
+import GoSectionLayout from './pages/learning/go/setup/GoSectionLayout'
+import GoFundamentals from './pages/learning/go/Fundamentals'
+import GoIntroduction from './pages/learning/go/Introduction'
+
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
   HashRouter,
@@ -138,6 +144,12 @@ function App() {
               <Route path='forms' element={<HTMLForms />} />
               <Route path='tables' element={<HTMLTables />} />
               <Route path='not-your-everyday-elements' element={<HTMLNotYourEverydayElements />} />
+            </Route>
+
+            <Route path='/go' element={<GoLanding />} />
+            <Route path='/go' element={<GoSectionLayout />}>
+              <Route path='fundamentals' element={<GoFundamentals />} />
+              <Route path='introduction' element={<GoIntroduction />} />
             </Route>
 
             <Route path='*' element={<NoPage />} />

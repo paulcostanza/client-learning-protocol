@@ -42,10 +42,11 @@ const learningSections = [
     {
         category: "Languages",
         sections: [
-            { label: "Java", href: "/java" },
-            { label: "Python", href: "/python" },
             { label: "C", href: "/c" },
             { label: "C#", href: "/csharp" },
+            { label: "Go", href: "/go" },
+            { label: "Java", href: "/java" },
+            { label: "Python", href: "/python" }
         ]
     },
     {
