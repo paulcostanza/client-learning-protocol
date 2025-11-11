@@ -30,6 +30,7 @@ export default function Quiz() {
         java: () => import('./database/JavaQuestions.js'),
         c: () => import('./database/CQuestions.js'),
         cSharp: () => import('./database/CSharpQuestions.js'),
+        go: () => import('./database/GoQuestions.js'),
         redis: () => import('./database/RedisQuestions.js'),
         memory: () => import('./database/MemoryQuestions.js'),
         programming101: () => import('./database/Programming101Questions.js'),
