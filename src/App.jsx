@@ -68,6 +68,7 @@ import GoLanding from './pages/learning/go/setup/GoLanding'
 import GoSectionLayout from './pages/learning/go/setup/GoSectionLayout'
 import GoFundamentals from './pages/learning/go/Fundamentals'
 import GoIntroduction from './pages/learning/go/Introduction'
+import GoConditionals from './pages/learning/go/Conditionals'
 
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
@@ -150,6 +151,7 @@ function App() {
             <Route path='/go' element={<GoSectionLayout />}>
               <Route path='fundamentals' element={<GoFundamentals />} />
               <Route path='introduction' element={<GoIntroduction />} />
+              <Route path='conditionals' element={<GoConditionals />} />
             </Route>
 
             <Route path='*' element={<NoPage />} />

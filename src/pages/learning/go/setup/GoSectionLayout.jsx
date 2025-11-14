@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom'
 const sections = [
     { name: 'Introduction', path: 'introduction' },
     { name: 'Fundamentals', path: 'fundamentals' },
+    { name: 'Conditionals', path: 'conditionals' },
 ]
 
 export default function GoSectionLayout() {
