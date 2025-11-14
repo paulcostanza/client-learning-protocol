@@ -42,7 +42,7 @@ export default [
             'True',
             'False'
         ],
-        random: true,
+        random: false,
         answer: 'False'
     },
     {
@@ -452,7 +452,7 @@ return x * scale, y * scale, z * scale;
             'the address of the second element',
             'the address of the third element',
         ],
-        random: true,
+        random: false,
         answer: 'the value of the second element'
     },
     {
@@ -523,7 +523,7 @@ int *ptr = &x;
             'the second \`l\`',
             '\`o\`',
         ],
-        random: true,
+        random: false,
         answer: 'the second \`l\`'
     },
     {

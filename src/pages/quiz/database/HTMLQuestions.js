@@ -233,7 +233,7 @@ export default [
     },
     {
         id: 15,
-        type: 'radio',
+        type: 'checkbox',
         category: 'html',
         subcategory: 'visual-content-and-media',
         title: 'Boo who',
@@ -242,10 +242,22 @@ export default [
             '\`text\`',
             '\`email\`',
             '\`src\`',
-            '\`disabled\`'
+            '\`disabled\`',
+            '\`checked\`',
+            '\`required\`',
+            '\`loop\`',
+            '\`controls\`',
+            '\`muted\`',
+            '\`mute\`',
+            '\`mutes\`'
         ],
         random: true,
-        answer: '\`disabled\`',
+        answer: ['\`disabled\`',
+            '\`checked\`',
+            '\`required\`',
+            '\`loop\`',
+            '\`controls\`',
+            '\`muted\`',],
     },
     {
         id: 16,
@@ -326,6 +338,14 @@ export default [
         ],
         random: true,
         answer: '\`meta\`',
+        description: `Inside of the \`head\` element is where you would find \`meta\`. For this website, it could look something like this: 
+~~~html
+<meta
+  name="description"
+  content="Learning about computer programming from a website for free."
+/>
+~~~
+        `
     },
     {
         id: 21,
@@ -472,6 +492,16 @@ export default [
         ],
         random: true,
         answer: 'to specify the source URL of a quotation',
+        description: `It just specifies the source, but does not need to link to the actual website. 
+~~~html
+<div>
+  <blockquote cite="https://genius.com/Limp-bizkit-nookie-lyrics">
+    She put my tender heart in a blender, and still, I surrendered
+  </blockquote>
+  <p>—Limp Bizkit, <cite>Nookie</cite></p>
+</div>
+~~~
+`
     },
     {
         id: 30,

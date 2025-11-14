@@ -51,7 +51,7 @@ export default [
             '32',
             '64'
         ],
-        random: true,
+        random: false,
         answer: '8',
         description: 'Computers operate with bytes in memory, and each byte is made up of 8 bits.'
     },

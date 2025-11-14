@@ -461,7 +461,7 @@ export default [
             'IP'
         ],
         description: `- **ICMP:** *Internet Control Message Protocol* is used for sending error messages and operational information
-- **IP:** *Internet Protocol* is responsible for addressing and routing packets between devices accross neworks`
+- **IP:** *Internet Protocol* is responsible for addressing and routing packets between devices accross networks`
     },
     {
         id: 28,
