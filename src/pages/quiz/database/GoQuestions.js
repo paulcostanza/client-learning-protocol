@@ -33,7 +33,7 @@ export default [
         ],
         random: true,
         answer: 'when performance and memory are the primary concern',
-        description: 'When performance and memory are the primary concern, you should choose specific types (like int32 vs int) for precise control over memory usage and execution speed.'
+        description: 'When performance and memory are the primary concern, you should choose specific types (like \`int32\` vs \`int\`) for precise control over memory usage and execution speed.'
     },
 
     {

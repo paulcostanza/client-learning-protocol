@@ -307,11 +307,11 @@ Grabs data from React\'s *Context API*`
         type: 'input',
         category: 'React',
         subcategory: '',
-        title: '',
+        title: 'DOM reference',
         question: `Which react hook stores a mutable value or DOM reference that persists across renders without re-rendering?`,
         options: [""],
         random: false,
-        answer: "useRef\(\s*.*?\s*\)",
+        answer: "useRef(?:\(\))?;?",
         description: 'Answer: \`useRef()\`'
     },
     {

@@ -620,7 +620,28 @@ export default [
         random: true,
         answer: '\`article\` is for self-contained content, while \`section\` divides content into smaller groups',
         description: `\`article\` represents independent, self-contained content that could stand alone outside the page. Think blog posts, news stories, or forum post. 
-\n\`section\` is used to group related content within a page. Think themes that are group together. Things like chapters, headings, or topic sections.`
+\n\`section\` is used to group related content within a page. Think themes that are group together. Things like chapters, headings, or topic sections.
+~~~html
+<main>
+  <h1>Welcome to the Example</h1>
+  <section> 
+    <h2>Section #1</h2>
+    <article>
+        <p>Bunch of stuff.</p>
+    </article>
+  </section>
+  <section>
+    <h2>Seciton #2</h2>
+    <article>
+        <p>More stuff.</p>
+    </article>
+    <article>
+        <p>Even more stuff.</p>
+    </article>
+  </section>
+</main>
+~~~
+`
     },
     {
         id: 36,
@@ -639,6 +660,22 @@ export default [
         ],
         random: true,
         answer: '\`article\`',
+        description: `
+~~~html
+<main>
+  <section>
+    <h1>The Simpsons</h1>
+    <article>
+      <h2>Why the first 10 seasons are great</h2>
+      <p>...</p>
+    </article>
+    <article>
+      <h2>Why everything after season 10 is bad</h2>
+      <p>...</p>
+    </article>
+  </section>
+</main>
+~~~`
     },
     {
         id: 37,
@@ -655,13 +692,12 @@ export default [
         ],
         random: true,
         answer: 'used to explicitly associate a label with an input',
-        description: `Example:
+        description: `The \`for\` attribute in the label element must match the \`id\` attribute in the input element to become explicitly associated.
 ~~~html
 <label for="firstName">First Name:</label>
 <input id="firstName" type="text" size="8" />
 ~~~
-
-The \`for\` attribute in the label element must match the \`id\` attribute in the input element to become explicitly associated. `
+`
     },
     {
         id: 38,
@@ -760,7 +796,8 @@ The \`for\` attribute in the label element must match the \`id\` attribute in th
             '\`capture\`',
             '\`accept\`',
             '\`lang\`',
-            '\`action\`'
+            '\`action\`',
+            '\`method\`'
         ],
         random: true,
         answer: '\`action\`',
@@ -772,17 +809,34 @@ The \`for\` attribute in the label element must match the \`id\` attribute in th
         category: 'html',
         subcategory: 'tables',
         title: 'Table row elements',
-        question: "Which two elements are used to specify a row and a row header in a table?",
+        question: "Which two elements are used to specify a row with data and a header elements in a table?",
         options: [
             '\`row\` element is used for rows',
-            '\`th\` element is used for the header',
+            '\`th\` element is used for the header elements',
             '\`tr\` element is used for rows',
-            '\`head\` element is used for the header',
+            '\`head\` element is used for the header elements',
             '\`r\` element is used for rows',
-            '\`thead\` element is used for the header'
+            '\`thead\` element is used for the header elements'
         ],
         random: true,
-        answer: ['\`tr\` element is used for rows', '\`th\` element is used for the header'],
+        answer: ['\`tr\` element is used for rows', '\`th\` element is used for the header elements'],
+        description: ` The \`tr\` represents each row in a table. The \`th\` represents the category, typically at the top of a column (but sometimes resides on the left side).
+~~~html
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+  </tr>
+
+  <tr>
+    <td>Paul</td>
+    <td>37</td>
+    <td>Night City</td>
+  </tr>
+</table>
+~~~        
+`
     },
     {
         id: 45,
@@ -806,7 +860,7 @@ The \`for\` attribute in the label element must match the \`id\` attribute in th
     <tr>
       <th>Last Name</th>
       <th>First Name</th>
-      <th>Grade</th>
+      <th>Mid-term Grade</th>
     </tr>
   </thead>
   <tbody>
@@ -1023,7 +1077,7 @@ Our table has one row of data with the data values of *Davis*, *Alex*, and *54*.
         ],
         random: true,
         answer: ['\`minlength\`', '\`maxlength\`'],
-        description: `Example:
+        description: `In the example our email field has a minimum length of 4 characters and a maximum length of 64 characters.
 ~~~html
 <form action="" method="POST">
   <label for="email">Email Address (Required field):</label>
@@ -1037,8 +1091,7 @@ Our table has one row of data with the data values of *Davis*, *Alex*, and *54*.
   />
   <button type="submit">Submit Form</button>
 </form>
-~~~
-Here our email field has a minimum length of 4 characters and maximum length of 64 characters. 
+~~~ 
 `
     },
     {
