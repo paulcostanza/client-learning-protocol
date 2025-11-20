@@ -621,7 +621,7 @@ Don't forget to \`import java.util.Arrays;\` at the top!`
         type: 'radio',
         category: 'Java',
         subcategory: 'httpserver',
-        title: '',
+        title: 'You\'ve been servered',
         question: `In a simple HTTP server built with Java sockets, what is the main job of the \`ServerSocket\` class?`,
         options: [
             'to send HTTP requests to a remote server',
@@ -632,7 +632,9 @@ Don't forget to \`import java.util.Arrays;\` at the top!`
         ],
         random: true,
         answer: 'to listen for incoming client connections on a specific port',
-        description: `\`ServerSocket\` is used to listen for incoming client connections on a specific port. It waits until a client (like a browser) connects, and then you get a \`Socket\` object to communicate with that client.`
+        description: `Imagine you want to build a basic web server in Java. The \`ServerSocket\` class is like a doorman for your server: it stands at the door (a specific port number) and waits for someone (a client, like a web browser) to knock. 
+
+When a client tries to connect, the \`ServerSocket\` opens the door and lets you start a conversation with that client. Without \`ServerSocket\`, your server would not know when someone wants to connect.`
     },
     {
         id: 42,

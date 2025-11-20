@@ -258,6 +258,19 @@ export default [
             '\`loop\`',
             '\`controls\`',
             '\`muted\`',],
+        description: `Some possible places for boolean attributes. 
+~~~html
+<input type="email" name="email" id="email" disabled />
+<input type="checkbox" checked />
+<input type="email" name="email" id="email" required />
+<audio
+  src="https://clientlearningprotocol.io/curriculum/js-music-player/dubstep.mp3"
+  loop
+  controls
+  muted
+></audio>
+~~~
+`
     },
     {
         id: 16,
@@ -519,6 +532,13 @@ export default [
         ],
         random: true,
         answer: '\`cite\`',
+        description: `The attribute is not shown or displayed, rather it is used to assist with screen readers.
+~~~html
+<blockquote cite="https://genius.com/Limp-bizkit-nookie-lyrics">
+  "I did it all for the nookie"
+</blockquote>
+~~~        
+`
     },
     {
         id: 31,
@@ -1033,9 +1053,13 @@ Here our email field has a minimum length of 4 characters and maximum length of 
             '\`<button type="submit">Submit</button>\`',
             '\`<button type="btn">Press Button</button>\`',
             '\`<button type="reset">Reset</button>\`',
-            '\`<button type="rst">Reset</button>\`'
+            '\`<button type="rst">Reset</button>\`',
+            '\`<button type="press">Press</button>\`',
+            '\`<button type="select">Select</button>\`',
+            '\`<button type="apply">Apply</button>\`',
+            '\`<button type="clear">Clear</button>\`'
         ],
         random: true,
-        answer: ['\`<button type="btn">Press Button</button>\`', '\`<button type="rst">Reset</button>\`'],
+        answer: ['\`<button type="btn">Press Button</button>\`', '\`<button type="rst">Reset</button>\`', '\`<button type="press">Press</button>\`', '\`<button type="select">Select</button>\`', '\`<button type="apply">Apply</button>\`', '\`<button type="clear">Clear</button>\`'],
     }
 ]
