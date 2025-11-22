@@ -125,7 +125,19 @@ export default function IntroIntoWebDevelopment() {
                 </SyntaxHighlighter>
             </div>
 
-            <h2>How to use the DOM inspector and DevTools to Debug</h2>
+            <h2>Web browsers</h2>
+
+            <p>Here is a list of the major web browsers you will work with and/or need to make sure your website works on. There is much overlap, but some may have default settings and standards that you need to take into account when working on your project.</p>
+
+            <ul>
+                <li><strong>Google Chrome</strong> This is a free web browser developed by Google and first released in 2008.</li>
+                <li><strong>Firefox</strong> This is a free web browser developed by the Mozilla Corporation and first created in 2004.</li>
+                <li><strong>Safari</strong> This browser was developed by Apple and is the default browser for iPhone, iPad and Mac devices.</li>
+                <li><strong>Brave</strong> This is a free web browser first released in 2016 that is based on the Chromium web browser.</li>
+                <li><strong>Arc</strong> This is a free Chromium based web browser first released in 2023 by The Browser Company.</li>
+            </ul>
+
+            < h2 > How to use the DOM inspector and DevTools to Debug</h2 >
 
             <p>When you are building out your projects, you will frequently run into issues where your programs are not working as expected. Programmers often refer to issues as bugs. The process of finding and fixing these bugs is known as <strong>debugging</strong>.</p>
 
@@ -139,10 +151,6 @@ export default function IntroIntoWebDevelopment() {
             <IDE
                 HTMLStart={brokenLink}
             />
-
-            <pre><code>
-                { }
-            </code></pre>
 
             <p>Oh no! Our link seems to be broken :(</p>
 
@@ -166,6 +174,6 @@ export default function IntroIntoWebDevelopment() {
                 quizImports={quizImports}
                 subcategory="intro-into-web-development"
             />
-        </div>
+        </div >
     )
 }

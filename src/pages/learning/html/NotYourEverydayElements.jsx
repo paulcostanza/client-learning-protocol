@@ -95,7 +95,7 @@ export default function NotYourEverydayElements() {
                 HTMLStart={inlineQuote}
             />
 
-            <p>This works exactly the same as it did with the block quotation element. You can see a paragraph that contains the inline quote from the inline quotation element. There won't be any visual changes, but it gives screen readers and search engines more information about the quote.</p>
+            <p><code>q</code> works exactly the same as it did with the block quotation element. You can see a paragraph that contains the inline quote from the inline quotation element. There won't be any visual changes, but it gives screen readers and search engines more information about the quote.</p>
 
             <blockquote>
                 You should use block quotes for extended quotations from other sources and inline quotes for short quotations from other sources that should be part of existing paragraphs.

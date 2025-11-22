@@ -95,7 +95,7 @@ footer { font-size: 0.88em; }
 
             <h2>Div elements</h2>
 
-            <p><strong>Div</strong> elements are a generic HTML element that does not hold any semantic meaning. It is used as a generic container to hold other HTML elements.</p>
+            <p><code>div</code> elements are a generic HTML element that does not hold any semantic meaning. It is used as a generic container to hold other HTML elements. You will mainly use the <code>div</code> element when you want to group HTML elements that will share a set of CSS styles. </p>
 
             <IDE
                 HTMLStart={divExample}
