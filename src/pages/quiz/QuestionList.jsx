@@ -76,6 +76,7 @@ export default function QuestionList() {
     const filterRef = useRef(null)
 
     const quizImports = {
+        introtocomp: () => import('./database/IntroToCompQuestions.js'),
         lowlevel: () => import('./database/LowLevelQuestions.js'),
         html: () => import('./database/HTMLQuestions.js'),
         js: () => import('./database/JavaScriptQuestions.js'),

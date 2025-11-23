@@ -1,8 +1,13 @@
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import CPUExample from '../../../assets/introToComp/howCompWorks/cpu example.png'
 import RAMExample from '../../../assets/introToComp/howCompWorks/ram example.png'
 import Hardware from '../../../assets/introToComp/howCompWorks/hardware.png'
 
 export default function HowComputersWork() {
+    const quizImports = {
+        introtocomp: () => import('../../../pages/quiz/database/IntroToCompQuestions.js')
+    }
+
     return (
         <>
             <main>
@@ -135,6 +140,14 @@ export default function HowComputersWork() {
 
                     <p>Output is any data that the computer sends to the outside world: Monitors, printers, etc.</p>
 
+                    <hr />
+
+                    <h2>Review</h2>
+
+                    <ReviewQuiz
+                        quizImports={quizImports}
+                        subcategory={"how-comp-work"}
+                    />
                 </div>
             </main>
         </>

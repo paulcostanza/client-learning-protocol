@@ -14,6 +14,12 @@ import htmlImg from "../../assets/quiz/html-card.png"
 
 const quizList = [
     {
+        id: "introtocomp",
+        title: "Intro To Computers",
+        dataFile: "../../quiz/database/IntroToComputersQuestions.js",
+        cardImage: memoryImg
+    },
+    {
         id: "lowlevel",
         title: "Systems Programming",
         dataFile: "../../quiz/database/LowLevelQuestions.js",
