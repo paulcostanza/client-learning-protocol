@@ -1,5 +1,4 @@
 import Home from './pages/home/Home'
-import Intro from './pages/intro/Intro'
 import Python from './pages/python/Python'
 // import Java from './pages/java/Java' <- delete this page
 
@@ -70,6 +69,13 @@ import GoFundamentals from './pages/learning/go/Fundamentals'
 import GoIntroduction from './pages/learning/go/Introduction'
 import GoConditionals from './pages/learning/go/Conditionals'
 
+// Introduction to Computers
+import IntroToCompLanding from './pages/learning/IntroductionToComputers/setup/IntroToCompLanding'
+import IntroToCompSectionLayout from './pages/learning/IntroductionToComputers/setup/IntroToCompSectionLayout'
+import HowComputersWork from './pages/learning/IntroductionToComputers/HowComputersWork'
+import OperatingSystemsAndSoftware from './pages/learning/IntroductionToComputers/OperatingSystemsAndSoftware'
+import ProgrammingLanguages from './pages/learning/IntroductionToComputers/ProgrammingLanguages'
+
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
   HashRouter,
@@ -88,7 +94,14 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path='/home' element={<Home />} />
-            <Route path='/intro' element={<Intro />} />
+            {/* <Route path='/intro' element={<Intro />} /> */}
+
+            <Route path='/intro-to-comp' element={<IntroToCompLanding />} />
+            <Route path='/intro-to-comp' element={<IntroToCompSectionLayout />}>
+              <Route path='how-computers-work' element={<HowComputersWork />} />
+              <Route path='operating-systems-and-software' element={<OperatingSystemsAndSoftware />} />
+              <Route path='programming-languages' element={<ProgrammingLanguages />} />
+            </Route>
 
             <Route path='/cybersecurity' element={<CyberSecurityLanding />} />
             <Route path='/cybersecurity' element={<CyberSecurityLayout />} >

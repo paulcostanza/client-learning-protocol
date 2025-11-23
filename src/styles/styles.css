@@ -166,6 +166,10 @@ pre,
     margin-bottom: 10px;
 }
 
+img.img-in-reading {
+    margin-bottom: 40px;
+}
+
 .code-snippet {
     overflow: hidden;
     max-width: 900px;
