@@ -36,6 +36,25 @@ export default function IntroIntoWebDevelopment() {
 
     const brokenLink = `<p>Client Learning Protocol's <a href="https:/clientlearningprotocol.io/#/htm1">HTML section</a></p>`
 
+    const folderStructure = `.
+├── /assets
+│   ├── /images
+│   │   ├── logo.png
+│   │   ├── banner.jpg
+│   │   └── icons.svg
+│   ├── /fonts
+│   │   ├── custom-font.woff
+│   │   └── custom-font.woff2
+├── /css
+│   ├── main.css
+│   ├── about.css
+│   └── contact.css
+├── index.html
+├── about.html
+├── contact.html
+└── README.md
+`
+
     return (
         <div className="container">
 
@@ -167,6 +186,68 @@ export default function IntroIntoWebDevelopment() {
             <p>This lets us know that the issue is with the URL in the anchor element. When you inspect the <code>href</code> value you will find a typo.</p>
 
             <p>Right now the console message shows <code>/htm1</code> against a 404, but the correct URL should be <code>/html</code> (how on earth did that happen?!). When the link is corrected, then it will work as expected.</p>
+
+            <h2>What are best practices for file/folder organization in web applications?</h2>
+
+            <p>When building out web applications, it is important to think about the organization of your files and folders. This will help keep your code organized and easier to maintain. For example:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="text" style={tomorrow}
+                    wrapLines={true} className=" code-snippet">
+                    {folderStructure}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>At the top of the example there is a single dot (<code>.</code>) which represents the root directory.</p>
+
+            <p>The root directory is the top-level directory in a file system, serving as the starting point for all file paths and containing all other directories and files. A <strong>directory</strong> is another name for a folder.</p>
+
+            <p>Inside the root directory, the first directory shown is the <code>assets</code> directory. The term <code>assets</code> refers to any files that are used in the project, such as images, fonts, or other resources.</p>
+
+            <p>In this example, there are two directories inside the <code>assets</code> directory called <code>images</code> and <code>fonts</code>.</p>
+
+            <p>
+                The next directory would be the <code>css</code> directory. Sometimes this is also referred to as a stylesheets directory. This is where you would store all of your CSS files.
+            </p>
+
+            <p>Below the <code>css</code> directory are the HTML files. The <code>index.html</code> file represents the homepage, while <code>about.html</code> and <code>contact.html</code> represent the About and Contact pages, respectively.</p>
+
+            <p>Lastly, there is a <code>README.md</code> file. <code>README</code> files are commonly used to provide useful information about the project, such as what it does, how to use it, how to install it, its license, how to contribute, and any other relevant details. The <code>.md</code> extension stands for Markdown, which is a lightweight markup language that is often used to write documentation.</p>
+
+            <p>There are many different ways to structure a project, as this is just one way. By organizing your project into assets, CSS, HTML, JS, and all sorts of other files, it makes it easy to find what you are looking for. This also makes it easy for other developers to contribute to your project.</p>
+
+            <h2>What are some common file types you will work with in web applications?</h2>
+
+            <p>Files are classified based on their content and structure. The file type determines how a file is opened and processed by computer programs.</p>
+
+            <p>We identify file types based on their extensions. A <strong>file extension</strong> is a three or four letter suffix at the end of the file name. The three main file types that you will find in a web application are HTML, CSS, and JavaScript.</p>
+
+            <ul>
+                <li>HTML files contain the structure and content of the web application. They use the <code>.html</code> extension.</li>
+                <li>CSS files define the style. They use the <code>.css</code> file extension.</li>
+                <li>JavaScript files add more advanced functionality and interactivity. They use the <code>.js</code> file extension.</li>
+            </ul>
+
+            <p>Most applications have some sort of images on them. Here are some of the most widely used image file types you will encounter (some of this should be a review for you):</p>
+
+            <ul>
+                <li><strong>JPEG</strong>, <em>Joint Photographic Experts Group</em>, is known for its efficient compression. It is great for photographs and images. However, the compression is lossy, which means that some image quality is lost to reduce the file size.</li>
+                <li><strong>PNG</strong>, <em>Portable Network Graphics</em>, preserves image quality, even after compression. This results in larger files. PNG supports transparency and it is great for images with sharp edges, such as logos and icons.</li>
+                <li><strong>GIF</strong>, <em>Graphic Interchange Format</em>, supports both animation and transparency, but with a limited color palette.</li>
+                <li><strong>SVG</strong>, <em>Scalable Vector Graphics</em>, a vector image format. These images can be scaled as much as needed without losing quality.</li>
+            </ul>
+
+            <p>Don't forget about video and audio formats!</p>
+
+            <ul>
+                <li>MP3 is an audio format known for its efficient compression. It is a lossy format, so some audio data is lost during the compression to make these files smaller.</li>
+                <li>MP4 is one of the most common video formats. It offers good compression and supports multiple audio and video codecs, subtitles, and metadata.</li>
+                <li>MOV, the QuickTime multimedia file format developed by Apple, is primarily associated with QuickTime Player.</li>
+                <li>WAV, a lossless audio format that keeps the original quality of the audio.</li>
+                <li>WebM, a high-quality open-source video format.</li>
+            </ul>
+
+            <hr />
 
             <h2>Review</h2>
 

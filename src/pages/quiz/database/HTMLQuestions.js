@@ -1114,5 +1114,155 @@ Our table has one row of data with the data values of *Davis*, *Alex*, and *54*.
         ],
         random: true,
         answer: ['\`<button type="btn">Press Button</button>\`', '\`<button type="rst">Reset</button>\`', '\`<button type="press">Press</button>\`', '\`<button type="select">Select</button>\`', '\`<button type="apply">Apply</button>\`', '\`<button type="clear">Clear</button>\`'],
-    }
+    },
+    {
+        id: 59,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: 'Some nice ASSets',
+        question: "What is the assets directory used for in a web application?",
+        options: [
+            'to store server log files which are kept to monitor web application performance',
+            'to store files such as images, fonts, and other resources',
+            'to store scripts and tools for testing the web application',
+            'to hold third-party libraries and frameworks'
+        ],
+        random: true,
+        answer: 'to store files such as images, fonts, and other resources',
+        description: ``
+    },
+    {
+        id: 60,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: '',
+        question: "What is a \`README.md\` file commonly used for in a project?",
+        options: [
+            'to store personal information and data collected from users',
+            'to define the structure and schema of the project\'s database',
+            'to provide useful information about the project',
+            'to track and document issues and bugs found in the project',
+        ],
+        random: true,
+        answer: 'to provide useful information about the project',
+        description: `\`README\` files are commonly used to provide useful information about the project, such as what it does, how to use it, how to install it, its license, how to contribute, and any other relevant details.`
+    },
+    {
+        id: 61,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: 'Roots',
+        question: "What does the root directory represent in a file system?",
+        options: [
+            'the default folder where downloaded files are saved',
+            'the folder that holds cached files and data to speed up system operations',
+            'the folder that contains logs and diagnostic information about system performance',
+            'the starting point for all file paths and contains all other directories and files within it'
+        ],
+        random: true,
+        answer: 'the starting point for all file paths and contains all other directories and files within it',
+        description: `An example of the root directory (\`.\`) and all the folders & files based off it in a project: 
+~~~text
+.
+├── /assets
+│   ├── /images
+│   │   └── icons.svg
+│   ├── /fonts
+│   │   └── custom-font.woff
+├── /css
+│   ├── main.css
+│   ├── about.css
+│   └── contact.css
+├── index.html
+├── about.html
+├── contact.html
+└── README.md
+~~~`
+    },
+    {
+        id: 62,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: '',
+        question: "Which file format is best suited for images with sharp edges and transparent backgrounds?",
+        options: [
+            '\`JPEG\`',
+            '\`PNG\`',
+            '\`GIF\`',
+            '\`SVG\`',
+            '\`PIC\`',
+        ],
+        random: true,
+        answer: '\`PNG\`'
+    },
+    {
+        id: 63,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: 'Lossless or lossy',
+        question: "Which one of these options is an audio format known for its lossless compression?",
+        options: [
+            '\`MP3\`',
+            '\`WAV\`',
+            '\`SVG\`',
+            '\`MP4\`',
+
+        ],
+        random: true,
+        answer: '\`WAV\`'
+    },
+    {
+        id: 64,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: 'ISP',
+        question: "Which one of the following ISP connections are typically the fastest?",
+        options: [
+            'DSL',
+            'satellite',
+            'cable',
+            'fiber optic',
+
+        ],
+        random: true,
+        answer: 'fiber optic'
+    },
+    {
+        id: 65,
+        type: 'radio',
+        category: 'html',
+        subcategory: 'intro-into-web-development',
+        title: 'Master of your...',
+        question: "What does the term *domain name* refer to?",
+        options: [
+            'the address used to identify websites on the internet',
+            'a type of software that manages website files and databases',
+            'the physical location of a web server in a data center'
+        ],
+        random: true,
+        answer: 'the address used to identify websites on the internet'
+    },
+    // {
+    //     id: 1,
+    //     type: 'radio',
+    //     category: 'html',
+    //     subcategory: '',
+    //     title: '',
+    //     question: "",
+    //     options: [
+    //         '',
+    //         '',
+    //         '',
+
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ``
+    // },
 ]
