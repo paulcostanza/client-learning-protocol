@@ -4,6 +4,7 @@ const sections = [
     { name: 'Introduction', path: 'introduction' },
     { name: 'Fundamentals', path: 'fundamentals' },
     { name: 'Conditionals', path: 'conditionals' },
+    { name: 'Functions & Methods', path: 'functions-and-methods' },
 ]
 
 export default function GoLanding() {

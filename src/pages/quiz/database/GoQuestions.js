@@ -108,5 +108,110 @@ export default [
         random: true,
         answer: 'to cleanup unused memory',
         description: 'The Go runtime includes a garbage collector that automatically manages memory by cleaning up unused memory, among other runtime services like goroutine scheduling.'
-    }
+    },
+    {
+        id: 7,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'functions-and-methods',
+        title: 'Clear',
+        question: `Which of the following is the shortest and clearest way to write a valid function signature?`,
+        options: [
+            `\`func createUser(firstName, lastName string, age int)\``,
+            `\`func createUser(firstName, age, lastName string int)\``,
+            `\`func createUser(firstName string, lastName string, age int)\``,
+            `\`func createUser(firstName string, age int, lastName string)\``,
+        ],
+        random: true,
+        answer: '\`func createUser(firstName, lastName string, age int)\`'
+    },
+    {
+        id: 8,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'functions-and-methods',
+        title: 'What the f',
+        question: `Given the following, what is \`f\`?
+        
+~~~go
+var f func(fuc(int, int) int, int) int
+~~~
+`,
+        options: [
+            'a function named `f` that takes an int as the argument and returns an int',
+            'a function named `f` that takes a function as the argument and returns an int',
+            'a function named `f` that takes a function and an int as arguments and returns an int',
+            'a function named `f` that takes a function and an int as arguments and returns a function',
+        ],
+        random: true,
+        answer: 'a function named `f` that takes a function and an int as arguments and returns an int',
+    },
+    {
+        id: 9,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'functions-and-methods',
+        title: 'Guard',
+        question: `What is a guard clause?`,
+        options: [
+            'an early return from a function when a given condition is met',
+            'an AND operation in boolean logic',
+            'a bitwise OR operation',
+        ],
+        random: true,
+        answer: 'an early return from a function when a given condition is met'
+    },
+    // {
+    //     id: 6,
+    //     type: 'radio',
+    //     category: 'go',
+    //     subcategory: '',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         '',
+    //         '',
+    //         '',
+    //         '',
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ''
+    // },
+    // {
+    //     id: 6,
+    //     type: 'radio',
+    //     category: 'go',
+    //     subcategory: '',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         '',
+    //         '',
+    //         '',
+    //         '',
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ''
+    // },
+    // {
+    //     id: 6,
+    //     type: 'radio',
+    //     category: 'go',
+    //     subcategory: '',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         '',
+    //         '',
+    //         '',
+    //         '',
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ''
+    // },
+
+
 ]
