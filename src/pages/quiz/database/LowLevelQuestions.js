@@ -31,7 +31,7 @@ export default [
             '24',
             '32'
         ],
-        random: true,
+        random: false,
         answer: '8'
     },
     {

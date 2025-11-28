@@ -381,7 +381,10 @@ export default [
             'MAC'
         ],
         random: true,
-        answer: 'MAC'
+        answer: 'MAC',
+        description: `A **MAC** (*Media Access Control*) address is a unique, 48-bit identifier assigned to network interfaces for communications at the data link layer of a network segment. 
+        
+It is often called the *physical address* because it is hardcoded into the network hardware (like a network card or adapter) and is used to identify devices on a local network.`
     },
     {
         id: 24,
@@ -608,9 +611,17 @@ export default [
         ],
         random: true,
         answer: ['ARP'],
-        description: `**Answer:** ARP - Address Resolution Protocol
+        description: `**Answer:** ARP: Address Resolution Protocol. This is used to map an IP address to a physical machine address (MAC address) on a local network.
         
-Used to map an IP address to a physical machine address (MAC address) on a local network`
+***Incorrect Answers***
+
+- HTTP: Hypertext Transfer Protocol - Application Layer
+- HTTPS: Hypertext Transfer Protocol Secure - Application Layer
+- IP: Internet Protocol - Network Layer
+- ICMP: Internet Control Message Protocol - Network Layer
+- PING: uses ICMP, but is not a protocol 
+- ZING: completely made up...I really hope you did not chose this one
+`
     },
 
 ]

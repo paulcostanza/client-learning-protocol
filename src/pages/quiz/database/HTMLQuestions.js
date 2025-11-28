@@ -489,6 +489,15 @@ export default [
         ],
         random: true,
         answer: '\`blockquote\`',
+        description: `
+~~~html
+<!-- example: -->
+<blockquote cite="https://www.imdb.com/title/tt0116367/">
+  <p>"We didn't come here to give up — we came here to get out alive."</p>
+  <footer>— George Clooney (as Seth Gecko), <cite>From Dusk Till Dawn</cite></footer>
+</blockquote>
+~~~
+`
     },
     {
         id: 29,
@@ -809,7 +818,7 @@ export default [
         category: 'html',
         subcategory: 'tables',
         title: 'Table row elements',
-        question: "Which two elements are used to specify a row with data and a header elements in a table?",
+        question: "Which two elements are used to specify a row with data and a header element in a table?",
         options: [
             '\`row\` element is used for rows',
             '\`th\` element is used for the header elements',
