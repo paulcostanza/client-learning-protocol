@@ -69,6 +69,7 @@ import GoFundamentals from './pages/learning/go/Fundamentals'
 import GoIntroduction from './pages/learning/go/Introduction'
 import GoConditionals from './pages/learning/go/Conditionals'
 import GoFunctionsAndMethods from './pages/learning/go/FunctionsAndMethods'
+import GoStructs from './pages/learning/go/Structs'
 
 // Introduction to Computers
 import IntroToCompLanding from './pages/learning/IntroductionToComputers/setup/IntroToCompLanding'
@@ -167,6 +168,7 @@ function App() {
               <Route path='introduction' element={<GoIntroduction />} />
               <Route path='conditionals' element={<GoConditionals />} />
               <Route path='functions-and-methods' element={<GoFunctionsAndMethods />} />
+              <Route path='structs' element={<GoStructs />} />
             </Route>
 
             <Route path='*' element={<NoPage />} />

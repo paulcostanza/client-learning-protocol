@@ -161,6 +161,143 @@ var f func(fuc(int, int) int, int) int
         random: true,
         answer: 'an early return from a function when a given condition is met'
     },
+    {
+        id: 10,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'structs',
+        title: 'Anonymous structs',
+        question: `What is a good reason to use an anonymous struct?`,
+        options: [
+            'privacy',
+            'speed',
+            'single-use',
+        ],
+        random: true,
+        answer: 'single-use',
+    },
+    {
+        id: 11,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'structs',
+        title: '',
+        question: `What is one advantage of advantage of using anonymous structs?`,
+        options: [
+            'prevents you from re-using a struct definition you never intended to re-use',
+            'makes your code run faster',
+            'compiles more quickly',
+        ],
+        random: true,
+        answer: 'prevents you from re-using a struct definition you never intended to re-use'
+    },
+    {
+        id: 12,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'structs',
+        title: 'Two braces please',
+        question: `Why does the empty anonymous struct have two pairs of braces?
+~~~go
+struct{}{}
+~~~
+`,
+        options: [
+            'it does not, this is a syntax error',
+            '\`struct{}\` is the type and \`{}\` is the value',
+        ],
+        random: true,
+        answer: '\`struct{}\` is the type and \`{}\` is the value',
+        description: '\`struct{}\` is the type (empty struct) and \`{}\` is the value (empty struct literal)'
+    },
+    {
+        id: 13,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'structs',
+        title: 'Least to most',
+        question: `Which is ordered from least to most memory usage?`,
+        options: [
+            '\`uint\`, \`bool\`, \`int64\`, \`struct{}\`',
+            '\`struct{}\`, \`uint16\`, \`bool\`, \`int64\`',
+            '\`struct{}\`, \`bool\`, \`int16\`, \`int64\`',
+            '\`bool\`, \`struct{}\`, \`uint16\`, \`int64\`',
+        ],
+        random: true,
+        answer: '\`struct{}\`, \`bool\`, \`int16\`, \`int64\`',
+        description: `- \`struct{}\` is the empty struct in Go and uses 0 bytes of memory.
+- \`bool\` typically uses 1 byte.
+- \`int16\` uses 2 bytes.
+- \`int64\` uses 8 bytes.`
+    },
+    // {
+    //     id: 6,
+    //     type: 'radio',
+    //     category: 'go',
+    //     subcategory: '',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         '',
+    //         '',
+    //         '',
+    //         '',
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ''
+    // },
+    // {
+    //     id: 6,
+    //     type: 'radio',
+    //     category: 'go',
+    //     subcategory: '',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         '',
+    //         '',
+    //         '',
+    //         '',
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ''
+    // },
+    // {
+    //     id: 6,
+    //     type: 'radio',
+    //     category: 'go',
+    //     subcategory: '',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         '',
+    //         '',
+    //         '',
+    //         '',
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ''
+    // },
+    // {
+    //     id: 6,
+    //     type: 'radio',
+    //     category: 'go',
+    //     subcategory: '',
+    //     title: '',
+    //     question: ``,
+    //     options: [
+    //         '',
+    //         '',
+    //         '',
+    //         '',
+    //     ],
+    //     random: true,
+    //     answer: '',
+    //     description: ''
+    // },
     // {
     //     id: 6,
     //     type: 'radio',

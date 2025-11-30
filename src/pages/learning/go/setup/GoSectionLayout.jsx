@@ -7,6 +7,7 @@ const sections = [
     { name: 'Fundamentals', path: 'fundamentals' },
     { name: 'Conditionals', path: 'conditionals' },
     { name: 'Functions & Methods', path: 'functions-and-methods' },
+    { name: 'Structs', path: 'structs' },
 ]
 
 export default function GoSectionLayout() {
