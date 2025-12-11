@@ -77,18 +77,22 @@ export default function SelectAQuestionFilter({
     ]
 
     const categoryOptions = [
-        { value: 'LowLevel', label: 'Low Level' },
-        { value: 'React', label: 'React' },
-        { value: 'Networking', label: 'Networking' },
-        { value: 'Python', label: 'Python' },
-        { value: 'Java', label: 'Java' },
-        { value: 'C', label: 'C' },
-        { value: 'C#', label: 'C#' },
-        { value: 'Redis', label: 'Redis' },
-        { value: 'Memory', label: 'Memory' },
-        { value: 'Programming 101', label: 'Programming 101' },
-        { value: 'CyberSecurity', label: 'CyberSecurity' },
-        { value: 'Linux', label: 'Linux' }
+        { value: 'introtocomp', label: 'Intro To Comp' },
+        { value: 'lowlevel', label: 'Low Level' },
+        { value: 'html', label: 'HTML' },
+        { value: 'js', label: 'JavaScript' },
+        { value: 'react', label: 'React' },
+        { value: 'networking', label: 'Networking' },
+        { value: 'python', label: 'Python' },
+        { value: 'java', label: 'Java' },
+        { value: 'c', label: 'C' },
+        { value: 'cSharp', label: 'C#' },
+        { value: 'go', label: 'go' },
+        { value: 'redis', label: 'Redis' },
+        { value: 'memory', label: 'Memory' },
+        { value: 'programming101', label: 'Programming 101' },
+        { value: 'cybersecurity', label: 'CyberSecurity' },
+        { value: 'linux', label: 'Linux' }
     ]
 
     const handleReset = () => {
