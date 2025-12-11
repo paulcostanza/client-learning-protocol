@@ -15,6 +15,7 @@ import {
     getHumanReadableNextReview
 } from "../../Helpers/localStorageHelper.js"
 import SelectAQuestionFilter from "./SelectAQuestionFilter.jsx"
+import { fixGrammar } from "../../Helpers/CategoryFixer.js"
 
 function filterQuestions(questions, status, review, category) {
     return questions.filter(q => {
@@ -180,20 +181,20 @@ export default function QuestionList() {
                     >
                         <TableHead>
                             <TableRow>
-                                <TableCell style={{ width: '190px' }} >
+                                <TableCell style={{ width: '180px' }} >
                                     Title
                                 </TableCell>
-                                <TableCell style={{ textAlign: 'center', width: '90px' }}>
+                                <TableCell style={{ textAlign: 'center', width: '80px' }}>
                                     Status
                                 </TableCell>
                                 <TableCell style={{ width: '264.4px' }} >
                                     Question
                                 </TableCell>
-                                <TableCell style={{ textAlign: 'center', width: '100px' }}>
+                                <TableCell style={{ textAlign: 'center', width: '80px' }}>
                                     Review
                                 </TableCell>
                                 <TableCell
-                                    style={{ textAlign: 'center', width: '130px' }}
+                                    style={{ textAlign: 'center', width: '140px' }}
                                 >
                                     Category
                                 </TableCell>
@@ -225,7 +226,7 @@ export default function QuestionList() {
                                                     : q.question}
                                             </td>
                                             <td align="center">{review}</td>
-                                            <td align="center">{q.quizKey}</td>
+                                            <td align="center">{fixGrammar(q.quizKey)}</td>
                                         </tr>
                                     )
                                 })}
@@ -247,7 +248,7 @@ export default function QuestionList() {
                     <span>
                         {filteredQuestions.length === 0
                             ? 'No questions'
-                            : `${page * rowsPerPage + 1}–${Math.min((page + 1) * rowsPerPage, filteredQuestions.length)} of ${filteredQuestions.length}`}
+                            : `${page * rowsPerPage + 1} - ${Math.min((page + 1) * rowsPerPage, filteredQuestions.length)} of ${filteredQuestions.length}`}
                     </span>
                     <Box
                         className="rows-per-page"
