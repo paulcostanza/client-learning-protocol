@@ -59,6 +59,7 @@ export default function SelectAQuestionFilter({
     const handleStatus = event => setStatus(event.target.value)
     const handleReview = event => setReview(event.target.value)
     const handleCategory = event => setCategory(event.target.value)
+    const resetDisabled = !status && !review && !category
 
     const statusOptions = [
         { value: 'none', label: 'None' },
@@ -147,6 +148,7 @@ export default function SelectAQuestionFilter({
                                 variant="contained"
                                 size="large"
                                 onClick={handleReset}
+                                disabled={resetDisabled}
                             >
                                 Reset
                             </Button>
