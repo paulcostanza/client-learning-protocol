@@ -230,6 +230,123 @@ struct{}{}
 - \`int16\` uses 2 bytes.
 - \`int64\` uses 8 bytes.`
     },
+    {
+        id: 14,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'interfaces',
+        title: '',
+        question: 'How is an interface fulfilled?',
+        options: [
+            "a type has all the required interface's methods defined on it",
+            'a struct embeds the interface in its definition'
+        ],
+        random: true,
+        answer: "a type has all the required interface's methods defined on it"
+    },
+    {
+        id: 15,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'interfaces',
+        title: '',
+        question: 'Can a type fulfill multiple interfaces?',
+        options: [
+            'yes',
+            'no'
+        ],
+        random: false,
+        answer: 'yes'
+    },
+    {
+        id: 16,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'interfaces',
+        title: '',
+        question: 'Go uses the _____ keyword to show that a type implements an interface',
+        options: [
+            '\`inherits\`',
+            '\`implements\`',
+            '\`fulfills\`',
+            'there is no keyword in Go'
+        ],
+        random: true,
+        answer: 'there is no keyword in Go'
+    },
+    {
+        id: 17,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'interfaces',
+        title: '',
+        question: `In this example, the _____ type implements the _____ interface.
+        
+~~~go
+type shape interface {
+    area() float64
+}
+
+type circle struct {
+    radius float64
+}
+
+func (c circle) area() float64 {
+    return 3.14 * c.radius * c.radius
+}
+~~~
+`,
+        options: [
+            'shape, circle',
+            'shape, area',
+            'circle, shape',
+            'circle, area',
+            'area, circle',
+            'area, shape'
+        ],
+        random: true,
+        answer: 'circle, shape',
+        description: `Shape is an *interface*, as it defines a contract that says *any type that has an* \`area()\` *method returning a* \`float64\` *implements me*. 
+
+We then have the \`circle\` struct and the \`area\` function. Because \`circle\` has an \`area()\` method with the exact signature that the \`shape\` interface requires (no parameters, returns \`float64\`), the \`circle\` type automatically implements the \`shape\` interface. 
+
+What is important is how Go's implicit interface implementation:
+- \`circle\` is the concrete type (the thing doing the implementing)
+- \`shape\` is the interface (the contract being fulfilled)
+- you do not need to explicitly declare that \`circle\` implements \`shape\` - Go figures it out automatically based on the method signaure`
+    },
+    {
+        id: 18,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'interfaces',
+        title: '',
+        question: 'True or False: You are required to name the arguments of an interface in order for your code to compile properly.',
+        options: [
+            'true',
+            'false'
+        ],
+        random: false,
+        answer: 'false'
+    },
+    {
+        id: 19,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'interfaces',
+        title: '',
+        question: "Interfaces allow you to define a method's behavior once and use it for many different types",
+        options: [
+            'true',
+            'false'
+        ],
+        random: false,
+        answer: 'false',
+        description: `In Go, interfaces only define *what must exist*, and not how it works. 
+
+- an interface lists method signatures (such as names, parameters, return types)
+- each concrete type that satisfies the interface must still *implement its own version of those methods*`
+    },
     // {
     //     id: 6,
     //     type: 'radio',

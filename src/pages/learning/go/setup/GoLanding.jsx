@@ -6,6 +6,7 @@ const sections = [
     { name: 'Conditionals', path: 'conditionals' },
     { name: 'Functions & Methods', path: 'functions-and-methods' },
     { name: 'Structs', path: 'structs' },
+    { name: 'Interfaces', path: 'interfaces' },
 ]
 
 export default function GoLanding() {
