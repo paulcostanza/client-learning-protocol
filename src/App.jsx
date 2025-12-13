@@ -12,7 +12,6 @@ import JavaArrays from './pages/learning/java/Arrays'
 import JavaHashMaps from './pages/learning/java/HashMaps'
 import JavaHttpServer from './pages/learning/java/HttpServer'
 
-import React from './pages/react/React'
 import Quiz from './pages/quiz/Quiz'
 import QuizList from './pages/quiz/QuizList'
 import AboutCLP from './pages/about/clp/AboutCLP'
@@ -71,6 +70,12 @@ import GoConditionals from './pages/learning/go/Conditionals'
 import GoFunctionsAndMethods from './pages/learning/go/FunctionsAndMethods'
 import GoStructs from './pages/learning/go/Structs'
 import GoInterfaces from './pages/learning/go/Interfaces'
+
+// React
+import ReactLanding from './pages/learning/react/setup/ReactLanding'
+import ReactSectionLayout from './pages/learning/react/setup/ReactSectionLayout'
+import ReactIntro from './pages/learning/react/IntroToReact'
+import ReactHooks from './pages/learning/react/Hooks'
 
 // Introduction to Computers
 import IntroToCompLanding from './pages/learning/IntroductionToComputers/setup/IntroToCompLanding'
@@ -137,7 +142,12 @@ function App() {
               <Route path='oop' element={<ObjectOrientedProgramming />} />
             </Route>
 
-            <Route path='/react' element={<React />} />
+            <Route path='/react' element={<ReactLanding />} />
+            <Route path='react' element={<ReactSectionLayout />} >
+              <Route path='intro-to-react' element={<ReactIntro />} />
+              <Route path='hooks' element={<ReactHooks />} />
+            </Route>
+
             <Route path='/redis' element={<Redis />} />
             <Route path='/quiz' element={<QuizList />} />
             <Route path='/quiz/:quizId' element={<Quiz />} />
