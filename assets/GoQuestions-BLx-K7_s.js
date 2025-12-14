@@ -7,4 +7,59 @@ var f func(fuc(int, int) int, int) int
 ~~~go
 struct{}{}
 ~~~
-`,options:["it does not, this is a syntax error","`struct{}` is the type and `{}` is the value"],random:!0,answer:"`struct{}` is the type and `{}` is the value",description:"`struct{}` is the type (empty struct) and `{}` is the value (empty struct literal)"},{id:13,type:"radio",category:"go",subcategory:"structs",title:"Least to most",question:"Which is ordered from least to most memory usage?",options:["`uint`, `bool`, `int64`, `struct{}`","`struct{}`, `uint16`, `bool`, `int64`","`struct{}`, `bool`, `int16`, `int64`","`bool`, `struct{}`, `uint16`, `int64`"],random:!0,answer:"`struct{}`, `bool`, `int16`, `int64`",description:"- `struct{}` is the empty struct in Go and uses 0 bytes of memory.\n- `bool` typically uses 1 byte.\n- `int16` uses 2 bytes.\n- `int64` uses 8 bytes."}];export{e as default};
+`,options:["it does not, this is a syntax error","`struct{}` is the type and `{}` is the value"],random:!0,answer:"`struct{}` is the type and `{}` is the value",description:"`struct{}` is the type (empty struct) and `{}` is the value (empty struct literal)"},{id:13,type:"radio",category:"go",subcategory:"structs",title:"Least to most",question:"Which is ordered from least to most memory usage?",options:["`uint`, `bool`, `int64`, `struct{}`","`struct{}`, `uint16`, `bool`, `int64`","`struct{}`, `bool`, `int16`, `int64`","`bool`, `struct{}`, `uint16`, `int64`"],random:!0,answer:"`struct{}`, `bool`, `int16`, `int64`",description:"- `struct{}` is the empty struct in Go and uses 0 bytes of memory.\n- `bool` typically uses 1 byte.\n- `int16` uses 2 bytes.\n- `int64` uses 8 bytes."},{id:14,type:"radio",category:"go",subcategory:"interfaces",title:"",question:"How is an interface fulfilled?",options:["a type has all the required interface's methods defined on it","a struct embeds the interface in its definition"],random:!0,answer:"a type has all the required interface's methods defined on it"},{id:15,type:"radio",category:"go",subcategory:"interfaces",title:"",question:"Can a type fulfill multiple interfaces?",options:["yes","no"],random:!1,answer:"yes"},{id:16,type:"radio",category:"go",subcategory:"interfaces",title:"",question:"Go uses the _____ keyword to show that a type implements an interface",options:["`inherits`","`implements`","`fulfills`","there is no keyword in Go"],random:!0,answer:"there is no keyword in Go"},{id:17,type:"radio",category:"go",subcategory:"interfaces",title:"",question:`In this example, the _____ type implements the _____ interface.
+        
+~~~go
+type shape interface {
+    area() float64
+}
+
+type circle struct {
+    radius float64
+}
+
+func (c circle) area() float64 {
+    return 3.14 * c.radius * c.radius
+}
+~~~
+`,options:["shape, circle","shape, area","circle, shape","circle, area","area, circle","area, shape"],random:!0,answer:"circle, shape",description:"Shape is an *interface*, as it defines a contract that says *any type that has an* `area()` *method returning a* `float64` *implements me*. \n\nWe then have the `circle` struct and the `area` function. Because `circle` has an `area()` method with the exact signature that the `shape` interface requires (no parameters, returns `float64`), the `circle` type automatically implements the `shape` interface. \n\nWhat is important is how Go's implicit interface implementation:\n- `circle` is the concrete type (the thing doing the implementing)\n- `shape` is the interface (the contract being fulfilled)\n- you do not need to explicitly declare that `circle` implements `shape` - Go figures it out automatically based on the method signaure"},{id:18,type:"radio",category:"go",subcategory:"interfaces",title:"",question:"True or False: You are required to name the arguments of an interface in order for your code to compile properly.",options:["true","false"],random:!1,answer:"false"},{id:19,type:"radio",category:"go",subcategory:"interfaces",title:"",question:"Interfaces allow you to define a method's behavior once and use it for many different types",options:["true","false"],random:!1,answer:"false",description:`In Go, interfaces only define *what must exist*, and not how it works. 
+
+- an interface lists method signatures (such as names, parameters, return types)
+- each concrete type that satisfies the interface must still *implement its own version of those methods*`},{id:20,type:"radio",category:"go",subcategory:"errors",title:"",question:"What is the underlying type of an error?",options:["struct","interface","string"],random:!0,answer:"interface",description:`The built in \`error\` type in Go is defined as \`interface\` and looks like this in the standard library:
+~~~go
+type error interface {
+    Error() string
+}
+~~~
+        `},{id:21,type:"radio",category:"go",subcategory:"errors",title:"",question:"A type can be an error and also fulfill another interface.",options:["true","false"],random:!1,answer:"true",description:`An \`error\` in Go is just any value whose type has a method.
+~~~go
+type error interface {
+    Error() string
+}
+~~~
+
+So if you define a type like:
+
+~~~go
+type MyErr struct {
+    Code int
+}
+
+func (e MyErr) Error() string {
+    return "something went wrong"
+}
+~~~
+
+\`MyErr\` now implements \`error\`. However, it can also implement other interfaces like so:
+
+~~~go
+type Coded interface {
+    CodeValue() int
+}
+
+func (e MyErr) CodeValue() int {
+    return e.Code
+}
+~~~
+Now \`MyErr\` is both an \`error\` and a \`Coded\`. 
+        `}];export{e as default};
