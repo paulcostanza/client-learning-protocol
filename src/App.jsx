@@ -70,6 +70,7 @@ import GoConditionals from './pages/learning/go/Conditionals'
 import GoFunctionsAndMethods from './pages/learning/go/FunctionsAndMethods'
 import GoStructs from './pages/learning/go/Structs'
 import GoInterfaces from './pages/learning/go/Interfaces'
+import GoErrors from './pages/learning/go/Errors'
 
 // React
 import ReactLanding from './pages/learning/react/setup/ReactLanding'
@@ -181,6 +182,7 @@ function App() {
               <Route path='functions-and-methods' element={<GoFunctionsAndMethods />} />
               <Route path='structs' element={<GoStructs />} />
               <Route path='interfaces' element={<GoInterfaces />} />
+              <Route path='errors' element={<GoErrors />} />
             </Route>
 
             <Route path='*' element={<NoPage />} />

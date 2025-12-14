@@ -9,6 +9,7 @@ const sections = [
     { name: 'Functions & Methods', path: 'functions-and-methods' },
     { name: 'Structs', path: 'structs' },
     { name: 'Interfaces', path: 'interfaces' },
+    { name: 'Errors', path: 'errors' },
 ]
 
 export default function GoSectionLayout() {

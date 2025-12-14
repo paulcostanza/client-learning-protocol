@@ -312,6 +312,8 @@ func main() {
                 </li>
             </ol>
 
+            <hr />
+
             <h2>Review</h2>
 
             <ReviewQuiz

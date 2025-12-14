@@ -347,40 +347,74 @@ What is important is how Go's implicit interface implementation:
 - an interface lists method signatures (such as names, parameters, return types)
 - each concrete type that satisfies the interface must still *implement its own version of those methods*`
     },
-    // {
-    //     id: 6,
-    //     type: 'radio',
-    //     category: 'go',
-    //     subcategory: '',
-    //     title: '',
-    //     question: ``,
-    //     options: [
-    //         '',
-    //         '',
-    //         '',
-    //         '',
-    //     ],
-    //     random: true,
-    //     answer: '',
-    //     description: ''
-    // },
-    // {
-    //     id: 6,
-    //     type: 'radio',
-    //     category: 'go',
-    //     subcategory: '',
-    //     title: '',
-    //     question: ``,
-    //     options: [
-    //         '',
-    //         '',
-    //         '',
-    //         '',
-    //     ],
-    //     random: true,
-    //     answer: '',
-    //     description: ''
-    // },
+    {
+        id: 20,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'errors',
+        title: '',
+        question: `What is the underlying type of an error?`,
+        options: [
+            'struct',
+            'interface',
+            'string',
+        ],
+        random: true,
+        answer: 'interface',
+        description: `The built in \`error\` type in Go is defined as \`interface\` and looks like this in the standard library:
+~~~go
+type error interface {
+    Error() string
+}
+~~~
+        `
+    },
+    {
+        id: 21,
+        type: 'radio',
+        category: 'go',
+        subcategory: 'errors',
+        title: '',
+        question: `A type can be an error and also fulfill another interface.`,
+        options: [
+            'true',
+            'false',
+        ],
+        random: false,
+        answer: 'true',
+        description: `An \`error\` in Go is just any value whose type has a method.
+~~~go
+type error interface {
+    Error() string
+}
+~~~
+
+So if you define a type like:
+
+~~~go
+type MyErr struct {
+    Code int
+}
+
+func (e MyErr) Error() string {
+    return "something went wrong"
+}
+~~~
+
+\`MyErr\` now implements \`error\`. However, it can also implement other interfaces like so:
+
+~~~go
+type Coded interface {
+    CodeValue() int
+}
+
+func (e MyErr) CodeValue() int {
+    return e.Code
+}
+~~~
+Now \`MyErr\` is both an \`error\` and a \`Coded\`. 
+        `
+    },
     // {
     //     id: 6,
     //     type: 'radio',
