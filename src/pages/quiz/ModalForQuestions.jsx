@@ -4,6 +4,7 @@ import Box from "@mui/material/Box"
 import ReactMarkdown from 'react-markdown'
 import { checkAnswer, forfeitQuestion } from './quizLogic'
 import { saveSectionQuestionResult } from "../../Helpers/localStorageHelper.js"
+import { fixGrammar } from "../../Helpers/CategoryFixer.js"
 
 export default function ModalForQuestions({ open, onClose, question }) {
     const [checked, setChecked] = useState(false)
@@ -118,7 +119,9 @@ export default function ModalForQuestions({ open, onClose, question }) {
                 overflowY: 'auto'
             }}
                 className="modal-for-questions">
-                {question.title ?? <em>{question.title}</em>}
+                {question.category && question.title
+                    ? <span><em>{question.title}</em>  -&gt; {fixGrammar(question.category)}</span>
+                    : <span>{fixGrammar(question.category)}</span>}
                 <h4 className="modal-question">
                     <ReactMarkdown>
                         {question.question}

@@ -2,6 +2,8 @@ export default [
     {
         id: 1,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: '',
         question: "What is the main job of the CPU?",
         options: [
@@ -10,11 +12,14 @@ export default [
             'display information to the user',
             'manage external devices',
         ],
+        random: true,
         answer: 'fetch, decode, and execute instructions'
     },
     {
         id: 2,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'Rambunctious',
         question: 'What is RAM?',
         options: [
@@ -23,11 +28,14 @@ export default [
             'the central processing unit',
             'a type of input device'
         ],
+        random: true,
         answer: 'the computer\'s main memory, used for temporary storage'
     },
     {
         id: 3,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'Are you input or out?',
         question: 'Which of the following is NOT an input device?',
         options: [
@@ -36,12 +44,15 @@ export default [
             'printer',
             'scanner'
         ],
+        random: true,
         answer: 'printer',
         description: 'Printer is an output device while the keyboard, mouse, and scanner are input devices.'
     },
     {
         id: 4,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'Open sesame',
         question: 'What is the purpose of an operating system?',
         options: [
@@ -50,11 +61,14 @@ export default [
             'to store data permanently',
             'to perform mathematical operations'
         ],
+        random: true,
         answer: 'to manage hardware devices and control processes'
     },
     {
         id: 5,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'To OOP or not?',
         question: 'What is the main difference between procedural and object-oriented programming?',
         options: [
@@ -62,11 +76,14 @@ export default [
             'procedural programming separates data and code, while OOP combines them into objects',
             'they are two different terms that mean the same thing'
         ],
+        random: true,
         answer: 'procedural programming separates data and code, while OOP combines them into objects',
     },
     {
         id: 6,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'Capsule corp',
         question: 'Which of the following best describes the concept of *encapsulation* in object-oriented programming?',
         options: [
@@ -75,11 +92,14 @@ export default [
             'using only one programming language in a project',
             'storing data in RAM for faster access'
         ],
+        random: true,
         answer: 'combining data and the methods that operate on that data into a single unit'
     },
     {
         id: 7,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'Volatile vibes',
         question: 'Why is RAM considered *volatile* memory?',
         options: [
@@ -88,11 +108,14 @@ export default [
             'it is slower than secondary storage',
             'it is only used for storing programs, not data'
         ],
+        random: true,
         answer: 'its contents are erased when the computer is turned off'
     },
     {
         id: 8,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'Decode this',
         question: 'In the fetch/decode/execute cycle, what is the role of the *decode* step?',
         options: [
@@ -101,11 +124,14 @@ export default [
             'to perform the operation specified by the instruction',
             'to store the result in secondary storage'
         ],
+        random: true,
         answer: 'to translate the instruction into an electronic signal the CPU can use'
     },
     {
         id: 9,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'OOPs I did it again',
         question: 'What problem does object-oriented programming primarily address compared to procedural programming?',
         options: [
@@ -114,11 +140,14 @@ export default [
             'the lack of multitasking in early computers',
             'the inability to use input devices efficiently'
         ],
+        random: true,
         answer: 'the separation of data and the code that operates on it',
     },
     {
         id: 10,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'SSD: Need for Speed',
         question: 'What is the main advantage of using a solid-state drive over a traditional disk drive?',
         options: [
@@ -127,11 +156,14 @@ export default [
             'SSDs work much faster and have no moving parts',
             'SSDs are used only for external storage'
         ],
+        random: true,
         answer: 'SSDs work much faster and have no moving parts'
     },
     {
         id: 11,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'Eight is enough',
         question: 'A byte is made up of eight...',
         options: [
@@ -140,11 +172,14 @@ export default [
             'numbers',
             'addresses'
         ],
+        random: true,
         answer: 'bits'
     },
     {
         id: 12,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'Byte me',
         question: 'Each byte is assigned a unique...',
         options: [
@@ -153,11 +188,14 @@ export default [
             'symbol',
             'instruction'
         ],
+        random: true,
         answer: 'address'
     },
     {
         id: 13,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: '',
         question: 'When looking at machine language, you would see...',
         options: [
@@ -166,11 +204,14 @@ export default [
             'English sentences',
             'HTML tags'
         ],
+        random: true,
         answer: 'binary numbers and instructions'
     },
     {
         id: 14,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'Rule breaker',
         question: 'The rules that must be followed when writing a program are called...',
         options: [
@@ -179,11 +220,14 @@ export default [
             'variables',
             'logic'
         ],
+        random: true,
         answer: 'syntax'
     },
     {
         id: 15,
         type: 'radio',
+        category: 'programming-101',
+        subcategory: '',
         title: 'Memory Lane',
         question: "The name for a storage location in the computer's memory is called...",
         options: [
@@ -192,6 +236,7 @@ export default [
             'an operator',
             'a statement'
         ],
+        random: true,
         answer: 'a variable'
     }
 ]

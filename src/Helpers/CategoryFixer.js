@@ -2,14 +2,18 @@
 export function fixGrammar(subject) {
     switch (subject) {
         case "introtocomp":
+        case "intro-to-comp":
             return "Intro to Comp"
         case "lowlevel":
+        case "LowLevel":
             return "Low Level"
         case "html":
             return "HTML"
         case "js":
+        case "javascript":
             return "JavaScript"
         case "react":
+        case "React":
             return "React"
         case "networking":
             return "Networking"
@@ -20,6 +24,7 @@ export function fixGrammar(subject) {
         case "c":
             return "C"
         case "cSharp":
+        case "c#":
             return "C#"
         case "go":
             return "Go"
@@ -28,6 +33,7 @@ export function fixGrammar(subject) {
         case "memory":
             return "Memory"
         case "programming101":
+        case "programming-101":
             return "Programming 101"
         case "cybersecurity":
             return "CyberSecurity"

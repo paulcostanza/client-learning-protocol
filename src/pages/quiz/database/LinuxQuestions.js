@@ -2,6 +2,8 @@ export default [
     {
         id: 1,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Tilde',
         question: "What does the \`~\` symbol in the terminal prompt represent?",
         options: [
@@ -11,11 +13,14 @@ export default [
             'the system hostname',
             'this symbol is not valid'
         ],
+        random: true,
         answer: 'the user\'s home directory'
     },
     {
         id: 2,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Cash money',
         question: "What does the \`$\` at the end of the prompt indicate?",
         options: [
@@ -24,11 +29,14 @@ export default [
             'the user is not an administrative user',
             'the shell is in safe mode'
         ],
+        random: true,
         answer: 'the user is not an administrative user'
     },
     {
         id: 3,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Kitty cat',
         question: "In the command \`cat secret_file\`, what does \`secret file\` represent?",
         options: [
@@ -37,12 +45,15 @@ export default [
             'an argument to the program',
             'the shell type'
         ],
+        random: true,
         answer: 'an argument to the program',
         description: 'It represents the argument, or parameter, to the program'
     },
     {
         id: 4,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: '-not sure',
         question: "What does the \`-n\` argument do in the command \`echo -n Hi Everybody!!\`?",
         options: [
@@ -52,11 +63,14 @@ export default [
             'prints the output in uppercase',
             'prints the output twice'
         ],
+        random: true,
         answer: 'prevents echo from printing a newline at the end'
     },
     {
         id: 5,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Who am I?',
         question: "What does the command \`whoami\` do?",
         options: [
@@ -65,11 +79,14 @@ export default [
             'prints the username',
             'prints the shell type'
         ],
+        random: true,
         answer: 'prints the username',
     },
     {
         id: 6,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Slash of the Titans',
         question: "What does the \`/\` symbol in the terminal prompt represent?",
         options: [
@@ -79,11 +96,14 @@ export default [
             'the system hostname',
             'this symbol is not valid'
         ],
+        random: true,
         answer: 'the root directory',
     },
     {
         id: 7,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Back, back, back...',
         question: "What does the \`\\\` symbol in the terminal prompt represent?",
         options: [
@@ -93,12 +113,15 @@ export default [
             'the system hostname',
             'this symbol is not valid'
         ],
+        random: true,
         answer: 'this symbol is not valid'
     },
     // start of The File System section
     {
         id: 8,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Root awakening',
         question: "What is the root directory in Linux?",
         options: [
@@ -107,12 +130,15 @@ export default [
             '\`/\`',
             '\`C:\\\`'
         ],
+        random: true,
         answer: '\`/\`',
         description: `If you chose \`C:\\\` in the Linux section just leave my friend, you ain't gonna make it. `
     },
     {
         id: 9,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Temporary question',
         question: "Which directory contains temporary data storage?",
         options: [
@@ -128,11 +154,14 @@ export default [
             '\`/tmp\`',
 
         ],
+        random: true,
         answer: '\`/tmp\`',
     },
     {
         id: 10,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Hidden files',
         question: "In Linux, which character at the beginning of a filename makes the file hidden by default?",
         options: [
@@ -143,12 +172,15 @@ export default [
             '\`-\`',
             '\`@\`',
         ],
+        random: true,
         answer: '\`.\`',
         description: "Files and directories that start with a dot \`.\` are hidden by default in Linux. You can view them with the \`ls -a\` command."
     },
     {
         id: 11,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Biblioteca',
         question: "Which directory contains shared libraries for use by programs on the computer?",
         options: [
@@ -164,11 +196,14 @@ export default [
             '\`/tmp\`',
 
         ],
+        random: true,
         answer: '\`/usr/lib\`'
     },
     {
         id: 12,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Where am I?',
         question: "Which command shows your current working directory?",
         options: [
@@ -177,12 +212,15 @@ export default [
             '\`pwd\`',
             '\`whoami\`',
         ],
+        random: true,
         answer: '\`pwd\`',
         description: '\`pwd\` - present working directory'
     },
     {
         id: 13,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'All system files',
         question: "Which directory contains all the system files?",
         options: [
@@ -198,12 +236,15 @@ export default [
             '\`/tmp\`',
 
         ],
+        random: true,
         answer: '\`/usr\`',
         description: '\`usr\` - unix system resource'
     },
     {
         id: 14,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Los Santos',
         question: "What is the purpose of the \`ls\` command?",
         options: [
@@ -212,11 +253,14 @@ export default [
             'show system processes',
             'display user information',
         ],
+        random: true,
         answer: 'list files in a directory'
     },
     {
         id: 15,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'No relativity',
         question: "Which of the following is an absolute path?",
         options: [
@@ -226,11 +270,14 @@ export default [
             '\`../tmp\`',
 
         ],
+        random: true,
         answer: '\`/home/username\`',
     },
     {
         id: 16,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'User data',
         question: "Which directory contains user-owned data?",
         options: [
@@ -246,11 +293,14 @@ export default [
             '\`/tmp\`',
 
         ],
+        random: true,
         answer: '\`/home\`',
     },
     {
         id: 17,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Where to?',
         question: "What does the command \`cd\` do when used with no arguments?",
         options: [
@@ -260,11 +310,14 @@ export default [
             'does nothing',
 
         ],
+        random: true,
         answer: 'changes to the user\'s home directory'
     },
     {
         id: 18,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Here or there',
         question: "What does the \`..\` symbol mean in a file path?",
         options: [
@@ -273,11 +326,14 @@ export default [
             'parent directory',
             'root directory',
         ],
+        random: true,
         answer: 'parent directory'
     },
     {
         id: 19,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Log Hard',
         question: "Which directory contains logs and caches?",
         options: [
@@ -293,11 +349,14 @@ export default [
             '\`/tmp\`',
 
         ],
+        random: true,
         answer: '\`/var\`',
     },
     {
         id: 20,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'program_name',
         question: "Why do you need to type `\./program_name\` to run a program in the current directory on Linux, instead of just typing `\program_name\`?",
         options: [
@@ -306,6 +365,7 @@ export default [
             'to change directories',
             'to show hidden files',
         ],
+        random: true,
         answer: 'for security',
         description: `By default, when you type a command in Linux, the shell searches for the command in directories listed in your \`PATH\` environment variable (usually system directories like \`/bin\`). It *does not* search the current directory for executables unless you explicitly specify it with \`./\`.
 
@@ -318,6 +378,8 @@ To run a program in your current directory, you must use \`./\`.`
     {
         id: 21,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Process: Impossible',
         question: "Which directory contains runtime process data?",
         options: [
@@ -333,11 +395,14 @@ To run a program in your current directory, you must use \`./\`.`
             '\`/tmp\`',
 
         ],
+        random: true,
         answer: '\`/proc\`',
     },
     {
         id: 22,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Execution time',
         question: "Which directory contains executable files for programs installed on the computer?",
         options: [
@@ -353,11 +418,14 @@ To run a program in your current directory, you must use \`./\`.`
             '\`/tmp\`',
 
         ],
+        random: true,
         answer: '\`/usr/bin\`'
     },
     {
         id: 23,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Art attack',
         question: "Which directory contains program resources such as icons and art assets?",
         options: [
@@ -372,11 +440,14 @@ To run a program in your current directory, you must use \`./\`.`
             '\`/proc\`',
             '\`/tmp\`',
         ],
+        random: true,
         answer: '\`/usr/share\`',
     },
     {
         id: 24,
         type: 'radio',
+        category: 'linux',
+        subcategory: '',
         title: 'Configuration Wars',
         question: "Which directory contains system configurations?",
         options: [
@@ -391,6 +462,7 @@ To run a program in your current directory, you must use \`./\`.`
             '\`/proc\`',
             '\`/tmp\`',
         ],
+        random: true,
         answer: '\`/etc\`',
     },
 ]

@@ -18,7 +18,7 @@ console.log(<h1>Hello world!</h1>)
             '\`Hello world!\`',
             'null'
         ],
-        random: false,
+        random: true,
         answer: 'an object',
         description: 'Not an actual HTML element like in vanilla DOM JavaScript, but an object! What is created from the JSX in our React code is a plain JS object that React will use to render and update the view efficiently.'
     },
@@ -44,7 +44,7 @@ root.render(
             'needs a semicolon',
             'no error, this works',
         ],
-        random: false,
+        random: true,
         answer: 'missing one parent element',
         description: `You need to wrap the \`h1\` and \`p\` elements into one parent element. Any element will do. Here is an example using a *fragment*:
         
@@ -70,7 +70,7 @@ root.render(
             'you avoid using functions',
             'you manually update the DOM',
         ],
-        random: false,
+        random: true,
         answer: 'you tell the computer what to do',
         description: 'You can let the library/tool do more of the work (the how) with a description (the why) for you.'
     },
@@ -87,7 +87,7 @@ root.render(
             'you use only CSS',
             'you let React handle everything'
         ],
-        random: false,
+        random: true,
         answer: 'you give the computer specific instructions'
     },
     {
@@ -104,7 +104,7 @@ root.render(
             'never reuse code',
             'use only global variables'
         ],
-        random: false,
+        random: true,
         answer: 'break down from larger pieces and put them back together'
     },
     {
@@ -121,7 +121,7 @@ root.render(
             'a JavaScript variable',
             'a browser plugin'
         ],
-        random: false,
+        random: true,
         answer: 'a function that returns React elements',
         description: 'A React component is a function that returns React elements, which describe what should appear in the DOM.'
     },
@@ -149,7 +149,7 @@ function myComponent() {
             'should be wrapped in \`<div>\`',
             'should be a class'
         ],
-        random: false,
+        random: true,
         answer: 'should be \`MyComponent\`',
         description: 'Function names in JSX need to be written in pascal case'
     },
@@ -179,7 +179,7 @@ root.render(Header())
             'should import React',
             'should use a class component'
         ],
-        random: false,
+        random: true,
         answer: `header should be written as \`<Header />\` inside \`root.render()\``
     },
     {
@@ -216,7 +216,7 @@ console.log(reactElement)
             'an array',
             'undefined'
         ],
-        random: false,
+        random: true,
         answer: 'a React element object'
     },
     {
@@ -239,7 +239,7 @@ root.render(
             'it will render the \`<h1>\` element, but ignore the \`<p>\` element',
             'it will render an empty page'
         ],
-        random: false,
+        random: true,
         answer: 'it will throw an error because react expects a single root element',
         description: 'React requires that multiple elements be wrapped inside a single parent element. If you do not wrap them in a parent (like a \`<div>\`, \`<Fragment>\`, or \`<>...</>\`), React will throw an error.'
     },
@@ -257,7 +257,7 @@ root.render(
             'declarative programming involves explicitly defining every step in the process, while imperative programming leaves it to the framework to decide',
             'declarative programming describes what should be done, while imperative programming tells the system how to perform tasks'
         ],
-        random: false,
+        random: true,
         answer: 'declarative programming describes what should be done, while imperative programming tells the system how to perform tasks',
         description: `**Declarative programming** is about telling React what you want to happen, and React will figure out how to do it. **Imperative programming** involves describing how something should be done step by step, giving you more control over the execution process.`
     },
@@ -274,7 +274,7 @@ root.render(
             'React can only render basic HTML elements, like \`<div\` and \`<span>\`',
             'React uses a specific programming language that allows easy composability'
         ],
-        random: false,
+        random: true,
         answer: 'React allows you to easily build complex systems by combining smaller, reusable components'
     },
     {

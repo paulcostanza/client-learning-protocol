@@ -88,7 +88,7 @@ export default function SelectAQuestionFilter({
         { value: 'java', label: 'Java' },
         { value: 'c', label: 'C' },
         { value: 'cSharp', label: 'C#' },
-        { value: 'go', label: 'go' },
+        { value: 'go', label: 'Go' },
         { value: 'redis', label: 'Redis' },
         { value: 'memory', label: 'Memory' },
         { value: 'programming101', label: 'Programming 101' },

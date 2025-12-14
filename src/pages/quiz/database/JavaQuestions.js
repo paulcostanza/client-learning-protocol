@@ -485,7 +485,7 @@ cars[3] = "Ford";
     {
         id: 29,
         type: 'input',
-        category: 'Java',
+        category: 'java',
         subcategory: 'array',
         title: 'int ain\'t that hard',
         question: 'How do you declare an array of integers in Java that can hold 10 elements?',
@@ -496,7 +496,7 @@ cars[3] = "Ford";
     {
         id: 30,
         type: 'input',
-        category: 'Java',
+        category: 'java',
         subcategory: 'array',
         title: 'int ain\'t that hard',
         question: `Suppose you have this array:
@@ -520,7 +520,7 @@ nums[3] = 20
     {
         id: 31,
         type: 'input',
-        category: 'Java',
+        category: 'java',
         subcategory: 'hashmap',
         title: '',
         question: `How do you create a HashMap that maps String keys to Integer values?`,
@@ -532,7 +532,7 @@ nums[3] = 20
     {
         id: 32,
         type: 'input',
-        category: 'Java',
+        category: 'java',
         subcategory: 'hashmap',
         title: 'More hashmap',
         question: `How do you insert the key "Apples" with the value 5 into the \`fruits\` HashMap?`,
@@ -544,7 +544,7 @@ nums[3] = 20
     {
         id: 33,
         type: 'input',
-        category: 'Java',
+        category: 'java',
         subcategory: 'hashmap',
         title: 'How many guitars?',
         question: `How would you check the value associated with the key "guitars" from the HashMap "band"?`,
@@ -556,7 +556,7 @@ nums[3] = 20
     {
         id: 36,
         type: 'input',
-        category: 'Java',
+        category: 'java',
         subcategory: 'hashmap',
         title: '',
         question: `How do you check if the hashmap "food" has the key "Bananas"?`,
@@ -568,7 +568,7 @@ nums[3] = 20
     {
         id: 37,
         type: 'input',
-        category: 'Java',
+        category: 'java',
         subcategory: 'hashmap',
         title: '',
         question: `How do you delete the entry with the key "Apples" from the HashMap "fruits"?`,
@@ -581,7 +581,7 @@ nums[3] = 20
     {
         id: 38,
         type: 'input',
-        category: 'Java',
+        category: 'java',
         subcategory: 'array',
         title: 'How long',
         question: `How do you find the length of the array \`numbers\`?`,
@@ -594,7 +594,7 @@ nums[3] = 20
     {
         id: 39,
         type: 'input',
-        category: 'Java',
+        category: 'java',
         subcategory: 'array',
         title: 'Initialize this',
         question: `How do you declare and initialize an array of integers \`scores\` with the values \`10, 20, 30\` in one line?`,
@@ -606,7 +606,7 @@ nums[3] = 20
     {
         id: 40,
         type: 'input',
-        category: 'Java',
+        category: 'java',
         subcategory: 'array',
         title: 'Built-in sortation',
         question: `How do you sort the \`scores\` array in ascending order using built-in Java methods?`,
@@ -619,7 +619,7 @@ Don't forget to \`import java.util.Arrays;\` at the top!`
     {
         id: 41,
         type: 'radio',
-        category: 'Java',
+        category: 'java',
         subcategory: 'httpserver',
         title: 'You\'ve been servered',
         question: `In a simple HTTP server built with Java sockets, what is the main job of the \`ServerSocket\` class?`,
@@ -639,7 +639,7 @@ When a client tries to connect, the \`ServerSocket\` opens the door and lets you
     {
         id: 42,
         type: 'radio',
-        category: 'Java',
+        category: 'java',
         subcategory: 'httpserver',
         title: '',
         question: `In a Java HTTP server, what does the \`Socket\` object represent once a connection is accepted?`,
@@ -661,7 +661,7 @@ Each client gets its *own socket* which can later be handled by a separate threa
     {
         id: 43,
         type: 'radio',
-        category: 'Java',
+        category: 'java',
         subcategory: 'httpserver',
         title: '',
         question: `In a basic HTTP server, which of the following is the correct order of events when handling a single client request?`,
@@ -682,7 +682,7 @@ Each client gets its *own socket* which can later be handled by a separate threa
     // {
     //     id: 'change me',
     //     type: 'input',
-    //     category: 'Java',
+    //     category: 'java',
     //     subcategory: 'change me',
     //     title: '',
     //     question: ``,
@@ -696,7 +696,7 @@ Each client gets its *own socket* which can later be handled by a separate threa
     // {
     //     id: 'change me',
     //     type: 'input',
-    //     category: 'Java',
+    //     category: 'java',
     //     subcategory: 'change me',
     //     title: '',
     //     question: ``,
@@ -710,7 +710,7 @@ Each client gets its *own socket* which can later be handled by a separate threa
     // {
     //     id: 'change me',
     //     type: 'input',
-    //     category: 'Java',
+    //     category: 'java',
     //     subcategory: 'change me',
     //     title: '',
     //     question: ``,
@@ -724,7 +724,7 @@ Each client gets its *own socket* which can later be handled by a separate threa
     // {
     //     id: 'change me',
     //     type: 'input',
-    //     category: 'Java',
+    //     category: 'java',
     //     subcategory: 'change me',
     //     title: '',
     //     question: ``,
@@ -738,7 +738,7 @@ Each client gets its *own socket* which can later be handled by a separate threa
     // {
     //     id: 'change me',
     //     type: 'input',
-    //     category: 'Java',
+    //     category: 'java',
     //     subcategory: 'change me',
     //     title: '',
     //     question: ``,
@@ -752,7 +752,7 @@ Each client gets its *own socket* which can later be handled by a separate threa
     // {
     //     id: 'change me',
     //     type: 'input',
-    //     category: 'Java',
+    //     category: 'java',
     //     subcategory: 'change me',
     //     title: '',
     //     question: ``,
@@ -766,7 +766,7 @@ Each client gets its *own socket* which can later be handled by a separate threa
     // {
     //     id: 'change me',
     //     type: 'input',
-    //     category: 'Java',
+    //     category: 'java',
     //     subcategory: 'change me',
     //     title: '',
     //     question: ``,

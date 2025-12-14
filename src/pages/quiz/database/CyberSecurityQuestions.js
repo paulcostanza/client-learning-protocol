@@ -2,6 +2,8 @@ export default [
     {
         id: 1,
         type: 'checkbox',
+        category: 'cybersecurity',
+        subcategory: '',
         title: 'CIA',
         question: "What is the CIA triad in cybersecurity?",
         options: [
@@ -14,6 +16,7 @@ export default [
             'authentication',
             'authorization'
         ],
+        random: true,
         answer: [
             'confidentiality',
             'integrity',
@@ -23,6 +26,8 @@ export default [
     {
         id: 2,
         type: 'radio',
+        category: 'cybersecurity',
+        subcategory: '',
         title: 'Fluffy Kitty',
         question: "How would you run the file \`fluffy-kitty\` in Linux?",
         options: [
@@ -32,6 +37,7 @@ export default [
             '\`execute fluffy-kitty\`',
 
         ],
+        random: true,
         answer: '\`./fluffy-kitty\`',
         description: 'Please don\'t execute the fluffy kitty!'
     }
