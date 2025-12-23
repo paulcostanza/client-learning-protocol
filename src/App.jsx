@@ -61,6 +61,11 @@ import HTMLForms from './pages/learning/html/Forms'
 import HTMLTables from './pages/learning/html/Tables'
 import HTMLNotYourEverydayElements from './pages/learning/html/NotYourEverydayElements'
 
+// C++
+import CPlusPlusLanding from './pages/learning/cPlusPlus/setup/CPlusPlusLanding'
+import CPlusPlusSectionLayout from './pages/learning/cPlusPlus/setup/CPlusPlusSectionLayout'
+import CPlusPlusFundamentals from './pages/learning/cPlusPlus/Fundamentals'
+
 // Go
 import GoLanding from './pages/learning/go/setup/GoLanding'
 import GoSectionLayout from './pages/learning/go/setup/GoSectionLayout'
@@ -173,6 +178,12 @@ function App() {
               <Route path='tables' element={<HTMLTables />} />
               <Route path='not-your-everyday-elements' element={<HTMLNotYourEverydayElements />} />
             </Route>
+
+            <Route path='/cpp' element={<CPlusPlusLanding />} />
+            <Route path='/cpp' element={<CPlusPlusSectionLayout />} >
+              <Route path='fundamentals' element={<CPlusPlusFundamentals />} />
+            </Route>
+
 
             <Route path='/go' element={<GoLanding />} />
             <Route path='/go' element={<GoSectionLayout />}>

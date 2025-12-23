@@ -72,3 +72,13 @@ Dashboard for users - hold all data in database (duh). Add all the data analytic
 ## End Goal
 
 People can choose what they want to study by picking the most important ideas or removing things that do not interest them. They will be tested on the material in the form of spaced repetition. If they start to do bad, they need to revisit certain ideas/concepts until they get it stuck in there head. If they do well, questions will be asked further out. 
+
+---
+
+# Adding a new topic
+
+- add to learning folder
+    - create setup folder
+- add to App.jsx
+- add to navigation bar
+- add database
