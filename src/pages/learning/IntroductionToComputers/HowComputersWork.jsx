@@ -28,9 +28,11 @@ export default function HowComputersWork() {
                         <li>manuals, help systems, and/or other forms of written documentation</li>
                     </ul>
 
+                    <p>When a computer is performing the actions described by the instructions in a computer program, we say it is <strong>running</strong> or <strong>executing</strong> the program. A computer will not begin execution of a program until it is told to do so. That typically requires the user to <strong>launch</strong> (or <strong>run</strong> or <strong>execute</strong>) the program, although programs may also be launched by other programs.</p>
+
                     <h2 id="hardware-and-software">Hardware and Software</h2>
 
-                    <p>Hardware refers to the physical components that make up a computer. As a developer, it is important to understand the basic inner workings of a computer. A typical computer consists of:</p>
+                    <p>Programs are executed on the computer's <strong>hardware</strong>, which consists of the physical components that make up a computer. As a developer, it is important to understand the basic inner workings of a computer. A typical computer consists of:</p>
 
                     <ul>
                         <li>central processing unit (CPU)</li>
@@ -83,7 +85,7 @@ export default function HowComputersWork() {
 
                     <h2 id="main-memory">Main Memory</h2>
 
-                    <p>Random access memory, or <strong>RAM</strong>, is the computer's main memory and is a device that holds the sequences of instructions of programs that are running and the data those programs are using. RAM is known as a volatile type of memory, used only for temporary storage for the computer's CPU. When the computer is turned off, the contents of RAM are erased.</p>
+                    <p>Random access memory, or <strong>RAM</strong>, is the computer's main memory and is a device that holds the sequences of instructions of programs that are running and the data those programs are using. This is where computer programs are loaded prior to execution. RAM is known as a volatile type of memory, used only for temporary storage for the computer's CPU. When the computer is turned off, the contents of RAM are erased.</p>
 
                     <ol>
                         <li>Memory is divided into sections that hold an equal amount of data.</li>
@@ -132,7 +134,7 @@ export default function HowComputersWork() {
 
                     <h2 id="input-devices">Input Devices</h2>
 
-                    <p>Input is any data that a computer collects from the outside world: keyboard, mouse, scanner, camera, etc.</p>
+                    <p>Input is any data that a computer collects from the outside world: keyboard, mouse, scanner, camera, touch screen, etc.</p>
 
                     <br />
 

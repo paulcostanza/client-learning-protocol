@@ -5,6 +5,7 @@ import { Outlet } from 'react-router-dom'
 const sections = [
     { name: 'How Computers Work', path: 'how-computers-work' },
     { name: 'Operating Systems & Software', path: 'operating-systems-and-software' },
+    { name: 'How Computers Run Software', path: 'how-computers-run-software' },
     { name: 'Programming Languages', path: 'programming-languages' },
 ]
 

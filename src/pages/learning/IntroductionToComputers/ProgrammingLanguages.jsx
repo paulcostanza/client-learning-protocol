@@ -8,7 +8,13 @@ export default function ProgrammingLanguages() {
         <div>
             <h1>Programming Languages</h1>
 
-            <p>A programming language is a special language used to write programming programs. A computer's CPU can only process instructions that are written in machine language, which is made up of <strong>binary</strong> (1s and 0s). Here is some binary:</p>
+            <p>Modern computers are incredibly fast, and are getting faster all the time. However, computers also have some significant contraints: they can only understand a limited set of instructions, and must be told exactly what to do.</p>
+
+            <p>A <strong>computer program</strong> is a sequence of instructions that directs a computer to perform certain actions in a specified order.</p>
+
+            <p>Computer programs are typically written in a <strong>programming language</strong>, which is a language designed to facilitate the writing of instructions for computers. There are many different programming languages available, each of which caters to a different set of needs. The act and art of writing a program is called <strong>programming</strong>.</p>
+
+            <p>A computer's CPU can only process instructions that are written in machine language, which is made up of <strong>binary</strong> (1s and 0s). Here is some binary:</p>
 
             <div className="center">
                 <p><Latex>$ 1011010000000101 $</Latex></p>

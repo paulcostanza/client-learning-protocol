@@ -89,6 +89,7 @@ import IntroToCompSectionLayout from './pages/learning/IntroductionToComputers/s
 import HowComputersWork from './pages/learning/IntroductionToComputers/HowComputersWork'
 import OperatingSystemsAndSoftware from './pages/learning/IntroductionToComputers/OperatingSystemsAndSoftware'
 import ProgrammingLanguages from './pages/learning/IntroductionToComputers/ProgrammingLanguages'
+import HowComputersRunSoftware from './pages/learning/IntroductionToComputers/HowComputersRunSoftware'
 
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
@@ -114,6 +115,7 @@ function App() {
             <Route path='/intro-to-comp' element={<IntroToCompSectionLayout />}>
               <Route path='how-computers-work' element={<HowComputersWork />} />
               <Route path='operating-systems-and-software' element={<OperatingSystemsAndSoftware />} />
+              <Route path='how-computers-run-software' element={<HowComputersRunSoftware />} />
               <Route path='programming-languages' element={<ProgrammingLanguages />} />
             </Route>
 
