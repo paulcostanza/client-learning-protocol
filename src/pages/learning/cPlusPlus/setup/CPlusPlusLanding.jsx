@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const sections = [
+    { name: 'Introduction', path: 'introduction' },
     { name: 'Fundamentals', path: 'fundamentals' },
 ]
 
