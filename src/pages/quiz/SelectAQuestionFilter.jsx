@@ -87,6 +87,7 @@ export default function SelectAQuestionFilter({
         { value: 'python', label: 'Python' },
         { value: 'java', label: 'Java' },
         { value: 'c', label: 'C' },
+        { value: 'cPlusPlus', label: 'C++' },
         { value: 'cSharp', label: 'C#' },
         { value: 'go', label: 'Go' },
         { value: 'redis', label: 'Redis' },

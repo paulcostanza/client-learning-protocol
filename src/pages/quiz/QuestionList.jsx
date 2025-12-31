@@ -86,6 +86,7 @@ export default function QuestionList() {
         python: () => import('./database/PythonQuestions.js'),
         java: () => import('./database/JavaQuestions.js'),
         c: () => import('./database/CQuestions.js'),
+        cPlusPlus: () => import('./database/CPlusPlusQuestions.js'),
         cSharp: () => import('./database/CSharpQuestions.js'),
         go: () => import('./database/GoQuestions.js'),
         redis: () => import('./database/RedisQuestions.js'),

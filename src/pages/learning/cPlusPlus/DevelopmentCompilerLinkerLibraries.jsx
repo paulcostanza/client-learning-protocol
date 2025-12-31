@@ -1,8 +1,13 @@
 import DevelopmentCycle from '../../../assets/cPlusPlus/developmentCompilerLinkerLibraries/development cycle.png'
 import ObjectFiles from '../../../assets/cPlusPlus/developmentCompilerLinkerLibraries/object files.png'
 import Linker from '../../../assets/cPlusPlus/developmentCompilerLinkerLibraries/linker.png'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function DevelopmentCompilerLinkerLibraries() {
+    const quizImports = {
+        cPlusPlus: () => import('../../../pages/quiz/database/CPlusPlusQuestions.js')
+    }
+
     return (
         <div>
             <h1>C++ Development, Compiler, Linker, & Libraires</h1>
@@ -114,6 +119,15 @@ export default function DevelopmentCompilerLinkerLibraries() {
             <p>Once you can run your program, then you can test it. <strong>Testing</strong> is the process of assessing whether your software is working as expected. Basic testing typically involves trying different input combinations to ensure the software behaves correctly in different cases.</p>
 
             <p>If the program does not behave as expected, then you will have to do some <strong>debugging</strong>, which is the process of finding and fixing programming errors.</p>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="development-compiler-linker-libraries"
+            />
         </div>
     )
 }

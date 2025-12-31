@@ -23,6 +23,9 @@ export function fixGrammar(subject) {
             return "Java"
         case "c":
             return "C"
+        case "c++":
+        case "cPlusPlus":
+            return "C++"
         case "cSharp":
         case "c#":
             return "C#"

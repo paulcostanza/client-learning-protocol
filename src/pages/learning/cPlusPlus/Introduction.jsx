@@ -1,4 +1,10 @@
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+
 export default function SimpleIntroToCCPP() {
+    const quizImports = {
+        cPlusPlus: () => import('../../../pages/quiz/database/CPlusPlusQuestions.js')
+    }
+
     return (
         <div>
             <h1>Introduction</h1>
@@ -45,6 +51,15 @@ export default function SimpleIntroToCCPP() {
             <p>Nope! It is perfectly fine to start with C++. Once you know C++, it should be pretty easy to learn standard C if you ever have the need. These days, C is mostly used for niche use cases: code that runs on embedded devices, when you need to interact with other languages that can only interface with C, etc.</p>
 
             <p>For most other cases, C++ is recommended.</p>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="introduction"
+            />
         </div>
     );
 }

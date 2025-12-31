@@ -68,6 +68,12 @@ const quizList = [
         cardImage: cCardImg
     },
     {
+        id: "cPlusPlus",
+        title: "Low-level",
+        dataFile: "../../quiz/database/CPlusPlusQuestions.js",
+        cardImage: cCardImg
+    },
+    {
         id: "cSharp",
         title: "Java...again",
         dataFile: "../../quiz/database/CSharpQuestions.js",
