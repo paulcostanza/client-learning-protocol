@@ -65,6 +65,7 @@ import HTMLNotYourEverydayElements from './pages/learning/html/NotYourEverydayEl
 import CPlusPlusLanding from './pages/learning/cPlusPlus/setup/CPlusPlusLanding'
 import CPlusPlusSectionLayout from './pages/learning/cPlusPlus/setup/CPlusPlusSectionLayout'
 import CPlusPlusIntroduction from './pages/learning/cPlusPlus/Introduction'
+import CPlusPlusDevelopmentCompilerLinkerLibraries from './pages/learning/cPlusPlus/DevelopmentCompilerLinkerLibraries'
 import CPlusPlusFundamentals from './pages/learning/cPlusPlus/Fundamentals'
 
 // Go
@@ -185,6 +186,7 @@ function App() {
             <Route path='/cpp' element={<CPlusPlusLanding />} />
             <Route path='/cpp' element={<CPlusPlusSectionLayout />} >
               <Route path='introduction' element={<CPlusPlusIntroduction />} />
+              <Route path='development-compiler-linker-libraries' element={<CPlusPlusDevelopmentCompilerLinkerLibraries />} />
               <Route path='fundamentals' element={<CPlusPlusFundamentals />} />
             </Route>
 
