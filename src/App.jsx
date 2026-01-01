@@ -92,6 +92,7 @@ import HowComputersWork from './pages/learning/IntroductionToComputers/HowComput
 import OperatingSystemsAndSoftware from './pages/learning/IntroductionToComputers/OperatingSystemsAndSoftware'
 import ProgrammingLanguages from './pages/learning/IntroductionToComputers/ProgrammingLanguages'
 import HowComputersRunSoftware from './pages/learning/IntroductionToComputers/HowComputersRunSoftware'
+import IDE from './pages/learning/IntroductionToComputers/IDE'
 
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
@@ -119,6 +120,7 @@ function App() {
               <Route path='operating-systems-and-software' element={<OperatingSystemsAndSoftware />} />
               <Route path='how-computers-run-software' element={<HowComputersRunSoftware />} />
               <Route path='programming-languages' element={<ProgrammingLanguages />} />
+              <Route path='ide' element={<IDE />} />
             </Route>
 
             <Route path='/cybersecurity' element={<CyberSecurityLanding />} />

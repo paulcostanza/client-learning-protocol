@@ -5,6 +5,7 @@ const sections = [
     { name: 'Operating Systems & Software', path: 'operating-systems-and-software' },
     { name: 'How Computers Run Software', path: 'how-computers-run-software' },
     { name: 'Programming Languages', path: 'programming-languages' },
+    { name: 'IDE', path: 'ide' },
 ]
 
 export default function IntroToCompLanding() {
