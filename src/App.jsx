@@ -67,6 +67,7 @@ import CPlusPlusSectionLayout from './pages/learning/cPlusPlus/setup/CPlusPlusSe
 import CPlusPlusIntroduction from './pages/learning/cPlusPlus/Introduction'
 import CPlusPlusDevelopmentCompilerLinkerLibraries from './pages/learning/cPlusPlus/DevelopmentCompilerLinkerLibraries'
 import CPlusPlusFundamentals from './pages/learning/cPlusPlus/Fundamentals'
+import CPlusPlusBuildYourFirstProject from './pages/learning/cPlusPlus/BuildYourFirstProject'
 
 // Go
 import GoLanding from './pages/learning/go/setup/GoLanding'
@@ -190,6 +191,7 @@ function App() {
               <Route path='introduction' element={<CPlusPlusIntroduction />} />
               <Route path='development-compiler-linker-libraries' element={<CPlusPlusDevelopmentCompilerLinkerLibraries />} />
               <Route path='fundamentals' element={<CPlusPlusFundamentals />} />
+              <Route path='build-your-first-project' element={<CPlusPlusBuildYourFirstProject />} />
             </Route>
 
 

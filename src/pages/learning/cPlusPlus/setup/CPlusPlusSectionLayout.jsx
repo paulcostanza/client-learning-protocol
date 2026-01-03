@@ -6,6 +6,7 @@ const sections = [
     { name: 'Introduction', path: 'introduction' },
     { name: 'C++ Development, Compiler, Linker, & Libraries', path: 'development-compiler-linker-libraries' },
     { name: 'C++ Fundamentals', path: 'fundamentals' },
+    { name: 'Build Your First Project', path: 'build-your-first-project' },
 ]
 
 export default function CPlusPlusSectionLayout() {
