@@ -182,7 +182,7 @@ var f func(fuc(int, int) int, int) int
         category: 'go',
         subcategory: 'structs',
         title: '',
-        question: `What is one advantage of advantage of using anonymous structs?`,
+        question: `What is one advantage of using anonymous structs?`,
         options: [
             'prevents you from re-using a struct definition you never intended to re-use',
             'makes your code run faster',

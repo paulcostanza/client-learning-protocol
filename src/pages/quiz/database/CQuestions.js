@@ -162,7 +162,7 @@ void return69(void) {} // returns nothing, takes no arguments
             'True',
             'False'
         ],
-        random: true,
+        random: false,
         answer: 'False',
         description: `Compilers often add **padding** between fields to ensure proper data alignment. This is done to make memory access efficient for the CPU.
 

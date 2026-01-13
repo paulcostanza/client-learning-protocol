@@ -57,7 +57,7 @@ export default [
             'true',
             'false'
         ],
-        random: true,
+        random: false,
         answer: 'true'
     },
     {

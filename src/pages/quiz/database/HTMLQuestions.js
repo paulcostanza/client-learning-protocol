@@ -818,7 +818,7 @@ export default [
         category: 'html',
         subcategory: 'tables',
         title: 'Table row elements',
-        question: "Which two elements are used to specify a row with data and a header element in a table?",
+        question: "Which two elements are used to specify a row with a data and a header element in a table?",
         options: [
             '\`row\` element is used for rows',
             '\`th\` element is used for the header elements',
@@ -1179,8 +1179,8 @@ Our table has one row of data with the data values of *Davis*, *Alex*, and *54*.
 ├── /assets
 │   ├── /images
 │   │   └── icons.svg
-│   ├── /fonts
-│   │   └── custom-font.woff
+│   └── /fonts
+│       └── custom-font.woff
 ├── /css
 │   ├── main.css
 │   ├── about.css
