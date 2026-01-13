@@ -17,7 +17,7 @@ import {
 import SelectAQuestionFilter from "./SelectAQuestionFilter.jsx"
 import { fixGrammar } from "../../Helpers/CategoryFixer.js"
 
-function filterQuestions(questions, status, review, category) {
+function filterQuestions(questions, status, review, category, type) {
     return questions.filter(q => {
         const nextReviewTimestamp = getNextReview(q.quizKey, q.id)
         const reviewValue = getHumanReadableNextReview(nextReviewTimestamp)
@@ -61,8 +61,9 @@ function filterQuestions(questions, status, review, category) {
         }
 
         const categoryMatch = !category || q.quizKey.toLowerCase() === category.toLowerCase()
+        const typeMatch = !type || q.type.toLowerCase() === type.toLowerCase()
 
-        return statusMatch && reviewMatch && categoryMatch
+        return statusMatch && reviewMatch && categoryMatch && typeMatch
     })
 }
 
@@ -74,6 +75,7 @@ export default function QuestionList() {
     const [status, setStatus] = useState('')
     const [review, setReview] = useState('')
     const [category, setCategory] = useState('')
+    const [type, setType] = useState('')
     const filterRef = useRef(null)
 
     const quizImports = {
@@ -111,6 +113,7 @@ export default function QuestionList() {
             const questions = results.flatMap(({ quizKey, questions }) =>
                 questions.map(q => ({ ...q, quizKey }))
             )
+            console.log(questions)
             setAllQuestions(questions)
         })
     }, [])
@@ -124,10 +127,10 @@ export default function QuestionList() {
                 block: "start"
             })
         }
-    }, [status, review, category])
+    }, [status, review, category, type])
 
 
-    const filteredQuestions = filterQuestions(allQuestions, status, review, category)
+    const filteredQuestions = filterQuestions(allQuestions, status, review, category, type)
     const maxLengthOfQuestionInColumn = 30
 
     const handleChangePage = (event, newPage) => {
@@ -166,6 +169,8 @@ export default function QuestionList() {
                     setReview={setReview}
                     category={category}
                     setCategory={setCategory}
+                    type={type}
+                    setType={setType}
                     onRandom={handleRandomQuestion}
                     randomDisabled={filteredQuestions.length === 0}
                 />

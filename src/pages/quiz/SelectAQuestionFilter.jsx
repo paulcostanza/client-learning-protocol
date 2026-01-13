@@ -38,11 +38,21 @@ function FilterSelect({ value, onChange, label, options }) {
             }
         >
             {options.map(opt => (
-                <MenuItem key={opt.value} value={opt.value} sx={{ color: 'white' }}>
+                <MenuItem
+                    key={opt.value}
+                    value={opt.value}
+                    sx={{
+                        color: 'white',
+                        '&:hover': {
+                            backgroundColor: '#111812',
+                            color: '#fff',
+                        }
+                    }}>
                     {opt.label}
                 </MenuItem>
-            ))}
-        </Select>
+            ))
+            }
+        </Select >
     )
 }
 
@@ -53,13 +63,16 @@ export default function SelectAQuestionFilter({
     setReview,
     category,
     setCategory,
+    type,
+    setType,
     onRandom,
     randomDisabled
 }) {
     const handleStatus = event => setStatus(event.target.value)
     const handleReview = event => setReview(event.target.value)
     const handleCategory = event => setCategory(event.target.value)
-    const resetDisabled = !status && !review && !category
+    const handleType = event => setType(event.target.value)
+    const resetDisabled = !status && !review && !category && !type
 
     const statusOptions = [
         { value: 'none', label: 'None' },
@@ -92,15 +105,22 @@ export default function SelectAQuestionFilter({
         { value: 'go', label: 'Go' },
         { value: 'redis', label: 'Redis' },
         { value: 'memory', label: 'Memory' },
-        { value: 'programming101', label: 'Programming 101' },
+        { value: 'programming101', label: 'Prog 101' },
         { value: 'cybersecurity', label: 'CyberSecurity' },
         { value: 'linux', label: 'Linux' }
+    ]
+
+    const typeOptions = [
+        { value: 'checkbox', label: 'Checkbox' },
+        { value: 'input', label: 'Input' },
+        { value: 'radio', label: 'Radio' },
     ]
 
     const handleReset = () => {
         setStatus('')
         setReview('')
         setCategory('')
+        setType('')
     }
 
     return (
@@ -130,6 +150,14 @@ export default function SelectAQuestionFilter({
                                 onChange={handleCategory}
                                 label="Category"
                                 options={categoryOptions}
+                            />
+                        </FormControl>
+                        <FormControl sx={{ m: 1, minWidth: 120 }}>
+                            <FilterSelect
+                                value={type}
+                                onChange={handleType}
+                                label="Type"
+                                options={typeOptions}
                             />
                         </FormControl>
                     </div>
