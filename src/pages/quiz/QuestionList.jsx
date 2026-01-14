@@ -76,7 +76,65 @@ export default function QuestionList() {
     const [review, setReview] = useState('')
     const [category, setCategory] = useState('')
     const [type, setType] = useState('')
+    const [sortBy, setSortBy] = useState(null)
+    const [sortDirection, setSortDirection] = useState('asc')
     const filterRef = useRef(null)
+
+    // empty titles & reviews with 
+    // no status are always last
+    function sortQuestions(questions) {
+        if (!sortBy) return questions
+        return [...questions].sort((a, b) => {
+            let aValue, bValue
+            if (sortBy === 'title') {
+                aValue = (a.title || '').toLowerCase()
+                bValue = (b.title || '').toLowerCase()
+                const aEmpty = aValue === ''
+                const bEmpty = bValue === ''
+                if (aEmpty && !bEmpty) return 1
+                if (!aEmpty && bEmpty) return -1
+                if (aEmpty && bEmpty) return 0
+
+                const aIsAlpha = /^[a-z]/.test(aValue)
+                const bIsAlpha = /^[a-z]/.test(bValue)
+                const aIsNumOrSym = /^[^a-z]/.test(aValue)
+                const bIsNumOrSym = /^[^a-z]/.test(bValue)
+
+                if (aIsAlpha && bIsNumOrSym) return sortDirection === 'asc' ? -1 : 1
+                if (aIsNumOrSym && bIsAlpha) return sortDirection === 'asc' ? 1 : -1
+            } else if (sortBy === 'review') {
+                aValue = getHumanReadableNextReview(getNextReview(a.quizKey, a.id)) || ''
+                bValue = getHumanReadableNextReview(getNextReview(b.quizKey, b.id)) || ''
+
+                const parseDays = val => {
+                    if (val === 'Ready!') return -Infinity
+                    if (/^(\d+) days$/.test(val)) return parseInt(val)
+                    return Infinity
+                }
+                const aDays = parseDays(aValue)
+                const bDays = parseDays(bValue)
+
+                if (aDays === Infinity && bDays !== Infinity) return 1
+                if (aDays !== Infinity && bDays === Infinity) return -1
+                if (aDays === Infinity && bDays === Infinity) return 0
+
+                return sortDirection === 'asc' ? aDays - bDays : bDays - aDays
+            }
+
+            if (aValue < bValue) return sortDirection === 'asc' ? -1 : 1
+            if (aValue > bValue) return sortDirection === 'asc' ? 1 : -1
+            return 0
+        })
+    }
+
+    function handleSort(column) {
+        if (sortBy === column) {
+            setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc')
+        } else {
+            setSortBy(column)
+            setSortDirection('asc')
+        }
+    }
 
     const quizImports = {
         introtocomp: () => import('./database/IntroToCompQuestions.js'),
@@ -130,7 +188,10 @@ export default function QuestionList() {
     }, [status, review, category, type])
 
 
-    const filteredQuestions = filterQuestions(allQuestions, status, review, category, type)
+    const filteredQuestions = sortQuestions(
+        filterQuestions(allQuestions, status, review, category, type)
+    )
+
     const maxLengthOfQuestionInColumn = 30
 
     const handleChangePage = (event, newPage) => {
@@ -149,14 +210,12 @@ export default function QuestionList() {
 
     function handleRandomQuestion() {
         if (filteredQuestions.length === 0) return
+
         const randomIdx = Math.floor(Math.random() * filteredQuestions.length)
+
         setSelectedQuestion(filteredQuestions[randomIdx])
         setModalOpen(true)
     }
-
-    // may need to add loading indicator
-    // when questions are being fetched from database
-    // someday...
 
     return (
         <div className="container">
@@ -187,8 +246,11 @@ export default function QuestionList() {
                     >
                         <TableHead>
                             <TableRow>
-                                <TableCell style={{ width: '180px' }} >
-                                    Title
+                                <TableCell
+                                    style={{ width: '180px', cursor: 'pointer' }}
+                                    onClick={() => handleSort('title')}
+                                >
+                                    Title {sortBy === 'title' ? (sortDirection === 'asc' ? '▲' : '▼') : ''}
                                 </TableCell>
                                 <TableCell style={{ textAlign: 'center', width: '80px' }}>
                                     Status
@@ -196,8 +258,11 @@ export default function QuestionList() {
                                 <TableCell style={{ width: '264.4px' }} >
                                     Question
                                 </TableCell>
-                                <TableCell style={{ textAlign: 'center', width: '80px' }}>
-                                    Review
+                                <TableCell
+                                    style={{ textAlign: 'center', width: '80px', cursor: 'pointer' }}
+                                    onClick={() => handleSort('review')}
+                                >
+                                    Review {sortBy === 'review' ? (sortDirection === 'asc' ? '▲' : '▼') : ''}
                                 </TableCell>
                                 <TableCell
                                     style={{ textAlign: 'center', width: '140px' }}
