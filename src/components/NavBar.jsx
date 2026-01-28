@@ -16,8 +16,8 @@ import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 
-const pages = ['Learning', 'Quiz', 'About'] // Challenges, games, blog...when ever I get to it
-const settings = ['Login - Coming 2026']
+const pages = ['Learning', 'Basics', 'Quiz', 'About'] // Challenges, games, blog...when ever I get to it
+const settings = ['Login - Coming March 2026']
 
 const learningSections = [
     {
@@ -69,6 +69,10 @@ const aboutSections = [
     { label: "Me", href: "/about/me" },
 ]
 
+const basicsSections = [
+    { label: "Testing", href: "basics/testing" },
+]
+
 
 export default function NavBar() {
 
@@ -76,6 +80,7 @@ export default function NavBar() {
     const [anchorElUser, setAnchorElUser] = useState(null)
     const [anchorElLearning, setAnchorElLearning] = useState(null)
     const [anchorElAbout, setAnchorElAbout] = useState(null)
+    const [anchorElBasics, setAnchorElBasics] = useState(null)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget)
@@ -105,6 +110,14 @@ export default function NavBar() {
 
     const handleCloseAboutMenu = (event) => {
         setAnchorElAbout(null)
+    }
+
+    const handleOpenBasicsMenu = (event) => {
+        setAnchorElBasics(event.currentTarget)
+    }
+
+    const handleCloseBasicsMenu = (event) => {
+        setAnchorElBasics(null)
     }
 
     const [activeLink, setActiveLink] = useState('')
@@ -183,6 +196,41 @@ export default function NavBar() {
                                     </div>
                                 ))}
                             </Menu>
+                            {/* ************************************************************************* */}
+                            <Box>
+                                <Button
+                                    sx={{ my: 2, color: 'white' }}
+                                    onClick={handleOpenBasicsMenu}
+                                    to="/basics"
+                                >
+                                    BASICS
+                                </Button>
+                                <Menu
+                                    anchorEl={anchorElBasics}
+                                    open={Boolean(anchorElBasics)}
+                                    onClose={handleCloseBasicsMenu}
+                                    PaperProps={{
+                                        sx: {
+                                            backgroundColor: "#23272a",
+                                            color: "#fff",
+                                            borderRadius: 4,
+                                            boxShadow: 9,
+                                        }
+                                    }}
+                                >
+                                    {basicsSections.map(section => (
+                                        <MenuItem key={section.label} onClick={handleCloseBasicsMenu}>
+                                            <Link
+                                                to={section.href}
+                                                style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
+                                            >
+                                                {section.label}
+                                            </Link>
+                                        </MenuItem>
+                                    ))}
+                                </Menu>
+                            </Box>
+
                             <Button
                                 sx={{ my: 2, color: 'white' }}
                                 component={Link}
