@@ -8,14 +8,8 @@ import PlaygroundNav from './PlaygroundNav'
 import OutputHeader from './PlaygroundFooter/OutputHeader'
 import Output from './PlaygroundFooter/Output'
 
-export default function Playground() {
-    const boilerPlate = `def helloWorld(): 
-  # Write your code here
-
-helloWorld()
-`
-
-    const [code, setCode] = useState(boilerPlate)
+export default function Playground({ problem }) {
+    const [code, setCode] = useState(problem.starterCode)
     const [output, setOutput] = useState('')
 
     const runCode = () => {
@@ -39,32 +33,8 @@ helloWorld()
         }
     }
 
-    const handleSubmit = () => {
-        let outputBuffer = "";
-        Sk.configure({
-            output: function (text) {
-                outputBuffer += text;
-            },
-            read: function (x) {
-                if (Sk.builtinFiles === undefined ||
-                    Sk.builtinFiles["files"] === undefined ||
-                    !Sk.builtinFiles["files"][x]) {
-                    throw "File not found: " + x;
-                }
-                return Sk.builtinFiles["files"][x];
-            }
-        });
-        Sk.misceval.asyncToPromise(() => Sk.importMainWithBody("__main__", false, code, true))
-            .then(() => {
-                // Example test: check if output matches expected
-                const expected = "Hello world!\n";
-                if (outputBuffer.trim() === expected.trim()) {
-                    setOutput("✅ Test passed!\n" + outputBuffer);
-                } else {
-                    setOutput("❌ Test failed!\nExpected:\n" + expected + "\nGot:\n" + outputBuffer);
-                }
-            })
-            .catch(err => setOutput(err.toString()));
+    const handleSubmit = async () => {
+        setOutput(await problem.evaluateCode(code))
     };
 
     return (

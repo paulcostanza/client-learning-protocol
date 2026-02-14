@@ -1,8 +1,8 @@
-- How do I plug in different problems?
-    - question
-    - solution
-
-
 - Change all basics to Practice:
     - nav bar
     - inside pages
+- Change all testings to python
+- add a helperfile for evaluating code (evaluatePythonCodePrintToConsole)
+- add the next button when a submit is successful
+- add playlist
+- add saving to localhost

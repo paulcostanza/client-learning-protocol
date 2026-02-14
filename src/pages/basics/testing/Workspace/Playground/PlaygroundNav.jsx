@@ -29,11 +29,11 @@ export default function Playground() {
 {/* 
     To add...
 
+    REFRESH: add a button that starts your code over. Pop up a confurmation modal, 'Are you sure you want to reset your code in the workspace?'
+
     SETTINGS: saved to local storage
     - reset split bars (moving them should be saved in local storage)
     - wrap code on/off
     - font size
-    
-    
-    
+    - tab sizing: 2 spaces vs 4 spaces
     */}

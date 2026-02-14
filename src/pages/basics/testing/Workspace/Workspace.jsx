@@ -1,14 +1,18 @@
 import Split from 'react-split'
 import { useParams } from 'react-router-dom'
-import { problemsList } from '../Problems/ProblemsList'
+import { problemsList } from '../Problems/Python/ProblemsList'
 import ProblemDescription from './ProblemDescription/ProblemDescription'
 import Playground from './Playground/Playground'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
+import PythonProblems from '../Problems/Python/index.js'
 
 export default function Workspace() {
     const { problemId } = useParams()
+    const problem = PythonProblems[problemId]
     const flatProblems = Object.values(problemsList).flat()
-    const problem = flatProblems.find(p => p.id === problemId)
+    // const problem = flatProblems.find(p => p.id === problemId)
+    const [currentProblemIdx, setCurrentProblemIdx] = useState('hello-world')
+    const currentProblem = PythonProblems[currentProblemIdx]
 
     useEffect(() => {
         document.body.classList.add('hide-scrollbar');
@@ -19,9 +23,8 @@ export default function Workspace() {
 
     return (
         <Split className='split'>
-            <ProblemDescription />
-            <Playground />
+            <ProblemDescription problem={problem} />
+            <Playground problem={problem} />
         </Split>
-
     )
 }

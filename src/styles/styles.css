@@ -831,9 +831,9 @@ input[type="checkbox"]:checked+label::before {
     height: calc(100vh - 94px);
 }
 
-/* .problem-description-header-btn {
-    margin: 20px;
-} */
+.problem-description-title {
+    text-align: left;
+}
 
 .playgroundnav {
     display: flex;

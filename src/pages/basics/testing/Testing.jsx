@@ -5,7 +5,7 @@ import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
 import Box from "@mui/material/Box"
-import { problemsList } from './Problems/ProblemsList'
+import { problemsList } from './Problems/Python/ProblemsList'
 
 export default function Testing() {
     const navigate = useNavigate()
@@ -17,8 +17,7 @@ export default function Testing() {
 
     return (
         <div className='container'>
-            <h1>Practice the basics</h1>
-            <h2>Python</h2>
+            <h1>Practice the basics: Python</h1>
 
             <Paper elevation={9} >
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>

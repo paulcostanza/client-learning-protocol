@@ -64,15 +64,14 @@ const learningSections = [
     },
 ]
 
+const practiceSections = [
+    { label: "Python", href: "basics/testing" },
+]
+
 const aboutSections = [
     { label: "CLP", href: "/about/clp" },
     { label: "Me", href: "/about/me" },
 ]
-
-const basicsSections = [
-    { label: "Testing", href: "basics/testing" },
-]
-
 
 export default function NavBar() {
 
@@ -218,7 +217,7 @@ export default function NavBar() {
                                         }
                                     }}
                                 >
-                                    {basicsSections.map(section => (
+                                    {practiceSections.map(section => (
                                         <MenuItem key={section.label} onClick={handleCloseBasicsMenu}>
                                             <Link
                                                 to={section.href}

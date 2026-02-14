@@ -1,8 +1,9 @@
 import { AiFillLike, AiFillDislike } from 'react-icons/ai'
 import { BsCheck2Circle } from 'react-icons/bs'
 import { TiStarOutline } from 'react-icons/ti'
+import DOMPurify from 'dompurify'
 
-export default function ProblemDescription() {
+export default function ProblemDescription({ problem }) {
     return (
         <div >
 
@@ -18,7 +19,7 @@ export default function ProblemDescription() {
 
                 {/* Problem heading */}
                 <div>
-                    <div>1. Hello World</div>
+                    <h1 className='problem-description-title'>{problem.title}</h1>
                 </div>
 
                 {/* HEADER BAR - status, like, dislike, & save */}
@@ -42,35 +43,44 @@ export default function ProblemDescription() {
                 </div> */}
 
                 {/* Problem Statement(paragraphs) */}
-                <div className='problem-statements'>
-                    <p className=''>Print the phrase <code>Hello world!</code> to the console.</p>
-                </div>
+                <div
+                    className='problem-statements'
+                    dangerouslySetInnerHTML={{
+                        __html: DOMPurify.sanitize(problem.problemStatement)
+                    }}
+                />
 
                 {/* Examples */}
-                <div className='examples'>
-                    {/* Example #1 */}
-                    <div>
-                        <p className='font-medium'>Example #1: </p>
-                        <div className='example-card'>
-                            <pre>
-                                <strong className=''>Input: </strong> nums= [2, 7, 11, 15], target = 9{" "}
-                                <br />
-                                <strong>Output:</strong> [0, 1] <br />
-                                <strong>Explanation:</strong> Because nums[0] + nums[1] == 9, we return [0, 1]
-                            </pre>
+                {problem.example && (
+                    <div className='examples'>
+                        <div>
+                            {/* <p className='font-medium'>Example #1: </p> */}
+                            <div className='example-card'>
+                                <pre
+                                    dangerouslySetInnerHTML={{
+                                        __html: DOMPurify.sanitize(problem.example)
+                                    }}
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
+                )}
 
                 {/* Constraints */}
-                <div className='constraints'>
-                    <div className='text-sm font-medium'>Constraints:</div>
-                    <ul className='ml-5 list-disc'>
-                        <li className='mt-2'>No <code>return</code> statement</li>
-                        <li className='mt-2'>No unnecessary spaces or extra characters</li>
-                        <li className='mt-2'>Watch for capital letter(s)</li>
-                    </ul>
-                </div>
+                {problem.constraints && (
+                    <>
+                        <hr />
+                        <div className='constraints'>
+                            <div className='text-sm font-medium'>Constraints:</div>
+                            <ul
+                                className='ml-5 list-disc'
+                                dangerouslySetInnerHTML={{
+                                    __html: DOMPurify.sanitize(problem.constraints)
+                                }}
+                            />
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     )
