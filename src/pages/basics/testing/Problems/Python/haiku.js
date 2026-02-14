@@ -36,20 +36,13 @@ const evaluateCode = (code) => {
                         .trim();
 
                 const expected = normalize(haiku.example);
-                const actual = normalize(outputBuffer);
-
-                if (actual === expected) {
-                    resolve("✅ Test passed!\n" + outputBuffer);
-                } else {
-                    resolve(
-                        "❌ Test failed!\nExpected:\n" +
-                        expected +
-                        "\nGot:\n" +
-                        actual
-                    );
-                }
+                const isCorrect = normalize(outputBuffer) === normalize(expected);
+                const output = isCorrect
+                    ? "✅ Test passed!\n" + outputBuffer
+                    : "❌ Test failed!\nExpected:\n" + expected + "\nGot:\n" + outputBuffer;
+                resolve({ output, correct: isCorrect });
             })
-            .catch(err => resolve(err.toString()));
+            .catch(err => resolve({ output: err.toString(), correct: false }));
     });
 };
 
@@ -66,5 +59,6 @@ Red eyes never blink.`,
     <li className='mt-2'>Watch for capital letter(s)</li>
     <li className='mt-2'>Watch for double quotes</li>`,
     starterCode: starterCode,
-    evaluateCode: evaluateCode
+    evaluateCode: evaluateCode,
+    order: 2
 }

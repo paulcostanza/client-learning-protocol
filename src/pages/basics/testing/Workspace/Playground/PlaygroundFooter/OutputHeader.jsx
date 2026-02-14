@@ -1,9 +1,17 @@
-export default function OutputHeader({ onRun, onSubmit }) {
-    // const handleRun = () => {
-    //     console.log("Running!")
-    //     // runs whatever the user wrote
-    //     // prints out into console
-    // }
+import { useState, useEffect } from 'react'
+
+export default function OutputHeader({
+    onRun,
+    onSubmit,
+    onNextProblem,
+    correct
+}) {
+    const [hasPassed, setHasPassed] = useState(true)
+
+    // Only show next once submitted and correct
+    // useEffect(() => {
+    //     if (correct) setHasPassed(true)
+    // }, [correct])
 
     return (
         < div className='testcaseheader-btns' >
@@ -24,13 +32,22 @@ export default function OutputHeader({ onRun, onSubmit }) {
             </div>
 
             <div className='testcaseheader-btns-right'>
-                <button className='nextproblem-btn'>
-                    Next Problem
-                </button>
+                {hasPassed && (
+                    <>
+                        <button
+                            className='nextproblem-btn'
+                            onClick={onNextProblem}
 
-                <button className='nexttodoproblem-btn'>
-                    Next to do problem
-                </button>
+                        >
+                            Next Problem
+                        </button>
+
+                        {/* Once I add reviewing, this is the next one in 'Ready!' */}
+                        {/* <button className='nexttodoproblem-btn'>
+                            Next to do problem
+                        </button> */}
+                    </>
+                )}
             </div>
         </div >
     )

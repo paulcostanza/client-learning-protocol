@@ -71,6 +71,8 @@ export default function Testing() {
                 </Box>
             </Paper>
 
+            <hr />
+
             <Paper elevation={9} >
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>
                     <Table

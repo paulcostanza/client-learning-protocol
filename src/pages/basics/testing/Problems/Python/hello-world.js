@@ -31,13 +31,13 @@ const evaluateCode = (code) => {
         Sk.misceval.asyncToPromise(() => Sk.importMainWithBody("__main__", false, code, true))
             .then(() => {
                 const expected = "Hello world!\n";
-                if (outputBuffer.trim() === expected.trim()) {
-                    resolve("✅ Test passed!\n" + outputBuffer);
-                } else {
-                    resolve("❌ Test failed!\nExpected:\n" + expected + "\nGot:\n" + outputBuffer);
-                }
+                const isCorrect = outputBuffer.trim() === expected.trim();
+                const output = isCorrect
+                    ? "✅ Test passed!\n" + outputBuffer
+                    : "❌ Test failed!\nExpected:\n" + expected + "\nGot:\n" + outputBuffer;
+                resolve({ output, correct: isCorrect });
             })
-            .catch(err => resolve(err.toString()));
+            .catch(err => resolve({ output: err.toString(), correct: false }));
     });
 };
 
@@ -49,5 +49,6 @@ export const helloWorld = {
     <li className='mt-2'>No unnecessary spaces or extra characters</li>
     <li className='mt-2'>Watch for capital letter(s)</li>`,
     starterCode: starterCode,
-    evaluateCode: evaluateCode
+    evaluateCode: evaluateCode,
+    order: 1
 }

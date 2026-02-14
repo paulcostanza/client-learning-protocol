@@ -8,9 +8,10 @@ import PlaygroundNav from './PlaygroundNav'
 import OutputHeader from './PlaygroundFooter/OutputHeader'
 import Output from './PlaygroundFooter/Output'
 
-export default function Playground({ problem }) {
+export default function Playground({ problem, nextProblem }) {
     const [code, setCode] = useState(problem.starterCode)
     const [output, setOutput] = useState('')
+    const [correct, setCorrect] = useState(false)
 
     const runCode = () => {
         setOutput("");
@@ -34,8 +35,18 @@ export default function Playground({ problem }) {
     }
 
     const handleSubmit = async () => {
-        setOutput(await problem.evaluateCode(code))
+        const result = await problem.evaluateCode(code);
+        setOutput(result.output);
+        setCorrect(result.correct);
+        console.log('output foo: ', result.output, 'correct:', result.correct);
     };
+
+    // when user hits next problem after submit it correct
+    useEffect(() => {
+        setCode(problem.starterCode)
+        setOutput('')
+        setCorrect(false)
+    }, [problem])
 
     return (
         <div>
@@ -52,7 +63,12 @@ export default function Playground({ problem }) {
                 </div>
 
                 <div>
-                    <OutputHeader onRun={runCode} onSubmit={handleSubmit} />
+                    <OutputHeader
+                        onRun={runCode}
+                        onSubmit={handleSubmit}
+                        onNextProblem={nextProblem}
+                        correct={correct}
+                    />
                     <Output output={output} />
                 </div>
             </Split>
