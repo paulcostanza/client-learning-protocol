@@ -5,7 +5,7 @@ import TableHead from "@mui/material/TableHead"
 import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
 import Box from "@mui/material/Box"
-import { problems } from './Problems/problems'
+import { problemsList } from './Problems/ProblemsList'
 
 export default function Testing() {
     const navigate = useNavigate()
@@ -17,7 +17,8 @@ export default function Testing() {
 
     return (
         <div className='container'>
-            <h1>Learn the basics</h1>
+            <h1>Practice the basics</h1>
+            <h2>Python</h2>
 
             <Paper elevation={9} >
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>
@@ -43,7 +44,7 @@ export default function Testing() {
                             </TableRow>
                         </TableHead>
                         <tbody>
-                            {problems.helloWorld
+                            {problemsList.helloWorld
                                 .map(problem => {
                                     // const nextReviewTimestamp = getNextReview(q.quizKey, q.id)
                                     // const review = getHumanReadableNextReview(nextReviewTimestamp)
@@ -95,7 +96,7 @@ export default function Testing() {
                             </TableRow>
                         </TableHead>
                         <tbody>
-                            {problems.calculator
+                            {problemsList.calculator
                                 .map((problem, idx) => {
 
                                     return (

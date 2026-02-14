@@ -1,4 +1,4 @@
-export const problems = {
+export const problemsList = {
     helloWorld: [
         { id: "hello-world", title: "Hello World!", status: '', review: '', order: 1 },
         { id: "haiku", title: "Haiku", status: '', review: '', order: 2 },

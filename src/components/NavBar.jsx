@@ -203,7 +203,7 @@ export default function NavBar() {
                                     onClick={handleOpenBasicsMenu}
                                     to="/basics"
                                 >
-                                    BASICS
+                                    PRACTICE
                                 </Button>
                                 <Menu
                                     anchorEl={anchorElBasics}

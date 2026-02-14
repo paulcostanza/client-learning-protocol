@@ -1,13 +1,13 @@
 import Split from 'react-split'
 import { useParams } from 'react-router-dom'
-import { problems } from '../Problems/problems'
+import { problemsList } from '../Problems/ProblemsList'
 import ProblemDescription from './ProblemDescription/ProblemDescription'
 import Playground from './Playground/Playground'
 import { useEffect } from 'react'
 
 export default function Workspace() {
     const { problemId } = useParams()
-    const flatProblems = Object.values(problems).flat()
+    const flatProblems = Object.values(problemsList).flat()
     const problem = flatProblems.find(p => p.id === problemId)
 
     useEffect(() => {

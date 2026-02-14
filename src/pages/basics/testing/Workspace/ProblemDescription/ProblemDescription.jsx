@@ -7,8 +7,11 @@ export default function ProblemDescription() {
         <div >
 
             {/* Tabs */}
-            <div className={{ margin: '20px' }}>
-                Description
+            <div className='problem-description-header'>
+                <button className='problem-description-header-btn'>Description</button>
+                <button className='problem-description-header-btn'>Study Guide</button>
+                <button className='problem-description-header-btn'>Comments</button>
+                <button className='problem-description-header-btn'>Playlist</button>
             </div>
 
             <div style={{ margin: '20px' }}>
@@ -17,7 +20,10 @@ export default function ProblemDescription() {
                 <div>
                     <div>1. Hello World</div>
                 </div>
-                <div className='header-bar'>
+
+                {/* HEADER BAR - status, like, dislike, & save */}
+                {/* Add after database connection */}
+                {/* <div className='header-bar'>
 
                     <div className=''>
                         <BsCheck2Circle />
@@ -33,19 +39,15 @@ export default function ProblemDescription() {
                     <div className='clickable'>
                         <TiStarOutline />
                     </div>
-                </div>
+                </div> */}
 
                 {/* Problem Statement(paragraphs) */}
-                <div className=''>
-                    <p class=''>Given an array of integers <code>nums</code> and an integer <code>target</code>, return <em>indices of the two numbers such that they add up to</em> <code>target</code>.</p>
-
-                    <p class=''>You may assume that each input would have < strong>exactly one solution</strong>, and you may not use the same element twice.</p>
-
-                    <p class=''>You can return the answer in any order.</p>
+                <div className='problem-statements'>
+                    <p className=''>Print the phrase <code>Hello world!</code> to the console.</p>
                 </div>
 
                 {/* Examples */}
-                <div className='mt-4'>
+                <div className='examples'>
                     {/* Example #1 */}
                     <div>
                         <p className='font-medium'>Example #1: </p>
@@ -61,12 +63,12 @@ export default function ProblemDescription() {
                 </div>
 
                 {/* Constraints */}
-                <div className='my-5'>
+                <div className='constraints'>
                     <div className='text-sm font-medium'>Constraints:</div>
                     <ul className='ml-5 list-disc'>
-                        <li class='mt-2'><code>Item #1</code> has stuff</li>
-                        <li class='mt-2'><code>Item #2</code></li>
-                        <li class='mt-2'><code>Item #3</code></li>
+                        <li className='mt-2'>No <code>return</code> statement</li>
+                        <li className='mt-2'>No unnecessary spaces or extra characters</li>
+                        <li className='mt-2'>Watch for capital letter(s)</li>
                     </ul>
                 </div>
             </div>
