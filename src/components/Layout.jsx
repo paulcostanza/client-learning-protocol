@@ -5,7 +5,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 export default function Layout() {
     const location = useLocation()
-    const hideFooter = location.pathname.startsWith('/basics/testing/') // for Workspace
+    const hideFooter = location.pathname.startsWith('/practice/python/') // for Workspace
     return (
         <>
             <NavBar />

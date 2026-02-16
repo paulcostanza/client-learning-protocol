@@ -6,10 +6,8 @@ export const problemsList = {
         { id: "famous-quotes", title: "Famous quotes", status: '', review: '', order: 4 },
     ],
     calculator: [
-        { id: "exponent-expressions", title: "Exponent Expressions", status: '', review: '', order: 1 },
-        { id: "compounding-interest", title: "Compounding Interest", status: '', review: '', order: 2 },
+        { id: "exponent-expression", title: "Exponent Expression", status: '', review: '', order: 1 },
         { id: "simple-remainder", title: "Simple Remainder", status: '', review: '', order: 3 },
-        { id: "money-left", title: "Money Left", status: '', review: '', order: 4 },
-        { id: "simple-floor-division", title: "Simple floor Division", status: '', review: '', order: 5 },
+        { id: "no-remainder", title: "No Remainder", status: '', review: '', order: 5 },
     ]
 }

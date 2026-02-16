@@ -1,8 +1,8 @@
 import Split from 'react-split'
 import { useParams } from 'react-router-dom'
-import { problemsList } from '../Problems/Python/ProblemsList'
-import ProblemDescription from './ProblemDescription/ProblemDescription'
-import Playground from './Playground/Playground'
+import { problemsList } from '../Problems/Python/ProblemsList.jsx'
+import ProblemDescription from './ProblemDescription/ProblemDescription.jsx'
+import Playground from './Playground/Playground.jsx'
 import { useState, useEffect } from 'react'
 import PythonProblems from '../Problems/Python/index.js'
 import { useNavigate } from 'react-router-dom'
@@ -23,7 +23,7 @@ export default function Workspace() {
     const nextProblem = () => {
         if (currentIdx < problemIds.length - 1) {
             const nextId = problemIds[currentIdx + 1];
-            navigate(`/basics/testing/${nextId}`);
+            navigate(`/practice/python/${nextId}`);
         } else {
             alert('You have reached the end of the line, nerd! More problems to come soon...')
         }

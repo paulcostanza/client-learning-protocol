@@ -16,7 +16,7 @@ import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 
-const pages = ['Learning', 'Basics', 'Quiz', 'About'] // Challenges, games, blog...when ever I get to it
+const pages = ['Learning', 'Practice', 'Quiz', 'About'] // Challenges, games, blog...when ever I get to it
 const settings = ['Login - Coming March 2026']
 
 const learningSections = [
@@ -65,7 +65,7 @@ const learningSections = [
 ]
 
 const practiceSections = [
-    { label: "Python", href: "basics/testing" },
+    { label: "Python", href: "practice/python" },
 ]
 
 const aboutSections = [
@@ -79,7 +79,7 @@ export default function NavBar() {
     const [anchorElUser, setAnchorElUser] = useState(null)
     const [anchorElLearning, setAnchorElLearning] = useState(null)
     const [anchorElAbout, setAnchorElAbout] = useState(null)
-    const [anchorElBasics, setAnchorElBasics] = useState(null)
+    const [anchorElPractice, setAnchorElPractice] = useState(null)
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget)
@@ -111,12 +111,12 @@ export default function NavBar() {
         setAnchorElAbout(null)
     }
 
-    const handleOpenBasicsMenu = (event) => {
-        setAnchorElBasics(event.currentTarget)
+    const handleOpenPracticeMenu = (event) => {
+        setAnchorElPractice(event.currentTarget)
     }
 
-    const handleCloseBasicsMenu = (event) => {
-        setAnchorElBasics(null)
+    const handleClosePracticeMenu = (event) => {
+        setAnchorElPractice(null)
     }
 
     const [activeLink, setActiveLink] = useState('')
@@ -199,15 +199,15 @@ export default function NavBar() {
                             <Box>
                                 <Button
                                     sx={{ my: 2, color: 'white' }}
-                                    onClick={handleOpenBasicsMenu}
-                                    to="/basics"
+                                    onClick={handleOpenPracticeMenu}
+                                    to="/practice"
                                 >
                                     PRACTICE
                                 </Button>
                                 <Menu
-                                    anchorEl={anchorElBasics}
-                                    open={Boolean(anchorElBasics)}
-                                    onClose={handleCloseBasicsMenu}
+                                    anchorEl={anchorElPractice}
+                                    open={Boolean(anchorElPractice)}
+                                    onClose={handleClosePracticeMenu}
                                     PaperProps={{
                                         sx: {
                                             backgroundColor: "#23272a",
@@ -218,7 +218,7 @@ export default function NavBar() {
                                     }}
                                 >
                                     {practiceSections.map(section => (
-                                        <MenuItem key={section.label} onClick={handleCloseBasicsMenu}>
+                                        <MenuItem key={section.label} onClick={handleClosePracticeMenu}>
                                             <Link
                                                 to={section.href}
                                                 style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}

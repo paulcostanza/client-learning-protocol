@@ -19,9 +19,10 @@ import AboutMe from './pages/about/me/AboutMe'
 import NoPage from './pages/NoPage'
 import C from './pages/C/C'
 
-import Basics from './pages/basics/Basics'
-import BasicsTesting from './pages/basics/testing/Testing'
-import Workspace from './pages/basics/testing/Workspace/Workspace'
+// Practice
+import Practice from './pages/Practice/Practice'
+import PracticeTesting from './pages/Practice/python/Testing'
+import Workspace from './pages/Practice/python/Workspace/Workspace'
 
 // import CSharp from './pages/cSharp/CSharp'
 import CSharpLanding from './pages/cSharp/CSharpLanding'
@@ -172,9 +173,9 @@ function App() {
             <Route path='/about/clp' element={<AboutCLP />} />
             <Route path='/about/me' element={<AboutMe />} />
 
-            <Route path='/basics' element={<Basics />} />
-            <Route path='/basics/testing' element={<BasicsTesting />} />
-            <Route path='/basics/testing/:problemId' element={<Workspace />} />
+            <Route path='/practice' element={<Practice />} />
+            <Route path='/Practice/python' element={<PracticeTesting />} />
+            <Route path='/Practice/python/:problemId' element={<Workspace />} />
 
             <Route path='/lowlevel' element={<LowLevelLanding />} />
             <Route path='/lowlevel' element={<LowLevelSectionLayout />}>

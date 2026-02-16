@@ -52,7 +52,7 @@ export default function Playground({ problem, nextProblem }) {
         <div>
             <PlaygroundNav />
             <Split className='testing-space' sizes={[63, 37]} direction='vertical'>
-                <div>
+                <div className='split-child'>
                     <CodeMirror
                         value={code}
                         theme={vscodeDark}
@@ -62,7 +62,7 @@ export default function Playground({ problem, nextProblem }) {
                     />
                 </div>
 
-                <div>
+                <div className='split-child'>
                     <OutputHeader
                         onRun={runCode}
                         onSubmit={handleSubmit}

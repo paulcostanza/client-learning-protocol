@@ -829,6 +829,13 @@ input[type="checkbox"]:checked+label::before {
 
 .testing-space {
     height: calc(100vh - 94px);
+    display: flex;
+    flex-direction: column;
+}
+
+.split-child {
+    overflow: auto;
+    position: relative;
 }
 
 .problem-description-title {
@@ -859,6 +866,10 @@ input[type="checkbox"]:checked+label::before {
 .testcaseheader-btns {
     display: flex;
     justify-content: space-between;
+}
+
+.output {
+    margin: 10px;
 }
 
 /* .output {

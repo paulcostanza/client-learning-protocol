@@ -1,12 +1,9 @@
-- Change all basics to Practice:
-    - nav bar
-    - inside pages
-    - url bar
-- Change all testings to python
-- add a helperfile for evaluating code (evaluatePythonCodePrintToConsole)
+## Almost done!
 
 - add playlist
 - add saving to localhost
+- add console printout when testing functions
+
 - add mobile params
     - test how small the screen can get to see for comfort
     - test minimum of sizes with split(s)

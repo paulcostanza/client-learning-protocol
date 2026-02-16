@@ -11,13 +11,15 @@ export default function Testing() {
     const navigate = useNavigate()
 
     const handleRowClick = (problem) => {
-        console.log(`You have selected problem: ${problem.title}`)
-        navigate(`/basics/testing/${problem.id}`)
+        navigate(`/practice/python/${problem.id}`)
     }
 
     return (
         <div className='container'>
             <h1>Practice the basics: Python</h1>
+
+            {/* Would like to turn each table into a dropdown as well. Can then impliment this nav bar: */}
+            {/* Colapse all | Expand all | Jump to ToDo | Jump to furthest */}
 
             <Paper elevation={9} >
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>
@@ -32,7 +34,7 @@ export default function Testing() {
                         <TableHead>
                             <TableRow>
                                 <TableCell style={{ textSize: '20px' }}>
-                                    Hello World
+                                    Printing 101
                                 </TableCell>
                                 <TableCell style={{ textAlign: 'center' }}>
                                     Status

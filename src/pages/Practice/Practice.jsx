@@ -1,8 +1,8 @@
-export default function Basics() {
+export default function Practice() {
     return (
         <>
             <main>
-                <h1>Basics main page</h1>
+                <h1>Practice main page</h1>
             </main>
         </>
     )
