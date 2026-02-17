@@ -18,6 +18,8 @@ export default function Testing() {
         <div className='container'>
             <h1>Practice the basics: Python</h1>
 
+            <p><em>Note:</em> Not all save functionalities for spaced repetition are working right now. But hey, you get what you paid for!</p>
+
             {/* Would like to turn each table into a dropdown as well. Can then impliment this nav bar: */}
             {/* Colapse all | Expand all | Jump to ToDo | Jump to furthest */}
 

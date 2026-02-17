@@ -8,12 +8,13 @@ export default function ProblemDescription({ problem }) {
         <div >
 
             {/* Tabs */}
+            {/*             
             <div className='problem-description-header'>
                 <button className='problem-description-header-btn'>Description</button>
                 <button className='problem-description-header-btn'>Study Guide</button>
                 <button className='problem-description-header-btn'>Comments</button>
                 <button className='problem-description-header-btn'>Playlist</button>
-            </div>
+            </div> */}
 
             <div style={{ margin: '20px' }}>
 

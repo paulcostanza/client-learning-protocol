@@ -5,11 +5,12 @@ export default function Playground() {
         <div className='playgroundnav'>
 
             {/* Files */}
-            <div className='playgroundnav-files'>
+            {/* <div className='playgroundnav-files'>
                 <button className='playgroundnav-file'>main.py</button>
                 <button className='playgroundnav-file'>test.py</button>
-            </div>
+            </div> */}
 
+            <div></div>
             {/* Butons */}
             <div className='playgroundnav-btns'>
                 {/* Settings */}

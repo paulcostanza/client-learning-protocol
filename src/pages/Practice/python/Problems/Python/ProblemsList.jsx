@@ -7,7 +7,7 @@ export const problemsList = {
     ],
     calculator: [
         { id: "exponent-expression", title: "Exponent Expression", status: '', review: '', order: 1 },
-        { id: "simple-remainder", title: "Simple Remainder", status: '', review: '', order: 3 },
-        { id: "no-remainder", title: "No Remainder", status: '', review: '', order: 5 },
+        { id: "simple-remainder", title: "Simple Remainder", status: '', review: '', order: 2 },
+        { id: "no-remainder", title: "No Remainder", status: '', review: '', order: 3 },
     ]
 }
