@@ -1,6 +1,4 @@
 import Home from './pages/home/Home'
-import Python from './pages/python/Python'
-// import Java from './pages/java/Java' <- delete this page
 
 // Java
 import JavaLanding from './pages/learning/java/setup/JavaLanding'
@@ -24,7 +22,7 @@ import Practice from './pages/Practice/Practice'
 import PracticeTesting from './pages/Practice/python/Testing'
 import Workspace from './pages/Practice/python/Workspace/Workspace'
 
-// import CSharp from './pages/cSharp/CSharp'
+// C#
 import CSharpLanding from './pages/cSharp/CSharpLanding'
 import CSharpSectionLayout from './pages/cSharp/CSharpSectionLayout'
 import ControlFlow from './pages/cSharp/ControlFlow'
@@ -37,7 +35,7 @@ import ObjectOrientedProgramming from './pages/cSharp/ObjectOrientedProgramming'
 import Layout from './components/Layout'
 import Redis from './pages/redis/Redis'
 
-// import CyberSecurity from './pages/cybersecurity/CyberSecurity'
+// CyberSecurity
 import CyberSecurityLanding from './pages/cybersecurity/CyberSecurityLanding'
 import CyberSecurityLayout from './pages/cybersecurity/CyberSecurityLayout'
 import Cybersecurity101 from './pages/cybersecurity/CyberSecurity101'
@@ -45,7 +43,7 @@ import TerminalIntro from './pages/cybersecurity/TerminalIntro'
 import FileSystem from './pages/cybersecurity/FileSystem'
 
 
-// import LowLevel from './pages/low-level/LowLevel' <- delete this page
+// LowLevel
 import LowLevelLanding from './pages/low-level/LowLevelLanding'
 import LowLevelSectionLayout from './pages/low-level/LowLevelSectionLayout'
 import VariableSize from './pages/low-level/VariableSize'
@@ -65,6 +63,16 @@ import HTMLSemantic from './pages/learning/html/SemanticHTML'
 import HTMLForms from './pages/learning/html/Forms'
 import HTMLTables from './pages/learning/html/Tables'
 import HTMLNotYourEverydayElements from './pages/learning/html/NotYourEverydayElements'
+
+// Python
+import PythonLanding from './pages/learning/python/setup/PythonLanding'
+import PythonSectionLayout from './pages/learning/python/setup/PythonSectionLayout'
+import PythonComputing from './pages/learning/python/Computing'
+import PythonDictionaries from './pages/learning/python/Dictionaries'
+import PythonFunctions from './pages/learning/python/Functions'
+import PythonLists from './pages/learning/python/Lists'
+import PythonScope from './pages/learning/python/Scope'
+import PythonTestingAndDebugging from './pages/learning/python/TestingAndDebugging'
 
 // C++
 import CPlusPlusLanding from './pages/learning/cPlusPlus/setup/CPlusPlusLanding'
@@ -137,8 +145,6 @@ function App() {
               <Route path='file-system' element={<FileSystem />} />
             </Route>
 
-            <Route path='/python' element={<Python />} />
-
             <Route path='/java' element={<JavaLanding />} />
             <Route path='/java' element={<JavaSectionLayout />}>
               <Route path='intro' element={<JavaIntro />} />
@@ -194,6 +200,16 @@ function App() {
               <Route path='forms' element={<HTMLForms />} />
               <Route path='tables' element={<HTMLTables />} />
               <Route path='not-your-everyday-elements' element={<HTMLNotYourEverydayElements />} />
+            </Route>
+
+            <Route path='/python' element={<PythonLanding />} />
+            <Route path='/python' element={<PythonSectionLayout />}>
+              <Route path='functions' element={<PythonFunctions />} />
+              <Route path='scope' element={<PythonScope />} />
+              <Route path='testing-and-debugging' element={<PythonTestingAndDebugging />} />
+              <Route path='computing' element={<PythonComputing />} />
+              <Route path='lists' element={<PythonLists />} />
+              <Route path='dictionaries' element={<PythonDictionaries />} />
             </Route>
 
             <Route path='/cpp' element={<CPlusPlusLanding />} />
