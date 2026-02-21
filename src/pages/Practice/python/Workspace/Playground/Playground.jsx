@@ -1,3 +1,4 @@
+import { saveSectionQuestionResult } from '../../../../../Helpers/localStorageHelper'
 import { useState, useEffect } from 'react'
 import Sk from 'skulpt'
 import CodeMirror from '@uiw/react-codemirror'
@@ -8,9 +9,8 @@ import PlaygroundNav from './PlaygroundNav'
 import OutputHeader from './PlaygroundFooter/OutputHeader'
 import Output from './PlaygroundFooter/Output'
 
-export default function Playground({ problem, nextProblem }) {
+export default function Playground({ problem, nextProblem, output, setOutput }) {
     const [code, setCode] = useState(problem.starterCode)
-    const [output, setOutput] = useState('')
     const [correct, setCorrect] = useState(false)
     const [mainCode, setMainCode] = useState(problem.starterCode)
     const [testCode, setTestCode] = useState(problem.testCode || '# no test file needed for this challenge')
@@ -49,8 +49,6 @@ export default function Playground({ problem, nextProblem }) {
     useEffect(() => {
         setMainCode(problem.starterCode)
         setTestCode(problem.testCode || '# no test file needed for this challenge')
-        // setOutput('')
-        // setCorrect(false)
     }, [problem])
 
     const handleSwitchFile = (newCode) => {
@@ -83,11 +81,13 @@ export default function Playground({ problem, nextProblem }) {
             const isCorrect = !outputBuffer.includes("F A I L") && !outputBuffer.includes("ERROR")
             setCorrect(isCorrect)
             setOutput(outputBuffer)
+            saveSectionQuestionResult('python-basics', problem.id, isCorrect ? 'correct' : 'incorrect')
             window.alert(isCorrect ? "Congratulations! All tests passed." : "Some tests failed. Try again!")
             return isCorrect
         } catch (err) {
             setOutput(err.toString())
             setCorrect(false)
+            saveSectionQuestionResult('python-basics', problem.id, 'incorrect')
             window.alert("Submission failed due to an error.")
             return false
         }

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Table from '@mui/joy/Table'
 import Paper from "@mui/material/Paper"
@@ -6,9 +7,32 @@ import TableRow from "@mui/material/TableRow"
 import TableCell from "@mui/material/TableCell"
 import Box from "@mui/material/Box"
 import { problemsList } from './Problems/Python/ProblemsList'
+import {
+    getQuestionStatus,
+    getNextReview,
+    getHumanReadableNextReview,
+} from '../../../Helpers/localStorageHelper'
 
 export default function Testing() {
     const navigate = useNavigate()
+    const quizKey = 'python-basics'
+
+    const [problemStatuses, setProblemStatuses] = useState({})
+
+    useEffect(() => {
+        const statuses = {}
+        for (const section of Object.keys(problemsList)) {
+            for (const problem of problemsList[section]) {
+                const status = getQuestionStatus(quizKey, problem.id)
+                const nextReview = getNextReview(quizKey, problem.id)
+                statuses[problem.id] = {
+                    status,
+                    review: getHumanReadableNextReview(nextReview)
+                }
+            }
+        }
+        setProblemStatuses(statuses)
+    }, [])
 
     const handleRowClick = (problem) => {
         navigate(`/practice/python/${problem.id}`)
@@ -17,8 +41,6 @@ export default function Testing() {
     return (
         <div className='container'>
             <h1>Practice the basics: Python</h1>
-
-            <p><em>Note:</em> Not all save functionalities for spaced repetition are working right now. But hey, you get what you paid for!</p>
 
             {/* Would like to turn each table into a dropdown as well. Can then impliment this nav bar: */}
             {/* Colapse all | Expand all | Jump to ToDo | Jump to furthest */}
@@ -49,9 +71,8 @@ export default function Testing() {
                         <tbody>
                             {problemsList.helloWorld
                                 .map(problem => {
-                                    // const nextReviewTimestamp = getNextReview(q.quizKey, q.id)
-                                    // const review = getHumanReadableNextReview(nextReviewTimestamp)
-                                    // const status = review === 'Ready!' ? 'ready' : getQuestionStatus(q.quizKey, q.id)
+                                    const status = problemStatuses[problem.id]?.status
+                                    const review = problemStatuses[problem.id]?.review
 
                                     return (
                                         <tr
@@ -61,12 +82,11 @@ export default function Testing() {
                                         >
                                             <td>{problem.title}</td>
                                             <td align="center">
-                                                {problem.status}
-                                                {/* {status === 'correct' && <span>✔️</span>}
+                                                {status === 'correct' && <span>✔️</span>}
                                                 {status === 'incorrect' && <span>❌</span>}
-                                                {status === 'ready' && <span>❓</span>} */}
+                                                {status === 'ready' && <span>❓</span>}
                                             </td>
-                                            <td align="center">{problem.review}</td>
+                                            <td align="center">{review}</td>
                                         </tr>
                                     )
                                 })}
@@ -102,7 +122,9 @@ export default function Testing() {
                         </TableHead>
                         <tbody>
                             {problemsList.calculator
-                                .map((problem, idx) => {
+                                .map((problem) => {
+                                    const status = problemStatuses[problem.id]?.status
+                                    const review = problemStatuses[problem.id]?.review
 
                                     return (
                                         <tr
@@ -112,12 +134,11 @@ export default function Testing() {
                                         >
                                             <td>{problem.title}</td>
                                             <td align="center">
-                                                {problem.status}
-                                                {/* {status === 'correct' && <span>✔️</span>}
+                                                {status === 'correct' && <span>✔️</span>}
                                                 {status === 'incorrect' && <span>❌</span>}
-                                                {status === 'ready' && <span>❓</span>} */}
+                                                {status === 'ready' && <span>❓</span>}
                                             </td>
-                                            <td align="center">{problem.review}</td>
+                                            <td align="center">{review}</td>
                                         </tr>
                                     )
                                 })}

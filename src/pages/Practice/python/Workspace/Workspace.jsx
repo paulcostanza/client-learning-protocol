@@ -1,6 +1,5 @@
 import Split from 'react-split'
 import { useParams } from 'react-router-dom'
-import { problemsList } from '../Problems/Python/ProblemsList.jsx'
 import ProblemDescription from './ProblemDescription/ProblemDescription.jsx'
 import Playground from './Playground/Playground.jsx'
 import { useState, useEffect } from 'react'
@@ -12,6 +11,7 @@ export default function Workspace() {
     const problem = PythonProblems[problemId]
     const problemIds = Object.keys(PythonProblems);
     const currentIdx = problemIds.indexOf(problemId);
+    const [output, setOutput] = useState('')
     const navigate = useNavigate()
 
 
@@ -21,6 +21,7 @@ export default function Workspace() {
     }, []);
 
     const nextProblem = () => {
+        setOutput('')
         if (currentIdx < problemIds.length - 1) {
             const nextId = problemIds[currentIdx + 1];
             navigate(`/practice/python/${nextId}`);
@@ -34,7 +35,12 @@ export default function Workspace() {
     return (
         <Split className='split'>
             <ProblemDescription problem={problem} />
-            <Playground problem={problem} nextProblem={nextProblem} />
+            <Playground
+                problem={problem}
+                nextProblem={nextProblem}
+                output={output}
+                setOutput={setOutput}
+            />
         </Split>
     )
 }
