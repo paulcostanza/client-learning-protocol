@@ -36,7 +36,7 @@ export default function Testing() {
                         <TableHead>
                             <TableRow>
                                 <TableCell style={{ textSize: '20px' }}>
-                                    Printing 101
+                                    Strings
                                 </TableCell>
                                 <TableCell style={{ textAlign: 'center' }}>
                                     Status

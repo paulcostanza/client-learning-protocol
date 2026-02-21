@@ -1,3 +1,4 @@
+// Lol, I have no idea why I have this file
 export default function Practice() {
     return (
         <>

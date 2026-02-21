@@ -1,27 +1,45 @@
-import { evaluatePythonCodeForConsole } from '../../../../../Helpers/EvaluateCode'
-
 const starterCode = `def helloWorld(): 
   # Write your code here
-
-
-
-
   
-helloWorld()
+  
+  
+  
+    
 `
 
-const example = `Hello world!`
+const testCode = `def run_tests():
+  expected = "Hello world!"
 
-const evaluateCode = evaluatePythonCodeForConsole(example)
+  try:
+    userAnswer = helloWorld()
+
+    if userAnswer == expected:
+      print(userAnswer)
+      print(".")
+      print(".")
+      print(".")
+      print("********** P A S S **********")
+    else: 
+      print(userAnswer + " <- what you wrote")
+      print(expected + " <- what we wanted")
+      print(".")
+      print(".")
+      print(".")
+      print("********** F A I L **********")
+  except Exception as e:
+    print(f"Test: ERROR {e}")
+    print("********** F A I L **********")
+
+run_tests()`
 
 export const helloWorld = {
-    id: "hello-world",
-    title: "1. Hello World",
-    problemStatement: `<p>Print the phrase <code>Hello world!</code> to the console.</p>`,
-    constraints: `<li className='mt-2'>No <code>return</code> statement</li>
+  id: "hello-world",
+  title: "1. Hello World",
+  problemStatement: `<p>Return the phrase <code>Hello world!</code></p>`,
+  constraints: `<li className='mt-2'>No <code>print</code> statement</li>
     <li className='mt-2'>No unnecessary spaces or extra characters</li>
     <li className='mt-2'>Watch for capital letter(s)</li>`,
-    starterCode: starterCode,
-    evaluateCode: evaluateCode,
-    order: 1
+  starterCode,
+  testCode,
+  order: 1
 }

@@ -31,8 +31,8 @@ export function evaluatePythonCodeForConsole(expectedOutput) {
                     const expected = normalize(expectedOutput);
                     const isCorrect = normalize(outputBuffer) === expected;
                     const output = isCorrect
-                        ? "✅ Test passed!\n" + outputBuffer
-                        : "❌ Test failed!\nExpected:\n" + expected + "\nGot:\n" + outputBuffer;
+                        ? outputBuffer + "\n*********** PASS ***********"
+                        : "> Expected:\n" + expected + "\n> Got:\n" + outputBuffer + "\n*********** FAIL ***********";
                     resolve({ output, correct: isCorrect });
                 })
                 .catch(err => resolve({ output: err.toString(), correct: false }));
