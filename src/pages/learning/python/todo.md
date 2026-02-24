@@ -14,6 +14,10 @@
 - Input and output
 - Comments
 
+## 2.5 Math 101
+
+- Basics Maths
+
 ## 3. Control Flow
 
 - Conditional statements (if, elif, else)
@@ -25,6 +29,8 @@
 - Defining and calling functions
 - Function parameters and return values
 - Default and keyword arguments
+
+*Maybe another function section?* (I don't even know this shit for python yet)
 - Variable-length arguments (*args, **kwargs)
 - Lambda functions
 - Recursion

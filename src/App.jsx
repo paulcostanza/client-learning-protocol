@@ -67,9 +67,12 @@ import HTMLNotYourEverydayElements from './pages/learning/html/NotYourEverydayEl
 // Python
 import PythonLanding from './pages/learning/python/setup/PythonLanding'
 import PythonSectionLayout from './pages/learning/python/setup/PythonSectionLayout'
+import PythonBasics from './pages/learning/python/Basics'
 import PythonComputing from './pages/learning/python/Computing'
 import PythonDictionaries from './pages/learning/python/Dictionaries'
 import PythonFunctions from './pages/learning/python/Functions'
+import PythonControlFlow from './pages/learning/python/ControlFlow'
+import PythonMath101 from './pages/learning/python/Math101'
 import PythonLists from './pages/learning/python/Lists'
 import PythonScope from './pages/learning/python/Scope'
 import PythonTestingAndDebugging from './pages/learning/python/TestingAndDebugging'
@@ -205,9 +208,12 @@ function App() {
             <Route path='/python' element={<PythonLanding />} />
             <Route path='/python' element={<PythonSectionLayout />}>
               <Route path='functions' element={<PythonFunctions />} />
+              <Route path='math-101' element={<PythonMath101 />} />
+              <Route path='control-flow' element={<PythonControlFlow />} />
               <Route path='scope' element={<PythonScope />} />
               <Route path='testing-and-debugging' element={<PythonTestingAndDebugging />} />
               <Route path='computing' element={<PythonComputing />} />
+              <Route path='basics' element={<PythonBasics />} />
               <Route path='lists' element={<PythonLists />} />
               <Route path='dictionaries' element={<PythonDictionaries />} />
             </Route>

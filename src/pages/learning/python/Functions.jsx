@@ -1,10 +1,13 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Functions() {
+    const returnStatement = `def do_something():
+    return 6 + 9
 
-    const dynamicTyping = `speed = 7
-speed = "seven"`
+print(do_something())`
+
+    const answerToReturnStatement = `15`
 
     const orderOfFunctions = `def main():
     health = 10
@@ -24,22 +27,28 @@ main()`
         <>
             <h1>Functions</h1>
 
-            <h2 id="dynamic-typing">Dynamic Typing</h2>
-
-            <p>Python is <em>dynamically typed</em> which means a variable can store any type, and that type can <em>change</em>.</p>
-            <p>For example, if we make a number a variable, we can later change that variable to a string:</p>
+            <h2>The <code>return</code> statement</h2>
+            <p>
+                The <code>return</code> statement allows a function to send a value back to the caller. When a function is executed, it may perform various operations or calculations. We use the <code>return</code> statement to specify the result of those operations.
+            </p>
+            <p>
+                You must <i>call</i> a function in order to execute it. Declaring the function does not do anything by itself.
+            </p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
-                    {dynamicTyping}
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {returnStatement}
                 </SyntaxHighlighter>
             </div>
 
-            <p>In most circumstances, it is bad to change the type of a variable. The proper thing to do is to just create a new variable with the different data type.</p>
-
-            <h2 id="what-is-non-dynamic-typing">What is non-dynamic typing?</h2>
-
-            <p>Languages that aren't dynamically typed are <strong>statically typed</strong>. In a statically typed language, if you try to assign a value to a variable of the wrong type, an error would crash the program.</p>
+            <pre>
+                <code>{ }</code>
+            </pre>
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {answerToReturnStatement}
+                </SyntaxHighlighter>
+            </div>
 
             <h2 id="order-of-functions">Order of functions</h2>
 
@@ -64,24 +73,6 @@ main()`
             <p><strong>Parameters</strong> are the names used for inputs when <em>defining</em> a function. <strong>Arguments</strong> are the <em>values</em> of inputs supplied when a function is called.</p>
 
             <p>So this means that arguments are the <em>actual values</em> that go into the function, like <code>69.0</code>, <code>True</code>, or <code>&quot;asian assassins&quot;</code>. Parameters are the names we use in the funtion definition to refer to those values (think of it as the placeholder).</p>
-
-
-            {/* accordion question */}
-            <div className="container accordion" id="this-question">
-                <div className="accordion-item">
-                    <h2 className="accordion-header">
-                        <button className="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#questionOne" aria-expanded="false" aria-controls="questionOne">
-                            _____ are the inputs specified by the function definition.
-                        </button>
-                    </h2>
-                    <div id="questionOne" className="accordion-collapse collapse" data-bs-parent="#this-question">
-                        <div className="accordion-body">
-                            parameters
-                        </div>
-                    </div>
-                </div>
-            </div>
         </>
     )
 }
