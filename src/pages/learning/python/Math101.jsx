@@ -3,6 +3,9 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Math101() {
+    const quizImports = {
+        python: () => import('../../../pages/quiz/database/PythonQuestions.js')
+    }
     const exponentOperator = `print(2**10)`
 
     const exponentOperatorConsole = `1024`
@@ -320,6 +323,15 @@ print(result)`
                     {falsyConsole}
                 </SyntaxHighlighter>
             </div>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="math-101"
+            />
 
         </div>
     )

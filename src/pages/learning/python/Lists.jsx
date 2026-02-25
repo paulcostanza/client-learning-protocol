@@ -1,7 +1,12 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Lists() {
+    const quizImports = {
+        python: () => import('../../../pages/quiz/database/PythonQuestions.js')
+    }
+
     const posAndNegInfinity = `negative_infinity = float("-inf")
 positive_infinity = float("inf")`
 
@@ -237,6 +242,15 @@ print(dog_age)
                     {tupleUnpacking}
                 </SyntaxHighlighter>
             </div>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="lists"
+            />
 
         </>
     )

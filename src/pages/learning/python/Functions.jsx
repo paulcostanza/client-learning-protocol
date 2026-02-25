@@ -1,7 +1,12 @@
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Functions() {
+    const quizImports = {
+        python: () => import('../../../pages/quiz/database/PythonQuestions.js')
+    }
+
     const returnStatement = `def do_something():
     return 6 + 9
 
@@ -73,6 +78,15 @@ main()`
             <p><strong>Parameters</strong> are the names used for inputs when <em>defining</em> a function. <strong>Arguments</strong> are the <em>values</em> of inputs supplied when a function is called.</p>
 
             <p>So this means that arguments are the <em>actual values</em> that go into the function, like <code>69.0</code>, <code>True</code>, or <code>&quot;asian assassins&quot;</code>. Parameters are the names we use in the funtion definition to refer to those values (think of it as the placeholder).</p>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="functions"
+            />
         </>
     )
 }

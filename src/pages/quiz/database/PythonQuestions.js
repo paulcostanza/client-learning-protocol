@@ -3,22 +3,22 @@ export default [
         id: 1,
         type: 'radio',
         category: 'python',
-        subcategory: '',
-        title: '',
+        subcategory: 'basics',
+        title: 'Dynamic types',
         question: "When a program is dynamically typed it means that once a variable is assigned a type, it cannot change",
         options: [
             'true',
             'false',
         ],
-        random: true,
+        random: false,
         answer: 'false'
     },
     {
         id: 2,
         type: 'radio',
         category: 'python',
-        subcategory: '',
-        title: '',
+        subcategory: 'basics',
+        title: 'Statically typed',
         question: "In a statically typed language, assigning a value of the wrong type to a variable would cause a(n) _____.",
         options: [
             'type error',
@@ -33,8 +33,8 @@ export default [
         id: 3,
         type: 'radio',
         category: 'python',
-        subcategory: '',
-        title: '',
+        subcategory: 'functions',
+        title: 'Where do I start?',
         question: "What is the conventional name for the entry point function",
         options: [
             '\`main()\`',
@@ -50,8 +50,8 @@ export default [
         id: 4,
         type: 'radio',
         category: 'python',
-        subcategory: '',
-        title: '',
+        subcategory: 'functions',
+        title: 'What gets returned',
         question: "If a function does not explicitly return a value, it returns \`None\` by default",
         options: [
             'true',
@@ -64,8 +64,8 @@ export default [
         id: 5,
         type: 'radio',
         category: 'python',
-        subcategory: '',
-        title: '',
+        subcategory: 'lists',
+        title: 'Last in line',
         question: "The _____ method is used to remove the last item from a list and can return it to a variable if assigned",
         options: [
             '\`pop()\`',
@@ -80,8 +80,8 @@ export default [
         id: 6,
         type: 'radio',
         category: 'python',
-        subcategory: '',
-        title: '',
+        subcategory: 'functions',
+        title: 'Assume nothing',
         question: `Assume the function \`func_that_doesnt_exist\` is a function that does not exist:
 
 ~~~python
@@ -96,7 +96,75 @@ What will happen when the code runs?`,
             '\`starting\` prints, then a stack trace due to an undefined function prints',
             '\`starting\` prints, then a stack trace due to an undefined function prints, then \`finished\` prints',
         ],
-        random: true,
+        random: false,
         answer: '\`starting\` prints, then a stack trace due to an undefined function prints'
+    },
+    {
+        id: 7,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'functions',
+        title: 'Why return?',
+        question: 'What is the purpose of the `return` statement in a function?',
+        options: [
+            'to display a message to the user',
+            'to exit the program',
+            'to return a value or result',
+            'to comment out code'
+        ],
+        random: true,
+        answer: 'to return a value or result',
+        description: 'The `return` statement is used to send a value or result back to the caller of the function, which allows the function to produce an output that can be used elsewhere in the program.'
+    },
+    {
+        id: 8,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'math-101',
+        title: 'Let the bodies hit...',
+        question: 'What is the purpose of using floor division over regular division?',
+        options: [
+            'to get a more precise result',
+            'to always round down to the nearest integer',
+            'to handle decimal values more accurately',
+            'to speed up computational performance'
+        ],
+        random: true,
+        answer: 'to always round down to the nearest integer',
+        description: 'The purpose of using floor division `//` over regular division `/` is to snag the quotient without any fractional part. It gets truncated (rounded down) to the nearest whole number. This is useful in situations where you specifically want to discard the fractional part and just need to get the integer result.'
+    },
+    {
+        id: 9,
+        type: 'checkbox',
+        category: 'python',
+        subcategory: 'basics',
+        title: 'Valid variable names',
+        question: 'Which of the following is/are (a) valid variable name(s)?',
+        options: [
+            '123variable',
+            'my-variable',
+            '_variable_name',
+            'variable123',
+            'variable name'
+        ],
+        random: true,
+        answer: ['_variable_name', 'variable123'],
+        description: 'Variable names in programming typically consist of letters, numbers, and underscores. They must start with a letter or underscore and should not contain spaces or special characters (such as a hyphen).'
+    },
+    {
+        id: 10,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'control-flow',
+        title: 'And',
+        question: 'In a logical AND operation, if the first condition is false, is the second condition checked?',
+        options: [
+            'yes, the second condition is always checked',
+            'no, the second condition is never checked',
+            'it depends on the programming language'
+        ],
+        random: true,
+        answer: 'no, the second condition is never checked',
+        description: 'If the first condition is false, there is no need to check the second condition because the overall result will always be false. The short-circuit behavior is that if any condition in a logical AND operation is false, the entire expression is considered false, and further condition checks are skipped. This behavior holds true in many programming languages for efficiency and to avoid unnecessary evaluations.'
     }
 ]

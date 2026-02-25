@@ -3,6 +3,10 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Basics() {
+    const quizImports = {
+        python: () => import('../../../pages/quiz/database/PythonQuestions.js')
+    }
+
     const declaringVariables = `name = "Jose"
 myAge = 17
 is_student = True
@@ -143,6 +147,14 @@ speed = "seven"`
 
             <p>Languages that aren't dynamically typed are <strong>statically typed</strong>. In a statically typed language, if you try to assign a value to a variable of the wrong type, an error would crash the program. But hey, this is Python! You do not need to worry about that.</p>
 
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="basics"
+            />
         </div>
     )
 }

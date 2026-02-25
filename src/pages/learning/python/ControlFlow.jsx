@@ -3,6 +3,10 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function ControlFlow() {
+    const quizImports = {
+        python: () => import('../../../pages/quiz/database/PythonQuestions.js')
+    }
+
     const ifCase = `# example for if case
 num = 10
 
@@ -218,6 +222,7 @@ while start > 0:
             </div>
 
             <h2>The <code>while</code> loop</h2>
+
             <p>
                 The <code>while</code> loop provides a way to repeatedly execute a block of code as long as a specified condition is <code>True</code>. It is a versatile construct for situations where the number of iterations is <i>not</i> known beforehand.
             </p>
@@ -239,8 +244,19 @@ while start > 0:
             <p>
                 If the while loop's condition is not properly defined or contains a logical error that causes it to always evaluate to true, the loop will continue to execute indefinitely, resulting in an <strong>infinite loop</strong>. This means that the code inside the loop will keep running repeatedly without ever exiting, which can lead to performance issues and may even cause the program to become unresponsive.
             </p>
+
             <p>Notice in the example how the variable <code>start</code> iterates down by one each loop. This means the conditional statement <code>start &gt; 0</code> ends when <code>start</code> is equal to <code>0</code>.</p>
+
             <p><code>0</code> is not less than <code>0</code>, thus ending the loop.</p>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="control-flow"
+            />
         </div>
     )
 }
