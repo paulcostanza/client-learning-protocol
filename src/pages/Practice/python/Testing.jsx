@@ -124,7 +124,7 @@ export default function Testing() {
                             {problemsList.calculator
                                 .map((problem) => {
                                     const status = problemStatuses[problem.id]?.review === 'Ready!' ? 'ready' : problemStatuses[problem.id]?.status
-                                    const review = problemStatuses[problem.id]?.reviesw
+                                    const review = problemStatuses[problem.id]?.review
 
                                     return (
                                         <tr
