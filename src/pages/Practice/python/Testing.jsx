@@ -71,7 +71,7 @@ export default function Testing() {
                         <tbody>
                             {problemsList.helloWorld
                                 .map(problem => {
-                                    const status = problemStatuses[problem.id]?.status
+                                    const status = problemStatuses[problem.id]?.review === 'Ready!' ? 'ready' : problemStatuses[problem.id]?.status
                                     const review = problemStatuses[problem.id]?.review
 
                                     return (
@@ -123,8 +123,8 @@ export default function Testing() {
                         <tbody>
                             {problemsList.calculator
                                 .map((problem) => {
-                                    const status = problemStatuses[problem.id]?.status
-                                    const review = problemStatuses[problem.id]?.review
+                                    const status = problemStatuses[problem.id]?.review === 'Ready!' ? 'ready' : problemStatuses[problem.id]?.status
+                                    const review = problemStatuses[problem.id]?.reviesw
 
                                     return (
                                         <tr
