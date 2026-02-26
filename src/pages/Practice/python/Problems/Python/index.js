@@ -9,6 +9,9 @@ import { squareRoot } from './square-root'
 import { pythagoreanTheorem } from './pythagorean-theorem'
 import { discountCalculator } from './discount-calculator'
 import { findLastDigit } from './find-last-digit'
+import { firstDigitOfTwoDigitNumber } from './first-digit-of-two-digit-number'
+import { findSumOfTwoDigitNum } from './find-sum-of-two-digit-num'
+import { firstDigitOfHundredsPlace } from './first-digit-of-hundreds-place'
 
 const problems = {
     // Printing 101
@@ -23,7 +26,10 @@ const problems = {
     "square-root": squareRoot,
     "pythagorean-theorem": pythagoreanTheorem,
     "discount-calculator": discountCalculator,
-    "find-last-digit": findLastDigit
+    "find-last-digit": findLastDigit,
+    "first-digit-of-two-digit-number": firstDigitOfTwoDigitNumber,
+    "find-sum-of-two-digit-num": findSumOfTwoDigitNum,
+    "first-digit-of-hundreds-place": firstDigitOfHundredsPlace
 }
 
 export default problems
