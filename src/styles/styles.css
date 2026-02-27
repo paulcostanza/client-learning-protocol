@@ -764,18 +764,12 @@ input[type="checkbox"]:checked+label::before {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    /* overflow-y: hidden; */
-    /* width: 100vw; */
-    /* overflow: hidden; */
 }
 
 .split>* {
     height: 100%;
     overflow: auto;
 }
-
-/* 
-/*  */
 
 .gutter {
     background-color: #23272a;
@@ -828,9 +822,14 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .testing-space {
-    height: calc(100vh - 94px);
+    height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
+}
+
+.problem-description-space {
+    height: calc(100vh - 1px);
+    margin: 10px;
 }
 
 .split-child {
@@ -842,7 +841,8 @@ input[type="checkbox"]:checked+label::before {
     text-align: left;
 }
 
-.playgroundnav {
+.problem-description-nav,
+.playground-nav {
     display: flex;
     justify-content: space-between;
     margin-left: 10px;
@@ -857,7 +857,7 @@ input[type="checkbox"]:checked+label::before {
     font-size: 1.5em;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 6px;
+    margin-top: 3px;
 }
 
 .playground-nav-btn:hover {

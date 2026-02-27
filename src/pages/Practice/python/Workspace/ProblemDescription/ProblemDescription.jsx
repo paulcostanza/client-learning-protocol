@@ -2,21 +2,14 @@ import { AiFillLike, AiFillDislike } from 'react-icons/ai'
 import { BsCheck2Circle } from 'react-icons/bs'
 import { TiStarOutline } from 'react-icons/ti'
 import DOMPurify from 'dompurify'
+import ProblemDescriptionNav from './ProblemDescriptionNav'
 
 export default function ProblemDescription({ problem }) {
     return (
         <div >
+            <ProblemDescriptionNav />
+            <div className='problem-description-space' >
 
-            {/* Tabs */}
-            {/*             
-            <div className='problem-description-header'>
-                <button className='problem-description-header-btn'>Description</button>
-                <button className='problem-description-header-btn'>Study Guide</button>
-                <button className='problem-description-header-btn'>Comments</button>
-                <button className='problem-description-header-btn'>Playlist</button>
-            </div> */}
-
-            <div style={{ margin: '20px' }}>
 
                 {/* Problem heading */}
                 <div>

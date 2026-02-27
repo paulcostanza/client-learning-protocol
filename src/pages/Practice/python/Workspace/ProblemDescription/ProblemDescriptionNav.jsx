@@ -1,24 +1,28 @@
-import { AiOutlineSetting, AiOutlineFullscreen } from 'react-icons/ai'
 import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
-import TabPanel from '@mui/lab/TabPanel'
 
-export default function Playground({ activeTab, setActiveTab }) {
-    const [value, setValue] = useState("main")
+export default function ProblemDescriptionNav() {
+    const [value, setValue] = useState("description")
 
     const handleChange = (event, newValue) => {
         setActiveTab(newValue)
     }
-
     return (
-        <div className='playground-nav'>
+        <div className='problem-description-nav'>
+            {/* Tabs */}
 
-            {/* Files */}
+            {/* <div className='problem-description-header'>
+                <button className='problem-description-header-btn'>Description</button>
+                <button className='problem-description-header-btn'>Study Guide</button>
+                <button className='problem-description-header-btn'>Comments</button>
+                <button className='problem-description-header-btn'>Playlist</button>
+            </div> */}
+
             <Box sx={{ width: '100%', typography: 'body1' }}>
-                <TabContext value={activeTab}>
+                <TabContext> {/* removed value={activeTab} from here, look to PlaygroundNav.jsx */}
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <TabList
                             onChange={handleChange}
@@ -31,8 +35,8 @@ export default function Playground({ activeTab, setActiveTab }) {
                         >
                             <Tab
                                 className='playground-nav-file'
-                                label="main.py"
-                                value="main"
+                                label="Description"
+                                value="description"
                                 sx={{
                                     color: '#444',
                                     '&.Mui-selected': {
@@ -42,8 +46,19 @@ export default function Playground({ activeTab, setActiveTab }) {
                             />
                             <Tab
                                 className='playground-nav-file'
-                                label="test.py"
-                                value="test"
+                                label="study guide"
+                                value="study guide"
+                                sx={{
+                                    color: '#444',
+                                    '&.Mui-selected': {
+                                        color: '#e0e0e0'
+                                    }
+                                }}
+                            />
+                            <Tab
+                                className='playground-nav-file'
+                                label="playlist"
+                                value="playlist"
                                 sx={{
                                     color: '#444',
                                     '&.Mui-selected': {
@@ -56,34 +71,6 @@ export default function Playground({ activeTab, setActiveTab }) {
                 </TabContext>
             </Box>
 
-            {/* Butons */}
-            <div className='playground-nav-btns'>
-                {/* Settings */}
-                <div className='playground-nav-btn'>
-                    <AiOutlineSetting />
-                </div>
-
-                {/* Full Screen */}
-                <div className='playground-nav-btn'>
-                    <AiOutlineFullscreen />
-                </div>
-            </div>
-
-
-            {/* 
-    To add...
-
-    QUESTION MARK: how this works instructions
-
-    REFRESH: add a button that starts your code over. Pop up a confurmation modal, 'Are you sure you want to reset your code in the workspace?'
-
-    SETTINGS: saved to local storage
-    - reset split bars (moving them should be saved in local storage)
-    - wrap code on/off
-    - font size
-    - tab sizing: 2 spaces vs 4 spaces
-    
-*/}
-        </div >
+        </div>
     )
 }
