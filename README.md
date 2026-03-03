@@ -10,9 +10,11 @@ Built as the *educational website* I wished existed while attending college, it 
 
 ## Quick Start
 
-Click right here on ***[Cient Learning Protocol](clientlearningprotocol.io)*** to load up the web app. 
+Click right here on ***[Client Learning Protocol](https://clientlearningprotocol.io)*** to load up the web app. 
 
 ## Usage
+
+Aims to make computer science education feel more like a trade or skill practice environment instead of traditional coursework. Utilizes spaced repetition principles to reinforce long-term retention rather than short-term memorization.
 
 Focused on learning by doing, combining:
 - quizzes
@@ -26,8 +28,6 @@ Contains a large and growing question bank:
 - 20+ programming problems
 - multiple interaction types (selection, input, coding)
 
-Uses spaced repetition principles to reinforce long-term retention rather than short-term memorization.
-
 Includes user accounts that:
 - track correct and incorrect answers
 - monitor learning progress
@@ -37,8 +37,6 @@ Structured around multiple learning modes:
 - Practice — reinforce understanding
 - Challenge — harder problems
 - Quiz — knowledge testing
-
-Aims to make computer science education feel more like a trade or skill practice environment instead of traditional coursework.
 
 ## Contributing
 
