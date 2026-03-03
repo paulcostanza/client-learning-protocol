@@ -1,84 +1,47 @@
-## To Do
+# Client Learning Protocol
 
-***Check Trello for full list of what needs to be worked on and/or updated***
+A free, self-directed computer science and programming learning platform designed to help users understand technical concepts through active practice in addition to passive reading.
 
-#### Quiz
+![snapshot](/src/assets/readme/snapshot.png)
 
-- tags to questions (chips with material ui)
-- change 'Next Question' to 'Results' after answering the last question
-- add a count of which number question you are on out of a total number of questions
-- a modal where the user can select type of quiz -> arrays, strings, everything, ...
+## Motivation
 
-#### About
+Built as the *educational website* I wished existed while attending college, it emphasizes practical understanding over traditional academic structure.
 
-**Me**
-- List what projects I am working on
+## Quick Start
 
-**CLP**
-- goal
-- how to use
-- ETA on features?
+Click right here on ***[Cient Learning Protocol](clientlearningprotocol.io)*** to load up the web app. 
 
-#### index.html
+## Usage
 
-Can I delete all of that? I added a bunch of stuff before I understood JSX 101 and tried adding a bunch of stuff. I will experiment and delete things when the time is right. 
+Focused on learning by doing, combining:
+- quizzes
+- programming challenges
+- interactive learning content
+- spaced repetition
 
-#### Random
+Contains a large and growing question bank:
 
-- Incorporate Three.js into the scroll for a more visually appealing website (not too much though!)
-- change intro into Programming 101
-- should I make the *react-syntax-highlighter* into my own code component and access/customize it with props to make it more simple to understand?
-- figure out how to have that button that copies code in the top right corner of code blocks
-- spacing between headers is bad, it needs to be fixed. Padding and margins in general are bad, look up the standard ways to do this for websites
-- Should have a quick notes section (**tl/dr** button) that gives you the most important information first, followed by the long format of what you need to know. This should be a button that exposes the good stuff (like a cheat sheet)
+- 300+ multiple-choice questions
+- 20+ programming problems
+- multiple interaction types (selection, input, coding)
 
----
+Uses spaced repetition principles to reinforce long-term retention rather than short-term memorization.
 
-## Database
+Includes user accounts that:
+- track correct and incorrect answers
+- monitor learning progress
 
-No database yet. Questions are stored inside of <code>json</code> files. They look like so: 
+Structured around multiple learning modes:
+- Learn — conceptual explanations
+- Practice — reinforce understanding
+- Challenge — harder problems
+- Quiz — knowledge testing
 
-```javascript
- {
-    id: 1,
-    type: 'radio',
-    category: 'programming language',
-    subcategory: 'strings',
-    title: 'Question Title',
-    question: "What is the answer?",
-    options: [
-        'This is the answer',
-        'No wait, this one',
-        'I\'m pretty sure it\'s me!',
-    ],
-    random: true,
-    answer:  'This is the answer',
-    description: 'Example of a question from CLP'
-}      
-```
+Aims to make computer science education feel more like a trade or skill practice environment instead of traditional coursework.
 
-Trying to set this up so it is an easier transition to an actual database setup. 
+## Contributing
 
-## Backend
+I would love your help! It is difficult to come up with questions all by myself. 
 
-Lol, far away from this rn.
-
-Postgres is looking like the database for this project. 
-
-Dashboard for users - hold all data in database (duh). Add all the data analytics for the user I want, line graphs, stats, pie charts, graphs, etc.
-
----
-
-## End Goal
-
-People can choose what they want to study by picking the most important ideas or removing things that do not interest them. They will be tested on the material in the form of spaced repetition. If they start to do bad, they need to revisit certain ideas/concepts until they get it stuck in there head. If they do well, questions will be asked further out. 
-
----
-
-# Adding a new topic
-
-- add to learning folder
-    - create setup folder
-- add to App.jsx
-- add to navigation bar
-- add database
+Contribute by forking the repo and opening pull requests. All pull requests should be submitted to the main branch.
