@@ -103,6 +103,11 @@ import ReactSectionLayout from './pages/learning/react/setup/ReactSectionLayout'
 import ReactIntro from './pages/learning/react/IntroToReact'
 import ReactHooks from './pages/learning/react/Hooks'
 
+// SQL
+import SQLLanding from './pages/learning/sql/setup/SqlLanding'
+import SQLSectionLayout from './pages/learning/sql/setup/SqlSectionLayout'
+import SQLBasics from './pages/learning/sql/Basics'
+
 // Introduction to Computers
 import IntroToCompLanding from './pages/learning/IntroductionToComputers/setup/IntroToCompLanding'
 import IntroToCompSectionLayout from './pages/learning/IntroductionToComputers/setup/IntroToCompSectionLayout'
@@ -174,6 +179,11 @@ function App() {
             <Route path='react' element={<ReactSectionLayout />} >
               <Route path='intro-to-react' element={<ReactIntro />} />
               <Route path='hooks' element={<ReactHooks />} />
+            </Route>
+
+            <Route path='/sql' element={<SQLLanding />} />
+            <Route path='/sql' element={<SQLSectionLayout />} >
+              <Route path='basics' element={<SQLBasics />} />
             </Route>
 
             <Route path='/redis' element={<Redis />} />

@@ -16,7 +16,7 @@ import Button from '@mui/material/Button'
 import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 
-const pages = ['Learning', 'Practice', 'Quiz', 'About'] // Challenges, games, blog...when ever I get to it
+const pages = ['Learn', 'Practice', 'Quiz', 'About'] // Challenges, games, blog...whenever I get to it
 const settings = ['Login - Coming March 2026']
 
 const learningSections = [
@@ -59,6 +59,7 @@ const learningSections = [
     {
         category: "Databases & Data Stores",
         sections: [
+            { label: "SQL", href: "/sql" },
             { label: "Redis", href: "/redis" },
         ]
     },
