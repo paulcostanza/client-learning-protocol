@@ -10,6 +10,13 @@ import JavaArrays from './pages/learning/java/Arrays'
 import JavaHashMaps from './pages/learning/java/HashMaps'
 import JavaHttpServer from './pages/learning/java/HttpServer'
 
+// JavaScript
+import JavaScriptLanding from './pages/learning/javascript/setup/JavaScriptLanding'
+import JavaScriptSectionLayout from './pages/learning/javascript/setup/JavaScriptSectionLayout'
+import JavaScriptBasics from './pages/learning/javascript/Basics'
+import JavaScriptArrayMethods from './pages/learning/javascript/ArrayMethods'
+import JavaScriptWeirdJs from './pages/learning/javascript/WeirdJs'
+
 import Quiz from './pages/quiz/Quiz'
 import QuizList from './pages/quiz/QuizList'
 import AboutCLP from './pages/about/clp/AboutCLP'
@@ -161,6 +168,13 @@ function App() {
               <Route path='arrays' element={<JavaArrays />} />
               <Route path='hashmaps' element={<JavaHashMaps />} />
               <Route path='http-server' element={<JavaHttpServer />} />
+            </Route>
+
+            <Route path='/javascript' element={<JavaScriptLanding />} />
+            <Route path='/javascript' element={<JavaScriptSectionLayout />} >
+              <Route path='basics' element={<JavaScriptBasics />} />
+              <Route path='array-methods' element={<JavaScriptArrayMethods />} />
+              <Route path='weird-js' element={<JavaScriptWeirdJs />} />
             </Route>
 
             <Route path='/c' element={<C />} />

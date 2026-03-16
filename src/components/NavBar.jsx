@@ -17,7 +17,7 @@ import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 
 const pages = ['Learn', 'Practice', 'Quiz', 'About'] // Challenges, games, blog...whenever I get to it
-const settings = ['Login - Coming March 2026']
+const settings = ['Login - Coming Late 2026']
 
 const learningSections = [
     {
@@ -47,6 +47,7 @@ const learningSections = [
             { label: "C#", href: "/csharp" },
             { label: "Go", href: "/go" },
             { label: "Java", href: "/java" },
+            { label: "JavaScript", href: "/javascript" },
             { label: "Python", href: "/python" }
         ]
     },
