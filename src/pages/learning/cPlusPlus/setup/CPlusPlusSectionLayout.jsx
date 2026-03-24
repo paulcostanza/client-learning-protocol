@@ -8,6 +8,7 @@ const sections = [
     { name: 'C++ Fundamentals', path: 'fundamentals' },
     { name: 'Build Your First Project', path: 'build-your-first-project' },
     { name: 'Compiler Build Configurations', path: 'compiler-build-configurations' },
+    { name: 'Stack vs Heap', path: 'stack-vs-heap' },
 ]
 
 export default function CPlusPlusSectionLayout() {

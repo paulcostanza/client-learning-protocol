@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom'
 
 const sections = [
     { name: 'Introduction to React', path: 'intro-to-react' },
+    { name: 'Components', path: 'components' },
     { name: 'Hooks', path: 'hooks' },
 ]
 

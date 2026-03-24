@@ -92,6 +92,7 @@ import CPlusPlusDevelopmentCompilerLinkerLibraries from './pages/learning/cPlusP
 import CPlusPlusFundamentals from './pages/learning/cPlusPlus/Fundamentals'
 import CPlusPlusBuildYourFirstProject from './pages/learning/cPlusPlus/BuildYourFirstProject'
 import CPlusPlusCompilerBuildConfigurations from './pages/learning/cPlusPlus/CompilerBuildConfigurations'
+import CPlusPlusStackVsHeap from './pages/learning/cPlusPlus/StackVsHeap'
 
 // Go
 import GoLanding from './pages/learning/go/setup/GoLanding'
@@ -108,6 +109,7 @@ import GoErrors from './pages/learning/go/Errors'
 import ReactLanding from './pages/learning/react/setup/ReactLanding'
 import ReactSectionLayout from './pages/learning/react/setup/ReactSectionLayout'
 import ReactIntro from './pages/learning/react/IntroToReact'
+import ReactComponents from './pages/learning/react/Components'
 import ReactHooks from './pages/learning/react/Hooks'
 
 // SQL
@@ -192,6 +194,7 @@ function App() {
             <Route path='/react' element={<ReactLanding />} />
             <Route path='react' element={<ReactSectionLayout />} >
               <Route path='intro-to-react' element={<ReactIntro />} />
+              <Route path='components' element={<ReactComponents />} />
               <Route path='hooks' element={<ReactHooks />} />
             </Route>
 
@@ -249,6 +252,7 @@ function App() {
               <Route path='fundamentals' element={<CPlusPlusFundamentals />} />
               <Route path='build-your-first-project' element={<CPlusPlusBuildYourFirstProject />} />
               <Route path='compiler-build-configurations' element={<CPlusPlusCompilerBuildConfigurations />} />
+              <Route path='stack-vs-heap' element={<CPlusPlusStackVsHeap />} />
             </Route>
 
 

@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom'
 
 const sections = [
     { name: 'Introduction', path: 'intro-to-react' },
+    { name: 'Components', path: 'components' },
     { name: 'Hooks', path: 'hooks' },
+    { name: 'Stack vs Heap', path: 'stack-vs-heap' },
 ]
 
 export default function ReactLanding() {

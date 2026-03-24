@@ -37,7 +37,7 @@ export default [
         description: ``
     },
     {
-        id: 2,
+        id: 3,
         type: 'radio',
         category: 'c++',
         subcategory: 'introduction',
@@ -53,106 +53,56 @@ export default [
         answer: 'object-oriented programming',
         description: ``
     },
-    // {
-    //     id: 2,
-    //     type: 'radio',
-    //     category: 'c++',
-    //     subcategory: '',
-    //     title: '',
-    //     question: "",
-    //     options: [
-    //         '',
-    //         '',
-    //         '',
-    //         '',
-    //     ],
-    //     random: true,
-    //     answer: '',
-    //     description: ``
-    // },
-    // {
-    //     id: 2,
-    //     type: 'radio',
-    //     category: 'c++',
-    //     subcategory: '',
-    //     title: '',
-    //     question: "",
-    //     options: [
-    //         '',
-    //         '',
-    //         '',
-    //         '',
-    //     ],
-    //     random: true,
-    //     answer: '',
-    //     description: ``
-    // },
-    // {
-    //     id: 2,
-    //     type: 'radio',
-    //     category: 'c++',
-    //     subcategory: '',
-    //     title: '',
-    //     question: "",
-    //     options: [
-    //         '',
-    //         '',
-    //         '',
-    //         '',
-    //     ],
-    //     random: true,
-    //     answer: '',
-    //     description: ``
-    // },
-    // {
-    //     id: 2,
-    //     type: 'radio',
-    //     category: 'c++',
-    //     subcategory: '',
-    //     title: '',
-    //     question: "",
-    //     options: [
-    //         '',
-    //         '',
-    //         '',
-    //         '',
-    //     ],
-    //     random: true,
-    //     answer: '',
-    //     description: ``
-    // },
-    // {
-    //     id: 2,
-    //     type: 'radio',
-    //     category: 'c++',
-    //     subcategory: '',
-    //     title: '',
-    //     question: "",
-    //     options: [
-    //         '',
-    //         '',
-    //         '',
-    //         '',
-    //     ],
-    //     random: true,
-    //     answer: '',
-    //     description: ``
-    // },
-    // {
-    //     id: 2,
-    //     type: 'radio',
-    //     category: 'c++',
-    //     subcategory: '',
-    //     title: '',
-    //     question: "",
-    //     options: [
-    //         '',
-    //         '',
-    //         '',
-    //         '',
-    //     ],
-    //     random: true,
-    //     answer: '',
-    //     description: ``
-    // },
+    {
+        id: 4,
+        type: 'checkbox',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Stack frame',
+        question: "What is stored in a stack frame?",
+        options: [
+            'local variables',
+            'parameters',
+            'return address',
+            'heap pointers',
+            'global variable',
+        ],
+        random: true,
+        answer: ['local variables', 'parameters', 'return address'],
+        description: ``
+    },
+    {
+        id: 5,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Cannot linker',
+        question: "What happens when a function finishes execution?",
+        options: [
+            'its variables are individually deleted from memory',
+            'its stack frame is popped off the call stack',
+            'its memory is moved to the heap',
+            'its variables become global',
+        ],
+        random: true,
+        answer: 'its stack frame is popped off the call stack',
+        description: ``
+    },
+    {
+        id: 6,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Why heap?',
+        question: "Which of the following best describes the heap? It's memory...",
+        options: [
+            'that only allows last-in, first-out access',
+            'that is automatically cleared after each function call',
+            'that allows dynamic allocation in any order',
+            'used only for storing machine code',
+        ],
+        random: true,
+        answer: 'that allows dynamic allocation in any order',
+        description: `The heap allows memory to be allocated and freed in any order, unlike the stack's strict LIFO behavior`
+    },
 ]
