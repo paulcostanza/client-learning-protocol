@@ -105,4 +105,303 @@ export default [
         answer: 'that allows dynamic allocation in any order',
         description: `The heap allows memory to be allocated and freed in any order, unlike the stack's strict LIFO behavior`
     },
+    {
+        id: 7,
+        type: 'checkbox',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Do you stack?',
+        question: "Which of the following statements about the stack is correct",
+        options: [
+            'grows dynamically during runtime with no size limit',
+            'has a fixed size',
+            'very fast to allocate',
+            'very slow to allocate',
+            'must be manually \`delete\`d',
+            'uses a *free list* to manage memory allocation'
+        ],
+        random: true,
+        answer: ['has a fixed size', 'very fast to allocate'],
+        description: `- "grows dynamically during runtime with no size limit" - describes the heap
+- "very slow to allocate" - the stack is quick because you can only pop and push onto the stack, heap is the dynamic one
+- "must be manually \`delete\`d" - stack memory is automatically managed
+- "uses a *free list* to manage memory allocation" - free lists are associated with heap allocators, not the stack`
+    },
+    {
+        id: 8,
+        type: 'input',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Remove, or do you?',
+        question: `How would you free memory allocated with the following code? If the code is all set and does not need to be manually removed, please type in N/A.
+~~~c++
+int* harray = new int[5];
+~~~
+        `,
+        options: [""],
+        random: true,
+        answer: "^\\s*delete\\s*\\[\\]\\s*harray\\s*;\\s*$",
+        description: `Answer: \`delete[] harray;\`
+- \`new int[5]\` allocates an array onto the heap
+- you must use \`delete[]\` to properly free it
+- N/A would cause a memory leak!`
+    },
+    {
+        id: 9,
+        type: 'checkbox',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Smart pointers',
+        question: "Which of the following statements about smart pointers is correct? They...",
+        options: [
+            'allocate memory on the stack instead of the heap',
+            'are the same thing as using the \`new\` keyword',
+            'automatically manage heap memory',
+            'preven memory leaks',
+            'do not use pointers',
+        ],
+        random: true,
+        answer: ['automatically manage heap memory', 'preven memory leaks'],
+        description: `- "grows dynamically during runtime with no size limit" - describes the heap
+- "very slow to allocate" - the stack is quick because you can only pop and push onto the stack, heap is the dynamic one
+- "must be manually \`delete\`d" - stack memory is automatically managed
+- "uses a *free list* to manage memory allocation" - free lists are associated with heap allocators, not the stack`
+    },
+    {
+        id: 10,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Why new?',
+        question: "Which of the following best describes what \`new\` returns?",
+        options: [
+            'the value stored in memory',
+            'a reference to a variable',
+            'the address of the allocated memory',
+            'the size of the allocated memory',
+        ],
+        random: true,
+        answer: 'the address of the allocated memory',
+        description: `\`new\` allocates memory on the heap and returns a pointer, which is the address of that memory. Example: 
+~~~c++
+int* nums = new int[3]; // address 0x12fad32 is returned
+
+nums[0]  // at 0x12fad32
+nums[1]  // at 0x12fad36 (assuming 4-byte ints)
+nums[2]  // at 0x12fad3A
+~~~
+
+*The exact address is just an example, and results will vary*`
+    },
+    {
+        id: 11,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Stack overflow 101',
+        question: "Which situation is most likely to cause a stack overflow?",
+        options: [
+            'allocating memory with \`new int\` repeatedly',
+            'creating a very large local array inside a function',
+            'using \`delete\` incorrectly',
+            'using \`std::stared_ptr\`',
+
+        ],
+        random: true,
+        answer: 'creating a very large local array inside a function',
+        description: `The stack can run out of space since it has a fixed size. A *stack overflow* occurs when you use more stack memory than is available. 
+        
+Another example would be calling a function recursively. Each call uses stack space and the calls never stop:
+        
+~~~c++
+void func() {
+    func(); // infinite recursion
+}
+~~~
+
+*Stack overflows happen when you have too much shit on the stack*
+`
+    },
+    {
+        id: 12,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Solve it',
+        question: `What is the final value of \`value\`?
+        
+~~~c++
+int value = 10;
+int* ptr = &value;
+int& ref = value;
+
+*ptr = 20;
+ref = 30;
+`,
+        options: [
+            '10',
+            '20',
+            '30',
+            'undefined behavior',
+
+        ],
+        random: false,
+        answer: '30',
+        description: `Step by step: 
+        
+~~~c++
+int value = 10;     // value = 10
+int* ptr = &value;  // ptr points to value
+int& ref = value;   // ref is another name for value
+
+*ptr = 20;          // dereference pointer, changes value
+ref = 30;           // value = 20
+~~~
+
+- pointer: go to that address and modify it
+- reference: this *is* the variable
+`
+    },
+    {
+        id: 13,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Pointer I',
+        question: `What is the final value of \`x\`?
+        
+~~~c++
+int x = 5;
+int* p1 = &x;
+int* p2 = p1;
+
+*p1 = 10;
+*p2 = 20;
+
+std::cout << x;
+`,
+        options: [
+            '5',
+            '10',
+            '20',
+            'undefined behavior',
+
+        ],
+        random: false,
+        answer: '20',
+        description: `Step by step: 
+        
+~~~c++
+int x = 5;      // x = 5
+int* p1 = &x;   // p1 points to x
+int* p2 = p1;   // p2 is a copy of the pointer, also points to x
+
+*p1 = 10;       // changes value at that address, x = 10
+*p2 = 20;       // changes value at that address, x = 20
+
+std::cout << x;
+~~~
+
+- \`p1\` & \`p2\` point to the same location
+- modifying through either will modify the same variable
+`
+    },
+    {
+        id: 14,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Scope it out',
+        question: `What is wrong with this code?
+        
+~~~c++
+int* ptr;
+
+{
+    int x = 5;
+    ptr = &x;
+}
+
+std::cout << *ptr;
+~~~
+`,
+        options: [
+            'nothing is wrong',
+            'memory leak',
+            'dangling pointer',
+            'stack overflow',
+
+        ],
+        random: true,
+        answer: 'dangling pointer',
+        description: `- \`x\` is a stack variable that only exists inside of that block \`{}\` 
+- when the block ends \`x\` is destroyed
+- so the line \`std::cout << *ptr;\` still holds the old address of \`x\`, but \`x\` no longer exists!
+
+That pointer is now dangling.
+`
+    },
+    {
+        id: 15,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'nullptr?',
+        question: `What will happen here?
+        
+~~~c++
+int* ptr = new int(5);
+delete ptr;
+
+if (ptr != nullptr) {
+    std::cout << *ptr;
+}
+~~~
+`,
+        options: [
+            'safe because of the null check',
+            'prints 5',
+            'undefined behavior',
+            'compile-time error',
+
+        ],
+        random: true,
+        answer: 'undefined behavior',
+        description: `- \`delete ptr;\` does not delete the variable, only deletes the value it pointed to, it still exists and holds the same address
+- \`if (ptr != nullptr)\` is valid and true because \`delete ptr;\` *does not* automically set \`ptr\` to \`nullptr\` (our safety check fails!)
+- \`std::cout << *ptr;\` dereferences a dangling pointer which will cause undefined behavior
+
+For this to work properly, you would need to add in \`ptr = nullptr\` after \`delete ptr;\` and before the if statement.
+`
+    },
+    {
+        id: 16,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'stack-vs-heap',
+        title: 'Just delete it bro',
+        question: `Any issues with this code?
+        
+~~~c++
+int* ptr = new int[5];
+delete ptr;
+~~~
+`,
+        options: [
+            'nope, good to go',
+            'memory leak',
+            'undefined behavior',
+            'stack overflow',
+
+        ],
+        random: true,
+        answer: 'undefined behavior',
+        description: `Answer: undefined behavior due to wrong delete
+
+\`new int[5]\` allocates an array, so you must use \`delete[] ptr;\`. Using just \`delete\` is for single objects. Using the wrong one can corrupt memory, leading to undefined behavior.
+
+- \`new\` allocation -> \`delete\` deallocation
+- \`new[]\` allocation -> \`delete[]\` deallocation
+`
+    },
 ]
