@@ -7,6 +7,7 @@ const sections = [
     { name: 'Build Your First Project', path: 'build-your-first-project' },
     { name: 'Compiler Build Configurations', path: 'compiler-build-configurations' },
     { name: 'Stack vs Heap', path: 'stack-vs-heap' },
+    { name: 'Storage', path: 'storage' },
 ]
 
 export default function CPlusPlusLanding() {

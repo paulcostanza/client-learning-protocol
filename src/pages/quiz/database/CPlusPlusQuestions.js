@@ -404,4 +404,160 @@ delete ptr;
 - \`new[]\` allocation -> \`delete[]\` deallocation
 `
     },
+    {
+        id: 17,
+        type: 'checkbox',
+        category: 'c++',
+        subcategory: '',
+        title: 'Storage duration',
+        question: "What are the four categories of storage duration?",
+        options: [
+            'dynamic',
+            'thread',
+            'static',
+            'automatic',
+            'BSS',
+            'local',
+            'global',
+            'protected',
+        ],
+        random: true,
+        answer: ['dynamic', 'thread', 'static', 'automatic'],
+        description: `- *dynamic storage duration* is explicitly allocated and deallocated by the programmer using dynamic memory management functions (\`new\` and \`delete\`)
+- *thread storage duration* is allocated when the thread in which it is created begins and deallocated when the thread ends
+- *static storage duration* is allocated when the program begins (before \`main()\` is executed) and deallocated only when the program ends, with only one instance of the object throughout the entire program's execution
+- *automatic storage duration* is allocated when its enclosing code block is entered and deallocated when that block is exited, the default for most local variables and function parameters that are typically managed using the stack`
+    },
+    {
+        id: 18,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'storage',
+        title: 'Local duration?',
+        question: `Which storage duration is the default for local variables inside a function?`,
+        options: [
+            'static',
+            'dynamic',
+            'automatic',
+            'thread',
+        ],
+        random: true,
+        answer: 'automatic',
+        description: ``
+    },
+    {
+        id: 19,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'storage',
+        title: 'Static storage?',
+        question: `When is memory for an object with static storage duration allocated?`,
+        options: [
+            'when the function is called',
+            'when the variable is first used',
+            'before \`main()\` begins',
+            'when \`new\` is called',
+        ],
+        random: true,
+        answer: 'before \`main()\` begins',
+        description: ``
+    },
+    {
+        id: 20,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'storage',
+        title: 'Static storage?',
+        question: `Which of the following statements about automatic storage duration is true?`,
+        options: [
+            'it always uses heap memory',
+            'it is guaranteed to use stack memory',
+            'it is tied to block scope lifetime',
+            'it must be manually deallocated',
+        ],
+        random: true,
+        answer: 'it is tied to block scope lifetime',
+        description: ``
+    },
+    {
+        id: 21,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'storage',
+        title: 'Storage duration',
+        question: `What is the storage duration of the following variables?
+        
+~~~c++
+void func() {
+    static int x = 0;
+}
+~~~
+`,
+        options: [
+            'automatic',
+            'static',
+            'dynamic',
+            'thread',
+        ],
+        random: true,
+        answer: 'static',
+        description: `Even though it is inside a function, \`static\` gives it a static storage duration.`
+    },
+    {
+        id: 22,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'storage',
+        title: 'Thead local',
+        question: `What is true about variables declared with \`thread_local\`?`,
+        options: [
+            'they are shared across all threads',
+            'they exist only during function execution',
+            'each thread has its own instance',
+            'they must be manually deleted',
+        ],
+        random: true,
+        answer: 'each thread has its own instance',
+        description: ``
+    },
+    {
+        id: 23,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'storage',
+        title: 'Extern',
+        question: `What does the \`extern\` keyword do?`,
+        options: [
+            'gives a variable static storage duration',
+            'allocates memory globally',
+            'declares a variable defined elsewhere',
+            'forces heap allocation',
+        ],
+        random: true,
+        answer: 'declares a variable defined elsewhere',
+        description: ``
+    },
+    {
+        id: 24,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'storage',
+        title: 'Easy',
+        question: `What is the storage duration of \`x\`?
+~~~c++
+int* x = new int(5);
+~~~
+`,
+        options: [
+            'automatic',
+            'static',
+            'dynamic',
+            'thread',
+        ],
+        random: true,
+        answer: 'automatic',
+        description: `Certainly not an easy one... \`x\` (the pointer itself) is a local variable, which means automatic storage. However, the memory it points (\`new int(5)\`) means dynamic storage.
+        
+When it comes to storage duration, the variable *does not equal* what it points to.`
+    },
 ]

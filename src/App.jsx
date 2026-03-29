@@ -93,6 +93,7 @@ import CPlusPlusFundamentals from './pages/learning/cPlusPlus/Fundamentals'
 import CPlusPlusBuildYourFirstProject from './pages/learning/cPlusPlus/BuildYourFirstProject'
 import CPlusPlusCompilerBuildConfigurations from './pages/learning/cPlusPlus/CompilerBuildConfigurations'
 import CPlusPlusStackVsHeap from './pages/learning/cPlusPlus/StackVsHeap'
+import CPlusPlusStorage from './pages/learning/cPlusPlus/Storage'
 
 // Go
 import GoLanding from './pages/learning/go/setup/GoLanding'
@@ -253,6 +254,7 @@ function App() {
               <Route path='build-your-first-project' element={<CPlusPlusBuildYourFirstProject />} />
               <Route path='compiler-build-configurations' element={<CPlusPlusCompilerBuildConfigurations />} />
               <Route path='stack-vs-heap' element={<CPlusPlusStackVsHeap />} />
+              <Route path='storage' element={<CPlusPlusStorage />} />
             </Route>
 
 
