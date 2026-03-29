@@ -8,6 +8,7 @@ const sections = [
     { name: 'Compiler Build Configurations', path: 'compiler-build-configurations' },
     { name: 'Stack vs Heap', path: 'stack-vs-heap' },
     { name: 'Storage', path: 'storage' },
+    { name: 'Exception Safety', path: 'exception-safety' },
 ]
 
 export default function CPlusPlusLanding() {

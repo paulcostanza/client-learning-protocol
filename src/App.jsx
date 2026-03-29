@@ -94,6 +94,7 @@ import CPlusPlusBuildYourFirstProject from './pages/learning/cPlusPlus/BuildYour
 import CPlusPlusCompilerBuildConfigurations from './pages/learning/cPlusPlus/CompilerBuildConfigurations'
 import CPlusPlusStackVsHeap from './pages/learning/cPlusPlus/StackVsHeap'
 import CPlusPlusStorage from './pages/learning/cPlusPlus/Storage'
+import CPlusPlusExceptionSafey from './pages/learning/cPlusPlus/ExceptionSafety'
 
 // Go
 import GoLanding from './pages/learning/go/setup/GoLanding'
@@ -255,6 +256,7 @@ function App() {
               <Route path='compiler-build-configurations' element={<CPlusPlusCompilerBuildConfigurations />} />
               <Route path='stack-vs-heap' element={<CPlusPlusStackVsHeap />} />
               <Route path='storage' element={<CPlusPlusStorage />} />
+              <Route path='exception-safety' element={<CPlusPlusExceptionSafey />} />
             </Route>
 
 

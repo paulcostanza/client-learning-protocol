@@ -560,4 +560,21 @@ int* x = new int(5);
         
 When it comes to storage duration, the variable *does not equal* what it points to.`
     },
+    {
+        id: 25,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'exception-safety',
+        title: '',
+        question: `Which of the following best describes the strong exception safey guarantee?`,
+        options: [
+            'the operation never throws an exception',
+            'the operation may fail, but no resources are leaked and the program remains in a valid state',
+            'the operation either completes successfully or has no effect on the program state',
+            'no guarantees are made if an exception occurs',
+        ],
+        random: true,
+        answer: 'the operation either completes successfully or has no effect on the program state',
+        description: ``
+    },
 ]
