@@ -10,6 +10,7 @@ const sections = [
     { name: 'Commputing', path: 'computing' },
     { name: 'Lists', path: 'lists' },
     { name: 'Dictionaries', path: 'dictionaries' },
+    { name: 'Regular Expressions', path: 'regular-expressions' },
 ]
 export default function PythonLanding() {
     return (

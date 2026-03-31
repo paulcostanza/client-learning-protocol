@@ -128,3 +128,13 @@
 - Working with dates and times
 - Logging
 - Multithreading and multiprocessing
+
+
+---
+
+Things to add for HackerRank practice
+
+- data structures: a strong understanding of Python's built-in data types like strings, lists, dictionaries, sets, and tuples
+- built-in functions: <code>map</code>, <code>filter</code>, <code>zip</code>, <code>enumerate</code>, and <code>lambda</code>
+- standard libraries: <code>collections</code>, <code>Counter</code>, <code>itertools</code>, and <code>datetime</code>,
+- OOP: when to use classes and how to initialize and modify class attributes
