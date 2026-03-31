@@ -16,5 +16,8 @@ export const problemsList = {
         { id: "first-digit-of-two-digit-number", title: "Find the Last Digit", status: '', review: '', order: 12 },
         { id: "find-sum-of-two-digit-num", title: "Find Sum of Two Digit Number", status: '', review: '', order: 13 },
         { id: "first-digit-of-hundreds-place", title: "First Digit of Hundreds Place", status: '', review: '', order: 14 },
+    ],
+    strings: [
+        { id: "substring-deduplicator", title: "Substring Deduplicator", status: '', review: '', order: 15 },
     ]
 }

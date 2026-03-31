@@ -12,6 +12,7 @@ import { findLastDigit } from './find-last-digit'
 import { firstDigitOfTwoDigitNumber } from './first-digit-of-two-digit-number'
 import { findSumOfTwoDigitNum } from './find-sum-of-two-digit-num'
 import { firstDigitOfHundredsPlace } from './first-digit-of-hundreds-place'
+import { substringDeduplicator } from './substring-deduplicator'
 
 const problems = {
     // Printing 101
@@ -29,7 +30,8 @@ const problems = {
     "find-last-digit": findLastDigit,
     "first-digit-of-two-digit-number": firstDigitOfTwoDigitNumber,
     "find-sum-of-two-digit-num": findSumOfTwoDigitNum,
-    "first-digit-of-hundreds-place": firstDigitOfHundredsPlace
+    "first-digit-of-hundreds-place": firstDigitOfHundredsPlace,
+    "substring-deduplicator": substringDeduplicator,
 }
 
 export default problems

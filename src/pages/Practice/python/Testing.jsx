@@ -146,6 +146,58 @@ export default function Testing() {
                     </Table>
                 </Box>
             </Paper>
+
+            <hr />
+
+            <Paper elevation={9} >
+                <Box sx={{ width: '100%', overflowX: 'auto' }}>
+                    <Table
+                        borderAxis="none"
+                        size="lg"
+                        stickyFooter={false}
+                        stickyHeader={false}
+                        variant="outlined"
+                        hoverRow
+                    >
+                        <TableHead>
+                            <TableRow>
+                                <TableCell style={{ textSize: '20px' }}>
+                                    Strings
+                                </TableCell>
+                                <TableCell style={{ textAlign: 'center' }}>
+                                    Status
+                                </TableCell>
+                                <TableCell style={{ textAlign: 'center' }} >
+                                    Review
+                                </TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <tbody>
+                            {problemsList.strings
+                                .map((problem) => {
+                                    const status = problemStatuses[problem.id]?.review === 'Ready!' ? 'ready' : problemStatuses[problem.id]?.status
+                                    const review = problemStatuses[problem.id]?.review
+
+                                    return (
+                                        <tr
+                                            key={`${problem.id}`}
+                                            style={{ cursor: "pointer" }}
+                                            onClick={() => handleRowClick(problem)}
+                                        >
+                                            <td>{problem.title}</td>
+                                            <td align="center">
+                                                {status === 'correct' && <span>✔️</span>}
+                                                {status === 'incorrect' && <span>❌</span>}
+                                                {status === 'ready' && <span>❓</span>}
+                                            </td>
+                                            <td align="center">{review}</td>
+                                        </tr>
+                                    )
+                                })}
+                        </tbody>
+                    </Table>
+                </Box>
+            </Paper>
         </div>
     )
 }
