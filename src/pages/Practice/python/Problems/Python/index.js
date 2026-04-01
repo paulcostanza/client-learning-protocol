@@ -13,6 +13,7 @@ import { firstDigitOfTwoDigitNumber } from './first-digit-of-two-digit-number'
 import { findSumOfTwoDigitNum } from './find-sum-of-two-digit-num'
 import { firstDigitOfHundredsPlace } from './first-digit-of-hundreds-place'
 import { substringDeduplicator } from './substring-deduplicator'
+import { singleIndexStringMutation } from './single-index-string-mutation'
 
 const problems = {
     // Printing 101
@@ -32,6 +33,7 @@ const problems = {
     "find-sum-of-two-digit-num": findSumOfTwoDigitNum,
     "first-digit-of-hundreds-place": firstDigitOfHundredsPlace,
     "substring-deduplicator": substringDeduplicator,
+    "single-index-string-mutation": singleIndexStringMutation,
 }
 
 export default problems

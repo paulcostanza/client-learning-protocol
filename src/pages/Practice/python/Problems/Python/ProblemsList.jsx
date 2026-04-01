@@ -19,5 +19,6 @@ export const problemsList = {
     ],
     strings: [
         { id: "substring-deduplicator", title: "Substring Deduplicator", status: '', review: '', order: 15 },
+        { id: "single-index-string-mutation", title: "Single Index String Mutation", status: '', review: '', order: 16 },
     ]
 }
