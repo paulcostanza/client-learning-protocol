@@ -15,8 +15,9 @@ print(letters_only)`
 
             <ul>
                 <li><code>.lower()</code> converts string to lowercase</li>
+                <li><code>.islower()</code> returns a bollean if all characters are lowercase, ignores space, numbers, and symbols</li>
                 <li><code>.isalpha()</code> returns a boolean if all characters are letters</li>
-                <li><code></code></li>
+                <li><code>isalnum()</code> returns a bollean if all characters are alphanumeric (a-z, A-Z, 0-9)</li>
                 <li><code></code></li>
             </ul>
 
