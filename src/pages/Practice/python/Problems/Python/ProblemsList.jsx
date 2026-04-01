@@ -22,5 +22,8 @@ export const problemsList = {
         { id: "single-index-string-mutation", title: "Single Index String Mutation", status: '', review: '', order: 16 },
         { id: "text-wrap", title: "Text Wrap", status: '', review: '', order: 17 },
         { id: "capitalize", title: "Capitalize", status: '', review: '', order: 18 },
-    ]
+    ],
+    twoPointers: [
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 19 },
+    ],
 }

@@ -16,6 +16,7 @@ import { substringDeduplicator } from './substring-deduplicator'
 import { singleIndexStringMutation } from './single-index-string-mutation'
 import { textWrap } from './text-wrap'
 import { capitalize } from './capitalize'
+import { countAffordablePairs } from './count-affordable-pairs'
 
 const problems = {
     // Printing 101
@@ -39,6 +40,8 @@ const problems = {
     "single-index-string-mutation": singleIndexStringMutation,
     "text-wrap": textWrap,
     "capitalize": capitalize,
+    // two pointer
+    "count-affordable-pairs": countAffordablePairs
 }
 
 export default problems
