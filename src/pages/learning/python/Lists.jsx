@@ -104,6 +104,32 @@ print(dog_name)
 print(dog_age)
 # 4`
 
+    const sortAsc = `numbers = [34, 1, 9, 5, 22]
+numbers.sort()
+print(numbers)`
+
+    const sortAscConsole = `[1, 5, 9, 22, 34]`
+
+    const sortDesc = `numbers = [34, 1, 9, 5, 22]
+numbers.sort(reverse=True)
+print(numbers)`
+
+    const sortDescConsole = `[34, 22, 9, 5, 1]`
+
+    const sortedAsc = `fruits = ('banana', 'apple', 'cherry')
+sorted_fruits = sorted(fruits)
+print(sorted_fruits)
+print(fruits)`
+
+    const sortedAscConsole = `['apple', 'banana', 'cherry']
+('banana', 'apple', 'cherry')`
+
+    const sortedDesc = `data = [5, 2, 3, 1, 4]
+sorted_data = sorted(data, reverse=True)
+print(sorted_data)`
+
+    const sortedDescConsole = `[5, 4, 3, 2, 1]`
+
     return (
         <>
             <h1>Lists</h1>
@@ -114,7 +140,7 @@ print(dog_age)
                 <li><code>.append(element)</code> add to the end of a list</li>
                 <li><code>.pop()</code> removes last item from list. Can return it to a variable if assigned</li>
                 <li><code>.pop(idx)</code> removes at specific index. Can return it to a variable if assigned</li>
-                <li><code>.lower()</code> takes a string and lower cases it</li>
+                <li><code>.sort()</code> will sort a list, add <code>reverse=True</code> to parameter to sort in descending order</li>
             </ul>
 
             <h2 id="quick-tricks">Quick Tricks</h2>
@@ -194,6 +220,63 @@ print(dog_age)
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {joinListOfStrings}
+                </SyntaxHighlighter>
+            </div>
+
+            <h2>Sort a list</h2>
+
+            <p>We have two main ways to sort a list in python, useing the <code>sort</code> and <code>sorted</code> methods.</p>
+
+            <p>The <code>sort()</code> method modifies the original list and returns <code>None</code>. This is more efficient if you do not need to preserve the original order.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {sortAsc}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {sortAscConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {sortDesc}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {sortDescConsole}
+                </SyntaxHighlighter>
+            </div>
+
+
+            <p>Now what's cool about the <code>sorted</code> function is that it works on any iterable (tuples, strings, etc) and not just list. It also returns a <em>new</em> list, leaving the original iterable unchanged. This is great when you need to keep the original data intact.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {sortedAsc}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {sortedAscConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {sortedDesc}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {sortedDescConsole}
                 </SyntaxHighlighter>
             </div>
 

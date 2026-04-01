@@ -76,6 +76,7 @@ import PythonLanding from './pages/learning/python/setup/PythonLanding'
 import PythonSectionLayout from './pages/learning/python/setup/PythonSectionLayout'
 import PythonBasics from './pages/learning/python/Basics'
 import PythonComputing from './pages/learning/python/Computing'
+import PythonStrings from './pages/learning/python/Strings'
 import PythonDictionaries from './pages/learning/python/Dictionaries'
 import PythonFunctions from './pages/learning/python/Functions'
 import PythonControlFlow from './pages/learning/python/ControlFlow'
@@ -243,6 +244,7 @@ function App() {
               <Route path='scope' element={<PythonScope />} />
               <Route path='testing-and-debugging' element={<PythonTestingAndDebugging />} />
               <Route path='computing' element={<PythonComputing />} />
+              <Route path='strings' element={<PythonStrings />} />
               <Route path='basics' element={<PythonBasics />} />
               <Route path='lists' element={<PythonLists />} />
               <Route path='dictionaries' element={<PythonDictionaries />} />

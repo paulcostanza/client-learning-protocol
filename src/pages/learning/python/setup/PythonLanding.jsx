@@ -8,6 +8,7 @@ const sections = [
     { name: 'Scope', path: 'scope' },
     { name: 'Testing & Debugging', path: 'testing-and-debugging' },
     { name: 'Commputing', path: 'computing' },
+    { name: 'Strings', path: 'strings' },
     { name: 'Lists', path: 'lists' },
     { name: 'Dictionaries', path: 'dictionaries' },
     { name: 'Regular Expressions', path: 'regular-expressions' },
