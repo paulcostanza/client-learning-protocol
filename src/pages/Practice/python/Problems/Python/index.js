@@ -15,6 +15,7 @@ import { firstDigitOfHundredsPlace } from './first-digit-of-hundreds-place'
 import { substringDeduplicator } from './substring-deduplicator'
 import { singleIndexStringMutation } from './single-index-string-mutation'
 import { textWrap } from './text-wrap'
+import { capitalize } from './capitalize'
 
 const problems = {
     // Printing 101
@@ -37,6 +38,7 @@ const problems = {
     "substring-deduplicator": substringDeduplicator,
     "single-index-string-mutation": singleIndexStringMutation,
     "text-wrap": textWrap,
+    "capitalize": capitalize,
 }
 
 export default problems
