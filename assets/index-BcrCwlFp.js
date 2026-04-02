@@ -6920,7 +6920,7 @@ Explanation: Because 1 + 4 = 5
 Input: x = 87
 Output: 15
 Explanation: Because 8 + 7 = 15
-`,HCe={id:"sum-of-two-digit-number",title:"13. Find sum of two digit number",problemStatement:"<p>Given a 2 digit number represented by <code>num</code> return the sum of its digits.</p>",starterCode:FCe,testCode:UCe,example:qCe},GCe=`def first_digit_from_hundreds_place(num):
+`,HCe={id:"find-sum-of-two-digit-number",title:"13. Find sum of two digit number",problemStatement:"<p>Given a 2 digit number represented by <code>num</code> return the sum of its digits.</p>",starterCode:FCe,testCode:UCe,example:qCe},GCe=`def first_digit_from_hundreds_place(num):
   # write your function here
   
   
@@ -7169,7 +7169,7 @@ YZ
 `,o$e=`<ul>
 <li>0 < len(str) < 1000</li>
 <li>0 < max_width < len(str)</li>
-</ul>`,l$e={id:"single-index-string-mutation",title:"17. Text Wrap",problemStatement:"<p>You are given a string <code>str</code> and width <code>max_width</code>. Your task is to wrap the string into a paragraph of width <code>max_width</code>.</p>",starterCode:i$e,testCode:s$e,constraints:o$e,example:a$e},c$e=`def capitalize(str):
+</ul>`,l$e={id:"text-wrap",title:"17. Text Wrap",problemStatement:"<p>You are given a string <code>str</code> and width <code>max_width</code>. Your task is to wrap the string into a paragraph of width <code>max_width</code>.</p>",starterCode:i$e,testCode:s$e,constraints:o$e,example:a$e},c$e=`def capitalize(str):
   # your code goes here
   
   
