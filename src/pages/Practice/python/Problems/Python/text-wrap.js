@@ -69,11 +69,11 @@ const constraints = `<ul>
 </ul>`
 
 export const textWrap = {
-    id: "single-index-string-mutation",
-    title: "17. Text Wrap",
-    problemStatement: `<p>You are given a string <code>str</code> and width <code>max_width</code>. Your task is to wrap the string into a paragraph of width <code>max_width</code>.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "text-wrap",
+  title: "17. Text Wrap",
+  problemStatement: `<p>You are given a string <code>str</code> and width <code>max_width</code>. Your task is to wrap the string into a paragraph of width <code>max_width</code>.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example
 }

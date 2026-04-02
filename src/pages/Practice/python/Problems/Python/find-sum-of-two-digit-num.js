@@ -58,10 +58,10 @@ Explanation: Because 8 + 7 = 15
 `
 
 export const findSumOfTwoDigitNum = {
-    id: "sum-of-two-digit-number",
-    title: "13. Find sum of two digit number",
-    problemStatement: `<p>Given a 2 digit number represented by <code>num</code> return the sum of its digits.</p>`,
-    starterCode,
-    testCode,
-    example
+  id: "find-sum-of-two-digit-number",
+  title: "13. Find sum of two digit number",
+  problemStatement: `<p>Given a 2 digit number represented by <code>num</code> return the sum of its digits.</p>`,
+  starterCode,
+  testCode,
+  example
 }
