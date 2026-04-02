@@ -6920,7 +6920,7 @@ Explanation: Because 1 + 4 = 5
 Input: x = 87
 Output: 15
 Explanation: Because 8 + 7 = 15
-`,HCe={id:"find-sum-of-two-digit-number",title:"13. Find sum of two digit number",problemStatement:"<p>Given a 2 digit number represented by <code>num</code> return the sum of its digits.</p>",starterCode:FCe,testCode:UCe,example:qCe},GCe=`def first_digit_from_hundreds_place(num):
+`,HCe={id:"find-sum-of-two-digit-num",title:"13. Find sum of two digit number",problemStatement:"<p>Given a 2 digit number represented by <code>num</code> return the sum of its digits.</p>",starterCode:FCe,testCode:UCe,example:qCe},GCe=`def first_digit_from_hundreds_place(num):
   # write your function here
   
   
