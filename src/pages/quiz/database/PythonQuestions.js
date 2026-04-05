@@ -166,5 +166,133 @@ What will happen when the code runs?`,
         random: true,
         answer: 'no, the second condition is never checked',
         description: 'If the first condition is false, there is no need to check the second condition because the overall result will always be false. The short-circuit behavior is that if any condition in a logical AND operation is false, the entire expression is considered false, and further condition checks are skipped. This behavior holds true in many programming languages for efficiency and to avoid unnecessary evaluations.'
-    }
+    },
+    {
+        id: 11,
+        type: 'input',
+        category: 'python',
+        subcategory: 'built-in-functions',
+        title: 'Zip I',
+        question: `What does this print?
+~~~python
+a = [1, 2, 3]
+b = [4, 5, 6]
+
+print(list(zip(a, b)))
+~~~`,
+        options: [""],
+        random: false,
+        answer: "\\[\\s*\\(\\s*1\\s*,\\s*4\\s*\\)\\s*,\\s*\\(\\s*2\\s*,\\s*5\\s*\\)\\s*,\\s*\\(\\s*3\\s*,\\s*6\\s*\\)\\s*\\]",
+        description: `Answer: \`[(1,4), (2,5), (3,6)]\`
+
+\`zip(a, b)\` pairs elements by index, it does *not* combine lists. Sot zip does this:
+
+~~~console
+(1, 4)
+(2, 5)
+(3, 6)
+~~~
+
+And then \`list(...)\` turns everything inside of it into elements in a list.`
+    },
+    {
+        id: 12,
+        type: 'input',
+        category: 'python',
+        subcategory: 'built-in-functions',
+        title: 'Zip II',
+        question: `What does this print?
+~~~python
+a = [1, 2, 3]
+b = [4, 5]
+
+print(list(zip(a, b)))
+~~~`,
+        options: [""],
+        random: false,
+        answer: "\\[\\s*\\(\\s*1\\s*,\\s*4\\s*\\)\\s*,\\s*\\(\\s*2\\s*,\\s*5\\s*\\)\\s*\\]",
+        description: `Answer: \`[(1, 4), (2, 5)]\`
+
+\`zip(a, b)\` stops at the shortest iterable. The \`3\` gets ignored because list \`b\` has no matching index.`
+    },
+    {
+        id: 13,
+        type: 'input',
+        category: 'python',
+        subcategory: 'built-in-functions',
+        title: 'Zip III',
+        question: `What does this print?
+~~~python
+matrix = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+]
+
+print(list(zip(*matrix)))
+~~~`,
+        options: [""],
+        random: false,
+        answer: "\\[\\s*\\(\\s*1\\s*,\\s*3\\s*,\\s*5\\s*\\)\\s*,\\s*\\(\\s*2\\s*,\\s*4\\s*,\\s*6\\s*\\)\\s*\\]",
+        description: `Answer: \`[(1, 3, 5), (2, 4, 6)]\`
+
+After starting with the \`matrix\`, we unpack with \`zip(*matrix)\` which becomes \`zip([1, 2], [3, 4], [5, 6])\`. Finally, we zip the pairs by index.`
+    },
+    {
+        id: 14,
+        type: 'input',
+        category: 'python',
+        subcategory: 'built-in-functions',
+        title: 'Zip IV',
+        question: `What does this print?
+~~~python
+matrix = [
+    [1, 2],
+    [3, 4]
+]
+
+print(list(zip(matrix)))
+~~~`,
+        options: [""],
+        random: false,
+        answer: "\\[\\s*\\(\\s*\\[\\s*1\\s*,\\s*2\\s*\\]\\s*,\\s*\\)\\s*,\\s*\\(\\s*\\[\\s*3\\s*,\\s*4\\s*\\]\\s*,\\s*\\)\\s*\\]",
+        description: `Answer: \`[([1, 2], ), ([3, 4], )]\`
+
+\`zip(matrix)\` means: \`zip([[1, 2], [3, 4]])\`
+
+Zip will group elements into a tuple when you have *one* list like so:
+~~~console
+([1, 2], )
+([3, 4], )
+~~~
+
+- \`zip(matrix)\`: one iterable -> wraps each element in a tuple. *Treat each row as a single item.*
+- \`zip(*matrix)\`: multiple iterables -> combine by index. *Spread rows out and align columns.*
+`
+    },
+    {
+        id: 15,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'built-in-functions',
+        title: 'Zip V',
+        question: `What does this print?
+~~~python
+a = [1, 2, 3]
+
+print(list(zip(*a)))
+~~~`,
+        options: [
+            '\`[(1), (2), (3)]\`',
+            '\`[(1, 2, 3)]\`',
+            '\`TypeError\`'
+        ],
+        random: true,
+        answer: '\`TypeError\`',
+        description: `Answer: \`TypeError: 'int' object is not iterable\`
+        
+\`zip(*a)\` becomes \`zip(1, 2, 3)\`. However, our zip function *requires* an iterable such as a list, string, dict, whatever. And integers are not iterable. Ever try using an integer but forget the \`range\` function in a for loop? 
+
+You can only use \`*\` if the elements inside are iterable.`
+    },
 ]

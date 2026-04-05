@@ -85,6 +85,7 @@ import PythonLists from './pages/learning/python/Lists'
 import PythonScope from './pages/learning/python/Scope'
 import PythonTestingAndDebugging from './pages/learning/python/TestingAndDebugging'
 import PythonRegularExpressions from './pages/learning/python/RegularExpressions'
+import PythonBuiltInFunctions from './pages/learning/python/BuiltInFunctions'
 
 // C++
 import CPlusPlusLanding from './pages/learning/cPlusPlus/setup/CPlusPlusLanding'
@@ -249,6 +250,7 @@ function App() {
               <Route path='lists' element={<PythonLists />} />
               <Route path='dictionaries' element={<PythonDictionaries />} />
               <Route path='regular-expressions' element={<PythonRegularExpressions />} />
+              <Route path='built-in-functions' element={<PythonBuiltInFunctions />} />
             </Route>
 
             <Route path='/cpp' element={<CPlusPlusLanding />} />

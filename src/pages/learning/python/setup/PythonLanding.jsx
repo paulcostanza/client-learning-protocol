@@ -12,6 +12,7 @@ const sections = [
     { name: 'Lists', path: 'lists' },
     { name: 'Dictionaries', path: 'dictionaries' },
     { name: 'Regular Expressions', path: 'regular-expressions' },
+    { name: 'Built-In Functions', path: 'built-in-functions' },
 ]
 export default function PythonLanding() {
     return (
