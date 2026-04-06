@@ -131,6 +131,11 @@ import ProgrammingLanguages from './pages/learning/IntroductionToComputers/Progr
 import HowComputersRunSoftware from './pages/learning/IntroductionToComputers/HowComputersRunSoftware'
 import IDE from './pages/learning/IntroductionToComputers/IDE'
 
+// Web APIs
+import WebApiLanding from './pages/learning/api/setup/WebApiLanding'
+import WebApiSectionLayout from './pages/learning/api/setup/WebApiSectionLayout'
+import WebApiIntroduction from './pages/learning/api/Introduction'
+
 import {
   // BrowserRouter, replace this for HashRouter after setting up a backend server
   HashRouter,
@@ -158,6 +163,11 @@ function App() {
               <Route path='how-computers-run-software' element={<HowComputersRunSoftware />} />
               <Route path='programming-languages' element={<ProgrammingLanguages />} />
               <Route path='ide' element={<IDE />} />
+            </Route>
+
+            <Route path='/web-api' element={<WebApiLanding />} />
+            <Route path='/web-api' element={<WebApiSectionLayout />}>
+              <Route path='introduction' element={<WebApiIntroduction />} />
             </Route>
 
             <Route path='/cybersecurity' element={<CyberSecurityLanding />} />

@@ -29,11 +29,12 @@ const learningSections = [
         ]
     },
     {
-        category: "Web Technologies",
+        category: "Web Tech",
         sections: [
             { label: "HTML", href: "/html" },
-            // { label: "Web APIs", href: "/webapis" },
+            { label: "Web APIs", href: "/web-api" },
             // { label: "HTTP/HTTPS", href: "/http" },
+            // { label: "Auth[entication/orization]", href: "/auth" },
             // { label: "DOM Manipulation", href: "/dom" },
             // { label: "Browser DevTools", href: "/devtools" },
             // { label: "Networking", href: "/networking" },
