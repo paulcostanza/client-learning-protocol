@@ -138,3 +138,42 @@ Things to add for HackerRank practice
 - built-in functions: <code>map</code>, <code>filter</code>, <code>zip</code>, <code>enumerate</code>, and <code>lambda</code>
 - standard libraries: <code>collections</code>, <code>Counter</code>, <code>itertools</code>, and <code>datetime</code>,
 - OOP: when to use classes and how to initialize and modify class attributes
+
+---
+
+The matrix rotation quesiton I got from HackerRank
+
+```python
+def print_matrix(m):
+    for row in m:
+        print(row)
+    print('- - - - -')
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ]
+
+# rotate 90 degrees clockwise
+matrix_90 = zip(*matrix[::-1])
+
+# rotate 180 degrees clockwise
+matrix_180 = [row[::-1] for row in matrix[::-1]]
+
+# rotate 270 degrees clockwise
+matrix_270 = [list(row) for row in zip(*matrix)][::-1]
+
+# flip vertical
+matrix_v_flip = matrix[::-1]
+
+# flip horizontal
+matrix_h_flip = [row[::-1] for row in matrix]
+    
+print_matrix(matrix)
+print_matrix(matrix_90)
+print_matrix(matrix_180)
+print_matrix(matrix_270)
+# print_matrix(matrix_v_flip)
+# print_matrix(matrix_h_flip)
+```

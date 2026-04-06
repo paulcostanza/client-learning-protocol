@@ -17,6 +17,7 @@ import { singleIndexStringMutation } from './single-index-string-mutation'
 import { textWrap } from './text-wrap'
 import { capitalize } from './capitalize'
 import { countAffordablePairs } from './count-affordable-pairs'
+import { matrixRotationI } from './matrix-rotation-i'
 
 const problems = {
     // Printing 101
@@ -41,7 +42,9 @@ const problems = {
     "text-wrap": textWrap,
     "capitalize": capitalize,
     // two pointer
-    "count-affordable-pairs": countAffordablePairs
+    "count-affordable-pairs": countAffordablePairs,
+    // matrices
+    "matrix-rotation-i": matrixRotationI,
 }
 
 export default problems
