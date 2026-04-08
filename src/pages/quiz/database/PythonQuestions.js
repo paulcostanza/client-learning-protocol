@@ -131,7 +131,9 @@ What will happen when the code runs?`,
         ],
         random: true,
         answer: 'to always round down to the nearest integer',
-        description: 'The purpose of using floor division `//` over regular division `/` is to snag the quotient without any fractional part. It gets truncated (rounded down) to the nearest whole number. This is useful in situations where you specifically want to discard the fractional part and just need to get the integer result.'
+        description: `The purpose of using floor division \`//\` over regular division \`/\` is to snag the quotient without any fractional part. It gets *truncated* (rounded down) to the nearest whole number. 
+
+This is useful in situations where you specifically want to discard the fractional part and just need to get the integer result.`
     },
     {
         id: 9,
@@ -157,7 +159,7 @@ What will happen when the code runs?`,
         category: 'python',
         subcategory: 'control-flow',
         title: 'And',
-        question: 'In a logical AND operation, if the first condition is false, is the second condition checked?',
+        question: 'In a logical \`and\` operation, if the first condition is \`False\`, is the second condition checked?',
         options: [
             'yes, the second condition is always checked',
             'no, the second condition is never checked',
@@ -165,7 +167,9 @@ What will happen when the code runs?`,
         ],
         random: true,
         answer: 'no, the second condition is never checked',
-        description: 'If the first condition is false, there is no need to check the second condition because the overall result will always be false. The short-circuit behavior is that if any condition in a logical AND operation is false, the entire expression is considered false, and further condition checks are skipped. This behavior holds true in many programming languages for efficiency and to avoid unnecessary evaluations.'
+        description: `If the first condition is \`False\`, there is no need to check the second condition because the overall result will always be \`False\`. The short-circuit behavior means that if any condition in a logical \`and\` operation is \`False\`, the entire expression is considered \`False\`, and further condition checks are skipped. 
+
+This behavior holds true in many programming languages for efficiency and to avoid unnecessary evaluations.`
     },
     {
         id: 11,

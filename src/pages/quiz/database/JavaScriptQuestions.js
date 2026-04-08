@@ -194,7 +194,7 @@ console.log(result);
 `,
         options: [""],
         random: false,
-        answer: '\[\s*undefined\s*,\s*\d+\s*,\s*\d+\s*\]',
+        answer: '^\\[\\s*undefined\\s*,\\s*\\d+\\s*,\\s*\\d+\\s*\\]$',
         description: `Answer: \`[undefined, 4, 6]\`
 
 \`Array.map()\` always returns an array with the same length as the original array. Each element in the new array is the return value of the callback.

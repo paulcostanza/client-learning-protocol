@@ -68,12 +68,12 @@ const constraints = `<ul>
 `
 
 export const substringDeduplicator = {
-    id: "substring-deduplicator",
-    title: "15. Substring Deduplicator",
-    problemStatement: `<p>You are given a string s and an integer k.</p>
+  id: "substring-deduplicator",
+  title: "15. Substring Deduplicator",
+  problemStatement: `<p>You are given a string <code>str</code> and an integer <code>k</code>.</p>
 
     <ol>
-        <li>Divide the string s into consecutive substrings of length k.</li>
+        <li>Divide the string <code>str</code> into consecutive substrings of length <code>k</code>.</li>
         <li>For each substring:</li>
         <ul>
             <li>Remove any repeated characters.</li>
@@ -83,8 +83,8 @@ export const substringDeduplicator = {
         <li>Return a list of the processed substrings in order.</li>
     </ol>
 `,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  starterCode,
+  testCode,
+  constraints,
+  example
 }

@@ -13,6 +13,9 @@ const testCode = `def run_tests():
     ("heLLo woRLD", "HeLLo WoRLD"),
     ("john   doe", "John   Doe"),
     ("123abc test", "123abc Test"),
+    ("       jimmy john", "       Jimmy John"),
+    ("johnny jim     ", "Johnny Jim     "),
+
   ]
 
   passed = 0
@@ -62,11 +65,11 @@ const constraints = `<ul>
 </ul>`
 
 export const capitalize = {
-    id: "capitalize",
-    title: "18. Capitalize",
-    problemStatement: `<p>Ensure that the first and last names of a list of people begin with a capital letter.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "capitalize",
+  title: "18. Capitalize",
+  problemStatement: `<p>Ensure that the first and last names of a list of people begin with a capital letter. Make sure all other letters are <em>not</em> altered.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example
 }

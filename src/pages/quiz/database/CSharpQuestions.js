@@ -285,7 +285,7 @@ MIddleware forms a pipeline where each component can...
         ],
         random: true,
         answer: 'scoped',
-        description: `- Singleton: one instance for th entire application lifetime
+        description: `- Singleton: one instance for the entire application lifetime
 - Scoped: one instance per HTTP request
 - Transient: a new instance every time it is requested
 

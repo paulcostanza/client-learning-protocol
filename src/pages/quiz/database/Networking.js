@@ -53,6 +53,7 @@ export default [
     {
         id: 4,
         type: 'checkbox',
+        category: 'networking',
         title: 'Presentation Powers',
         question: "Which common service(s) occur at the presentation layer of the OSI Model?",
         options: [
@@ -105,6 +106,8 @@ export default [
         id: 9,
         type: 'checkbox',
         title: 'Guaranteed Delivery',
+        category: 'networking',
+        subcategory: '',
         question: "If you needed to be certain that your data transmission are being received, which type of connection(s) and/or protocol(s) should be used",
         options: [
             'connection-oriented',
@@ -142,6 +145,8 @@ export default [
     {
         id: 11,
         type: 'checkbox',
+        category: 'networking',
+        subcategory: '',
         title: 'App Layer All-Stars',
         question: "Which protocol(s) operate at the application layer of the OSI Model",
         options: [
@@ -177,6 +182,8 @@ export default [
     {
         id: 12,
         type: 'checkbox',
+        category: 'networking',
+        subcategory: '',
         title: 'Traffic cop',
         question: "Which type of traffic management service(s) occurs at the network layer of the OSI Model",
         options: [
@@ -329,6 +336,8 @@ export default [
     {
         id: 21,
         type: 'checkbox',
+        category: 'networking',
+        subcategory: '',
         title: 'Physical equipment',
         question: "What type of equipment resides at the Physical Layer of the OSI model?",
         options: [
@@ -351,6 +360,8 @@ export default [
     {
         id: 22,
         type: 'checkbox',
+        category: 'networking',
+        subcategory: '',
         title: '',
         question: "Which of these protocols reside at the Transport Layer?",
         options: [
@@ -389,6 +400,8 @@ It is often called the *physical address* because it is hardcoded into the netwo
     {
         id: 24,
         type: 'checkbox',
+        category: 'networking',
+        subcategory: '',
         title: 'On that DLL',
         question: "Which of the following reside(s) at the Data Link Layer?",
         options: [
@@ -449,6 +462,8 @@ It is often called the *physical address* because it is hardcoded into the netwo
     {
         id: 27,
         type: 'checkbox',
+        category: 'networking',
+        subcategory: '',
         title: 'Pro network',
         question: "Which of the protocols listed reside at the Network Layer of the OSI model?",
         options: [
