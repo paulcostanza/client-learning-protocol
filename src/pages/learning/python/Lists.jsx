@@ -70,40 +70,6 @@ words = message.split()
 print(words)
 # Prints: ["hello", "there", "sam"]`
 
-    const joinListOfStrings = `list_of_words = ["hello", "there", "sam"]
-sentence = " ".join(list_of_words)
-print(sentence)
-# Prints: "hello there sam"`
-
-    const tuples101 = `my_tuple = ("this is a tuple", 45, True)
-print(my_tuple[0])
-# this is a tuple
-print(my_tuple[1])
-# 45
-print(my_tuple[2])
-# True`
-
-    const fideo = `dog = ("Fido", 4)`
-
-    const singletuple = `dog = ("Fido",)`
-
-    const listOfTuples = `def get_heroes():
-    heroes = [
-        ("Glorfindel", 2093, True),
-        ("Gandalf", 1054, False),
-        ("Gimli", 389, False),
-        ("Aragorn", 87, False),
-    ]
-
-    return heroes`
-
-    const tupleUnpacking = `dog = ("Fido", 4)
-dog_name, dog_age = dog
-print(dog_name)
-# Fido
-print(dog_age)
-# 4`
-
     const sortAsc = `numbers = [34, 1, 9, 5, 22]
 numbers.sort()
 print(numbers)`
@@ -129,6 +95,11 @@ sorted_data = sorted(data, reverse=True)
 print(sorted_data)`
 
     const sortedDescConsole = `[5, 4, 3, 2, 1]`
+
+    const joinListOfStrings = `list_of_words = ["hello", "there", "sam"]
+sentence = " ".join(list_of_words)
+print(sentence)
+# Prints: "hello there sam"`
 
     return (
         <>
@@ -277,52 +248,6 @@ print(sorted_data)`
             <div className="">
                 <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
                     {sortedDescConsole}
-                </SyntaxHighlighter>
-            </div>
-
-            <h2 id="tuples">Tuples</h2>
-
-            <p><strong>Tuples</strong> are collections of data that are ordered and unchangeable. You can think of a tuple as a <em>List</em> with a fixed size. They are created with round brackets.</p>
-
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
-                    {joinListOfStrings}
-                </SyntaxHighlighter>
-            </div>
-
-            <p>While it's typically considered bad practice to store items of different types in a <em>List</em>, it is not a problem with Tuples. Because they have a fixed size, it's easy to keep track of which indices store with types of data.</p>
-
-            <p>Tuples are often used to store very small groups (like 2 or 3 items) of data. For example, you might use a tuple to store a dog's name and age.</p>
-
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
-                    {fideo}
-                </SyntaxHighlighter>
-            </div>
-
-            <p><em>Note</em> There is a special case for creating single-item tuples. You must include a comma so Python knows it's a tuple and not regular parentheses.</p>
-
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
-                    {singletuple}
-                </SyntaxHighlighter>
-            </div>
-
-            <p>Here is an example of combining list and tuples:</p>
-
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
-                    {listOfTuples}
-                </SyntaxHighlighter>
-            </div>
-
-            <h2 id="tuple-unpacking">Tuple Unpacking</h2>
-
-            <p>You can easily assign the values of a tuple to variables using <em>unpacking</em>.</p>
-
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
-                    {tupleUnpacking}
                 </SyntaxHighlighter>
             </div>
 

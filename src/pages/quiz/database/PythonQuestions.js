@@ -299,4 +299,18 @@ print(list(zip(*a)))
 
 You can only use \`*\` if the elements inside are iterable.`
     },
+    {
+        id: 16,
+        type: 'input',
+        category: 'python',
+        subcategory: 'tuples',
+        title: 'Felix',
+        question: `Create a tuple with a single string value of \`Felix\` and assign it to the variable \`cat\``,
+        options: [""],
+        random: false,
+        answer: "cat\\s*=\\s*\\(\\s*(['\"])Felix\\1\\s*,\\s*\\)",
+        description: `Answer: \`cat = ("Felix", )\`
+
+Creating single-item tuples is a special case. You *must* include a comma so Python knows we are assigning a tuple rather than just throwing in parentheses. In this case without the comma, Python thinks we are assigning a string.`
+    },
 ]
