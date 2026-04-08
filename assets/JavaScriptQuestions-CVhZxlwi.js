@@ -51,4 +51,4 @@ const result = nums.map(n => {
 
 console.log(result);
 ~~~
-`,options:[""],random:!1,answer:"[s*undefineds*,s*d+s*,s*d+s*]",description:"Answer: `[undefined, 4, 6]`\n\n`Array.map()` always returns an array with the same length as the original array. Each element in the new array is the return value of the callback.\n        \nNo `return` statement runs for the first iteration, so JS returns `undefined`.The next two iterations work as expected."}];export{e as default};
+`,options:[""],random:!1,answer:"^\\[\\s*undefined\\s*,\\s*\\d+\\s*,\\s*\\d+\\s*\\]$",description:"Answer: `[undefined, 4, 6]`\n\n`Array.map()` always returns an array with the same length as the original array. Each element in the new array is the return value of the callback.\n        \nNo `return` statement runs for the first iteration, so JS returns `undefined`.The next two iterations work as expected."}];export{e as default};

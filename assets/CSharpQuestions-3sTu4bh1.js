@@ -23,7 +23,7 @@ MIddleware forms a pipeline where each component can...
 - modify it
 - short-circuit the pipeline
 - call the next middleware
-- modify the response on the way back out`},{id:16,type:"radio",category:"c#",subcategory:"asp.net-core-web-api",title:"Instance pattern",question:"Which service lifetime creates one instance per HTTP request?",options:["singleton","scoped","transient","static"],random:!0,answer:"scoped",description:`- Singleton: one instance for th entire application lifetime
+- modify the response on the way back out`},{id:16,type:"radio",category:"c#",subcategory:"asp.net-core-web-api",title:"Instance pattern",question:"Which service lifetime creates one instance per HTTP request?",options:["singleton","scoped","transient","static"],random:!0,answer:"scoped",description:`- Singleton: one instance for the entire application lifetime
 - Scoped: one instance per HTTP request
 - Transient: a new instance every time it is requested
 
