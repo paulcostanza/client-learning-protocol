@@ -313,4 +313,24 @@ You can only use \`*\` if the elements inside are iterable.`
 
 Creating single-item tuples is a special case. You *must* include a comma so Python knows we are assigning a tuple rather than just throwing in parentheses. In this case without the comma, Python thinks we are assigning a string.`
     },
+    {
+        id: 17,
+        type: 'input',
+        category: 'python',
+        subcategory: 'lists',
+        title: 'Get that idx',
+        question: `Fill in the one liner to return the index of the first occurrence of the target number in the list:
+        
+~~~python
+def find_idx(nums, target):
+    # what goes here?
+~~~
+`,
+        options: [""],
+        random: false,
+        answer: "return\\s+nums\\.index\\(\\s*target\\s*\\)",
+        description: `Answer: \`return nums.index(target)\`
+
+\`index(find_me)\` searches for the first occurence of \`find_me\` and returns the element's index.`
+    },
 ]

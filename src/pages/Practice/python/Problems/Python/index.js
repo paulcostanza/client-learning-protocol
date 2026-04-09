@@ -18,6 +18,9 @@ import { textWrap } from './text-wrap'
 import { capitalize } from './capitalize'
 import { countAffordablePairs } from './count-affordable-pairs'
 import { matrixRotationI } from './matrix-rotation-i'
+import { howMany } from './how-many'
+import { addLists } from './add-lists'
+import { popLastNElements } from './pop-last-n-elements'
 
 const problems = {
     // Printing 101
@@ -41,6 +44,10 @@ const problems = {
     "single-index-string-mutation": singleIndexStringMutation,
     "text-wrap": textWrap,
     "capitalize": capitalize,
+    // list, 
+    "how-many": howMany,
+    "add-lists": addLists,
+    "pop-last-n-elements": popLastNElements,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     // matrices

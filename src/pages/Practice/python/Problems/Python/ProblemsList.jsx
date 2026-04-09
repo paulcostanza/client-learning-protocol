@@ -23,10 +23,15 @@ export const problemsList = {
         { id: "text-wrap", title: "Text Wrap", status: '', review: '', order: 17 },
         { id: "capitalize", title: "Capitalize", status: '', review: '', order: 18 },
     ],
+    lists: [
+        { id: "how-many", title: "How Many", status: '', review: '', order: 19 },
+        { id: "add-lists", title: "Add Lists", status: '', review: '', order: 20 },
+        { id: "pop-last-n-elements", title: "Pop Last n Elements", status: '', review: '', order: 21 },
+    ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 19 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 22 },
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 20 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 23 },
     ]
 }
