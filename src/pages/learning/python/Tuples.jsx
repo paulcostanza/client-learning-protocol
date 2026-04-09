@@ -10,11 +10,18 @@ export default function Tuples() {
     const tuples101 = `my_tuple = ("this is a tuple", 45, True)
 print(my_tuple[0])
 print(my_tuple[1])
-print(my_tuple[2])`
+print(my_tuple[2])
+print(my_tuple)`
 
     const tuples101Console = `this is a tuple
 45
-True`
+True
+("this is a tuple", 45, True)`
+
+    const slice = `my_tuple = (4, 5, 6)
+print(my_tuple[1:])`
+
+    const sliceConsole = `(5, 6)`
 
     const fideo = `dog = ("Fido", 4)`
 
@@ -44,7 +51,7 @@ print(dog_age)`
 
             <h2 id="tuples">What's a tuple?</h2>
 
-            <p><strong>Tuples</strong> are collections of data that are ordered and unchangeable. You can think of a tuple as a <em>List</em> with a fixed size. They are created with round brackets.</p>
+            <p><strong>Tuples</strong> are collections of data that are ordered and <strong>immutable</strong> (unchangeable - once a tuple is created it cannot be changed). You can think of a tuple as a <em>list</em> with a fixed size. They are created with round brackets.</p>
 
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
@@ -58,7 +65,32 @@ print(dog_age)`
                 </SyntaxHighlighter>
             </div>
 
-            <p>While it's typically considered bad practice to store items of different types in a <em>List</em>, it is not a problem with Tuples. Because they have a fixed size, it's easy to keep track of which indices store with types of data.</p>
+            <p>And we can slice just like a list:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {slice}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {sliceConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>Just like list, slicing a tuple does not modify it. Instead, it creates a new tuple with the specified slice.</p>
+
+            <p>We also:</p>
+
+            <ul>
+                <li>Cannot modify a tuple</li>
+                <li>Call methods that modify it like <code>pop</code> or <code>append</code></li>
+            </ul>
+
+            <h2>Go ahead, mix those data types</h2>
+
+            <p>While it's typically considered bad practice to store items of different types in a <em>List</em>, it is not a problem with Tuples. Because they have a fixed size, it's easy to keep track of which indices store which types of data.</p>
 
             <p>Tuples are often used to store very small groups (like 2 or 3 items) of data. For example, you might use a tuple to store a dog's name and age.</p>
 
