@@ -61,6 +61,15 @@ float_number = float(integer_number)`
 
     const intToFloatConsole = `42.0`
 
+    const posAndNegInfinity = `negative_infinity = float("-inf")
+positive_infinity = float("inf")
+
+5 < positive_infinity       # True
+-100 > negative_infinity    # True`
+
+    const stayInfinite = `float("inf") + 1      # inf
+float("-inf") - 1     # -inf`
+
     const numToString = `number = 33
 
 string_number = str(number)
@@ -244,6 +253,22 @@ print(result)`
                 <SyntaxHighlighter language="console" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {intToFloatConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <p><code>float()</code> can also create a numeric floating point of infinity. Because every value will be greater than negative infinity, we can use it to help us accomplish our goal of finding the max value. Same is true for finding the min value for positive infinity.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
+                    {posAndNegInfinity}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>An important behavior to be made aware of is that regardless of adding to positive infinity or subtracting from negative infinity, they will stay infinite.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
+                    {stayInfinite}
                 </SyntaxHighlighter>
             </div>
 
