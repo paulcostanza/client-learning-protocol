@@ -556,7 +556,7 @@ int* x = new int(5);
         ],
         random: true,
         answer: 'automatic',
-        description: `Certainly not an easy one... \`x\` (the pointer itself) is a local variable, which means automatic storage. However, the memory it points (\`new int(5)\`) means dynamic storage.
+        description: `Certainly not an easy one... \`x\` (the pointer itself) is a local variable, which means automatic storage. However, the memory it points to (\`new int(5)\`) means dynamic storage.
         
 When it comes to storage duration, the variable *does not equal* what it points to.`
     },

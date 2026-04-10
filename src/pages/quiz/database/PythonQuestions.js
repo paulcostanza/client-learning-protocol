@@ -19,12 +19,13 @@ export default [
         category: 'python',
         subcategory: 'basics',
         title: 'Statically typed',
-        question: "In a statically typed language, assigning a value of the wrong type to a variable would cause a(n) _____.",
+        question: "In a statically typed language, assigning a value of the wrong type to a variable would cause (a(n)) _____.",
         options: [
             'type error',
             'syntax error',
             'logic error',
-            'overflow error'
+            'overflow error',
+            'no error',
         ],
         random: true,
         answer: 'type error'
