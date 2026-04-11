@@ -19,6 +19,9 @@ console.log(developer);
 developer = "Johnny";
 console.log(developer);`
 
+    const index = `const developer = "Jessica";
+console.log(developer[0]); // `
+
     const plusOperator = `let firstName = "John";
 let lastName = "Doe";
 
@@ -37,11 +40,15 @@ greeting += 'John!'
 
 console.log(greeting); // "Hello, John!"`
 
-    const concatExample = `let str1 = 'Hello';
-let str2 = 'World';
+    const newLineCharacter = `const poem = "Roses are red,\nViolets are blue,\nJavaScript is fun,\nAnd so are you.";
+console.log(poem);`
 
-let result = str1.concat(' ', str2); 
-console.log(result); // Hello World`
+    const escapeCharacter = `const statement = "She said, \\"Hello!\\"";
+console.log(statement); // She said, "Hello!"`
+
+    const templateLiterals = `const name = "Jessica";
+const greeting = \`Hello, \${name}!\`; 
+console.log(greeting); // "Hello, Jessica!"`
 
     return (
         <div className="container">
@@ -77,6 +84,14 @@ console.log(result); // Hello World`
                 <p>Once a string is created, you cannot change its characters directly.</p>
             </blockquote>
 
+            <p>You can access a character from a string using bracket notations and passing in the index number. An <strong>index</strong> is the position of a character within a string. It is zero-based.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {index}
+                </SyntaxHighlighter>
+            </div>
+
             <h2>String concatenation</h2>
 
             <p>In JS, working with text is an essential part of coding, and often you need to combine or join pieces of text together. This process is called <strong>string concatenation</strong>.</p>
@@ -105,7 +120,7 @@ console.log(result); // Hello World`
 
             <p>Whenever you use the <code>+</code> operator to concatenate strings, it is important to double check for any potential spacing issues.</p>
 
-            <h3>+=</h3>
+            <h3><code>+=</code></h3>
 
             <p>If you need to add or append to an existing string, then you can use the <code>+=</code> operator. This is helpful when you want to build upon a string by adding more text to it over time.</p>
 
@@ -115,39 +130,39 @@ console.log(result); // Hello World`
                 </SyntaxHighlighter>
             </div>
 
+            <p>Now there is one more way using a <strong>method</strong> called <code>concat()</code>. We will go over what that is in the next section!</p>
+
             <p>It is important to remember that strings are immutable which means once a string is created you <em>cannot</em> alter it. In this case, the original string of <code>Hello</code> is <em>not</em> modified. Instead, <code>greeting</code> now references the new string of <code>Hello, John</code>!</p>
 
             <p>This may not make much sense, but that is because we are not looking at it from the memory's point of view. (Notes to be added eventually...)</p>
 
-            <h3><code>concat()</code></h3>
+            <h2>Escape sequences</h2>
 
-            <p>Another way you can concatenate strings is to use the <code>concat()</code> method.</p>
-
-            <blockquote>
-                <p>Hold up, what the hell is a method?</p>
-            </blockquote>
-
-            <p>In programming, a <code>function</code> is a reusable block of code that performs a specific task and can be called with various inputs. A <code>method</code> is a type of function that is associated with an object, meaning it operates on the data contained <em>within</em> that object.</p>
-
-            <p>In future lessons, we will dive much deeper into how functions, objects, and methods work in JavaScript. For now, it is important to understand that JS has dozens of methods you can use for various data types, like the <code>concat()</code> method for strings.</p>
+            <p>A <strong>newline character</strong> (<code>\n</code>) creates a new line entity in a string. This comes in handy went printing to a console or a web page for formatting purposes.</p>
 
             <div className="">
                 <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
-                    {concatExample}
+                    {newLineCharacter}
                 </SyntaxHighlighter>
             </div>
 
-            <p>In this example, we use the <code>concat()</code> method to join <code>str1</code>, a space (<code>' '</code>), and <code>str2</code> into a single string.</p>
+            <p>An <strong>escape string</strong> allows you to add characters that are used to code with that you acutally want in the string.</p>
 
-            <p>What makes this method cool is that you can add as many or as few string elements as you want to concatenate. All you need to do is seperate them by a comma inside the parenthesis.</p>
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {escapeCharacter}
+                </SyntaxHighlighter>
+            </div>
 
-            <h3>Concatenation review</h3>
+            <h2>Template literals</h2>
 
-            <ul>
-                <li><code>+</code> operator is best for simple concatenation, especially when you need to combine a few strings or variables</li>
-                <li><code>+=</code> operator is useful when building up a string step by step or appending new content to an existing string variable</li>
-                <li>the <code>concat()</code> method is beneficial when you need to concatenate multiple strings together</li>
-            </ul>
+            <p>Defined with backticks (<code>`</code>), <strong>template literals</strong> allow for easier string manipulation, including embedding variables directly inside a string. This is known as <strong>string interpolation</strong>.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {templateLiterals}
+                </SyntaxHighlighter>
+            </div>
 
             <h2>Review</h2>
 
