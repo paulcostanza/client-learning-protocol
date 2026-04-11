@@ -6,12 +6,6 @@ True or False: When a program is dynamically typed it means that once a variable
 
 ---
 
-In a statically typed language, assigning a value of the wrong type to a variable would cause a(n) _____.
-
-- type error
-
----
-
 what is the conventional name for the entry point function:
 
 <code>start()</code>

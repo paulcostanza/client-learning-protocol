@@ -13,7 +13,9 @@ import JavaHttpServer from './pages/learning/java/HttpServer'
 // JavaScript
 import JavaScriptLanding from './pages/learning/javascript/setup/JavaScriptLanding'
 import JavaScriptSectionLayout from './pages/learning/javascript/setup/JavaScriptSectionLayout'
+import JavaScriptIntro from './pages/learning/javascript/Intro'
 import JavaScriptBasics from './pages/learning/javascript/Basics'
+import JavaScriptStrings from './pages/learning/javascript/Strings'
 import JavaScriptArrayMethods from './pages/learning/javascript/ArrayMethods'
 import JavaScriptWeirdJs from './pages/learning/javascript/WeirdJs'
 
@@ -190,7 +192,9 @@ function App() {
 
             <Route path='/javascript' element={<JavaScriptLanding />} />
             <Route path='/javascript' element={<JavaScriptSectionLayout />} >
+              <Route path='intro' element={<JavaScriptIntro />} />
               <Route path='basics' element={<JavaScriptBasics />} />
+              <Route path='strings' element={<JavaScriptStrings />} />
               <Route path='array-methods' element={<JavaScriptArrayMethods />} />
               <Route path='weird-js' element={<JavaScriptWeirdJs />} />
             </Route>

@@ -3,7 +3,9 @@ import PrevNextSection from '../../../../components/PrevNextSection'
 import { Outlet } from 'react-router-dom'
 
 const sections = [
+    { name: 'Intro', path: 'intro' },
     { name: 'Basics', path: 'basics' },
+    { name: 'Strings', path: 'strings' },
     { name: 'Array Methods', path: 'array-methods' },
     { name: 'Weird JS', path: 'weird-js' },
 ]
