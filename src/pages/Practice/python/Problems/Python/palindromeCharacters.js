@@ -1,4 +1,4 @@
-const starterCode = `def capitalize(str):
+const starterCode = `def palindrome_characters(str):
   # your code goes here
   
   
@@ -8,14 +8,14 @@ const starterCode = `def capitalize(str):
 
 const testCode = `def run_tests():
   test_cases = [
-    ("chris alan", "Chris Alan"),
-    ("paul allen", "Paul Allen"),
-    ("heLLo woRLD", "HeLLo WoRLD"),
-    ("john   doe", "John   Doe"),
-    ("123abc test", "123abc Test"),
-    ("       jimmy john", "       Jimmy John"),
-    ("johnny jim     ", "Johnny Jim     "),
-
+    ("racecar", "e"),
+    ("abba", "bb"),
+    ("madam", "d"),
+    ("1221", "22"),
+    ("abcba", "c"),
+    ("hello", "none"),
+    ("palindrome", "none"),
+    ("a", "a"),
   ]
 
   passed = 0
@@ -23,7 +23,7 @@ const testCode = `def run_tests():
 
   for i, (s, expected) in enumerate(test_cases, 1):
     try:
-      result = capitalize(s)
+      result = palindrome_characters(s)
 
       if result == expected:
         print(f"Test {i}: PASS")
@@ -53,21 +53,29 @@ const testCode = `def run_tests():
 run_tests()`
 
 const example = `Example Input:
-str = 'paul allen'
+s = "racecar"
 
 Output:
-"Paul Allen"
+"e"
+
+Explanation:
+"racecar" is a palindrome and has odd length, so return the middle character.
+
+Additional Examples:
+palindrome_characters("abba") should return "bb"
+palindrome_characters("abcba") should return "c"
+palindrome_characters("hello") should return "none"
 `
 
 const constraints = `<ul>
-<li>0 < len(str) < 1000</li>
-<li><code>str</code> conists of alphanumeric characters and spaces</li>
+<li>1 ≤ len(s) ≤ 1000</li>
+<li><code>s</code> consists of alphanumeric characters and spaces</li>
 </ul>`
 
-export const capitalize = {
-  id: "capitalize",
-  title: "18. Capitalize",
-  problemStatement: `<p>Ensure that the first and last names of a list of people begin with a capital letter. Make sure all other letters are <em>not</em> altered.</p>`,
+export const palindromeCharacters = {
+  id: "palindrome-characters",
+  title: "18. Palindrome Characters",
+  problemStatement: `<p>Given a string, determine if it's a palindrome and return the middle character (if it's odd length) or middle two characters (if it's even).</p>`,
   starterCode,
   testCode,
   constraints,

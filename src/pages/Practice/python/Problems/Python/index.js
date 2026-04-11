@@ -15,12 +15,12 @@ import { firstDigitOfHundredsPlace } from './first-digit-of-hundreds-place'
 import { substringDeduplicator } from './substring-deduplicator'
 import { singleIndexStringMutation } from './single-index-string-mutation'
 import { textWrap } from './text-wrap'
-import { capitalize } from './capitalize'
 import { countAffordablePairs } from './count-affordable-pairs'
 import { matrixRotationI } from './matrix-rotation-i'
 import { howMany } from './how-many'
 import { addLists } from './add-lists'
 import { popLastNElements } from './pop-last-n-elements'
+import { palindromeCharacters } from './palindromeCharacters'
 
 const problems = {
     // Printing 101
@@ -43,7 +43,7 @@ const problems = {
     "substring-deduplicator": substringDeduplicator,
     "single-index-string-mutation": singleIndexStringMutation,
     "text-wrap": textWrap,
-    "capitalize": capitalize,
+    "palindrome-characters": palindromeCharacters,
     // list, 
     "how-many": howMany,
     "add-lists": addLists,

@@ -21,7 +21,7 @@ export const problemsList = {
         { id: "substring-deduplicator", title: "Substring Deduplicator", status: '', review: '', order: 15 },
         { id: "single-index-string-mutation", title: "Single Index String Mutation", status: '', review: '', order: 16 },
         { id: "text-wrap", title: "Text Wrap", status: '', review: '', order: 17 },
-        { id: "capitalize", title: "Capitalize", status: '', review: '', order: 18 },
+        { id: "palindrome-characters", title: "Palindrome Characters", status: '', review: '', order: 18 },
     ],
     lists: [
         { id: "how-many", title: "How Many", status: '', review: '', order: 19 },
