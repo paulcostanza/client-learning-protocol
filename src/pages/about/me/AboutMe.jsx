@@ -13,7 +13,7 @@ export default function AboutMe() {
                         <div className="about-left">
                             <p>Hi, I'm Paul! Creator of CLP.</p>
 
-                            <p>I am currently an entry level software engineer at <a href="https://www.squadlocker.com/" target="_blank">SquadLocker</a> and a recent graduate of Rhode Island College with a Bachelor of Science in Computer Science. This website became a hobby of mine, out of a necessity of trying to organize all of my notes. I want to put everything out there in an understandable, readable, & enjoyable format for not only myself, but for anyone that could benefit from it.</p>
+                            <p>This website became a hobby of mine, out of a necessity of trying to organize all of my notes. I want to put everything out there in an understandable, readable, & enjoyable format for not only myself, but for anyone that could benefit from it.</p>
 
                             <p>I originally wrote my notes on my laptop, all in <code>markdown</code> format. The sources range from class, books, youtube videos, documentation, udemy courses, memes, social media posts, work, and anything that made me think "that's actually super important, let me write that down..."</p>
 
