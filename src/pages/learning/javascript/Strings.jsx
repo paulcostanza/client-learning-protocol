@@ -168,7 +168,7 @@ console.log(greeting); // "Hello, Jessica!"`
 
             <ReviewQuiz
                 quizImports={quizImports}
-                subcategory="intro"
+                subcategory="strings"
             />
         </div>
     )

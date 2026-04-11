@@ -3,6 +3,10 @@ import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function ArrayMethods() {
+    const quizImports = {
+        javaScript: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+    }
+
     const mapMethod = `const nums = [1, 2, 3];
     
 const result = nums.map(n => {
@@ -64,6 +68,13 @@ console.log(result);`
                     {useFilter}
                 </SyntaxHighlighter>
             </div>
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="array-methods"
+            />
         </div>
     )
 }
