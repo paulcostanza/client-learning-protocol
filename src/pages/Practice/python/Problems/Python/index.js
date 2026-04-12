@@ -53,7 +53,7 @@ const problems = {
     "pop-last-n-elements": popLastNElements,
     // sets,
     "list-to-set": listToSet,
-    "count-unqiue-words": countUniqueWords,
+    "count-unique-words": countUniqueWords,
     "contains-duplicate": containsDuplicate,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
