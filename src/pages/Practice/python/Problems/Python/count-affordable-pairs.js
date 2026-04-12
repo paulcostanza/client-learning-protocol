@@ -80,11 +80,11 @@ const constraints = `<ul>
 </ul>`
 
 export const countAffordablePairs = {
-    id: "count-affordable-pairs",
-    title: "19. Count Affordable Pairs",
-    problemStatement: `<p>Given a sorted array of positive integers and a target value, count the number of pairs <code>(i, j)</code> where <code>i < j</code> and <code>array[i] + array[j] <= target</code>.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "count-affordable-pairs",
+  title: "25. Count Affordable Pairs",
+  problemStatement: `<p>Given a sorted array of positive integers and a target value, count the number of pairs <code>(i, j)</code> where <code>i < j</code> and <code>array[i] + array[j] <= target</code>.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example
 }

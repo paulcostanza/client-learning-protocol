@@ -109,11 +109,11 @@ const constraints = `<ul>
 `
 
 export const matrixRotationI = {
-    id: "matrix-rotation-i",
-    title: "20. Matrix Rotation I",
-    problemStatement: `<p>Given an <code>n x n</code> matrix, rotate it clockwise. Return a new matrix.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "matrix-rotation-i",
+  title: "26. Matrix Rotation I",
+  problemStatement: `<p>Given an <code>n x n</code> matrix, rotate it clockwise. Return a new matrix.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example
 }

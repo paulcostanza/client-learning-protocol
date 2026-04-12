@@ -21,6 +21,9 @@ import { howMany } from './how-many'
 import { addLists } from './add-lists'
 import { popLastNElements } from './pop-last-n-elements'
 import { palindromeCharacters } from './palindromeCharacters'
+import { listToSet } from './list-to-set'
+import { countUniqueWords } from './count-unique-words'
+import { containsDuplicate } from './contains-duplicate'
 
 const problems = {
     // Printing 101
@@ -48,6 +51,10 @@ const problems = {
     "how-many": howMany,
     "add-lists": addLists,
     "pop-last-n-elements": popLastNElements,
+    // sets,
+    "list-to-set": listToSet,
+    "count-unqiue-words": countUniqueWords,
+    "contains-duplicate": containsDuplicate,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     // matrices

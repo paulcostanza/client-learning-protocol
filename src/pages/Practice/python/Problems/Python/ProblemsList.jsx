@@ -28,10 +28,15 @@ export const problemsList = {
         { id: "add-lists", title: "Add Lists", status: '', review: '', order: 20 },
         { id: "pop-last-n-elements", title: "Pop Last n Elements", status: '', review: '', order: 21 },
     ],
+    sets: [
+        { id: "list-to-set", title: "List to Set", status: '', review: '', order: 22 },
+        { id: "count-unique-words", title: "Count Unique Words", status: '', review: '', order: 23 },
+        { id: "contains-duplicate", title: "Contains Duplicate", status: '', review: '', order: 24 },
+    ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 22 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 25 },
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 23 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 26 },
     ]
 }
