@@ -13,6 +13,7 @@ const sections = [
     { name: 'Strings', path: 'strings' },
     { name: 'Lists', path: 'lists' },
     { name: 'Tuples', path: 'tuples' },
+    { name: 'Sets', path: 'sets' },
     { name: 'Dictionaries', path: 'dictionaries' },
     { name: 'Regular Expressions', path: 'regular-expressions' },
     { name: 'Built-In Functions', path: 'built-in-functions' },

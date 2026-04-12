@@ -86,6 +86,7 @@ import PythonControlFlow from './pages/learning/python/ControlFlow'
 import PythonMath101 from './pages/learning/python/Math101'
 import PythonLists from './pages/learning/python/Lists'
 import PythonTuples from './pages/learning/python/Tuples'
+import PythonSets from './pages/learning/python/Sets'
 import PythonScope from './pages/learning/python/Scope'
 import PythonTestingAndDebugging from './pages/learning/python/TestingAndDebugging'
 import PythonRegularExpressions from './pages/learning/python/RegularExpressions'
@@ -266,6 +267,7 @@ function App() {
               <Route path='basics' element={<PythonBasics />} />
               <Route path='lists' element={<PythonLists />} />
               <Route path='tuples' element={<PythonTuples />} />
+              <Route path='sets' element={<PythonSets />} />
               <Route path='dictionaries' element={<PythonDictionaries />} />
               <Route path='regular-expressions' element={<PythonRegularExpressions />} />
               <Route path='built-in-functions' element={<PythonBuiltInFunctions />} />
