@@ -37,11 +37,12 @@ export const problemsList = {
         { id: "get-dictionary-keys", title: "Get Dictionary Keys", status: '', review: '', order: 25 },
         { id: "get-dictionary-values", title: "Get Dictionary Values", status: '', review: '', order: 26 },
         { id: "count-characters", title: "Count Characters", status: '', review: '', order: 27 },
+        { id: "remove-keys", title: "Remove Keys", status: '', review: '', order: 28 },
     ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 28 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 29 },
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 29 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 30 },
     ]
 }

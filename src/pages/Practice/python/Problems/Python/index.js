@@ -27,6 +27,7 @@ import { containsDuplicate } from './contains-duplicate'
 import { getDictionaryKeys } from './get-dictionary-keys'
 import { getDictionaryValues } from './get-dictionary-values'
 import { countCharacters } from './count-characters'
+import { removeKeys } from './remove-keys'
 
 const problems = {
     // Printing 101
@@ -62,6 +63,7 @@ const problems = {
     "get-dictionary-keys": getDictionaryKeys,
     "get-dictionary-values": getDictionaryValues,
     "count-characters": countCharacters,
+    "remove-keys": removeKeys,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     // matrices
