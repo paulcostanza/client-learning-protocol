@@ -33,10 +33,15 @@ export const problemsList = {
         { id: "count-unique-words", title: "Count Unique Words", status: '', review: '', order: 23 },
         { id: "contains-duplicate", title: "Contains Duplicate", status: '', review: '', order: 24 },
     ],
+    dictionaries: [
+        { id: "get-dictionary-keys", title: "Get Dictionary Keys", status: '', review: '', order: 25 },
+        { id: "get-dictionary-values", title: "Get Dictionary Values", status: '', review: '', order: 26 },
+        { id: "count-characters", title: "Count Characters", status: '', review: '', order: 27 },
+    ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 25 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 28 },
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 26 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 29 },
     ]
 }

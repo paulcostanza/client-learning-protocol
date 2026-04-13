@@ -1,3 +1,4 @@
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import Latex from 'react-latex'
@@ -9,6 +10,9 @@ import TableCell from "@mui/material/TableCell"
 import Box from "@mui/material/Box"
 
 export default function Dictionaries() {
+    const quizImports = {
+        python: () => import('../../../pages/quiz/database/PythonQuestions.js')
+    }
 
     const myDict = `survivors = {"Jack Shephard": 36, "Kate Austen": 27, "Jugo Reyes": 26, "John Locke": 48}
 
@@ -351,6 +355,15 @@ print(values)`
                     {addValuesToListOutput}
                 </SyntaxHighlighter>
             </div>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="dictionaries"
+            />
         </>
     )
 }

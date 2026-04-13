@@ -24,6 +24,9 @@ import { palindromeCharacters } from './palindromeCharacters'
 import { listToSet } from './list-to-set'
 import { countUniqueWords } from './count-unique-words'
 import { containsDuplicate } from './contains-duplicate'
+import { getDictionaryKeys } from './get-dictionary-keys'
+import { getDictionaryValues } from './get-dictionary-values'
+import { countCharacters } from './count-characters'
 
 const problems = {
     // Printing 101
@@ -47,14 +50,18 @@ const problems = {
     "single-index-string-mutation": singleIndexStringMutation,
     "text-wrap": textWrap,
     "palindrome-characters": palindromeCharacters,
-    // list, 
+    // list
     "how-many": howMany,
     "add-lists": addLists,
     "pop-last-n-elements": popLastNElements,
-    // sets,
+    // sets
     "list-to-set": listToSet,
     "count-unique-words": countUniqueWords,
     "contains-duplicate": containsDuplicate,
+    // dictionaries
+    "get-dictionary-keys": getDictionaryKeys,
+    "get-dictionary-values": getDictionaryValues,
+    "count-characters": countCharacters,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     // matrices
