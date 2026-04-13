@@ -68,4 +68,25 @@ print(list(zip(*a)))
 def find_idx(nums, target):
     # what goes here?
 ~~~
-`,options:[""],random:!1,answer:"return\\s+nums\\.index\\(\\s*target\\s*\\)",description:"Answer: `return nums.index(target)`\n\n`index(find_me)` searches for the first occurence of `find_me` and returns the element's index."}];export{e as default};
+`,options:[""],random:!1,answer:"return\\s+nums\\.index\\(\\s*target\\s*\\)",description:"Answer: `return nums.index(target)`\n\n`index(find_me)` searches for the first occurence of `find_me` and returns the element's index."},{id:18,type:"input",category:"python",subcategory:"dictionaries",title:"Simple dict",question:"Create a simple dictionary, mapping `name` to `age`. Don't forget to return it!\n~~~python\ndef create_dict(name, age):\n    # what goes here?\n~~~",options:[""],random:!1,answer:"return\\s*\\{\\s*name\\s*:\\s*age\\s*\\}",description:"Answer: `return {name: age}`"},{id:19,type:"input",category:"python",subcategory:"dictionaries",title:"Print the dict",question:`How would you print the dictionary itself? Do not return anything.
+~~~python
+baseball = { 
+  "bats": 3
+  "baseballs": 10, 
+  "gloves": 12
+}
+~~~`,options:[""],random:!1,answer:"print\\(\\s*baseball\\s*\\)",description:"Answer: `print(baseball)`"},{id:20,type:"input",category:"python",subcategory:"dictionaries",title:"Print the value",question:`How would you print the value of \`bats\`? Do not return anything.
+~~~python
+baseball = { 
+  "bats": 3
+  "baseballs": 10, 
+  "gloves": 12
+}
+~~~`,options:[""],random:!1,answer:`print\\(\\s*baseball\\[\\s*['"]bats['"]\\s*\\]\\s*\\)`,description:'Answer: `print(baseball["bats"])`'},{id:21,type:"input",category:"python",subcategory:"dictionaries",title:"Can I get a helmet?",question:`How would you print \`True\` or \`False\`, depending on whether the key \`"helmets"\` is in the dictionary? Do not return anything.
+~~~python
+baseball = { 
+  "bats": 3
+  "baseballs": 10, 
+  "gloves": 12
+}
+~~~`,options:[""],random:!1,answer:`print\\(\\s*['"]helmets['"]\\s+in\\s+baseball\\s*\\)`,description:'Answer: `print("helmets" in baseball)`'}];export{e as default};
