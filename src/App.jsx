@@ -57,6 +57,7 @@ import FileSystem from './pages/cybersecurity/FileSystem'
 import LowLevelLanding from './pages/learning/low-level/setup/LowLevelLanding'
 import LowLevelSectionLayout from './pages/learning/low-level/setup/LowLevelSectionLayout'
 import VariableSize from './pages/learning/low-level/VariableSize'
+import BinaryExploitation from './pages/learning/low-level/BinaryExploitation'
 
 import ScrollToTop from './components/ScrollToTop'
 
@@ -239,6 +240,7 @@ function App() {
             <Route path='/lowlevel' element={<LowLevelLanding />} />
             <Route path='/lowlevel' element={<LowLevelSectionLayout />}>
               <Route path='variable-size' element={<VariableSize />} />
+              <Route path='binary-exploitation' element={<BinaryExploitation />} />
             </Route>
 
             <Route path='/html' element={<HTMLLanding />} />

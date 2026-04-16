@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 const sections = [
     { name: 'Variable Size', path: 'variable-size' },
+    { name: 'Binary Exploitation', path: 'binary-exploitation' },
 ]
 
 export default function LowLevelLanding() {
