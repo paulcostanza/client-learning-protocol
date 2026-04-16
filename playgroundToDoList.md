@@ -7,9 +7,6 @@ Each section is a new commit
 
 - create table dropdown inside Practice the Basics
 
-- final check for folder structure
-- how do I seperate sections of sections?
-
 The next section might need to be placed on hold, as I want to shift focus to adding content:
 
 - add playlist

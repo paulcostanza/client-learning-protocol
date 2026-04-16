@@ -177,3 +177,8 @@ print_matrix(matrix_270)
 # print_matrix(matrix_v_flip)
 # print_matrix(matrix_h_flip)
 ```
+
+---
+
+What does the map function do?
+What are lambda's?
