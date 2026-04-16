@@ -54,9 +54,9 @@ import FileSystem from './pages/cybersecurity/FileSystem'
 
 
 // LowLevel
-import LowLevelLanding from './pages/low-level/LowLevelLanding'
-import LowLevelSectionLayout from './pages/low-level/LowLevelSectionLayout'
-import VariableSize from './pages/low-level/VariableSize'
+import LowLevelLanding from './pages/learning/low-level/setup/LowLevelLanding'
+import LowLevelSectionLayout from './pages/learning/low-level/setup/LowLevelSectionLayout'
+import VariableSize from './pages/learning/low-level/VariableSize'
 
 import ScrollToTop from './components/ScrollToTop'
 

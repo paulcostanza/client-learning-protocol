@@ -2,12 +2,12 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import Latex from 'react-latex'
 
-import DynamicArrayInMemory from '../../assets/lowlevel/variablesizes/dynamic array in memory.png'
-import EfficientVariable01 from '../../assets/lowlevel/variablesizes/efficient variable 01.png'
-import EfficientVariable02 from '../../assets/lowlevel/variablesizes/efficient variable 02.png'
-import EfficientVariable03 from '../../assets/lowlevel/variablesizes/efficient variable 03.png'
-import TagsAndData from '../../assets/lowlevel/variablesizes/tags and data.png'
-import VaraiblesInMemory from '../../assets/lowlevel/variablesizes/variables in memory.png'
+import DynamicArrayInMemory from '../../../assets/lowlevel/variablesizes/dynamic array in memory.png'
+import EfficientVariable01 from '../../../assets/lowlevel/variablesizes/efficient variable 01.png'
+import EfficientVariable02 from '../../../assets/lowlevel/variablesizes/efficient variable 02.png'
+import EfficientVariable03 from '../../../assets/lowlevel/variablesizes/efficient variable 03.png'
+import TagsAndData from '../../../assets/lowlevel/variablesizes/tags and data.png'
+import VaraiblesInMemory from '../../../assets/lowlevel/variablesizes/variables in memory.png'
 
 export default function VariableSize() {
 

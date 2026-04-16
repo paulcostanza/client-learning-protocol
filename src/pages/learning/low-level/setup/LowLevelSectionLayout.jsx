@@ -1,4 +1,4 @@
-import SectionDrawer from '../../components/SideBarNav'
+import SectionDrawer from '../../../../components/SideBarNav'
 import { Outlet } from 'react-router-dom'
 
 const sections = [
