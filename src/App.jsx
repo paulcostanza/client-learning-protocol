@@ -17,6 +17,7 @@ import JavaScriptIntro from './pages/learning/javascript/Intro'
 import JavaScriptBasics from './pages/learning/javascript/Basics'
 import JavaScriptStrings from './pages/learning/javascript/Strings'
 import JavaScriptStringMethods from './pages/learning/javascript/StringMethods'
+import JavaScriptNumbers from './pages/learning/javascript/Numbers'
 import JavaScriptArrayMethods from './pages/learning/javascript/ArrayMethods'
 import JavaScriptWeirdJs from './pages/learning/javascript/WeirdJs'
 
@@ -199,6 +200,7 @@ function App() {
               <Route path='basics' element={<JavaScriptBasics />} />
               <Route path='strings' element={<JavaScriptStrings />} />
               <Route path='string-methods' element={<JavaScriptStringMethods />} />
+              <Route path='numbers' element={<JavaScriptNumbers />} />
               <Route path='array-methods' element={<JavaScriptArrayMethods />} />
               <Route path='weird-js' element={<JavaScriptWeirdJs />} />
             </Route>

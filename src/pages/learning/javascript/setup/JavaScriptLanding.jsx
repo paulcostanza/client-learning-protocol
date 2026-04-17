@@ -5,6 +5,7 @@ const sections = [
     { name: 'Basics', path: 'basics' },
     { name: 'Strings', path: 'strings' },
     { name: 'String Methods', path: 'string-methods' },
+    { name: 'Numbers', path: 'numbers' },
     { name: 'Array Methods', path: 'array-methods' },
     { name: 'Weird JS', path: 'weird-js' },
 ]
