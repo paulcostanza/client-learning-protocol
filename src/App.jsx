@@ -18,6 +18,7 @@ import JavaScriptBasics from './pages/learning/javascript/Basics'
 import JavaScriptStrings from './pages/learning/javascript/Strings'
 import JavaScriptStringMethods from './pages/learning/javascript/StringMethods'
 import JavaScriptNumbers from './pages/learning/javascript/Numbers'
+import JavaScriptConditionalsIfStatements from './pages/learning/javascript/ConditionalsIfStatements'
 import JavaScriptArrayMethods from './pages/learning/javascript/ArrayMethods'
 import JavaScriptWeirdJs from './pages/learning/javascript/WeirdJs'
 
@@ -201,6 +202,7 @@ function App() {
               <Route path='strings' element={<JavaScriptStrings />} />
               <Route path='string-methods' element={<JavaScriptStringMethods />} />
               <Route path='numbers' element={<JavaScriptNumbers />} />
+              <Route path='conditionals-if-statements' element={<JavaScriptConditionalsIfStatements />} />
               <Route path='array-methods' element={<JavaScriptArrayMethods />} />
               <Route path='weird-js' element={<JavaScriptWeirdJs />} />
             </Route>
