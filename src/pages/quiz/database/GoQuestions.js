@@ -45,7 +45,6 @@ export default [
         question: `What does the size of a type indicate?`,
         options: [
             'nibbles',
-            'bits',
             'bytes',
             'kilobytes',
             'characters'

@@ -15,7 +15,13 @@ export default [
         ],
         random: true,
         answer: 'object file',
-        description: ``
+        description: `When you compile C++ code, the process is split into stages:
+
+\`.cpp  →  compiler  →  .o (object file)  →  linker  →  executable\`
+
+1. Preprocessing: handles things like \`#include\`, \`define\`, and macros.
+2. Compilation (the compiler step): translates your \`.cpp\` source code into machine code and outputs the **object file** as \`.o\` or \`.obj\`. This file is not yet runable.
+3. Linking: combines object files and libraries, resolves all references, and produces the final executable.`
     },
     {
         id: 2,
@@ -76,7 +82,7 @@ export default [
         type: 'radio',
         category: 'c++',
         subcategory: 'stack-vs-heap',
-        title: 'Cannot linker',
+        title: 'Function defunct',
         question: "What happens when a function finishes execution?",
         options: [
             'its variables are individually deleted from memory',
@@ -162,10 +168,7 @@ int* harray = new int[5];
         ],
         random: true,
         answer: ['automatically manage heap memory', 'preven memory leaks'],
-        description: `- "grows dynamically during runtime with no size limit" - describes the heap
-- "very slow to allocate" - the stack is quick because you can only pop and push onto the stack, heap is the dynamic one
-- "must be manually \`delete\`d" - stack memory is automatically managed
-- "uses a *free list* to manage memory allocation" - free lists are associated with heap allocators, not the stack`
+        description: ``
     },
     {
         id: 10,

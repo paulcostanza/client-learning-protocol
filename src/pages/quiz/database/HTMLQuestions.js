@@ -237,7 +237,7 @@ export default [
         category: 'html',
         subcategory: 'visual-content-and-media',
         title: 'Boo who',
-        question: "Which of the following is an example of a boolean attribute?",
+        question: "Which of the following are examples of boolean attributes?",
         options: [
             '\`text\`',
             '\`email\`',

@@ -166,7 +166,7 @@ This is useful in situations where you specifically want to discard the fraction
             'no, the second condition is never checked',
             'it depends on the programming language'
         ],
-        random: true,
+        random: false,
         answer: 'no, the second condition is never checked',
         description: `If the first condition is \`False\`, there is no need to check the second condition because the overall result will always be \`False\`. The short-circuit behavior means that if any condition in a logical \`and\` operation is \`False\`, the entire expression is considered \`False\`, and further condition checks are skipped. 
 

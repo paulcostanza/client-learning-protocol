@@ -508,6 +508,9 @@ int *ptr = &x;
         ],
         random: true,
         answer: '\`arr[i]\` is equivalent to \`*(arr + i)\`',
+        description: `\`arr\` acts like a pointer to the first element: \`&arr[0]\`. When you write \`arr[i]\`, the compiler translate it to \`*arr + 1)\`.
+        
+Basically, this means they are equal since they are translated into one another. This is because in C, arrays and pointers are tightly related through *pointer arithmetic*. `
     },
     {
         id: 29,
