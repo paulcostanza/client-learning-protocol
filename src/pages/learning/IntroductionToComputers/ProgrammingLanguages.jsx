@@ -8,7 +8,25 @@ export default function ProgrammingLanguages() {
         <div>
             <h1>Programming Languages</h1>
 
+            <p>The Versatility of the computer allows it do such a wide variety of task that it makes it one of the greatest tools known in existence. It can accomplish this by being <strong>programmed</strong> to follow specifically designed instructions.</p>
+
+            <p>Programming is considered both a science and an art. Here are a few things that must be designed for any <strong>real-world</strong> computer program:</p>
+
+            <ul>
+                <li>the logical flow of the instructions</li>
+                <li>the mathematical procedures</li>
+                <li>the layout of the programming statements</li>
+                <li>the appearance of the screen</li>
+                <li>the way the information is presented to the user</li>
+                <li>the program's <strong><em>user friendliness</em></strong></li>
+                <li>manuals, help systems, and/or other forms of written documentation</li>
+            </ul>
+
+            <p>When a computer is performing the actions described by the instructions in a computer program, we say it is <strong>running</strong> or <strong>executing</strong> the program. A computer will not begin execution of a program until it is told to do so. That typically requires the user to <strong>launch</strong> (or <strong>run</strong> or <strong>execute</strong>) the program, although programs may also be launched by other programs.</p>
+
             <p>Modern computers are incredibly fast, and are getting faster all the time. However, computers also have some significant contraints: they can only understand a limited set of instructions, and must be told exactly what to do.</p>
+
+            <h2>Programming 101</h2>
 
             <p>A <strong>computer program</strong> is a sequence of instructions that directs a computer to perform certain actions in a specified order.</p>
 

@@ -14,21 +14,7 @@ export default function HowComputersWork() {
                 <div className="container">
                     <h1 id="introduction-to-computers">How Computers Work</h1>
 
-                    <p>The Versatility of the computer allows it do such a wide variety of task that it makes it one of the greatest tools known in existence. It can accomplish this by being <strong>programmed</strong> to follow specifically designed instructions.</p>
 
-                    <p>Programming is considered both a science and an art. Here are a few things that must be designed for any <strong>real-world</strong> computer program:</p>
-
-                    <ul>
-                        <li>the logical flow of the instructions</li>
-                        <li>the mathematical procedures</li>
-                        <li>the layout of the programming statements</li>
-                        <li>the appearance of the screen</li>
-                        <li>the way the information is presented to the user</li>
-                        <li>the program's <strong><em>user friendliness</em></strong></li>
-                        <li>manuals, help systems, and/or other forms of written documentation</li>
-                    </ul>
-
-                    <p>When a computer is performing the actions described by the instructions in a computer program, we say it is <strong>running</strong> or <strong>executing</strong> the program. A computer will not begin execution of a program until it is told to do so. That typically requires the user to <strong>launch</strong> (or <strong>run</strong> or <strong>execute</strong>) the program, although programs may also be launched by other programs.</p>
 
                     <h2 id="hardware-and-software">Hardware and Software</h2>
 
