@@ -224,7 +224,7 @@ console.log(reactElement)
         type: 'radio',
         category: 'React',
         subcategory: '',
-        title: 'Single Parent Rule',
+        title: 'Everything is fine',
         question: `What will happen if you try to run the following code?
 ~~~jsx
 root.render(

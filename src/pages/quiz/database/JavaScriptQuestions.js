@@ -94,7 +94,7 @@ test();
         ],
         random: true,
         answer: 'undefined',
-        description: `Variable declarations in JS are *hoisted* to the top of their function scope but there assignments are not. Our example with \`var\` is interpreted like this:
+        description: `Variable declarations in JS are *hoisted* to the top of their function scope but the assignment is not. Our example with \`var\` is interpreted like this:
 
 ~~~js
 function text() {
