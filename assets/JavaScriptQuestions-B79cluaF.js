@@ -17,7 +17,7 @@ function test() {
 
 test();
 ~~~
-`,options:["undefined","5","ReferenceError","NaN",'""'],random:!0,answer:"undefined",description:`Variable declarations in JS are *hoisted* to the top of their function scope but there assignments are not. Our example with \`var\` is interpreted like this:
+`,options:["undefined","5","ReferenceError","NaN",'""'],random:!0,answer:"undefined",description:`Variable declarations in JS are *hoisted* to the top of their function scope but the assignment is not. Our example with \`var\` is interpreted like this:
 
 ~~~js
 function text() {

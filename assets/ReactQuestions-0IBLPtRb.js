@@ -46,7 +46,7 @@ import { createElement } from 'React'
 const reactElement = createElement("h1", null, "Hello from createElement")
 console.log(reactElement)
 ~~~
-        `,options:["an HTML element object","a React element object",'a string with the text "Hello from createElement"',"an error due to incorrect usage of `createElement`","a string","an array","undefined"],random:!0,answer:"a React element object"},{id:11,type:"radio",category:"React",subcategory:"",title:"Single Parent Rule",question:`What will happen if you try to run the following code?
+        `,options:["an HTML element object","a React element object",'a string with the text "Hello from createElement"',"an error due to incorrect usage of `createElement`","a string","an array","undefined"],random:!0,answer:"a React element object"},{id:11,type:"radio",category:"React",subcategory:"",title:"Everything is fine",question:`What will happen if you try to run the following code?
 ~~~jsx
 root.render(
     <h1>Hi there</h1>
