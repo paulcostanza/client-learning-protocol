@@ -69,6 +69,8 @@ console.log(result);`
                 </SyntaxHighlighter>
             </div>
 
+            <br />
+
             <h2>Review</h2>
 
             <ReviewQuiz

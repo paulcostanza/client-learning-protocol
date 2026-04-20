@@ -6,6 +6,7 @@ const sections = [
     { name: 'Strings', path: 'strings' },
     { name: 'String Methods', path: 'string-methods' },
     { name: 'Numbers', path: 'numbers' },
+    { name: 'Advance Operators', path: 'advance-operators' },
     { name: 'Conditionals: If statements', path: 'conditionals-if-statements' },
     { name: 'Array Methods', path: 'array-methods' },
     { name: 'Weird JS', path: 'weird-js' },
