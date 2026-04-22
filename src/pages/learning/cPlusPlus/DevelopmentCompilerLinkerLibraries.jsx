@@ -8,6 +8,16 @@ export default function DevelopmentCompilerLinkerLibraries() {
         cPlusPlus: () => import('../../../pages/quiz/database/CPlusPlusQuestions.js')
     }
 
+    const toAdd = `main.cpp     utils.cpp     math.cpp
+    ↓             ↓            ↓
+   compile       compile      compile
+    ↓             ↓            ↓
+ main.obj     utils.obj     math.obj
+        \        |         /
+              linker
+                ↓
+           program.exe`
+
     return (
         <div>
             <h1>C++ Development, Compiler, Linker, & Libraires</h1>
@@ -98,6 +108,10 @@ export default function DevelopmentCompilerLinkerLibraries() {
 
             <p><img className="img-in-reading" src={Linker} alt="How object files and libraries are pulled together by the linker to create an executable file" /></p>
 
+            <p>Alter image above by adding:</p>
+
+            <p>{toAdd}</p>
+
             <h3>The standard library</h3>
 
             <p>C++ comes with an extensive library called the <strong>C++ Standard Library</strong> that provides a set of useful capabilities for use in your programs. One of the most commonly used parts of the C++ standard library is the input/ouput library (called <code>iostream</code>), which contains functionality for printing text on a monitor and getting keyboard input from a user.</p>
@@ -119,6 +133,12 @@ export default function DevelopmentCompilerLinkerLibraries() {
             <p>Once you can run your program, then you can test it. <strong>Testing</strong> is the process of assessing whether your software is working as expected. Basic testing typically involves trying different input combinations to ensure the software behaves correctly in different cases.</p>
 
             <p>If the program does not behave as expected, then you will have to do some <strong>debugging</strong>, which is the process of finding and fixing programming errors.</p>
+
+            <h2>Summary</h2>
+
+            <p>If all of this seems a little overwhelming, just remember this next line:</p>
+
+            <p style={{ textAlign: "center" }}><code>.cpp files → compile → .obj files → linked → executable (.exe)</code></p>
 
             <hr />
 

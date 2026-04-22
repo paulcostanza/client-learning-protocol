@@ -4,9 +4,6 @@ import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 import Table from '@mui/joy/Table'
 import Paper from "@mui/material/Paper"
-import TableHead from "@mui/material/TableHead"
-import TableRow from "@mui/material/TableRow"
-import TableCell from "@mui/material/TableCell"
 import Box from "@mui/material/Box"
 
 export default function AdvanceOperators() {
@@ -217,11 +214,6 @@ console.log(a >> 1);  // 2 (Binary: 10)`
                     {rightShift}
                 </SyntaxHighlighter>
             </div>
-
-
-
-
-
 
             <hr />
 
