@@ -1,8 +1,12 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import Latex from 'react-latex'
 
 export default function MethodsAndFunctions() {
+    const quizImports = {
+        cSharp: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+    }
 
     const implicitTypeConversion = `byte b = 1;
 int i = b;`
@@ -137,6 +141,15 @@ int j = int.Parse(s);`
                     </div>
                 </div>
             </div>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="methods-and-functions"
+            />
         </>
     )
 }

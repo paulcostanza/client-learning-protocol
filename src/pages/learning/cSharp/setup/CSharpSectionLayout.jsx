@@ -1,4 +1,5 @@
-import SectionDrawer from '../../components/SideBarNav'
+import SectionDrawer from '../../../../components/SideBarNav'
+import PrevNextSection from '../../../../components/PrevNextSection'
 import { Outlet } from 'react-router-dom'
 
 const sections = [
@@ -20,6 +21,7 @@ export default function CSharpLanding() {
             <main>
                 <div className="container">
                     <Outlet />
+                    <PrevNextSection sections={sections} basePath='/cSharp' />
                 </div>
             </main>
         </main>

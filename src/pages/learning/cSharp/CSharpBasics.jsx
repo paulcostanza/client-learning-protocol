@@ -1,5 +1,6 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import Latex from 'react-latex'
 
 import Table from '@mui/joy/Table'
@@ -10,6 +11,9 @@ import TableCell from "@mui/material/TableCell"
 import Box from "@mui/material/Box"
 
 export default function CSharpBasics() {
+    const quizImports = {
+        cSharp: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+    }
 
     const comments = `// one way to write a comment
 
@@ -717,6 +721,14 @@ int b = a++;
 
             <p>Learned about the primitive types as well.</p>
 
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="basics"
+            />
         </>
     )
 }

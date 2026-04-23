@@ -1,7 +1,11 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function ControlFlow() {
+    const quizImports = {
+        cSharp: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+    }
 
     const overflowing = `byte number = 255
 number = number + 1; // 0, this is overflowing!`
@@ -89,6 +93,14 @@ number = number + 1; // 0, this is overflowing!`
                 </SyntaxHighlighter>
             </div>
 
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="control-flow"
+            />
         </>
     )
 }

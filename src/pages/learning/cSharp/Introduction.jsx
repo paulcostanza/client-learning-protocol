@@ -1,9 +1,17 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+
 // images
-import compile_c_or_cplusplus from '../../assets/cSharp/compile-c-or-c++.png'
-import compile_into_intermediate_language from '../../assets/cSharp/compile into intermediate language.png'
-import il_code_into_native_code from '../../assets/cSharp/il-code-into-native-code.png'
+import compile_c_or_cplusplus from '../../../assets/cSharp/compile-c-or-c++.png'
+import compile_into_intermediate_language from '../../../assets/cSharp/compile into intermediate language.png'
+import il_code_into_native_code from '../../../assets/cSharp/il-code-into-native-code.png'
 
 export default function Introduction() {
+    const quizImports = {
+        cSharp: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+    }
+
     return (
         <>
             <h1 id="intro">Intro</h1>
@@ -95,7 +103,14 @@ export default function Introduction() {
 
             </div>
 
+            <hr />
 
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="introduction"
+            />
         </>
     )
 }

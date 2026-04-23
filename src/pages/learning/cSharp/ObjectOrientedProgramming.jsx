@@ -1,11 +1,17 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import Latex from 'react-latex'
 
-import classes_101 from '../../assets/cSharp/classes-101.png'
-import namespace from '../../assets/cSharp/namespace.png'
-import assembly from '../../assets/cSharp/assembly.png'
-import application from '../../assets/cSharp/application.png'
+import classes_101 from '../../../assets/cSharp/classes-101.png'
+import namespace from '../../../assets/cSharp/namespace.png'
+import assembly from '../../../assets/cSharp/assembly.png'
+import application from '../../../assets/cSharp/application.png'
 
 export default function ObjectOrientedProgramming() {
+    const quizImports = {
+        cSharp: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+    }
 
     return (
         <>
@@ -70,6 +76,15 @@ export default function ObjectOrientedProgramming() {
                     </div>
                 </div>
             </div>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="object-oriented-programming"
+            />
         </>
     )
 }
