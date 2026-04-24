@@ -44,6 +44,8 @@ import ExceptionHandling from './pages/learning/cSharp/ExceptionHandling'
 import Introduction from './pages/learning/cSharp/Introduction'
 import MethodsAndFunctions from './pages/learning/cSharp/MethodsAndFunctions'
 import ObjectOrientedProgramming from './pages/learning/cSharp/ObjectOrientedProgramming'
+import CSharpAPIsIntro from './pages/learning/cSharp/APIsIntro'
+import CSharpAPIsControllerClass from './pages/learning/cSharp/APIsControllerClass'
 
 import Layout from './components/Layout'
 import Redis from './pages/redis/Redis'
@@ -219,6 +221,8 @@ function App() {
               <Route path='intro' element={<Introduction />} />
               <Route path='methods-and-functions' element={<MethodsAndFunctions />} />
               <Route path='oop' element={<ObjectOrientedProgramming />} />
+              <Route path='apis-intro' element={<CSharpAPIsIntro />} />
+              <Route path='apis-controller-class' element={<CSharpAPIsControllerClass />} />
             </Route>
 
             <Route path='/react' element={<ReactLanding />} />

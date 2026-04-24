@@ -1,3 +1,9 @@
+This section is straight up dank!! Need to...
+
+- go through each file
+- add subcategories to questions
+- fix accordians
+
 ## Master list of C#
 
 *Everything I want to add to the website for C#*

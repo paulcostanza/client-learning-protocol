@@ -7,6 +7,8 @@ const sections = [
     { name: 'Methods & Functions', path: 'methods-and-functions' },
     { name: 'Object Oriented Programming', path: 'oop' },
     { name: 'Exception Handling', path: 'exception-handling' },
+    { name: 'APIs: Intro', path: 'apis-intro' },
+    { name: 'APIs: Controller Class', path: 'apis-controller-class' },
 ]
 
 export default function CSharpLanding() {
