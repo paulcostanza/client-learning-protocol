@@ -70,22 +70,6 @@ export default [
         category: 'c#',
         subcategory: '',
         title: '',
-        question: 'What happens if you overflow a byte variable in C# without using the `checked` keyword?',
-        options: [
-            'the program crashes',
-            'the value wraps around',
-            'an exception is thrown',
-            'the value becomes null'
-        ],
-        random: true,
-        answer: 'the value wraps around'
-    },
-    {
-        id: 6,
-        type: 'radio',
-        category: 'c#',
-        subcategory: '',
-        title: '',
         question: 'Which operator is used for bitwise AND in C#?',
         options: [
             '\`&&\`',
@@ -98,12 +82,12 @@ export default [
         answer: '\`&\`'
     },
     {
-        id: 7,
+        id: 6,
         type: 'radio',
         category: 'c#',
         subcategory: '',
-        title: '',
-        question: 'Which of the following is NOT a primitive type in C#?',
+        title: 'Reference to what?',
+        question: 'Which of the following is a reference type in C#?',
         options: [
             'int',
             'float',
@@ -114,7 +98,7 @@ export default [
         answer: 'string'
     },
     {
-        id: 8,
+        id: 7,
         type: 'radio',
         category: 'c#',
         subcategory: '',
@@ -130,7 +114,7 @@ export default [
         answer: 'Bitwise NOT (flips all bits)'
     },
     {
-        id: 9,
+        id: 8,
         type: 'radio',
         category: 'c#',
         subcategory: '',
@@ -146,7 +130,7 @@ export default [
         answer: 'shifts all bits in `a` left by 2 positions'
     },
     {
-        id: 10,
+        id: 9,
         type: 'radio',
         category: 'c#',
         subcategory: 'asp.net-core-web-api',
@@ -167,7 +151,7 @@ export default [
 - returns HTTP responses (JSON, status codes)`
     },
     {
-        id: 11,
+        id: 10,
         type: 'radio',
         category: 'c#',
         subcategory: 'asp.net-core-web-api',
@@ -184,7 +168,7 @@ export default [
         description: `Model binding takes data from an HTTP request and automatically converts it into C# objects or parameters.`
     },
     {
-        id: 12,
+        id: 11,
         type: 'radio',
         category: 'c#',
         subcategory: 'asp.net-core-web-api',
@@ -201,7 +185,7 @@ export default [
         description: `It uses constructor injection for Dependency Injection.`
     },
     {
-        id: 13,
+        id: 12,
         type: 'radio',
         category: 'c#',
         subcategory: 'asp.net-core-web-api',
@@ -217,7 +201,7 @@ export default [
         answer: 'automatic model validation and improved API behaviors'
     },
     {
-        id: 14,
+        id: 13,
         type: 'radio',
         category: 'c#',
         subcategory: 'asp.net-core-web-api',
@@ -233,7 +217,7 @@ export default [
         answer: 'allows returning both data and different HTTP status codes'
     },
     {
-        id: 15,
+        id: 14,
         type: 'radio',
         category: 'c#',
         subcategory: 'asp.net-core-web-api',
@@ -271,7 +255,7 @@ MIddleware forms a pipeline where each component can...
 - modify the response on the way back out`
     },
     {
-        id: 16,
+        id: 15,
         type: 'radio',
         category: 'c#',
         subcategory: 'asp.net-core-web-api',
@@ -305,5 +289,225 @@ Request 2
 
 Each request gets its own instance, but components within that request share it. 
 `
-    }
+    },
+    {
+        id: 16,
+        type: 'input',
+        category: 'c#',
+        subcategory: 'apis-intro',
+        title: 'Post triple',
+        question: `What is the response if the client sends \`4\`? If error, write \`error\`.
+        
+~~~c#
+app.MapPost("/triple", (int num) => num * 3);
+~~~
+`,
+        options: [
+            "",
+        ],
+        random: true,
+        answer: '^\\s*12\\s*$',
+        description: `Answer: \`12\``
+    },
+    {
+        id: 17,
+        type: 'input',
+        category: 'c#',
+        subcategory: 'apis-intro',
+        title: 'Get Math',
+        question: `What is the response? If error, write \`error\`.
+        
+~~~c#
+app.MapGet("/math", () => new { result = 7 * 6 });
+~~~
+`,
+        options: [
+            "",
+        ],
+        random: true,
+        answer: '^\\s*\\{\\s*"result"\\s*:\\s*42\\s*\\}\\s*$',
+        description: `Answer: \`{"result": 42}\``
+    },
+    {
+        id: 18,
+        type: 'input',
+        category: 'c#',
+        subcategory: 'apis-intro',
+        title: 'Get Index I',
+        question: `What is the response? If error, write \`error\`.
+
+Request:
+~~~console
+'/numbers/2'
+~~~
+   
+API call:
+~~~c#
+var numbers = new List<int> { 3, 6, 9 };
+
+app.MapGet("/numbers/{index}", (int index) => numbers[index]);
+~~~
+`,
+        options: [
+            "",
+        ],
+        random: true,
+        answer: '^\\s*9\\s*$',
+        description: `Answer: \`9\``
+    },
+    {
+        id: 19,
+        type: 'input',
+        category: 'c#',
+        subcategory: 'apis-intro',
+        title: 'Get Index II',
+        question: `What is the response? If error, write \`error\`.
+
+Request:
+~~~console
+'/numbers/5'
+~~~
+   
+API call:
+~~~c#
+var numbers = new List<int> { 3, 6, 9 };
+
+app.MapGet("/numbers/{index}", (int index) => numbers[index]);
+~~~
+`,
+        options: [
+            "",
+        ],
+        random: true,
+        answer: '^\\s*error\\s*$',
+        description: `Answer: \`error\``
+    },
+    {
+        id: 20,
+        type: 'input',
+        category: 'c#',
+        subcategory: 'apis-intro',
+        title: 'Post score',
+        question: `What is the response? If error, write \`error\`.
+
+Input:
+~~~json
+{
+  "name": "Sam",
+  "score": 80
+}
+~~~
+   
+API call:
+~~~c#
+app.MapPost("/d", (User user) => new { user.Score });
+~~~
+`,
+        options: [
+            "",
+        ],
+        random: true,
+        answer: '^\\s*\\{\\s*"score"\\s*:\\s*80\\s*\\}\\s*$',
+        description: `Answer: \`{"score": 80}\``
+    },
+    {
+        id: 21,
+        type: 'input',
+        category: 'c#',
+        subcategory: 'apis-intro',
+        title: 'Post unpdate',
+        question: `What is the response? If error, write \`error\`.
+
+Input:
+~~~json
+{
+  "name": "Sam",
+  "score": 80
+}
+~~~
+
+Request:
+~~~console
+'/increase/50'
+~~~
+   
+API call:
+~~~c#
+app.MapPost("/increase/{amount}", (int amount, User user) =>
+    new { updated = user.Score + amount }
+);
+~~~
+`,
+        options: [
+            "",
+        ],
+        random: true,
+        answer: '^\\s*\\{\\s*"updated"\\s*:\\s*130\\s*\\}\\s*$',
+        description: `Answer: \`{"updated": 130}\``
+    },
+    {
+        id: 22,
+        type: 'input',
+        category: 'c#',
+        subcategory: 'apis-intro',
+        title: 'Post rename',
+        question: `What is the response? If error, write \`error\`.
+
+Input:
+~~~json
+{
+  "name": "John",
+  "score": 10
+}
+~~~
+
+Request:
+~~~console
+'/rename/Mr_'
+~~~
+   
+API call:
+~~~c#
+app.MapPost("/rename/{prefix}", (string prefix, User user) =>
+    new { name = prefix + user.Name }
+);
+~~~
+`,
+        options: [
+            "",
+        ],
+        random: true,
+        answer: '^\\s*\\{\\s*"name"\\s*:\\s*"Mr_John"\\s*\\}\\s*$',
+        description: `Answer: \`{"name": "Mr_John"}\``
+    },
+    {
+        id: 23,
+        type: 'input',
+        category: 'c#',
+        subcategory: 'apis-intro',
+        title: 'Post calc',
+        question: `What is the response? If error, write \`error\`.
+
+Input:
+~~~json
+10
+~~~
+
+Request:
+~~~console
+'/calc/5'
+~~~
+   
+API call:
+~~~c#
+app.MapPost("/calc/{x}", (int x, int y) => x + y);
+~~~
+`,
+        options: [
+            "",
+        ],
+        random: true,
+        answer: '^\\s*15\\s*$',
+        description: `Answer: \`15\``
+    },
 ]

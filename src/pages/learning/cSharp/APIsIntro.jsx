@@ -4,7 +4,7 @@ import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function APIsIntro() {
     const quizImports = {
-        cSharp: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+        cSharp: () => import('../../../pages/quiz/database/CSharpQuestions.js')
     }
 
     const JSON = `{
@@ -356,7 +356,7 @@ public ActionResult<User> CreateUser([FromBody] User user)
 
             <ReviewQuiz
                 quizImports={quizImports}
-                subcategory="control-flow"
+                subcategory="apis-intro"
             />
         </div>
     )
