@@ -759,6 +759,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 /********************************** W O R K S P A C E **********************************/
+/*********************************** H O M E P A G E ***********************************/
 
 .split {
     display: flex;
@@ -871,4 +872,102 @@ input[type="checkbox"]:checked+label::before {
 
 .output {
     margin: 10px;
+}
+
+/*********************************** H O M E P A G E ***********************************/
+
+.home-page-animations,
+.home-page-animations {
+    height: 100vh;
+    /* background: #061a14; */
+    position: relative;
+    overflow: hidden;
+}
+
+.home-page-animations .top-right::after {
+    /* Position on page */
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+
+    transform: rotate(180deg);
+
+    background:
+        /* nodes */
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 10% 80% / 120px 208px no-repeat,
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 10% 80% / 100px 268px no-repeat,
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 10% 80% / 75px 328px no-repeat,
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 10% 80% / 52.5px 385px no-repeat,
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 10% 80% / 27px 440px no-repeat,
+
+        /* horizontal lines */
+        /* linear-gradient(#00ffd0, #00ffd0) 0 80% / 100px 2px no-repeat,
+        linear-gradient(#00ffd0, #00ffd0) 0 60% / 80px 2px no-repeat,
+        linear-gradient(#00ffd0, #00ffd0) 0 40% / 60px 2px no-repeat, */
+
+        /* vertical lines */
+        /* linear-gradient(90deg, transparent 48%, #00ffd0 50%, transparent 52%) 27.75% 44% / 80px 80px no-repeat, */
+        /* linear-gradient(#00ffd0, #00ffd0) 40% 100% / 2px 80px no-repeat, */
+        /* linear-gradient(#00ffd0, #00ffd0) 60% 100% / 2px 60px no-repeat, */
+
+        /* 45° angled lines */
+        linear-gradient(-45deg, transparent 48%, #00ffd0 50%, transparent 52%) 0 80% / 80px 80px no-repeat,
+        linear-gradient(-45deg, transparent 48%, #00ffd0 50%, transparent 52%) 0 70% / 70px 80px no-repeat,
+        linear-gradient(-45deg, transparent 48%, #00ffd0 50%, transparent 52%) 0 60% / 60px 80px no-repeat,
+        linear-gradient(-45deg, transparent 48%, #00ffd0 50%, transparent 52%) 0 50% / 50px 80px no-repeat,
+        linear-gradient(-45deg, transparent 48%, #00ffd0 50%, transparent 52%) 0 40% / 40px 80px no-repeat;
+
+    animation: steady-pulse 2s infinite ease-in-out;
+}
+
+
+.home-page-animations .middle-left::after {
+    /* Position on page */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 200px;
+    height: 50px;
+
+    background:
+        /* nodes */
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 5% 8% / 5px 5px no-repeat,
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 15% 23% / 5px 5px no-repeat,
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 25% 40% / 5px 5px no-repeat,
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 35% 55% / 5px 5px no-repeat,
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 45% 72% / 5px 5px no-repeat,
+        radial-gradient(circle, #00ffd0 2px, transparent 3px) 55% 87% / 5px 5px no-repeat,
+
+        /* horizontal lines */
+        linear-gradient(#00ffd0, #00ffd0) 0 10% / 10px 2px no-repeat,
+        linear-gradient(#00ffd0, #00ffd0) 0 25% / 30px 2px no-repeat,
+        linear-gradient(#00ffd0, #00ffd0) 0 40% / 50px 2px no-repeat,
+        linear-gradient(#00ffd0, #00ffd0) 0 55% / 70px 2px no-repeat,
+        linear-gradient(#00ffd0, #00ffd0) 0 70% / 90px 2px no-repeat,
+        linear-gradient(#00ffd0, #00ffd0) 0 85% / 110px 2px no-repeat;
+
+
+    animation: steady-pulse 2s infinite ease-in-out;
+}
+
+/* glow animation */
+@keyframes steady-pulse {
+    0% {
+        opacity: 0.3;
+        filter: drop-shadow(0 0 2px #00ffd0);
+    }
+
+    50% {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px #00ffd0);
+    }
+
+    100% {
+        opacity: 0.3;
+        filter: drop-shadow(0 0 2px #00ffd0);
+    }
 }

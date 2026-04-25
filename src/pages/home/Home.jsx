@@ -1,4 +1,3 @@
-import CLP from '../../assets/landingPage/clp_animated.gif'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { SplitText } from 'gsap/SplitText'
@@ -32,11 +31,9 @@ export default function Home() {
 
                 <h1 ref={textRef} >Client Learning Protocol</h1>
 
-                <img src={CLP} style={{ width: '100%' }} />
-                <p style={{ textAlign: 'center' }}>
+                <p style={{ textAlign: 'center' }}>To get started, choose a learning path from above under <strong>LEARNING</strong>.</p>
 
-                    Work in progress, working at a slow, leisurely pace, tehe.
-                </p>
+                <p style={{ textAlign: 'center' }}>To jump right into coding, click <strong>PRACTICE</strong>.</p>
             </div>
         </main>
     );
