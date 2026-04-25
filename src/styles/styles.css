@@ -876,6 +876,7 @@ input[type="checkbox"]:checked+label::before {
 
 /*********************************** H O M E P A G E ***********************************/
 
+/* For circuits, that would be sick if they lit up one at a time */
 .home-page-animations,
 .home-page-animations {
     height: 100vh;
@@ -923,7 +924,6 @@ input[type="checkbox"]:checked+label::before {
     animation: steady-pulse 2s infinite ease-in-out;
 }
 
-
 .home-page-animations .middle-left::after {
     /* Position on page */
     content: "";
@@ -950,24 +950,92 @@ input[type="checkbox"]:checked+label::before {
         linear-gradient(#00ffd0, #00ffd0) 0 70% / 90px 2px no-repeat,
         linear-gradient(#00ffd0, #00ffd0) 0 85% / 110px 2px no-repeat;
 
-
     animation: steady-pulse 2s infinite ease-in-out;
 }
 
 /* glow animation */
 @keyframes steady-pulse {
     0% {
-        opacity: 0.3;
+        opacity: 0.1;
         filter: drop-shadow(0 0 2px #00ffd0);
     }
 
-    50% {
+    75% {
         opacity: 1;
         filter: drop-shadow(0 0 8px #00ffd0);
     }
 
     100% {
-        opacity: 0.3;
+        opacity: 0.1;
         filter: drop-shadow(0 0 2px #00ffd0);
     }
+}
+
+#matrix-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* z-index puts it behind everything */
+    background: black;
+    /* background is important so you can see it */
+}
+
+.matrix-element {
+    background-color: rgba(17, 24, 18, 0.05);
+    padding: 10px;
+    border-radius: 10px;
+    width: max-contents;
+    cursor: pointer;
+}
+
+.matrix-items {
+    width: 50%;
+    margin: auto;
+    height: 30px;
+}
+
+.matrix-items .matrix-element {
+    color: #00ffd0;
+    background-color: rgb(17, 24, 18);
+    text-align: center;
+    text-decoration: none;
+}
+
+.matrix-items .matrix-element:hover {
+    animation: link-pulse 1.5s infinite ease-in-out;
+}
+
+@media (max-width: 900px) {
+    .matrix-show-on-big-screen-only {
+        display: none;
+    }
+}
+
+@keyframes link-pulse {
+    0% {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px #00ffd0);
+    }
+
+    50% {
+        opacity: 0.7;
+        filter: drop-shadow(0 0 2px #00ffd0);
+    }
+
+    100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 8px #00ffd0);
+    }
+}
+
+/* temp till I add a Learning page */
+.matrix-items>.matrix-element:first-of-type {
+    cursor: not-allowed;
+}
+
+.matrix-items>.matrix-element:first-of-type:hover {
+    animation: none;
 }
