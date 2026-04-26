@@ -30,6 +30,9 @@ import { countCharacters } from './count-characters'
 import { removeKeys } from './remove-keys'
 import { moveZeros } from './move-zeros'
 import { squaresOfAnArray } from './squares-of-an-array'
+import { validPalindrome } from './valid-palindrome'
+import { validParentheses } from './valid-parentheses'
+import { romanToInteger } from './roman-to-integer'
 
 const problems = {
     // Printing 101
@@ -53,6 +56,7 @@ const problems = {
     "single-index-string-mutation": singleIndexStringMutation,
     "text-wrap": textWrap,
     "palindrome-characters": palindromeCharacters,
+    "valid-palindrome": validPalindrome,
     // list
     "how-many": howMany,
     "add-lists": addLists,
@@ -67,6 +71,8 @@ const problems = {
     "get-dictionary-values": getDictionaryValues,
     "count-characters": countCharacters,
     "remove-keys": removeKeys,
+    "valid-parentheses": validParentheses,
+    "roman-to-integer": romanToInteger,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     "move-zeros": moveZeros,
