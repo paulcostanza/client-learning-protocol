@@ -27,22 +27,24 @@ export const problemsList = {
         { id: "how-many", title: "How Many", status: '', review: '', order: 19 },
         { id: "add-lists", title: "Add Lists", status: '', review: '', order: 20 },
         { id: "pop-last-n-elements", title: "Pop Last n Elements", status: '', review: '', order: 21 },
+        { id: "squares-of-an-array", title: "Squares of an Array", status: '', review: '', order: 22 },
     ],
     sets: [
-        { id: "list-to-set", title: "List to Set", status: '', review: '', order: 22 },
-        { id: "count-unique-words", title: "Count Unique Words", status: '', review: '', order: 23 },
-        { id: "contains-duplicate", title: "Contains Duplicate", status: '', review: '', order: 24 },
+        { id: "list-to-set", title: "List to Set", status: '', review: '', order: 23 },
+        { id: "count-unique-words", title: "Count Unique Words", status: '', review: '', order: 24 },
+        { id: "contains-duplicate", title: "Contains Duplicate", status: '', review: '', order: 25 },
     ],
     dictionaries: [
-        { id: "get-dictionary-keys", title: "Get Dictionary Keys", status: '', review: '', order: 25 },
-        { id: "get-dictionary-values", title: "Get Dictionary Values", status: '', review: '', order: 26 },
-        { id: "count-characters", title: "Count Characters", status: '', review: '', order: 27 },
-        { id: "remove-keys", title: "Remove Keys", status: '', review: '', order: 28 },
+        { id: "get-dictionary-keys", title: "Get Dictionary Keys", status: '', review: '', order: 26 },
+        { id: "get-dictionary-values", title: "Get Dictionary Values", status: '', review: '', order: 27 },
+        { id: "count-characters", title: "Count Characters", status: '', review: '', order: 28 },
+        { id: "remove-keys", title: "Remove Keys", status: '', review: '', order: 29 },
     ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 29 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 30 },
+        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 31 },
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 30 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 32 },
     ]
 }

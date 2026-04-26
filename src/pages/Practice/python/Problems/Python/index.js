@@ -28,6 +28,8 @@ import { getDictionaryKeys } from './get-dictionary-keys'
 import { getDictionaryValues } from './get-dictionary-values'
 import { countCharacters } from './count-characters'
 import { removeKeys } from './remove-keys'
+import { moveZeros } from './move-zeros'
+import { squaresOfAnArray } from './squares-of-an-array'
 
 const problems = {
     // Printing 101
@@ -55,6 +57,7 @@ const problems = {
     "how-many": howMany,
     "add-lists": addLists,
     "pop-last-n-elements": popLastNElements,
+    "squares-of-an-array": squaresOfAnArray,
     // sets
     "list-to-set": listToSet,
     "count-unique-words": countUniqueWords,
@@ -66,6 +69,7 @@ const problems = {
     "remove-keys": removeKeys,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
+    "move-zeros": moveZeros,
     // matrices
     "matrix-rotation-i": matrixRotationI,
 }

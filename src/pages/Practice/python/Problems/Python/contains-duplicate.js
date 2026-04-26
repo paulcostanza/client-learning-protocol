@@ -73,7 +73,7 @@ const constraints = `<ul>
 
 export const containsDuplicate = {
   id: "contains-duplicate",
-  title: "24. Contains Duplicate",
+  title: "25. Contains Duplicate",
   problemStatement: `<p>Given a list of <code>words</code>, return <code>True</code> if there are any duplciate strings in the list, and <code>False</code> if there are not.</p>`,
   starterCode,
   testCode,

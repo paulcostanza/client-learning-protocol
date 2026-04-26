@@ -72,11 +72,11 @@ const constraints = `<ul>
 `
 
 export const countUniqueWords = {
-    id: "count-unique-words",
-    title: "23. Count Unique Words",
-    problemStatement: `<p>Given a list of <code>words</code>, return the number of unique words in the list. It the list is empty, return 0.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "count-unique-words",
+  title: "24. Count Unique Words",
+  problemStatement: `<p>Given a list of <code>words</code>, return the number of unique words in the list. It the list is empty, return 0.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example
 }

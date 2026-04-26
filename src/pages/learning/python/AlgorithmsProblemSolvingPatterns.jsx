@@ -36,11 +36,22 @@ Not found`
         <div className="container">
             <h1>Algorithms: Problem Solving Patterns</h1>
 
+            <p>The following are reusable strategies that can be applied to various problems. They are not tied to just one problem, but applicable across many problems to improve efficiency for time and/or space. Some of the topics we will talk about include:</p>
+
+            <ul>
+                <li>Sliding window</li>
+                <li>Fast & slow pointers</li>
+                <li>Binary search</li>
+                <li>Prefix sums</li>
+                <li>Backtracking</li>
+                <li>Greedy algorithms</li>
+            </ul>
+
             <h2>Two-Pointer Technique</h2>
 
             <p>The <strong>two-pointer technique</strong> is a strategy used to efficiently solve problems that involve searching for a pair of elements or a subarray that meets a certain condition. It typically involves using two pointers that traverse the data structure, often an array or a linked list, and manipulating their positions based on the problem requirements. The technique is particularly useful for optimizing the time complexity of the solution.</p>
 
-            <p>Here we have an example of a problem where you need to find a pair of elements in a sorted array that sums up to a given target.</p>
+            <p>Here we have an example of a problem where you need to find a pair of elements in a sorted array that sum up to a given target.</p>
 
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
@@ -58,7 +69,7 @@ Not found`
 
             <p>If the sum is greater than <code>target</code>, our sum is too high and we need to lower the higher number, so the <code>right</code> index is lowered by one. If our sum is lower than <code>target</code>, our sum is too lower and we need to raise the lower number, so the <code>left</code> index is raised by one.</p>
 
-            <p>If <code>left</code> is greater than <code>right</code>, that means we have traversed the whole array and we <em>do not</em> have two elements that add up to the <code>target</code>.</p>
+            <p>If <code>left</code> is greater than or equal <code>right</code>, that means we have traversed the whole array and we <em>do not</em> have two elements that add up to the <code>target</code>.</p>
 
 
 
