@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def remove_keys(my_dict, keys):
   # your code goes here
   
@@ -97,10 +99,11 @@ const constraints = `<ul>
 
 export const removeKeys = {
   id: "remove-keys",
-  title: "28. Remove Keys",
+  title: "30. Remove Keys",
   problemStatement: `<p>Given a dictionary <code>my_dict</code> and a list <code>keys</code>, remove all the keys in the list from the dictionary and return the modified dictionary. If a key does not exist, then ignore it.</p> <p><em>Be careful</em>: If you try to remove a key that doesn't exist, it will raise a <code>KeyError</code>. Make sure to handle this case by checking if the key exists before trying to remove it, or using the second argument of the <code>pop()</code> function.</p>`,
   starterCode,
   testCode,
   constraints,
-  example
+  example,
+  status: getProblemStatusById("remove-keys"),
 }

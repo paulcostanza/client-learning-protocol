@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def append_to_list(my_list, elements):
   # your code goes here
   
@@ -82,11 +84,12 @@ const constraints = `<ul>
 `
 
 export const addLists = {
-    id: "add-lists",
-    title: "20. Add Lists",
-    problemStatement: `<p>Given a list of <code>my_list</code> and a list of <code>elements</code>, append each number from <code>elements</code> to the end of <code>my_list</code>. Return the modified list.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "add-lists",
+  title: "21. Add Lists",
+  problemStatement: `<p>Given a list of <code>my_list</code> and a list of <code>elements</code>, append each number from <code>elements</code> to the end of <code>my_list</code>. Return the modified list.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("add-lists"),
 }

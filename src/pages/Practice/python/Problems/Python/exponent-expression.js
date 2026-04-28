@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def power(base, exp):
   # write your function here
   
@@ -50,10 +52,11 @@ power(4, 2) would return 16
 power(5, 3) would return 125`
 
 export const exponentExpression = {
-    id: "exponent-expression",
-    title: "4. Exponent Expression",
-    problemStatement: `<p>Return the value where <code>base</code> and <code>exp</code> return the answer.</p>`,
-    starterCode,
-    testCode,
-    example
+  id: "exponent-expression",
+  title: "4. Exponent Expression",
+  problemStatement: `<p>Return the value where <code>base</code> and <code>exp</code> return the answer.</p>`,
+  starterCode,
+  testCode,
+  example,
+  status: getProblemStatusById("exponent-expression"),
 }

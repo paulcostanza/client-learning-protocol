@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def text_wrap(str, max_width):
   # your code goes here
   
@@ -75,5 +77,6 @@ export const textWrap = {
   starterCode,
   testCode,
   constraints,
-  example
+  example,
+  status: getProblemStatusById("text-wrap"),
 }

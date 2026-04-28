@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def famous_quote():
   # enter code here
   
@@ -36,5 +38,6 @@ export const famousQuote = {
   example: example,
   constraints: `<li className='mt-2'>Make sure you escape</li>`,
   starterCode,
-  testCode
+  testCode,
+  status: getProblemStatusById("famous-quote"),
 }

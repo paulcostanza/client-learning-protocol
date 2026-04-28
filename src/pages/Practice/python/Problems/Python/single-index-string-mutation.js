@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def mutate_string(string, position, character):
   # your code goes here
   
@@ -59,9 +61,9 @@ abrackdabra
 `
 
 export const singleIndexStringMutation = {
-    id: "single-index-string-mutation",
-    title: "16. Single Index String Mutation",
-    problemStatement: `<p>Read a given string, change the character at a given index, and then return the modified string. <code>mutate_string</code> has the following parameters:</p>
+  id: "single-index-string-mutation",
+  title: "16. Single Index String Mutation",
+  problemStatement: `<p>Read a given string, change the character at a given index, and then return the modified string. <code>mutate_string</code> has the following parameters:</p>
 
     <ul>
         <li>string <code>string</code>: the string to change</li>
@@ -69,7 +71,8 @@ export const singleIndexStringMutation = {
         <li>string <code>character</code>: the character to insert</li>
     </ul>
 `,
-    starterCode,
-    testCode,
-    example
+  starterCode,
+  testCode,
+  example,
+  status: getProblemStatusById("single-index-string-mutation"),
 }

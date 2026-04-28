@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def count(nums, x):
   # your code goes here
   
@@ -79,11 +81,12 @@ const constraints = `<ul>
 `
 
 export const howMany = {
-    id: "how-many",
-    title: "19. How Many",
-    problemStatement: `<p>Given a list of <code>nums</code> and an integer <code>x</code>, return the number of times the integer <code>x</code> appears in <code>nums</code>.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "how-many",
+  title: "20. How Many",
+  problemStatement: `<p>Given a list of <code>nums</code> and an integer <code>x</code>, return the number of times the integer <code>x</code> appears in <code>nums</code>.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("how-many"),
 }

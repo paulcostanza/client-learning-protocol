@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def first_digit_from_hundreds_place(num):
   # write your function here
   
@@ -58,10 +60,11 @@ Explanation: The first digit of 762 is 7.
 `
 
 export const firstDigitOfHundredsPlace = {
-    id: "first-digit-of-hundreds-place",
-    title: "14. First digit of Hundreds Place",
-    problemStatement: `<p>Given a three digit number <code>num</code>, return the first digit.</p>`,
-    starterCode,
-    testCode,
-    example
+  id: "first-digit-of-hundreds-place",
+  title: "14. First digit of Hundreds Place",
+  problemStatement: `<p>Given a three digit number <code>num</code>, return the first digit.</p>`,
+  starterCode,
+  testCode,
+  example,
+  status: getProblemStatusById("first-digit-of-hundreds-place"),
 }

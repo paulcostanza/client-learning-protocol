@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def pop_n_from_list(my_list, n):
   # your code goes here
   
@@ -80,11 +82,12 @@ const constraints = `<ul>
 `
 
 export const popLastNElements = {
-    id: "pop-last-n-elements",
-    title: "21. Pop Last n Elements",
-    problemStatement: `<p>Remove the last <code>n</code> elements from <code>my_list</code>. Return the modified list.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "pop-last-n-elements",
+  title: "22. Pop Last n Elements",
+  problemStatement: `<p>Remove the last <code>n</code> elements from <code>my_list</code>. Return the modified list.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("pop-last-n-elements"),
 }

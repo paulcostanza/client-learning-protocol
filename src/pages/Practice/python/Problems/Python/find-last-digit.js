@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def last_digit(num):
   # write your function here
   
@@ -56,10 +58,11 @@ Explanation: The last digit of 162436 is 6
 `
 
 export const findLastDigit = {
-    id: "find-last-digit",
-    title: "11. Find the last digit",
-    problemStatement: `<p>Given <code>num</code>, return the last digit.</p>`,
-    starterCode,
-    testCode,
-    example
+  id: "find-last-digit",
+  title: "11. Find the last digit",
+  problemStatement: `<p>Given <code>num</code>, return the last digit.</p>`,
+  starterCode,
+  testCode,
+  example,
+  status: getProblemStatusById("find-last-digit"),
 }

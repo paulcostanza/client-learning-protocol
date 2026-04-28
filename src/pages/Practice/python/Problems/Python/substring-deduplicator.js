@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def merge_the_tools(str, k):
   # your code goes here
   
@@ -86,5 +88,6 @@ export const substringDeduplicator = {
   starterCode,
   testCode,
   constraints,
-  example
+  example,
+  status: getProblemStatusById("substring-deduplicator"),
 }

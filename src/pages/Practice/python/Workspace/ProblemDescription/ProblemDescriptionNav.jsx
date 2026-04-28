@@ -4,22 +4,15 @@ import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
 
-export default function ProblemDescriptionNav() {
+export default function ProblemDescriptionNav({ questionId }) {
     const [value, setValue] = useState("description")
 
     const handleChange = (event, newValue) => {
         setActiveTab(newValue)
     }
+
     return (
         <div className='problem-description-nav'>
-            {/* Tabs */}
-
-            {/* <div className='problem-description-header'>
-                <button className='problem-description-header-btn'>Description</button>
-                <button className='problem-description-header-btn'>Study Guide</button>
-                <button className='problem-description-header-btn'>Comments</button>
-                <button className='problem-description-header-btn'>Playlist</button>
-            </div> */}
 
             <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext> {/* removed value={activeTab} from here, look to PlaygroundNav.jsx */}
@@ -66,6 +59,17 @@ export default function ProblemDescriptionNav() {
                                     }
                                 }}
                             />
+                            {/* <Tab
+                                className='playground-nav-file'
+                                label="solution"
+                                value="solution"
+                                sx={{
+                                    color: '#444',
+                                    '&.Mui-selected': {
+                                        color: '#e0e0e0'
+                                    }
+                                }}
+                            /> */}
                         </TabList>
                     </Box>
                 </TabContext>

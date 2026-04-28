@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def count_affordable_pairs(prices, budget):
   # your code goes here
   
@@ -81,10 +83,11 @@ const constraints = `<ul>
 
 export const countAffordablePairs = {
   id: "count-affordable-pairs",
-  title: "25. Count Affordable Pairs",
+  title: "33. Count Affordable Pairs",
   problemStatement: `<p>Given a sorted array of positive integers and a target value, count the number of pairs <code>(i, j)</code> where <code>i < j</code> and <code>array[i] + array[j] <= target</code>.</p>`,
   starterCode,
   testCode,
   constraints,
-  example
+  example,
+  status: getProblemStatusById("count-affordable-pairs"),
 }

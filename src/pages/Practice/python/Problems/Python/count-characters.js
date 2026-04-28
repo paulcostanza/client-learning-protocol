@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def count_characters(phrase):
   # your code goes here
   
@@ -88,11 +90,12 @@ const constraints = `<ul>
 `
 
 export const countCharacters = {
-    id: "count-characters",
-    title: "26. Count Characters",
-    problemStatement: `<p>Given a string <code>phrase</code>, return a dictionary with the count of each character in the word. The <em>keys</em> should be the characters and the <em>values</em> should be the count of each character.`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "count-characters",
+  title: "29. Count Characters",
+  problemStatement: `<p>Given a string <code>phrase</code>, return a dictionary with the count of each character in the word. The <em>keys</em> should be the characters and the <em>values</em> should be the count of each character.`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("count-characters"),
 }

@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def move_zeros(nums):
   # modify nums in-place please
   
@@ -77,11 +79,12 @@ const constraints = `<ul>
 </ul>`
 
 export const moveZeros = {
-    id: "move-zeros",
-    title: "30. Move Zeros",
-    problemStatement: `<p>Given a list of integers, move all the zeros to the end of the list while maintaining the relative order of the non-zero elements.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "move-zeros",
+  title: "34. Move Zeros",
+  problemStatement: `<p>Given a list of integers, move all the zeros to the end of the list while maintaining the relative order of the non-zero elements.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("move-zeros"),
 }

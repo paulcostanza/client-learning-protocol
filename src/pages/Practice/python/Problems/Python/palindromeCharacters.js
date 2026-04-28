@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def palindrome_characters(str):
   # your code goes here
   
@@ -79,5 +81,6 @@ export const palindromeCharacters = {
   starterCode,
   testCode,
   constraints,
-  example
+  example,
+  status: getProblemStatusById("palindrome-characters")
 }

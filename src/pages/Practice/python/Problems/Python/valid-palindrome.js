@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def valid_palindrome(str):
   # enter code here please
   
@@ -86,11 +88,12 @@ const constraints = `<ul>
 </ul>`
 
 export const validPalindrome = {
-    id: "valid-palindrome",
-    title: "22. Valid Palindrome",
-    problemStatement: `<p>Given a string <code>str</code>, return a boolean that determines if <code>str</code> is a valid palindrome or not. For this problem, ignore any non-alphabet characters such as spaces, quesiton marks, etc. Please ignore character casings as well.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "valid-palindrome",
+  title: "19. Valid Palindrome",
+  problemStatement: `<p>Given a string <code>str</code>, return a boolean that determines if <code>str</code> is a valid palindrome or not. For this problem, ignore any non-alphabet characters such as spaces, quesiton marks, etc. Please ignore character casings as well.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("valid-palindrome"),
 }

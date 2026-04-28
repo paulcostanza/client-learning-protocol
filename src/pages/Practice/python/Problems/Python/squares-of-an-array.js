@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def squares_of_an_array(nums):
   # enter code here please
   
@@ -75,11 +77,12 @@ const constraints = `<ul>
 </ul>`
 
 export const squaresOfAnArray = {
-    id: "squares-of-an-array",
-    title: "22. Squares of an Array",
-    problemStatement: `<p>Given a sorted list of integers, return an array of the squares of each number sorted in non-decreasing order.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "squares-of-an-array",
+  title: "23. Squares of an Array",
+  problemStatement: `<p>Given a sorted list of integers, return an array of the squares of each number sorted in non-decreasing order.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("squares-of-an-array"),
 }

@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def square_root(num):
   # write your function here
   
@@ -61,10 +63,11 @@ Explanation: Because 13 * 13 = 169
 `
 
 export const squareRoot = {
-    id: "square-root",
-    title: "8. Square root",
-    problemStatement: `<p>Return the square root of a number.</p>`,
-    starterCode,
-    testCode,
-    example
+  id: "square-root",
+  title: "8. Square root",
+  problemStatement: `<p>Return the square root of a number.</p>`,
+  starterCode,
+  testCode,
+  example,
+  status: getProblemStatusById("square-root"),
 }

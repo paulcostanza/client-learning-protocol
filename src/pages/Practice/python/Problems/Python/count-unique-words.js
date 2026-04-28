@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def count_unique_words(my_list):
   # your code goes here
   
@@ -73,10 +75,11 @@ const constraints = `<ul>
 
 export const countUniqueWords = {
   id: "count-unique-words",
-  title: "24. Count Unique Words",
+  title: "25. Count Unique Words",
   problemStatement: `<p>Given a list of <code>words</code>, return the number of unique words in the list. It the list is empty, return 0.</p>`,
   starterCode,
   testCode,
   constraints,
-  example
+  example,
+  status: getProblemStatusById("count-unique-words"),
 }

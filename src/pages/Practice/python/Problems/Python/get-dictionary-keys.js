@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def get_dictionary_keys(people):
   # your code goes here
   
@@ -91,11 +93,12 @@ const constraints = `<ul>
 `
 
 export const getDictionaryKeys = {
-    id: "get-dictionary-keys",
-    title: "25. Get Dictionary Keys",
-    problemStatement: `<p>Given a dictionary <code>people</code> of names and ages, return a list of the names.`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  id: "get-dictionary-keys",
+  title: "27. Get Dictionary Keys",
+  problemStatement: `<p>Given a dictionary <code>people</code> of names and ages, return a list of the names.`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("get-dictionary-keys"),
 }

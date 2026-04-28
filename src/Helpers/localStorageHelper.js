@@ -80,3 +80,28 @@ export function getHumanReadableNextReview(nextReview) {
     if (diffDays === 1) return 'Tomorrow'
     return `${diffDays} days`
 }
+
+// Practice > Python
+export function getProblemStatusById(id) {
+    const key = 'section-python-basics'
+
+    const progress = JSON.parse(localStorage.getItem(key) || '{}')
+    return progress[id]?.result // 'correct', incorrect', or undefined
+}
+
+export function isProblemReady(id) {
+    const key = 'section-python-basics'
+    const progress = JSON.parse(localStorage.getItem(key) || '{}')
+
+    const now = new Date()
+    const reviewDate = new Date(progress[id]?.nextReview)
+
+    now.setHours(0, 0, 0, 0)
+    reviewDate.setHours(0, 0, 0, 0)
+
+    const diffDays = Math.round((reviewDate - now) / (24 * 60 * 60 * 1000))
+
+    if (diffDays <= 0) return true
+
+    return false
+}

@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def fifteenToOneHundredSeven():
   # enter code here
   
@@ -32,5 +34,6 @@ export const addFromFifteenToOneHundredSeven = {
   problemStatement: `<p>Add up and return the summation from 15 up to (and including) 107</p>`,
   constraints: `<li className='mt-2'>include 107 in the summation</li>`,
   starterCode,
-  testCode
+  testCode,
+  status: getProblemStatusById("add-from-fifteen-to-one-hundred-seven"),
 }

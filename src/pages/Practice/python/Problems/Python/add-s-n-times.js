@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def add_s_n_times(s, n):
   # enter code here
     
@@ -65,10 +67,11 @@ Output: 20
 Explanation: Because 4 + 4 + 4 + 4 + 4 = 20`
 
 export const addSNumberNTimes = {
-  id: "add-s-n-times",
-  title: "7. Add s n times",
-  problemStatement: `<p>Add <code>s</code> <code>n</code> times.</p>`,
-  example,
-  starterCode,
-  testCode
+    id: "add-s-n-times",
+    title: "7. Add s n times",
+    problemStatement: `<p>Add <code>s</code> <code>n</code> times.</p>`,
+    example,
+    starterCode,
+    testCode,
+    status: getProblemStatusById("add-s-n-times"),
 }

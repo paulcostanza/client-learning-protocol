@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def pythagorean_theorem(a, b):
   # write your function here
   
@@ -57,10 +59,11 @@ Explanation: c = sqrt of (a^2 + b^2) = sqrt of (25 + 144) = sqrt of 169 = 13
 `
 
 export const pythagoreanTheorem = {
-    id: "pythagorean-theorem",
-    title: "9. Pythagorean Theorem",
-    problemStatement: `<p>Given two shorter sides of a right triangle, return the hypotenuse.</p>`,
-    starterCode,
-    testCode,
-    example
+  id: "pythagorean-theorem",
+  title: "9. Pythagorean Theorem",
+  problemStatement: `<p>Given two shorter sides of a right triangle, return the hypotenuse.</p>`,
+  starterCode,
+  testCode,
+  example,
+  status: getProblemStatusById("pythagorean-theorem"),
 }

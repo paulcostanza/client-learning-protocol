@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def discount_calculator(price, discount):
   # write your function here
   
@@ -57,10 +59,11 @@ Explanation: Because 50 - (50 * 0.10) = 45
 `
 
 export const discountCalculator = {
-    id: "discount-calculator",
-    title: "10. Discount calculator",
-    problemStatement: `<p>Write a function that takes the original <code>price</code> and <code>discount</code> percentage as arguments and returns the discounted price.</p>`,
-    starterCode,
-    testCode,
-    example
+  id: "discount-calculator",
+  title: "10. Discount calculator",
+  problemStatement: `<p>Write a function that takes the original <code>price</code> and <code>discount</code> percentage as arguments and returns the discounted price.</p>`,
+  starterCode,
+  testCode,
+  example,
+  status: getProblemStatusById("discount-calculator"),
 }

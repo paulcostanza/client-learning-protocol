@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def contains_duplicate(words):
   # your code goes here
   
@@ -73,10 +75,11 @@ const constraints = `<ul>
 
 export const containsDuplicate = {
   id: "contains-duplicate",
-  title: "25. Contains Duplicate",
+  title: "26. Contains Duplicate",
   problemStatement: `<p>Given a list of <code>words</code>, return <code>True</code> if there are any duplciate strings in the list, and <code>False</code> if there are not.</p>`,
   starterCode,
   testCode,
   constraints,
-  example
+  example,
+  status: getProblemStatusById("contains-duplicate"),
 }

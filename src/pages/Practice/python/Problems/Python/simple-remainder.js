@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def remainder(x, y):
   # write your code here
   
@@ -56,5 +58,6 @@ export const simpleRemainder = {
   problemStatement: `<p>What is the remainder of two numbers, <code>x</code> and <code>y</code>.`,
   starterCode,
   testCode,
-  example
+  example,
+  status: getProblemStatusById("simple-remainder"),
 }

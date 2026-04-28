@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def valid_parentheses(str):
   # enter code here please
   
@@ -99,17 +101,18 @@ const constraints = `<ul>
 </ul>`
 
 export const validParentheses = {
-    id: "valid-parentheses",
-    title: "22. Valid Parentheses",
-    problemStatement: `<p>Given a string <code>str</code> containing only the characters <code>(</code>, <code>)</code>, <code>{</code>, <code>}</code>, <code>[</code>, and <code>]</code>, determine if the string is valid.</p>
+  id: "valid-parentheses",
+  title: "31. Valid Parentheses",
+  problemStatement: `<p>Given a string <code>str</code> containing only the characters <code>(</code>, <code>)</code>, <code>{</code>, <code>}</code>, <code>[</code>, and <code>]</code>, determine if the string is valid.</p>
 <p>A string is valid if:</p>
 <ul>
 <li>Every opening bracket has a corresponding closing bracket of the same type.</li>
 <li>Brackets are closed in the correct order.</li>
 <li>Every closing bracket has a matching opening bracket.</li>
 </ul>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("valid-parentheses"),
 }

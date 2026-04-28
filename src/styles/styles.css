@@ -792,10 +792,11 @@ input[type="checkbox"]:checked+label::before {
     background-color: #357abd;
 }
 
-.header-bar {
+.problem-description-header-bar {
     display: flex;
     justify-content: space-between;
-    max-width: 250px;
+    /* max-width: 250px; */
+    margin: 10px auto;
 }
 
 .buffer-space {
@@ -840,6 +841,7 @@ input[type="checkbox"]:checked+label::before {
 
 .problem-description-title {
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .problem-description-nav,

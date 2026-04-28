@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def no_remainder(x, y):
   # write your code here
   
@@ -57,5 +59,6 @@ export const noRemainder = {
   constraints: `<li className='mt-2'>You shouldn't need to round down, as you can do this in one statement</li>`,
   starterCode,
   testCode,
-  example
+  example,
+  status: getProblemStatusById("no-remainder"),
 }

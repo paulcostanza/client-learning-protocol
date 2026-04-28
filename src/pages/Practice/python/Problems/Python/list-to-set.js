@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def list_to_set(my_list):
   # your code goes here
   
@@ -74,10 +76,11 @@ const constraints = `<ul>
 
 export const listToSet = {
   id: "list-to-set",
-  title: "23. List to Set",
+  title: "24. List to Set",
   problemStatement: `<p>Given a list of <code>my_list</code>, return a set containing the unique elements from the list. The order of the elements does not matter.</p>`,
   starterCode,
   testCode,
   constraints,
-  example
+  example,
+  status: getProblemStatusById("list-to-set")
 }

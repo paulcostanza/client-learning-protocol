@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def sum_digit_two(num):
   # write your function here
   
@@ -63,5 +65,6 @@ export const findSumOfTwoDigitNum = {
   problemStatement: `<p>Given a 2 digit number represented by <code>num</code> return the sum of its digits.</p>`,
   starterCode,
   testCode,
-  example
+  example,
+  status: getProblemStatusById("find-sum-of-two-digit-num"),
 }

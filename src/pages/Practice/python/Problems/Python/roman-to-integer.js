@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def roman_to_int(str):
   # enter code here please
   
@@ -89,9 +91,9 @@ const constraints = `<ul>
 </ul>`
 
 export const romanToInteger = {
-    id: "roman-to-integer",
-    title: "22. Roman To Integer",
-    problemStatement: `<p>Given <code>str</code>, a Roman numeral in a string format, convert it to an integer.</p>
+  id: "roman-to-integer",
+  title: "32. Roman To Integer",
+  problemStatement: `<p>Given <code>str</code>, a Roman numeral in a string format, convert it to an integer.</p>
     
 <p>Roman numerals are represented by the following symbols:</p>
 <ul>
@@ -112,8 +114,9 @@ export const romanToInteger = {
 </ul>
 
 <p>Return the integer value of the Roman numeral.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("roman-to-integer"),
 }

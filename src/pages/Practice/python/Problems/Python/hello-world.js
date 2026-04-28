@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def helloWorld(): 
   # Write your code here
   
@@ -42,5 +44,6 @@ export const helloWorld = {
     <li className='mt-2'>Watch for capital letter(s)</li>`,
   starterCode,
   testCode,
-  order: 1
+  order: 1,
+  status: getProblemStatusById("hello-world"),
 }

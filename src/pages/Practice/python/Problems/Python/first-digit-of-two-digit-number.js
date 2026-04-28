@@ -1,3 +1,5 @@
+import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+
 const starterCode = `def first_digit(num):
   # write your function here
   
@@ -56,10 +58,11 @@ Explanation: The first digit of 78 is 7
 `
 
 export const firstDigitOfTwoDigitNumber = {
-    id: "first-digit-of-two-digit-number",
-    title: "12. Find first digit of a 2 digit number",
-    problemStatement: `<p>Given a 2 digit number represented by <code>num</code>, return its first digit.</p>`,
-    starterCode,
-    testCode,
-    example
+  id: "first-digit-of-two-digit-number",
+  title: "12. First digit of a 2 digit number",
+  problemStatement: `<p>Given a 2 digit number represented by <code>num</code>, return its first digit.</p>`,
+  starterCode,
+  testCode,
+  example,
+  status: getProblemStatusById("first-digit-of-two-digit-number"),
 }
