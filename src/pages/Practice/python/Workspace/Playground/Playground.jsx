@@ -9,7 +9,13 @@ import PlaygroundNav from './PlaygroundNav'
 import OutputHeader from './PlaygroundFooter/OutputHeader'
 import Output from './PlaygroundFooter/Output'
 
-export default function Playground({ problem, nextProblem, output, setOutput }) {
+export default function Playground({
+    problem,
+    nextProblem,
+    nextInPlaylistProblem,
+    output,
+    setOutput
+}) {
     const [code, setCode] = useState(problem.starterCode)
     const [correct, setCorrect] = useState(false)
     const [mainCode, setMainCode] = useState(problem.starterCode)
@@ -112,6 +118,7 @@ export default function Playground({ problem, nextProblem, output, setOutput }) 
                         onRun={runCode}
                         onSubmit={handleSubmit}
                         onNextProblem={nextProblem}
+                        onNextInPlaylistProblem={nextInPlaylistProblem}
                         correct={correct}
                     />
                     <Output output={output} />

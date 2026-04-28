@@ -4,14 +4,10 @@ export default function OutputHeader({
     onRun,
     onSubmit,
     onNextProblem,
+    onNextInPlaylistProblem,
     correct
 }) {
     const [hasPassed, setHasPassed] = useState(true)
-
-    // Only show next once submitted and correct
-    // useEffect(() => {
-    //     if (correct) setHasPassed(true)
-    // }, [correct])
 
     return (
         < div className='testcaseheader-btns' >
@@ -42,10 +38,11 @@ export default function OutputHeader({
                             Next Problem
                         </button>
 
-                        {/* Once I add reviewing, this is the next one in 'Ready!' */}
-                        {/* <button className='nexttodoproblem-btn'>
-                            Next to do problem
-                        </button> */}
+                        <button
+                            className='next-in-playlist-btn'
+                            onClick={onNextInPlaylistProblem}>
+                            Next In Playlist
+                        </button>
                     </>
                 )}
             </div>
