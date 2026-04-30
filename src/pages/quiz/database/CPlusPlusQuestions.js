@@ -337,11 +337,15 @@ std::cout << *ptr;
         ],
         random: true,
         answer: 'dangling pointer',
-        description: `- \`x\` is a stack variable that only exists inside of that block \`{}\` 
+        description: `A **memory leak** occurs when allocated memory is never freed, wasting resources.
+
+A **dangling pointer** occurs when a pointer points to memory that has already been deallocated, leading to invalid access.
+
+- \`x\` is a stack variable that only exists inside of that block \`{}\` 
 - when the block ends \`x\` is destroyed
 - so the line \`std::cout << *ptr;\` still holds the old address of \`x\`, but \`x\` no longer exists!
 
-That pointer is now dangling.
+The pointer in our problem is now dangling.
 `
     },
     {

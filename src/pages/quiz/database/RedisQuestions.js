@@ -135,7 +135,7 @@ export default [
         answer: 'Data stored in RAM/SSD and lost on failure',
         description: `Ephemeral: a storage that is temporary and non-persistent in cloud computing and/or containerized environments that will only exist for the lifetime of a virtual machine.
         
-Since everything in Redis exist in a point-in-time snapchot, everything that happens after the last snapshot but before the next one exists only in an *ephemeral* state.`
+Since everything in Redis exist in a point-in-time snapshot, everything that happens after the last snapshot but before the next one exists only in an *ephemeral* state.`
     },
     {
         id: 8,
