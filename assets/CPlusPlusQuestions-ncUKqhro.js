@@ -85,7 +85,7 @@ int* ptr;
 
 std::cout << *ptr;
 ~~~
-`,options:["nothing is wrong","memory leak","dangling pointer","stack overflow"],random:!0,answer:"dangling pointer",description:"- `x` is a stack variable that only exists inside of that block `{}` \n- when the block ends `x` is destroyed\n- so the line `std::cout << *ptr;` still holds the old address of `x`, but `x` no longer exists!\n\nThat pointer is now dangling.\n"},{id:15,type:"radio",category:"c++",subcategory:"stack-vs-heap",title:"nullptr?",question:`What will happen here?
+`,options:["nothing is wrong","memory leak","dangling pointer","stack overflow"],random:!0,answer:"dangling pointer",description:"A **memory leak** occurs when allocated memory is never freed, wasting resources.\n\nA **dangling pointer** occurs when a pointer points to memory that has already been deallocated, leading to invalid access.\n\n- `x` is a stack variable that only exists inside of that block `{}` \n- when the block ends `x` is destroyed\n- so the line `std::cout << *ptr;` still holds the old address of `x`, but `x` no longer exists!\n\nThe pointer in our problem is now dangling.\n"},{id:15,type:"radio",category:"c++",subcategory:"stack-vs-heap",title:"nullptr?",question:`What will happen here?
         
 ~~~c++
 int* ptr = new int(5);
