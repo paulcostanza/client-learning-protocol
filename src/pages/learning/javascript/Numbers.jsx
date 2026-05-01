@@ -74,6 +74,8 @@ const resultTwo = '10' + 5;
 console.log(resultTwo); // 105
 console.log(typeof resultTwo); // string`
 
+    const stringPlusNumberPlusNumber = `console.log("My points: " + 5 + 9) // My points: 59`
+
     const stringEverythingElseNumber = `const subtractionResult = '10' - 5;
 console.log(subtractionResult); // 5
 console.log(typeof subtractionResult); // number
@@ -321,6 +323,14 @@ console.log(score); // 34`
                 </SyntaxHighlighter>
             </div>
 
+            <p>To summaries operator precedence...</p>
+
+            <ul>
+                <li><em>multiply</em> and <em>divide</em> come first, then <em>add</em> and <em>subtract</em></li>
+                <li>the calculation is evaluated from left to right</li>
+                <li>override operator precedence by putting parentheses <code>()</code> around the part you want to be executed first</li>
+            </ul>
+
             <h2>Calcuations of mixing data types</h2>
 
             <p>JavaScript is a language where things can get pretty f**ked up real quick. One such way occurs when you mix numbers and strings in calculations.</p>
@@ -338,6 +348,20 @@ console.log(score); // 34`
             </div>
 
             <p>In either case, the number 5 is converted to a string and JS will concatenate them. This is known as type coercion. <strong>Type coercion</strong> is when a value from one data type is converted into another.</p>
+
+            <p>Now what about this example?</p>
+
+            <div className="">
+                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {stringPlusNumberPlusNumber}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>Since there is at least one string, <em>everything</em> is turned into a string.</p>
+
+            <blockquote>
+                <p>String + number = the string always wins</p>
+            </blockquote>
 
             <h3><code>[Subtracting|Multiplicating|Dividing]</code> strings to number</h3>
 

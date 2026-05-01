@@ -10,8 +10,11 @@ const sections = [
     { name: 'Numbers', path: 'numbers' },
     { name: 'Advance Operators', path: 'advance-operators' },
     { name: 'Conditionals: If statements', path: 'conditionals-if-statements' },
+    { name: 'Loops', path: 'loops' },
+    { name: 'Arrays', path: 'arrays' },
     { name: 'Array Methods', path: 'array-methods' },
     { name: 'Weird JS', path: 'weird-js' },
+    { name: 'The DOM', path: 'dom' },
 ]
 
 export default function JavaScriptLayout() {

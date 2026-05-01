@@ -31,6 +31,12 @@ console.log(result);`
         <div className="container">
             <h1>Array Methods</h1>
 
+            <ul>
+                <li><code>.length</code>: gets the length of the array</li>
+                <li><code>.push()</code>: adds an element to the end of the array. <code>push</code> will change the content of the array that calls it.</li>
+                <li><code>.pop()</code></li>
+            </ul>
+
             <h2><code>.map()</code></h2>
 
             <p>Let's take a look at an example of using the <code>map</code> method.</p>
