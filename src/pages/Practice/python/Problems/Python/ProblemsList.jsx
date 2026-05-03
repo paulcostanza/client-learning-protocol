@@ -29,6 +29,8 @@ export const problemsList = {
         { id: "add-lists", title: "Add Lists", status: '', review: '', order: 21 },
         { id: "pop-last-n-elements", title: "Pop Last n Elements", status: '', review: '', order: 22 },
         { id: "squares-of-an-array", title: "Squares of an Array", status: '', review: '', order: 23 },
+        { id: "convert-the-seconds", title: "Convert the Seconds", status: '', review: '', order: 24 },
+        { id: "sort-list-of-strings", title: "Sort List of Strings", status: '', review: '', order: 25 },
     ],
     sets: [
         { id: "list-to-set", title: "List to Set", status: '', review: '', order: 24 },

@@ -33,6 +33,8 @@ import { squaresOfAnArray } from './squares-of-an-array'
 import { validPalindrome } from './valid-palindrome'
 import { validParentheses } from './valid-parentheses'
 import { romanToInteger } from './roman-to-integer'
+import { convertTheSeconds } from './convert-the-seconds'
+import { sortListOfStrings } from './sort-list-of-strings'
 
 const problems = {
     // Printing 101
@@ -62,6 +64,8 @@ const problems = {
     "add-lists": addLists,
     "pop-last-n-elements": popLastNElements,
     "squares-of-an-array": squaresOfAnArray,
+    "convert-the-seconds": convertTheSeconds,
+    "sort-list-of-strings": sortListOfStrings,
     // sets
     "list-to-set": listToSet,
     "count-unique-words": countUniqueWords,

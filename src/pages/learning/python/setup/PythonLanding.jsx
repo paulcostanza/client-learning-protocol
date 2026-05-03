@@ -10,6 +10,7 @@ const sections = [
     { name: 'Commputing', path: 'computing' },
     { name: 'Strings', path: 'strings' },
     { name: 'Lists', path: 'lists' },
+    { name: 'List Comprehension', path: 'list-comprehension' },
     { name: 'Tuples', path: 'tuples' },
     { name: 'Sets', path: 'sets' },
     { name: 'Dictionaries', path: 'dictionaries' },

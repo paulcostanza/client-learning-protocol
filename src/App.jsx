@@ -94,6 +94,7 @@ import PythonFunctions from './pages/learning/python/Functions'
 import PythonControlFlow from './pages/learning/python/ControlFlow'
 import PythonMath101 from './pages/learning/python/Math101'
 import PythonLists from './pages/learning/python/Lists'
+import PythonListComprehension from './pages/learning/python/ListComprehension'
 import PythonTuples from './pages/learning/python/Tuples'
 import PythonSets from './pages/learning/python/Sets'
 import PythonScope from './pages/learning/python/Scope'
@@ -285,6 +286,7 @@ function App() {
               <Route path='strings' element={<PythonStrings />} />
               <Route path='basics' element={<PythonBasics />} />
               <Route path='lists' element={<PythonLists />} />
+              <Route path='list-comprehension' element={<PythonListComprehension />} />
               <Route path='tuples' element={<PythonTuples />} />
               <Route path='sets' element={<PythonSets />} />
               <Route path='dictionaries' element={<PythonDictionaries />} />

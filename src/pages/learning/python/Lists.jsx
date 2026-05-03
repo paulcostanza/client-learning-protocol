@@ -88,6 +88,56 @@ for i in range(length):
 for element in my_list:
     print(element)`
 
+
+    const unicodeSort = `items = ["cats", "Clay", "Dogs", "day"]
+
+sorted_items = sorted(items)
+print(sorted_items)`
+
+    const unicodeSortConsole = `['Clay', 'Dogs', 'cats', 'day']`
+
+    const keyLower = `items = ["cats", "Clay", "Dogs", "day"]
+
+items.sort()
+sorted_items = sorted(items, key=str.lower)
+print(sorted_items)`
+
+    const keyLowerConsole = `['cats', 'Clay', 'day', 'Dogs']`
+
+    const sortByLength = `a = ["apple", "banana", "cherry", "date"]
+res = sorted(a, key=len)
+print(res)`
+
+    const sortByLengthConsole = `['date', 'apple', 'banana', 'cherry']`
+
+    const sortListOfDict = `a = [
+    {"name": "Harry", "score": 85},
+    {"name": "Leo", "score": 91},
+    {"name": "Eve", "score": 78}
+]
+
+b = sorted(a, key=lambda x: x['score'])
+print(b)`
+
+    const sortListOfDictConsole = `[{'name': 'Eve', 'score': 78}, {'name': 'Harry', 'score': 85}, {'name': 'Leo', 'score': 91}]`
+
+    const sortObjects = `class Student:
+    def __init__(self, name, grade, age):
+        self.name = name
+        self.grade = grade
+        self.age = age
+    def __repr__(self):
+        return repr((self.name, self.grade, self.age))
+
+student_objects = [
+    Student('john', 'A', 15),
+    Student('jane', 'B', 12),
+    Student('dave', 'B', 10),
+]
+sorted(student_objects, key=lambda student: student.age)`
+
+    const sortObjectsConsole = `[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]`
+
     const builtInFunctions = `my_list = [1, 2, 3, 4, 5]
 
 print(sum(my_list))
@@ -570,11 +620,11 @@ print(sentence)
                 </SyntaxHighlighter>
             </div>
 
-
-
             <h2>Sort a list</h2>
 
-            <p>We have two main ways to sort a list in python, useing the <code>sort</code> and <code>sorted</code> methods.</p>
+            <p>We have two main ways to sort a list in python, using <code>sort</code> and <code>sorted</code>.</p>
+
+            <h3><code>sort</code></h3>
 
             <p>The <code>sort()</code> method modifies the original list and returns <code>None</code>. This is more efficient if you do not need to preserve the original order.</p>
 
@@ -602,6 +652,7 @@ print(sentence)
                 </SyntaxHighlighter>
             </div>
 
+            <h3><code>sorted</code></h3>
 
             <p>Now what's cool about the <code>sorted</code> function is that it works on any iterable (tuples, strings, etc) and not just list. It also returns a <em>new</em> list, leaving the original iterable unchanged. This is great when you need to keep the original data intact.</p>
 
@@ -626,6 +677,88 @@ print(sentence)
             <div className="">
                 <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
                     {sortedDescConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <h3><code>key</code> parameter</h3>
+
+            <p>You may or may not have noticed that when using a built-in sort, it does something a little strange when you mix sorting lowercase with uppercase.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {unicodeSort}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {unicodeSortConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <blockquote>
+                <p>Uh... that's not sorted.</p>
+            </blockquote>
+
+            <p>It technically is! Because of how computer characters are encoded with Unicode and/or ASCII, python sorts with uppercase being sort <em>before</em> lowercase. To combat this, Python enables a <em>custom sort</em> using an optional <code>key</code> parameter. It takes in a function.</p>
+
+            <p>The function you pass in to <code>key</code> is given to each of the items that are being sorted, and returns a <em>key</em> that Python can sort by.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {keyLower}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {keyLowerConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>Here we are passing in the <code>lower</code> method onto string elements. We omit the parentheses <code>()</code> because we are passing the <em>function itself</em> as an argument. We are handing Python a set of instructions. If we wrote it with parentheses, it would tell Python to run the function right now. The <code>sort</code>/<code>sorted</code> method/function will handle calling the function when it needs to.</p>
+
+            <p>Let's sort by length:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {sortByLength}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {sortByLengthConsole}
+                </SyntaxHighlighter>
+            </div>
+
+
+
+            <p>And now by a property in a dictionary in a list (if you already know about dictionaries, if not we cover them soon):</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {sortListOfDict}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {sortListOfDictConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>Or even for objects with named attributes:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {sortObjects}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {sortObjectsConsole}
                 </SyntaxHighlighter>
             </div>
 
