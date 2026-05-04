@@ -31,6 +31,8 @@ export const problemsList = {
         { id: "squares-of-an-array", title: "Squares of an Array", status: '', review: '', order: 23 },
         { id: "convert-the-seconds", title: "Convert the Seconds", status: '', review: '', order: 24 },
         { id: "sort-list-of-strings", title: "Sort List of Strings", status: '', review: '', order: 25 },
+        { id: "sort-numbers-by-absolute-value", title: "Sort Numbers By Absolute Value", status: '', review: '', order: 26 },
+        { id: "sort-numbers-by-last-digit", title: "Sort Numbers By Last Digit", status: '', review: '', order: 27 },
     ],
     sets: [
         { id: "list-to-set", title: "List to Set", status: '', review: '', order: 24 },

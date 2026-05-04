@@ -35,6 +35,8 @@ import { validParentheses } from './valid-parentheses'
 import { romanToInteger } from './roman-to-integer'
 import { convertTheSeconds } from './convert-the-seconds'
 import { sortListOfStrings } from './sort-list-of-strings'
+import { sortNumbersByAbsoluteValue } from './sort-numbers-by-absolute-value'
+import { sortNumbersByLastDigit } from './sort-numbers-by-last-digit'
 
 const problems = {
     // Printing 101
@@ -66,6 +68,8 @@ const problems = {
     "squares-of-an-array": squaresOfAnArray,
     "convert-the-seconds": convertTheSeconds,
     "sort-list-of-strings": sortListOfStrings,
+    "sort-numbers-by-absolute-value": sortNumbersByAbsoluteValue,
+    "sort-numbers-by-last-digit": sortNumbersByLastDigit,
     // sets
     "list-to-set": listToSet,
     "count-unique-words": countUniqueWords,
