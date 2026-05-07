@@ -37,6 +37,8 @@ import { convertTheSeconds } from './convert-the-seconds'
 import { sortListOfStrings } from './sort-list-of-strings'
 import { sortNumbersByAbsoluteValue } from './sort-numbers-by-absolute-value'
 import { sortNumbersByLastDigit } from './sort-numbers-by-last-digit'
+import { validAnagram } from './valid-anagram'
+import { twoSum } from './two-sum'
 
 const problems = {
     // Printing 101
@@ -81,6 +83,8 @@ const problems = {
     "remove-keys": removeKeys,
     "valid-parentheses": validParentheses,
     "roman-to-integer": romanToInteger,
+    "valid-anagram": validAnagram,
+    "two-sum": twoSum,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     "move-zeros": moveZeros,

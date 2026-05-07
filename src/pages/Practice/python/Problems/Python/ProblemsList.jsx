@@ -46,12 +46,14 @@ export const problemsList = {
         { id: "remove-keys", title: "Remove Keys", status: '', review: '', order: 30 },
         { id: "valid-parentheses", title: "Valid Parentheses", status: '', review: '', order: 31 },
         { id: "roman-to-integer", title: "Roman To Integer", status: '', review: '', order: 32 },
+        { id: "valid-anagram", title: "Valid Anagram", status: '', review: '', order: 33 },
+        { id: "two-sum", title: "Two Sum", status: '', review: '', order: 34 },
     ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 33 },
-        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 34 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 35 },
+        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 36 },
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 35 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 37 },
     ]
 }
