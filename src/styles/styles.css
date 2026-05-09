@@ -844,6 +844,11 @@ input[type="checkbox"]:checked+label::before {
     margin-bottom: 10px;
 }
 
+.problem-title {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
 .problem-description-nav,
 .playground-nav {
     display: flex;

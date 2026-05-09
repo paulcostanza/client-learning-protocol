@@ -91,3 +91,5 @@ export const substringDeduplicator = {
   example,
   status: getProblemStatusById("substring-deduplicator"),
 }
+
+// to add, studyGuide and Solution

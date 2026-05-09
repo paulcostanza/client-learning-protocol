@@ -6,7 +6,7 @@ import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
 import TabPanel from '@mui/lab/TabPanel'
 
-export default function Playground({ activeTab, setActiveTab }) {
+export default function PlaygroundNav({ activeTab, setActiveTab }) {
     const [value, setValue] = useState("main")
 
     const handleChange = (event, newValue) => {
@@ -22,7 +22,7 @@ export default function Playground({ activeTab, setActiveTab }) {
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <TabList
                             onChange={handleChange}
-                            aria-label="switch betten main.py & test.py"
+                            aria-label="switch between main.py & test.py"
                             TabIndicatorProps={{
                                 style: {
                                     backgroundColor: '#e0e0e0', // Indicator color
@@ -75,9 +75,11 @@ export default function Playground({ activeTab, setActiveTab }) {
 
     QUESTION MARK: how this works instructions
 
+    UP ARROW: hide site nav bar, flips down to reveal
+
     REFRESH: add a button that starts your code over. Pop up a confurmation modal, 'Are you sure you want to reset your code in the workspace?'
 
-    SETTINGS: saved to local storage
+    SETTINGS: save to local storage
     - reset split bars (moving them should be saved in local storage)
     - wrap code on/off
     - font size

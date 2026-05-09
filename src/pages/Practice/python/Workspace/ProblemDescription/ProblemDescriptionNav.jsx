@@ -1,11 +1,9 @@
-import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
 
-export default function ProblemDescriptionNav({ questionId }) {
-    const [value, setValue] = useState("description")
+export default function ProblemDescriptionNav({ activeTab, setActiveTab }) {
 
     const handleChange = (event, newValue) => {
         setActiveTab(newValue)
@@ -15,11 +13,11 @@ export default function ProblemDescriptionNav({ questionId }) {
         <div className='problem-description-nav'>
 
             <Box sx={{ width: '100%', typography: 'body1' }}>
-                <TabContext> {/* removed value={activeTab} from here, look to PlaygroundNav.jsx */}
+                <TabContext value={activeTab}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <TabList
                             onChange={handleChange}
-                            aria-label="switch betten main.py & test.py"
+                            aria-label="switch betten description, study guide, playlist, & solution"
                             TabIndicatorProps={{
                                 style: {
                                     backgroundColor: '#e0e0e0', // Indicator color
@@ -59,7 +57,7 @@ export default function ProblemDescriptionNav({ questionId }) {
                                     }
                                 }}
                             />
-                            {/* <Tab
+                            <Tab
                                 className='playground-nav-file'
                                 label="solution"
                                 value="solution"
@@ -69,7 +67,8 @@ export default function ProblemDescriptionNav({ questionId }) {
                                         color: '#e0e0e0'
                                     }
                                 }}
-                            /> */}
+                            />
+                            {/* Add comments tab */}
                         </TabList>
                     </Box>
                 </TabContext>
