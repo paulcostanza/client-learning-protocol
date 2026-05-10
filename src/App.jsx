@@ -33,6 +33,12 @@ import AboutMe from './pages/about/me/AboutMe'
 import NoPage from './pages/NoPage'
 import C from './pages/C/C'
 
+// Docker
+import DockerLanding from './pages/learning/docker/setup/DockerLanding'
+import DockerSectionLayout from './pages/learning/docker/setup/DockerSectionLayout'
+import DockerIntro from './pages/learning/docker/Intro'
+import DockerStorage from './pages/learning/docker/Storage'
+
 // Practice
 import Practice from './pages/Practice/Practice'
 import PracticeTesting from './pages/Practice/python/Testing'
@@ -217,6 +223,12 @@ function App() {
               <Route path='array-methods' element={<JavaScriptArrayMethods />} />
               <Route path='weird-js' element={<JavaScriptWeirdJs />} />
               <Route path='dom' element={<JavaScriptDom />} />
+            </Route>
+
+            <Route path='/docker' element={<DockerLanding />} />
+            <Route path='/docker' element={<DockerSectionLayout />}>
+              <Route path='intro' element={<DockerIntro />} />
+              <Route path='storage' element={<DockerStorage />} />
             </Route>
 
             <Route path='/c' element={<C />} />

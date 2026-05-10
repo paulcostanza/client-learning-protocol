@@ -33,6 +33,7 @@ const learningSections = [
         sections: [
             { label: "HTML", href: "/html" },
             { label: "Web APIs", href: "/web-api" },
+            { label: "Docker", href: "/docker" },
             // { label: "HTTP/HTTPS", href: "/http" },
             // { label: "Auth[entication/orization]", href: "/auth" },
             // { label: "DOM Manipulation", href: "/dom" },

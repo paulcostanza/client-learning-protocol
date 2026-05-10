@@ -37,7 +37,8 @@ export default function Quiz() {
         memory: () => import('./database/MemoryQuestions.js'),
         programming101: () => import('./database/Programming101Questions.js'),
         cybersecurity: () => import('./database/CyberSecurityQuestions.js'),
-        linux: () => import('./database/LinuxQuestions.js')
+        linux: () => import('./database/LinuxQuestions.js'),
+        docker: () => import('./database/DockerQuestions.js')
     }
 
     useEffect(() => {
