@@ -17,7 +17,7 @@ export default function ProblemDescriptionNav({ activeTab, setActiveTab }) {
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                         <TabList
                             onChange={handleChange}
-                            aria-label="switch betten description, study guide, playlist, & solution"
+                            aria-label="switch between description, study guide, playlist, & solution"
                             TabIndicatorProps={{
                                 style: {
                                     backgroundColor: '#e0e0e0', // Indicator color

@@ -8,51 +8,58 @@ import { useNavigate } from 'react-router-dom'
 import { getQuestionStatus, getNextReview, getHumanReadableNextReview } from '../../../../Helpers/localStorageHelper.js'
 
 export default function Workspace() {
+    const [activeTab, setActiveTab] = useState('description')
     const { problemId } = useParams()
     const problem = PythonProblems[problemId]
-    const problemIds = Object.keys(PythonProblems);
-    const currentIdx = problemIds.indexOf(problemId);
+    const problemIds = Object.keys(PythonProblems)
+    const currentIdx = problemIds.indexOf(problemId)
     const [output, setOutput] = useState('')
     const navigate = useNavigate()
 
 
     useEffect(() => {
-        document.body.classList.add('hide-scrollbar');
-        return () => document.body.classList.remove('hide-scrollbar');
-    }, []);
+        document.body.classList.add('hide-scrollbar')
+        return () => document.body.classList.remove('hide-scrollbar')
+    }, [])
 
     const nextProblem = () => {
         setOutput('')
         if (currentIdx < problemIds.length - 1) {
-            const nextId = problemIds[currentIdx + 1];
-            navigate(`/practice/python/${nextId}`);
+            const nextId = problemIds[currentIdx + 1]
+            navigate(`/practice/python/${nextId}`)
+            setActiveTab('description')
         } else {
             alert('You have reached the end of the line, nerd! More problems to come soon...')
         }
-    };
+    }
 
-    // start from beginning of playlist
     const nextInPlaylistProblem = () => {
         setOutput('')
+        setActiveTab('description')
 
-        for (let id = currentIdx + 1; id < problemIds.length; id++) {
-            let status = getQuestionStatus('python-basics', problemIds[id])
-            let review = getHumanReadableNextReview(getNextReview('python-basics', problemIds[id]))
+        for (let id = 1; id < problemIds.length; id++) {
+            let modId = (currentIdx + 1) % problemIds.length
+
+            console.log("id: ", id)
+            console.log("modId: ", modId)
+            let status = getQuestionStatus('python-basics', problemIds[modId])
+            let review = getHumanReadableNextReview(getNextReview('python-basics', problemIds[modId]))
 
             if (typeof status == 'undefined'
                 || status == 'incorrect'
                 || review == 'Ready!') {
-                navigate(`/practice/python/${problemIds[id]}`)
+                navigate(`/practice/python/${problemIds[modId]}`)
                 return
             }
         }
+        alert("No problem's in the playlist, try again tomorrow!")
     }
 
     if (!problem) return <h1>Yo! Problem not found...</h1>
 
     return (
         <Split className='split'>
-            <ProblemDescription problem={problem} />
+            <ProblemDescription problem={problem} activeTab={activeTab} setActiveTab={setActiveTab} />
             <Playground
                 problem={problem}
                 nextProblem={nextProblem}

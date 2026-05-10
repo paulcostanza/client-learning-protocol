@@ -5,8 +5,7 @@ import StudyGuide from './Tabs/StudyGuide'
 import Playlist from './Tabs/Playlist'
 import Solution from './Tabs/Solution'
 
-export default function ProblemDescription({ problem }) {
-    const [activeTab, setActiveTab] = useState('description')
+export default function ProblemDescription({ problem, activeTab, setActiveTab }) {
 
     return (
         <div >
