@@ -18,7 +18,7 @@ export default function ProblemDescription({ problem }) {
 
             <div className='problem-description-space'>
                 {activeTab === 'description' && <Description problem={problem} />}
-                {activeTab === 'study guide' && <StudyGuide />}
+                {activeTab === 'study guide' && <StudyGuide problem={problem} />}
                 {activeTab === 'playlist' && <Playlist />}
                 {activeTab === 'solution' && <Solution />}
                 {/* {activeTab === 'comments' && <Comments />} */}

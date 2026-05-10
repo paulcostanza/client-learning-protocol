@@ -1,4 +1,5 @@
 import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
+import { theReturnStatement } from "../../../../learning/python/Functions"
 
 const starterCode = `def helloWorld(): 
   # Write your code here
@@ -46,4 +47,11 @@ export const helloWorld = {
   testCode,
   order: 1,
   status: getProblemStatusById("hello-world"),
+  studyGuide: [
+    {
+      title: "Return statements",
+      content: theReturnStatement,
+      link: "https://clientlearningprotocol.io/#/python/functions",
+    }
+  ]
 }

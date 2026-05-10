@@ -2,17 +2,40 @@ import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-export default function Functions() {
-    const quizImports = {
-        python: () => import('../../../pages/quiz/database/PythonQuestions.js')
-    }
-
-    const returnStatement = `def do_something():
+const returnStatement = `def do_something():
     return 6 + 9
 
 print(do_something())`
 
-    const answerToReturnStatement = `15`
+const answerToReturnStatement = `15`
+
+export const theReturnStatement = (
+    <>
+        <p>
+            The <code>return</code> statement allows a function to send a value back to the caller. When a function is executed, it may perform various operations or calculations. We use the <code>return</code> statement to specify the result of those operations.
+        </p>
+        <p>
+            You must <i>call</i> a function in order to execute it. Declaring the function does not do anything by itself.
+        </p>
+
+        <div className="">
+            <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                {returnStatement}
+            </SyntaxHighlighter>
+        </div>
+
+        <div className="">
+            <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                {answerToReturnStatement}
+            </SyntaxHighlighter>
+        </div>
+    </>
+)
+
+export default function Functions() {
+    const quizImports = {
+        python: () => import('../../../pages/quiz/database/PythonQuestions.js')
+    }
 
     const orderOfFunctions = `def main():
     health = 10
@@ -32,28 +55,9 @@ main()`
         <>
             <h1>Functions</h1>
 
-            <h2>The <code>return</code> statement</h2>
-            <p>
-                The <code>return</code> statement allows a function to send a value back to the caller. When a function is executed, it may perform various operations or calculations. We use the <code>return</code> statement to specify the result of those operations.
-            </p>
-            <p>
-                You must <i>call</i> a function in order to execute it. Declaring the function does not do anything by itself.
-            </p>
+            <h2 id="the-return-statement">The <code>return</code> statement</h2>
 
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
-                    {returnStatement}
-                </SyntaxHighlighter>
-            </div>
-
-            <pre>
-                <code>{ }</code>
-            </pre>
-            <div className="">
-                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
-                    {answerToReturnStatement}
-                </SyntaxHighlighter>
-            </div>
+            {theReturnStatement}
 
             <h2 id="order-of-functions">Order of functions</h2>
 
