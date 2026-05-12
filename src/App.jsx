@@ -17,6 +17,7 @@ import JavaScriptIntro from './pages/learning/javascript/Intro'
 import JavaScriptBasics from './pages/learning/javascript/Basics'
 import JavaScriptStrings from './pages/learning/javascript/Strings'
 import JavaScriptStringMethods from './pages/learning/javascript/StringMethods'
+import JavaScriptBooleans from './pages/learning/javascript/Booleans'
 import JavaScriptNumbers from './pages/learning/javascript/Numbers'
 import JavaScriptAdvanceOperators from './pages/learning/javascript/AdvanceOperators'
 import JavaScriptConditionalsIfStatements from './pages/learning/javascript/ConditionalsIfStatements'
@@ -219,6 +220,7 @@ function App() {
               <Route path='basics' element={<JavaScriptBasics />} />
               <Route path='strings' element={<JavaScriptStrings />} />
               <Route path='string-methods' element={<JavaScriptStringMethods />} />
+              <Route path='booleans' element={<JavaScriptBooleans />} />
               <Route path='numbers' element={<JavaScriptNumbers />} />
               <Route path='advance-operators' element={<JavaScriptAdvanceOperators />} />
               <Route path='conditionals-if-statements' element={<JavaScriptConditionalsIfStatements />} />

@@ -5,6 +5,7 @@ const sections = [
     { name: 'Basics', path: 'basics' },
     { name: 'Strings', path: 'strings' },
     { name: 'String Methods', path: 'string-methods' },
+    { name: 'Booleans', path: 'booleans' },
     { name: 'Numbers', path: 'numbers' },
     { name: 'Advance Operators', path: 'advance-operators' },
     { name: 'Conditionals: If statements', path: 'conditionals-if-statements' },

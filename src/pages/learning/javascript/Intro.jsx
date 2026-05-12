@@ -178,6 +178,18 @@ console.log(typeof user); // "object"`
 
             <p><strong>Undefined</strong> means a variable has been declared but has not been given a value yet. You will lean more about this later on.</p>
 
+            <blockquote>
+                <p>How JavaScript signalizes emptiness.</p>
+            </blockquote>
+
+            <h3>null</h3>
+
+            <p>When a variable is explicity given no value.</p>
+
+            <blockquote>
+                <p>How you as a developer signalize emptiness.</p>
+            </blockquote>
+
             <h3>Object</h3>
 
             <p>An <strong>object</strong> is a collection of key-value pairs.</p>

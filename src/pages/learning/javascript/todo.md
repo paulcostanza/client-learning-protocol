@@ -15,20 +15,26 @@ The user can select which one to do. How would I keep track of how a project is 
 
 ## Order
 
-1. variables & data types
-2. operators
-3. control flow
-4. loops
-5. functions
-6. Arrays
-7. Array Methods
-8. Objects
-9. JSON
-9. Built-in Objects
-10. ES6+ features: template literals, destructuring, spread/rest operators
-11. DOM manipulation
-12. Event handling: clicks, scrolls, keyboard presses with event listeners
-13. Local Storage here
-14. Asynchronous JS: callbacks, promisises, async/await
-15. Scope & closures
-16. Node.js
+1. Intro
+2. Basics
+3. Strings
+4. String Methods
+5. Booleans
+6. Numbers
+7. Advance Operators
+8. control flow
+9. Conditionals: If statements
+10. Loops
+11. functions
+12. Arrays
+13. Array Methods
+14. Objects
+15. JSON
+16. Built-in Objects
+17. ES6+ features: template literals, destructuring, spread/rest operators
+18. DOM manipulation
+19. Event handling: clicks, scrolls, keyboard presses with event listeners
+20. Local Storage here
+21. Asynchronous JS: callbacks, promisises, async/await
+22. Scope & closures
+23. Node.js
