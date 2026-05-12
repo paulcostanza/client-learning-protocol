@@ -18,6 +18,7 @@ const sections = [
     { name: 'Built-In Objects', path: 'built-in-objects' },
     { name: 'Weird JS', path: 'weird-js' },
     { name: 'The DOM', path: 'dom' },
+    { name: 'Local Storage', path: 'local-storage' },
 ]
 
 export default function JavaScriptLayout() {

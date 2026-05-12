@@ -374,6 +374,8 @@ console.log(typeof user); // "object"`
                 </SyntaxHighlighter>
             </div>
 
+            <hr />
+
             <h2>Review</h2>
 
             <ReviewQuiz

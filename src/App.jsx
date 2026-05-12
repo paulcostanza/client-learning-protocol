@@ -28,6 +28,7 @@ import JavaScriptJson from './pages/learning/javascript/Json'
 import JavaScriptBuiltInObjects from './pages/learning/javascript/BuiltInObjects'
 import JavaScriptWeirdJs from './pages/learning/javascript/WeirdJs'
 import JavaScriptDom from './pages/learning/javascript/Dom'
+import JavaScriptLocalStorage from './pages/learning/javascript/LocalStorage'
 
 import Quiz from './pages/quiz/Quiz'
 import QuizList from './pages/quiz/QuizList'
@@ -229,6 +230,7 @@ function App() {
               <Route path='built-in-objects' element={<JavaScriptBuiltInObjects />} />
               <Route path='weird-js' element={<JavaScriptWeirdJs />} />
               <Route path='dom' element={<JavaScriptDom />} />
+              <Route path='local-storage' element={<JavaScriptLocalStorage />} />
             </Route>
 
             <Route path='/docker' element={<DockerLanding />} />
