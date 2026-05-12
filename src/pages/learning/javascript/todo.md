@@ -21,10 +21,14 @@ The user can select which one to do. How would I keep track of how a project is 
 4. loops
 5. functions
 6. Arrays
-7. Objects
-8. ES6+ features: template literals, destructuring, spread/rest operators
-9. DOM manipulation
-10. Event handling: clicks, scrolls, keyboard presses with event listeners
-11. Asynchronous JS: callbacks, promisises, async/await
-12. Scope & closures
-13. Node.js
+7. Array Methods
+8. Objects
+9. JSON
+9. Built-in Objects
+10. ES6+ features: template literals, destructuring, spread/rest operators
+11. DOM manipulation
+12. Event handling: clicks, scrolls, keyboard presses with event listeners
+13. Local Storage here
+14. Asynchronous JS: callbacks, promisises, async/await
+15. Scope & closures
+16. Node.js

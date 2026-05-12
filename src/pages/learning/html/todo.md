@@ -99,3 +99,9 @@ To add: how Creative Commons 0 works
 - [MDN Web Docs: HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 - [WebAIM: Accessibility](https://webaim.org/)
 - [WHATWG HTML Living Standard](https://html.spec.whatwg.org/)
+
+---
+
+## When I add CSS:
+
+- <code>box-sizing: border-box;</code>

@@ -26,6 +26,72 @@ export default function Dom() {
     const error = `let errorParagraph = document.getElementById("error")
 console.log(errorParagraph)`
 
+    const inputBtnHtml = `<button id="input-btn">SAVE</button>`
+
+    const inputBtnJavaScript = `let inputBtn = document.getElementById("input-btn")
+
+inputBtn.addEventListener("click", () => {
+    // do stuff in here
+})`
+
+    const valueHtml = `<body>
+    <input type="text" id="input-el">
+    <button id="input-btn">SAVE INPUT</button>
+    <script src="index.js"></script>
+</body>`
+
+    const valueJavaScript = `let myLeads = []
+const inputEl = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
+
+inputBtn.addEventListener("click", function() {
+    // Push the value from the inputEl into the myLeads array 
+    // instead of the hard-coded "www.awesomeleads.com" value
+    // Google -> "get value from input field javascript"
+    myLeads.push(inputEl.value)
+    console.log(myLeads)
+})
+`
+
+    const parseLiElHtml = `<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <input type="text" id="input-el">
+        <button id="input-btn">SAVE INPUT</button>
+        <ul id="ul-el">
+        </ul>
+        <script src="index.js"></script>
+    </body>
+</html>`
+
+    const parseLiElJavaScript = `let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"]
+const inputEl = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
+const ulEl = document.getElementById("ul-el")
+
+inputBtn.addEventListener("click", function() {
+    myLeads.push(inputEl.value)
+    console.log(myLeads)
+})
+
+for (let i = 0; i < myLeads.length; i++) {
+    ulEl.innerHTML += \`<li>\${myLeads[i]}</li>\` 
+}`
+
+    const createElementBefore = `for (let i = 0; i < myLeads.length; i++) {
+    ulEl.innerHTML += \`<li>\${myLeads[i]}</li>\` 
+}`
+
+    const createElementAfter = `for (let i = 0; i < myLeads.length; i++) {
+    let li = document.createElement("li")
+    li.textContent = myLeads[i]
+    ulEl.append(li)
+}`
+
+
+
     return (
         <div className="container">
             <h1>The DOM</h1>
@@ -57,7 +123,6 @@ console.log(errorParagraph)`
                     {realJs}
                 </SyntaxHighlighter>
             </div>
-
 
             <h2>HTML</h2>
 
@@ -95,7 +160,7 @@ console.log(errorParagraph)`
 
             <p><code>document.getElementById("count")</code> grabs the element from the HTML file, and then <code>innerText</code> is the part that actually modifies it.</p>
 
-            <p>textContent</p>
+            <p><code>textContent</code></p>
 
             <div className="">
                 <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true}>
@@ -106,6 +171,79 @@ console.log(errorParagraph)`
             <div className="">
                 <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true}>
                     {error}
+                </SyntaxHighlighter>
+            </div>
+
+            <h2>Event Listener</h2>
+
+            <div className="">
+                <SyntaxHighlighter language="html" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {inputBtnHtml}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>And model the representation inside of JavaScript:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {inputBtnJavaScript}
+                </SyntaxHighlighter>
+            </div>
+
+
+            <p>When the user clicks the button element with the id of <code>input-btn</code>. </p>
+
+            <h2>Data from an input field</h2>
+
+            <p>There is a specific way to grab data from an <code>input</code> element, you need to grab it's <code>value</code> property.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="html" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {valueHtml}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {valueJavaScript}
+                </SyntaxHighlighter>
+            </div>
+
+            <h2><code>innerHTML</code></h2>
+
+            <p>Let's <em>parse</em> the content of our list items to an unordered list.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="html" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {parseLiElHtml}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {parseLiElJavaScript}
+                </SyntaxHighlighter>
+            </div>
+
+            <h3>Beyond <code>innerHTML</code></h3>
+
+            <p>Let's break <code>innerHTML</code> into three steps:</p>
+
+            <ul>
+                <li>create an element</li>
+                <li>set content of element</li>
+                <li>append it to something</li>
+            </ul>
+
+            <div className="">
+                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {createElementBefore}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="javascript" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {createElementAfter}
                 </SyntaxHighlighter>
             </div>
 

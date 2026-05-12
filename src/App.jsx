@@ -24,6 +24,7 @@ import JavaScriptLoops from './pages/learning/javascript/Loops'
 import JavaScriptArrays from './pages/learning/javascript/Arrays'
 import JavaScriptArrayMethods from './pages/learning/javascript/ArrayMethods'
 import JavaScriptObjects from './pages/learning/javascript/Objects'
+import JavaScriptJson from './pages/learning/javascript/Json'
 import JavaScriptBuiltInObjects from './pages/learning/javascript/BuiltInObjects'
 import JavaScriptWeirdJs from './pages/learning/javascript/WeirdJs'
 import JavaScriptDom from './pages/learning/javascript/Dom'
@@ -224,6 +225,7 @@ function App() {
               <Route path='arrays' element={<JavaScriptArrays />} />
               <Route path='array-methods' element={<JavaScriptArrayMethods />} />
               <Route path='objects' element={<JavaScriptObjects />} />
+              <Route path='json' element={<JavaScriptJson />} />
               <Route path='built-in-objects' element={<JavaScriptBuiltInObjects />} />
               <Route path='weird-js' element={<JavaScriptWeirdJs />} />
               <Route path='dom' element={<JavaScriptDom />} />

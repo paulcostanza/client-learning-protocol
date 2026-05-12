@@ -34,8 +34,14 @@ console.log(result);`
             <ul>
                 <li><code>.length</code>: gets the length of the array</li>
                 <li><code>.push()</code>: adds an element to the end of the array. <code>push</code> will change the content of the array that calls it.</li>
-                <li><code>.pop()</code></li>
+                <li><code>.pop()</code>: removes the element from the end of an array</li>
+                <li><code>.unshift()</code>: adds an item to the beginning of an array</li>
+                <li><code>.shift()</code>: removes an item from the beginning of an array</li>
             </ul>
+
+            <blockquote>
+                <p>How to remember <code>unshift</code>/<code>shift</code> & <code>push</code>/<code>pop</code>: the longer words add to the array, the shorter words take away.</p>
+            </blockquote>
 
             <h2><code>.map()</code></h2>
 

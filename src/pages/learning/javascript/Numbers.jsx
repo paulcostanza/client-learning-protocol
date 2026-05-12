@@ -495,6 +495,10 @@ console.log(score); // 34`
                 <li><strong>Bitwise OR assignment operator</strong> <code>|=</code>: performs a bitwise OR operation with the specified number and reassigns the result to the variable</li>
             </ul>
 
+            <h2>Converting strings to numbers</h2>
+
+            <p><code>Number()</code> is a built-in function in JS that converts strings into numbers.</p>
+
             <hr />
 
             <h2>Review</h2>

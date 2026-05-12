@@ -96,10 +96,9 @@ console.log(x); // 5`
             <p>There are a few important differences between the three variable declaration keywords in JavaScript.</p>
 
             <ul>
-                <li><code>var</code>: is function scoped. If declared outside a function it becomes global.</li>
+                <li><code>var</code> is function scoped. If declared outside a function it becomes global.</li>
                 <li><code>let</code> and <code>const</code> are block scoped</li>
-                <li><code>const</code> is not reasignable, the other two are. However, <code>const</code> objects and arrays can still be mutated.</li>
-                <li><code>const</code> prevents the reassignment of variables, and not mutation of the value it references. </li>
+                <li><code>const</code> is not reasignable, the other two are. However, <code>const</code> objects and arrays can still be mutated. This means that <code>const</code> prevents the reassignment of variables, and not mutation of the value it references.</li>
             </ul>
 
             <p>what will this code output?</p>
@@ -110,13 +109,15 @@ console.log(x); // 5`
                 </SyntaxHighlighter>
             </div>
 
-            <p>Answer: 5</p>
-
             <div className="">
                 <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet" wrapLines={true}>
                     {trickoryAnswer}
                 </SyntaxHighlighter>
             </div>
+
+            <blockquote>
+                <p>For now, do not even concern yourself with <code>var</code>. If possible, use <code>const</code>, if not, use <code>let</code>. And if that is still confussing, just use <code>let</code>.</p>
+            </blockquote>
 
             <h2>Reference vs Value assignment</h2>
 

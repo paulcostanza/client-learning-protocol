@@ -14,6 +14,7 @@ const sections = [
     { name: 'Arrays', path: 'arrays' },
     { name: 'Array Methods', path: 'array-methods' },
     { name: 'Objects', path: 'objects' },
+    { name: 'JSON', path: 'json' },
     { name: 'Built-In Objects', path: 'built-in-objects' },
     { name: 'Weird JS', path: 'weird-js' },
     { name: 'The DOM', path: 'dom' },
