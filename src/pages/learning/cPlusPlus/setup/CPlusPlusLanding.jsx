@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom'
 
 const sections = [
     { name: 'Introduction', path: 'introduction' },
-    { name: 'C++ Development, Compiler, Linker, & Libraries', path: 'development-compiler-linker-libraries' },
+    { name: 'Development: Compiler, Linker, & Libraries', path: 'development-compiler-linker-libraries' },
+    { name: 'Development: Examples', path: 'development-examples' },
     { name: 'Fundamentals', path: 'fundamentals' },
     { name: 'Build Your First Project', path: 'build-your-first-project' },
     { name: 'Compiler Build Configurations', path: 'compiler-build-configurations' },

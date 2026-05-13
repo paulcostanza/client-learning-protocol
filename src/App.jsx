@@ -119,6 +119,7 @@ import CPlusPlusLanding from './pages/learning/cPlusPlus/setup/CPlusPlusLanding'
 import CPlusPlusSectionLayout from './pages/learning/cPlusPlus/setup/CPlusPlusSectionLayout'
 import CPlusPlusIntroduction from './pages/learning/cPlusPlus/Introduction'
 import CPlusPlusDevelopmentCompilerLinkerLibraries from './pages/learning/cPlusPlus/DevelopmentCompilerLinkerLibraries'
+import CPlusPlusDevelopmentExamples from './pages/learning/cPlusPlus/DevelopmentExamples'
 import CPlusPlusFundamentals from './pages/learning/cPlusPlus/Fundamentals'
 import CPlusPlusBuildYourFirstProject from './pages/learning/cPlusPlus/BuildYourFirstProject'
 import CPlusPlusCompilerBuildConfigurations from './pages/learning/cPlusPlus/CompilerBuildConfigurations'
@@ -321,6 +322,7 @@ function App() {
             <Route path='/cpp' element={<CPlusPlusSectionLayout />} >
               <Route path='introduction' element={<CPlusPlusIntroduction />} />
               <Route path='development-compiler-linker-libraries' element={<CPlusPlusDevelopmentCompilerLinkerLibraries />} />
+              <Route path='development-examples' element={<CPlusPlusDevelopmentExamples />} />
               <Route path='fundamentals' element={<CPlusPlusFundamentals />} />
               <Route path='build-your-first-project' element={<CPlusPlusBuildYourFirstProject />} />
               <Route path='compiler-build-configurations' element={<CPlusPlusCompilerBuildConfigurations />} />

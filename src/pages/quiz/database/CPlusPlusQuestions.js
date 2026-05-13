@@ -584,4 +584,57 @@ When it comes to storage duration, the variable *does not equal* what it points 
         answer: 'the operation either completes successfully or has no effect on the program state',
         description: ``
     },
+    {
+        id: 26,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'development-examples',
+        title: '',
+        question: `What is the first thing the compiler does with a source file?`,
+        options: [
+            'creates object files',
+            'runs the linker',
+            'preprocesses preprocessor statements',
+            'creates an executable',
+        ],
+        random: true,
+        answer: 'preprocesses preprocessor statements',
+        description: ``
+    },
+    {
+        id: 27,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'development-examples',
+        title: '',
+        question: `What does \`#include <iostream>\` do?`,
+        options: [
+            'compiles the \`iostream\` library',
+            'copies the contents of iostream into current file',
+            'creates an executable',
+            'links \`iostream\` to the program after \`cpp\` files are compiled to \`obj\` files',
+        ],
+        random: true,
+        answer: 'copies the contents of iostream into current file',
+        description: ``
+    },
+    {
+        id: 28,
+        type: 'radio',
+        category: 'c++',
+        subcategory: 'development-examples',
+        title: 'Link this',
+        question: `What is the job of the linker`,
+        options: [
+            'combine \`obj\` files together',
+            'combine \`cpp\` files together',
+            'combine \`exe\` files together',
+            'execute the program',
+            'convert C++ into machine code',
+            'run the preprocessor'
+        ],
+        random: true,
+        answer: 'combine \`obj\` files together',
+        description: ``
+    },
 ]

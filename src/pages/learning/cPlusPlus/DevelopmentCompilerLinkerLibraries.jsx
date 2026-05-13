@@ -20,7 +20,7 @@ export default function DevelopmentCompilerLinkerLibraries() {
 
     return (
         <div>
-            <h1>C++ Development, Compiler, Linker, & Libraires</h1>
+            <h1>Development: Compiler, Linker, & Libraires</h1>
 
             <p>Before we can write and execute our first C++ program, we need to understand in more detail how C++ programs get developed. Here is a graphic outlining a simplistic approach:</p>
 
