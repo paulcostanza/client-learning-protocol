@@ -18,6 +18,7 @@ const sections = [
     { name: 'Weird JS', path: 'weird-js' },
     { name: 'The DOM', path: 'dom' },
     { name: 'Local Storage', path: 'local-storage' },
+    { name: 'APIs', path: 'apis' },
 ]
 
 export default function JavaScriptLanding() {

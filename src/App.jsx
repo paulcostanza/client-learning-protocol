@@ -30,6 +30,7 @@ import JavaScriptBuiltInObjects from './pages/learning/javascript/BuiltInObjects
 import JavaScriptWeirdJs from './pages/learning/javascript/WeirdJs'
 import JavaScriptDom from './pages/learning/javascript/Dom'
 import JavaScriptLocalStorage from './pages/learning/javascript/LocalStorage'
+import JavaScriptApis from './pages/learning/javascript/Apis'
 
 import Quiz from './pages/quiz/Quiz'
 import QuizList from './pages/quiz/QuizList'
@@ -234,6 +235,7 @@ function App() {
               <Route path='weird-js' element={<JavaScriptWeirdJs />} />
               <Route path='dom' element={<JavaScriptDom />} />
               <Route path='local-storage' element={<JavaScriptLocalStorage />} />
+              <Route path='apis' element={<JavaScriptApis />} />
             </Route>
 
             <Route path='/docker' element={<DockerLanding />} />

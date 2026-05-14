@@ -36,5 +36,6 @@ The user can select which one to do. How would I keep track of how a project is 
 19. Event handling: clicks, scrolls, keyboard presses with event listeners
 20. Local Storage here
 21. Asynchronous JS: callbacks, promisises, async/await
-22. Scope & closures
-23. Node.js
+22. APIs
+23. Scope & closures
+24. Node.js
