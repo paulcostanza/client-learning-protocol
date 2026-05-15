@@ -22,16 +22,9 @@ export default function APIs() {
     ]
 }`
 
-    const fetch = `{
-    "name": "Joe Schmoe",
-    "age": 42,
-    "gender": "male",
-    "hobbies": [
-        "skiing",
-        "surfing",
-        "piccolo"
-    ]
-}`
+    const fetch = `fetch(url)
+    .then(response => response.json())
+    .then(data => console.log(data))}`
 
     const then = `console.log("first")
 
@@ -152,7 +145,7 @@ third
             </div>
 
             <div className="">
-                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet" wrapLines={true}>
                     {thenConsole}
                 </SyntaxHighlighter>
             </div>
@@ -166,6 +159,64 @@ third
                     {response}
                 </SyntaxHighlighter>
             </div>
+
+            <h2>URLs and REST</h2>
+
+            <ul>
+                <li>Request</li>
+                <li>URLs (parameters & queries)</li>
+                <li>REST API design</li>
+            </ul>
+
+            <h2>HTTP request</h2>
+
+            <p><strong>HTTP</strong>, or <em>Hypertext Transfer Protocol</em>, is a protocol for determing how hypertext (text) should be transferred over the internet. We use HTTP when making request and responses.</p>
+
+            <blockquote>
+                <p>A <strong>protocol</strong> is an agreed-upon, standard way of doing something.</p>
+            </blockquote>
+
+            <p>There are severl components of a request:</p>
+
+            <ul>
+                <li>The path/address of where the data you are looking for is located. You must know the URL, as that is where the data is located.</li>
+                <li>Methods</li>
+                <ul>
+                    <li>GET</li>
+                    <li>POST</li>
+                    <li>PUT</li>
+                    <li>DELETE</li>
+                    <li>PATCH (less common)</li>
+                    <li>OPTIONS (less common)</li>
+                </ul>
+                <li>Body. This is optional and depends on your request type.</li>
+                <li>Headers. This is the meta information about the request. Details can include...</li>
+                <ul>
+                    <li>what kind of browser</li>
+                    <li>operating system</li>
+                    <li>authentication token for protective resources</li>
+                    <li>and a whole lot more</li>
+                </ul>
+            </ul>
+
+            <Dropdown
+                questions={["What does HTTP stand for?", "How would you describe what a protocol is?"]}
+                answers={["Hypertext Transfer Protocol", "An agreed-upon, standard way of doing something"]}
+            />
+
+            <h2>Request: URLs and Endpoints</h2>
+
+            <p>The path (URL) is an address where your desired resource is located. There are two parts of a URL, the base URL and the endpoint.</p>
+
+            <p>The <strong>base URL</strong> is the part of the URL that <em>will not</em> change no matter what kind of resource you are getting from the API.</p>
+
+            <p>The <strong>endpoint</strong> is the specific resource at that base URL that you are trying to get.</p>
+
+            <ul>
+                <li>A full URL: <code>https://apis.clp.com/comments</code></li>
+                <li>The base URL: <code>https://apis.clp.com</code></li>
+                <li>The endpoint: <code>/comments</code></li>
+            </ul>
 
             <br />
 
