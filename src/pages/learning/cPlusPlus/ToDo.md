@@ -86,7 +86,7 @@ export default function Comments() {
             <h1>Comments</h1>
 
             {/* <div className="">
-                <SyntaxHighlighter language="c++" style={tomorrow}
+                <SyntaxHighlighter language="cpp" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {something}
                 </SyntaxHighlighter>
