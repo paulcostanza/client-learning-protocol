@@ -124,6 +124,9 @@ import CPlusPlusDevelopmentExamples from './pages/learning/cPlusPlus/Development
 import CPlusPlusFundamentals from './pages/learning/cPlusPlus/Fundamentals'
 import CPlusPlusBuildYourFirstProject from './pages/learning/cPlusPlus/BuildYourFirstProject'
 import CPlusPlusCompilerBuildConfigurations from './pages/learning/cPlusPlus/CompilerBuildConfigurations'
+import CPlusPlusIntroToIostream from './pages/learning/cPlusPlus/IntroToIostream'
+import CPlusPlusComments from './pages/learning/cPlusPlus/Comments'
+import CPlusPlusStrings from './pages/learning/cPlusPlus/Strings'
 import CPlusPlusStackVsHeap from './pages/learning/cPlusPlus/StackVsHeap'
 import CPlusPlusStorage from './pages/learning/cPlusPlus/Storage'
 import CPlusPlusExceptionSafey from './pages/learning/cPlusPlus/ExceptionSafety'
@@ -328,6 +331,9 @@ function App() {
               <Route path='fundamentals' element={<CPlusPlusFundamentals />} />
               <Route path='build-your-first-project' element={<CPlusPlusBuildYourFirstProject />} />
               <Route path='compiler-build-configurations' element={<CPlusPlusCompilerBuildConfigurations />} />
+              <Route path='intro-to-iostream' element={<CPlusPlusIntroToIostream />} />
+              <Route path='comments' element={<CPlusPlusComments />} />
+              <Route path='strings' element={<CPlusPlusStrings />} />
               <Route path='stack-vs-heap' element={<CPlusPlusStackVsHeap />} />
               <Route path='storage' element={<CPlusPlusStorage />} />
               <Route path='exception-safety' element={<CPlusPlusExceptionSafey />} />
