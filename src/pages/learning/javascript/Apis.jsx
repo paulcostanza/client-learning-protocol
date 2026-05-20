@@ -44,6 +44,20 @@ third
         const img = \`<p>data.activity</p>\`
     })`
 
+    const optionalMethodParameter = `fetch('url', {method: "POST"})
+    .then()
+    .then()`
+
+    const requestBody = `fetch("https://apis.clp.com/jsonplaceholder/todos", {
+    method: "POST",
+    body: JSON.stringify({
+        title: "Buy Milk",
+        completed: false
+    })
+})
+    .then(res => res.json())
+    .then(data => console.log(data))`
+
     return (
         <div className="container">
             <h1>APIs</h1>
@@ -218,7 +232,62 @@ third
                 <li>The endpoint: <code>/comments</code></li>
             </ul>
 
-            <br />
+            <p>If you try to follow the URL, you would get the URL JSON response rather than getting a webpage. Let's look at what a full api might look like:</p>
+
+            <p><code>https://blahblahblah.com/api/v2/products/123</code></p>
+
+            <ul>
+                <li><code>api</code>: indicates that this is <em>not</em> a HTML page resource that you are getting, but rather it is the JSON API. </li>
+                <li><code>v2</code>: version 2. This is saying this is the second version of the API. In this instance, they have a version 1 that they do not want to completly erase, and they now need an updated version as well. It has been improved in some way, faster, more data, whatever, so a seperate endpoint was created for it. You will often see <code>v1</code>, <code>v2</code>, <code>v3</code>, ..., in that order.</li>
+            </ul>
+
+            <Dropdown
+                questions={[
+                    "What's the difference between a base URL and an endpoint?",
+                    "Can you come up with some commonly named endpoints?"
+                ]}
+                answers={[
+                    "The base URL is the part of the URL that will not change, no matter which resource we want to get from the API. Endpoints specifies which resource we want to get from the API.",
+                    <>
+                        <code>/users</code>, <code>/products</code>, and <code>/products/&lt;name-of-specific-product&gt;</code> to name a few.
+                    </>
+                ]
+                }
+            />
+
+            <h2>Request Methods</h2>
+
+            <p>The <strong>request method</strong> tells the server what <em>kind</em> of request you are making.</p>
+
+            <ul>
+                <li><code>GET</code>: getting data</li>
+                <li><code>POST</code>: adding new data (think posting to facebook)</li>
+                <li><code>PUT</code>: update existing data</li>
+                <li><code>DELETE</code>: remove data</li>
+                <li>there are more, but these are the most common ones we will focus on for now. </li>
+            </ul>
+
+            <h3>Diving deeper into fetch</h3>
+
+            <p>Fetch has an optional parameter that allows you to access the <code>method</code> property and change its value. The default for the method parameter is <code>GET</code>, hence why we never defined it with our previous uses.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {optionalMethodParameter}
+                </SyntaxHighlighter>
+            </div>
+
+            <h2>Request body</h2>
+
+            <p>The <strong>request body</strong> represents the data the we want to send to the server. This is only needed for <code>POST</code> and <code>PUT</code> requests. And it needs to be turned into JSON format before it is sent!</p>
+
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {requestBody}
+                </SyntaxHighlighter>
+            </div>
+
+            < br />
 
             <h2>Review</h2>
 
@@ -226,6 +295,6 @@ third
                 quizImports={quizImports}
                 subcategory="array-methods"
             />
-        </div>
+        </div >
     )
 }
