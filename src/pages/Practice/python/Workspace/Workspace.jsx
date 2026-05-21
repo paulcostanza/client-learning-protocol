@@ -37,32 +37,6 @@ export default function Workspace() {
         setOutput('')
         setActiveTab('description')
 
-        // loop starts at current idx
-        // loop goes up
-        // when loop hits problemIds.length, idx = 0
-        // loop stops when currentIdx = startIdx
-        // for (let id = currentIdx + 1; id < problemIds.length; id++) {
-        //     let status = getQuestionStatus('python-basics', problemIds[id])
-        //     let review = getHumanReadableNextReview(getNextReview('python-basics', problemIds[id]))
-
-        //     console.log("current id: ", id)
-        //     console.log("problemIds.length: ", problemIds.length)
-
-        // if (id === problemIds.length - 1) {
-        //     console.log("yes, we are on the last one")
-        //     for (let i = currentIdx + 1; id < problemIds.length; i++) {
-        //         if 
-        //     }
-        // }
-
-        //     if (typeof status == 'undefined'
-        //         || status == 'incorrect'
-        //         || review == 'Ready!') {
-        //         navigate(`/practice/python/${problemIds[id]}`)
-        //         return
-        //     }
-        // }
-
         let searchIdx = currentIdx + 1
 
         while (searchIdx != currentIdx) {
