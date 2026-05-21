@@ -1046,3 +1046,13 @@ input[type="checkbox"]:checked+label::before {
 .matrix-items>.matrix-element:first-of-type:hover {
     animation: none;
 }
+
+.solution-code-pre {
+    color: #fff;
+    background: #1d1f21;
+    border-radius: 5px;
+    font-family: "Fira Code", "JetBrains Mono", monospace;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}

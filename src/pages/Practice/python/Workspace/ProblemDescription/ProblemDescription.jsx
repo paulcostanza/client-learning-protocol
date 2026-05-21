@@ -19,7 +19,7 @@ export default function ProblemDescription({ problem, activeTab, setActiveTab })
                 {activeTab === 'description' && <Description problem={problem} />}
                 {activeTab === 'study guide' && <StudyGuide problem={problem} />}
                 {activeTab === 'playlist' && <Playlist />}
-                {activeTab === 'solution' && <Solution />}
+                {activeTab === 'solution' && <Solution problem={problem} />}
                 {/* {activeTab === 'comments' && <Comments />} */}
             </div>
         </div>

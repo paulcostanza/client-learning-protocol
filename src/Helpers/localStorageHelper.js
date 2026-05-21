@@ -1,11 +1,11 @@
 export function getSectionProgress(quizKey) {
-    const key = `section-${quizKey}`;
-    return JSON.parse(localStorage.getItem(key) || '{}');
+    const key = `section-${quizKey}`
+    return JSON.parse(localStorage.getItem(key) || '{}')
 }
 
 export function saveSectionQuestionResult(quizKey, questionId, result) {
-    const key = `section-${quizKey}`;
-    const progress = JSON.parse(localStorage.getItem(key) || '{}');
+    const key = `section-${quizKey}`
+    const progress = JSON.parse(localStorage.getItem(key) || '{}')
     const rightNow = Date.now()
 
     let interval = progress[questionId]?.interval ?? 1
@@ -32,37 +32,41 @@ export function saveSectionQuestionResult(quizKey, questionId, result) {
         lastAttempt: rightNow,
         interval,
         nextReview
-    };
-    localStorage.setItem(key, JSON.stringify(progress));
+    }
+    localStorage.setItem(key, JSON.stringify(progress))
+
+    // triggers rerender in solution tab in playground
+    window.dispatchEvent(new Event('problem-status-changed'))
+
 }
 
 export function clearSectionProgress(quizKey) {
-    const key = `section-${quizKey}`;
-    localStorage.removeItem(key);
+    const key = `section-${quizKey}`
+    localStorage.removeItem(key)
 }
 
 export function getQuestionStatus(quizKey, questionId) {
-    const key = `section-${quizKey}`;
-    const progress = JSON.parse(localStorage.getItem(key) || '{}');
-    return progress[questionId]?.result; // 'correct', 'incorrect', or undefined
+    const key = `section-${quizKey}`
+    const progress = JSON.parse(localStorage.getItem(key) || '{}')
+    return progress[questionId]?.result // 'correct', 'incorrect', or undefined
 }
 
 export function getLastAttempt(quizKey, questionId) {
-    const key = `section-${quizKey}`;
-    const progress = JSON.parse(localStorage.getItem(key) || '{}');
-    return progress[questionId]?.lastAttempt;
+    const key = `section-${quizKey}`
+    const progress = JSON.parse(localStorage.getItem(key) || '{}')
+    return progress[questionId]?.lastAttempt
 }
 
 export function getInterval(quizKey, questionId) {
-    const key = `section-${quizKey}`;
-    const progress = JSON.parse(localStorage.getItem(key) || '{}');
-    return progress[questionId]?.interval ?? 0;
+    const key = `section-${quizKey}`
+    const progress = JSON.parse(localStorage.getItem(key) || '{}')
+    return progress[questionId]?.interval ?? 0
 }
 
 export function getNextReview(quizKey, questionId) {
-    const key = `section-${quizKey}`;
-    const progress = JSON.parse(localStorage.getItem(key) || '{}');
-    return progress[questionId]?.nextReview;
+    const key = `section-${quizKey}`
+    const progress = JSON.parse(localStorage.getItem(key) || '{}')
+    return progress[questionId]?.nextReview
 }
 
 export function getHumanReadableNextReview(nextReview) {

@@ -39,6 +39,7 @@ import { sortNumbersByAbsoluteValue } from './sort-numbers-by-absolute-value'
 import { sortNumbersByLastDigit } from './sort-numbers-by-last-digit'
 import { validAnagram } from './valid-anagram'
 import { twoSum } from './two-sum'
+import { zipper } from './zipper'
 
 const problems = {
     // Printing 101
@@ -63,6 +64,7 @@ const problems = {
     "text-wrap": textWrap,
     "palindrome-characters": palindromeCharacters,
     "valid-palindrome": validPalindrome,
+    "zipper": zipper,
     // list
     "how-many": howMany,
     "add-lists": addLists,

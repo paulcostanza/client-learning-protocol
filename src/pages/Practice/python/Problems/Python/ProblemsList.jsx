@@ -23,6 +23,7 @@ export const problemsList = {
         { id: "text-wrap", title: "Text Wrap", status: '', review: '', order: 17 },
         { id: "palindrome-characters", title: "Palindrome Characters", status: '', review: '', order: 18 },
         { id: "valid-palindrome", title: "Valid Palindrome", status: '', review: '', order: 19 },
+        { id: "zipper", title: "Zipper", status: '', review: '', order: 20 },
     ],
     lists: [
         { id: "how-many", title: "How Many", status: '', review: '', order: 20 },
