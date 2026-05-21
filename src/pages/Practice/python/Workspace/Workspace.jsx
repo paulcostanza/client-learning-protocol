@@ -37,19 +37,14 @@ export default function Workspace() {
         setOutput('')
         setActiveTab('description')
 
-        let searchIdx = currentIdx + 1
-
-        while (searchIdx != currentIdx) {
-            let status = getQuestionStatus('python-basics', problemIds[searchIdx])
-            let review = getHumanReadableNextReview(getNextReview('python-basics', problemIds[searchIdx]))
+        for (let id = currentIdx + 1; id < problemIds.length; id++) {
+            let status = getQuestionStatus('python-basics', problemIds[id])
+            let review = getHumanReadableNextReview(getNextReview('python-basics', problemIds[id]))
 
             if (typeof status == 'undefined'
                 || status == 'incorrect'
                 || review == 'Ready!') {
-                if (searchIdx === problemIds.length) {
-                    searchIdx = 0
-                }
-                navigate(`/practice/python/${problemIds[searchIdx]}`)
+                navigate(`/practice/python/${problemIds[id]}`)
                 return
             }
         }
