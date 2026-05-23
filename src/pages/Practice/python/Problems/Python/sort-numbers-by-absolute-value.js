@@ -48,9 +48,9 @@ Expected: {expected}
 
   # Print summary FIRST
   if failed == 0:
-    print("********** PASS **********")
+    print("********** P A S S **********")
   else:
-    print("********** FAIL **********")
+    print("********** F A I L **********")
 
   print(f"Passed: {passed}, Failed: {failed}\\n")
   print("---")
@@ -86,14 +86,14 @@ const constraints = `<ul>
 </ul>`
 
 export const sortNumbersByAbsoluteValue = {
-    id: "sort-numbers-by-absolute-value",
-    title: "25. Sort Numbers By Absolute Value",
-    problemStatement: `<p>Sort and return the given list of numbers by their absolute value in ascending order.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example,
-    status: getProblemStatusById("sort-numbers-by-absolute-value"),
+  id: "sort-numbers-by-absolute-value",
+  title: "25. Sort Numbers By Absolute Value",
+  problemStatement: `<p>Sort and return the given list of numbers by their absolute value in ascending order.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("sort-numbers-by-absolute-value"),
 }
 
 // const solution = `Using the tools available to us, we should use the built-in <code>sorted</code> function and call it with a custom sortation. We need to add the <code>key</code> parameter. There is also the built-in function <code>abs</code> that returns the absolute value of a number. This problem is already done!

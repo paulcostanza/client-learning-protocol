@@ -48,9 +48,9 @@ Expected: {expected}
 
   # Print summary FIRST
   if failed == 0:
-    print("********** PASS **********")
+    print("********** P A S S **********")
   else:
-    print("********** FAIL **********")
+    print("********** F A I L **********")
 
   print(f"Passed: {passed}, Failed: {failed}\\n")
   print("---")
@@ -87,14 +87,14 @@ const constraints = `<ul>
 </ul>`
 
 export const sortListOfStrings = {
-    id: "sort-list-of-strings",
-    title: "25. Sort List of Strings",
-    problemStatement: `<p>Sort list of strings by ignoring case in alphabetically ascending order.</p>
+  id: "sort-list-of-strings",
+  title: "25. Sort List of Strings",
+  problemStatement: `<p>Sort list of strings by ignoring case in alphabetically ascending order.</p>
     
 <p>Normally, if you sort a string, the capital lettered words would end up first... we do not want that!</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example,
-    status: getProblemStatusById("sort-list-of-strings"),
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("sort-list-of-strings"),
 }

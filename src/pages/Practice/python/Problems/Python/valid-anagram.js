@@ -50,9 +50,9 @@ Expected: {expected}
 
   # Print summary FIRST
   if failed == 0:
-    print("********** PASS **********")
+    print("********** P A S S **********")
   else:
-    print("********** FAIL **********")
+    print("********** F A I L **********")
 
   print(f"Passed: {passed}, Failed: {failed}\\n")
   print("---")
@@ -94,19 +94,19 @@ const constraints = `<ul>
 
 
 export const validAnagram = {
-    id: "valid-anagram",
-    title: "33. Valid Anagram",
-    problemStatement: `<p>Given two strings <code>a</code> and <code>b</code>, return <code>True</code> if the strings are anagrams of each other. Otherwise, return <code>False</code>.</p>
+  id: "valid-anagram",
+  title: "33. Valid Anagram",
+  problemStatement: `<p>Given two strings <code>a</code> and <code>b</code>, return <code>True</code> if the strings are anagrams of each other. Otherwise, return <code>False</code>.</p>
 
 <p>An anagram is formed by rearranging the characters of another string while using all original characters exactly once.</p>
 
 <p>Character casing should be ignored for this problem.</p>`,
 
-    starterCode,
-    testCode,
-    constraints,
-    example,
-    status: getProblemStatusById("valid-anagram"),
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("valid-anagram"),
 }
 
 // def valid_anagram(a, b):

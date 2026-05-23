@@ -40,6 +40,7 @@ import { sortNumbersByLastDigit } from './sort-numbers-by-last-digit'
 import { validAnagram } from './valid-anagram'
 import { twoSum } from './two-sum'
 import { zipper } from './zipper'
+import { groupAnagrams } from './group-anagrams'
 
 const problems = {
     // Printing 101
@@ -87,6 +88,7 @@ const problems = {
     "roman-to-integer": romanToInteger,
     "valid-anagram": validAnagram,
     "two-sum": twoSum,
+    "group-anagrams": groupAnagrams,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     "move-zeros": moveZeros,

@@ -1,6 +1,4 @@
 import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 const starterCode = `def zipper(str_a, str_b):
   # enter code here please
@@ -52,9 +50,9 @@ Expected: {expected}
       failed += 1
 
   if failed == 0:
-    print("********** PASS **********")
+    print("********** P A S S **********")
   else:
-    print("********** FAIL **********")
+    print("********** F A I L **********")
 
   print(f"Passed: {passed}, Failed: {failed}\\n")
   print("---")
@@ -166,15 +164,15 @@ then combined once using <code>join()</code>.</p>
 
 
 export const zipper = {
-    id: "zipper",
-    title: "31. Zipper",
-    problemStatement: `<p>Given two strings, return a new string that interweaves their characters one at a time. If one string is longer, append the remaining characters at the end.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example,
-    status: getProblemStatusById("zipper"),
-    solution: solution
+  id: "zipper",
+  title: "31. Zipper",
+  problemStatement: `<p>Given two strings, return a new string that interweaves their characters one at a time. If one string is longer, append the remaining characters at the end.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("zipper"),
+  solution: solution
 }
 
 // make sure it works

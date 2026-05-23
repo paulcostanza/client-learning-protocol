@@ -47,9 +47,9 @@ Expected: {expected}
 
   # Print summary FIRST
   if failed == 0:
-    print("********** PASS **********")
+    print("********** P A S S **********")
   else:
-    print("********** FAIL **********")
+    print("********** F A I L **********")
 
   print(f"Passed: {passed}, Failed: {failed}\\n")
   print("---")
@@ -93,19 +93,19 @@ const constraints = `<ul>
 
 
 export const twoSum = {
-    id: "two-sum",
-    title: "33. Two Sum",
-    problemStatement: `<p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return the indices of the two numbers such that they add up to <code>target</code>.</p>
+  id: "two-sum",
+  title: "33. Two Sum",
+  problemStatement: `<p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return the indices of the two numbers such that they add up to <code>target</code>.</p>
 
 <p>You may assume that each input has exactly one solution, and you may not use the same element twice.</p>
 
 <p>Return the indices in ascending order.</p>`,
 
-    starterCode,
-    testCode,
-    constraints,
-    example,
-    status: getProblemStatusById("two-sum"),
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("two-sum"),
 }
 
 
