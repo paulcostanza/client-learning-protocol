@@ -1,15 +1,15 @@
-import { getProblemStatusById } from '../../../../../../Helpers/localStorageHelper'
+import { isProblemReady } from '../../../../../../Helpers/localStorageHelper'
 import { useEffect, useState } from 'react'
 
 export default function Solution({ problem }) {
-    const [status, setStatus] = useState(
-        getProblemStatusById(problem.id)
+    const [problemReady, setProblemReady] = useState(
+        isProblemReady(problem.id)
     )
 
     useEffect(() => {
         const refreshStatus = () => {
-            setStatus(
-                getProblemStatusById(problem.id)
+            setProblemReady(
+                isProblemReady(problem.id)
             )
         }
 
@@ -28,7 +28,7 @@ export default function Solution({ problem }) {
     return (
         <div>
             {problem.solution ? (
-                status === undefined ? (
+                problemReady === true ? (
                     <>
                         <p style={{ textAlign: "center" }}><strong>✋🏻🛑⛔️ To view solution, please submit the problem ⛔️🛑✋🏻</strong></p>
                         <p>Right or wrong, this window will explain how to approach this question, and the various ways to solve it.</p>
