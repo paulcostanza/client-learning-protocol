@@ -196,7 +196,7 @@ export default [
         type: 'radio',
         category: 'intro-to-comp',
         subcategory: 'how-computers-run-software',
-        title: 'Compilers and interpreters',
+        title: 'Comps and inters',
         question: 'Which statement about compilers and interpreters is true?',
         options: [
             'all programming languages are either compiled or interpreted, never both',

@@ -813,41 +813,6 @@ export default [
         description: 'An \`action\`\'s value is the API endpoint where our data we collect is sent to on the server.'
     },
     {
-        id: 44,
-        type: 'checkbox',
-        category: 'html',
-        subcategory: 'tables',
-        title: 'Table row elements',
-        question: "Which two elements are used to specify a row with a data and a header element in a table?",
-        options: [
-            '\`row\` element is used for rows',
-            '\`th\` element is used for the header elements',
-            '\`tr\` element is used for rows',
-            '\`head\` element is used for the header elements',
-            '\`r\` element is used for rows',
-            '\`thead\` element is used for the header elements'
-        ],
-        random: true,
-        answer: ['\`tr\` element is used for rows', '\`th\` element is used for the header elements'],
-        description: ` The \`tr\` represents each row in a table. The \`th\` represents the category, typically at the top of a column (but sometimes resides on the left side).
-~~~html
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>City</th>
-  </tr>
-
-  <tr>
-    <td>Paul</td>
-    <td>37</td>
-    <td>Night City</td>
-  </tr>
-</table>
-~~~        
-`
-    },
-    {
         id: 45,
         type: 'radio',
         category: 'html',
@@ -1028,7 +993,8 @@ Our table has one row of data with the data values of *Davis*, *Alex*, and *54*.
             '\`<input type="checkbox" disableInput />\`',
             '\`<input type="checkbox" disabled />\`',
             '\`<input type="checkbox" inputDisabled />\`',
-            '\`<input type="checkbox" disabling />\`'
+            '\`<input type="checkbox" disabling />\`',
+            '\`<input type="checkbox" disable />\`'
         ],
         random: true,
         answer: '\`<input type="checkbox" disabled />\`',

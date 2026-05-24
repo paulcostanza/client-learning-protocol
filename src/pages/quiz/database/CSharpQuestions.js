@@ -103,15 +103,16 @@ export default [
         category: 'c#',
         subcategory: '',
         title: '',
-        question: 'What does the `~` operator do in C#?',
+        question: 'What does the `~` operator represent in C#?',
         options: [
             'Bitwise AND',
             'Bitwise OR',
-            'Bitwise NOT (flips all bits)',
+            'Bitwise NOT',
             'Bitwise XOR'
         ],
         random: true,
-        answer: 'Bitwise NOT (flips all bits)'
+        answer: 'Bitwise NOT',
+        description: 'Bitwise NOT is used to flip all bits.'
     },
     {
         id: 8,
@@ -186,19 +187,20 @@ export default [
     },
     {
         id: 12,
-        type: 'radio',
+        type: 'checkbox',
         category: 'c#',
         subcategory: 'asp.net-core-web-api',
         title: 'Api control',
         question: 'What does the \`[ApiController]\` attribute primarily enable?',
         options: [
-            'automatic model validation and improved API behaviors',
+            'automatic model validation',
+            'improved API behaviors',
             'database migration',
             'authentication middleware',
             'automatic routing to Razor pages'
         ],
         random: true,
-        answer: 'automatic model validation and improved API behaviors'
+        answer: ['automatic model validation', 'improved API behaviors']
     },
     {
         id: 13,

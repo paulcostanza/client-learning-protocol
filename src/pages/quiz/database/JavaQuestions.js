@@ -487,18 +487,19 @@ cars[3] = "Ford";
         type: 'input',
         category: 'java',
         subcategory: 'array',
-        title: 'int ain\'t that hard',
+        title: 'int ain\'t that hard I',
         question: 'How do you declare an array of integers in Java that can hold 10 elements?',
         options: [""],
         random: false,
-        answer: "^int\\[\\]\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*=\\s*new\\s+int\\s*\\[\\s*10\\s*\\];?$"
+        answer: "^int\\[\\]\\s+[a-zA-Z_][a-zA-Z0-9_]*\\s*=\\s*new\\s+int\\s*\\[\\s*10\\s*\\];?$",
+        description: "Answer: \`int[] nums = new int[10];\`"
     },
     {
         id: 30,
         type: 'input',
         category: 'java',
         subcategory: 'array',
-        title: 'int ain\'t that hard',
+        title: 'int ain\'t that hard II',
         question: `Suppose you have this array:
 ~~~java
 int[] nums = { 5, 10, 15, 20 };
@@ -559,7 +560,7 @@ nums[3] = 20
         category: 'java',
         subcategory: 'hashmap',
         title: '',
-        question: `How do you check if the hashmap "food" has the key "Bananas"?`,
+        question: `How do you check if the hashmap \`food\` has the key \`"Bananas"\`?`,
         options: [""],
         random: false,
         answer: "^food\\.containsKey\\(\\s*\"Bananas\"\\s*\\);?$",

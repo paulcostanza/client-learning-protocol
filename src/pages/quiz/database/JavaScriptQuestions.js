@@ -329,7 +329,12 @@ No \`return\` statement runs for the first iteration, so JS returns \`undefined\
 - \`"JavaScript".slice(4)\`
 - \`"JavaScript".slice(4, 10)\`
 - \`"JavaScript".substring(4)\`
-- \`"JavaScript".substring(4, 10)\``
+- \`"JavaScript".substring(4, 10)\`
+
+*Side note* \`slice\` and \`substring\` are very similar with only two major distinctions:
+- \`slice\` supports negative indicies, \`substring\` does not and will treat negatives as \`0\`
+- \`substring\` automatically swaps values if start index is greater than end index, \`slice\` does not and will return an empty string
+`
     },
     {
         id: 17,

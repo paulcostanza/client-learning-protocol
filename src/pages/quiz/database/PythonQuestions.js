@@ -110,11 +110,11 @@ What will happen when the code runs?`,
         options: [
             'to display a message to the user',
             'to exit the program',
-            'to return a value or result',
+            'to get a value or result',
             'to comment out code'
         ],
         random: true,
-        answer: 'to return a value or result',
+        answer: 'to get a value or result',
         description: 'The `return` statement is used to send a value or result back to the caller of the function, which allows the function to produce an output that can be used elsewhere in the program.'
     },
     {
@@ -405,6 +405,8 @@ baseball = {
         options: [""],
         random: false,
         answer: "print\\(\\s*['\"]helmets['\"]\\s+in\\s+baseball\\s*\\)",
-        description: `Answer: \`print("helmets" in baseball)\``
+        description: `Answer: \`print("helmets" in baseball)\`
+        
+Doing something like \`print(baseball["helmets"])\` just checks the value of \`"helmets"\`, and does not return \`True\` or \`False\`. In this instance, printing it like this would produce a \`KeyError\` since that value is missing.`
     },
 ]
