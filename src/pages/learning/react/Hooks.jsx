@@ -33,6 +33,44 @@ return <div className={theme}>Hello</div>`
 
 const [state, dispatch] = useReducer(reducer, { count: 0 })`
 
+    const grandparent = `function App() {
+  const user = "Paul"
+
+  return <Parent user={user} />
+}
+
+function Parent({ user }) {
+  return <Child user={user} />
+}
+
+function Child({ user }) {
+  return <Grandchild user={user} />
+}
+
+function Grandchild({ user }) {
+  return <h1>{user}</h1>
+}`
+
+    const createContext = `import { createContext } from "react"
+
+const UserContext = createContext()`
+
+    const provideValue = `function App() {
+  return (
+    <UserContext.Provider value="Paul">
+      <Parent />
+    </UserContext.Provider>
+  )
+}`
+
+    const accessValue = `import { useContext } from "react";
+
+function Grandchild() {
+  const user = useContext(UserContext);
+
+  return <h1>{user}</h1>;
+}`
+
     const useCallback = `const memoizedFn = useCallback(() => {
     console.log("Expensive function")
 }, [dependency])`
@@ -122,14 +160,52 @@ const [state, dispatch] = useReducer(reducer, { count: 0 })`
 
             <h2><code>useContext</code></h2>
 
-            <ul>
-                <li>shares state globally without prop drilling</li>
-                <li>great for themes, auth, or user data</li>
-            </ul>
+            <p>An issue that may occur when using React is when you find yourself in a position where you need to pass data through components that do not actually need that data. The data is just passing through so a deeper component can use it.</p>
+
+            <p><em>Grandpa is passing it down through the son so the grandchild can use it.</em></p>
 
             <div className="">
                 <SyntaxHighlighter language="jsx" style={tomorrow} showLineNumbers className="code-snippet" wrapLines={true}>
-                    {useContext}
+                    {grandparent}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>In this example <code>Parent</code> and <code>Child</code> never use <code>User</code> at all, they are just forwarding it. This is called <strong>prop drilling</strong>. To fix this we use <code>useContext</code> as it...</p>
+
+            <ul>
+                <li>shares state globally, without prop drilling</li>
+                <li>is great for themes, authentication, or user data (like in our example)</li>
+            </ul>
+
+            <p>To <code>useContext</code> we have three steps:</p>
+
+            <ol>
+                <li>create a context</li>
+                <li>provide the value</li>
+                <li>access it</li>
+            </ol>
+
+            <p>Create the context:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="jsx" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {createContext}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>Provide the value:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="jsx" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {provideValue}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>Now data is accessible:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="jsx" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {accessValue}
                 </SyntaxHighlighter>
             </div>
 
@@ -199,7 +275,7 @@ const [state, dispatch] = useReducer(reducer, { count: 0 })`
 
             <ReviewQuiz
                 quizImports={quizImports}
-                subcategory="interfaces"
+                subcategory="hooks"
             />
         </div>
     );

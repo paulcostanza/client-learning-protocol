@@ -129,7 +129,7 @@ root.render(
         id: 7,
         type: 'radio',
         category: 'React',
-        subcategory: 'hashmap',
+        subcategory: '',
         title: 'Pascal Case Please',
         question: `What is wrong with this code:
         
@@ -157,7 +157,7 @@ function myComponent() {
         id: 8,
         type: 'radio',
         category: 'React',
-        subcategory: 'hashmap',
+        subcategory: '',
         title: 'Header Oops',
         question: `What is wrong with this code:
 ~~~jsx
@@ -186,7 +186,7 @@ root.render(Header())
         id: 9,
         type: 'input',
         category: 'React',
-        subcategory: '',
+        subcategory: 'hooks',
         title: 'State fair',
         question: `Which react hook lets you add and manage local state in functional components?`,
         options: [""],
@@ -293,14 +293,14 @@ root.render(
         id: 15,
         type: 'input',
         category: 'React',
-        subcategory: '',
+        subcategory: 'hooks',
         title: 'Prop drilling',
         question: `Which react hook gives you access to shared data without prop drilling?`,
         options: [""],
         random: false,
         answer: "useContext\(\s*.*?\s*\)",
         description: `Answer: \`useContext()\`
-Grabs data from React\'s *Context API*`
+Grabs data from React\'s *Context API* to avoid passing data through components that do not need said data.`
     },
     {
         id: 16,
@@ -318,7 +318,7 @@ Grabs data from React\'s *Context API*`
         id: 17,
         type: 'input',
         category: 'React',
-        subcategory: '',
+        subcategory: 'hooks',
         title: '',
         question: `Which react hook memoizes expensive calculations so they only recompute when dependencies change?`,
         options: [""],
@@ -334,7 +334,7 @@ Example: if you have an expensive calculation, useMemo will save (“memoize”)
         id: 18,
         type: 'input',
         category: 'React',
-        subcategory: '',
+        subcategory: 'hooks',
         title: '',
         question: `Which react hook returns a memoized frunction to prevent unnecessary re-renders of child components?`,
         options: [""],
@@ -350,7 +350,7 @@ Example: if you pass a function to a child component, useCallback will save (“
         id: 19,
         type: 'input',
         category: 'React',
-        subcategory: '',
+        subcategory: 'hooks',
         title: '',
         question: `Which react hook manages complex state logic using a reducer function?`,
         options: [""],
