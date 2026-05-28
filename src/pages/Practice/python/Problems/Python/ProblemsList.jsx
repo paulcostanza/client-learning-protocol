@@ -55,7 +55,10 @@ export const problemsList = {
         { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 41 },
         { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 42 },
     ],
+    slidingWindow: [
+        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 43 }
+    ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 43 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 44 },
     ]
 }

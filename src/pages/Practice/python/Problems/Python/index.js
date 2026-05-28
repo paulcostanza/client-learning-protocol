@@ -41,6 +41,7 @@ import { validAnagram } from './valid-anagram'
 import { twoSum } from './two-sum'
 import { zipper } from './zipper'
 import { groupAnagrams } from './group-anagrams'
+import { bestTimeToBuyStocks } from './best-time-to-buy-stocks'
 
 const problems = {
     // Printing 101
@@ -92,6 +93,8 @@ const problems = {
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     "move-zeros": moveZeros,
+    // sliding window
+    "best-time-to-buy-stocks": bestTimeToBuyStocks,
     // matrices
     "matrix-rotation-i": matrixRotationI,
 }
