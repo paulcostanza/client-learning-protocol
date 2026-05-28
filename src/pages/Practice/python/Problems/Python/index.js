@@ -42,6 +42,7 @@ import { twoSum } from './two-sum'
 import { zipper } from './zipper'
 import { groupAnagrams } from './group-anagrams'
 import { bestTimeToBuyStocks } from './best-time-to-buy-stocks'
+import { reverseALinkedList } from './reverse-a-linked-list'
 
 const problems = {
     // Printing 101
@@ -95,6 +96,8 @@ const problems = {
     "move-zeros": moveZeros,
     // sliding window
     "best-time-to-buy-stocks": bestTimeToBuyStocks,
+    // linked list
+    "reverse-a-linked-list": reverseALinkedList,
     // matrices
     "matrix-rotation-i": matrixRotationI,
 }
