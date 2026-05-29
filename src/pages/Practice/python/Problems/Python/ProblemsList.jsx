@@ -59,9 +59,10 @@ export const problemsList = {
         { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 43 }
     ],
     linkedList: [
-        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 44 }
+        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 44 },
+        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 45 }
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 45 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 46 },
     ]
 }

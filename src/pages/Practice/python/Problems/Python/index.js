@@ -43,6 +43,7 @@ import { zipper } from './zipper'
 import { groupAnagrams } from './group-anagrams'
 import { bestTimeToBuyStocks } from './best-time-to-buy-stocks'
 import { reverseALinkedList } from './reverse-a-linked-list'
+import { mergeTwoSortedLists } from './merge-two-sorted-lists'
 
 const problems = {
     // Printing 101
@@ -98,6 +99,7 @@ const problems = {
     "best-time-to-buy-stocks": bestTimeToBuyStocks,
     // linked list
     "reverse-a-linked-list": reverseALinkedList,
+    "merge-two-sorted-lists": mergeTwoSortedLists,
     // matrices
     "matrix-rotation-i": matrixRotationI,
 }
