@@ -44,6 +44,7 @@ import { groupAnagrams } from './group-anagrams'
 import { bestTimeToBuyStocks } from './best-time-to-buy-stocks'
 import { reverseALinkedList } from './reverse-a-linked-list'
 import { mergeTwoSortedLists } from './merge-two-sorted-lists'
+import { topKFrequentElements } from './top-k-frequent-elements'
 
 const problems = {
     // Printing 101
@@ -92,6 +93,7 @@ const problems = {
     "valid-anagram": validAnagram,
     "two-sum": twoSum,
     "group-anagrams": groupAnagrams,
+    "top-k-frequent-elements": topKFrequentElements,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     "move-zeros": moveZeros,

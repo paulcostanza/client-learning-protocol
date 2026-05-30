@@ -50,19 +50,20 @@ export const problemsList = {
         { id: "valid-anagram", title: "Valid Anagram", status: '', review: '', order: 38 },
         { id: "two-sum", title: "Two Sum", status: '', review: '', order: 39 },
         { id: "group-anagrams", title: "Group Anagrams", status: '', review: '', order: 40 },
+        { id: "top-k-frequent-elements", title: "Top K Frequent Elements", status: '', review: '', order: 41 },
     ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 41 },
-        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 42 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 42 },
+        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 43 },
     ],
     slidingWindow: [
-        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 43 }
+        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 44 }
     ],
     linkedList: [
-        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 44 },
-        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 45 }
+        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 45 },
+        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 46 }
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 46 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 47 },
     ]
 }
