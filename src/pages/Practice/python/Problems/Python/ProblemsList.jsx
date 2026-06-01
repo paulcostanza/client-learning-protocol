@@ -63,7 +63,10 @@ export const problemsList = {
         { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 45 },
         { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 46 }
     ],
+    trees: [
+        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 47 }
+    ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 47 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 48 },
     ]
 }

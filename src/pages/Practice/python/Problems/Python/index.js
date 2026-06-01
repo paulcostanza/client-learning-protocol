@@ -45,6 +45,7 @@ import { bestTimeToBuyStocks } from './best-time-to-buy-stocks'
 import { reverseALinkedList } from './reverse-a-linked-list'
 import { mergeTwoSortedLists } from './merge-two-sorted-lists'
 import { topKFrequentElements } from './top-k-frequent-elements'
+import { invertBinaryTree } from './invert-binary-tree'
 
 const problems = {
     // Printing 101
@@ -102,6 +103,8 @@ const problems = {
     // linked list
     "reverse-a-linked-list": reverseALinkedList,
     "merge-two-sorted-lists": mergeTwoSortedLists,
+    // trees
+    "invert-binary-tree": invertBinaryTree,
     // matrices
     "matrix-rotation-i": matrixRotationI,
 }

@@ -59,7 +59,6 @@ run_tests()
 
 const example = `Example #1:
 Input: prices = [7,1,5,3,6,4]
-
 Output: 5
 
 Explanation:
@@ -69,7 +68,6 @@ Buy at price 1 and sell at price 6.
 
 Example #2:
 Input: prices = [7,6,4,3,1]
-
 Output: 0
 
 Explanation:
@@ -79,7 +77,6 @@ No profit can be made.
 
 Example #3:
 Input: prices = [2,4,1]
-
 Output: 2
 `
 
@@ -128,15 +125,15 @@ const solution = `
 
 
 export const bestTimeToBuyStocks = {
-    id: "best-time-to-buy-stocks",
-    title: "43. Best Time to Buy Stocks",
-    problemStatement: `<p>You are insider trading and given an integer array <code>prices</code> where <code>prices[n]</code> is the price of Slim Jim stock on the <code>nth</code> day.</p>
+  id: "best-time-to-buy-stocks",
+  title: "43. Best Time to Buy Stocks",
+  problemStatement: `<p>You are insider trading and given an integer array <code>prices</code> where <code>prices[n]</code> is the price of Slim Jim stock on the <code>nth</code> day.</p>
     <p>You may choose a single day to buy one share and choose a different day in the future to sell it.</p>
     <p>Return the maximum profit you can achieve. You may choose to not make any transactions, in which case the profit would be 0.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example,
-    status: getProblemStatusById("best-time-to-buy-stocks"),
-    solution: solution
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("best-time-to-buy-stocks"),
+  solution: solution
 }
