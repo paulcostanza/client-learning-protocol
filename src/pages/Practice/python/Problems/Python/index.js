@@ -46,6 +46,7 @@ import { reverseALinkedList } from './reverse-a-linked-list'
 import { mergeTwoSortedLists } from './merge-two-sorted-lists'
 import { topKFrequentElements } from './top-k-frequent-elements'
 import { invertBinaryTree } from './invert-binary-tree'
+import { numberOfStudentsUnableToEatLunch } from './number-of-students-unable-to-eat-lunch'
 
 const problems = {
     // Printing 101
@@ -95,6 +96,7 @@ const problems = {
     "two-sum": twoSum,
     "group-anagrams": groupAnagrams,
     "top-k-frequent-elements": topKFrequentElements,
+    "number-of-students-unable-to-eat-lunch": numberOfStudentsUnableToEatLunch,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     "move-zeros": moveZeros,

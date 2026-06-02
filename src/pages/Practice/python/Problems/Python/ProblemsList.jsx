@@ -51,22 +51,23 @@ export const problemsList = {
         { id: "two-sum", title: "Two Sum", status: '', review: '', order: 39 },
         { id: "group-anagrams", title: "Group Anagrams", status: '', review: '', order: 40 },
         { id: "top-k-frequent-elements", title: "Top K Frequent Elements", status: '', review: '', order: 41 },
+        { id: "number-of-students-unable-to-eat-lunch", title: "Number of Students Unable to Eat Lunch", status: '', review: '', order: 42 },
     ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 42 },
-        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 43 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 43 },
+        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 44 },
     ],
     slidingWindow: [
-        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 44 }
+        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 45 }
     ],
     linkedList: [
-        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 45 },
-        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 46 }
+        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 46 },
+        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 47 }
     ],
     trees: [
-        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 47 }
+        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 48 }
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 48 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 49 },
     ]
 }
