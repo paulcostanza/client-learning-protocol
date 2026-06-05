@@ -119,12 +119,16 @@ const solution = `
 
 <p>Time complexity of O(n).</p>
 <p>Space complexity of O(1).</p>
+
+<p>Note: you need to import <code>Counter</code> if you want to use it!</p>
+
+<code>from collections import Counter</code>
 `
 
 export const numberOfStudentsUnableToEatLunch = {
-    id: "number-of-students-unable-to-eat-lunch",
-    title: "42. Number of Students Unable to Eat Lunch",
-    problemStatement: `<p>The school cafeteria offers circular and square sandwiches at lunch break, referred to by numbers <code>0</code> and <code>1</code> respectively. All students stand in a queue. Each student either prefers square or circular sandwiches.</p>
+  id: "number-of-students-unable-to-eat-lunch",
+  title: "42. Number of Students Unable to Eat Lunch",
+  problemStatement: `<p>The school cafeteria offers circular and square sandwiches at lunch break, referred to by numbers <code>0</code> and <code>1</code> respectively. All students stand in a queue. Each student either prefers square or circular sandwiches.</p>
   <p>The number of sandwiches in the cafeteria is equal to the number of students. The sandwiches are placed in a <strong>stack</strong>. At each step...</p>
   <ul>
     <li>If the student at the front of the queue <em>prefers</em> the sandwich on the top of the stack, they will <strong>take it</strong> and leave the queue.</li>
@@ -132,12 +136,12 @@ export const numberOfStudentsUnableToEatLunch = {
   </ul>
   <p>This continues until none of the queue students want to take the top sandwich and are thus unable to eat.<p>
   <p>You are given two integer lists <code>students</code> and <code>sandwiches</code> where <code>sandwiches[i]</code> is the type of the <code>i-th</code> sandwich in the stack (<code>i = 0</code> is the top of the stack) and <code>student[j]</code> is the preference of the <code>j-th</code> student in the initial queue (<code>j=0</code> is the front of the queue). Return the number of students that are unable to eat. `,
-    starterCode,
-    testCode,
-    constraints,
-    example,
-    status: getProblemStatusById("number-of-students-unable-to-eat-lunch"),
-    solution: solution
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("number-of-students-unable-to-eat-lunch"),
+  solution: solution
 }
 
 /*

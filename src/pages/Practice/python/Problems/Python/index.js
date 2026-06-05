@@ -47,6 +47,7 @@ import { mergeTwoSortedLists } from './merge-two-sorted-lists'
 import { topKFrequentElements } from './top-k-frequent-elements'
 import { invertBinaryTree } from './invert-binary-tree'
 import { numberOfStudentsUnableToEatLunch } from './number-of-students-unable-to-eat-lunch'
+import { majorityElement } from './majority-element'
 
 const problems = {
     // Printing 101
@@ -97,6 +98,7 @@ const problems = {
     "group-anagrams": groupAnagrams,
     "top-k-frequent-elements": topKFrequentElements,
     "number-of-students-unable-to-eat-lunch": numberOfStudentsUnableToEatLunch,
+    "majority-element": majorityElement,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     "move-zeros": moveZeros,
