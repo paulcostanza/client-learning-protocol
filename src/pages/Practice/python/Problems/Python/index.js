@@ -48,6 +48,7 @@ import { topKFrequentElements } from './top-k-frequent-elements'
 import { invertBinaryTree } from './invert-binary-tree'
 import { numberOfStudentsUnableToEatLunch } from './number-of-students-unable-to-eat-lunch'
 import { majorityElement } from './majority-element'
+import { missingNumber } from './missing-number'
 
 const problems = {
     // Printing 101
@@ -111,6 +112,8 @@ const problems = {
     "invert-binary-tree": invertBinaryTree,
     // matrices
     "matrix-rotation-i": matrixRotationI,
+    // problem solving
+    "missing-number": missingNumber,
 }
 
 export default problems

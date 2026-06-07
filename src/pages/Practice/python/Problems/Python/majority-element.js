@@ -217,3 +217,5 @@ Before attempting this problem, you should be comfortable with:
 - Boyer-Moore Voting algorithm: the candidate elimination technique that finds the majority elements in O(1) space
 - Bit manipulation: constructing numbers bit by bit by counting set bits across all elements (for the bit manipulation approach)
 */
+
+// I should also add how the Boyer-Moore algorithm only works IF there is a guaranteed majority element. Otherwise it will not.

@@ -70,5 +70,8 @@ export const problemsList = {
     ],
     matrices: [
         { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 50 },
+    ],
+    problemSolving: [
+        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 51 },
     ]
 }
