@@ -91,7 +91,21 @@ const constraints = `<ul>
 </ul>`
 
 const solution = `
-<p>The key insight is that student order <em>does not</em> matter. Since students can rotate indefinitely, what matters is whether there exists any student who wants the current top sandwich. If we track how many students want each type, <code>0</code> or <code>1</code>, we can quickly check availability without simulating the queue.<p>
+<h1>Count using a dictionary</h1>
+<p>The key insight to this problem is that student order <em>does not</em> matter. All we care about is...</p>
+
+<ul>
+  <li>How many students want circular sandwiches <code>0</code></li>
+  <li>How many students want square sandwiches <code>1</code></li>
+</ul>
+
+<p>Since students can rotate indefinitely, what matters is whether there exists any student who wants the current top sandwich. If we track how many students want each type, <code>0</code> or <code>1</code>, we can quickly check availability without simulating the queue.<p>
+
+<ul>
+  <li>If the top sandwich is <code>0</code> and there are no students who want <code>0</code>, we are done</li>
+  <li>If the top sandwich is <code>1</code> and there are no students who want <code>1</code>, we are done</li>
+  <li>Otherwise, one student eats that sandwich, so we decrement the corresponding count</li>
+</ul>
 
 <h2>Algorithm</h2>
 
@@ -105,10 +119,13 @@ const solution = `
 
 <pre class="solution-code-pre"><code>def countStudents(students, sandwiches):
     result = len(students) # the amount of students who have not eaten lunch
-    count = Counter(students) # counts the occurrences of each integer and puts it into a dictionary
+    count = {0: 0, 1: 0}
+
+    for student in students:
+      count[student] += 1
 
     for s in sandwiches:
-        if count[s] > 0:
+        if count[s] > 0: # at least one student wants s
             result -= 1
             count[s] -= 1
         else: # if no student is willing to eat it, terminate
@@ -117,12 +134,38 @@ const solution = `
     return result
 </code></pre>
 
+<p>Btw, we actually do not even need <code>result</code>:<p>
+
+<pre class="solution-code-pre"><code>def countStudents(students, sandwiches):
+   count = {0: 0, 1: 0}
+
+    for student in students:
+      count[student] += 1
+
+    for s in sandwiches:
+        if count[s] == 0: 
+          return count[0] + count[1]
+        count[s] -= 1
+        
+    return 0
+</code></pre>
+
 <p>Time complexity of O(n).</p>
 <p>Space complexity of O(1).</p>
 
-<p>Note: you need to import <code>Counter</code> if you want to use it!</p>
+<hr />
 
-<code>from collections import Counter</code>
+<p><strong><em>Note:</em></strong> you can use <code>Counter()</code> to count the occurrences of each integer, which will put it directly into a dictionary.</p>
+
+<p>You just need to remember to import <code>Counter</code> if you want to use it!</p>
+
+<pre class="solution-code-pre"><code>
+from collections import Counter
+
+# ...
+
+count = Counter(students) # counts the occurrences of each integer and puts it into a dictionary
+</code></pre>
 `
 
 export const numberOfStudentsUnableToEatLunch = {
