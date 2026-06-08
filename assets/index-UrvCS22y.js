@@ -10737,7 +10737,7 @@ count = Counter(students) # counts the occurrences of each integer and puts it i
     <li>Otherwise, they will <strong>leave it</strong> and go to the queue's end.</li>
   </ul>
   <p>This continues until none of the queue students want to take the top sandwich and are thus unable to eat.<p>
-  <p>You are given two integer lists <code>students</code> and <code>sandwiches</code> where <code>sandwiches[i]</code> is the type of the <code>i-th</code> sandwich in the stack (<code>i = 0</code> is the top of the stack) and <code>student[j]</code> is the preference of the <code>j-th</code> student in the initial queue (<code>j=0</code> is the front of the queue). Return the number of students that are unable to eat. `,starterCode:vIe,testCode:SIe,constraints:wIe,example:kIe,status:Ut("number-of-students-unable-to-eat-lunch"),solution:_Ie},EIe=`def majorityElement(nums):
+  <p>You are given two integer lists <code>students</code> and <code>sandwiches</code> where <code>sandwiches[i]</code> is the type of the <code>i-th</code> sandwich in the stack (<code>i = 0</code> is the top of the stack) and <code>student[j]</code> is the preference of the <code>j-th</code> student in the initial queue (<code>j=0</code> is the front of the queue). Return the number of students that are unable to eat. `,starterCode:vIe,testCode:SIe,constraints:wIe,example:kIe,status:Ut("number-of-students-unable-to-eat-lunch"),solution:_Ie},EIe=`def majority_element(nums):
   # write your code here!
   
   
@@ -10762,7 +10762,7 @@ count = Counter(students) # counts the occurrences of each integer and puts it i
 
   for i, (nums, expected) in enumerate(test_cases, 1):
     try:
-      result = majorityElement(nums)
+      result = majority_element(nums)
 
       if result == expected:
         logs.append(f"""Test {i}: PASS
@@ -10838,7 +10838,7 @@ Explanation:
     <li>Return <code>result</code></li>
 </ol>
 
-<pre class="solution-code-pre"><code>def majorityElement(nums):
+<pre class="solution-code-pre"><code>def majority_element(nums):
     num_dict = {}
 
     result, occurrences = 0, 0
@@ -10873,7 +10873,7 @@ Explanation:
     <li>Return <code>result</code> as the majority element</li>
 </ol>
 
-<pre class="solution-code-pre"><code>def majorityElement(nums):
+<pre class="solution-code-pre"><code>def majority_element(nums):
     result = count = 0
 
     for num in nums:
@@ -10885,6 +10885,10 @@ Explanation:
 
 <p>Time complexity is O(n).</p>
 <p>Space complexity is O(1).</p>
+
+<blockquote>
+    <p>The Boyer-Moore algorithm only works <strong>IF</strong> there is a guaranteed majority element. If there is no guaranteed majority element, this algorithm is no good to solve the problem.</p>
+</blockquote>
 
 <h1>Bit-manipulation</h1>
 
@@ -10900,7 +10904,7 @@ Explanation:
     <li>Return the constructed result</li>
 </ol>
 
-<pre class="solution-code-pre"><code>def majorityElement(nums):
+<pre class="solution-code-pre"><code>def majority_element(nums):
     n = len(nums)
     bit = [0] * 32
     for num in nums:
