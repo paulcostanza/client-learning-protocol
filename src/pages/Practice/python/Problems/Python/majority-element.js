@@ -1,6 +1,6 @@
 import { getProblemStatusById } from '../../../../../Helpers/localStorageHelper'
 
-const starterCode = `def majorityElement(nums):
+const starterCode = `def majority_element(nums):
   # write your code here!
   
   
@@ -27,7 +27,7 @@ const testCode = `def run_tests():
 
   for i, (nums, expected) in enumerate(test_cases, 1):
     try:
-      result = majorityElement(nums)
+      result = majority_element(nums)
 
       if result == expected:
         logs.append(f"""Test {i}: PASS
@@ -109,7 +109,7 @@ const solution = `
     <li>Return <code>result</code></li>
 </ol>
 
-<pre class="solution-code-pre"><code>def majorityElement(nums):
+<pre class="solution-code-pre"><code>def majority_element(nums):
     num_dict = {}
 
     result, occurrences = 0, 0
@@ -144,7 +144,7 @@ const solution = `
     <li>Return <code>result</code> as the majority element</li>
 </ol>
 
-<pre class="solution-code-pre"><code>def majorityElement(nums):
+<pre class="solution-code-pre"><code>def majority_element(nums):
     result = count = 0
 
     for num in nums:
@@ -156,6 +156,10 @@ const solution = `
 
 <p>Time complexity is O(n).</p>
 <p>Space complexity is O(1).</p>
+
+<blockquote>
+    <p>The Boyer-Moore algorithm only works <strong>IF</strong> there is a guaranteed majority element. If there is no guaranteed majority element, this algorithm is no good to solve the problem.</p>
+</blockquote>
 
 <h1>Bit-manipulation</h1>
 
@@ -171,7 +175,7 @@ const solution = `
     <li>Return the constructed result</li>
 </ol>
 
-<pre class="solution-code-pre"><code>def majorityElement(nums):
+<pre class="solution-code-pre"><code>def majority_element(nums):
     n = len(nums)
     bit = [0] * 32
     for num in nums:
@@ -218,4 +222,3 @@ Before attempting this problem, you should be comfortable with:
 - Bit manipulation: constructing numbers bit by bit by counting set bits across all elements (for the bit manipulation approach)
 */
 
-// I should also add how the Boyer-Moore algorithm only works IF there is a guaranteed majority element. Otherwise it will not.
