@@ -49,6 +49,7 @@ import { invertBinaryTree } from './invert-binary-tree'
 import { numberOfStudentsUnableToEatLunch } from './number-of-students-unable-to-eat-lunch'
 import { majorityElement } from './majority-element'
 import { missingNumber } from './missing-number'
+import { reverseList } from './reverse-list'
 
 const problems = {
     // Printing 101
@@ -77,6 +78,7 @@ const problems = {
     // list
     "how-many": howMany,
     "add-lists": addLists,
+    "reverse-list": reverseList,
     "pop-last-n-elements": popLastNElements,
     "squares-of-an-array": squaresOfAnArray,
     "convert-the-seconds": convertTheSeconds,

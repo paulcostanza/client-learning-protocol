@@ -28,50 +28,51 @@ export const problemsList = {
     lists: [
         { id: "how-many", title: "How Many", status: '', review: '', order: 21 },
         { id: "add-lists", title: "Add Lists", status: '', review: '', order: 22 },
-        { id: "pop-last-n-elements", title: "Pop Last n Elements", status: '', review: '', order: 23 },
-        { id: "squares-of-an-array", title: "Squares of an Array", status: '', review: '', order: 24 },
-        { id: "convert-the-seconds", title: "Convert the Seconds", status: '', review: '', order: 25 },
-        { id: "sort-list-of-strings", title: "Sort List of Strings", status: '', review: '', order: 26 },
-        { id: "sort-numbers-by-absolute-value", title: "Sort Numbers By Absolute Value", status: '', review: '', order: 27 },
-        { id: "sort-numbers-by-last-digit", title: "Sort Numbers By Last Digit", status: '', review: '', order: 28 },
+        { id: "reverse-list", title: "Reverse List", status: '', review: '', order: 23 },
+        { id: "pop-last-n-elements", title: "Pop Last n Elements", status: '', review: '', order: 24 },
+        { id: "squares-of-an-array", title: "Squares of an Array", status: '', review: '', order: 25 },
+        { id: "convert-the-seconds", title: "Convert the Seconds", status: '', review: '', order: 26 },
+        { id: "sort-list-of-strings", title: "Sort List of Strings", status: '', review: '', order: 27 },
+        { id: "sort-numbers-by-absolute-value", title: "Sort Numbers By Absolute Value", status: '', review: '', order: 28 },
+        { id: "sort-numbers-by-last-digit", title: "Sort Numbers By Last Digit", status: '', review: '', order: 29 },
     ],
     sets: [
-        { id: "list-to-set", title: "List to Set", status: '', review: '', order: 29 },
-        { id: "count-unique-words", title: "Count Unique Words", status: '', review: '', order: 30 },
-        { id: "contains-duplicate", title: "Contains Duplicate", status: '', review: '', order: 31 },
+        { id: "list-to-set", title: "List to Set", status: '', review: '', order: 30 },
+        { id: "count-unique-words", title: "Count Unique Words", status: '', review: '', order: 31 },
+        { id: "contains-duplicate", title: "Contains Duplicate", status: '', review: '', order: 32 },
     ],
     dictionaries: [
-        { id: "get-dictionary-keys", title: "Get Dictionary Keys", status: '', review: '', order: 32 },
-        { id: "get-dictionary-values", title: "Get Dictionary Values", status: '', review: '', order: 33 },
-        { id: "count-characters", title: "Count Characters", status: '', review: '', order: 34 },
-        { id: "remove-keys", title: "Remove Keys", status: '', review: '', order: 35 },
-        { id: "valid-parentheses", title: "Valid Parentheses", status: '', review: '', order: 36 },
-        { id: "roman-to-integer", title: "Roman To Integer", status: '', review: '', order: 37 },
-        { id: "valid-anagram", title: "Valid Anagram", status: '', review: '', order: 38 },
-        { id: "two-sum", title: "Two Sum", status: '', review: '', order: 39 },
-        { id: "group-anagrams", title: "Group Anagrams", status: '', review: '', order: 40 },
-        { id: "top-k-frequent-elements", title: "Top K Frequent Elements", status: '', review: '', order: 41 },
-        { id: "number-of-students-unable-to-eat-lunch", title: "Number of Students Unable to Eat Lunch", status: '', review: '', order: 42 },
-        { id: "majority-element", title: "Majority Element", status: '', review: '', order: 43 },
+        { id: "get-dictionary-keys", title: "Get Dictionary Keys", status: '', review: '', order: 33 },
+        { id: "get-dictionary-values", title: "Get Dictionary Values", status: '', review: '', order: 34 },
+        { id: "count-characters", title: "Count Characters", status: '', review: '', order: 35 },
+        { id: "remove-keys", title: "Remove Keys", status: '', review: '', order: 36 },
+        { id: "valid-parentheses", title: "Valid Parentheses", status: '', review: '', order: 37 },
+        { id: "roman-to-integer", title: "Roman To Integer", status: '', review: '', order: 38 },
+        { id: "valid-anagram", title: "Valid Anagram", status: '', review: '', order: 39 },
+        { id: "two-sum", title: "Two Sum", status: '', review: '', order: 40 },
+        { id: "group-anagrams", title: "Group Anagrams", status: '', review: '', order: 41 },
+        { id: "top-k-frequent-elements", title: "Top K Frequent Elements", status: '', review: '', order: 42 },
+        { id: "number-of-students-unable-to-eat-lunch", title: "Number of Students Unable to Eat Lunch", status: '', review: '', order: 43 },
+        { id: "majority-element", title: "Majority Element", status: '', review: '', order: 44 },
     ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 44 },
-        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 45 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 45 },
+        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 46 },
     ],
     slidingWindow: [
-        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 46 }
+        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 47 }
     ],
     linkedList: [
-        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 47 },
-        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 48 }
+        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 48 },
+        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 49 }
     ],
     trees: [
-        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 49 }
+        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 50 }
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 50 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 51 },
     ],
     problemSolving: [
-        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 51 },
+        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 52 },
     ]
 }
