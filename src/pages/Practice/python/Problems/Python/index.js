@@ -50,6 +50,7 @@ import { numberOfStudentsUnableToEatLunch } from './number-of-students-unable-to
 import { majorityElement } from './majority-element'
 import { missingNumber } from './missing-number'
 import { reverseList } from './reverse-list'
+import { firstUniqueCharacterInAString } from './first-unique-character-in-a-string'
 
 const problems = {
     // Printing 101
@@ -75,6 +76,7 @@ const problems = {
     "palindrome-characters": palindromeCharacters,
     "valid-palindrome": validPalindrome,
     "zipper": zipper,
+    "first-unique-character-in-a-string": firstUniqueCharacterInAString,
     // list
     "how-many": howMany,
     "add-lists": addLists,
