@@ -11217,20 +11217,23 @@ XOR 0011
 <p>A simple mathematical observation helps us here:</p>
 
 <ul>
-    <li>The sum of numbers from <code>0</code> to <code>n</code> is known</li>
+    <li>The sum of numbers from <code>0</code> to <code>len(nums)</code> is known</li>
     <li>If we compare the values we expect to see with the values that <em>actually</em> appear, the difference will be the missing number!</li>
 </ul>
 
-<p>Instead of computing two separate sums, we can combine both ideas into a <em>single running calculation</em>, which keeps the logic clean and avoids overflow issues in some languages.</p>
+<p>Instead of computing two separate sums, we can combine both ideas into a <em>single running calculation</em>, which keeps the logic clean.</p>
+
+<p>Example: let's use <code>nums = [3, 0, 1]</code>.</p>
+
+<p>If we <code>sum([0, 1, 2, 3]) - sum(nums)</code> we end up with <code>2</code>. 
 
 <p>This approach uses <em>basic arithmetic</em>, making it easy to understand and apply.</p>
 
 <h2>Algorithm</h2>
 
 <ol>
-    <li>Let <code>n</code> be the length of the array</li>
-    <li>Initialize a variable <code>result = n</code></li>
-    <li>For each index <code>idx</code> from <code>0</code> to <code>n - 1</code>:</li>
+    <li>Initialize a variable <code>result = len(nums)</code></li>
+    <li>For each index <code>idx</code> from <code>0</code> to <code>len(nums) - 1</code>:</li>
     <ul>
         <li>Add <code>idx</code> to <code>result</code></li>
         <li>Subtract <code>nums[idx]</code> from <code>result</code></li>
@@ -11240,11 +11243,11 @@ XOR 0011
 </ol>
 
 <pre class="solution-code-pre"><code>def missing_number(nums):
-    res = len(nums)
+    result = len(nums)
 
     for i in range(len(nums)):
-        res += i - nums[i]
-    return res
+        result += i - nums[i]
+    return result
 </code></pre>
 
 <p>Time complexity is O(n).</p>
