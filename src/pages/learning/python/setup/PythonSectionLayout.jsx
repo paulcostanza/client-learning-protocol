@@ -18,6 +18,7 @@ const sections = [
     { name: 'Dictionaries', path: 'dictionaries' },
     { name: 'Regular Expressions', path: 'regular-expressions' },
     { name: 'Built-In Functions', path: 'built-in-functions' },
+    { name: 'RAM 101', path: 'ram-101' },
     { name: 'Algorithms: Problem-Solving Patterns', path: 'algorithms-problem-solving-patterns' },
 ]
 

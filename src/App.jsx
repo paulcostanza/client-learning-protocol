@@ -113,6 +113,7 @@ import PythonScope from './pages/learning/python/Scope'
 import PythonTestingAndDebugging from './pages/learning/python/TestingAndDebugging'
 import PythonRegularExpressions from './pages/learning/python/RegularExpressions'
 import PythonBuiltInFunctions from './pages/learning/python/BuiltInFunctions'
+import PythonRam101 from './pages/learning/python/Ram101'
 import PythonAlgorithmsProblemSolvingPatterns from './pages/learning/python/AlgorithmsProblemSolvingPatterns'
 
 // C++
@@ -320,6 +321,7 @@ function App() {
               <Route path='dictionaries' element={<PythonDictionaries />} />
               <Route path='regular-expressions' element={<PythonRegularExpressions />} />
               <Route path='built-in-functions' element={<PythonBuiltInFunctions />} />
+              <Route path='ram-101' element={<PythonRam101 />} />
               <Route path='algorithms-problem-solving-patterns' element={<PythonAlgorithmsProblemSolvingPatterns />} />
             </Route>
 

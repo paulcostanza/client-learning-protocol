@@ -1056,3 +1056,24 @@ input[type="checkbox"]:checked+label::before {
     padding-left: 20px;
     margin-bottom: 10px;
 }
+
+/* Memory table */
+
+.memory {
+    border: 1px solid white;
+    margin: auto;
+}
+
+.memory td {
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.memory thead tr:first-child {
+    font-weight: bold;
+}
+
+.memory tbody tr td {
+    text-align: center;
+    font-size: 1.5em;
+}
