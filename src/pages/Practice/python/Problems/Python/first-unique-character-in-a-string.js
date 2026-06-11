@@ -102,14 +102,14 @@ const solution = `
 
 <p>Instead of checking every pair of characters, we can count the frequency of each character in a single pass.</p>
 
-<p>Then, in a second pass, we find the first character whose count is exactly <code>1</code>. This trads space for time.</p>
+<p>Then, in a second pass, we find the first character whose count is exactly <code>1</code>. This trades space for time.</p>
 
 <h2>Algorithm</h2>
 
 <ol>
-    <li>Create a hash map to store the count of each character.</li>
+    <li>Create a dictionary to store the count of each character.</li>
     <li>First pass: iterate through the string and increment the count for each character.</li>
-    <li>Second pass: iterate through the string again and return the index of the firxt character with count equal to <code>1</code>.</li>
+    <li>Second pass: iterate through the string again and return the index of the first character with count equal to <code>1</code>.</li>
     <li>If no unique character is found, return <code>-1</code>.</li>
 </ol>
 
@@ -127,7 +127,7 @@ const solution = `
 </code></pre>
 
 <p>Time complexity is O(n).</p>
-<p>Space complexity is O(1) since we have 26 different characters at most.</p>
+<p>Space complexity is O(26) -> O(1) since we have 26 different characters at most.</p>
 
 <h1>Dictionary - Optimal</h1>
 
