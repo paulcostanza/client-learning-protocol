@@ -409,4 +409,41 @@ baseball = {
         
 Doing something like \`print(baseball["helmets"])\` just checks the value of \`"helmets"\`, and does not return \`True\` or \`False\`. In this instance, printing it like this would produce a \`KeyError\` since that value is missing.`
     },
+    // I would love to make this kind of input a number input in the future
+    {
+        id: 22,
+        type: 'input',
+        category: 'python',
+        subcategory: 'ram-101',
+        title: 'How many bits?',
+        question: `A byte is made up of how many bits?`,
+        options: [""],
+        random: false,
+        answer: "8",
+        description: `Answer: \`8\``
+    },
+    {
+        id: 23,
+        type: 'input',
+        category: 'python',
+        subcategory: 'ram-101',
+        title: 'How much int?',
+        question: `How much space does an integer typically take up in RAM (in bytes)?`,
+        options: [""],
+        random: false,
+        answer: "4",
+        description: `Answer: \`4\` bytes`
+    },
+    {
+        id: 24,
+        type: 'input',
+        category: 'python',
+        subcategory: 'ram-101',
+        title: 'How much char?',
+        question: `How much space does an ASCII character in a string take up in RAM (in bytes)?`,
+        options: [""],
+        random: false,
+        answer: "1",
+        description: `Answer: \`1\` byte`
+    },
 ]

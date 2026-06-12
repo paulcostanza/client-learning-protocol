@@ -157,7 +157,7 @@ export default function Ram101() {
 
             <ReviewQuiz
                 quizImports={quizImports}
-                subcategory="sets"
+                subcategory="ram-101"
             />
         </div>
     )
