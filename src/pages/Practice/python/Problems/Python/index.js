@@ -52,6 +52,7 @@ import { missingNumber } from './missing-number'
 import { reverseList } from './reverse-list'
 import { firstUniqueCharacterInAString } from './first-unique-character-in-a-string'
 import { pascalsTriangle } from './pascals-triangle'
+import { replaceElementsWithGreatestElementOnRightSide } from './replace-elements-with-greatest-element-on-right-side'
 
 const problems = {
     // Printing 101
@@ -89,6 +90,7 @@ const problems = {
     "sort-numbers-by-absolute-value": sortNumbersByAbsoluteValue,
     "sort-numbers-by-last-digit": sortNumbersByLastDigit,
     "pascals-triangle": pascalsTriangle,
+    "replace-elements-with-greatest-element-on-right-side": replaceElementsWithGreatestElementOnRightSide,
     // sets
     "list-to-set": listToSet,
     "count-unique-words": countUniqueWords,

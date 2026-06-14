@@ -37,44 +37,45 @@ export const problemsList = {
         { id: "sort-numbers-by-absolute-value", title: "Sort Numbers By Absolute Value", status: '', review: '', order: 29 },
         { id: "sort-numbers-by-last-digit", title: "Sort Numbers By Last Digit", status: '', review: '', order: 30 },
         { id: "pascals-triangle", title: "Pascal's Triangle", status: '', review: '', order: 31 },
+        { id: "replace-elements-with-greatest-element-on-right-side", title: "Replace elements with greatest element on right side", status: '', review: '', order: 32 },
     ],
     sets: [
-        { id: "list-to-set", title: "List to Set", status: '', review: '', order: 32 },
-        { id: "count-unique-words", title: "Count Unique Words", status: '', review: '', order: 33 },
-        { id: "contains-duplicate", title: "Contains Duplicate", status: '', review: '', order: 34 },
+        { id: "list-to-set", title: "List to Set", status: '', review: '', order: 33 },
+        { id: "count-unique-words", title: "Count Unique Words", status: '', review: '', order: 34 },
+        { id: "contains-duplicate", title: "Contains Duplicate", status: '', review: '', order: 35 },
     ],
     dictionaries: [
-        { id: "get-dictionary-keys", title: "Get Dictionary Keys", status: '', review: '', order: 35 },
-        { id: "get-dictionary-values", title: "Get Dictionary Values", status: '', review: '', order: 36 },
-        { id: "count-characters", title: "Count Characters", status: '', review: '', order: 37 },
-        { id: "remove-keys", title: "Remove Keys", status: '', review: '', order: 38 },
-        { id: "valid-parentheses", title: "Valid Parentheses", status: '', review: '', order: 38 },
-        { id: "roman-to-integer", title: "Roman To Integer", status: '', review: '', order: 39 },
-        { id: "valid-anagram", title: "Valid Anagram", status: '', review: '', order: 40 },
-        { id: "two-sum", title: "Two Sum", status: '', review: '', order: 41 },
-        { id: "group-anagrams", title: "Group Anagrams", status: '', review: '', order: 42 },
-        { id: "top-k-frequent-elements", title: "Top K Frequent Elements", status: '', review: '', order: 43 },
-        { id: "number-of-students-unable-to-eat-lunch", title: "Number of Students Unable to Eat Lunch", status: '', review: '', order: 44 },
-        { id: "majority-element", title: "Majority Element", status: '', review: '', order: 45 },
+        { id: "get-dictionary-keys", title: "Get Dictionary Keys", status: '', review: '', order: 36 },
+        { id: "get-dictionary-values", title: "Get Dictionary Values", status: '', review: '', order: 37 },
+        { id: "count-characters", title: "Count Characters", status: '', review: '', order: 38 },
+        { id: "remove-keys", title: "Remove Keys", status: '', review: '', order: 39 },
+        { id: "valid-parentheses", title: "Valid Parentheses", status: '', review: '', order: 40 },
+        { id: "roman-to-integer", title: "Roman To Integer", status: '', review: '', order: 41 },
+        { id: "valid-anagram", title: "Valid Anagram", status: '', review: '', order: 42 },
+        { id: "two-sum", title: "Two Sum", status: '', review: '', order: 43 },
+        { id: "group-anagrams", title: "Group Anagrams", status: '', review: '', order: 44 },
+        { id: "top-k-frequent-elements", title: "Top K Frequent Elements", status: '', review: '', order: 45 },
+        { id: "number-of-students-unable-to-eat-lunch", title: "Number of Students Unable to Eat Lunch", status: '', review: '', order: 46 },
+        { id: "majority-element", title: "Majority Element", status: '', review: '', order: 47 },
     ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 46 },
-        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 47 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 48 },
+        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 49 },
     ],
     slidingWindow: [
-        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 48 }
+        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 50 }
     ],
     linkedList: [
-        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 49 },
-        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 50 }
+        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 51 },
+        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 52 }
     ],
     trees: [
-        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 51 }
+        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 53 }
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 52 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 54 },
     ],
     problemSolving: [
-        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 53 },
+        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 55 },
     ]
 }
