@@ -151,7 +151,7 @@ const solution = `
 </code></pre>
 
 <p>Time complexity of O(n).</p>
-<p>Space complexity of O(1).</p>
+<p>Space complexity of O(1) because the extra memory never grows beyond the two counters, <code>0</code> and <code>1</code>. The dictioanry has exactly two entries, regardless of the size of students or sandwiches. <em>Remember</em>, space complexity measures how much extra memory grows as the input size grows!</p>
 
 <hr />
 
