@@ -53,6 +53,7 @@ import { reverseList } from './reverse-list'
 import { firstUniqueCharacterInAString } from './first-unique-character-in-a-string'
 import { pascalsTriangle } from './pascals-triangle'
 import { replaceElementsWithGreatestElementOnRightSide } from './replace-elements-with-greatest-element-on-right-side'
+import { setMismatch } from './set-mismatch'
 
 const problems = {
     // Printing 101
@@ -122,6 +123,7 @@ const problems = {
     "matrix-rotation-i": matrixRotationI,
     // problem solving
     "missing-number": missingNumber,
+    "set-mismatch": setMismatch,
 }
 
 export default problems

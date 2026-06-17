@@ -77,5 +77,6 @@ export const problemsList = {
     ],
     problemSolving: [
         { id: "missing-number", title: "Missing Number", status: '', review: '', order: 55 },
+        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 56 },
     ]
 }
