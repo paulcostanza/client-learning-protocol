@@ -792,6 +792,11 @@ input[type="checkbox"]:checked+label::before {
     background-color: #357abd;
 }
 
+.problem-description {
+    height: calc(100vh - 71px);
+    padding-bottom: 70px;
+}
+
 .problem-description-header-bar {
     display: flex;
     justify-content: space-between;

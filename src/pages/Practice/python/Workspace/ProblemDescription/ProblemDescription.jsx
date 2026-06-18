@@ -8,7 +8,7 @@ import Solution from './Tabs/Solution'
 export default function ProblemDescription({ problem, activeTab, setActiveTab }) {
 
     return (
-        <div >
+        <div className='problem-description' >
             <ProblemDescriptionNav
                 questionId={problem.id}
                 activeTab={activeTab}
