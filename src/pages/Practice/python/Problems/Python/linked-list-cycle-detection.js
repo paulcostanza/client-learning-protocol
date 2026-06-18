@@ -84,30 +84,41 @@ run_tests()
 `
 
 const example = `Example #1:
-Input: head = [3,2,0,-4], index = 1
+Input: head = [3, 2, 0, -4]
 Output: true
 
 Explanation:
-The tail connects back to the node at index 1 (value 2),
-creating a cycle.
+The tail connects back to the node at index 1 (value 2), creating a cycle.
+
+[3] -> [2] -> [0] -> [-4]
+        ^              |
+        |              |
+        +--------------+
 
 ---
 
 Example #2:
-Input: head = [1,2], index = 0
+Input: head = [1, 2]
 Output: true
 
 Explanation:
-The tail connects back to the first node.
+The tail connects back to the first node, creating a cycle.
+
+[1] -> [2]
+ ^      |
+ |      |
+ +------+
 
 ---
 
 Example #3:
-Input: head = [1], index = -1
+Input: head = [1]
 Output: false
 
 Explanation:
-The only node points to None, so no cycle exists.
+The node points to None, so no cycle exists.
+
+[1] -> None
 `
 
 const constraints = `<ul>
@@ -213,11 +224,7 @@ export const linkedListCycleDetection = {
     title: "56. Linked List Cycle Detection",
     problemStatement: `<p>Given the beginning of a linked list <code>head</code>, return <code>true</code> if there is a cycle in the linked list. Otherwise return <code>false</code>.</p>
 
-    <p>There is a <strong>cycle</strong> in a linked list if at least one node in the list can be visited again by following the <code>next</code> pointer.</p>
-    
-    <p>Internally, <code>index</code> determines the index of the beginning of the cycle, if it exists. The tail node of the list will set its <code>next</code> pointer to the <code>index</code>th node. If <code>index = -1</code>, then the tail node points to <code>None</code> and no cycle exists.</p>
-    
-    <p><strong>Note:</strong> <code>index</code> is not given to you as a parameter.</p>`,
+    <p>There is a <strong>cycle</strong> in a linked list if at least one node in the list can be visited again by following the <code>next</code> pointer.</p>`,
     starterCode,
     testCode,
     constraints,
