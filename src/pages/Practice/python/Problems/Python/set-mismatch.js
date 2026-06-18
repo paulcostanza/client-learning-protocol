@@ -116,23 +116,23 @@ const solution = `
     <li>Return <code>[duplicate, missing]</code></li>
 </ol>
 
-<pre class="solution-code-pre"><code>def set_mismatch(nums):
-    res = [0, 0]
-    count = {}
+<pre class="solution-code-pre"><code>from collections import Counter
 
-    for num in nums:
-        count[num] = count.get(num, 0) + 1
+def set_mismatch(nums):
+  result = [0, 0]
+  count = Counter(nums) 
 
-    for i in range(1, len(nums) + 1):
-        freq = count.get(i, 0)
+  for idx in range(1, len(nums) + 1):
+    if count[idx] == 2:
+      result[0] = idx
 
-        if freq == 0:
-            res[1] = i
-        elif freq == 2:
-            res[0] = i
+    if count[idx] == 0:
+      result[1] = idx
 
-    return res
+  return result
 </code></pre>
+
+<p>What's cool about this solution is its use of <code>Counter</code>. <code>Counter</code> will default missing keys with 0, unlike manually creating dictionary which would raise a <code>KeyError</code>.</p>
 
 <p>Time complexity is O(n).</p>
 <p>Space complexity is O(n).</p>
