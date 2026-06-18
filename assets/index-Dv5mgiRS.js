@@ -12250,30 +12250,41 @@ Expected: {expected}
 
 run_tests()
 `,bRe=`Example #1:
-Input: head = [3,2,0,-4], index = 1
+Input: head = [3, 2, 0, -4]
 Output: true
 
 Explanation:
-The tail connects back to the node at index 1 (value 2),
-creating a cycle.
+The tail connects back to the node at index 1 (value 2), creating a cycle.
+
+[3] -> [2] -> [0] -> [-4]
+        ^              |
+        |              |
+        +--------------+
 
 ---
 
 Example #2:
-Input: head = [1,2], index = 0
+Input: head = [1, 2]
 Output: true
 
 Explanation:
-The tail connects back to the first node.
+The tail connects back to the first node, creating a cycle.
+
+[1] -> [2]
+ ^      |
+ |      |
+ +------+
 
 ---
 
 Example #3:
-Input: head = [1], index = -1
+Input: head = [1]
 Output: false
 
 Explanation:
-The only node points to None, so no cycle exists.
+The node points to None, so no cycle exists.
+
+[1] -> None
 `,yRe=`<ul>
     <li>0 ≤ Number of nodes ≤ 10<sup>4</sup></li>
     <li>-10<sup>5</sup> ≤ Node.val ≤ 10<sup>5</sup></li>
@@ -12370,11 +12381,7 @@ The only node points to None, so no cycle exists.
 <p>The cycle detection requires comparing whether two pointers reference the same node object, not whether they have the same value. Using value equality (<code>slow.val == fast.val</code>) incorrectly detects cycles when two different nodes happen to have the same value!</p>
 `,vRe={id:"linked-list-cycle-detection",title:"56. Linked List Cycle Detection",problemStatement:`<p>Given the beginning of a linked list <code>head</code>, return <code>true</code> if there is a cycle in the linked list. Otherwise return <code>false</code>.</p>
 
-    <p>There is a <strong>cycle</strong> in a linked list if at least one node in the list can be visited again by following the <code>next</code> pointer.</p>
-    
-    <p>Internally, <code>index</code> determines the index of the beginning of the cycle, if it exists. The tail node of the list will set its <code>next</code> pointer to the <code>index</code>th node. If <code>index = -1</code>, then the tail node points to <code>None</code> and no cycle exists.</p>
-    
-    <p><strong>Note:</strong> <code>index</code> is not given to you as a parameter.</p>`,starterCode:mRe,testCode:gRe,constraints:yRe,example:bRe,status:Mt("linked-list-cycle-detection"),solution:xRe},MF={"hello-world":lNe,"famous-quote":mNe,"add-from-fifteen-to-one-hundred-seven":dNe,"exponent-expression":xNe,"simple-remainder":wNe,"no-remainder":TNe,"add-s-n-times":NNe,"square-root":LNe,"pythagorean-theorem":BNe,"discount-calculator":UNe,"find-last-digit":VNe,"first-digit-of-two-digit-number":KNe,"find-sum-of-two-digit-num":t$e,"first-digit-of-hundreds-place":s$e,"substring-deduplicator":u$e,"single-index-string-mutation":f$e,"text-wrap":x$e,"palindrome-characters":Y$e,"valid-palindrome":W3e,zipper:P4e,"first-unique-character-in-a-string":XIe,"how-many":R$e,"add-lists":B$e,"reverse-list":HIe,"pop-last-n-elements":H$e,"squares-of-an-array":F3e,"convert-the-seconds":o4e,"sort-list-of-strings":h4e,"sort-numbers-by-absolute-value":b4e,"sort-numbers-by-last-digit":k4e,"pascals-triangle":nRe,"replace-elements-with-greatest-element-on-right-side":lRe,"list-to-set":e3e,"count-unique-words":s3e,"contains-duplicate":u3e,"get-dictionary-keys":m3e,"get-dictionary-values":v3e,"count-characters":j3e,"remove-keys":O3e,"valid-parentheses":K3e,"roman-to-integer":n4e,"valid-anagram":T4e,"two-sum":$4e,"group-anagrams":H4e,"top-k-frequent-elements":fIe,"number-of-students-unable-to-eat-lunch":EIe,"majority-element":$Ie,"count-affordable-pairs":_$e,"move-zeros":L3e,"best-time-to-buy-stocks":X4e,"reverse-a-linked-list":nIe,"merge-two-sorted-lists":lIe,"linked-list-cycle-detection":vRe,"invert-binary-tree":vIe,"matrix-rotation-i":C$e,"missing-number":PIe,"set-mismatch":fRe};function SRe(){const[t,e]=G.useState("description"),{problemId:i}=jz(),r=MF[i],s=Object.keys(MF),a=s.indexOf(i),[o,l]=G.useState(""),c=Eb();G.useEffect(()=>(document.body.classList.add("hide-scrollbar"),()=>document.body.classList.remove("hide-scrollbar")),[]);const d=()=>{if(l(""),a<s.length-1){const p=s[a+1];c(`/practice/python/${p}`),e("description")}else alert("You have reached the end of the line, nerd! More problems to come soon...")},u=()=>{l(""),e("description");for(let p=a+1;p<s.length;p++){let g=vf("python-basics",s[p]),m=ku(Su("python-basics",s[p]));if(typeof g>"u"||g=="incorrect"||m=="Ready!"){c(`/practice/python/${s[p]}`);return}}alert("No problem's in the playlist, try again tomorrow!")};return r?n.jsxs(PS,{className:"split",children:[n.jsx(_ke,{problem:r,activeTab:t,setActiveTab:e}),n.jsx(nNe,{problem:r,nextProblem:d,nextInPlaylistProblem:u,output:o,setOutput:l})]}):n.jsx("h1",{children:"Yo! Problem not found..."})}const kRe=[{name:"Introduction",path:"intro"},{name:"C# Basics",path:"basics"},{name:"Control Flow",path:"control-flow"},{name:"Methods & Functions",path:"methods-and-functions"},{name:"Object Oriented Programming",path:"oop"},{name:"Exception Handling",path:"exception-handling"},{name:"APIs: Intro",path:"apis-intro"},{name:"APIs: Controller Class",path:"apis-controller-class"}];function wRe(){return n.jsx("main",{children:n.jsxs("div",{className:"container",children:[n.jsx("h1",{children:"C# Sections"}),n.jsx("ul",{children:kRe.map(t=>n.jsx("li",{children:n.jsx(Dn,{to:`/csharp/${t.path}`,children:t.name})},t.path))})]})})}const DF=[{name:"Introduction",path:"intro"},{name:"C# Basics",path:"basics"},{name:"Control Flow",path:"control-flow"},{name:"Methods & Functions",path:"methods-and-functions"},{name:"Object Oriented Programming",path:"oop"},{name:"Exception Handling",path:"exception-handling"},{name:"APIs: Intro",path:"apis-intro"},{name:"APIs: Controller Class",path:"apis-controller-class"}];function _Re(){return n.jsxs("main",{children:[n.jsx(Fs,{sections:DF,basePath:"/csharp"}),n.jsx("main",{children:n.jsxs("div",{className:"container",children:[n.jsx(Ki,{}),n.jsx(va,{sections:DF,basePath:"/csharp"})]})})]})}function jRe(){const t={cSharp:()=>rt(()=>import("./JavaScriptQuestions-B7ExdA_e.js"),[])};return n.jsxs(n.Fragment,{children:[n.jsx("h1",{children:"Control Flow"}),n.jsx("h2",{id:"overflowing",children:"Overflowing"}),n.jsx("p",{children:"Going over (or under) a data types limit. Example:"}),n.jsx("div",{className:"",children:n.jsx(V,{language:"csharp",style:Q,showLineNumbers:!0,wrapLines:!0,className:" code-snippet",children:`byte number = 255
+    <p>There is a <strong>cycle</strong> in a linked list if at least one node in the list can be visited again by following the <code>next</code> pointer.</p>`,starterCode:mRe,testCode:gRe,constraints:yRe,example:bRe,status:Mt("linked-list-cycle-detection"),solution:xRe},MF={"hello-world":lNe,"famous-quote":mNe,"add-from-fifteen-to-one-hundred-seven":dNe,"exponent-expression":xNe,"simple-remainder":wNe,"no-remainder":TNe,"add-s-n-times":NNe,"square-root":LNe,"pythagorean-theorem":BNe,"discount-calculator":UNe,"find-last-digit":VNe,"first-digit-of-two-digit-number":KNe,"find-sum-of-two-digit-num":t$e,"first-digit-of-hundreds-place":s$e,"substring-deduplicator":u$e,"single-index-string-mutation":f$e,"text-wrap":x$e,"palindrome-characters":Y$e,"valid-palindrome":W3e,zipper:P4e,"first-unique-character-in-a-string":XIe,"how-many":R$e,"add-lists":B$e,"reverse-list":HIe,"pop-last-n-elements":H$e,"squares-of-an-array":F3e,"convert-the-seconds":o4e,"sort-list-of-strings":h4e,"sort-numbers-by-absolute-value":b4e,"sort-numbers-by-last-digit":k4e,"pascals-triangle":nRe,"replace-elements-with-greatest-element-on-right-side":lRe,"list-to-set":e3e,"count-unique-words":s3e,"contains-duplicate":u3e,"get-dictionary-keys":m3e,"get-dictionary-values":v3e,"count-characters":j3e,"remove-keys":O3e,"valid-parentheses":K3e,"roman-to-integer":n4e,"valid-anagram":T4e,"two-sum":$4e,"group-anagrams":H4e,"top-k-frequent-elements":fIe,"number-of-students-unable-to-eat-lunch":EIe,"majority-element":$Ie,"count-affordable-pairs":_$e,"move-zeros":L3e,"best-time-to-buy-stocks":X4e,"reverse-a-linked-list":nIe,"merge-two-sorted-lists":lIe,"linked-list-cycle-detection":vRe,"invert-binary-tree":vIe,"matrix-rotation-i":C$e,"missing-number":PIe,"set-mismatch":fRe};function SRe(){const[t,e]=G.useState("description"),{problemId:i}=jz(),r=MF[i],s=Object.keys(MF),a=s.indexOf(i),[o,l]=G.useState(""),c=Eb();G.useEffect(()=>(document.body.classList.add("hide-scrollbar"),()=>document.body.classList.remove("hide-scrollbar")),[]);const d=()=>{if(l(""),a<s.length-1){const p=s[a+1];c(`/practice/python/${p}`),e("description")}else alert("You have reached the end of the line, nerd! More problems to come soon...")},u=()=>{l(""),e("description");for(let p=a+1;p<s.length;p++){let g=vf("python-basics",s[p]),m=ku(Su("python-basics",s[p]));if(typeof g>"u"||g=="incorrect"||m=="Ready!"){c(`/practice/python/${s[p]}`);return}}alert("No problem's in the playlist, try again tomorrow!")};return r?n.jsxs(PS,{className:"split",children:[n.jsx(_ke,{problem:r,activeTab:t,setActiveTab:e}),n.jsx(nNe,{problem:r,nextProblem:d,nextInPlaylistProblem:u,output:o,setOutput:l})]}):n.jsx("h1",{children:"Yo! Problem not found..."})}const kRe=[{name:"Introduction",path:"intro"},{name:"C# Basics",path:"basics"},{name:"Control Flow",path:"control-flow"},{name:"Methods & Functions",path:"methods-and-functions"},{name:"Object Oriented Programming",path:"oop"},{name:"Exception Handling",path:"exception-handling"},{name:"APIs: Intro",path:"apis-intro"},{name:"APIs: Controller Class",path:"apis-controller-class"}];function wRe(){return n.jsx("main",{children:n.jsxs("div",{className:"container",children:[n.jsx("h1",{children:"C# Sections"}),n.jsx("ul",{children:kRe.map(t=>n.jsx("li",{children:n.jsx(Dn,{to:`/csharp/${t.path}`,children:t.name})},t.path))})]})})}const DF=[{name:"Introduction",path:"intro"},{name:"C# Basics",path:"basics"},{name:"Control Flow",path:"control-flow"},{name:"Methods & Functions",path:"methods-and-functions"},{name:"Object Oriented Programming",path:"oop"},{name:"Exception Handling",path:"exception-handling"},{name:"APIs: Intro",path:"apis-intro"},{name:"APIs: Controller Class",path:"apis-controller-class"}];function _Re(){return n.jsxs("main",{children:[n.jsx(Fs,{sections:DF,basePath:"/csharp"}),n.jsx("main",{children:n.jsxs("div",{className:"container",children:[n.jsx(Ki,{}),n.jsx(va,{sections:DF,basePath:"/csharp"})]})})]})}function jRe(){const t={cSharp:()=>rt(()=>import("./JavaScriptQuestions-B7ExdA_e.js"),[])};return n.jsxs(n.Fragment,{children:[n.jsx("h1",{children:"Control Flow"}),n.jsx("h2",{id:"overflowing",children:"Overflowing"}),n.jsx("p",{children:"Going over (or under) a data types limit. Example:"}),n.jsx("div",{className:"",children:n.jsx(V,{language:"csharp",style:Q,showLineNumbers:!0,wrapLines:!0,className:" code-snippet",children:`byte number = 255
 number = number + 1; // 0, this is overflowing!`})}),n.jsxs("p",{children:["A byte's range is only 0 - 255, so when a limit in either direction is reached it will roll over to the other side. C# does not have any overflow checker. If you believe it may happen and want to make sure it does not, then use the ",n.jsx("code",{children:"checked"})," keyword like so:"]}),n.jsx("div",{className:"",children:n.jsx(V,{language:"csharp",style:Q,showLineNumbers:!0,wrapLines:!0,className:" code-snippet",children:`checked 
 {
     byte number = 255;
