@@ -54,7 +54,7 @@ export default function Playlist() {
 
     return (
         <div>
-            <h1 className="problem-title">{questionsLeft} To go...</h1>
+            <h1 className="problem-title">{questionsLeft !== 0 ? questionsLeft + " To go..." : "All done for today! Check back tomorrow."}</h1>
             <Paper elevation={9} >
                 <Box sx={{ width: '100%', overflowX: 'auto' }}>
                     <Table
