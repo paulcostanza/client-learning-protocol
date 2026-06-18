@@ -67,16 +67,17 @@ export const problemsList = {
     ],
     linkedList: [
         { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 51 },
-        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 52 }
+        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 52 },
+        { id: "linked-list-cycle-detection", title: "Linked List Cycle Detection", status: '', review: '', order: 53 },
     ],
     trees: [
-        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 53 }
+        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 54 }
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 54 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 55 },
     ],
     problemSolving: [
-        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 55 },
-        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 56 },
+        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 56 },
+        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 57 },
     ]
 }

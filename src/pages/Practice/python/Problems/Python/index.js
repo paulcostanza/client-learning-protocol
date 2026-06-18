@@ -54,6 +54,7 @@ import { firstUniqueCharacterInAString } from './first-unique-character-in-a-str
 import { pascalsTriangle } from './pascals-triangle'
 import { replaceElementsWithGreatestElementOnRightSide } from './replace-elements-with-greatest-element-on-right-side'
 import { setMismatch } from './set-mismatch'
+import { linkedListCycleDetection } from './linked-list-cycle-detection'
 
 const problems = {
     // Printing 101
@@ -117,6 +118,7 @@ const problems = {
     // linked list
     "reverse-a-linked-list": reverseALinkedList,
     "merge-two-sorted-lists": mergeTwoSortedLists,
+    "linked-list-cycle-detection": linkedListCycleDetection,
     // trees
     "invert-binary-tree": invertBinaryTree,
     // matrices
