@@ -58,26 +58,29 @@ export const problemsList = {
         { id: "number-of-students-unable-to-eat-lunch", title: "Number of Students Unable to Eat Lunch", status: '', review: '', order: 46 },
         { id: "majority-element", title: "Majority Element", status: '', review: '', order: 47 },
     ],
+    binarySearch: [
+        { id: "guess-number-higher-or-lower", title: "Guess Number Higher or Lower", status: '', review: '', order: 48 },
+    ],
     twoPointers: [
-        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 48 },
-        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 49 },
+        { id: "count-affordable-pairs", title: "Count Affordable Pairs", status: '', review: '', order: 49 },
+        { id: "move-zeros", title: "Move Zeros", status: '', review: '', order: 50 },
     ],
     slidingWindow: [
-        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 50 }
+        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 51 }
     ],
     linkedList: [
-        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 51 },
-        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 52 },
-        { id: "linked-list-cycle-detection", title: "Linked List Cycle Detection", status: '', review: '', order: 53 },
+        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 52 },
+        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 53 },
+        { id: "linked-list-cycle-detection", title: "Linked List Cycle Detection", status: '', review: '', order: 54 },
     ],
     trees: [
-        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 54 }
+        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 55 }
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 55 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 56 },
     ],
     problemSolving: [
-        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 56 },
-        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 57 },
+        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 57 },
+        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 58 },
     ]
 }

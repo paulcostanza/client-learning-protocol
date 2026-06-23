@@ -55,6 +55,7 @@ import { pascalsTriangle } from './pascals-triangle'
 import { replaceElementsWithGreatestElementOnRightSide } from './replace-elements-with-greatest-element-on-right-side'
 import { setMismatch } from './set-mismatch'
 import { linkedListCycleDetection } from './linked-list-cycle-detection'
+import { guessNumberHigherOrLower } from './guess-number-higher-or-lower'
 
 const problems = {
     // Printing 101
@@ -110,6 +111,8 @@ const problems = {
     "top-k-frequent-elements": topKFrequentElements,
     "number-of-students-unable-to-eat-lunch": numberOfStudentsUnableToEatLunch,
     "majority-element": majorityElement,
+    // binary search
+    "guess-number-higher-or-lower": guessNumberHigherOrLower,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     "move-zeros": moveZeros,
