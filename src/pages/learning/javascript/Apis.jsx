@@ -58,6 +58,41 @@ third
     .then(res => res.json())
     .then(data => console.log(data))`
 
+    const requestHeader = `fetch("https://apis.clp.com/jsonplaceholder/todos", {
+    method: "POST",
+    body: JSON.stringify({
+        title: "Buy Milk",
+        completed: false
+    }),
+    headers: {
+        "Content-Type": "application/json"
+    }
+})
+    .then(res => res.json())
+    .then(data => console.log(data))`
+
+    const formPost = `document.getElementById("new-post").addEventListener("submit", function(e) {
+    e.preventDefault()
+    const postTitle = document.getElementById("post-title").value
+    const postBody = document.getElementById("post-body").value
+    const data = {
+        title: postTitle,
+        body: postBody
+    }
+    
+    const options = {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }
+    
+    fetch("https://apis.scrimba.com/jsonplaceholder/posts", options)
+        .then(res => res.json())
+        .then(data => console.log(data))
+})`
+
     return (
         <div className="container">
             <h1>APIs</h1>
@@ -286,6 +321,24 @@ third
                     {requestBody}
                 </SyntaxHighlighter>
             </div>
+
+            <h2>Request Headers</h2>
+
+            <p>Headers contain the extra (<em>meta</em>) data about the outgoing request. They can include the type of authentication, body info, client info (browser you are using, the environment you are in), etc.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {requestHeader}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {formPost}
+                </SyntaxHighlighter>
+            </div>
+
+
 
             < br />
 
