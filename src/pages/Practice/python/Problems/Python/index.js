@@ -57,6 +57,7 @@ import { setMismatch } from './set-mismatch'
 import { linkedListCycleDetection } from './linked-list-cycle-detection'
 import { guessNumberHigherOrLower } from './guess-number-higher-or-lower'
 import { lruCache } from './lru-cache'
+import { countTreeNodes } from './count-tree-nodes'
 
 const problems = {
     // Printing 101
@@ -125,6 +126,7 @@ const problems = {
     "linked-list-cycle-detection": linkedListCycleDetection,
     // trees
     "invert-binary-tree": invertBinaryTree,
+    "count-tree-nodes": countTreeNodes,
     // matrices
     "matrix-rotation-i": matrixRotationI,
     // design
