@@ -56,6 +56,7 @@ import { replaceElementsWithGreatestElementOnRightSide } from './replace-element
 import { setMismatch } from './set-mismatch'
 import { linkedListCycleDetection } from './linked-list-cycle-detection'
 import { guessNumberHigherOrLower } from './guess-number-higher-or-lower'
+import { lruCache } from './lru-cache'
 
 const problems = {
     // Printing 101
@@ -126,6 +127,8 @@ const problems = {
     "invert-binary-tree": invertBinaryTree,
     // matrices
     "matrix-rotation-i": matrixRotationI,
+    // design
+    "lru-cache": lruCache,
     // problem solving
     "missing-number": missingNumber,
     "set-mismatch": setMismatch,
