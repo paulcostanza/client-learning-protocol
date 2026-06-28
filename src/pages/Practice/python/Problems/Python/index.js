@@ -58,6 +58,7 @@ import { linkedListCycleDetection } from './linked-list-cycle-detection'
 import { guessNumberHigherOrLower } from './guess-number-higher-or-lower'
 import { lruCache } from './lru-cache'
 import { countTreeNodes } from './count-tree-nodes'
+import { kokoEatingBananas } from './koko-eating-bananas'
 
 const problems = {
     // Printing 101
@@ -115,6 +116,7 @@ const problems = {
     "majority-element": majorityElement,
     // binary search
     "guess-number-higher-or-lower": guessNumberHigherOrLower,
+    "koko-eating-bananas": kokoEatingBananas,
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     "move-zeros": moveZeros,
