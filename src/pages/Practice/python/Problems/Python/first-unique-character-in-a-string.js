@@ -236,3 +236,5 @@ Before attempting this problem, you should be comfortable with:
 - Dictionaries: used to count character frequencies in O(1) time
 - String iteration: traversing strings and accessing characters by index
 */
+
+// for time complexity, add how it is O(n) + O(n) = O(2n) = O(n)

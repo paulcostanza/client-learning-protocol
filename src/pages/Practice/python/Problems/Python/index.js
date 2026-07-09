@@ -59,6 +59,7 @@ import { guessNumberHigherOrLower } from './guess-number-higher-or-lower'
 import { lruCache } from './lru-cache'
 import { countTreeNodes } from './count-tree-nodes'
 import { kokoEatingBananas } from './koko-eating-bananas'
+import { longestSubstringWithoutDuplicates } from './longest-substring-without-duplicates'
 
 const problems = {
     // Printing 101
@@ -136,6 +137,7 @@ const problems = {
     // problem solving
     "missing-number": missingNumber,
     "set-mismatch": setMismatch,
+    "longest-substring-without-duplicates": longestSubstringWithoutDuplicates,
 }
 
 export default problems

@@ -92,5 +92,6 @@ export const problemsList = {
     problemSolving: [
         { id: "missing-number", title: "Missing Number", status: '', review: '', order: 60 },
         { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 61 },
+        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 62 },
     ]
 }
