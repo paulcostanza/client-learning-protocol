@@ -31,6 +31,7 @@ export default function Playlist() {
             }
         }
         setProblemStatuses(statuses)
+        console.log("statuses: ", statuses)
     }, [])
 
     const handleRowClick = (problem) => {
