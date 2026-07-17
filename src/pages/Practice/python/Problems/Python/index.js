@@ -60,6 +60,7 @@ import { lruCache } from './lru-cache'
 import { countTreeNodes } from './count-tree-nodes'
 import { kokoEatingBananas } from './koko-eating-bananas'
 import { longestSubstringWithoutDuplicates } from './longest-substring-without-duplicates'
+import { trappingRainWater } from './trapping-rain-water'
 
 const problems = {
     // Printing 101
@@ -121,6 +122,7 @@ const problems = {
     // two pointer
     "count-affordable-pairs": countAffordablePairs,
     "move-zeros": moveZeros,
+    "trapping-rain-water": trappingRainWater,
     // sliding window
     "best-time-to-buy-stocks": bestTimeToBuyStocks,
     // linked list
