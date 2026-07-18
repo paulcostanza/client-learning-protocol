@@ -446,4 +446,198 @@ Doing something like \`print(baseball["helmets"])\` just checks the value of \`"
         answer: "1",
         description: `Answer: \`1\` byte`
     },
+    {
+        id: 25,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'x in list',
+        question: 'What is the average-case time complexity of \`x\` in \`my_list\`?',
+        options: [
+            '\`O(1)\`',
+            '\`O(n)\`',
+            '\`O(n^2)\`',
+            '\`O(log n)\`',
+            '\`O(n log n)\`'
+        ],
+        random: true,
+        answer: '\`O(n)\`',
+        description: `Python searches the list from beginning to end until it finds \`x\` or reaches the end. The complexity of this is \`O(n)\`.`
+    },
+    {
+        id: 26,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'x in set',
+        question: 'What is the average-case time complexity of \`x\` in \`my_set\`?',
+        options: [
+            '\`O(1)\`',
+            '\`O(n)\`',
+            '\`O(n^2)\`',
+            '\`O(log n)\`',
+            '\`O(n log n)\`'
+        ],
+        random: true,
+        answer: '\`O(1)\`',
+        description: `Sets use hash tables, allowing direct lookup by the element's hash value. Python will compute the hash of \`x\` and use it to jump directly to the correct location.`
+    },
+    {
+        id: 27,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'Pop that list',
+        question: 'What is the average-case time complexity of \`my_list.pop()\`?',
+        options: [
+            '\`O(1)\`',
+            '\`O(n)\`',
+            '\`O(n^2)\`',
+            '\`O(log n)\`',
+            '\`O(n log n)\`'
+        ],
+        random: true,
+        answer: '\`O(1)\`',
+        description: `Removing the last element does not require any shifting of any other elements, so it runs in \`O(1)\` time.`
+    },
+    {
+        id: 28,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'Pop that list again',
+        question: 'What is the average-case time complexity of \`my_list.pop(3)\`?',
+        options: [
+            '\`O(1)\`',
+            '\`O(n)\`',
+            '\`O(n^2)\`',
+            '\`O(log n)\`',
+            '\`O(n log n)\`'
+        ],
+        random: true,
+        answer: '\`O(n)\`',
+        description: `Removing an element from the middle of a list requires shifting all later elements one position to the left, making the operation \`O(n)\`.`
+    },
+    {
+        id: 29,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'Find that k',
+        question: 'What is the average-case time complexity of \`my_dict[k]\`?',
+        options: [
+            '\`O(1)\`',
+            '\`O(n)\`',
+            '\`O(n^2)\`',
+            '\`O(log n)\`',
+            '\`O(n log n)\`'
+        ],
+        random: true,
+        answer: '\`O(1)\`',
+        description: `Dictionaries use hash tables, allowing python to locate a key directly instead of searching every entry. This gives it an average lookup time of \`O(1)\`.`
+    },
+    {
+        id: 30,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'Add that x',
+        question: 'What is the average-case time complexity of \`my_list.append(x)\`?',
+        options: [
+            '\`O(1)\`',
+            '\`O(n)\`',
+            '\`O(n^2)\`',
+            '\`O(log n)\`',
+            '\`O(n log n)\`'
+        ],
+        random: true,
+        answer: '\`O(1)\`',
+        description: `Appending usually places the new element at the end of the list. Occasionally, python must resize the underlying array. Regardless, this gives it an average time of \`O(1)\`.`
+    },
+    {
+        id: 31,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'Remove that x',
+        question: 'What is the average-case time complexity of \`my_list.remove(x)\`?',
+        options: [
+            '\`O(1)\`',
+            '\`O(n)\`',
+            '\`O(n^2)\`',
+            '\`O(log n)\`',
+            '\`O(n log n)\`'
+        ],
+        random: true,
+        answer: '\`O(n)\`',
+        description: `We need to search for \`x\`, and then shift everything over one position to the left. Both steps together still result for an average of \`O(n)\`.`
+    },
+    {
+        id: 32,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'Length of list',
+        question: 'What is the average-case time complexity of \`len(my_list)\`?',
+        options: [
+            '\`O(1)\`',
+            '\`O(n)\`',
+            '\`O(n^2)\`',
+            '\`O(log n)\`',
+            '\`O(n log n)\`'
+        ],
+        random: true,
+        answer: '\`O(1)\`',
+        description: `This is a tricky one! We *do not* need to traverse the list to count how many elements. Python stores the current length of a list internally, making this \`O(1)\`.`
+    },
+    {
+        id: 33,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'Time for sort',
+        question: 'What is the average-case time complexity of \`my_list.sort()\`?',
+        options: [
+            '\`O(1)\`',
+            '\`O(n)\`',
+            '\`O(n^2)\`',
+            '\`O(log n)\`',
+            '\`O(n log n)\`'
+        ],
+        random: true,
+        answer: '\`O(n log n)\`',
+        description: `Tim sort for the win.`
+    },
+    {
+        id: 34,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'Trust me bro',
+        question: 'Dictionary lookups are always \`O(1)\`.',
+        options: [
+            'true',
+            'false'
+        ],
+        random: false,
+        answer: 'false',
+        description: `Hash collisions can force multiple keys into the same bucket, degrading lookup to \`O(n)\` in the worst case.`
+    },
+    {
+        id: 35,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'complexity',
+        title: 'Fastest in the west',
+        question: 'Which python data structure is best when you need the fastest average membership tests?',
+        options: [
+            'list',
+            'tuple',
+            'set',
+            'string'
+        ],
+        random: true,
+        answer: 'set',
+        description: ``
+    },
 ]
