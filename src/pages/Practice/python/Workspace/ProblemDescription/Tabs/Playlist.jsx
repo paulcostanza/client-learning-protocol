@@ -38,8 +38,8 @@ export default function Playlist() {
         navigate(`/practice/python/${problem.id}`)
     }
 
-    const sections = ["Hello World", "Calculator", "Strings", "Lists", "Sets", "Dictionaries", "Binary Search", "Two Pointers", "Sliding Window", "Linked List", "Trees", "Matrices", "Design", "Problem Solving"]
-    const sectionCamelCase = ["helloWorld", "calculator", "strings", "lists", "sets", "dictionaries", "binarySearch", "twoPointers", "slidingWindow", "linkedList", "trees", "matrices", "design", "problemSolving"]
+    const sections = ["Hello World", "Calculator", "Strings", "Lists", "Sets", "Dictionaries", "Sorting", "Binary Search", "Two Pointers", "Sliding Window", "Linked List", "Trees", "Matrices", "Design", "Problem Solving"]
+    const sectionCamelCase = ["helloWorld", "calculator", "strings", "lists", "sets", "dictionaries", "sorting", "binarySearch", "twoPointers", "slidingWindow", "linkedList", "trees", "matrices", "design", "problemSolving"]
     const questionsLeft = sections.reduce((count, section, idx) => {
         return (
             count +

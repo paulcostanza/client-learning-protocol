@@ -61,6 +61,7 @@ import { countTreeNodes } from './count-tree-nodes'
 import { kokoEatingBananas } from './koko-eating-bananas'
 import { longestSubstringWithoutDuplicates } from './longest-substring-without-duplicates'
 import { trappingRainWater } from './trapping-rain-water'
+import { tupleRanking } from './tuple-ranking'
 
 const problems = {
     // Printing 101
@@ -116,6 +117,8 @@ const problems = {
     "top-k-frequent-elements": topKFrequentElements,
     "number-of-students-unable-to-eat-lunch": numberOfStudentsUnableToEatLunch,
     "majority-element": majorityElement,
+    // sorting
+    "tuple-ranking": tupleRanking,
     // binary search
     "guess-number-higher-or-lower": guessNumberHigherOrLower,
     "koko-eating-bananas": kokoEatingBananas,
