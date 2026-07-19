@@ -1,28 +1,49 @@
-## 1. Introduction
+# How I want the layout to look
 
-- What is Python?
-- History and uses
-- Setting up the development environment (IDLE, VS Code, Anaconda, et## c.)
-
-## 2. Python Basics
-
-- Your first Python program: Hello World
-- Structure of a Python script
-- Variables and data types
-- Constants
-- Operators and expressions
-- Input and output
-- Comments
-
-## 2.5 Math 101
-
-- Basics Maths
-
-## 3. Control Flow
-
+## Basics
+- Intro
+    - What is Python?
+    - History and uses
+    - Setting up the development environment (IDLE, VS Code, Anaconda, et## c.)
+- Basics
+    - Your first Python program: Hello World
+    - Structure of a Python script
+    - Variables and data types
+    - Constants
+    - Operators and expressions
+    - Input and output
+    - Comments
+    - differences between versions
+## Control Flow
 - Conditional statements (if, elif, else)
 - Loops (for, while)
 - Loop control statements (break, continue, pass)
+## Functions
+- Parameters vs arguments
+- Positional and keyword arguments
+- Default arguments
+- *args and **kwargs
+- Lambda functions
+- First-class functions
+- Closures
+- Mutable default arguments (gotcha)
+## Math 101
+## Scope
+## Testing & Debugging
+## Computing
+## Strings
+## Lists
+## List Comprehension
+## Tuples
+## Sets
+## Dictionaries
+## Regular Expressions
+## Built-In Functions
+## RAM 101
+## Algorithms: Problem-Solving Patterns
+
+
+I don't know where I am putting this stuff yet:
 
 ## 4. Functions
 

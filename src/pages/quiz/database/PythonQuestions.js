@@ -640,4 +640,26 @@ Doing something like \`print(baseball["helmets"])\` just checks the value of \`"
         answer: 'set',
         description: ``
     },
+    {
+        id: 36,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'mutable-default-arguments',
+        title: 'Default',
+        question: `What does python do with this function's default argument value?
+        
+~~~python
+def add_item(item, bag=[]):
+    bag.append(item)
+    return bag
+~~~`,
+        options: [
+            'python creates a new \`bag\` list every time \`add_item()\` is called',
+            'python evaluates \`bag=[]\` once when the function is defined',
+            'python creates a copy of \`bag\` before each function call'
+        ],
+        random: true,
+        answer: 'python evaluates \`bag=[]\` once when the function is defined',
+        description: ``
+    },
 ]

@@ -4,6 +4,7 @@ const sections = [
     { name: 'Basics', path: 'basics' },
     { name: 'Control Flow', path: 'control-flow' },
     { name: 'Functions', path: 'functions' },
+    { name: 'Mutable Default Arguments', path: 'mutable-default-arguments' },
     { name: 'Math 101', path: 'math-101' },
     { name: 'Scope', path: 'scope' },
     { name: 'Testing & Debugging', path: 'testing-and-debugging' },
