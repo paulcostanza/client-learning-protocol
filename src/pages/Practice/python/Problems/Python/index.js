@@ -62,6 +62,7 @@ import { kokoEatingBananas } from './koko-eating-bananas'
 import { longestSubstringWithoutDuplicates } from './longest-substring-without-duplicates'
 import { trappingRainWater } from './trapping-rain-water'
 import { tupleRanking } from './tuple-ranking'
+import { fixThisBag } from './fix-this-bag'
 
 const problems = {
     // Printing 101
@@ -117,6 +118,8 @@ const problems = {
     "top-k-frequent-elements": topKFrequentElements,
     "number-of-students-unable-to-eat-lunch": numberOfStudentsUnableToEatLunch,
     "majority-element": majorityElement,
+    // functions
+    "fix-this-bag": fixThisBag,
     // sorting
     "tuple-ranking": tupleRanking,
     // binary search
