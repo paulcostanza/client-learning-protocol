@@ -74,31 +74,32 @@ export const problemsList = {
         { id: "trapping-rain-water", title: "Trapping Rain Water", status: '', review: '', order: 54 },
     ],
     slidingWindow: [
-        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 55 }
+        { id: "best-time-to-buy-stocks", title: "Best Time to Buy Stocks", status: '', review: '', order: 55 },
+        { id: "minimum-window-substring", title: "Minimum Window Substring", status: '', review: '', order: 56 },
     ],
     linkedList: [
-        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 56 },
-        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 57 },
-        { id: "linked-list-cycle-detection", title: "Linked List Cycle Detection", status: '', review: '', order: 58 },
+        { id: "reverse-a-linked-list", title: "Reverse a Linked List", status: '', review: '', order: 57 },
+        { id: "merge-two-sorted-lists", title: "Merge Two Sorted List", status: '', review: '', order: 58 },
+        { id: "linked-list-cycle-detection", title: "Linked List Cycle Detection", status: '', review: '', order: 59 },
     ],
     trees: [
-        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 59 },
-        { id: "count-tree-nodes", title: "Count Tree Nodes", status: '', review: '', order: 60 },
+        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 60 },
+        { id: "count-tree-nodes", title: "Count Tree Nodes", status: '', review: '', order: 61 },
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 61 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 62 },
     ],
     design: [
         // { id: "min-stack", title: "Min Stack", status: '', review: '', order: 69 },
         // { id: "implement-queue-using-stacks", title: "Implement Queue using Stacks", status: '', review: '', order: 69 },
         // { id: "implement-stack-using-queues", title: "Implement Stack using Queues", status: '', review: '', order: 69 },
-        { id: "lru-cache", title: "LRU Cache", status: '', review: '', order: 62 },
+        { id: "lru-cache", title: "LRU Cache", status: '', review: '', order: 63 },
         // { id: "insert-delete-getrandom-o1", title: "Insert Delete GetRandom O(1)", status: '', review: '', order: 69 },
         // { id: "time-based-key-value-store", title: "Time Based Key Value Store", status: '', review: '', order: 69 },
     ],
     problemSolving: [
-        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 63 },
-        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 64 },
-        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 65 },
+        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 64 },
+        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 65 },
+        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 66 },
     ]
 }

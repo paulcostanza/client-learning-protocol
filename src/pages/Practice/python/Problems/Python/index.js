@@ -63,6 +63,7 @@ import { longestSubstringWithoutDuplicates } from './longest-substring-without-d
 import { trappingRainWater } from './trapping-rain-water'
 import { tupleRanking } from './tuple-ranking'
 import { fixThisBag } from './fix-this-bag'
+import { minimumWindowSubstring } from './minimum-window-substring'
 
 const problems = {
     // Printing 101
@@ -131,6 +132,7 @@ const problems = {
     "trapping-rain-water": trappingRainWater,
     // sliding window
     "best-time-to-buy-stocks": bestTimeToBuyStocks,
+    "minimum-window-substring": minimumWindowSubstring,
     // linked list
     "reverse-a-linked-list": reverseALinkedList,
     "merge-two-sorted-lists": mergeTwoSortedLists,
