@@ -19,6 +19,7 @@ const sections = [
     { name: 'Built-In Functions', path: 'built-in-functions' },
     { name: 'RAM 101', path: 'ram-101' },
     { name: 'Algorithms: Problem-Solving Patterns', path: 'algorithms-problem-solving-patterns' },
+    { name: 'Two Pointers & Sliding Window', path: 'two-pointers-and-sliding-window' },
 ]
 export default function PythonLanding() {
     return (

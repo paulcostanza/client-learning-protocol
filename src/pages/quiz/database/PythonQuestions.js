@@ -662,4 +662,96 @@ def add_item(item, bag=[]):
         answer: 'python evaluates \`bag=[]\` once when the function is defined',
         description: ``
     },
+    {
+        id: 37,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'two-pointers-and-sliding-window',
+        title: 'Point where?',
+        question: `You are solving Two Sum on a sorted array...
+        
+~~~
+left = 2
+right = 17
+sum = 19
+target = 15
+~~~
+
+What should you do?`,
+        options: [
+            'move the left pointer right',
+            'move the right pointer left',
+            'move both pointers',
+            'not enough info to solve'
+        ],
+        random: true,
+        answer: 'move the right pointer left',
+        description: `Moving the right pointer left will decrease the sum, eliminating pairs that are not able to add to target.`
+    },
+    {
+        id: 38,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'two-pointers-and-sliding-window',
+        title: 'Invariant',
+        question: `Which statement best describes an invariant?`,
+        options: [
+            'a variable that never changes',
+            'a condition that remains true throughout the loop',
+            'the final answer after the algorithm returns a value',
+            'a value stored in memory'
+        ],
+        random: true,
+        answer: 'a condition that remains true throughout the loop',
+        description: ``
+    },
+    {
+        id: 39,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'two-pointers-and-sliding-window',
+        title: 'No point',
+        question: `Which of these problems is least likely to be solvable with the classic opposite-end two-pointer technique?`,
+        options: [
+            'finding two numbers in a sorted array that sum to a target',
+            'finding the maximum water container in an array',
+            'finding the pair of numbers closest to a target in a sorted array',
+            'finding two numbers that sum to a target in an unsorted array'
+        ],
+        random: true,
+        answer: 'finding two numbers that sum to a target in an unsorted array',
+        description: `Sum to a target, maximum water, and closest to a target in a sorted array are all classic two-pointer problems. They all contain the properties...
+- of monotonicity
+- if the sum is too small, move left
+- if too large, move right
+- keeping track of the closest answer you have seen so far
+
+Finding two numbers that sum to a target in an *unsorted array* does not work because without sorting, there is no elimination proof!`
+    },
+    {
+        id: 40,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'two-pointers-and-sliding-window',
+        title: 'Prooving impossible',
+        question: `Suppose your current pointers are...
+        
+~~~
+left = 4
+right = 13
+target = 20
+~~~~
+
+The current sum is 17 in your sorted array, which is too small. Which pairs are you proving impossible when you move the left pointer?`,
+        options: [
+            'every pair containing \`13\`',
+            'every pair containing \`4\`',
+            'every pair between the two pointers',
+            'only the pair \`(4, 13)\`, because two-pointers needs to check every pair'
+        ],
+        random: true,
+        answer: 'every pair containing \`4\`',
+        description: `When we move the left pointer we eliminate every pair that includes \`4\`. \`13\` is already the largest remaining value. So if \`4 + 13\` is too small, then \`4 + n, n-1, n-2...\` must *also* be too small.`
+    },
+
 ]
