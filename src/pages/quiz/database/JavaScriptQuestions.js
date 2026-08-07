@@ -446,4 +446,74 @@ result += str8.concat(str1, space, str3)
 // "?" + "HelloHow" + " HelloHow" + "!"
 ~~~`
     },
+    {
+        id: 23,
+        type: 'radio',
+        category: 'javascript',
+        subcategory: 'intro-to-node-js',
+        title: ``,
+        question: "What is the primary reason for using \`nvm\`?",
+        options: [
+            'to install \`npm\` packages globally',
+            'to execute Node.js scripts in the browser',
+            'to manage and switch between multiple Node.js versions',
+            'to debug Node.js applications efficiently',
+        ],
+        random: true,
+        answer: 'to manage and switch between multiple Node.js versions',
+        description: ``
+    },
+    {
+        id: 24,
+        type: 'input',
+        category: 'javascript',
+        subcategory: 'intro-to-node-js',
+        title: '',
+        question: `What \`nvm\` command would you use to switch the current terminal session to Node.js version \`18.17.1\`?`,
+        options: [""],
+        random: false,
+        answer: '^\\s*nvm use 18.17.1\\s*$',
+        description: `Answer: \`nvm use 18.17.1\``
+    },
+    {
+        id: 25,
+        type: 'input',
+        category: 'javascript',
+        subcategory: 'intro-to-node-js',
+        title: '',
+        question: `How would I run the JavaScript file called \`index\` using Node.js?`,
+        options: [""],
+        random: false,
+        answer: '^\\s*node index.js\\s*$',
+        description: `Answer: \`node index.js\``
+    },
+    {
+        id: 26,
+        type: 'input',
+        category: 'javascript',
+        subcategory: 'intro-to-node-js',
+        title: '',
+        question: `What command initializes a new Node.js project and creates a \`package.json\` file?`,
+        options: [""],
+        random: false,
+        answer: '^\\s*npm init\\s*$',
+        description: `Answer: \`npm init\``
+    },
+    {
+        id: 27,
+        type: 'radio',
+        category: 'javascript',
+        subcategory: 'intro-to-node-js',
+        title: ``,
+        question: "What is the purpose of the \`package.json\` file created by \`npm init\`?",
+        options: [
+            'defines the HTML structure of the applications',
+            'configures the web server settings',
+            'tracks the project\'s details and dependencies',
+            'stores environment variables for the application',
+        ],
+        random: true,
+        answer: 'tracks the project\'s details and dependencies',
+        description: ``
+    },
 ]
