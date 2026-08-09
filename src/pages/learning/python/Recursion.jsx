@@ -364,7 +364,7 @@ You need the empty returns to help end your function!`
             <p>Python limits the stack depth to (approximately) 1,000 frames. This means when a single recursive function is hits 1,000 times, a <code>RecursionError</code> is thrown. This also means recursive functions take up space in memory with a space complexity of <code>O(n)</code>. When compared to iteration's constant space, you should prefer to loop rather than recurse when you can.</p>
 
             <blockquote>
-                <p>We say approximately because the recursion limit can be changed with <code>sys.setrecursionlimit()</code>. You need to watch out when playing around with this, as increasing it too far can cause problems with the underlying C stack. This is advanced and unnecessary for the purposes of this lesson, but it is good to know!</p>
+                <p>We say approximately because the recursion limit can be changed with <code>sys.setrecursionlimit(n)</code> by plugging in a different <code>n</code> integer. You need to watch out when playing around with this as it does not make memory more efficient, but rather just tells python to let the call stac grow deeper. Increasing it too far can cause problems with the underlying C stack and result with a <strong>segmentation fault</strong>. This is advanced and unnecessary for the purposes of this lesson, but it is good to know!</p>
             </blockquote>
 
             <h2>That's a lot of repeated work</h2>
@@ -382,8 +382,6 @@ You need the empty returns to help end your function!`
             <blockquote>
                 <p>We are not lol. To be added: memoization/dynamic programming</p>
             </blockquote>
-
-
 
             <hr />
 
