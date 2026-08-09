@@ -65,6 +65,7 @@ import { tupleRanking } from './tuple-ranking'
 import { fixThisBag } from './fix-this-bag'
 import { minimumWindowSubstring } from './minimum-window-substring'
 import { sumFlatList } from './sum-flat-list'
+import { maxDepth } from './max-depth'
 
 const problems = {
     // Printing 101
@@ -140,6 +141,7 @@ const problems = {
     "linked-list-cycle-detection": linkedListCycleDetection,
     // recursion
     "sum-flat-list": sumFlatList,
+    "max-depth": maxDepth,
     // trees
     "invert-binary-tree": invertBinaryTree,
     "count-tree-nodes": countTreeNodes,

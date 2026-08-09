@@ -60,7 +60,9 @@ print(reversed_dict)`
         <div className="container">
             <h1>Built-In Functions</h1>
 
-            <h2>zip()</h2>
+            <h2><code>isinstance()</code></h2>
+
+            <h2><code>zip()</code></h2>
 
             <p><em>Zip is for paring...</em></p>
 
@@ -106,7 +108,7 @@ print(reversed_dict)`
                 </SyntaxHighlighter>
             </div>
 
-            <h2>Zip Dict</h2>
+            <h3>Zip Dict</h3>
 
             <p>A very useful trick is to take a couple of lists and zip them into a dictionary. </p>
 

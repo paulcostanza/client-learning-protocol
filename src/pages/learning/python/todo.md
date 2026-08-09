@@ -39,6 +39,14 @@
 ## Dictionaries
 ## Regular Expressions
 ## Built-In Functions
+- len()
+- type()
+- range()
+- enumerate()
+- zip()
+- sorted()
+- sum()
+- any() / all()
 ## RAM 101
 ## Algorithms: Problem-Solving Patterns
 
