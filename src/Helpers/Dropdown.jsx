@@ -31,7 +31,7 @@ export default function Dropdown({ questions, answers }) {
                             </Typography>
                         </AccordionSummary>
 
-                        <AccordionDetails>
+                        <AccordionDetails style={{ whiteSpace: 'pre-wrap' }}>
                             {answers[idx]}
                         </AccordionDetails>
                     </Accordion>

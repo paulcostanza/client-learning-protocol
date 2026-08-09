@@ -104,6 +104,7 @@ import PythonComputing from './pages/learning/python/Computing'
 import PythonStrings from './pages/learning/python/Strings'
 import PythonDictionaries from './pages/learning/python/Dictionaries'
 import PythonFunctions from './pages/learning/python/Functions'
+import PythonRecursion from './pages/learning/python/Recursion'
 import PythonMutableDefaultArguments from './pages/learning/python/MutableDefaultArguments'
 import PythonControlFlow from './pages/learning/python/ControlFlow'
 import PythonMath101 from './pages/learning/python/Math101'
@@ -311,6 +312,7 @@ function App() {
             <Route path='/python' element={<PythonLanding />} />
             <Route path='/python' element={<PythonSectionLayout />}>
               <Route path='functions' element={<PythonFunctions />} />
+              <Route path='recursion' element={<PythonRecursion />} />
               <Route path='mutable-default-arguments' element={<PythonMutableDefaultArguments />} />
               <Route path='math-101' element={<PythonMath101 />} />
               <Route path='control-flow' element={<PythonControlFlow />} />

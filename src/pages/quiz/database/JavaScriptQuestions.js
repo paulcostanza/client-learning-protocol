@@ -447,7 +447,7 @@ result += str8.concat(str1, space, str3)
 ~~~`
     },
     {
-        id: 23,
+        id: 22,
         type: 'radio',
         category: 'javascript',
         subcategory: 'intro-to-node-js',
@@ -464,7 +464,7 @@ result += str8.concat(str1, space, str3)
         description: ``
     },
     {
-        id: 24,
+        id: 23,
         type: 'input',
         category: 'javascript',
         subcategory: 'intro-to-node-js',
@@ -476,7 +476,7 @@ result += str8.concat(str1, space, str3)
         description: `Answer: \`nvm use 18.17.1\``
     },
     {
-        id: 25,
+        id: 24,
         type: 'input',
         category: 'javascript',
         subcategory: 'intro-to-node-js',
@@ -488,7 +488,7 @@ result += str8.concat(str1, space, str3)
         description: `Answer: \`node index.js\``
     },
     {
-        id: 26,
+        id: 25,
         type: 'input',
         category: 'javascript',
         subcategory: 'intro-to-node-js',
@@ -500,7 +500,7 @@ result += str8.concat(str1, space, str3)
         description: `Answer: \`npm init\``
     },
     {
-        id: 27,
+        id: 26,
         type: 'radio',
         category: 'javascript',
         subcategory: 'intro-to-node-js',

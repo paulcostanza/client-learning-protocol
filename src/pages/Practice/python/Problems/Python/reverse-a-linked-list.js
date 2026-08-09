@@ -167,25 +167,27 @@ class Solution:
 
 
 export const reverseALinkedList = {
-    id: "reverse-a-linked-list",
-    title: "44. Reverse a Linked List",
-    problemStatement: `<p>Given the beginning of a singly linked list of <code>head</code>, reverse the list and return the new beginning of the list.</p>`,
-    starterCode,
-    testCode,
-    constraints,
-    example,
-    status: getProblemStatusById("reverse-a-linked-list"),
-    solution: solution,
-    studyGuide: [
-        {
-            title: "Prerequisites",
-            content: `<p>Before attempting this problem, you should be comforable with...</p>
+  id: "reverse-a-linked-list",
+  title: "44. Reverse a Linked List",
+  problemStatement: `<p>Given the beginning of a singly linked list of <code>head</code>, reverse the list and return the new beginning of the list.</p>`,
+  starterCode,
+  testCode,
+  constraints,
+  example,
+  status: getProblemStatusById("reverse-a-linked-list"),
+  solution: solution,
+  studyGuide: [
+    {
+      title: "Prerequisites",
+      content: `<p>Before attempting this problem, you should be comforable with...</p>
           <ul>
             <li><strong>Linked list fundamentals</strong> for understanding node structure traversal with value/current and next pointer.</li>
             <li><strong>Pointer manipulation</strong> to redict node pointers without losing references to other nodes.</li>
             <li><strong>Recursion basics</strong> and how recurisve calls work with the call stack for recursive solutions.</li>
           </ul>`,
-            link: "https://clientlearningprotocol.io/#/python/functions",
-        }
-    ]
+      link: "https://clientlearningprotocol.io/#/python/functions",
+    }
+  ]
 }
+
+// different way to solve: iterative and recursivly
