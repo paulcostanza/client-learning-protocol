@@ -85,25 +85,28 @@ export const problemsList = {
     recursion: [
         { id: "sum-flat-list", title: "Sum Flat List", status: '', review: '', order: 60 },
         { id: "max-depth", title: "Max Depth", status: '', review: '', order: 61 },
+        { id: "sum-nested-ints", title: "Sum Nested Ints", status: '', review: '', order: 62 },
+        { id: "count-nested-ints", title: "Count Nested Ints", status: '', review: '', order: 63 },
+        { id: "find-max-in-nested-list", title: "Find Max In Nested List", status: '', review: '', order: 64 },
     ],
     trees: [
-        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 62 },
-        { id: "count-tree-nodes", title: "Count Tree Nodes", status: '', review: '', order: 63 },
+        { id: "invert-binary-tree", title: "Invert Binary Tree", status: '', review: '', order: 65 },
+        { id: "count-tree-nodes", title: "Count Tree Nodes", status: '', review: '', order: 66 },
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 64 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 67 },
     ],
     design: [
         // { id: "min-stack", title: "Min Stack", status: '', review: '', order: 69 },
         // { id: "implement-queue-using-stacks", title: "Implement Queue using Stacks", status: '', review: '', order: 69 },
         // { id: "implement-stack-using-queues", title: "Implement Stack using Queues", status: '', review: '', order: 69 },
-        { id: "lru-cache", title: "LRU Cache", status: '', review: '', order: 65 },
+        { id: "lru-cache", title: "LRU Cache", status: '', review: '', order: 68 },
         // { id: "insert-delete-getrandom-o1", title: "Insert Delete GetRandom O(1)", status: '', review: '', order: 69 },
         // { id: "time-based-key-value-store", title: "Time Based Key Value Store", status: '', review: '', order: 69 },
     ],
     problemSolving: [
-        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 66 },
-        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 67 },
-        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 68 },
+        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 69 },
+        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 70 },
+        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 71 },
     ]
 }

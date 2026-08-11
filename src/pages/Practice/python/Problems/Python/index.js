@@ -66,6 +66,9 @@ import { fixThisBag } from './fix-this-bag'
 import { minimumWindowSubstring } from './minimum-window-substring'
 import { sumFlatList } from './sum-flat-list'
 import { maxDepth } from './max-depth'
+import { sumNestedInts } from './sum-nested-ints'
+import { countNestedInts } from './count-nested-ints'
+import { findMaxInNestedList } from './find-max-in-nested-list'
 
 const problems = {
     // Printing 101
@@ -142,6 +145,9 @@ const problems = {
     // recursion
     "sum-flat-list": sumFlatList,
     "max-depth": maxDepth,
+    "sum-nested-ints": sumNestedInts,
+    "count-nested-ints": countNestedInts,
+    "find-max-in-nested-list": findMaxInNestedList,
     // trees
     "invert-binary-tree": invertBinaryTree,
     "count-tree-nodes": countTreeNodes,
