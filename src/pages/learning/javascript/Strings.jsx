@@ -4,7 +4,7 @@ import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function Strings() {
     const quizImports = {
-        javaScript: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+        js: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
     }
 
     const stringBasics = `let singleQuotes = 'This is a string';

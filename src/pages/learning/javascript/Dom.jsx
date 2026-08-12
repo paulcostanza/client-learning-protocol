@@ -4,7 +4,7 @@ import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function Dom() {
     const quizImports = {
-        javaScript: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+        js: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
     }
 
     const realHtml = `<h2 id="count">0</h2>`

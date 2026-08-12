@@ -8,7 +8,7 @@ import Box from "@mui/material/Box"
 
 export default function AdvanceOperators() {
     const quizImports = {
-        javaScript: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+        js: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
     }
 
     const unaryPlus = `const str = '42';

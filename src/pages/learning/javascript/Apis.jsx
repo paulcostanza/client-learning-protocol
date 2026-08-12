@@ -8,7 +8,7 @@ import RequestResponse from '../../../assets/javascript/apis/request response.pn
 
 export default function APIs() {
     const quizImports = {
-        javaScript: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+        js: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
     }
 
     const joeSchmoe = `{

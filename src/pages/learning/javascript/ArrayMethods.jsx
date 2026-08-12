@@ -4,7 +4,7 @@ import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function ArrayMethods() {
     const quizImports = {
-        javaScript: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+        js: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
     }
 
     const mapMethod = `const nums = [1, 2, 3];

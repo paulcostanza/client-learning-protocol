@@ -4,7 +4,7 @@ import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function Loops() {
     const quizImports = {
-        javaScript: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+        js: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
     }
 
     const forLoop = `//    START           FINISH       STEP SIZE

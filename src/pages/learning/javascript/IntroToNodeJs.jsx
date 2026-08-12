@@ -2,7 +2,7 @@ import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function IntroToNodeJs() {
     const quizImports = {
-        javaScript: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+        js: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
     }
 
     return (

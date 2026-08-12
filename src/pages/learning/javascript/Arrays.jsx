@@ -4,7 +4,7 @@ import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function Arrays() {
     const quizImports = {
-        javaScript: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+        js: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
     }
 
     const allTypes = `const allTypes = ["Apple", 62, false, null, undefined]`
