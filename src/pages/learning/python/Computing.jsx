@@ -10,14 +10,6 @@ export default function Computing() {
 print(7.1e-2)
 # prints 0.071`
 
-    const underScores = `num = 69_000
-print(num)
-# 69000
-
-num2 = 789_012_345.67
-print(num2)
-# 789012345.67`
-
     const binaryInPython = `print(0b0001)
 # Prints 1
 
@@ -54,21 +46,11 @@ num = int(binary_string, 2)`
 
             <p><em>Scientific notation</em> is a way of expressing numbers that are too large or too small to conveniently write normally.</p>
 
-            <p>You can add the letter <code>e</code> followed by a positive or negative integer to specify that you're using scientific notation.</p>
+            <p>You can add the letter <code>e</code> (or <code>E</code>) followed by a positive or negative integer to specify that you're using scientific notation.</p>
 
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
                     {scientificNotation}
-                </SyntaxHighlighter>
-            </div>
-
-            <h2 id="underscores-for-readability">Underscores for Readability</h2>
-
-            <p>Python also allows you to represent large numbers in the decimal format using underscores as the delimiter instead of commas to make it easier to read.</p>
-
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
-                    {underScores}
                 </SyntaxHighlighter>
             </div>
 
@@ -82,7 +64,9 @@ num = int(binary_string, 2)`
                 </SyntaxHighlighter>
             </div>
 
-            <p><em>Note</em> leading <code>0</code>s are often added for visual consistency but do not change the value of a binary number.</p>
+            <blockquote>
+                <p><em>Note</em> leading <code>0</code>s are often added for visual consistency but do not change the value of a binary number.</p>
+            </blockquote>
 
             <h2 id="bitwise-codecode-operator">Bitwise <code>&amp;</code> Operator</h2>
 

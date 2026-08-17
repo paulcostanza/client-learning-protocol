@@ -753,5 +753,20 @@ The current sum is 17 in your sorted array, which is too small. Which pairs are 
         answer: 'every pair containing \`4\`',
         description: `When we move the left pointer we eliminate every pair that includes \`4\`. \`13\` is already the largest remaining value. So if \`4 + 13\` is too small, then \`4 + n, n-1, n-2...\` must *also* be too small.`
     },
+    {
+        id: 41,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'functions',
+        title: 'Args vs Params',
+        question: `_____ are the inputs specified by the function definition`,
+        options: [
+            'arguments',
+            'parameters',
+        ],
+        random: true,
+        answer: 'parameters',
+        description: ``
+    },
 
 ]

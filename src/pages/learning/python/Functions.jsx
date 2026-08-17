@@ -51,6 +51,15 @@ def print_health(new_health):
 
 # call entrypoint last
 main()`
+
+    const defaultValues = `def greet_user(name="there"):
+    print("Hey ", name + ", welcome to CLP!")
+
+greet_user("Paul")
+greet_user()`
+
+    const defaultValuesConsole = `Hey Paul, welcome to CLP!
+Hey there, welcome to CLP!`
     return (
         <>
             <h1>Functions</h1>
@@ -82,6 +91,28 @@ main()`
             <p><strong>Parameters</strong> are the names used for inputs when <em>defining</em> a function. <strong>Arguments</strong> are the <em>values</em> of inputs supplied when a function is called.</p>
 
             <p>So this means that arguments are the <em>actual values</em> that go into the function, like <code>69.0</code>, <code>True</code>, or <code>&quot;asian assassins&quot;</code>. Parameters are the names we use in the funtion definition to refer to those values (think of it as the placeholder).</p>
+
+            <h2>Default values</h2>
+
+            <p>A <strong>default value</strong> is used in a function's parameter to provide a default value for an argument. This is ideal when an argument is optional.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                    wrapLines={true} className=" code-snippet">
+                    {defaultValues}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow}
+                    wrapLines={true} className=" code-snippet">
+                    {defaultValuesConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <blockquote>
+                <p>For defaults to work, you must place the optional parameter(s) <strong>after</strong> the required parameters.</p>
+            </blockquote>
 
             <hr />
 

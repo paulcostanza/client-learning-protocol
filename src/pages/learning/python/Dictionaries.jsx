@@ -115,6 +115,9 @@ print(values)`
 
     const addValuesToListOutput = `[1, 2, 3]`
 
+    const dictionaryUnpacking = `def merge(dict1, dict2):
+    return {**dict1, **dict2}`
+
     return (
         <>
             <h1>Dictionaries</h1>
@@ -353,6 +356,16 @@ print(values)`
             <div className="">
                 <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
                     {addValuesToListOutput}
+                </SyntaxHighlighter>
+            </div>
+
+            <h2>Dictionary unpacking</h2>
+
+            <p>Like tuples, python allows you to unpack multiple dictionaries into a new dictionary literal using the <code>**</code> operator. Keys from the later dictionary will overwrite earlier ones:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {dictionaryUnpacking}
                 </SyntaxHighlighter>
             </div>
 

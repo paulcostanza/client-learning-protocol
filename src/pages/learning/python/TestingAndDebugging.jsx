@@ -1,7 +1,11 @@
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function TestingAndDebugging() {
+    const quizImports = {
+        python: () => import('../../../pages/quiz/database/PythonQuestions.js')
+    }
 
     const error101 = `PythonError: Traceback (most recent call last):
   File "<exec>", line 6, in <module>
@@ -39,6 +43,23 @@ IndentationError: unindent does not match any outer indentation level`
                     {error101}
                 </SyntaxHighlighter>
             </div>
+
+            <ol>
+                <li><code>PythonError: Traceback (most recent call last):</code> this is a standard header that is just letting us know that a python traceback is what we are looking at.</li>
+                <li><code>File "&lt;exec&gt;", line 6 in &lt;module&gt;</code> and <code>File "&lt;string&gt;", line 1 in &lt;module&gt;</code>: this is the start of the <em>trace</em>. These strange <code>"&lt;exec&gt;"</code> and <code>"&lt;string&gt;"</code> files do not really exist. The python interpreter is letting us know about them because they have to do with how your code is executed in a virtual browser-based environment.</li>
+                <li><code>File "/home/pyodide/main.py", line 3</code>: here we are starting to actually get somewhere! The purpose of a <em>trace</em> is to show us the path that the python interpreter took through our code before it encountered the error, which can help us figure out what went wrong. In this case, the interpreter was executing the code in the <code>main.py</code> file, and it got to line 3 before it encountered an error.</li>
+                <li><code>msg = f"You have &#123;strenght&#125; strenght, &#123;wisdom&#125; wisdom, and &#123;dexterity&#125; dexterity for a total of &#123;total&#125; stats.</code>: this is the line of code that caused the error.</li>
+                <li><code>IndentationError: unindent does not match any outer indentation level</code>: this is the type of error that was raised! In this case, it is an <code>IndentationError</code>, which means that the python interpreter was expecting a certain amount of indentation (whitespace at the beginning of the line) but it did not get what it was expecting.</li>
+            </ol>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="testing-and-debugging"
+            />
         </>
     )
 }

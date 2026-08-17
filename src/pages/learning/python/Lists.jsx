@@ -314,6 +314,10 @@ print(sentence)
 
             <p>As you can see, we can access individual elements in the list by <strong>indexing</strong> it just like with a string. We can also get the number of elements within the list by calling the <code>len()</code> function. </p>
 
+            <blockquote>
+                <p>Don't be fooled by the fact that the length is not equal to the index of the last element. In fact, it will always be one greater because the starting index is zero!</p>
+            </blockquote>
+
             <p>However, there is a key difference between lists and strings. List are <strong><em>mutable</em></strong>, meaning we can change the values of the elements in the list. </p>
 
             <div className="">

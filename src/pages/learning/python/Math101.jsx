@@ -110,6 +110,10 @@ print(result)`
                 </SyntaxHighlighter>
             </div>
 
+            <blockquote>
+                <p>As you can see, performing any mathematically operation within a <code>print</code> statement will calculate the mathematical expression, and then print it.</p>
+            </blockquote>
+
             <h2>Remainder in Programming</h2>
             <p>
                 In programming, the <code>%</code> symbol represents the <b>modulo</b> operator. It is used to calculate the remainder of a division operation between two numbers.
@@ -256,7 +260,7 @@ print(result)`
                 </SyntaxHighlighter>
             </div>
 
-            <p><code>float()</code> can also create a numeric floating point of infinity. Because every value will be greater than negative infinity, we can use it to help us accomplish our goal of finding the max value. Same is true for finding the min value for positive infinity.</p>
+            <p><code>float()</code> can also create a numeric floating point of infinity. Because every value will be greater than negative infinity, we can use it to help us involving problems and situation where we need to find maximums. Same is true for finding the minimum value from positive infinity.</p>
 
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">

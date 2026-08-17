@@ -3,6 +3,7 @@ import PrevNextSection from '../../../../components/PrevNextSection'
 import { Outlet } from 'react-router-dom'
 
 const sections = [
+    { name: 'Intro', path: 'intro' },
     { name: 'Basics', path: 'basics' },
     { name: 'Control Flow', path: 'control-flow' },
     { name: 'Functions', path: 'functions' },

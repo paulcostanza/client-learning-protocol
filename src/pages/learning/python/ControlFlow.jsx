@@ -75,6 +75,18 @@ Hello World
 Hello World
 Hello World`
 
+    const continueExample = `for number in range(-5, 5):
+    if number < 0:
+        continue  # skip negatives
+
+    print(f"The square root of {number} is {number**0.5}")`
+
+    const continueExampleConsole = `The square root of 0 is 0.0
+The square root of 1 is 1.0
+The square root of 2 is 1.4142135623730951
+The square root of 3 is 1.7320508075688772
+The square root of 4 is 2.0`
+
     const whileLoop = `start = 7
 
 while start > 0:
@@ -218,6 +230,26 @@ while start > 0:
                 <SyntaxHighlighter language="console" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {forLoopConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <h3><code>continue</code></h3>
+
+            <p><code>continue</code> allows you to skip items that you do not want to use in a loop... <em>Go directly to the next iteration of this loop.</em></p>
+
+            <p>Since <code>continue</code> immediately halts the current iteration and jumps to the next one, it saves the program from doing unnecessary work.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                    wrapLines={true} className=" code-snippet">
+                    {continueExample}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow}
+                    wrapLines={true} className=" code-snippet">
+                    {continueExampleConsole}
                 </SyntaxHighlighter>
             </div>
 
