@@ -1,11 +1,11 @@
-// import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 export default function Sets() {
-    // const quizImports = {
-    //     python: () => import('../../../pages/quiz/database/PythonQuestions.js')
-    // }
+    const quizImports = {
+        python: () => import('../../../pages/quiz/database/PythonQuestions.js')
+    }
 
     const mySet = `my_set = {1, 2, 3}
 print(my_set)
@@ -41,6 +41,14 @@ print(my_list_no_duplicates)`
 
 contains_cat = "Cat" in my_set      # True
 conatins_lion = "Lion" in my_set    # False`
+
+    const setSubtraction = `set_1 = {"Xbox 360", "Nintendo 64", "Playstation 5"}
+set_2 = {"Xbox 360", "Nintendo 64"}
+set_3 = set_1 - set_2
+
+print(set_3)`
+
+    const setSubtractionConsole = `Playstation 5`
 
     return (
         <div className="container">
@@ -78,6 +86,8 @@ conatins_lion = "Lion" in my_set    # False`
                     {addToSetConsole}
                 </SyntaxHighlighter>
             </div>
+
+            <p>As you can see no errors will be raised if you add an item already in the set. The set will simply remain unchanged.</p>
 
             <blockquote>
                 <p>Why can't we declare an empty set with curly braces?</p>
@@ -119,14 +129,30 @@ conatins_lion = "Lion" in my_set    # False`
                 </SyntaxHighlighter>
             </div>
 
-            {/* <hr />
+            <h2>Set subtraction</h2>
+
+            <p>You can use some of the <em>usual</em> mathematical operations on sets. For example, you can subtract once set from another. It removes all the values in the second set from the first set:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {setSubtraction}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {setSubtractionConsole}
+                </SyntaxHighlighter>
+            </div>
+
+            <hr />
 
             <h2>Review</h2>
 
             <ReviewQuiz
                 quizImports={quizImports}
                 subcategory="sets"
-            /> */}
+            />
         </div>
     )
 }
