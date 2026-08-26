@@ -12,6 +12,7 @@ const sections = [
     { name: 'Math 101', path: 'math-101' },
     { name: 'Scope', path: 'scope' },
     { name: 'Testing & Debugging', path: 'testing-and-debugging' },
+    { name: 'Errors & Exceptions', path: 'errors-and-exceptions' },
     { name: 'Commputing', path: 'computing' },
     { name: 'Strings', path: 'strings' },
     { name: 'Lists', path: 'lists' },

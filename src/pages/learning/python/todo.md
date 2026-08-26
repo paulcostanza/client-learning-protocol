@@ -1,3 +1,140 @@
+# Current layout: All three levels of headers - not including review section, last updated 8-18-26
+
+- Introduction to Python
+    - What is Code?
+- Basics
+    - Declaring a variable
+    - How to print
+    - Printing a Line Break
+    - Escape characters in strings
+    - f-strings
+    - Dynamic Typing
+    - Integer type
+    - Float type
+        - Underscore for readability
+    - None type
+- Control Flow
+    - The if-else statement
+    - Multiple if statements
+    - The and statement
+    - The or statement
+    - The for loop
+        - continue
+    - The while loop
+- Functions
+    - The return statement
+    - Order of functions
+    - None Return
+    - Parameters vs Arguments
+    - Default values
+- Recursion
+    - Single branch recursion
+        - Why this is difficult to do
+        - Test your understanding
+        - Single branch time and space complexity
+    - Recursion and iteration
+    - Multi-branch recursion
+        - Multi-branch time and space complexity
+    - Common shapes of recursion
+    - How low can you go
+    - Recursion limits
+    - That's a lot of repeated work
+- Mutable default arguments
+    - Why?
+    - What the memory looks like
+- Math 101
+    - Exponent Operator
+    - Remainder in Programming
+    - Floor division operator
+    - Rounding Numerical Values
+    - Finding absolute values
+    - Max
+    - Converting values into an integer
+    - Convert integer to a float
+    - Convert a number to a string
+    - Boolean conversion
+- Scope
+    - Weird python scope issue
+- Testing & Debugging
+    - Unit Tests
+    - Stack Trace
+- Errors & Exceptions
+    - Syntax Errors
+    - Exceptions
+    - Raise an exception
+    - Different types of exceptions
+    - Don't catch your own exceptions
+    - Alias Exception Messages
+    - Raising exceptions
+    - Bugs vs Errors
+- Computing
+    - Scientific Notation
+    - Binary in Python
+    - Bitwise & Operator
+    - Bitwise | Operator
+    - Binary Notation
+    - Convert Binary
+- Strings
+    - Quick methods reference sheet
+    - Quick tricks
+- Lists
+    - Quick methods reference
+    - Quick functions reference
+    - What's a list?
+    - List Operations
+        - With Conditionals
+        - Contains
+        - Concatenate
+    - List Looping
+    - List Append
+    - List Pop
+    - Find the index of an element
+    - Slicing Lists
+        - Reverse a list
+    - Deletion
+    - Sort a list
+        - sort
+        - sorted
+        - key parameter
+    - List Functions
+        - Math
+    - List Methods
+        - Split a String Into a List of Words
+        - Join a List of Strings Into a Single String
+- List Comprehension
+    - Even more fun
+- Tuples
+    - What's a tuple?
+    - Go ahead, mix those data types
+    - Tuple Unpacking
+- Sets
+    - Set operations
+    - Set subtraction    
+- Dictionaries
+    - Operations
+        - Check if key exist
+    - Looping
+    - pop() & del
+    - values()
+    - Dictionary unpacking
+- Regular expressions
+    - Basic Patterns
+    - Basic rules
+        - Leftmost & Largest
+    - Square brackets
+- Built-in Functions
+    - isinstance()
+        - Under the hood
+    - zip()
+        - Zip Dict
+- Ram 101
+    - Conclusion
+- Algorithms: Problem Solving Patterns
+- Two Pointers & Sliding Window
+    - Core concept
+    - Framework
+    - Two-Pointer Technique in action
+
 # How I want the layout to look
 
 ## Basics
