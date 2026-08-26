@@ -7,6 +7,11 @@ export default function BuiltInFunctions() {
         python: () => import('../../../pages/quiz/database/PythonQuestions.js')
     }
 
+    const type = `type(1) is int              # True
+type("1") is str            # True
+type(1.0) == float          # True
+type("seventy_six") == int  # False`
+
     const isinstance = `isinstance(object, classinfo)`
 
     const isinstanceTypeChecking = `age = 69
@@ -82,6 +87,49 @@ print(reversed_dict)`
     return (
         <div className="container">
             <h1>Built-In Functions</h1>
+
+            <p>Functions like <code>sum()</code>, <code>len()</code>, and <code>min()</code> are implemented directly in C inside CPython.</p>
+
+            <blockquote>
+                <p>CPython?</p>
+            </blockquote>
+
+            <p>CPython is the default and most widely used implementation of the python programming language. It is written in the C programming language. When you download python from <a href="python.org">python.org</a> and run a <code>.py</code> file, you are running it through CPython.</p>
+
+            <blockquote>
+                <p>How does it work?</p>
+            </blockquote>
+
+            <ul>
+                <li><strong>Compilation:</strong> CPython compiles your human-readable python source code into an intermediate format called <strong>bytecode</strong> (often cached in <code>.pyc</code> files).</li>
+                <li><strong>Execution:</strong> The CPython virtual machine (written in C) reads the bytecode instructions one by one and executes them.</li>
+            </ul>
+
+            <p>When you write a custom <code>for</code> loop in python the virtual machine has to fetch, decode, and execute python bytecode instructions for every single iteration. When you use something like <code>sum()</code> the iteration and arithmetic happen down in compiled C code, bypassing much of the interpreter's overhead.</p>
+
+            <p>While CPython is the reference implementation, others exist for specific use cases:</p>
+
+            <ul>
+                <li>PyPy uses a just-in-time (JIT) compiler for faster execution of python code.</li>
+                <li>Jython runs python on the java virtual machine (JVM).</li>
+                <li>MicroPython is optimized to run on microcontrollers and embedded systems.</li>
+            </ul>
+
+            <h2><code>sum()</code></h2>
+
+            <h3><code>sum()</code> vs iterating</h3>
+
+            <p>Both run in <code>O(n)</code> time and use <code>O(1)</code> extra memory. However, the built-in <code>sum()</code> implementation executes at C-speed in standard python (CPython), making it slightly faster on large lists.</p>
+
+            <h2><code>type()</code></h2>
+
+            <p>The built-in <code>type()</code> function can be used to get the type of a variable:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {type}
+                </SyntaxHighlighter>
+            </div>
 
             <h2><code>isinstance()</code></h2>
 

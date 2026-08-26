@@ -27,6 +27,15 @@
     - None Return
     - Parameters vs Arguments
     - Default values
+- Type Hints
+    - Basic types
+    - Function parameters
+    - Return types
+    - List and set hints
+    - Dictionary hints
+    - Tuple hints
+    - Nested types
+    - Optional values
 - Recursion
     - Single branch recursion
         - Why this is difficult to do
@@ -123,7 +132,10 @@
         - Leftmost & Largest
     - Square brackets
 - Built-in Functions
+    - sum()
+        - sum() vs iterating
     - isinstance()
+        - Use cases
         - Under the hood
     - zip()
         - Zip Dict
