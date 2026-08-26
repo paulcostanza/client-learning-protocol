@@ -180,4 +180,20 @@ Before attempting this problem, you should be comfortable with:
 
 /*
 Other ways to solve it
+
+Regex: 
+import re
+
+def camel_case_this(s: str) -> str:
+    words = re.split(r"[ _-]+", s)
+
+    if not words:
+        return ""
+
+    result = [words[0].lower()]
+
+    for word in words[1:]:
+        result.append(word.capitalize())
+
+    return "".join(result)
 */

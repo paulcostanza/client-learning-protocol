@@ -5,6 +5,7 @@ const sections = [
     { name: 'Basics', path: 'basics' },
     { name: 'Control Flow', path: 'control-flow' },
     { name: 'Functions', path: 'functions' },
+    { name: 'Type Hints', path: 'type-hints' },
     { name: 'Recursion', path: 'recursion' },
     { name: 'Mutable Default Arguments', path: 'mutable-default-arguments' },
     { name: 'Math 101', path: 'math-101' },
