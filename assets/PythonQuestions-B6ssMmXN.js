@@ -118,4 +118,20 @@ right = 13
 target = 20
 ~~~~
 
-The current sum is 17 in your sorted array, which is too small. Which pairs are you proving impossible when you move the left pointer?`,options:["every pair containing `13`","every pair containing `4`","every pair between the two pointers","only the pair `(4, 13)`, because two-pointers needs to check every pair"],random:!0,answer:"every pair containing `4`",description:"When we move the left pointer we eliminate every pair that includes `4`. `13` is already the largest remaining value. So if `4 + 13` is too small, then `4 + n, n-1, n-2...` must *also* be too small."},{id:41,type:"radio",category:"python",subcategory:"functions",title:"Args vs Params",question:"_____ are the inputs specified by the function definition",options:["arguments","parameters"],random:!0,answer:"parameters",description:""}];export{e as default};
+The current sum is 17 in your sorted array, which is too small. Which pairs are you proving impossible when you move the left pointer?`,options:["every pair containing `13`","every pair containing `4`","every pair between the two pointers","only the pair `(4, 13)`, because two-pointers needs to check every pair"],random:!0,answer:"every pair containing `4`",description:"When we move the left pointer we eliminate every pair that includes `4`. `13` is already the largest remaining value. So if `4 + 13` is too small, then `4 + n, n-1, n-2...` must *also* be too small."},{id:41,type:"radio",category:"python",subcategory:"functions",title:"Args vs Params",question:"_____ are the inputs specified by the function definition",options:["arguments","parameters"],random:!0,answer:"parameters",description:""},{id:42,type:"radio",category:"python",subcategory:"errors-and-exceptions",title:"No exceptions",question:"If no exceptions are raised in the try block...",options:["the program crashes","the except block will not execute","the except block executes with a `None` exception","a `No Exception` is raised"],random:!0,answer:"the except block will not execute",description:""},{id:43,type:"radio",category:"python",subcategory:"errors-and-exceptions",title:"No catch",question:"If an exception is raised and no `try/block` catches it...",options:["the program crashes and python prints a traceback","the exception is automatically caught and handled"],random:!0,answer:"the program crashes and python prints a traceback",description:""},{id:44,type:"radio",category:"python",subcategory:"errors-and-exceptions",title:"Except trigger",question:"Which keyword triggers an exception in python?",options:["`throw`","`raise`","`exception`","`error`"],random:!0,answer:"`raise`",description:""},{id:45,type:"radio",category:"python",subcategory:"errors-and-exceptions",title:"Error Printing I",question:`What happends in the following code:
+        
+~~~python
+try: 
+    raise Exception("zero division")
+except ZeroDivisionError as e:
+    print("zero")
+~~~`,options:["the program will crash","it will print `zero`","it will print `zero division`"],random:!0,answer:"the program will crash",description:"The program will crash with an uncaught exception. The `raise` line *does not* run the exception like a function call. It immediately abandons the rest of the `try` block and trys to find an `except` clause that matches the `Exception` type (which is the most general).\n        \nSince `Exception` does not match `ZeroDivisionError`, python keeps looking outside the `try/except`, only to find nothing. This leads to the program crashing."},{id:46,type:"radio",category:"python",subcategory:"errors-and-exceptions",title:"Error Printing II",question:`What happends in the following code:
+        
+~~~python
+try:
+    raise Exception("zero division")
+except ZeroDivisionError as e:
+    print("zero")
+except Exception as e:
+    print("other")
+~~~`,options:["the program will crash","it will print `zero`","it will print `other`","it will print `zero`, and then pritns `other` on a new line"],random:!0,answer:"it will print `other`",description:""}];export{e as default};
