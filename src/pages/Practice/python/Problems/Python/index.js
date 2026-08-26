@@ -70,6 +70,7 @@ import { sumNestedInts } from './sum-nested-ints'
 import { countNestedInts } from './count-nested-ints'
 import { findMaxInNestedList } from './find-max-in-nested-list'
 import { nestedListDepthSum } from './nested-list-depth-sum'
+import { camelCaseThis } from './camel-case-this'
 
 const problems = {
     // Printing 101
@@ -161,6 +162,7 @@ const problems = {
     "missing-number": missingNumber,
     "set-mismatch": setMismatch,
     "longest-substring-without-duplicates": longestSubstringWithoutDuplicates,
+    "camel-case-this": camelCaseThis,
 }
 
 export default problems

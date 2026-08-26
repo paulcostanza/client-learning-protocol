@@ -109,5 +109,6 @@ export const problemsList = {
         { id: "missing-number", title: "Missing Number", status: '', review: '', order: 70 },
         { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 71 },
         { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 72 },
+        { id: "camel-case-this", title: "Camel Case This", status: '', review: '', order: 73 },
     ]
 }
