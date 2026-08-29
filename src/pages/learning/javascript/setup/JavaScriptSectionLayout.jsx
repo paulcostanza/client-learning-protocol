@@ -22,6 +22,7 @@ const sections = [
     { name: 'Local Storage', path: 'local-storage' },
     { name: 'Intro to Node.js', path: 'intro-to-node-js' },
     { name: 'APIs', path: 'apis' },
+    { name: 'Authentication', path: 'authentication' },
 ]
 
 export default function JavaScriptLayout() {

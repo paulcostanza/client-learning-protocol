@@ -32,6 +32,7 @@ import JavaScriptDom from './pages/learning/javascript/Dom'
 import JavaScriptLocalStorage from './pages/learning/javascript/LocalStorage'
 import JavaScriptIntroToNodeJs from './pages/learning/javascript/IntroToNodeJs'
 import JavaScriptApis from './pages/learning/javascript/Apis'
+import JavaScriptAuthentication from './pages/learning/javascript/Authentication'
 
 import Quiz from './pages/quiz/Quiz'
 import QuizList from './pages/quiz/QuizList'
@@ -248,6 +249,7 @@ function App() {
               <Route path='local-storage' element={<JavaScriptLocalStorage />} />
               <Route path='intro-to-node-js' element={<JavaScriptIntroToNodeJs />} />
               <Route path='apis' element={<JavaScriptApis />} />
+              <Route path='authentication' element={<JavaScriptAuthentication />} />
             </Route>
 
             <Route path='/docker' element={<DockerLanding />} />
