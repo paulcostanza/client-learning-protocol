@@ -1,9 +1,42 @@
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 
 export default function Authentication() {
     const quizImports = {
         js: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
     }
+
+    const installPassport = `npm install passport passport-local`
+
+    const usingExpress = `const express = require('express');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
+const app = express();
+
+// initialize Passport middleware
+app.use(passport.initialize());
+
+// configure Passport to use the Local Strategy
+passport.use(new LocalStrategy((username, password, done) => {
+    // your database look-up and password verification logic goes here
+}));`
+
+    const passportAsMiddleWare = `app.post('/login', passport.authenticate('local'), (req, res) => {
+  // if this function runs, then authentication was successful
+  res.send(\`Welcome back, \${req.user.username}!\`);
+});`
+
+    const installHelmet = `npm install helmet`
+
+    const usingHelmet = `const express = require('express');
+const helmet = require('helmet');
+
+const app = express();
+
+// apply Helmet security middleware
+app.use(helmet());`
 
     return (
         <div className="container">
@@ -110,6 +143,99 @@ export default function Authentication() {
             <p>For robust protection, backend frameworks use CSRF tokens. When a user loads a page, the backend generates a random, unique, and unpredictable token and attaches it to the frontend form or session.</p>
 
             <p>When the client submits a request, they must include this token in the cutsom request headers of form data. The backend compares the submitted token against the token saved in the user session. Because a malicious website cannot access your frontend to copy this secret token, any cross-site request they forge wil lack this token and fail validation. </p>
+
+            <h2>Passport.js</h2>
+
+            <p>Now setting up custom suthentication requires writing a significant amount of manual logic. You have to handle reading the request headers, extracting cookies, verifying signatures, and managing errors. While building this yourself is great for learning, doing it for every production application is time-consuming and prone to security oversights.</p>
+
+            <p>Developers use <strong>Passport.js</strong> as an authentication middleware for Node.js. It acts as a an organized framework that standarizes how you authenticate requests. It handles the low-level authentication details, allowing you to focus on the business logic of your application.</p>
+
+            <p>The core idea behind Passport.js is that every application requires different ways to log in, but the underlying authentication flow should remain the same. Passport achieves this flexibility through modular plugins called <strong>Strategies</strong>.</p>
+
+            <p>Instead of writing custom code for every authentication method, you install the specific strategy you need. There are over 500 strategies available, covering almost every authentication method used today. Some of them are:</p>
+
+            <ul>
+                <li><strong>passport-local:</strong> handles traditional username and password authentication against your own database.</li>
+                <li><strong>passport-jwt:</strong> protects API endpoints by extracting and validating JSON Web Tokens from incoming requests.</li>
+                <li><strong>passport-google-oauth20:</strong> allows users to log in instantly using their existing Google accounts.</li>
+                <li><strong>passport-facebook:</strong> log in with Facebook accounts via OAuth2.0.</li>
+            </ul>
+
+            <p>By breaking authentication down into distinct strategies, Passport allows your application to grow seamlessly. If you start with a username/password system today and decide to add <em>Log in with Google</em> next month, you do not need to rewrite your entire authentication code. You just have to install the Google strategy and plug it into Passport.</p>
+
+            <p>Now to use Passport in an Express application, you must install the core Passport package along with the specific strategy you plan to use. For a standard username and password setup, run the following command in your terminal:</p>
+
+
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {installPassport}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>Once installed, you need to wire up Passport into your Express application setup. This must happen <em>before</em> you define your routes:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {usingExpress}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>Passport integrates smoothly into the standard Express routing system as middleware. When a user submits their credentials to your login route, Passport intercepts the request, passes the data to your configured strategy, and evaluates the result.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {passportAsMiddleWare}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>If the strategy successfully verifies the user, Passport hadnles two critical tasks automatically:</p>
+
+            <ol>
+                <li><strong>Session management:</strong> it triggers helper functions to store a small piece of user data inside the session cookie.</li>
+                <li><strong>Request Decoration:</strong> it attaches the authenticated user object directly to the incoming request as <code>req.user</code>.</li>
+            </ol>
+
+            <p>Once <code>req.user</code> is populated, any subsequent middleware or route handler in your application can instantly see who is logged in and make authorization decisions based on their identity.</p>
+
+            <h2>Helmet.js</h2>
+
+            <p>When building web applications, your backend server does more than just send data, it also sends hidden information back to the browser in the form of HTTP response headers. By default, Express configurations expose details about your server technology. Attackers can exploit these default headers to find vulnerabilities in your app!</p>
+
+            <p>Helmet.js is a security middleware collection for Node.js applications. It acts as protective shield by automatically setting, modifying, or removing specific HTTP headers.</p>
+
+            <p>By managing these headers, Helmet helps protect your application fromm common web vulnerabilities, malicious scripts, and sta sniffing attacks.</p>
+
+            <p>And instead of requiring you to configure dozens of security protocols manually, Helmet configures a suite of smaller middleware functions out of the box. Installing it takes a single terminal command:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {installHelmet}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>To apply this security blanket to your entire Express application, you require only one line of code:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="js" style={tomorrow} className="code-snippet" wrapLines={true}>
+                    {usingHelmet}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>By initializing and placing <code>app.use(helment())</code> at the top of your middleware stack, Helmet intercepts every outgoing response and configures your HTTP headers securely. It handles several critical security jobs automatically. Some of the most important configurations it sets:</p>
+
+            <ul>
+                <li><strong>Hiding server technology (</strong><code>X-Powered-By</code><strong>):</strong> By default, Express advertises itself by sending the header <code>X-Powered-By: Express</code>. This tells heackers exactly what technology your backend runs on, allowing them to target version-specific bugs. Helmet completely removes this header, forcing attackers to guess your underlying setup blindly.</li>
+                <li><strong>Mitigating cross-site scripting (</strong><code>Content-Security-Policy</code><strong>):</strong> Content Security Policy (CSP) is one of the most powerful defenses against Cross-Site Scripting (XSS) attacks. Helment establishes strick rules defining when the browser is allowed to load scripts, images, and styles from. This prevents malicious injectors from running unauthorized scripts in your users' browsers.</li>
+                <li><strong>Preventing clickjacking (</strong><code>X-Frame-Options</code><strong>):</strong> Clickjacking occurs when a malicious site embeds your website inside an invisible <code>iframe</code>, tricking users into clicking buttons they did not intend to click. Helmet sets the <code>X-Frame-Options</code> header to <code>SAMEORIGIN</code>, ensuring your website cannot be embedded on external, untrusted domains.</li>
+                <li><strong>Enforcing secure connections (</strong><code>Stick-Transport-Security</code><strong>):</strong> Helmet forces browsers to communicate with your server exclusively over secure HTTPS connections rather than insecure HTTP. This protects data from being intercepted by attackers on the same network.</li>
+            </ul>
+
+            <blockquote>
+                <p>Even though it does not fix bugs in your custom code, Helmet will instantly harden your server configuration against automated scanners and common exploitation techniques.</p>
+            </blockquote>
+
+
 
             <h2>Review</h2>
 
