@@ -9,6 +9,7 @@ const sections = [
     { name: 'Functions', path: 'functions' },
     { name: 'Type Hints', path: 'type-hints' },
     { name: 'Recursion', path: 'recursion' },
+    { name: 'Backtracking', path: 'backtracking' },
     { name: 'Mutable Default Arguments', path: 'mutable-default-arguments' },
     { name: 'Math 101', path: 'math-101' },
     { name: 'Scope', path: 'scope' },

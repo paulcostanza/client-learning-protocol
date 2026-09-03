@@ -353,18 +353,26 @@ You need the empty returns to help end your function!`
 
             <p>Sublists are internal nodes, while integers act as leaves. When you see an integer you process it as a leaf. When you see a sublist you recurse and combine.</p>
 
+            <h2>Have a little faith</h2>
+
+            <p>When writing recursive functions, a good habit to get into is to <em>not</em> trace the function all the way down to the base case. Try to <em>assume</em> the recursive call already returns the correct answer for a smaller input.</p>
+
+            <blockquote>
+                <p>"Given the correct smaller answer, how do I build the answer for the current input?" - The Recursion Leap of Faith</p>
+            </blockquote>
+
             <h2>Recursion limits</h2>
 
             <blockquote>
                 <p>Wow, recursion is cool! If you need to you can just keep going, and going, and going...</p>
             </blockquote>
 
-            <p>Well, not exactly. There is a limit to how many times you can recurse. The number of calls that are made to a function correlate with how deep the stack in memory gets. For each <code>n</code> calls, the stack gets <code>n</code> deep.</p>
+            <p>Well, not exactly. There is a limit to how many times you can recurse. The number of calls that are made to a function correlate with how deep the stack in memory gets. For each <code>n</code> calls, the stack gets <code>n</code> deep. Each call of a recursive function gets its own frame on the call stack with its own variables. When a call makes a recursive call, the current frame pauses and waits. Then when the inner call returns, the pause frame resumes.</p>
 
             <p>Python limits the stack depth to (approximately) 1,000 frames. This means when a single recursive function is hits 1,000 times, a <code>RecursionError</code> is thrown. This also means recursive functions take up space in memory with a space complexity of <code>O(n)</code>. When compared to iteration's constant space, you should prefer to loop rather than recurse when you can.</p>
 
             <blockquote>
-                <p>We say approximately because the recursion limit can be changed with <code>sys.setrecursionlimit(n)</code> by plugging in a different <code>n</code> integer. You need to watch out when playing around with this as it does not make memory more efficient, but rather just tells python to let the call stac grow deeper. Increasing it too far can cause problems with the underlying C stack and result with a <strong>segmentation fault</strong>. This is advanced and unnecessary for the purposes of this lesson, but it is good to know!</p>
+                <p>We say approximately because the recursion limit can be changed with <code>sys.setrecursionlimit(n)</code> by plugging in a different <code>n</code> integer. You need to watch out when playing around with this as it does not make memory more efficient, but rather just tells python to let the call stack grow deeper. Increasing it too far can cause problems with the underlying C stack and result with a <strong>segmentation fault</strong>. This is advanced and unnecessary for the purposes of this lesson, but it is good to know!</p>
             </blockquote>
 
             <h2>That's a lot of repeated work</h2>
@@ -387,7 +395,22 @@ You need the empty returns to help end your function!`
 
             <h2>Review</h2>
 
-            <p>The recursive <em>recipe</em>:</p>
+            <p><strong>Base case:</strong> the smallest input you can answer immediately, with no recursion. The base case is what <em>stops</em> the recursion.</p>
+
+            <ul>
+                <li>For a list: usually an empty list</li>
+                <li>For a number counting down: usually 0.</li>
+            </ul>
+
+            <p><strong>Recursion case:</strong> what solves the problem. It does this by...</p>
+
+            <ul>
+                <li>Doing a little work on the current piece.</li>
+                <li>Calling the same function on a <em>smaller</em> input. The input <em>must</em> get smaller on every call or you never reach the base case!</li>
+                <li>Combining the two.</li>
+            </ul>
+
+            <p>The <strong>recursive recipe</strong>:</p>
 
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">

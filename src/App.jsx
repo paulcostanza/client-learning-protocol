@@ -108,6 +108,7 @@ import PythonDictionaries from './pages/learning/python/Dictionaries'
 import PythonFunctions from './pages/learning/python/Functions'
 import PythonTypeHints from './pages/learning/python/TypeHints'
 import PythonRecursion from './pages/learning/python/Recursion'
+import PythonBacktracking from './pages/learning/python/Backtracking'
 import PythonMutableDefaultArguments from './pages/learning/python/MutableDefaultArguments'
 import PythonControlFlow from './pages/learning/python/ControlFlow'
 import PythonMath101 from './pages/learning/python/Math101'
@@ -319,6 +320,7 @@ function App() {
               <Route path='functions' element={<PythonFunctions />} />
               <Route path='type-hints' element={<PythonTypeHints />} />
               <Route path='recursion' element={<PythonRecursion />} />
+              <Route path='backtracking' element={<PythonBacktracking />} />
               <Route path='mutable-default-arguments' element={<PythonMutableDefaultArguments />} />
               <Route path='math-101' element={<PythonMath101 />} />
               <Route path='control-flow' element={<PythonControlFlow />} />

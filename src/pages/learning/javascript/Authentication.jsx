@@ -235,8 +235,6 @@ app.use(helmet());`
                 <p>Even though it does not fix bugs in your custom code, Helmet will instantly harden your server configuration against automated scanners and common exploitation techniques.</p>
             </blockquote>
 
-
-
             <h2>Review</h2>
 
             <ReviewQuiz
