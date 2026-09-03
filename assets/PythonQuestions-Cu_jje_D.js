@@ -134,4 +134,20 @@ except ZeroDivisionError as e:
     print("zero")
 except Exception as e:
     print("other")
-~~~`,options:["the program will crash","it will print `zero`","it will print `other`","it will print `zero`, and then pritns `other` on a new line"],random:!0,answer:"it will print `other`",description:""}];export{e as default};
+~~~`,options:["the program will crash","it will print `zero`","it will print `other`","it will print `zero`, and then pritns `other` on a new line"],random:!0,answer:"it will print `other`",description:""},{id:47,type:"input",category:"python",subcategory:"recursion",title:"f recursion I",question:`Take a look at the following code:
+~~~python
+def f(n):
+    if n == 0:
+        return 0
+    return n + f(n - 1)
+print(f(4))
+~~~
+What does this print?`,options:[""],random:!1,answer:"10",description:"Answer: `10`\n        \n- `f(4)` = `return 4 + f(3)`\n- `f(3)` = `return 3 + f(2)`\n- `f(2)` = `return 2 + f(1)`\n- `f(1)` = `return 1 + f(0)`\n- `f(0)` = `return 0 # our base case!`\n\nNow we go back up...\n\n- `f(0)` = `return 0`\n- `f(1)` = `return 1 + 0`\n- `f(2)` = `return 2 + 1`\n- `f(3)` = `return 3 + 3`\n- `f(4)` = `return 4 + 6` = `10`"},{id:48,type:"input",category:"python",subcategory:"recursion",title:"f recursion II",question:`Take a look at the following code:
+~~~python
+def f(n):
+    if n == 0:
+        return 0
+    return n + f(n - 1)
+print(f(4))
+~~~
+How many total calls to \`f\` happen for \`f(4)\` (including the first call)?`,options:[""],random:!1,answer:"5",description:"Answer: `5`\n        \n- `f(4)` = `return 4 + f(3)`\n- `f(3)` = `return 3 + f(2)`\n- `f(2)` = `return 2 + f(1)`\n- `f(1)` = `return 1 + f(0)`\n- `f(0)` = `return 0 # our base case!`\n\nDon't forget about `f(0)`. It is what hits the base case, so it does get called!"}];export{e as default};
