@@ -106,6 +106,7 @@ import PythonComputing from './pages/learning/python/Computing'
 import PythonStrings from './pages/learning/python/Strings'
 import PythonDictionaries from './pages/learning/python/Dictionaries'
 import PythonFunctions from './pages/learning/python/Functions'
+import PythonPassingArguments from './pages/learning/python/PassingArguments'
 import PythonTypeHints from './pages/learning/python/TypeHints'
 import PythonRecursion from './pages/learning/python/Recursion'
 import PythonBacktracking from './pages/learning/python/Backtracking'
@@ -318,6 +319,7 @@ function App() {
             <Route path='/python' element={<PythonLanding />} />
             <Route path='/python' element={<PythonSectionLayout />}>
               <Route path='functions' element={<PythonFunctions />} />
+              <Route path='passing-arguments' element={<PythonPassingArguments />} />
               <Route path='type-hints' element={<PythonTypeHints />} />
               <Route path='recursion' element={<PythonRecursion />} />
               <Route path='backtracking' element={<PythonBacktracking />} />

@@ -105,10 +105,13 @@ export const problemsList = {
         // { id: "insert-delete-getrandom-o1", title: "Insert Delete GetRandom O(1)", status: '', review: '', order: 69 },
         // { id: "time-based-key-value-store", title: "Time Based Key Value Store", status: '', review: '', order: 69 },
     ],
+    backtracking: [
+        { id: "find-all-subsets", title: "Find All Subsets", status: '', review: '', order: 70 },
+    ],
     problemSolving: [
-        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 70 },
-        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 71 },
-        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 72 },
-        { id: "camel-case-this", title: "Camel Case This", status: '', review: '', order: 73 },
+        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 71 },
+        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 72 },
+        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 73 },
+        { id: "camel-case-this", title: "Camel Case This", status: '', review: '', order: 74 },
     ]
 }

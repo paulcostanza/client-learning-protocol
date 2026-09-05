@@ -7,6 +7,7 @@ const sections = [
     { name: 'Basics', path: 'basics' },
     { name: 'Control Flow', path: 'control-flow' },
     { name: 'Functions', path: 'functions' },
+    { name: 'Passing Arguments', path: 'passing-arguments' },
     { name: 'Type Hints', path: 'type-hints' },
     { name: 'Recursion', path: 'recursion' },
     { name: 'Backtracking', path: 'backtracking' },

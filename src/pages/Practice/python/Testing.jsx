@@ -38,8 +38,8 @@ export default function Testing() {
         navigate(`/practice/python/${problem.id}`)
     }
 
-    const sections = ["Hello World", "Calculator", "Strings", "Lists", "Sets", "Dictionaries", "Functions", "Recursion", "Sorting", "Binary Search", "Two Pointers", "Sliding Window", "Linked List", "Trees", "Matrices", "Design", "Problem Solving"]
-    const sectionCamelCase = ["helloWorld", "calculator", "strings", "lists", "sets", "dictionaries", "functions", "recursion", "sorting", "binarySearch", "twoPointers", "slidingWindow", "linkedList", "trees", "matrices", "design", "problemSolving"]
+    const sections = ["Hello World", "Calculator", "Strings", "Lists", "Sets", "Dictionaries", "Functions", "Recursion", "Sorting", "Binary Search", "Two Pointers", "Sliding Window", "Linked List", "Trees", "Matrices", "Design", "Backtracking", "Problem Solving"]
+    const sectionCamelCase = ["helloWorld", "calculator", "strings", "lists", "sets", "dictionaries", "functions", "recursion", "sorting", "binarySearch", "twoPointers", "slidingWindow", "linkedList", "trees", "matrices", "design", "backtracking", "problemSolving"]
 
     return (
         <div className='container'>

@@ -71,6 +71,7 @@ import { countNestedInts } from './count-nested-ints'
 import { findMaxInNestedList } from './find-max-in-nested-list'
 import { nestedListDepthSum } from './nested-list-depth-sum'
 import { camelCaseThis } from './camel-case-this'
+import { findAllSubsets } from './find-all-subsets'
 
 const problems = {
     // Printing 101
@@ -158,6 +159,8 @@ const problems = {
     "matrix-rotation-i": matrixRotationI,
     // design
     "lru-cache": lruCache,
+    // backtracking
+    "find-all-subsets": findAllSubsets,
     // problem solving
     "missing-number": missingNumber,
     "set-mismatch": setMismatch,

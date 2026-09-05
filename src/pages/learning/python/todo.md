@@ -46,8 +46,11 @@
         - Multi-branch time and space complexity
     - Common shapes of recursion
     - How low can you go
+    - Have a little faith
     - Recursion limits
     - That's a lot of repeated work
+- Backtracking
+    - What is backtracking?
 - Mutable default arguments
     - Why?
     - What the memory looks like

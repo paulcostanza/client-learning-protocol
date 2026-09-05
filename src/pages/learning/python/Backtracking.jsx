@@ -58,11 +58,12 @@ export default function Backtracking() {
 
             <p>Let's use our previous example: <code>nums = [2, 4, 6]</code>. We will list the current calls to <code>helper</code> as we go, starting with its default:</p>
 
+            {/* turn this into a table please */}
             <ul>
-                <li><code>helper(0, 0)</code>: <code>idx</code> = <code>0</code> | <code>running_total</code> = <code>0</code></li>
-                <li><code>helper(1, 0 + nums[0])</code>: <code>idx</code> = <code>1</code> | <code>running_total</code> = <code>2</code> (because <code>num[0]</code> is <code>2</code>)</li>
-                <li><code>helper(2, 2 + nums[1])</code>: <code>idx</code> = <code>2</code> | <code>running_total</code> = <code>6</code> </li>
-                <li><code>helper(3, 2 + nums[2])</code>: <code>idx</code> = <code>3</code> | <code>running_total</code> = <code>12</code></li>
+                <li><code>helper(0, 0)</code>      {"   "}     -&gt; <code>idx</code> = <code>0</code> | <code>running_total</code> = <code>0</code></li>
+                <li><code>helper(1, 0 + nums[0])</code> -&gt; <code>idx</code> = <code>1</code> | <code>running_total</code> = <code>2</code> (because <code>num[0]</code> is <code>2</code>)</li>
+                <li><code>helper(2, 2 + nums[1])</code> -&gt; <code>idx</code> = <code>2</code> | <code>running_total</code> = <code>6</code> </li>
+                <li><code>helper(3, 2 + nums[2])</code> -&gt; <code>idx</code> = <code>3</code> | <code>running_total</code> = <code>12</code></li>
             </ul>
 
             <p>We then hit our base case since <code>idx</code> (<code>3</code>) equals the length of our list <code>nums</code>.</p>
@@ -78,6 +79,10 @@ export default function Backtracking() {
             <blockquote>
                 <p><code>Case B</code> carries the total of the sum of the list <strong>explicitly</strong> as <code>Case A</code> carries it <strong>implicitly</strong>, waiting to add it when the stack unwinds as it goes back up the chain.</p>
             </blockquote>
+
+            <h2>What is backtracking?</h2>
+
+            <p><strong>Backtracking</strong> is a problem-solving algorithmic technique that involves finding a solution incrementally by trying different options and undoing them as soon as you hit a dead end. It is a recursive algorithm that is used to solve problems by making a series of choices. When a choice leads to a dead end it <em>backtracks</em> to the last valid choice made and tries a different path.</p>
 
 
             <hr />
