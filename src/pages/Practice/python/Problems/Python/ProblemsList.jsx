@@ -107,11 +107,12 @@ export const problemsList = {
     ],
     backtracking: [
         { id: "find-all-subsets", title: "Find All Subsets", status: '', review: '', order: 70 },
+        { id: "permutations", title: "Permutations", status: '', review: '', order: 71 },
     ],
     problemSolving: [
-        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 71 },
-        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 72 },
-        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 73 },
-        { id: "camel-case-this", title: "Camel Case This", status: '', review: '', order: 74 },
+        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 72 },
+        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 73 },
+        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 74 },
+        { id: "camel-case-this", title: "Camel Case This", status: '', review: '', order: 75 },
     ]
 }

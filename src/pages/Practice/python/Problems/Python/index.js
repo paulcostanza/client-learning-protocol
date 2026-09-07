@@ -72,6 +72,7 @@ import { findMaxInNestedList } from './find-max-in-nested-list'
 import { nestedListDepthSum } from './nested-list-depth-sum'
 import { camelCaseThis } from './camel-case-this'
 import { findAllSubsets } from './find-all-subsets'
+import { permutations } from './permutations'
 
 const problems = {
     // Printing 101
@@ -161,6 +162,7 @@ const problems = {
     "lru-cache": lruCache,
     // backtracking
     "find-all-subsets": findAllSubsets,
+    "permutations": permutations,
     // problem solving
     "missing-number": missingNumber,
     "set-mismatch": setMismatch,
