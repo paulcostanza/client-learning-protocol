@@ -163,11 +163,11 @@ int* harray = new int[5];
             'allocate memory on the stack instead of the heap',
             'are the same thing as using the \`new\` keyword',
             'automatically manage heap memory',
-            'preven memory leaks',
+            'prevent memory leaks',
             'do not use pointers',
         ],
         random: true,
-        answer: ['automatically manage heap memory', 'preven memory leaks'],
+        answer: ['automatically manage heap memory', 'prevent memory leaks'],
         description: ``
     },
     {

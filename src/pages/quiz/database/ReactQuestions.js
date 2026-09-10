@@ -300,7 +300,10 @@ root.render(
         random: false,
         answer: "useContext\(\s*.*?\s*\)",
         description: `Answer: \`useContext()\`
-Grabs data from React\'s *Context API* to avoid passing data through components that do not need said data.`
+
+Prop drilling is data that is passed through components that do not even need the data, but is used for the data to travel through until it reaches the component that needs it.
+
+So then we use \`useContext()\` to avoid passing data through components that do not need that data. It avoids manually passing it through every component.`
     },
     {
         id: 16,

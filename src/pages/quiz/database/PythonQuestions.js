@@ -190,7 +190,7 @@ print(list(zip(a, b)))
         answer: "\\[\\s*\\(\\s*1\\s*,\\s*4\\s*\\)\\s*,\\s*\\(\\s*2\\s*,\\s*5\\s*\\)\\s*,\\s*\\(\\s*3\\s*,\\s*6\\s*\\)\\s*\\]",
         description: `Answer: \`[(1,4), (2,5), (3,6)]\`
 
-\`zip(a, b)\` pairs elements by index, it does *not* combine lists. Sot zip does this:
+\`zip(a, b)\` pairs elements by index, it does *not* combine lists. So zip does this:
 
 ~~~console
 (1, 4)
@@ -614,7 +614,7 @@ Doing something like \`print(baseball["helmets"])\` just checks the value of \`"
         category: 'python',
         subcategory: 'complexity',
         title: 'Trust me bro',
-        question: 'Dictionary lookups are always \`O(1)\`.',
+        question: 'Dictionary lookups are always \`O(1)\` even in the worst-case.',
         options: [
             'true',
             'false'

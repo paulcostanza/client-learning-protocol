@@ -119,12 +119,12 @@ const solution = `<h1>Recursion</h1>
 </ol>
 
 <pre class="solution-code-pre"><code>def sum_flat_list(nums: list[int]) -> int:
-  total = []
-  for item in nested:
-    if isinstance(item, list):
-      total.append(max_depth(item))
-    
-  return 1 + max(total, default=0) 
+  all_paths = []
+  for el in nums:
+    if isinstance(el, list):
+      all_paths.append(max_depth(el))
+
+  return 1 + max(all_paths, default=0)
 </code></pre>
 
 <p>Time complexity is O(n).</p>

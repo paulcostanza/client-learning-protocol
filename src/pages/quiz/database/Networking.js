@@ -140,7 +140,18 @@ export default [
             'ipconfig'
         ],
         random: true,
-        answer: 'ping'
+        answer: 'ping',
+        description: `The *maximum transmission unit* is the largest packet size in bytes that a network interface can send without needing to split it into smaller pieces. Sending a packet larger than the allowed MTU can cause issues like fragmentation or transmission problems.
+        
+Ping not only asks if the computer is reachable, but will also let you specify the size of the packet you are testing.
+
+~~~bash
+ping -s 1472 google.com
+~~~
+
+"Hey, try to send a ping with 1,500 bytes of ICMP data to google.com!"
+
+\*The total IP packet is larger because it also includes headers -> 8 bytes for the ICMP header and 20 bytes for the IPv4 header, adding up to 1,500 total bytes.`
     },
     {
         id: 11,

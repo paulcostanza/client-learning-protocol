@@ -555,7 +555,7 @@ result += str8.concat(str1, space, str3)
         category: 'javascript',
         subcategory: 'authentication',
         title: ``,
-        question: "What security purpose does the signature part of a JWT server?",
+        question: "What security purpose does the signature part of a JWT serve?",
         options: [
             'it encrypts the entire token so nobody can read the user data',
             'it stores the user\'s password in a hashed format for later verification',
@@ -589,7 +589,7 @@ result += str8.concat(str1, space, str3)
         category: 'javascript',
         subcategory: 'authentication',
         title: '',
-        question: 'Whare are the three distinct parts that make up a JSON Web Token?',
+        question: 'What are the three distinct parts that make up a JSON Web Token?',
         options: [
             'header',
             'body',
