@@ -108,7 +108,7 @@ console.log(typeof user); // "object"`
         <div className="container">
             <h1>Intro to JS</h1>
 
-            <p><strong>JavaScript</strong> is a powerful programming language that brings interactivity and dynamic behavior to websites.</p>
+            <p><strong>JavaScript</strong> is a powerful programming language that brings interactivity and dynamic behavior to websites. Clicking a button, submitting a form, getting search results from a search box, are all because of JS.</p>
 
             <p>While HTML and CSS are markup languages used to structure content and style elements on a page, JavaScript goes beyond those by enabling more complex functionality, such as handling user input, animating elements and even building full web applications.</p>
 
@@ -128,6 +128,18 @@ console.log(typeof user); // "object"`
             </ul>
 
             <p>CSS is used to apply styles to the heading, such as making the text green. JS is used to display an alert message when the button is clicked.</p>
+
+            <h2>Where does JavaScript go?</h2>
+
+            <p>JS runs pretty much everywhere the internet can exist. For instance...</p>
+
+            <ul>
+                <li>in your browser. Chrome, Firefox, Brave, Safari all ship with their own JavaScript engine.</li>
+                <li>On a server. The web technology <code>Node</code> is JS outside of the browser and can be run on servers, build tools, and common-line scripts.</li>
+                <li>On learning platforms, just like this one!</li>
+            </ul>
+
+
 
             <h2>Data types</h2>
 
@@ -238,7 +250,7 @@ console.log(typeof user); // "object"`
 
             <h2>Variables</h2>
 
-            <p><strong>Variables</strong> act as containers for storing data that you can access and modify throughout your program.</p>
+            <p><strong>Variables</strong> is a named place where you store a value. They act as containers for storing data that you can access and modify throughout your program.</p>
 
             <p>Think of variables as boxes that hold values. With variables, you can keep track of things like numbers or text and refer to these values whenever you need them in your program.</p>
 
@@ -354,7 +366,7 @@ console.log(typeof user); // "object"`
                 <p>I keep seeing this code in previous examples, but what is it?</p>
             </blockquote>
 
-            <p><code>console.log</code> is a method that is used to log messages to the console. It is a helpful tool for debugging and testing your code.</p>
+            <p><code>console.log</code> is a method that is used to log messages to the console. It is a helpful tool to see what your code is doing, as well as debugging, and testing. It is a command that prints whatever value you put between its parentheses.</p>
 
             <blockquote>
                 <p>What's a console?</p>
@@ -366,7 +378,7 @@ console.log(typeof user); // "object"`
                 <p>Thanks for nothing...</p>
             </blockquote>
 
-            <p>Tehe!!</p>
+            <p>Tehe!! For now just remember: when it doubt, log it out!</p>
 
             <h2>Semicolons in JS</h2>
 
@@ -385,6 +397,8 @@ console.log(typeof user); // "object"`
                     {comments}
                 </SyntaxHighlighter>
             </div>
+
+            <p>Comments need to explain the <em>why</em> and not the <em>what</em>. If you have code that calculates tax, just reading the code will explain that. However, the comment explains why, something like <code>// Racoon City tax rate for 2024</code> shows that the math is specific for a city and a year.</p>
 
             <hr />
 

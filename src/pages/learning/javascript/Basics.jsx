@@ -47,7 +47,7 @@ console.log(x); // 5`
 
             <h2><code>let</code> and <code>const</code></h2>
 
-            <p>When working with JS you will often declare variables to store data that you plan to use throughout your program.</p>
+            <p>When working with JS you will often declare <strong>variables</strong> to store data that you plan to use throughout your program.</p>
 
             <p>In modern JS, <code>let</code> and <code>const</code> are the preferred ways to declare variables, but they differ in how they handle value assignment and reassignment.</p>
 

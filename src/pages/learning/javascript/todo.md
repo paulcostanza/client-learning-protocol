@@ -16,6 +16,21 @@ The user can select which one to do. How would I keep track of how a project is 
 ## Order
 
 1. Intro
+    - Data types
+            - Number
+            - String
+            - Boolean
+            - undefined
+            - null
+            - object
+            - symbol
+            - BigInt
+    - Variables
+    - Dynamically types
+    - typeof Operator
+    - console.log()
+    - semicolons in JS
+    - Comments
 2. Basics
 3. Strings
 4. String Methods
