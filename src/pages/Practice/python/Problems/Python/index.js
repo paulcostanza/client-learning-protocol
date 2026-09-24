@@ -74,6 +74,7 @@ import { camelCaseThis } from './camel-case-this'
 import { findAllSubsets } from './find-all-subsets'
 import { permutations } from './permutations'
 import { maxValueInTree } from './max-value-in-tree'
+import { sizeOfBinaryTree } from './size-of-binary-tree'
 
 const problems = {
     // Printing 101
@@ -158,6 +159,7 @@ const problems = {
     "invert-binary-tree": invertBinaryTree,
     "count-tree-nodes": countTreeNodes,
     "max-value-in-tree": maxValueInTree,
+    "size-of-binary-tree": sizeOfBinaryTree,
     // matrices
     "matrix-rotation-i": matrixRotationI,
     // design
