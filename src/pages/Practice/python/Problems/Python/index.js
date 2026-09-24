@@ -73,6 +73,7 @@ import { nestedListDepthSum } from './nested-list-depth-sum'
 import { camelCaseThis } from './camel-case-this'
 import { findAllSubsets } from './find-all-subsets'
 import { permutations } from './permutations'
+import { maxValueInTree } from './max-value-in-tree'
 
 const problems = {
     // Printing 101
@@ -156,6 +157,7 @@ const problems = {
     // trees
     "invert-binary-tree": invertBinaryTree,
     "count-tree-nodes": countTreeNodes,
+    "max-value-in-tree": maxValueInTree,
     // matrices
     "matrix-rotation-i": matrixRotationI,
     // design

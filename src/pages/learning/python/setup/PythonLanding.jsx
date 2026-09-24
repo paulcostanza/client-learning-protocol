@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 const sections = [
+    // Python 101
     { name: 'Intro', path: 'intro' },
     { name: 'Basics', path: 'basics' },
     { name: 'Control Flow', path: 'control-flow' },
@@ -24,8 +25,10 @@ const sections = [
     { name: 'Regular Expressions', path: 'regular-expressions' },
     { name: 'Built-In Functions', path: 'built-in-functions' },
     { name: 'RAM 101', path: 'ram-101' },
+    // Data Structures & Algorithms
     { name: 'Algorithms: Problem-Solving Patterns', path: 'algorithms-problem-solving-patterns' },
     { name: 'Two Pointers & Sliding Window', path: 'two-pointers-and-sliding-window' },
+    { name: 'Depth-First Search', path: 'depth-first-search' },
 ]
 export default function PythonLanding() {
     return (

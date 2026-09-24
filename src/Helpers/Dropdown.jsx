@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 import { useState } from 'react'
 
-export default function Dropdown({ questions, answers }) {
+export default function Dropdown({ questions, answers, preface = "" }) {
     const [expanded, setExpanded] = useState(false)
 
     const handleChange = (panel) => (e, isExpanded) => {
@@ -14,6 +14,7 @@ export default function Dropdown({ questions, answers }) {
     return (
         <div>
             <div style={{ border: '1px solid #23272a', padding: '10px', borderRadius: '10px' }}>
+                <p style={{ textAlign: 'center', fontStyle: 'italic' }}>{preface}</p>
                 {questions.map((el, idx) => (
                     <Accordion
                         key={idx}

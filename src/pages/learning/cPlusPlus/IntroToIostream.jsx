@@ -374,9 +374,8 @@ int main()
                 </SyntaxHighlighter>
             </div>
 
-            <p>Describe the output of the following types of input: </p>
-
             <Dropdown
+                preface={'Describe the output of the following types of input.'}
                 questions={[
                     "The letter: g",
                     "A number with a fractional part: 2.7 -or- 7.2",
