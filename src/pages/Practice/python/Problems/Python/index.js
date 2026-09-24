@@ -76,6 +76,7 @@ import { permutations } from './permutations'
 import { maxValueInTree } from './max-value-in-tree'
 import { sizeOfBinaryTree } from './size-of-binary-tree'
 import { heightOfBinaryTree } from './height-of-binary-tree'
+import { diameterOfBinaryTree } from './diameter-of-binary-tree'
 
 const problems = {
     // Printing 101
@@ -162,6 +163,7 @@ const problems = {
     "max-value-in-tree": maxValueInTree,
     "size-of-binary-tree": sizeOfBinaryTree,
     "height-of-binary-tree": heightOfBinaryTree,
+    "diameter-of-binary-tree": diameterOfBinaryTree,
     // matrices
     "matrix-rotation-i": matrixRotationI,
     // design
