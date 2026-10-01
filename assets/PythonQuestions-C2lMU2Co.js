@@ -150,4 +150,17 @@ def f(n):
     return n + f(n - 1)
 print(f(4))
 ~~~
-How many total calls to \`f\` happen for \`f(4)\` (including the first call)?`,options:[""],random:!1,answer:"5",description:"Answer: `5`\n        \n- `f(4)` = `return 4 + f(3)`\n- `f(3)` = `return 3 + f(2)`\n- `f(2)` = `return 2 + f(1)`\n- `f(1)` = `return 1 + f(0)`\n- `f(0)` = `return 0 # our base case!`\n\nDon't forget about `f(0)`. It is what hits the base case, so it does get called!"}];export{e as default};
+How many total calls to \`f\` happen for \`f(4)\` (including the first call)?`,options:[""],random:!1,answer:"5",description:"Answer: `5`\n        \n- `f(4)` = `return 4 + f(3)`\n- `f(3)` = `return 3 + f(2)`\n- `f(2)` = `return 2 + f(1)`\n- `f(1)` = `return 1 + f(0)`\n- `f(0)` = `return 0 # our base case!`\n\nDon't forget about `f(0)`. It is what hits the base case, so it does get called!"},{id:49,type:"radio",category:"python",subcategory:"breadth-first-search",title:"",question:`When performing BFS on a binary tree, why do we store the queue length at the beginning of each iteration?
+        
+~~~python
+while queue:
+    level_size = len(queue)
+
+    for _ in range(level_size):
+        node = queue.popleft()
+
+        if node.left:
+            queue.append(node.left)
+        if node.right:
+            queue.append(node.right)
+~~~`,options:["to ensure we only process the nodes at a current level","to prevent nodes from being added to the queue","to reduce the time complexity of BFS","to ensure the queue is always empty at the end of each level","to reduce the space complexity of BFS"],random:!0,answer:"to ensure we only process the nodes at a current level",description:"`level_size = len(queue)` captures how many nodes are currently in the queue at the start of the level.\n        \nThe `for` loop processes exactly that many nodes, even as their children are added to the queue. This prevents nodes from the next level from being processed prematurely."}];export{e as default};
