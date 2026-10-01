@@ -30,6 +30,15 @@ const sections = [
     { name: 'Two Pointers & Sliding Window', path: 'two-pointers-and-sliding-window' },
     { name: 'Depth-First Search', path: 'depth-first-search' },
     { name: 'Breadth-First Search', path: 'breadth-first-search' },
+    // CLI
+    // Automation
+    // Data analysis: analyze large datasets, identify patterns, create visualizations with Pandas & NumPy
+    // AI/ML: model training and inference with PyTorch, TensorFlow, OpenCV
+    // Testing
+    // FastAPI
+    // Cybersecurity: log analysis, security tooling, working with network protocols and API, analyze packet captures w/ Scapy
+    // Game development: learn game mechanics, coolision detection, score systems with Pygame, Arcade
+    // Scientific computing & engineering: simulate physical systems, solve complex mathematical problems, perform statistical analysis, create engineering simulations
 ]
 export default function PythonLanding() {
     return (
