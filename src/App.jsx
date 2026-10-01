@@ -126,6 +126,7 @@ import PythonRam101 from './pages/learning/python/Ram101'
 import PythonAlgorithmsProblemSolvingPatterns from './pages/learning/python/AlgorithmsProblemSolvingPatterns'
 import PythonTwoPointersAndSlidingWindow from './pages/learning/python/TwoPointersAndSlidingWindow'
 import PythonDepthFirstSearch from './pages/learning/python/DepthFirstSearch'
+import PythonBreadthFirstSearch from './pages/learning/python/BreadthFirstSearch'
 
 // C++
 import CPlusPlusLanding from './pages/learning/cPlusPlus/setup/CPlusPlusLanding'
@@ -345,6 +346,7 @@ function App() {
               <Route path='algorithms-problem-solving-patterns' element={<PythonAlgorithmsProblemSolvingPatterns />} />
               <Route path='two-pointers-and-sliding-window' element={<PythonTwoPointersAndSlidingWindow />} />
               <Route path='depth-first-search' element={<PythonDepthFirstSearch />} />
+              <Route path='breadth-first-search' element={<PythonBreadthFirstSearch />} />
             </Route>
 
             <Route path='/cpp' element={<CPlusPlusLanding />} />

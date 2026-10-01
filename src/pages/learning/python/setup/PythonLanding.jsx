@@ -29,6 +29,7 @@ const sections = [
     { name: 'Algorithms: Problem-Solving Patterns', path: 'algorithms-problem-solving-patterns' },
     { name: 'Two Pointers & Sliding Window', path: 'two-pointers-and-sliding-window' },
     { name: 'Depth-First Search', path: 'depth-first-search' },
+    { name: 'Breadth-First Search', path: 'breadth-first-search' },
 ]
 export default function PythonLanding() {
     return (
