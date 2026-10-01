@@ -904,6 +904,28 @@ input[type="checkbox"]:checked+label::before {
     margin: 10px;
 }
 
+/************************** P R E V | N E X T | S E C T I O N **************************/
+/* The bottom of the learning page to go to a prev or next page */
+
+.prev-next-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+@media (max-width: 900px) {
+
+    .prev-next-section {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .prev-next-section a {
+        display: flex;
+        justify-content: center;
+    }
+}
+
 /*********************************** H O M E P A G E ***********************************/
 
 /* For circuits, that would be sick if they lit up one at a time */
