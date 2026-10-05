@@ -1,7 +1,10 @@
 import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import Dropdown from '../../../Helpers/Dropdown.jsx'
 import BfsWithQueue from '../../../assets/python/breadthFirstSearch/bfs with queue.png'
+import BfsWithQueueCoordinateTracking from '../../../assets/python/breadthFirstSearch/bfs with queue coordinate tracking.png'
+import BfsWithQueueCoordinateTrackingWithColumnBreakdown from '../../../assets/python/breadthFirstSearch/bfs with queue coordinate tracking with column breakdown.png'
 
 export default function BreadthFirstSearch() {
     const quizImports = {
@@ -35,7 +38,18 @@ def bfs(root):
 
     const coordinateDictPattern = `from collections import deque, defaultdict
 
-def by_column(root):
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+root = TreeNode(5,
+    TreeNode(4, TreeNode(3), TreeNode(6)),
+    TreeNode(7, TreeNode(8), TreeNode(9))
+)
+
+def bfs_by_column(root):
     if not root:
         return []
 
@@ -49,8 +63,24 @@ def by_column(root):
             cols[c].append(node.val)
             q.append((node.left,  c - 1))
             q.append((node.right, c + 1))
+
+    print("cols before sortation: \\n", cols)
     return [cols[c] for c in sorted(cols)]  
+
+print("cols after sortation: \\n", bfs_by_column(root))
 `
+
+    const coordinateDictPatternConsole = `cols before sortation:
+ {
+    0: [5, 6, 8],
+   -1: [4],
+    1: [7],
+   -2: [3],
+    2: [9]
+ }
+
+cols after sortation: 
+[[3], [4], [5, 6, 8], [7], [9]]`
 
     return (
         <div className="container">
@@ -97,11 +127,17 @@ def by_column(root):
 
             <h3>Coordinate tracking with a dictionary</h3>
 
-            <p>When you need to group nodes by something other than visiting order, such as by column, depth, or horizontal distance, you need to carry its current coordinate alongside the node in the queue and accumulate it into a dictionary keyed by it.</p>
+            <p>When you need to group nodes by something other than visiting order, such as by column, depth, or horizontal distance, you need to carry its current coordinate alongside the node in the queue and accumulate it into a dictionary keyed by it. The following function <code>bfs_by_column</code> will deminstrate this. In addition, we have added the <code>TreeNode</code> class here to help with the example that follows the code.</p>
 
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
                     {coordinateDictPattern}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {coordinateDictPatternConsole}
                 </SyntaxHighlighter>
             </div>
 
@@ -112,6 +148,32 @@ def by_column(root):
             </blockquote>
 
             <p>Yes! BFS order helps keep track from the root, meaning the columns can be ordered with <code>sorted(cols)</code>. One single shared node would not work because nodes can be in different columns at the same time.</p>
+
+            <h3>Deep dive into columns</h3>
+
+            <p>Let's dive in with what exactly a <em>column</em> is. Here is an image of the binary tree we created:</p>
+
+            <p><img className="img-in-reading" src={BfsWithQueueCoordinateTracking} alt="Example of a simple binary tree for the coordinate dictionary pattern example." /></p>
+
+            <p>And here is the same binary tree showing how each node would fall within a column:</p>
+
+            <p><img className="img-in-reading" src={BfsWithQueueCoordinateTrackingWithColumnBreakdown} alt="Example of a simple binary tree for the coordinate dictionary pattern example showing how the columns are laid out." /></p>
+
+            <Dropdown
+                preface="Let's continue the binary tree. We'll build into the fourth level of our example tree, and you name the column that it resides in."
+                questions={[
+                    "Node 6's left child",
+                    "Node 8's right child",
+                    "Node 9's right child",
+                    "Node 3's right child's right child"
+                ]}
+                answers={[
+                    "Column -1",
+                    "Column 1",
+                    "Column 3",
+                    "Column 0"
+                ]}
+            />
 
             <h3>Time and Space Complexity</h3>
 
