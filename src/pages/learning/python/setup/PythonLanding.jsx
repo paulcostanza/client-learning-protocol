@@ -30,6 +30,7 @@ const sections = [
     { name: 'Two Pointers & Sliding Window', path: 'two-pointers-and-sliding-window' },
     { name: 'Depth-First Search', path: 'depth-first-search' },
     { name: 'Breadth-First Search', path: 'breadth-first-search' },
+    { name: 'Trie', path: 'trie' },
     // CLI
     // Automation
     // Data analysis: analyze large datasets, identify patterns, create visualizations with Pandas & NumPy

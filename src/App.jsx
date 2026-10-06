@@ -127,6 +127,7 @@ import PythonAlgorithmsProblemSolvingPatterns from './pages/learning/python/Algo
 import PythonTwoPointersAndSlidingWindow from './pages/learning/python/TwoPointersAndSlidingWindow'
 import PythonDepthFirstSearch from './pages/learning/python/DepthFirstSearch'
 import PythonBreadthFirstSearch from './pages/learning/python/BreadthFirstSearch'
+import PythonTrie from './pages/learning/python/Trie'
 
 // C++
 import CPlusPlusLanding from './pages/learning/cPlusPlus/setup/CPlusPlusLanding'
@@ -347,6 +348,7 @@ function App() {
               <Route path='two-pointers-and-sliding-window' element={<PythonTwoPointersAndSlidingWindow />} />
               <Route path='depth-first-search' element={<PythonDepthFirstSearch />} />
               <Route path='breadth-first-search' element={<PythonBreadthFirstSearch />} />
+              <Route path='trie' element={<PythonTrie />} />
             </Route>
 
             <Route path='/cpp' element={<CPlusPlusLanding />} />
