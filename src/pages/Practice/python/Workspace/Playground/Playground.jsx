@@ -8,6 +8,7 @@ import Split from 'react-split'
 import PlaygroundNav from './PlaygroundNav'
 import OutputHeader from './PlaygroundFooter/OutputHeader'
 import Output from './PlaygroundFooter/Output'
+import { ToastContainer, toast } from "react-toastify"
 
 export default function Playground({
     problem,
@@ -88,13 +89,34 @@ export default function Playground({
             setCorrect(isCorrect)
             setOutput(outputBuffer)
             saveSectionQuestionResult('python-basics', problem.id, isCorrect ? 'correct' : 'incorrect')
-            window.alert(isCorrect ? "Congratulations! All tests passed." : "Some tests failed. Try again!")
+
+            if (isCorrect) {
+                toast.success("Congratulations! All tests passed.", {
+                    position: "bottom-center",
+                    autoClose: 4000,
+                    closeOnClick: true,
+                    theme: "dark",
+                })
+            } else {
+                toast.error("Some tests failed. Try again!", {
+                    position: "bottom-center",
+                    autoClose: 4000,
+                    closeOnClick: true,
+                    theme: "dark",
+                })
+            }
+
             return isCorrect
         } catch (err) {
             setOutput(err.toString())
             setCorrect(false)
             saveSectionQuestionResult('python-basics', problem.id, 'incorrect')
-            window.alert("Submission failed due to an error.")
+            toast.error("Submission failed due to an error.", {
+                position: "bottom-center",
+                autoClose: 4000,
+                closeOnClick: true,
+                theme: "dark",
+            })
             return false
         }
     }
@@ -124,6 +146,7 @@ export default function Playground({
                     <Output output={output} />
                 </div>
             </Split>
+            <ToastContainer />
         </div>
     )
 }
