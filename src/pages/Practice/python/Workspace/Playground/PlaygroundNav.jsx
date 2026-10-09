@@ -1,10 +1,11 @@
-import { AiOutlineSetting, AiOutlineFullscreen } from 'react-icons/ai'
+import { AiOutlineSetting } from 'react-icons/ai'
 import { useState } from 'react'
 import Box from '@mui/material/Box'
 import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabList from '@mui/lab/TabList'
-import TabPanel from '@mui/lab/TabPanel'
+import TabPanel from '@mui/lab/TabPanel' // I don't think I need this lol, but too lazy to investigate it
+import FullScreenButton from './PlaygroundNavButtons/FullScreenButton'
 
 export default function PlaygroundNav({ activeTab, setActiveTab }) {
     const [value, setValue] = useState("main")
@@ -16,7 +17,7 @@ export default function PlaygroundNav({ activeTab, setActiveTab }) {
     return (
         <div className='playground-nav'>
 
-            {/* Files */}
+            {/* Files user can click on */}
             <Box sx={{ width: '100%', typography: 'body1' }}>
                 <TabContext value={activeTab}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -56,7 +57,7 @@ export default function PlaygroundNav({ activeTab, setActiveTab }) {
                 </TabContext>
             </Box>
 
-            {/* Butons */}
+            {/* Buttons */}
             <div className='playground-nav-btns'>
                 {/* Settings */}
                 <div className='playground-nav-btn'>
@@ -65,7 +66,7 @@ export default function PlaygroundNav({ activeTab, setActiveTab }) {
 
                 {/* Full Screen */}
                 <div className='playground-nav-btn'>
-                    <AiOutlineFullscreen />
+                    <FullScreenButton />
                 </div>
             </div>
 
