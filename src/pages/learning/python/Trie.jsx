@@ -42,9 +42,9 @@ export default function Trie() {
 
 # with our marker
 {"a" :
-    {"$": True},
-    {"n": 
-        {"$": True}
+    {
+        "$": True,
+        "n": {"$": True}
     }
 } # the word "a" is shown!!`
 
@@ -63,11 +63,67 @@ with_zero = {"n": {"u": {"t": {0: True}}}}`
         current["$"] = True
     return trie`
 
+    const searchAndStartsWithPseudoCode = `# walk: advances one character at a time from the root
+walk(trie, chars):
+    node = trie
+    for c in chars:
+        if c not in node:        # no such child
+            return None          # walk fails instantly
+        node = node[c]           # step one level deeper
+    return node                  # terminal node reached
+
+# checks if path exists & the word ends on the last node
+search(trie, word):   
+    node = walk(trie, word)    
+    return node is not None and "$" in node
+
+# checks if path exists
+starts_with(trie, prefix):
+    node = walk(trie, prefix)
+    return node is not None`
+
+    const searchAndStartsWith = `def search(trie: dict, word: str) -> bool:
+    curr = trie
+    for char in word:
+        if char in curr:
+            curr = curr[char]
+        else:
+            return False
+    
+    return "$" in curr
+
+
+def starts_with(trie: dict, prefix: str) -> bool:
+    curr = trie
+    for char in prefix:
+        if char in curr:
+            curr = curr[char]
+        else:
+            return False
+    return True`
+
+    const searchAndStartsWithWithHelperFunction = `def _walk(trie, chars):
+    curr = trie
+    for char in chars:
+        if char in curr:
+            curr = curr[char]
+        else:
+            return None
+    return curr
+
+def search(trie, word):
+    node = _walk(trie, word)
+    return node is not None and "$" in node
+
+def starts_with(trie, prefix):
+    node = _walk(trie, prefix)
+    return node is not None`
+
     return (
         <div className="container">
-            <h1>Trie</h1>
+            <h1>Trie: Dictionary Version</h1>
 
-            <p>A <strong>trie</strong> (pronounced <em>try</em>) is known as a <em>prefix tree</em>, a specialized tree-based data structure used to efficiently store and retrieve keys in a dataset of strings. So instead of storing an entire word in a single node, a trie breaks words down character by character. Nodes along a path share common prefixes, making the structure very efficient for string-matching operations. </p>
+            <p>A <strong>trie</strong> (pronounced <em>try</em>) is known as a <em>prefix tree</em>, a specialized tree-based data structure used to efficiently store and retrieve keys in a dataset of strings. Instead of storing an entire word in a single node, a trie breaks words down character by character. Nodes along a path share common prefixes, making the structure very efficient for string-matching operations. </p>
 
             <blockquote>
                 <p>Trie comes from "re<strong>trie</strong>val".</p>
@@ -78,8 +134,8 @@ with_zero = {"n": {"u": {"t": {0: True}}}}`
             <p>A trie node contains two parts:</p>
 
             <ul>
-                <li>a <strong>children</strong> map of <code>dict[char, TrieNode]</code> based off the root. For lowercase letters you can use a fixed <code>[None] * 26</code> list</li>
-                <li>a <strong>word-ending</strong> marker such as a boolean. However, we will be doing the nested-dictionary version of a trie, so we use a sentinel key <code>"$"</code> meaning <em>we have a stored word that ends at this node</em>.</li>
+                <li>a <strong>children</strong> map of <code>dict[char, TrieNode]</code> based off the root. For lowercase letters you can use an optional fixed <code>[None] * 26</code> list</li>
+                <li>a <strong>word-ending</strong> marker such as a boolean. However, we will be doing the nested-dictionary version of a trie, so we use a sentinel key <code>"$"</code> meaning <em>we have a stored word that ends at this node</em> (this is also known as a sentinel key). When we jump into a class-based trie, we use a boolean attribute.</li>
             </ul>
 
             <p>Let's build a trie from the set <code>&#123; "a", "add", "addition", "ass" &#125;</code></p>
@@ -94,9 +150,13 @@ with_zero = {"n": {"u": {"t": {0: True}}}}`
 
             <h2>When a trie is better than a hash set</h2>
 
+            <p>A hash set gives us <code>O(l)</code> exact-match lookup for a length of <code>l</code> for the string we are currently searching. So the conclusion is that a trie ties with a hash set when searching for a whole and complete word. However, a trie is better when testing for a prefix and pattern-matching queries, where a hash set cannot answer in <code>O(l)</code>.
 
-            <p>A hash set gives us <code>O(l)</code> exact-match lookup for a length of <code>l</code> for the string. So the conculsion is that a trie ties with a hash set when searching for a whole and complete word. However, a trie is bettwer when testing for a prefix and pattern-matching queries, where a hash set cannot answer in <code>O(l)</code>. Example: we have <code>words = &#123; "nancy", "harry", "nicky", "nicolle" &#125;</code></p>
+                <blockquote>
+                    <p>We will see where this really shines in the next section, adding a wildcard character. </p>
+                </blockquote>
 
+                Example: we have <code>words = &#123; "nancy", "harry", "nicky", "nicolle" &#125;</code></p>
 
             <p><strong>Search query 1: is <code>harry</code> an exact stored word?</strong></p>
 
@@ -108,13 +168,17 @@ with_zero = {"n": {"u": {"t": {0: True}}}}`
             <p><strong>Search query 2: does any stored word start with <code>ni</code>?</strong></p>
 
             <ul>
-                <li>Hash set: nothing lets you answer without checking <em>every</em> stored word, where <code>w</code> in <code>words</code> needs to <code>w.startswith("ni")</code>. This takes <code>O(n * l)</code>.</li>
+                <li>Hash set: nothing lets you answer without checking <em>every</em> stored word, where <code>w</code> in <code>words</code> needs to <code>w.startswith("ni")</code>. This takes <code>O(n * l)</code>, where <code>l</code> is the length of the current string, and <code>n</code> is the number of words in <code>words</code>.</li>
                 <li>Trie: iterate through <code>"n"</code> -&gt; <code>"i"</code> -&gt; then stop. Our trie destroys the hash set by a factor of <code>n</code>, resulting in <code>O(l)</code> time.</li>
             </ul>
 
             <p>Checking a prefix with a trie is the same time complexity as checking a whole word just with a different stoping condition.</p>
 
-            <h2>Let's build!</h2>
+            <h2>Trie as a dictionary</h2>
+
+            <p>To help ease into the trie data structure, we will first examine it as a dictionary in this section. In the next section, we will see it in its final form as a tree structure with each character occuplying its own node.</p>
+
+            <h3>Let's build! <code>build_trie(words)</code></h3>
 
             <p>Think of a trie node as a dictionary of choices. Every key in the dictionary is a character label on a branch. Every value in the dictionary points to the next dictionary node down the line.</p>
 
@@ -179,7 +243,51 @@ with_zero = {"n": {"u": {"t": {0: True}}}}`
                 </ul>
             </ol>
 
-            <h3>Dictionaries over <code>TrieNode</code>s</h3>
+            <h3><code>search(trie, word)</code> & <code>starts_with(trie, prefix)</code></h3>
+
+            <p><code>search</code> and <code>starts_with</code> have the exact same traversal down the trie and only differ in the return.</p>
+
+            <ul>
+                <li><code>search(trie, word)</code>: returns <code>True</code> if <code>word</code> is an exact match within <code>trie</code> and the final node contains the end-word marker. Otherwise, <code>False</code> is returned.</li>
+                <li><code>starts_with(trie, prefix)</code>: returns <code>True</code> if <code>prefix</code> exist within <code>trie</code>. Otherwise, <code>False</code> is returned.</li>
+            </ul>
+
+            <p>Our <code>search</code> and <code>starts_with</code> pseudo code, sharing a <code>walk</code> function:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {searchAndStartsWithPseudoCode}
+                </SyntaxHighlighter>
+            </div>
+
+            <blockquote>
+                <p>Yup! The only difference is when <code>search</code> checks our word-end marker.</p>
+            </blockquote>
+
+            <p>Edge cases:</p>
+
+            <ul>
+                <li><code>search(trie, "")</code> returns <code>False</code> when the empty word has not been inserted.</li>
+                <li><code>starts_with(trie, "")</code> returns <code>True</code>, including for an empty trie, because no characters need to be traversed.</li>
+            </ul>
+
+            <p>Code for <code>search</code> and <code>starts_with</code>:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {searchAndStartsWith}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>And the code for when the two share the <code>_walk</code> helper function:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {searchAndStartsWithWithHelperFunction}
+                </SyntaxHighlighter>
+            </div>
+
+            <h2>Dictionaries over <code>TrieNode</code>s</h2>
 
             <blockquote>
                 <p>So why are we using nested dictionaries instead of a <code>TrieNode</code> class?</p>

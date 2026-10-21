@@ -32,7 +32,7 @@ const sections = [
     { name: 'Two Pointers & Sliding Window', path: 'two-pointers-and-sliding-window' },
     { name: 'Depth-First Search', path: 'depth-first-search' },
     { name: 'Breadth-First Search', path: 'breadth-first-search' },
-    { name: 'Trie', path: 'trie' },
+    { name: 'Trie: Dictionary Version', path: 'trie' },
 ]
 
 export default function PythonSectionLayout() {
