@@ -17,7 +17,7 @@ import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 
 const pages = ['Learn', 'Practice', 'Quiz', 'About'] // Challenges, games, blog...whenever I get to it
-const settings = ['Login - Coming Late 2026']
+const profile = ['Profile'] // Profile, Account Settings, Login/Logout
 
 const learningSections = [
     {
@@ -413,7 +413,7 @@ export default function NavBar() {
                         </Menu>
 
                         <Box sx={{ flexGrow: 0 }}>
-                            <Tooltip title="Open settings">
+                            <Tooltip title="User Profile">
                                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                                     <Avatar alt="Walley" src={Walley} />
                                 </IconButton>
@@ -433,11 +433,28 @@ export default function NavBar() {
                                 }}
                                 open={Boolean(anchorElUser)}
                                 onClose={handleCloseUserMenu}
+                                PaperProps={{
+                                    sx: {
+                                        backgroundColor: "#23272a"
+                                    }
+                                }}
                             >
-                                {settings.map((setting) => (
-                                    <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                        <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
+                                {profile.map((option) => (
+                                    <MenuItem key={option} onClick={handleCloseUserMenu} style={{ backgroundColor: '212529' }}>
+                                        <Link
+                                            to={"/user/profile"}
+                                            style={{
+                                                textAlign: 'center',
+                                                textDecoration: 'none',
+                                                color: 'white',
+                                                width: '100%',
+                                                display: 'block'
+                                            }}
+                                        >
+                                            {option}
+                                        </Link>
                                     </MenuItem>
+
                                 ))}
                             </Menu>
                         </Box>

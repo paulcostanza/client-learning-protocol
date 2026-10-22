@@ -101,26 +101,28 @@ export const problemsList = {
     ],
     tries: [
         { id: "build-dictionary-trie", title: "Build Dictionary Trie", status: '', review: '', order: 73 },
+        { id: "search-with-dictionary-trie", title: "Search with Dictionary Trie", status: '', review: '', order: 74 },
+        { id: "starts-with-dictionary-trie", title: "Starts With Dictionary Trie", status: '', review: '', order: 75 },
     ],
     matrices: [
-        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 74 },
+        { id: "matrix-rotation-i", title: "Matrix Rotation I", status: '', review: '', order: 76 },
     ],
     design: [
         // { id: "min-stack", title: "Min Stack", status: '', review: '', order: 69 },
         // { id: "implement-queue-using-stacks", title: "Implement Queue using Stacks", status: '', review: '', order: 69 },
         // { id: "implement-stack-using-queues", title: "Implement Stack using Queues", status: '', review: '', order: 69 },
-        { id: "lru-cache", title: "LRU Cache", status: '', review: '', order: 75 },
+        { id: "lru-cache", title: "LRU Cache", status: '', review: '', order: 77 },
         // { id: "insert-delete-getrandom-o1", title: "Insert Delete GetRandom O(1)", status: '', review: '', order: 69 },
         // { id: "time-based-key-value-store", title: "Time Based Key Value Store", status: '', review: '', order: 69 },
     ],
     backtracking: [
-        { id: "find-all-subsets", title: "Find All Subsets", status: '', review: '', order: 76 },
-        { id: "permutations", title: "Permutations", status: '', review: '', order: 77 },
+        { id: "find-all-subsets", title: "Find All Subsets", status: '', review: '', order: 78 },
+        { id: "permutations", title: "Permutations", status: '', review: '', order: 79 },
     ],
     problemSolving: [
-        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 78 },
-        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 79 },
-        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 80 },
-        { id: "camel-case-this", title: "Camel Case This", status: '', review: '', order: 81 },
+        { id: "missing-number", title: "Missing Number", status: '', review: '', order: 80 },
+        { id: "set-mismatch", title: "Set Mismatch", status: '', review: '', order: 81 },
+        { id: "longest-substring-without-duplicates", title: "Longest Substring Without Duplicates", status: '', review: '', order: 82 },
+        { id: "camel-case-this", title: "Camel Case This", status: '', review: '', order: 83 },
     ]
 }

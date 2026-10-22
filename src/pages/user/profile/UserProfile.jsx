@@ -1,0 +1,10 @@
+import ToDoTable from "./ToDoTable"
+
+export default function UserProfile() {
+    return (
+        <div className="container">
+            <h1>User Profile!</h1>
+            <ToDoTable />
+        </div>
+    )
+}

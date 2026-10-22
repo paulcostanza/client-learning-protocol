@@ -79,6 +79,8 @@ import { heightOfBinaryTree } from './height-of-binary-tree'
 import { diameterOfBinaryTree } from './diameter-of-binary-tree'
 import { levelOrderTraversal } from './level-order-traversal'
 import { buildDictionaryTrie } from './build-dictionary-trie'
+import { searchWithDictionaryTrie } from './search-with-dictionary-trie'
+import { startsWithDictionaryTrie } from './starts-with-dictionary-trie'
 
 const problems = {
     // Printing 101
@@ -169,6 +171,8 @@ const problems = {
     "level-order-traversal": levelOrderTraversal,
     // tries
     "build-dictionary-trie": buildDictionaryTrie,
+    "search-with-dictionary-trie": searchWithDictionaryTrie,
+    "starts_with_dictionary-trie": startsWithDictionaryTrie,
     // matrices
     "matrix-rotation-i": matrixRotationI,
     // design

@@ -38,6 +38,7 @@ import Quiz from './pages/quiz/Quiz'
 import QuizList from './pages/quiz/QuizList'
 import AboutCLP from './pages/about/clp/AboutCLP'
 import AboutMe from './pages/about/me/AboutMe'
+import UserProfile from './pages/user/profile/UserProfile'
 import NoPage from './pages/NoPage'
 import C from './pages/C/C'
 
@@ -294,6 +295,8 @@ function App() {
             <Route path='/quiz/:quizId' element={<Quiz />} />
             <Route path='/about/clp' element={<AboutCLP />} />
             <Route path='/about/me' element={<AboutMe />} />
+
+            <Route path='/user/profile' element={<UserProfile />} />
 
             <Route path='/practice' element={<Practice />} />
             <Route path='/Practice/python' element={<PracticeTesting />} />
