@@ -1,10 +1,10 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+import ReviewQuiz from '../../src/components/ReviewQuiz.jsx'
 
 export default function Conditionals() {
     const quizImports = {
-        go: () => import('../../../pages/quiz/database/GoQuestions.js')
+        go: () => import('../../src/pages/quiz/database/GoQuestions.js')
     }
 
     const ifStatement = `if height > 4 {

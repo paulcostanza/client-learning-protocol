@@ -1,10 +1,10 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+import ReviewQuiz from '../../src/components/ReviewQuiz.jsx'
 
 export default function ExceptionHandling() {
     const quizImports = {
-        cSharp: () => import('../../../pages/quiz/database/JavaScriptQuestions.js')
+        cSharp: () => import('../../src/pages/quiz/database/JavaScriptQuestions.js')
     }
 
     const tryCatch = `namespace HelloNerd

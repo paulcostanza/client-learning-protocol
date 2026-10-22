@@ -46,9 +46,6 @@ const learningSections = [
         sections: [
             { label: "C", href: "/c" },
             { label: "C++", href: "/cpp" },
-            { label: "C#", href: "/csharp" },
-            { label: "Go", href: "/go" },
-            { label: "Java", href: "/java" },
             { label: "JavaScript", href: "/javascript" },
             { label: "Python", href: "/python" }
         ]

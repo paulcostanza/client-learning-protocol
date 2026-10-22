@@ -1,15 +1,5 @@
 import Home from './pages/home/Home'
 
-// Java
-import JavaLanding from './pages/learning/java/setup/JavaLanding'
-import JavaSectionLayout from './pages/learning/java/setup/JavaSectionLayout'
-import JavaIntro from './pages/learning/java/JavaIntro'
-import JavaFundamentals from './pages/learning/java/JavaFundamentals'
-import JavaMethods from './pages/learning/java/Methods'
-import JavaArrays from './pages/learning/java/Arrays'
-import JavaHashMaps from './pages/learning/java/HashMaps'
-import JavaHttpServer from './pages/learning/java/HttpServer'
-
 // JavaScript
 import JavaScriptLanding from './pages/learning/javascript/setup/JavaScriptLanding'
 import JavaScriptSectionLayout from './pages/learning/javascript/setup/JavaScriptSectionLayout'
@@ -52,18 +42,6 @@ import DockerStorage from './pages/learning/docker/Storage'
 import Practice from './pages/Practice/Practice'
 import PracticeTesting from './pages/Practice/python/Testing'
 import Workspace from './pages/Practice/python/Workspace/Workspace'
-
-// C#
-import CSharpLanding from './pages/learning/cSharp/setup/CSharpLanding'
-import CSharpSectionLayout from './pages/learning/cSharp/setup/CSharpSectionLayout'
-import ControlFlow from './pages/learning/cSharp/ControlFlow'
-import CSharpBasics from './pages/learning/cSharp/CSharpBasics'
-import ExceptionHandling from './pages/learning/cSharp/ExceptionHandling'
-import Introduction from './pages/learning/cSharp/Introduction'
-import MethodsAndFunctions from './pages/learning/cSharp/MethodsAndFunctions'
-import ObjectOrientedProgramming from './pages/learning/cSharp/ObjectOrientedProgramming'
-import CSharpAPIsIntro from './pages/learning/cSharp/APIsIntro'
-import CSharpAPIsControllerClass from './pages/learning/cSharp/APIsControllerClass'
 
 import Layout from './components/Layout'
 import Redis from './pages/redis/Redis'
@@ -146,17 +124,6 @@ import CPlusPlusStackVsHeap from './pages/learning/cPlusPlus/StackVsHeap'
 import CPlusPlusStorage from './pages/learning/cPlusPlus/Storage'
 import CPlusPlusExceptionSafey from './pages/learning/cPlusPlus/ExceptionSafety'
 
-// Go
-import GoLanding from './pages/learning/go/setup/GoLanding'
-import GoSectionLayout from './pages/learning/go/setup/GoSectionLayout'
-import GoFundamentals from './pages/learning/go/Fundamentals'
-import GoIntroduction from './pages/learning/go/Introduction'
-import GoConditionals from './pages/learning/go/Conditionals'
-import GoFunctionsAndMethods from './pages/learning/go/FunctionsAndMethods'
-import GoStructs from './pages/learning/go/Structs'
-import GoInterfaces from './pages/learning/go/Interfaces'
-import GoErrors from './pages/learning/go/Errors'
-
 // React
 import ReactLanding from './pages/learning/react/setup/ReactLanding'
 import ReactSectionLayout from './pages/learning/react/setup/ReactSectionLayout'
@@ -224,16 +191,6 @@ function App() {
               <Route path='file-system' element={<FileSystem />} />
             </Route>
 
-            <Route path='/java' element={<JavaLanding />} />
-            <Route path='/java' element={<JavaSectionLayout />}>
-              <Route path='intro' element={<JavaIntro />} />
-              <Route path='fundamentals' element={<JavaFundamentals />} />
-              <Route path='methods' element={<JavaMethods />} />
-              <Route path='arrays' element={<JavaArrays />} />
-              <Route path='hashmaps' element={<JavaHashMaps />} />
-              <Route path='http-server' element={<JavaHttpServer />} />
-            </Route>
-
             <Route path='/javascript' element={<JavaScriptLanding />} />
             <Route path='/javascript' element={<JavaScriptSectionLayout />} >
               <Route path='intro' element={<JavaScriptIntro />} />
@@ -265,18 +222,6 @@ function App() {
             </Route>
 
             <Route path='/c' element={<C />} />
-
-            <Route path='/csharp' element={<CSharpLanding />} />
-            <Route path='/csharp' element={<CSharpSectionLayout />} >
-              <Route path='control-flow' element={<ControlFlow />} />
-              <Route path='basics' element={<CSharpBasics />} />
-              <Route path='exception-handling' element={<ExceptionHandling />} />
-              <Route path='intro' element={<Introduction />} />
-              <Route path='methods-and-functions' element={<MethodsAndFunctions />} />
-              <Route path='oop' element={<ObjectOrientedProgramming />} />
-              <Route path='apis-intro' element={<CSharpAPIsIntro />} />
-              <Route path='apis-controller-class' element={<CSharpAPIsControllerClass />} />
-            </Route>
 
             <Route path='/react' element={<ReactLanding />} />
             <Route path='react' element={<ReactSectionLayout />} >
@@ -368,18 +313,6 @@ function App() {
               <Route path='stack-vs-heap' element={<CPlusPlusStackVsHeap />} />
               <Route path='storage' element={<CPlusPlusStorage />} />
               <Route path='exception-safety' element={<CPlusPlusExceptionSafey />} />
-            </Route>
-
-
-            <Route path='/go' element={<GoLanding />} />
-            <Route path='/go' element={<GoSectionLayout />}>
-              <Route path='fundamentals' element={<GoFundamentals />} />
-              <Route path='introduction' element={<GoIntroduction />} />
-              <Route path='conditionals' element={<GoConditionals />} />
-              <Route path='functions-and-methods' element={<GoFunctionsAndMethods />} />
-              <Route path='structs' element={<GoStructs />} />
-              <Route path='interfaces' element={<GoInterfaces />} />
-              <Route path='errors' element={<GoErrors />} />
             </Route>
 
             <Route path='*' element={<NoPage />} />

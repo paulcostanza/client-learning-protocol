@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import QuestionTableList from '../../../components/QuestionTableList.jsx'
-import ModalForQuestions from '../../quiz/ModalForQuestions.jsx'
+import QuestionTableList from '../../src/components/QuestionTableList.jsx'
+import ModalForQuestions from '../../src/pages/quiz/ModalForQuestions.jsx'
 
 import ProgramDevelopmentProcess from '../../../assets/java/javaIntro/program development process.png'
 import Portability from '../../../assets/java/javaIntro/portability.png'
@@ -13,7 +13,7 @@ export default function JavaIntro() {
     const [refresh, setRefresh] = useState(0)
 
     const quizImports = {
-        java: () => import('../../quiz/database/JavaQuestions.js')
+        java: () => import('../../src/pages/quiz/database/JavaQuestions.js')
     }
 
     function handleRowClick(question) {
