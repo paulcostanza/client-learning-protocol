@@ -21,6 +21,7 @@ export default function QuizList() {
                             </Link>
                         ))}
                     </Carousel>
+                    <sm><em>More quizzes to come soon!</em></sm>
                 </div>
                 <QuestionList />
             </main>
