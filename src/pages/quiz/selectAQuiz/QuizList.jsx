@@ -1,7 +1,7 @@
 import quizList from "./quizList"
 import { Link } from 'react-router-dom'
 import Card from '@mui/joy/Card'
-import QuestionList from "./QuestionList"
+import QuestionList from "../selectAQuestion/QuestionList"
 import Carousel from "./Carousel"
 
 export default function QuizList() {

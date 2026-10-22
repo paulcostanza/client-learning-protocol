@@ -13,9 +13,9 @@ import {
     getQuestionStatus,
     getNextReview,
     getHumanReadableNextReview
-} from "../../Helpers/localStorageHelper.js"
+} from "../../../Helpers/localStorageHelper.js"
 import SelectAQuestionFilter from "./SelectAQuestionFilter.jsx"
-import { fixGrammar } from "../../Helpers/CategoryFixer.js"
+import { fixGrammar } from "../../../Helpers/CategoryFixer.js"
 
 function filterQuestions(questions, status, review, category, type) {
     return questions.filter(q => {
@@ -137,24 +137,24 @@ export default function QuestionList() {
     }
 
     const quizImports = {
-        introtocomp: () => import('./database/IntroToCompQuestions.js'),
-        lowlevel: () => import('./database/LowLevelQuestions.js'),
-        html: () => import('./database/HTMLQuestions.js'),
-        js: () => import('./database/JavaScriptQuestions.js'),
-        react: () => import('./database/ReactQuestions.js'),
-        networking: () => import('./database/Networking.js'),
-        python: () => import('./database/PythonQuestions.js'),
+        introtocomp: () => import('../database/IntroToCompQuestions.js'),
+        lowlevel: () => import('../database/LowLevelQuestions.js'),
+        html: () => import('../database/HTMLQuestions.js'),
+        js: () => import('../database/JavaScriptQuestions.js'),
+        react: () => import('../database/ReactQuestions.js'),
+        networking: () => import('../database/Networking.js'),
+        python: () => import('../database/PythonQuestions.js'),
         // java: () => import('./database/JavaQuestions.js'),
-        c: () => import('./database/CQuestions.js'),
-        cPlusPlus: () => import('./database/CPlusPlusQuestions.js'),
+        c: () => import('../database/CQuestions.js'),
+        cPlusPlus: () => import('../database/CPlusPlusQuestions.js'),
         // cSharp: () => import('./database/CSharpQuestions.js'),
         // go: () => import('./database/GoQuestions.js'),
-        redis: () => import('./database/RedisQuestions.js'),
-        memory: () => import('./database/MemoryQuestions.js'),
-        programming101: () => import('./database/Programming101Questions.js'),
-        cybersecurity: () => import('./database/CyberSecurityQuestions.js'),
-        linux: () => import('./database/LinuxQuestions.js'),
-        docker: () => import('./database/DockerQuestions.js')
+        redis: () => import('../database/RedisQuestions.js'),
+        memory: () => import('../database/MemoryQuestions.js'),
+        programming101: () => import('../database/Programming101Questions.js'),
+        cybersecurity: () => import('../database/CyberSecurityQuestions.js'),
+        linux: () => import('../database/LinuxQuestions.js'),
+        docker: () => import('../database/DockerQuestions.js')
     }
 
     const quizKeys = Object.keys(quizImports)

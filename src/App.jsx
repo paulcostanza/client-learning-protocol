@@ -24,8 +24,10 @@ import JavaScriptIntroToNodeJs from './pages/learning/javascript/IntroToNodeJs'
 import JavaScriptApis from './pages/learning/javascript/Apis'
 import JavaScriptAuthentication from './pages/learning/javascript/Authentication'
 
-import Quiz from './pages/quiz/Quiz'
-import QuizList from './pages/quiz/QuizList'
+import Quiz from './pages/quiz/selectAQuiz/Quiz'
+import QuizList from './pages/quiz/selectAQuiz/QuizList'
+import QuizSelectAQuestion from './pages/quiz/selectAQuestion/SelectAQuestion'
+import QuizSelectAQuiz from './pages/quiz/selectAQuiz/SelectAQuiz'
 import AboutCLP from './pages/about/clp/AboutCLP'
 import AboutMe from './pages/about/me/AboutMe'
 import UserProfile from './pages/user/profile/UserProfile'
@@ -236,7 +238,9 @@ function App() {
             </Route>
 
             <Route path='/redis' element={<Redis />} />
-            <Route path='/quiz' element={<QuizList />} />
+            {/* <Route path='/quiz' element={<QuizList />} /> */}
+            <Route path='/quiz/select-a-quiz' element={<QuizSelectAQuiz />} />
+            <Route path='/quiz/select-a-question' element={<QuizSelectAQuestion />} />
             <Route path='/quiz/:quizId' element={<Quiz />} />
             <Route path='/about/clp' element={<AboutCLP />} />
             <Route path='/about/me' element={<AboutMe />} />

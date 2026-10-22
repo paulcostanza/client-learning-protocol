@@ -2,9 +2,9 @@ import React, { useState, useMemo } from "react"
 import Modal from '@mui/material/Modal'
 import Box from "@mui/material/Box"
 import ReactMarkdown from 'react-markdown'
-import { checkAnswer, forfeitQuestion } from './quizLogic'
-import { saveSectionQuestionResult } from "../../Helpers/localStorageHelper.js"
-import { fixGrammar } from "../../Helpers/CategoryFixer.js"
+import { checkAnswer, forfeitQuestion } from '../quizLogic.js'
+import { saveSectionQuestionResult } from "../../../Helpers/localStorageHelper.js"
+import { fixGrammar } from "../../../Helpers/CategoryFixer.js"
 
 export default function ModalForQuestions({ open, onClose, question }) {
     const [checked, setChecked] = useState(false)

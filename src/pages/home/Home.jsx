@@ -88,10 +88,13 @@ export default function Home() {
             <div className="container-hide" id="space-on-top-of-page">
                 <h1 className='matrix-element' ref={textRef} >Client Learning Protocol</h1>
 
+
                 <div className='matrix-items'>
+                    <h2 className='matrix-element'>In a world consumed by artificial intelligence, let's make sure your intelligence doesn't become artificial.</h2>
+
                     <p className='matrix-element'>To get started, choose a learning path from <strong>LEARNING</strong>.</p>
 
-                    <Link to="/quiz" style={{ textDecoration: 'none' }}>
+                    <Link to="/quiz/select-a-question" style={{ textDecoration: 'none' }}>
                         <p className='matrix-element'>To see if your skills are up to par, select <strong>QUIZ</strong>.</p>
                     </Link>
 

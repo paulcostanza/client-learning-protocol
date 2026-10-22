@@ -69,6 +69,12 @@ const practiceSections = [
     { label: "Python", href: "practice/python" },
 ]
 
+// for when I split quiz section up
+const quizSections = [
+    { label: "Select a Quiz", href: "/quiz/select-a-quiz" },
+    { label: "Select a Question", href: "/quiz/select-a-question" },
+]
+
 const aboutSections = [
     { label: "CLP", href: "/about/clp" },
     { label: "Me", href: "/about/me" },
@@ -80,6 +86,7 @@ export default function NavBar() {
     const [anchorElUser, setAnchorElUser] = useState(null)
     const [anchorElLearning, setAnchorElLearning] = useState(null)
     const [anchorElAbout, setAnchorElAbout] = useState(null)
+    const [anchorElQuiz, setAnchorElQuiz] = useState(null)
     const [anchorElPractice, setAnchorElPractice] = useState(null)
 
     const handleOpenNavMenu = (event) => {
@@ -112,6 +119,14 @@ export default function NavBar() {
         setAnchorElAbout(null)
     }
 
+    const handleOpenQuizMenu = (event) => {
+        setAnchorElQuiz(event.currentTarget)
+    }
+
+    const handleCloseQuizMenu = (event) => {
+        setAnchorElQuiz(null)
+    }
+
     const handleOpenPracticeMenu = (event) => {
         setAnchorElPractice(event.currentTarget)
     }
@@ -134,8 +149,8 @@ export default function NavBar() {
             <AppBar position="static" color="default" sx={{ backgroundColor: "#212529" }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-
-                        {/* Desktop */}
+                        {/* ***************************** D E S K T O P ***************************** */}
+                        {/* ******************************** L O G O ******************************** */}
                         <Box
                             sx={{
                                 mr: 2,
@@ -156,7 +171,7 @@ export default function NavBar() {
                                 />
                             </Link>
                         </Box>
-
+                        {/* **************************** L E A R N I N G **************************** */}
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             <Button
                                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -196,7 +211,7 @@ export default function NavBar() {
                                     </div>
                                 ))}
                             </Menu>
-                            {/* ************************************************************************* */}
+                            {/* **************************** P R A C T I C E **************************** */}
                             <Box>
                                 <Button
                                     sx={{ my: 2, color: 'white' }}
@@ -230,14 +245,41 @@ export default function NavBar() {
                                     ))}
                                 </Menu>
                             </Box>
-
-                            <Button
-                                sx={{ my: 2, color: 'white' }}
-                                component={Link}
-                                to="/quiz"
-                            >
-                                QUIZ
-                            </Button>
+                            {/* ******************************** Q U I Z ******************************** */}
+                            <Box>
+                                <Button
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                    onClick={handleOpenQuizMenu}
+                                    to="/quiz"
+                                >
+                                    QUIZ
+                                </Button>
+                                <Menu
+                                    anchorEl={anchorElQuiz}
+                                    open={Boolean(anchorElQuiz)}
+                                    onClose={handleCloseQuizMenu}
+                                    PaperProps={{
+                                        sx: {
+                                            backgroundColor: "#23272a",
+                                            color: "#fff",
+                                            borderRadius: 4,
+                                            boxShadow: 9,
+                                        }
+                                    }}
+                                >
+                                    {quizSections.map(section => (
+                                        <MenuItem key={section.label} onClick={handleCloseQuizMenu}>
+                                            <Link
+                                                to={section.href}
+                                                style={{ textDecoration: 'none', color: 'inherit', width: '100%', display: 'block' }}
+                                            >
+                                                {section.label}
+                                            </Link>
+                                        </MenuItem>
+                                    ))}
+                                </Menu>
+                            </Box>
+                            {/* ******************************* A B O U T ******************************* */}
                             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                                 <Button
                                     sx={{ my: 2, color: 'white', display: 'block' }}

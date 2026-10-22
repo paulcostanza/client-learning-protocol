@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import QuestionTableList from './QuestionTableList.jsx'
-import ModalForQuestions from '../pages/quiz/ModalForQuestions.jsx'
+import ModalForQuestions from '../pages/quiz/selectAQuestion/ModalForQuestions.jsx'
 
 // the review questions at the bottom of a learning page
 export default function ReviewQuiz({ quizImports, subcategory }) {

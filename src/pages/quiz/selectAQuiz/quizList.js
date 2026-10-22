@@ -1,16 +1,16 @@
-import reactCardImg from '../../assets/quiz/react-card.png'
-import networkingCardImg from '../../assets/quiz/networking-card.png'
-import pythonCardImg from '../../assets/quiz/python-card.png'
-import javaScriptCardImg from '../../assets/quiz/javaScript-card.png'
-import cCardImg from '../../assets/quiz/c-card.png'
-import cSharpImg from '../../assets/quiz/cSharp-card.png'
-import redisImg from "../../assets/quiz/redis-card.png"
-import memoryImg from "../../assets/quiz/memory-card.png"
-import programming101Img from "../../assets/quiz/programming101-card.png"
-import cybersecurityImg from "../../assets/quiz/cybersecurity-card.png"
-import linuxImg from "../../assets/quiz/linux-card.png"
-import javaImg from "../../assets/quiz/java-card.png"
-import htmlImg from "../../assets/quiz/html-card.png"
+// import reactCardImg from '../../assets/quiz/react-card.png'
+// import networkingCardImg from '../../assets/quiz/networking-card.png'
+import pythonCardImg from '../../../assets/quiz/python-card.png'
+// import javaScriptCardImg from '../../assets/quiz/javaScript-card.png'
+// import cCardImg from '../../assets/quiz/c-card.png'
+// import cSharpImg from '../../assets/quiz/cSharp-card.png'
+// import redisImg from "../../assets/quiz/redis-card.png"
+// import memoryImg from "../../assets/quiz/memory-card.png"
+// import programming101Img from "../../assets/quiz/programming101-card.png"
+// import cybersecurityImg from "../../assets/quiz/cybersecurity-card.png"
+// import linuxImg from "../../assets/quiz/linux-card.png"
+// import javaImg from "../../assets/quiz/java-card.png"
+// import htmlImg from "../../assets/quiz/html-card.png"
 
 const quizList = [
     // {

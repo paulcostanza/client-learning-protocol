@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { saveSectionQuestionResult } from '../../Helpers/localStorageHelper.js'
-import { checkAnswer, forfeitQuestion } from './quizLogic';
+import { saveSectionQuestionResult } from '../../../Helpers/localStorageHelper.js'
+import { checkAnswer, forfeitQuestion } from '../quizLogic.js';
 import ReactMarkdown from 'react-markdown'
 import Results from './Results.jsx'
 
@@ -21,24 +21,24 @@ export default function Quiz() {
     const navigate = useNavigate()
 
     const quizImports = {
-        introtocomp: () => import('./database/IntroToCompQuestions.js'),
-        lowlevel: () => import('./database/LowLevelQuestions.js'),
-        html: () => import('./database/HTMLQuestions.js'),
-        js: () => import('./database/JavaScriptQuestions.js'),
-        react: () => import('./database/ReactQuestions.js'),
-        networking: () => import('./database/Networking.js'),
-        python: () => import('./database/PythonQuestions.js'),
-        // java: () => import('./database/JavaQuestions.js'),
-        c: () => import('./database/CQuestions.js'),
-        cPlusPlus: () => import('./database/CPlusPlusQuestions.js'),
-        // cSharp: () => import('./database/CSharpQuestions.js'),
-        // go: () => import('./database/GoQuestions.js'),
-        redis: () => import('./database/RedisQuestions.js'),
-        memory: () => import('./database/MemoryQuestions.js'),
-        programming101: () => import('./database/Programming101Questions.js'),
-        cybersecurity: () => import('./database/CyberSecurityQuestions.js'),
-        linux: () => import('./database/LinuxQuestions.js'),
-        docker: () => import('./database/DockerQuestions.js')
+        introtocomp: () => import('../database/IntroToCompQuestions.js'),
+        lowlevel: () => import('../database/LowLevelQuestions.js'),
+        html: () => import('../database/HTMLQuestions.js'),
+        js: () => import('../database/JavaScriptQuestions.js'),
+        react: () => import('../database/ReactQuestions.js'),
+        networking: () => import('../database/Networking.js'),
+        python: () => import('../database/PythonQuestions.js'),
+        // java: () => import('../database/JavaQuestions.js'),
+        c: () => import('../database/CQuestions.js'),
+        cPlusPlus: () => import('../database/CPlusPlusQuestions.js'),
+        // cSharp: () => import('../database/CSharpQuestions.js'),
+        // go: () => import('../database/GoQuestions.js'),
+        redis: () => import('../database/RedisQuestions.js'),
+        memory: () => import('../database/MemoryQuestions.js'),
+        programming101: () => import('../database/Programming101Questions.js'),
+        cybersecurity: () => import('../database/CyberSecurityQuestions.js'),
+        linux: () => import('../database/LinuxQuestions.js'),
+        docker: () => import('../database/DockerQuestions.js')
     }
 
     useEffect(() => {
