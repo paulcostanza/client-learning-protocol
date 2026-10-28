@@ -33,6 +33,7 @@ const sections = [
     { name: 'Depth-First Search', path: 'depth-first-search' },
     { name: 'Breadth-First Search', path: 'breadth-first-search' },
     { name: 'Trie: Dictionary Version', path: 'trie' },
+    { name: 'Graphs: Intro', path: 'graphs-intro' },
 ]
 
 export default function PythonSectionLayout() {

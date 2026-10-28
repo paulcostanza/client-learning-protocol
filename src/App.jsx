@@ -109,6 +109,7 @@ import PythonTwoPointersAndSlidingWindow from './pages/learning/python/TwoPointe
 import PythonDepthFirstSearch from './pages/learning/python/DepthFirstSearch'
 import PythonBreadthFirstSearch from './pages/learning/python/BreadthFirstSearch'
 import PythonTrie from './pages/learning/python/Trie'
+import PythonGraphsIntro from './pages/learning/python/GraphsIntro'
 
 // C++
 import CPlusPlusLanding from './pages/learning/cPlusPlus/setup/CPlusPlusLanding'
@@ -301,6 +302,7 @@ function App() {
               <Route path='depth-first-search' element={<PythonDepthFirstSearch />} />
               <Route path='breadth-first-search' element={<PythonBreadthFirstSearch />} />
               <Route path='trie' element={<PythonTrie />} />
+              <Route path='graphs-intro' element={<PythonGraphsIntro />} />
             </Route>
 
             <Route path='/cpp' element={<CPlusPlusLanding />} />

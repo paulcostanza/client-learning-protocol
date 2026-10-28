@@ -31,6 +31,7 @@ const sections = [
     { name: 'Depth-First Search', path: 'depth-first-search' },
     { name: 'Breadth-First Search', path: 'breadth-first-search' },
     { name: 'Trie: Dictionary Version', path: 'trie' },
+    { name: 'Graphs: Intro', path: 'graphs-intro' },
     // CLI
     // Automation
     // Data analysis: analyze large datasets, identify patterns, create visualizations with Pandas & NumPy
