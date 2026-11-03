@@ -63,6 +63,12 @@ import LowLevelSectionLayout from './pages/learning/low-level/setup/LowLevelSect
 import VariableSize from './pages/learning/low-level/VariableSize'
 import BinaryExploitation from './pages/learning/low-level/BinaryExploitation'
 
+// Hardware
+import HardwareLanding from './pages/learning/hardware/setup/HardwareLanding'
+import HardwareSectionLayout from './pages/learning/hardware/setup/LowLevelSectionLayout'
+import HardwareBinaryNumbers from './pages/learning/hardware/BinaryNumbers'
+
+
 import ScrollToTop from './components/ScrollToTop'
 
 // HTML
@@ -258,6 +264,11 @@ function App() {
             <Route path='/lowlevel' element={<LowLevelSectionLayout />}>
               <Route path='variable-size' element={<VariableSize />} />
               <Route path='binary-exploitation' element={<BinaryExploitation />} />
+            </Route>
+
+            <Route path='/hardware' element={<HardwareLanding />} />
+            <Route path='/hardware' element={<HardwareSectionLayout />}>
+              <Route path='binary-numbers' element={<HardwareBinaryNumbers />} />
             </Route>
 
             <Route path='/html' element={<HTMLLanding />} />

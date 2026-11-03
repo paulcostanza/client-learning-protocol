@@ -1,0 +1,30 @@
+import ReviewQuiz from '../../../components/ReviewQuiz.jsx'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism'
+
+export default function BinaryNumbers() {
+    const quizImports = {
+        hardware: () => import('../../quiz/database/HardwareQuestions.js')
+    }
+
+    return (
+        <div className="container">
+            <h1>Binary Numbers</h1>
+
+            <hr />
+
+            <h2>Review</h2>
+
+            {/* <div className="">
+                            <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                                {recursiveRecipe}
+                            </SyntaxHighlighter>
+                        </div> */}
+
+            <ReviewQuiz
+                quizImports={quizImports}
+                subcategory="binary-numbers"
+            />
+        </div>
+    )
+}
