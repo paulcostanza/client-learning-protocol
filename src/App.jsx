@@ -1,4 +1,5 @@
 import Home from './pages/home/Home'
+import Login from './pages/auth/LoginPage'
 
 // JavaScript
 import JavaScriptLanding from './pages/learning/javascript/setup/JavaScriptLanding'
@@ -171,6 +172,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path='/home' element={<Home />} />
+            <Route path='/login' element={<Login />} />
             {/* <Route path='/intro' element={<Intro />} /> */}
 
             <Route path='/intro-to-comp' element={<IntroToCompLanding />} />
