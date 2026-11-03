@@ -139,6 +139,7 @@ export default function QuestionList() {
     const quizImports = {
         introtocomp: () => import('../database/IntroToCompQuestions.js'),
         lowlevel: () => import('../database/LowLevelQuestions.js'),
+        hardware: () => import('../database/HardwareQuestions.js'),
         html: () => import('../database/HTMLQuestions.js'),
         js: () => import('../database/JavaScriptQuestions.js'),
         react: () => import('../database/ReactQuestions.js'),

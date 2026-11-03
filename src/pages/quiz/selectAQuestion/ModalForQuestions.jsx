@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import { checkAnswer, forfeitQuestion } from '../quizLogic.js'
 import { saveSectionQuestionResult } from "../../../Helpers/localStorageHelper.js"
 import { fixGrammar } from "../../../Helpers/CategoryFixer.js"
+import remarkGfm from 'remark-gfm'
 
 export default function ModalForQuestions({ open, onClose, question }) {
     const [checked, setChecked] = useState(false)
@@ -224,7 +225,7 @@ export default function ModalForQuestions({ open, onClose, question }) {
                         `answer-description ${result === 'Correct!' ? 'answer-description-correct' : 'answer-description-incorrect'
                         }`
                     }>
-                        <ReactMarkdown>
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
                             {displayDescription}
                         </ReactMarkdown>
                     </div>

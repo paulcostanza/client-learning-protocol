@@ -457,7 +457,7 @@ input[type="radio"] {
 }
 
 #questions-footer-result {
-    font-size: 3em;
+    font-size: em;
     text-align: center;
     margin: auto;
     margin-top: 5px;
@@ -490,6 +490,20 @@ input[type="radio"] {
 .answer-description-incorrect {
     border: solid 5px #ff4a4a;
     background-color: rgba(255, 74, 74, 0.15);
+}
+
+/* If the description contains a table */
+.answer-description table {
+    width: 100%;
+}
+
+.answer-description table td,
+.answer-description table th {
+    padding: 2px;
+}
+
+.answer-description table td {
+    border: 1px solid white;
 }
 
 /* Styling radio buttons on quiz */

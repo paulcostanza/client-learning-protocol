@@ -93,6 +93,7 @@ export default function SelectAQuestionFilter({
     const categoryOptions = [
         { value: 'introtocomp', label: 'Intro To Comp' },
         { value: 'lowlevel', label: 'Low Level' },
+        { value: 'hardware', label: 'Hardware' },
         { value: 'html', label: 'HTML' },
         { value: 'js', label: 'JavaScript' },
         { value: 'react', label: 'React' },

@@ -42,6 +42,8 @@ export function fixGrammar(subject) {
             return "CyberSecurity"
         case "linux":
             return "Linux"
+        case "hardware":
+            return "Hardware"
         default:
             return "Oops"
     }
