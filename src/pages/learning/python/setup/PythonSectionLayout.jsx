@@ -3,14 +3,14 @@ import PrevNextSection from '../../../../components/PrevNextSection'
 import { Outlet } from 'react-router-dom'
 
 const sections = [
-    // Python 101
+    // Python Basics: You wont get very far if you don't know what the fu¢k is going on
     { name: 'Intro', path: 'intro' },
     { name: 'Basics', path: 'basics' },
     { name: 'Control Flow', path: 'control-flow' },
     { name: 'Functions', path: 'functions' },
     { name: 'Passing Arguments', path: 'passing-arguments' },
     { name: 'Type Hints', path: 'type-hints' },
-    { name: 'Recursion', path: 'recursion' },
+    { name: 'Recursion', path: 'recursion' }, // <- should go under DS & A?
     { name: 'Backtracking', path: 'backtracking' },
     { name: 'Mutable Default Arguments', path: 'mutable-default-arguments' },
     { name: 'Math 101', path: 'math-101' },
@@ -34,6 +34,7 @@ const sections = [
     { name: 'Breadth-First Search', path: 'breadth-first-search' },
     { name: 'Trie: Dictionary Version', path: 'trie' },
     { name: 'Graphs: Intro', path: 'graphs-intro' },
+    // APIs
 ]
 
 export default function PythonSectionLayout() {

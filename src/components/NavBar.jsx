@@ -24,6 +24,7 @@ const learningSections = [
         category: "Computer Science 101",
         sections: [
             { label: "Introduction to Computers", href: "/intro-to-comp" },
+            { label: "Hardware", href: "/hardware" },
             { label: "Low-Level", href: "/lowlevel" },
             { label: "CyberSecurity", href: "/cybersecurity" },
         ]
