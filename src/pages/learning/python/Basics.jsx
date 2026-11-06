@@ -19,6 +19,8 @@ print("Is student: ", is_student)`
 Age: 17
 Is student: True`
 
+    const declaringVariablesOnSameLine = `name, myAge, is_student = "Jose", 17, True`
+
     const simplePrint = `print("Hello world")`
 
     const simplePrintConsole = `Hello world`
@@ -84,6 +86,17 @@ None
                 </SyntaxHighlighter>
             </div>
 
+            <p>Python also allows us to declare multiple variables on the same line. This is great when the variables are related to each other in some way, as it ends up saving on line usage, which comes in handy when your file starts to get really long.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow}
+                    wrapLines={true} className=" code-snippet">
+                    {declaringVariablesOnSameLine}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>This is called <em>unpacking</em>. The first variable takes the first value, the second takes the second, and so on. In my opinon it also looks cleaner. If you don't match the amount of variables to the same amount of variables, you end up with python raising a <code>ValueError</code>, more on that later.</p>
+
             <h2>How to print</h2>
 
             <p>As you can see, we use the <code>print</code> command to print something to the console.</p>
@@ -101,6 +114,8 @@ None
                     {simplePrintConsole}
                 </SyntaxHighlighter>
             </div>
+
+            <p>Later on you will learn how the command <code>print</code> is a function, and that you can plug in an <em>argument</em> between the parentheses for the function to use in some way. The argument in this example is <code>"Hell world"</code>.</p>
 
             <h2>Printing a Line Break</h2>
 
