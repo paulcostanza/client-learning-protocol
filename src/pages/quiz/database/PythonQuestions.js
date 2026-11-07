@@ -962,5 +962,44 @@ while queue:
         
 The \`for\` loop processes exactly that many nodes, even as their children are added to the queue. This prevents nodes from the next level from being processed prematurely.`
     },
+    {
+        id: 50,
+        type: 'checkbox',
+        category: 'python',
+        subcategory: 'booleans',
+        title: 'That\'s so falsy',
+        question: 'Which value is a falsy condition?',
+        options: [
+            '\`True\`',
+            '\`None\`',
+            '\`0\`',
+            '\`"0"\`',
+            '\`""\`',
+        ],
+        random: true,
+        answer: ['\`0\`', '\`None\`', '\`""\`'],
+        description: 'You didn\'t fall for \`"0"\`, did ya? That is a string!'
+    },
+    {
+        id: 51,
+        type: 'checkbox',
+        category: 'python',
+        subcategory: 'control-flow',
+        title: 'Concert time',
+        question: 'When does \`if age >= 18 and has_ticket:\` run its block?',
+        options: [
+            '\`age\` is \`19\`',
+            '\`age\` is \`18\`',
+            '\`age\` is \`17\`',
+            '\`has_ticket\` is \`False\`',
+            '\`has_ticket\` is \`True\`',
+            '\`age\` is \`19\` and \`has_ticket\` is \`True\`',
+            '\`age\` is \`18\` and \`has_ticket\` is \`False\`',
+            '\`age\` is \`22\` and \`has_ticket\` is \`True\`',
+        ],
+        random: true,
+        answer: ['\`age\` is \`19\` and \`has_ticket\` is \`True\`', '\`age\` is \`22\` and \`has_ticket\` is \`True\`',],
+        description: 'Using the \`and\` logical statement means that *both* conditions are required!'
+    },
 
 ]

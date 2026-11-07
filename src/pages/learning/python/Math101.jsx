@@ -77,16 +77,6 @@ print(string_number)`
 
     const numToStringConsole = `"33"`
 
-    const truthy = `result = bool(1)
-print(result)`
-
-    const truthyConsole = `True`
-
-    const falsy = `result = bool(0)
-print(result)`
-
-    const falsyConsole = `False`
-
     return (
         <div>
             <h1>Math 101</h1>
@@ -293,63 +283,6 @@ print(result)`
                 <SyntaxHighlighter language="console" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {numToStringConsole}
-                </SyntaxHighlighter>
-            </div>
-
-            <h2>Boolean conversion</h2>
-
-            <p>Since we've been talking about conversions, let's throw in some Boolean action.</p>
-
-            <p>
-                Converting values into boolean is the process of evaluating an expression or a value and representing it as either <code>True</code> or <code>False</code>. Every value has an inherent truthiness or falsiness.
-            </p>
-
-            <p>
-                When converted to a boolean, a value is considered either <i>truthy</i>, evaluates to <code>True</code>, or <i>falsy</i>, evalutes to <code>False</code>. The determination is based on whether the value is logically considered true or false.
-            </p>
-
-            <b>Common Truthy Values</b>
-
-            <ul>
-                <li>Non-zero numbers: any non-zero numerical value is truthy</li>
-                <li>Non-empty sequences: strings, lists, and other iterable structures are truthy if they contain elements</li>
-                <li>Non-element dictionaries: a dictionary is truthy if it has at least one key-value pair</li>
-            </ul>
-
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {truthy}
-                </SyntaxHighlighter>
-            </div>
-
-            <div className="">
-                <SyntaxHighlighter language="console" style={tomorrow}
-                    wrapLines={true} className=" code-snippet">
-                    {truthyConsole}
-                </SyntaxHighlighter>
-            </div>
-
-            <b>Common Falsy Values</b>
-
-            <ul>
-                <li>Zero: the number zero (0) is falsy</li>
-                <li>Empty sequences: empty strings, lists, and other iterable structures are falsy</li>
-                <li>None: the special constant <code>None</code> is falsy</li>
-                <li>False: the bollean value <code>False</code> is falsy</li>
-            </ul>
-
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {falsy}
-                </SyntaxHighlighter>
-            </div>
-
-            <div className="">
-                <SyntaxHighlighter language="console" style={tomorrow}
-                    wrapLines={true} className=" code-snippet">
-                    {falsyConsole}
                 </SyntaxHighlighter>
             </div>
 

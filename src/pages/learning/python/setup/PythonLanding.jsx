@@ -4,7 +4,9 @@ const sections = [
     // Python 101
     { name: 'Intro', path: 'intro' },
     { name: 'Basics', path: 'basics' },
+    { name: 'Booleans', path: 'booleans' },
     { name: 'Control Flow', path: 'control-flow' },
+    { name: 'Loops', path: 'loops' },
     { name: 'Functions', path: 'functions' },
     { name: 'Lists', path: 'lists' },
     { name: 'List Comprehension', path: 'list-comprehension' },

@@ -62,6 +62,13 @@ None
 <class 'NoneType'>
 <class 'str'>`
 
+    const divisionCreatesFloat = `total = 12 + 8
+average = total / 2
+print(total)
+print(average)`
+
+    const divisionCreatesFloatOutput = `10.0`
+
     return (
         <div>
             <h1>Basics</h1>
@@ -73,7 +80,7 @@ None
             </p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {declaringVariables}
                 </SyntaxHighlighter>
@@ -102,7 +109,7 @@ None
             <p>As you can see, we use the <code>print</code> command to print something to the console.</p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {simplePrint}
                 </SyntaxHighlighter>
@@ -124,7 +131,7 @@ None
             </p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {simplePrintWithLineBreak}
                 </SyntaxHighlighter>
@@ -148,15 +155,9 @@ None
             <p>
                 You can escape special characters by using the backslash command before the character. Example: <code>\"</code> will print out <code>"</code>.
             </p>
-            <pre>
-                <code>{ }</code>
-            </pre>
-            <pre>
-                <code>{ }</code>
-            </pre>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {descarte}
                 </SyntaxHighlighter>
@@ -174,7 +175,7 @@ None
             <p><strong>F-strings</strong> allow us to create strings that contain dynamic values.</p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {kokoBananas}
                 </SyntaxHighlighter>
@@ -197,7 +198,7 @@ None
             <p>For example, if we make a number a variable, we can later change that variable to a string:</p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers className="code-snippet">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
                     {dynamicTyping}
                 </SyntaxHighlighter>
             </div>
@@ -223,7 +224,7 @@ None
             <p>Python allows you to represent large numbers in decimal format using underscores as the <em>delimiter</em> instead of commas to make it easier to read.</p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {underscoreForNums}
                 </SyntaxHighlighter>
@@ -246,7 +247,7 @@ None
             <p>The <code>None</code> type is used to define an <em>empty</em> variable: the absents of somthing. A common use case is to represent a value that has yet to be determined, such as an uncaptured input like so:</p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {differentNone}
                 </SyntaxHighlighter>
@@ -258,6 +259,44 @@ None
                     {differentNoneConsole}
                 </SyntaxHighlighter>
             </div>
+
+            <blockquote>
+                <p>We will learn what <code>class</code> means later on!</p>
+            </blockquote>
+
+            <h2>Math</h2>
+
+            <p>We can use <em>arithmetic operators</em> to compute values inside expressions:</p>
+
+            <ul>
+                <li><code>+</code> add</li>
+                <li><code>-</code> subtract</li>
+                <li><code>*</code> multiply</li>
+                <li><code>/</code> divide</li>
+                <li><code>%</code> modulus operator</li>
+            </ul>
+
+            <p>When dividing with <code>/</code> we always get a float type, even when the result divides cleanly.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow}
+                    wrapLines={true} className=" code-snippet">
+                    {divisionCreatesFloat}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow}
+                    wrapLines={true} className=" code-snippet">
+                    {divisionCreatesFloatOutput}
+                </SyntaxHighlighter>
+            </div>
+
+            <blockquote>
+                <p>Tf is a modulus operator?</p>
+            </blockquote>
+
+            <p>The <em>modulus operator</em> performs division and returns the remainder. If the division leaves no remainder, it returns <code>0</code>.</p>
 
             <hr />
 

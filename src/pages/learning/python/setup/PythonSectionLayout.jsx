@@ -6,7 +6,9 @@ const sections = [
     // Python 101: You wont get very far if you don't know what the fu¢k is going on
     { name: 'Intro', path: 'intro' },
     { name: 'Basics', path: 'basics' },
+    { name: 'Booleans', path: 'booleans' },
     { name: 'Control Flow', path: 'control-flow' },
+    { name: 'Loops', path: 'loops' },
     { name: 'Functions', path: 'functions' },
     { name: 'Lists', path: 'lists' },
     { name: 'List Comprehension', path: 'list-comprehension' },
@@ -27,7 +29,7 @@ const sections = [
     // Data Structures & Algorithms
     { name: 'Algorithms: Problem-Solving Patterns', path: 'algorithms-problem-solving-patterns' },
     { name: 'Two Pointers & Sliding Window', path: 'two-pointers-and-sliding-window' },
-    { name: 'Recursion', path: 'recursion' }, // <- should go under DS & A?
+    { name: 'Recursion', path: 'recursion' },
     { name: 'Backtracking', path: 'backtracking' },
     { name: 'Mutable Default Arguments', path: 'mutable-default-arguments' },
     { name: 'Depth-First Search', path: 'depth-first-search' },

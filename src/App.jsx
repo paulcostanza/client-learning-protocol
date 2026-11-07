@@ -90,6 +90,8 @@ import PythonLanding from './pages/learning/python/setup/PythonLanding'
 import PythonSectionLayout from './pages/learning/python/setup/PythonSectionLayout'
 import PythonBasics from './pages/learning/python/Basics'
 import PythonIntro from './pages/learning/python/Intro'
+import PythonBooleans from './pages/learning/python/Booleans'
+import PythonLoops from './pages/learning/python/Loops'
 import PythonComputing from './pages/learning/python/Computing'
 import PythonStrings from './pages/learning/python/Strings'
 import PythonDictionaries from './pages/learning/python/Dictionaries'
@@ -302,6 +304,8 @@ function App() {
               <Route path='strings' element={<PythonStrings />} />
               <Route path='basics' element={<PythonBasics />} />
               <Route path='intro' element={<PythonIntro />} />
+              <Route path='booleans' element={<PythonBooleans />} />
+              <Route path='loops' element={<PythonLoops />} />
               <Route path='lists' element={<PythonLists />} />
               <Route path='list-comprehension' element={<PythonListComprehension />} />
               <Route path='tuples' element={<PythonTuples />} />

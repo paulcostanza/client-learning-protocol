@@ -65,43 +65,76 @@ else:
 
     const orConditionalFalseConsole = `False`
 
-    const forLoop = `for _ in range(6):
-    print("Hello World")`
+    const elif = `score = 85
+ 
+if score >= 90:
+    print("A")
+elif score >= 80:
+    print("B")
+elif score >= 70:
+    print("C")
+else:
+    print("F")`
 
-    const forLoopConsole = `Hello World
-Hello World
-Hello World
-Hello World
-Hello World
-Hello World`
+    const elifOutput = `B`
 
-    const continueExample = `for number in range(-5, 5):
-    if number < 0:
-        continue  # skip negatives
+    const badElif = `score = 85
+ 
+if score >= 70:
+    print("C")
+elif score >= 80:
+    print("B")
+elif score >= 90:
+    print("A")
+else:
+    print("F")`
 
-    print(f"The square root of {number} is {number**0.5}")`
+    const badElifOutput = 'C'
 
-    const continueExampleConsole = `The square root of 0 is 0.0
-The square root of 1 is 1.0
-The square root of 2 is 1.4142135623730951
-The square root of 3 is 1.7320508075688772
-The square root of 4 is 2.0`
+    const nestedIfStatements = `has_key = True
+door_locked = True
+ 
+if has_key:
+    if door_locked:
+        print("You unlock the door and step inside.")
+    else:
+        print("The door is already open. You walk in.")
+else:
+    print("You need a key to get in.")`
 
-    const whileLoop = `start = 7
-
-while start > 0:
-    print(start)
-    start -= 1`
-
-    const whileLoopConsole = `5
-4
-3
-2
-1`
 
     return (
         <div>
             <h1>Control Flow</h1>
+
+            <h2>Comparison operators</h2>
+
+            <p><strong>Conditions</strong> compare two values. Python has six comparison operators:</p>
+
+            <ul>
+
+                <li><code>==</code> equal to</li>
+                <li><code>!=</code> not equal to</li>
+                <li><code>&lt;</code> less than</li>
+                <li><code>&gt;</code> greater than</li>
+                <li><code>&lt;=</code> less than or equal to</li>
+                <li><code>&gt;=</code> greater than or equal to</li>
+            </ul>
+
+            <p>Each comparison produces either <code>True</code> or <code>False</code>, which comes in handly when we talk about <code>if</code> statements!</p>
+
+            <blockquote>
+                <p>Wow, <code>=</code> and <code>==</code> look a lot a like.</p>
+            </blockquote>
+
+            <p>Yup! Be aware even though they look similar, they have two very different jobs. It is easy to get tripped up, espeically if you are just starting out.</p>
+
+            <ul>
+                <li><code>=</code> stores a value in a variable.</li>
+                <li><code>==</code> check whether two values are equal and returns <code>True</code> or <code>False</code>.</li>
+            </ul>
+
+            <p>Something like <code>if feeling = "happy":</code> will result in a <code>SyntaxError</code>.</p>
 
             <h2>The <code>if-else</code> statement</h2>
 
@@ -110,7 +143,7 @@ while start > 0:
             </p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {ifCase}
                 </SyntaxHighlighter>
@@ -123,10 +156,10 @@ while start > 0:
                 </SyntaxHighlighter>
             </div>
 
-            <br />
+            <p>The indented lines are the <em>body</em> of each branch. Python uses that indentation to tell which lines belong to the <code>if</code> and which lines belong to the <code>else</code>.</p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {elseCase}
                 </SyntaxHighlighter>
@@ -139,14 +172,16 @@ while start > 0:
                 </SyntaxHighlighter>
             </div>
 
+            <p>You can also have just the <code>if</code> statement, without the <code>else</code>.</p>
+
             <h2>Multiple <code>if</code> statements</h2>
 
             <p>
-                You can use a series of <code>if</code> statements without <code>elif</code> or <code>else</code> when you want to <em>independently</em> check multiple conditions. Each <code>if</code> statement is evaluated separately, and the corresponding block of code is executed if the condition is <code>True</code>.
+                You can use a series of <code>if</code> statements without <code>else</code> when you want to <em>independently</em> check multiple conditions. Each <code>if</code> statement is evaluated separately, and the corresponding block of code is executed if the condition is <code>True</code>.
             </p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {multipleIfStatements}
                 </SyntaxHighlighter>
@@ -159,14 +194,61 @@ while start > 0:
                 </SyntaxHighlighter>
             </div>
 
-            <h2>The <code>and</code> statement</h2>
+            <h2><code>elif</code></h2>
+
+            <p>An <code>elif</code> adds branches between <code>if</code> and <code>else</code>. Short for <em>else if</em>, we can chain and add as many as we please. Here is one of the most common examples ever for <code>elif</code>:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                    wrapLines={true} className=" code-snippet">
+                    {elif}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow}
+                    wrapLines={true} className=" code-snippet">
+                    {elifOutput}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>Python checks from top to bottom and runs the first block whose condition is <code>True</code>, and will then skip the rest. <em>Order matters</em>, you must put the strictest checks first, or a less than ideal one will catch the value before the strict one gets a chance. Example:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                    wrapLines={true} className=" code-snippet">
+                    {badElif}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow}
+                    wrapLines={true} className=" code-snippet">
+                    {badElifOutput}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>The condition is correct, <code>85</code> is technically greater than or equal to <code>70</code>, but the logic is wrong, giving us the incorrect output!</p>
+
+            <h2>Logical operators</h2>
+
+            <p>Sometimes checking one condition just isn't enough! <strong>Logical operators</strong> combine conditions into one.</p>
+
+            <ul>
+                <li><code>and</code> checks if both sides are true.</li>
+                <li><code>or</code> checks if either side is true.</li>
+                <li><code>not</code> will flip the condition true if it is false, or it will flip the condition false if it is true.</li>
+            </ul>
+
+
+            <h3>The <code>and</code> statement</h3>
 
             <p>
                 The <code>and</code> statement is an operator used to check if all of two or more conditions are <code>True</code>. It returns <code>True</code> only if all conditions are true. Otherwise, it returns <code>False</code>.
             </p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {andConditional}
                 </SyntaxHighlighter>
@@ -179,14 +261,14 @@ while start > 0:
                 </SyntaxHighlighter>
             </div>
 
-            <h2>The <code>or</code> statement</h2>
+            <h3>The <code>or</code> statement</h3>
 
             <p>
                 The <code>or</code> statement is a logical operator used to check if at least one of two or more conditions is <code>True</code>. If returns <code>True</code> if at least one condition is true. Otherwise, it returns <code>False</code>.
             </p>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {orConditionalTrue}
                 </SyntaxHighlighter>
@@ -200,7 +282,7 @@ while start > 0:
             </div>
 
             <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
+                <SyntaxHighlighter language="python" style={tomorrow}
                     wrapLines={true} className=" code-snippet">
                     {orConditionalFalse}
                 </SyntaxHighlighter>
@@ -213,73 +295,20 @@ while start > 0:
                 </SyntaxHighlighter>
             </div>
 
-            <h2>The <code>for</code> loop</h2>
+            <h2>Nesting <code>if</code> statements</h2>
 
-            <p>
-                The <code>for</code> loop is a construct that allows you to iterate over a sequence of elements, such as a <code>list</code> or a <code>range</code> of numbers. It simplifies the process of perfroming a set of operations for each item in the sequence.
-            </p>
+            <p>Sometimes a check only makes sense after another one has already passed. We handle that by <strong>nesting</strong> one <code>if</code> inside another:</p>
 
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
                     wrapLines={true} className=" code-snippet">
-                    {forLoop}
+                    {nestedIfStatements}
                 </SyntaxHighlighter>
             </div>
 
-            <div className="">
-                <SyntaxHighlighter language="console" style={tomorrow}
-                    wrapLines={true} className=" code-snippet">
-                    {forLoopConsole}
-                </SyntaxHighlighter>
-            </div>
+            <p>We only check the lock after confirming there is a key. Each level gets its own response, which is why nesting fits better here than a single <code>and</code>.</p>
 
-            <h3><code>continue</code></h3>
-
-            <p><code>continue</code> allows you to skip items that you do not want to use in a loop... <em>Go directly to the next iteration of this loop.</em></p>
-
-            <p>Since <code>continue</code> immediately halts the current iteration and jumps to the next one, it saves the program from doing unnecessary work.</p>
-
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {continueExample}
-                </SyntaxHighlighter>
-            </div>
-
-            <div className="">
-                <SyntaxHighlighter language="console" style={tomorrow}
-                    wrapLines={true} className=" code-snippet">
-                    {continueExampleConsole}
-                </SyntaxHighlighter>
-            </div>
-
-            <h2>The <code>while</code> loop</h2>
-
-            <p>
-                The <code>while</code> loop provides a way to repeatedly execute a block of code as long as a specified condition is <code>True</code>. It is a versatile construct for situations where the number of iterations is <i>not</i> known beforehand.
-            </p>
-
-            <div className="">
-                <SyntaxHighlighter language="python" style={tomorrow} showLineNumbers
-                    wrapLines={true} className=" code-snippet">
-                    {whileLoop}
-                </SyntaxHighlighter>
-            </div>
-
-            <div className="">
-                <SyntaxHighlighter language="console" style={tomorrow}
-                    wrapLines={true} className=" code-snippet">
-                    {whileLoopConsole}
-                </SyntaxHighlighter>
-            </div>
-
-            <p>
-                If the while loop's condition is not properly defined or contains a logical error that causes it to always evaluate to true, the loop will continue to execute indefinitely, resulting in an <strong>infinite loop</strong>. This means that the code inside the loop will keep running repeatedly without ever exiting, which can lead to performance issues and may even cause the program to become unresponsive.
-            </p>
-
-            <p>Notice in the example how the variable <code>start</code> iterates down by one each loop. This means the conditional statement <code>start &gt; 0</code> ends when <code>start</code> is equal to <code>0</code>.</p>
-
-            <p><code>0</code> is not less than <code>0</code>, thus ending the loop.</p>
+            <p>The inner <code>if</code> and <code>else</code> live inside the outer <code>if</code> block, and Python reads the indentation to know which level each branch belongs to.</p>
 
             <hr />
 
@@ -292,3 +321,14 @@ while start > 0:
         </div>
     )
 }
+
+// when does if age >= 18 and has_ticket: run its block?
+
+// - age is 19
+// - age is 18
+// - age is 17
+// - has_ticket = False
+// - has_ticket = True
+// - age is 19 and has_ticket is True
+// - age is 18 and has_ticket is False
+// - age is 22 and has_ticket is True
