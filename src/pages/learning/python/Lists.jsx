@@ -185,6 +185,20 @@ print(my_list.index(3))`
 
     const findTheIndexConsole = `2`
 
+    const nestedList = `teams = [
+    ["Alice", "Bob"],
+    ["Charlie", "Diana"],
+    ["Eve", "Frank"],
+]`
+
+    const accessANestedElement = `print(teams[0])
+print(teams[0][1])
+print(teams[2][0])`
+
+    const accessANestedElementOutput = `['Alice', 'Bob']
+Bob
+Eve`
+
     const slice = `my_list = [1, 2, 3, 4, 5]
 print(my_list[1:3])`
 
@@ -204,16 +218,16 @@ print(numbers[-3:])`
 
     const step = `# my_list[start : stop : step]
 
-scores = [50, 70, 30, 20, 90, 10, 50]
+scores = [30, 40, 50, 60, 70, 80, 90]
 print(scores[1:5])      # without step
 print(scores[1:5:2])    # with step
 print(scores[::2])      # omit a value
 print(scores[1::2])     # omit a different value`
 
-    const stepConsole = `[70, 30, 20, 90]
-[70, 20]
-[50, 30, 90, 50]
-[70, 20, 10]`
+    const stepConsole = `[40, 50, 60, 70]
+[40, 60]
+[30, 50, 70, 90]
+[40, 60, 80]`
 
     const reverseList = `def reverse_array(items):
     return items[::-1]`
@@ -288,13 +302,15 @@ print(sentence)
             <h2 id="quick-methods-reference-sheet">Quick methods reference</h2>
 
             <ul>
-                <li><code>.append(element)</code> add to the end of a list</li>
+                <li><code>.append(el)</code> add element <code>el</code> to the end of a list</li>
                 <li><code>.pop()</code> removes last item from list. Can return it to a variable if assigned</li>
-                <li><code>.pop(idx)</code> removes at specific index. Can return it to a variable if assigned</li>
-                <li><code>.sort()</code> will sort a list, add <code>reverse=True</code> to parameter to sort in descending order</li>
+                <li><code>.pop(idx)</code> removes element at specific index <code>idx</code>. Can return it to a variable if assigned</li>
+                <li><code>.remove(el)</code> removes the first value that matches element <code>el</code></li>
+                <li><code>.sort()</code> will sort a list, add <code>reverse=True</code> to parameter to sort in descending order. This changes the original list and <em>does not</em> make a copy.</li>
+                <li><code>.insert(idx, el)</code> will add an element <code>el</code> at the index <code>idx</code>. Shifts all element index positions up by 1 if they fall from <code>idx</code> and up.</li>
             </ul>
 
-            <h2>Quick functions reference</h2>
+            {/* <h2>Quick functions reference</h2> */}
 
             <h2>What's a list?</h2>
 
@@ -364,7 +380,7 @@ print(sentence)
                 </SyntaxHighlighter>
             </div>
 
-            <p>Using <code>-1</code> to access an element in a list will give us the last element, <code>-2</code> will give us second-to-last element, and so on. This is not required, we could also access elements like this:</p>
+            <p>Using <code>-1</code> to access an element in a list will give us the last element, <code>-2</code> will give us second-to-last element, and so on. This is a great feature for when we need an element from the end without having to count out the whole list. Regardless of how long the list is, <code>-1</code> is always last.</p>
 
             <h2>List Operations</h2>
 
@@ -381,8 +397,6 @@ print(sentence)
             <p>The above two conditional statements are equivalent. The second one is more concise and is generally preferred.</p>
 
             <h3 id="contains">Contains</h3>
-
-
 
             <p>We can also use the <code>in</code> operator to check if an element is present in a list:</p>
 
@@ -408,7 +422,6 @@ print(sentence)
                 </SyntaxHighlighter>
             </div>
 
-
             <h3 id="concatenate">Concatenate</h3>
 
             <div className="">
@@ -416,8 +429,6 @@ print(sentence)
                     {concatenateList}
                 </SyntaxHighlighter>
             </div>
-
-
 
             <h2>List Looping</h2>
 
@@ -439,12 +450,9 @@ print(sentence)
 
             <p>Both of these methods will print each element of the list on a separate line. If we do not need the index of the element, the second method is generally preferred since it is more concise.</p>
 
-
-
             <h2>List Append</h2>
 
             <p>We can do more than just change individual elements within a list. We can also add new elements to the end of a list using the <code>append()</code> function.</p>
-
 
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
@@ -528,6 +536,30 @@ print(sentence)
             </div>
 
             <p><code>.index()</code> will print the index of the first occurence of the element <code>3</code> in the list. There are two <code>3</code>s in the list, but the first one is at index 2, so <code>2</code> is printed. If the element is not present in the list, a <code>ValueError</code> will be raised.</p>
+
+            <h2>Nested lists</h2>
+
+            <p>A list can hold other lists. Here we have a <strong>nested list</strong>:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {nestedList}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>Each item in <code>teams</code> is itself a list. To reach a name we need to write two indicies. The first index accesses the inner list, the second picks a name inside that inner list.  </p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {accessANestedElement}
+                </SyntaxHighlighter>
+            </div>
+
+            <div className="">
+                <SyntaxHighlighter language="console" style={tomorrow} className="code-snippet">
+                    {accessANestedElementOutput}
+                </SyntaxHighlighter>
+            </div>
 
             <h2 id="slicing-lists">Slicing Lists</h2>
 
@@ -736,8 +768,6 @@ print(sentence)
                 </SyntaxHighlighter>
             </div>
 
-
-
             <p>And now by a property in a dictionary in a list (if you already know about dictionaries, if not we cover them soon):</p>
 
             <div className="">
@@ -824,3 +854,7 @@ print(sentence)
         </>
     )
 }
+
+// To add
+
+// - why list are mutable vs why strings are immutable: what is happening on the memory level, include strings with += and how that rewrites to memory each time
