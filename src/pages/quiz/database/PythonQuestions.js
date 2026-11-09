@@ -1018,4 +1018,122 @@ The \`for\` loop processes exactly that many nodes, even as their children are a
         answer: '\`for n in range(1, 6): print(n)\`',
         description: `\`range(1, 6)\` starts at 1 and stops before hitting 6.`
     },
+    {
+        id: 53,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'scope',
+        title: 'Scope I',
+        question: `What gets printed to the console?
+        
+~~~python
+title = "Home"
+
+def show_title():
+    title = "About"
+    print(title)
+
+show_title()
+print(title)
+~~~`,
+        options: [
+            '\`About\`  \n\`Home\`',
+            '\`Home\`  \n\`About\`',
+            '\`About\`  \n\`About\`',
+            '\`Home\`  \n\`Home\`',
+            '\`Home\`',
+            '\`About\`',
+        ],
+        random: true,
+        answer: '\`About\`  \n\`Home\`',
+        description: `We hit \`show_title()\` first. Inside of it, \`title\` is set to \`About\`, so \`About\` prints first. We exit the function to \`print(title)\`, at which \`title\` is set to \`Home\`. `
+    },
+    {
+        id: 54,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'scope',
+        title: 'Scope II',
+        question: `What gets printed to the console?
+        
+~~~python
+title = "Home"
+
+def show_title():
+    title = "About"
+    print(title)
+
+print(title)
+show_title()
+~~~`,
+        options: [
+            '\`About\`  \n\`Home\`',
+            '\`Home\`  \n\`About\`',
+            '\`About\`  \n\`About\`',
+            '\`Home\`  \n\`Home\`',
+            '\`Home\`',
+            '\`About\`',
+        ],
+        random: true,
+        answer: '\`Home\`  \n\`About\`',
+        description: `We hit \`print(title)\` first. \`title\` is set to \`Home\`, so \`Home\` prints first. The next line reads \`show_title()\`, so we enter that function. Inside, \`title\` is set to \`About\`, so we finish this code by printing \`About\` on the next line.`
+    },
+    {
+        id: 55,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'scope',
+        title: 'Scope III',
+        question: `What gets printed to the console?
+        
+~~~python
+title = "Home"
+
+def show_title():
+    title = "About"
+    print(title)
+
+print(title)
+~~~`,
+        options: [
+            '\`About\`  \n\`Home\`',
+            '\`Home\`  \n\`About\`',
+            '\`About\`  \n\`About\`',
+            '\`Home\`  \n\`Home\`',
+            '\`Home\`',
+            '\`About\`',
+        ],
+        random: true,
+        answer: '\`Home\`',
+        description: `The function \`show_title\` is never called, so we ignore it. On the line \`print(title)\`, \`title\` is set to \`Home\`, so \`Home\` is printed to the console.`
+    },
+    {
+        id: 56,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'scope',
+        title: 'Scope IV',
+        question: `What gets printed to the console?
+        
+~~~python
+title = "About"
+
+def show_title():
+    title = "Home"
+
+show_title()
+print(title)
+~~~`,
+        options: [
+            '\`About\`  \n\`Home\`',
+            '\`Home\`  \n\`About\`',
+            '\`About\`  \n\`About\`',
+            '\`Home\`  \n\`Home\`',
+            '\`Home\`',
+            '\`About\`',
+        ],
+        random: true,
+        answer: '\`About\`',
+        description: `Don't make any assumptions just because we call \`show_title\`. It creates a variable within its local scope, returns \`None\`, and our program continues. The only thing it prints out is \`About\` from our global scope.`
+    },
 ]

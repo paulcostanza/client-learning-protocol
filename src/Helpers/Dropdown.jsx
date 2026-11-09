@@ -14,7 +14,7 @@ export default function Dropdown({ questions, answers, preface = "" }) {
     return (
         <div>
             <div style={{ border: '1px solid #23272a', padding: '10px', borderRadius: '10px' }}>
-                <p style={{ textAlign: 'center', fontStyle: 'italic' }}>{preface}</p>
+                {preface ?? <p style={{ textAlign: 'center', fontStyle: 'italic' }}>{preface}</p>} {/* Need to fix the styling when preface is used */}
                 {questions.map((el, idx) => (
                     <Accordion
                         key={idx}

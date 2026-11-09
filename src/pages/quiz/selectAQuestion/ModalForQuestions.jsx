@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import { checkAnswer, forfeitQuestion } from '../quizLogic.js'
 import { saveSectionQuestionResult } from "../../../Helpers/localStorageHelper.js"
 import { fixGrammar } from "../../../Helpers/CategoryFixer.js"
-import remarkGfm from 'remark-gfm'
+import remarkGfm from 'remark-gfm' // tables within question's description
 
 export default function ModalForQuestions({ open, onClose, question }) {
     const [checked, setChecked] = useState(false)
