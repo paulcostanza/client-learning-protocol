@@ -163,4 +163,46 @@ while queue:
             queue.append(node.left)
         if node.right:
             queue.append(node.right)
-~~~`,options:["to ensure we only process the nodes at a current level","to prevent nodes from being added to the queue","to reduce the time complexity of BFS","to ensure the queue is always empty at the end of each level","to reduce the space complexity of BFS"],random:!0,answer:"to ensure we only process the nodes at a current level",description:"`level_size = len(queue)` captures how many nodes are currently in the queue at the start of the level.\n        \nThe `for` loop processes exactly that many nodes, even as their children are added to the queue. This prevents nodes from the next level from being processed prematurely."},{id:50,type:"checkbox",category:"python",subcategory:"booleans",title:"That's so falsy",question:"Which value is a falsy condition?",options:["`True`","`None`","`0`",'`"0"`','`""`'],random:!0,answer:["`0`","`None`",'`""`'],description:'You didn\'t fall for `"0"`, did ya? That is a string!'},{id:51,type:"checkbox",category:"python",subcategory:"control-flow",title:"Concert time",question:"When does `if age >= 18 and has_ticket:` run its block?",options:["`age` is `19`","`age` is `18`","`age` is `17`","`has_ticket` is `False`","`has_ticket` is `True`","`age` is `19` and `has_ticket` is `True`","`age` is `18` and `has_ticket` is `False`","`age` is `22` and `has_ticket` is `True`"],random:!0,answer:["`age` is `19` and `has_ticket` is `True`","`age` is `22` and `has_ticket` is `True`"],description:"Using the `and` logical statement means that *both* conditions are required!"},{id:52,type:"radio",category:"python",subcategory:"loops",title:"How to range",question:"Which range prints 1, 2, 3, 4, 5 each on its own line?",options:["`for n in range(5): print(n)`","`for n in range(1, 6): print(n)`","`for n in range(6): print(n)`","`for n in range(1, 5): print(n)`"],random:!0,answer:"`for n in range(1, 6): print(n)`",description:"`range(1, 6)` starts at 1 and stops before hitting 6."}];export{e as default};
+~~~`,options:["to ensure we only process the nodes at a current level","to prevent nodes from being added to the queue","to reduce the time complexity of BFS","to ensure the queue is always empty at the end of each level","to reduce the space complexity of BFS"],random:!0,answer:"to ensure we only process the nodes at a current level",description:"`level_size = len(queue)` captures how many nodes are currently in the queue at the start of the level.\n        \nThe `for` loop processes exactly that many nodes, even as their children are added to the queue. This prevents nodes from the next level from being processed prematurely."},{id:50,type:"checkbox",category:"python",subcategory:"booleans",title:"That's so falsy",question:"Which value is a falsy condition?",options:["`True`","`None`","`0`",'`"0"`','`""`'],random:!0,answer:["`0`","`None`",'`""`'],description:'You didn\'t fall for `"0"`, did ya? That is a string!'},{id:51,type:"checkbox",category:"python",subcategory:"control-flow",title:"Concert time",question:"When does `if age >= 18 and has_ticket:` run its block?",options:["`age` is `19`","`age` is `18`","`age` is `17`","`has_ticket` is `False`","`has_ticket` is `True`","`age` is `19` and `has_ticket` is `True`","`age` is `18` and `has_ticket` is `False`","`age` is `22` and `has_ticket` is `True`"],random:!0,answer:["`age` is `19` and `has_ticket` is `True`","`age` is `22` and `has_ticket` is `True`"],description:"Using the `and` logical statement means that *both* conditions are required!"},{id:52,type:"radio",category:"python",subcategory:"loops",title:"How to range",question:"Which range prints 1, 2, 3, 4, 5 each on its own line?",options:["`for n in range(5): print(n)`","`for n in range(1, 6): print(n)`","`for n in range(6): print(n)`","`for n in range(1, 5): print(n)`"],random:!0,answer:"`for n in range(1, 6): print(n)`",description:"`range(1, 6)` starts at 1 and stops before hitting 6."},{id:53,type:"radio",category:"python",subcategory:"scope",title:"Scope I",question:`What gets printed to the console?
+        
+~~~python
+title = "Home"
+
+def show_title():
+    title = "About"
+    print(title)
+
+show_title()
+print(title)
+~~~`,options:["`About`  \n`Home`","`Home`  \n`About`","`About`  \n`About`","`Home`  \n`Home`","`Home`","`About`"],random:!0,answer:"`About`  \n`Home`",description:"We hit `show_title()` first. Inside of it, `title` is set to `About`, so `About` prints first. We exit the function to `print(title)`, at which `title` is set to `Home`. "},{id:54,type:"radio",category:"python",subcategory:"scope",title:"Scope II",question:`What gets printed to the console?
+        
+~~~python
+title = "Home"
+
+def show_title():
+    title = "About"
+    print(title)
+
+print(title)
+show_title()
+~~~`,options:["`About`  \n`Home`","`Home`  \n`About`","`About`  \n`About`","`Home`  \n`Home`","`Home`","`About`"],random:!0,answer:"`Home`  \n`About`",description:"We hit `print(title)` first. `title` is set to `Home`, so `Home` prints first. The next line reads `show_title()`, so we enter that function. Inside, `title` is set to `About`, so we finish this code by printing `About` on the next line."},{id:55,type:"radio",category:"python",subcategory:"scope",title:"Scope III",question:`What gets printed to the console?
+        
+~~~python
+title = "Home"
+
+def show_title():
+    title = "About"
+    print(title)
+
+print(title)
+~~~`,options:["`About`  \n`Home`","`Home`  \n`About`","`About`  \n`About`","`Home`  \n`Home`","`Home`","`About`"],random:!0,answer:"`Home`",description:"The function `show_title` is never called, so we ignore it. On the line `print(title)`, `title` is set to `Home`, so `Home` is printed to the console."},{id:56,type:"radio",category:"python",subcategory:"scope",title:"Scope IV",question:`What gets printed to the console?
+        
+~~~python
+title = "About"
+
+def show_title():
+    title = "Home"
+
+show_title()
+print(title)
+~~~`,options:["`About`  \n`Home`","`Home`  \n`About`","`About`  \n`About`","`Home`  \n`Home`","`Home`","`About`"],random:!0,answer:"`About`",description:"Don't make any assumptions just because we call `show_title`. It creates a variable within its local scope, returns `None`, and our program continues. The only thing it prints out is `About` from our global scope."}];export{e as default};
