@@ -1001,5 +1001,21 @@ The \`for\` loop processes exactly that many nodes, even as their children are a
         answer: ['\`age\` is \`19\` and \`has_ticket\` is \`True\`', '\`age\` is \`22\` and \`has_ticket\` is \`True\`',],
         description: 'Using the \`and\` logical statement means that *both* conditions are required!'
     },
-
+    {
+        id: 52,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'loops',
+        title: 'How to range',
+        question: `Which range prints 1, 2, 3, 4, 5 each on its own line?`,
+        options: [
+            '\`for n in range(5): print(n)\`',
+            '\`for n in range(1, 6): print(n)\`',
+            '\`for n in range(6): print(n)\`',
+            '\`for n in range(1, 5): print(n)\`',
+        ],
+        random: true,
+        answer: '\`for n in range(1, 6): print(n)\`',
+        description: `\`range(1, 6)\` starts at 1 and stops before hitting 6.`
+    },
 ]

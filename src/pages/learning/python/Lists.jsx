@@ -398,7 +398,7 @@ print(sentence)
 
             <h3 id="contains">Contains</h3>
 
-            <p>We can also use the <code>in</code> operator to check if an element is present in a list:</p>
+            <p>Remember how inside a loop header we use the <code>in</code> operator to check if a value exist within an iterator, wheather the iterateor was a list or <code>range()</code>? Well we can also use it outside of a loop to check if an element is present in a list:</p>
 
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
