@@ -59,6 +59,9 @@ print("d" in my_dict)`
     const keyInDictConsole = `True
 False`
 
+    const getExample = `email = user.get("email", "none")
+print(email)`
+
     const findLength = `my_dict = {"a": 1, "b": 2, "c": 3}
 print(len(my_dict))`
 
@@ -118,6 +121,13 @@ print(values)`
     const dictionaryUnpacking = `def merge(dict1, dict2):
     return {**dict1, **dict2}`
 
+    const userNestedDict = `users = {
+    "ada": {"role": "admin", "active": True},
+    "sam": {"role": "editor", "active": False},
+}`
+
+    const userNestedDictAccessInnerDict = `print(users["ada"]["role"])`
+
     return (
         <>
             <h1>Dictionaries</h1>
@@ -168,7 +178,11 @@ print(values)`
                 </Box>
             </Paper>
 
-            <p>Above we have a dictionary with three key-value pairs. The keys are <em>Jack Shephard</em>, <em>Kate Austen</em>, <em>Jugo Reyes</em>, and <em>John Locke</em> representing names, while the values <em>36</em>, <em>27</em>, <em>26</em>, and <em>48</em> represent the age of each person. In this case, the pair <em>Jack Shepard</em> and <em>36</em> means that Jack is 36 years old. </p>
+            <blockquote>
+                <p>Or if you are old enough, just think of a real dictionary. The word you look up is the <code>key</code> while its definition is its <code>value</code>.</p>
+            </blockquote>
+
+            <p>Above we have a dictionary with four key-value pairs. The keys are <em>Jack Shephard</em>, <em>Kate Austen</em>, <em>Jugo Reyes</em>, and <em>John Locke</em> representing names, while the values <em>36</em>, <em>27</em>, <em>26</em>, and <em>48</em> represent the age of each person. In this case, the pair <em>Jack Shepard</em> and <em>36</em> means that Jack is 36 years old. </p>
 
             <p>Another way of phrasing it is we are <em>mapping</em> a key to the value. This is why dictionaries are sometimes called <strong>maps</strong> or <strong>hashmaps</strong> in other programming languages.</p>
 
@@ -190,7 +204,7 @@ print(values)`
 
             <h2>Operations</h2>
 
-            <p>Dictionaries <em>cannot</em> contain duplicate keys, just like sets. </p>
+            <p>Just like sets, dictionaries <em>cannot</em> contain duplicate keys. </p>
 
             <div className="">
                 <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
@@ -228,7 +242,7 @@ print(values)`
                 </SyntaxHighlighter>
             </div>
 
-            <h3>Check if key exist</h3>
+            <h2>Dictionary lookup</h2>
 
             <p>To check if a dictionary contains a key, you can use the <code>in</code> keyword.</p>
 
@@ -243,6 +257,18 @@ print(values)`
                     {keyInDictConsole}
                 </SyntaxHighlighter>
             </div>
+
+            <p>Without checking, if we were to try and grab a key that does not exist, our program would crash and we would get a <code>KeyError</code>.</p>
+
+            <p>Another way to look things up is with the <code>.get()</code> method. It returns the value of a key property you look up on a dictionary. If the key does not exist in said dictionary, you can add a default value which will avoid crashing if the key is missing.</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {getExample}
+                </SyntaxHighlighter>
+            </div>
+
+            <p>If our dictionary <code>email</code> does not have a key of <code>"email"</code>, then <code>"none"</code> will be printed, and our program continues on its merry way.</p>
 
             <h2>Looping</h2>
 
@@ -359,6 +385,28 @@ print(values)`
                 </SyntaxHighlighter>
             </div>
 
+            <h2>Nested dictionaries</h2>
+
+            <p>We briefly talked about it, but a dictionary value can be another dictionary. That lets one dict hold a full record for each key, like a profile for every user:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {userNestedDict}
+                </SyntaxHighlighter>
+            </div>
+
+            <p><code>users</code> has two keys, and each value has its own dictionary. To reach an inner value, we approach it like nested loops. Rather than using indicies, we use the keys:</p>
+
+            <div className="">
+                <SyntaxHighlighter language="python" style={tomorrow} className="code-snippet">
+                    {userNestedDictAccessInnerDict}
+                </SyntaxHighlighter>
+            </div>
+
+            <p><code>users["ada"]</code> returns the inner dict <code>&#123;"role": "admin", "active": True&#125;</code>, and adding <code>["role"]</code> reads <code>"admin"</code> from it. We can chain as many brackets as the data is deep.</p>
+
+            <p>You will finded nested dictionaries usful when storing many records where each record has its own fileds such as users, products, or settings grouped by section. Or when several details describe one thing.</p>
+
             <h2>Dictionary unpacking</h2>
 
             <p>Like tuples, python allows you to unpack multiple dictionaries into a new dictionary literal using the <code>**</code> operator. Keys from the later dictionary will overwrite earlier ones:</p>
@@ -380,3 +428,7 @@ print(values)`
         </>
     )
 }
+
+// To do
+
+// explain what * and ** operators do, and what is the difference

@@ -18,6 +18,7 @@ const sections = [
     { name: 'Type Hints', path: 'type-hints' },
     { name: 'Math 101', path: 'math-101' },
     { name: 'Scope', path: 'scope' },
+    // OOP here
     { name: 'Testing & Debugging', path: 'testing-and-debugging' },
     { name: 'Errors & Exceptions', path: 'errors-and-exceptions' },
     { name: 'Commputing', path: 'computing' },
