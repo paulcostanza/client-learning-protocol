@@ -363,3 +363,15 @@ print_matrix(matrix_270)
 
 What does the map function do?
 What are lambda's?
+
+# Things to add
+
+**Memory**
+
+- <code>id()</code>
+- <code>import sys</code> & <code>sys.getsizeof(whatever)</code>
+- Where is everything allocated to, stack vs heap in python.
+
+**End of Basics section**
+
+- a recap where we list out all of the built-in functions and methods because the user now knows all of the basic bs to start doing stuff.

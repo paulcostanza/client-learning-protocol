@@ -39,6 +39,12 @@ export default function Intro() {
                 <li>The application needs to be distributed directly to non-technical users. They would have to install python in order to run your code, which would be a huge inconvenience.</li>
             </ul>
 
+            <h2>How does python work?</h2>
+
+            <p>The standard version of python that most people download and use on there computer comes from <a href="python.org" target="_blank">python.org</a> and is technically called <strong>CPython</strong>. Because python itself is a high-level language, it needs an <em>interpreter</em> written in a faster, lower-level language to talk to your computer's hardware. That interpreter is written in the C programming language.</p>
+
+            <p>When you install python on your machine, you are not downloading human-readable text files for the core language. You are downloading a pre-build, <em>compiled binary executable</em>. </p>
+
             <h2>Python 2 vs. Python 3</h2>
 
             <p>One thing that's important to keep in mind as you continue your python journey is that the Python ecosystem is fragmented. Python 3 was released on December 3rd, 2008, but over a decade and a half later the web is still full of python 2 dependencies, scripts and tutorials.</p>

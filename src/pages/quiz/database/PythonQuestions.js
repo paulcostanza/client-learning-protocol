@@ -1136,4 +1136,54 @@ print(title)
         answer: '\`About\`',
         description: `Don't make any assumptions just because we call \`show_title\`. It creates a variable within its local scope, returns \`None\`, and our program continues. The only thing it prints out is \`About\` from our global scope.`
     },
+    {
+        id: 57,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'classes-and-objects',
+        title: '',
+        question: `What does \`__self__\` refer to inside an instance method?`,
+        options: [
+            'the name we must use for every variable (attribute)',
+            'the specific instance the method was called on',
+            'the class definition in the program',
+        ],
+        random: true,
+        answer: 'the specific instance the method was called on',
+        description: `\`__self__\` is the object whose attributes and methods we are using.`
+    },
+    {
+        id: 58,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'classes-and-objects',
+        title: '',
+        question: `How do we read an attribute named \`title\` from an object called \`book\`?`,
+        options: [
+            '\`book["title"]\`',
+            '\`self.book\`',
+            '\`book.title\`',
+            '\`title(book)\`',
+        ],
+        random: true,
+        answer: '\`book.title\`',
+        description: `Dot notation reaches attributes on an object.`
+    },
+    {
+        id: 59,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'classes-and-objects',
+        title: '',
+        question: `A \`Robot\` class has a method \`greet(self)\`. If \`robot\` is a \`Robot\` instance, how do we call \`greet\`?`,
+        options: [
+            '\`greet(robot)\`',
+            '\`Robot.greet()\`',
+            '\`robot.greet()\`',
+            '\`robot.greet\`',
+        ],
+        random: true,
+        answer: '\`robot.greet()\`',
+        description: `We call the \`greet()\` method on our object \`robot\`.`
+    },
 ]
