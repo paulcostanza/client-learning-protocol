@@ -1186,4 +1186,35 @@ print(title)
         answer: '\`robot.greet()\`',
         description: `We call the \`greet()\` method on our object \`robot\`.`
     },
+    {
+        id: 60,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'importing-modules',
+        title: '',
+        question: `You wrote a function \`greet\` in your own file called \`greetings.py\`. How do you use it in another file in the same folder?`,
+        options: [
+            '\`from greetings import greet\`',
+            '\`from math import greet\`',
+            '\`import greet\`',
+            '\`from greet import greetings\`',
+            'you can\'t import your own files',
+        ],
+        random: true,
+        answer: '\`from greetings import greet\`',
+        description: `Your own \`.py\` files count as modules. Import from it by the file name without \`.py\`.`
+    },
+    {
+        id: 61,
+        type: 'input',
+        category: 'python',
+        subcategory: 'importing-modules',
+        title: '',
+        question: `After \`import math\`, how do we read \`pi\` from the math module?`,
+        options: [""],
+        random: false,
+        answer: "\\s*math.pi\\s*",
+        description: `Answer: \`math.pi\`  \n
+Qualified names use the module's dot attribute.`
+    },
 ]

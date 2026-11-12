@@ -109,6 +109,7 @@ import PythonTuples from './pages/learning/python/Tuples'
 import PythonSets from './pages/learning/python/Sets'
 import PythonScope from './pages/learning/python/Scope'
 import PythonClassesAndObjects from './pages/learning/python/ClassesAndObjects'
+import PythonImportingModules from './pages/learning/python/ImportingModules'
 import PythonTestingAndDebugging from './pages/learning/python/TestingAndDebugging'
 import PythonErrorsAndExceptions from './pages/learning/python/ErrorsAndExceptions'
 import PythonRegularExpressions from './pages/learning/python/RegularExpressions'
@@ -300,6 +301,7 @@ function App() {
               <Route path='control-flow' element={<PythonControlFlow />} />
               <Route path='scope' element={<PythonScope />} />
               <Route path='classes-and-objects' element={<PythonClassesAndObjects />} />
+              <Route path='importing-modules' element={<PythonImportingModules />} />
               <Route path='testing-and-debugging' element={<PythonTestingAndDebugging />} />
               <Route path='errors-and-exceptions' element={<PythonErrorsAndExceptions />} />
               <Route path='computing' element={<PythonComputing />} />

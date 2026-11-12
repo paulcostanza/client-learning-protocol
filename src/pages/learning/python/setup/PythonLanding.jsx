@@ -18,6 +18,7 @@ const sections = [
     { name: 'Scope', path: 'scope' },
     // OOP 
     { name: 'Classes & Objects', path: 'classes-and-objects' },
+    { name: 'Importing Modules', path: 'importing-modules' },
     { name: 'Testing & Debugging', path: 'testing-and-debugging' },
     { name: 'Errors & Exceptions', path: 'errors-and-exceptions' },
     { name: 'Commputing', path: 'computing' },
@@ -43,7 +44,7 @@ const sections = [
     // Testing
     // FastAPI
     // Cybersecurity: log analysis, security tooling, working with network protocols and API, analyze packet captures w/ Scapy
-    // Game development: learn game mechanics, coolision detection, score systems with Pygame, Arcade
+    // Game development: learn game mechanics, collision detection, score systems with Pygame, Arcade
     // Scientific computing & engineering: simulate physical systems, solve complex mathematical problems, perform statistical analysis, create engineering simulations
 ]
 export default function PythonLanding() {

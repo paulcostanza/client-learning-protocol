@@ -20,6 +20,7 @@ const sections = [
     { name: 'Scope', path: 'scope' },
     // OOP here
     { name: 'Classes & Objects', path: 'classes-and-objects' },
+    { name: 'Importing Modules', path: 'importing-modules' },
     { name: 'Testing & Debugging', path: 'testing-and-debugging' },
     { name: 'Errors & Exceptions', path: 'errors-and-exceptions' },
     { name: 'Commputing', path: 'computing' },
