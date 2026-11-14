@@ -61,6 +61,10 @@ export const problemsList = {
     functions: [
         { id: "fix-this-bag", title: "Fix this Bag", status: '', review: '', order: 48 },
     ],
+    // inputAndOutput: [
+    //     { id: "ticket-printer", title: "Ticket Printer", status: '', review: '', order: 49 },
+
+    // ],
     sorting: [
         { id: "tuple-ranking", title: "Tuple Ranking", status: '', review: '', order: 49 },
     ],

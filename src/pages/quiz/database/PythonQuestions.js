@@ -1217,4 +1217,88 @@ print(title)
         description: `Answer: \`math.pi\`  \n
 Qualified names use the module's dot attribute.`
     },
+    {
+        id: 62,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'input-and-output',
+        title: '42',
+        question: `The user types \`42\` and presses Enter. What does this store in \`answer = input("Number please: ")\`?`,
+        options: [
+            '\`42\`',
+            '\`"42"\`',
+            '\`None\`',
+        ],
+        random: true,
+        answer: '\`"42"\`',
+        description: `\`input()\` always returns text from whatever was typed. If we want it converted, then we need to add the appropriate function for that step.`
+    },
+    {
+        id: 63,
+        type: 'input',
+        category: 'python',
+        subcategory: 'input-and-output',
+        title: '',
+        question: `The user types \`5\` into both prompts. What does this print?
+        
+~~~python
+a = input("first number: ")
+b = input("second number: ")
+
+print(a + b)
+~~~`,
+        options: [""],
+        random: false,
+        answer: "\\s*55\\s*",
+        description: `Both values are strings because we do not change the data type with \`float()\` or \`int()\`. As a result, the \`+\` concatenates the two strings together.`
+    },
+    {
+        id: 64,
+        type: 'checkbox',
+        category: 'python',
+        subcategory: 'input-and-output',
+        title: '',
+        question: `Which of these user inputs make \`int(answer)\` crash with a \`ValueError\`?`,
+        options: [
+            '\`"42"\`',
+            '\`"6.9"\`',
+            '\`"fifty"\`',
+            '\`""\` (the user pressed enter without typing)'
+        ],
+        random: true,
+        answer: ['\`"6.9"\`', '\`"fifty"\`', '\`""\` (the user pressed enter without typing)'],
+        description: `\`int()\` can only read whole numbers. A decimal string would need \`float()\` instead.`
+    },
+    {
+        id: 65,
+        type: 'input',
+        category: 'python',
+        subcategory: 'input-and-output',
+        title: '',
+        question: `What does \`f"{5432.1:,.2f"\` produce?`,
+        options: [""],
+        random: false,
+        answer: "\\s*5,432.10\\s*",
+        description: `Answer: \`5,432.10\`  \n\`,\` adds the thousands separator while \`.2f\` shows exactly two decimal places.`
+    },
+    {
+        id: 66,
+        type: 'radio',
+        category: 'python',
+        subcategory: 'input-and-output',
+        title: '',
+        question: `How many spaces print before \`ok\` in the expression \`print(f"[{'ok':>6}]")\`?`,
+        options: [
+            '\`0\`',
+            '\`1\`',
+            '\`2\`',
+            '\`3\`',
+            '\`4\`',
+            '\`5\`',
+            '\`6\`',
+        ],
+        random: false,
+        answer: '\`4\`',
+        description: `The \`>6\` makes the value 6 total characters wide and lines it up on the right. \`ok\` takes up 2 of those 6 spots, with 4 spaces remaining.`
+    },
 ]

@@ -21,6 +21,7 @@ const sections = [
     // OOP here
     { name: 'Classes & Objects', path: 'classes-and-objects' },
     { name: 'Importing Modules', path: 'importing-modules' },
+    { name: 'Input and Output', path: 'input-and-output' },
     { name: 'Testing & Debugging', path: 'testing-and-debugging' },
     { name: 'Errors & Exceptions', path: 'errors-and-exceptions' },
     { name: 'Commputing', path: 'computing' },

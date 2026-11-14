@@ -81,6 +81,7 @@ import { levelOrderTraversal } from './level-order-traversal'
 import { buildDictionaryTrie } from './build-dictionary-trie'
 import { searchWithDictionaryTrie } from './search-with-dictionary-trie'
 import { startsWithDictionaryTrie } from './starts-with-dictionary-trie'
+// import { ticketPrinter } from './ticket-printer'
 
 const problems = {
     // Printing 101
@@ -138,6 +139,8 @@ const problems = {
     "majority-element": majorityElement,
     // functions
     "fix-this-bag": fixThisBag,
+    // input and output
+    // "ticket-printer": ticketPrinter,
     // sorting
     "tuple-ranking": tupleRanking,
     // binary search
